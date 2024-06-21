@@ -1,5 +1,5 @@
 
-I am a Frontend, Backend and Android Developer🎡, beside that I am Ethical Hacker👩‍🎓, Certified By TCM Security 🎯, goal-oriented individual👩‍💻 With a moral and ethical values🙇‍♀️ with high energy levels🤹‍♀️, communication skills👐, strong organizational skills👮‍♀️, and meticulous attention🕵️‍♀️ to details.
+I am a Frontend, Backend, and Android Developer🎡. Besides that, I am an Ethical Hacker👩‍🎓, certified by TCM Security 🎯. I am a goal-oriented individual👩‍💻 with strong moral and ethical values🙇‍♀️, high energy levels🤹‍♀️, excellent communication skills👐, strong organizational skills👮‍♀️, and meticulous attention🕵️‍♀️ to detail.
 
 - 👋 Hi, I’m @andreapianidev
 - 👀 I’m interested in app development
