@@ -3,8 +3,8 @@ I am a Frontend, Backend, and iOS Android Full Stack Developer🎡. Besides that
 
 - 👋 Hi, I’m @andreapianidev
 - 👀 I’m interested in app development
-- 🌱 I’m currently learning Swift, Obj-C, Java, Python and PHP
-- 💞️ I’m looking to collaborate on iOS and Android App Projects
+- 🌱 I’m expert in Swift, Obj-C, Java, Python and PHP
+- 💞️ I’m looking to collaborate on iOS and Android App Projects, and web cloud app
 - 📫 How to reach me andreapiani.dev@gmail.com
 <!---
 andreapianidev/andreapianidev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
