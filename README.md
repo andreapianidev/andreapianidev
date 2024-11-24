@@ -1,5 +1,5 @@
 
-I am a Frontend, Backend, and iOS Android Full Stack Developer🎡. Besides that, I am an Ethical Hacker👩‍🎓, certified by TCM Security 🎯. I am a goal-oriented individual👩‍💻 with strong moral and ethical values🙇‍♀️, high energy levels🤹‍♀️, excellent communication skills👐, strong organizational skills👮‍♀️, and meticulous attention🕵️‍♀️ to detail.
+I am a Frontend, Backend, and iOS Android Full Stack Developer🎡. I am a goal-oriented individual👩‍💻 with strong moral and ethical values🙇‍♀️, high energy levels🤹‍♀️, excellent communication skills👐, strong organizational skills👮‍♀️, and meticulous attention🕵️‍♀️ to detail.
 
 - 👋 Hi, I’m @andreapianidev
 - 👀 I’m interested in app development
