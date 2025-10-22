@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="Sviluppo, Migrazione e Ottimizzazione PrestaShop Italia. Aggiornamento da 1.6/1.7 a 8.2. Moduli personalizzati, performance e SEO. MVP e-commerce per startup. Preventivo gratuito in 24h.">
+  <meta name="keywords" content="prestashop developer italia, aggiornamento prestashop 8.2, migrazione prestashop 8, sviluppo moduli prestashop custom, ottimizzazione prestashop performance, prestashop italia freelance, e-commerce prestashop su misura, mvp e-commerce startup, prestashop per investitori, preventivo prestashop gratuito, consulente prestashop senior, sviluppatore prestashop esperto">
+
+  <meta property="og:title" content="Sviluppo e Migrazione PrestaShop | Andrea Piani">
+  <meta property="og:description" content="Sviluppo, Migrazione e Ottimizzazione E-commerce PrestaShop. Aggiornamento da 1.6/1.7 a 8.2. Expert PrestaShop in Italia.">
+  <meta property="og:image" content="assets/images/oig4.rlcenpycolpxdbe.x2od.jpeg">
+  <meta property="og:url" content="https://www.andreapiani.com/servizi-prestashop.html">
+
+  <link rel="canonical" href="https://www.andreapiani.com/servizi-prestashop.html" />
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <title>Sviluppo e Migrazione PrestaShop Italia | Expert PrestaShop | Andrea Piani</title>
+
+  <!-- Schema.org Markup per SEO PrestaShop -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Andrea Piani - PrestaShop Developer Italia",
+    "description": "Specialista PrestaShop: migrazione da 1.6/1.7 a 8.2, sviluppo moduli custom, ottimizzazione performance e SEO e-commerce. 100+ shop gestiti con successo.",
+    "url": "https://www.andreapiani.com/servizi-prestashop.html",
+    "telephone": "+393516248936",
+    "email": "andreapiani.dev@gmail.com",
+    "priceRange": "Preventivi personalizzati",
+    "areaServed": "IT",
+    "serviceType": "PrestaShop Development",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi PrestaShop",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Migrazione PrestaShop 8.2",
+            "description": "Aggiornamento sicuro da PrestaShop 1.6 o 1.7 alla versione 8.2 con zero perdita dati"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sviluppo Moduli PrestaShop Custom",
+            "description": "Moduli personalizzati per estendere funzionalità del tuo e-commerce PrestaShop"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Ottimizzazione Performance PrestaShop",
+            "description": "Velocizza il tuo shop PrestaShop: cache, database, CDN per tempi sotto 2 secondi"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servizi PrestaShop",
+        "item": "https://www.andreapiani.com/servizi-prestashop.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <style>
+    body { background-color: #000000; color: #ffffff; }
+    .hero-prestashop {
+      background: linear-gradient(135deg, #df0067 0%, #ff3a8b 100%);
+      padding: 5rem 0;
+      color: white;
+    }
+    .service-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 2rem;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #df0067;
+    }
+    .pricing-card {
+      background: #1a1a1a;
+      border: 2px solid #df0067;
+      border-radius: 15px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .feature-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+    .navbar-custom a:hover {
+      color: #df0067 !important;
+    }
+    .dropdown-menu {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+    }
+    .dropdown-item {
+      color: #ffffff !important;
+      padding: 0.75rem 1.5rem;
+      transition: 0.2s;
+    }
+    .dropdown-item:hover {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+    }
+    .dropdown-item.active {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+      font-weight: bold;
+    }
+    .dropdown-divider {
+      border-color: #333 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+          <!-- MENU SERVIZI CON POPUP -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="serviziMenuBtn" onclick="openServiziPopup(); return false;">
+              Servizi ▾
+            </a>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>    </div>
+  </div>
+
+
+
+  <!-- HERO SECTION -->
+  <section class="hero-prestashop">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-1 mb-4"><strong>PrestaShop Expert</strong></h1>
+          <h2 class="display-5 mb-4">Sviluppo, Migrazione e Ottimizzazione E-commerce PrestaShop</h2>
+          <p class="lead mb-4">
+            Specialista PrestaShop con 15+ anni di esperienza. Aggiornamenti da versioni obsolete (1.6, 1.7) a PrestaShop 8.2, sviluppo moduli personalizzati, ottimizzazione performance e SEO.
+          </p>
+          <div class="mb-4">
+            <a href="#form-contatto" class="btn btn-light btn-lg me-2">RICHIEDI PREVENTIVO GRATUITO</a>
+            <a href="https://wa.me/393516248936" class="btn btn-outline-light btn-lg">CONTATTAMI SU WHATSAPP</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="assets/images/oig4.rlcenpycolpxdbe.x2od.jpeg" alt="PrestaShop Developer Italia" class="img-fluid rounded" style="max-height: 400px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section style="padding: 2rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #df0067;"><strong>100+</strong></h3>
+          <p>Shop PrestaShop Gestiti</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #df0067;"><strong>50+</strong></h3>
+          <p>Migrazioni Completate</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #df0067;"><strong>Zero</strong></h3>
+          <p>Perdita Dati</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #df0067;"><strong>24/7</strong></h3>
+          <p>Supporto Urgenze</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI PRINCIPALI -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>I Miei Servizi PrestaShop</strong></h2>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #df0067;">🔄</span>
+            </div>
+            <h3 class="mb-3"><strong>Migrazione PrestaShop 8 o 9</strong></h3>
+            <p>Aggiornamento sicuro da PrestaShop 1.6, 1.7 o versioni precedenti alle nuove versioni 8 o 9. Mantenimento completo di prodotti, clienti, ordini e SEO con zero perdita dati.</p>
+            <ul class="feature-list mt-3">
+              <li>✓ Backup completo pre-migrazione</li>
+              <li>✓ Test in ambiente staging</li>
+              <li>✓ Redirect 301 automatici</li>
+              <li>✓ Verifica moduli e temi</li>
+              <li>✓ Zero downtime garantito</li>
+            </ul>
+            <div class="mt-3">
+              <a href="migrazione-prestashop-8-9.html" class="btn btn-outline-light btn-sm" style="border-color: #df0067; color: #df0067;">
+                <strong>→ Scopri il Servizio Migrazione Completo</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #df0067;">⚡</span>
+            </div>
+            <h3 class="mb-3"><strong>Ottimizzazione Performance</strong></h3>
+            <p>Velocizza il tuo shop PrestaShop. Ottimizzazione database, cache, immagini e codice per tempi di caricamento sotto 2 secondi.</p>
+            <ul class="feature-list mt-3">
+              <li>✓ Pulizia database e ottimizzazione query</li>
+              <li>✓ Configurazione cache avanzata</li>
+              <li>✓ Compressione immagini automatica</li>
+              <li>✓ CDN setup e configurazione</li>
+              <li>✓ Lazy loading risorse</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #df0067;">🔧</span>
+            </div>
+            <h3 class="mb-3"><strong>Sviluppo Moduli Custom</strong></h3>
+            <p>Moduli PrestaShop personalizzati per estendere le funzionalità del tuo e-commerce secondo le tue esigenze specifiche.</p>
+            <ul class="feature-list mt-3">
+              <li>✓ Integrazioni API esterne</li>
+              <li>✓ Sistemi di pagamento custom</li>
+              <li>✓ Gestione magazzino avanzata</li>
+              <li>✓ Export/import personalizzati</li>
+              <li>✓ Automazioni business logic</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #df0067;">🎨</span>
+            </div>
+            <h3 class="mb-3"><strong>Personalizzazione Tema</strong></h3>
+            <p>Customizzazione completa del tema PrestaShop per riflettere la tua identità di brand e migliorare UX.</p>
+            <ul class="feature-list mt-3">
+              <li>✓ Design responsive mobile-first</li>
+              <li>✓ Modifiche layout e template</li>
+              <li>✓ Ottimizzazione checkout</li>
+              <li>✓ A/B testing elementi</li>
+              <li>✓ Accessibilità WCAG</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #df0067;">🔐</span>
+            </div>
+            <h3 class="mb-3"><strong>Sicurezza e Manutenzione</strong></h3>
+            <p>Protezione shop da attacchi, aggiornamenti di sicurezza, backup automatici e monitoraggio 24/7.</p>
+            <ul class="feature-list mt-3">
+              <li>✓ Patch sicurezza mensili</li>
+              <li>✓ Firewall e anti-malware</li>
+              <li>✓ Backup automatici giornalieri</li>
+              <li>✓ Monitoraggio uptime</li>
+              <li>✓ Supporto emergenze 24/7</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #df0067;">📈</span>
+            </div>
+            <h3 class="mb-3"><strong>SEO E-commerce</strong></h3>
+            <p>Ottimizzazione SEO completa per PrestaShop: URL, meta tag, rich snippets, velocità e ranking Google.</p>
+            <ul class="feature-list mt-3">
+              <li>✓ SEO audit completo</li>
+              <li>✓ Ottimizzazione URL e meta tag</li>
+              <li>✓ Schema.org prodotti</li>
+              <li>✓ Sitemap XML dinamica</li>
+              <li>✓ Google Shopping feed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO MIGRAZIONE -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Processo di Migrazione PrestaShop 8.2</strong></h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div style="display: flex; align-items: start;">
+            <div style="background: #df0067; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; flex-shrink: 0; margin-right: 1rem;">1</div>
+            <div>
+              <h4><strong>Analisi Iniziale e Backup</strong></h4>
+              <p>Audit completo dello shop attuale: versione PrestaShop, moduli installati, customizzazioni, database. Backup completo di file e database.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="display: flex; align-items: start;">
+            <div style="background: #df0067; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; flex-shrink: 0; margin-right: 1rem;">2</div>
+            <div>
+              <h4><strong>Setup Ambiente Staging</strong></h4>
+              <p>Creazione ambiente di test locale/staging per eseguire la migrazione senza impattare il sito in produzione.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="display: flex; align-items: start;">
+            <div style="background: #df0067; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; flex-shrink: 0; margin-right: 1rem;">3</div>
+            <div>
+              <h4><strong>Migrazione Dati</strong></h4>
+              <p>Trasferimento progressivo di prodotti, categorie, clienti, ordini, CMS e configurazioni da vecchia a nuova versione.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="display: flex; align-items: start;">
+            <div style="background: #df0067; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; flex-shrink: 0; margin-right: 1rem;">4</div>
+            <div>
+              <h4><strong>Verifica Moduli e Tema</strong></h4>
+              <p>Controllo compatibilità moduli con PrestaShop 8.2, aggiornamento o ricerca alternative. Adattamento tema se necessario.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="display: flex; align-items: start;">
+            <div style="background: #df0067; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; flex-shrink: 0; margin-right: 1rem;">5</div>
+            <div>
+              <h4><strong>Testing Completo</strong></h4>
+              <p>Test approfondito di tutte le funzionalità: catalogo, carrello, checkout, pagamenti, spedizioni, account clienti.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="display: flex; align-items: start;">
+            <div style="background: #df0067; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; flex-shrink: 0; margin-right: 1rem;">6</div>
+            <div>
+              <h4><strong>Go Live e Monitoring</strong></h4>
+              <p>Pubblicazione in produzione con redirect 301, monitoraggio performance 24h, assistenza post-migrazione inclusa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREVENTIVO PERSONALIZZATO -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #df0067 0%, #ff3a8b 100%);">
+    <div class="container text-center">
+      <h2 class="display-2 mb-4"><strong>Richiedi il Tuo Preventivo Personalizzato Gratuito</strong></h2>
+      <p class="lead mb-4" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+        Ogni progetto PrestaShop è unico. Analizzo le tue specifiche esigenze e ti fornisco un preventivo dettagliato gratuito in 24 ore, senza impegno.
+      </p>
+      <p class="mb-5" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+        <strong>Sviluppo anche MVP (Minimum Viable Product)</strong> per startup e-commerce che cercano investitori: soluzione veloce, completa e professionale per presentare il tuo business agli investitori.
+      </p>
+      <div>
+        <a href="#form-contatto" class="btn btn-light btn-lg me-3" style="padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold;">
+          RICHIEDI PREVENTIVO GRATUITO
+        </a>
+        <a href="https://wa.me/393516248936?text=Ciao%20Andrea,%20vorrei%20un%20preventivo%20per%20PrestaShop" target="_blank" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; font-size: 1.2rem;">
+          SCRIVIMI SU WHATSAPP
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ SCEGLIERE UN PREVENTIVO PERSONALIZZATO -->
+  <section style="padding: 4rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="text-center display-3 mb-5"><strong>Perché Ogni Progetto Ha un Preventivo Su Misura</strong></h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 text-center">
+          <div class="service-card">
+            <span style="font-size: 3rem; color: #df0067;">🎯</span>
+            <h4 class="mt-3 mb-3"><strong>Analisi Personalizzata</strong></h4>
+            <p>Ogni e-commerce è diverso: numero prodotti, traffico, customizzazioni, integrazioni. Analizzo tutto per darti il prezzo giusto.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 text-center">
+          <div class="service-card">
+            <span style="font-size: 3rem; color: #df0067;">💰</span>
+            <h4 class="mt-3 mb-3"><strong>Nessun Costo Nascosto</strong></h4>
+            <p>Preventivo dettagliato con tutte le voci incluse. Paghi solo ciò che serve davvero per il tuo progetto PrestaShop.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 text-center">
+          <div class="service-card">
+            <span style="font-size: 3rem; color: #df0067;">🚀</span>
+            <h4 class="mt-3 mb-3"><strong>MVP per Startup</strong></h4>
+            <p>Se stai cercando investitori, creo un MVP funzionante e professionale per presentare la tua idea e-commerce in modo vincente.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 text-center">
+          <div class="service-card">
+            <span style="font-size: 3rem; color: #df0067;">⏱️</span>
+            <h4 class="mt-3 mb-3"><strong>Risposta in 24h</strong></h4>
+            <p>Non aspettare settimane. Ricevi il preventivo completo e dettagliato entro 24 ore dalla richiesta, garantito.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ PRESTASHOP -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Domande Frequenti PrestaShop</strong></h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="accordion" id="faqPrestashop">
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ps1" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>Quanto tempo richiede una migrazione PrestaShop?</strong>
+                </button>
+              </h3>
+              <div id="ps1" class="accordion-collapse collapse" data-bs-parent="#faqPrestashop">
+                <div class="accordion-body" style="background-color: #0a0a0a; color: #ffffff;">
+                  Una migrazione PrestaShop richiede da 1 a 4 settimane in base alla complessità. Shop con meno di 500 prodotti: 1-2 settimane. Shop con 1.000-5.000 prodotti: 2-3 settimane. Shop enterprise con customizzazioni complesse: 3-4 settimane. Include analisi, migrazione, testing e go-live.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ps2" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>Perderò il posizionamento Google durante la migrazione?</strong>
+                </button>
+              </h3>
+              <div id="ps2" class="accordion-collapse collapse" data-bs-parent="#faqPrestashop">
+                <div class="accordion-body" style="background-color: #0a0a0a; color: #ffffff;">
+                  No, se la migrazione è fatta correttamente. Implemento redirect 301 automatici per tutti gli URL, mantengo struttura SEO-friendly, configuro sitemap XML aggiornata e verifico Google Search Console. Il posizionamento non solo si mantiene, ma spesso migliora grazie alla velocità superiore di PrestaShop 8.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ps3" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>I miei moduli saranno compatibili con PrestaShop 8?</strong>
+                </button>
+              </h3>
+              <div id="ps3" class="accordion-collapse collapse" data-bs-parent="#faqPrestashop">
+                <div class="accordion-body" style="background-color: #0a0a0a; color: #ffffff;">
+                  La maggior parte dei moduli moderni è compatibile. Verifico la compatibilità di ogni modulo prima della migrazione. Se un modulo non è compatibile, cerco alternative aggiornate o sviluppo una versione custom. Includo nel preventivo il costo di adattamento moduli critici.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ps4" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>Cosa succede se qualcosa va storto durante la migrazione?</strong>
+                </button>
+              </h3>
+              <div id="ps4" class="accordion-collapse collapse" data-bs-parent="#faqPrestashop">
+                <div class="accordion-body" style="background-color: #0a0a0a; color: #ffffff;">
+                  La migrazione avviene SEMPRE in ambiente staging, mai direttamente sul sito live. Il tuo shop continua a funzionare normalmente durante tutto il processo. Solo dopo testing completo e tua approvazione, pubblico la nuova versione. In caso di problemi imprevisti, posso ripristinare il backup in pochi minuti.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE SEO CONTENT RICH -->
+  <section style="padding: 4rem 0; background: #000000;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <h2 class="display-4 mb-4"><strong>PrestaShop Developer Freelance Italia: Esperienza e Competenze</strong></h2>
+
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #cccccc;">
+            Come <strong>sviluppatore PrestaShop freelance specializzato</strong> con oltre 15 anni di esperienza, ho gestito con successo più di 100 progetti e-commerce PrestaShop in tutta Italia. La mia expertise copre tutte le versioni di PrestaShop, dall'<strong>aggiornamento PrestaShop 1.6 a 8.2</strong> fino allo sviluppo di soluzioni enterprise complesse per grandi shop online.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #df0067;"><strong>Perché Scegliere un PrestaShop Developer Esperto?</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #cccccc;">
+            <strong>Prestashop è troppo lento?</strong> Molti e-commerce soffrono di problemi di performance causati da configurazioni errate, database non ottimizzati o moduli incompatibili. Come <strong>consulente PrestaShop senior</strong>, analizzo e risolvo questi problemi garantendo tempi di caricamento sotto i 2 secondi, fondamentali per <strong>aumentare le conversioni del tuo shop online</strong>.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #df0067;"><strong>Aggiornamento PrestaShop 1.6 e 1.7 alla Versione 8.2</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #cccccc;">
+            La <strong>migrazione PrestaShop 8</strong> richiede competenze tecniche specifiche per evitare perdita di dati, downtime e problemi SEO. Ho completato oltre <strong>50 migrazioni PrestaShop</strong> con zero perdita di dati e mantenimento completo del posizionamento Google. Se stai cercando un <strong>preventivo migrazione PrestaShop</strong> trasparente e dettagliato, offro consulenza gratuita per valutare il tuo caso specifico.
+          </p>
+
+          <div class="row my-5">
+            <div class="col-md-6 mb-4">
+              <div class="service-card">
+                <h4 style="color: #df0067;"><strong>Problemi Comuni PrestaShop</strong></h4>
+                <ul style="line-height: 2; color: #cccccc;">
+                  <li>Shop PrestaShop lento e scarse performance</li>
+                  <li>Errori dopo aggiornamento moduli</li>
+                  <li>Moduli incompatibili con nuove versioni</li>
+                  <li>Problemi di sicurezza e vulnerabilità</li>
+                  <li>Perdita ranking Google post-migrazione</li>
+                  <li>Database corrotto o troppo grande</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="service-card">
+                <h4 style="color: #df0067;"><strong>Le Mie Soluzioni</strong></h4>
+                <ul style="line-height: 2; color: #cccccc;">
+                  <li>Ottimizzazione database e query SQL</li>
+                  <li>Configurazione cache Redis/Memcached</li>
+                  <li>Sviluppo moduli custom certificati</li>
+                  <li>Implementazione firewall e protezione</li>
+                  <li>Redirect 301 automatici per SEO</li>
+                  <li>Pulizia e ottimizzazione tabelle</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="mt-5 mb-3" style="color: #df0067;"><strong>Sviluppo Moduli PrestaShop Personalizzati</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #cccccc;">
+            Quando i <strong>moduli PrestaShop</strong> standard non bastano, sviluppo soluzioni custom su misura. Che tu abbia bisogno di integrare API esterne, creare sistemi di pagamento personalizzati o automatizzare processi aziendali complessi, realizzo <strong>moduli PrestaShop professionali</strong> seguendo le best practice ufficiali e garantendo compatibilità con aggiornamenti futuri.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #df0067;"><strong>PrestaShop vs Shopify vs WooCommerce: Quale Scegliere?</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #cccccc;">
+            Molti clienti mi chiedono: "<em>PrestaShop o Shopify?</em>". La risposta dipende dalle tue esigenze. <strong>PrestaShop</strong> offre il massimo controllo e personalizzazione, ideale per e-commerce complessi con molti prodotti. <strong>Shopify</strong> è più semplice ma limitato nelle personalizzazioni. <strong>WooCommerce</strong> (WordPress) è economico ma meno performante su cataloghi grandi. Come <strong>consulente PrestaShop esperto</strong>, ti guido nella scelta migliore per il tuo business.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #df0067;"><strong>Ottimizzazione SEO PrestaShop per E-commerce</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #cccccc;">
+            Un <strong>e-commerce PrestaShop ottimizzato SEO</strong> può aumentare il traffico organico del 200-300%. Implemento strategie SEO avanzate specifiche per PrestaShop: URL SEO-friendly, meta tag dinamici, Schema.org per prodotti, sitemap XML automatica, velocità di caricamento ottimale e integrazione Google Shopping. Il risultato? Più visibilità su Google e più vendite.
+          </p>
+
+          <div class="alert mt-5" style="background: #1a1a1a; border-left: 4px solid #df0067; padding: 2rem;">
+            <h4 style="color: #df0067;"><strong>🎯 Cerchi un Preventivo PrestaShop Gratuito?</strong></h4>
+            <p style="margin: 0; font-size: 1.1rem; color: #ffffff;">
+              Compila il form qui sotto descrivendo il tuo progetto. Riceverai un <strong>preventivo dettagliato gratuito entro 24 ore</strong> con analisi tecnica, tempi di realizzazione e costi trasparenti. Nessun impegno richiesto.
+            </p>
+          </div>
+
+          <h3 class="mt-5 mb-3" style="color: #df0067;"><strong>Supporto e Manutenzione PrestaShop Continuativa</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #cccccc;">
+            Un e-commerce richiede manutenzione costante: aggiornamenti di sicurezza, backup automatici, monitoraggio performance 24/7 e interventi rapidi in caso di problemi. Offro <strong>pacchetti di manutenzione PrestaShop mensili</strong> personalizzati che includono supporto prioritario, ottimizzazioni periodiche e garanzia di uptime del 99.9%.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #df0067;"><strong>Perché Scegliere un Freelance invece di un'Agenzia?</strong></h3>
+
+          <div class="table-responsive mt-4">
+            <table class="table" style="color: #ffffff; border-color: #333;">
+              <thead style="background: #1a1a1a;">
+                <tr>
+                  <th>Caratteristica</th>
+                  <th style="color: #df0067;">Freelance Andrea Piani</th>
+                  <th>Agenzia Web</th>
+                </tr>
+              </thead>
+              <tbody style="background: #0a0a0a;">
+                <tr>
+                  <td><strong>Costo Progetti</strong></td>
+                  <td style="color: #4caf50;">✅ 40-60% più economico</td>
+                  <td>❌ Tariffe elevate</td>
+                </tr>
+                <tr>
+                  <td><strong>Comunicazione</strong></td>
+                  <td style="color: #4caf50;">✅ Diretta con lo sviluppatore</td>
+                  <td>❌ Tramite account manager</td>
+                </tr>
+                <tr>
+                  <td><strong>Tempi di Risposta</strong></td>
+                  <td style="color: #4caf50;">✅ Entro 24h garantito</td>
+                  <td>❌ 2-5 giorni lavorativi</td>
+                </tr>
+                <tr>
+                  <td><strong>Flessibilità</strong></td>
+                  <td style="color: #4caf50;">✅ Massima personalizzazione</td>
+                  <td>❌ Processi standardizzati</td>
+                </tr>
+                <tr>
+                  <td><strong>Competenza Tecnica</strong></td>
+                  <td style="color: #4caf50;">✅ 15+ anni esperienza</td>
+                  <td>❌ Team junior/senior misti</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-4" style="font-size: 1.05rem; line-height: 1.8; color: #cccccc;">
+            Lavorare con un <strong>freelance PrestaShop specializzato</strong> significa avere un partner tecnico dedicato che conosce a fondo il tuo progetto, risponde rapidamente e offre costi competitivi mantenendo altissima qualità. Sono basato in Italia, parlo italiano come madrelingua e sono sempre disponibile per call, videochiamate o meeting di persona.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM CONTATTO -->
+  <section id="form-contatto" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: #1a1a1a; padding: 3rem; border-radius: 15px; border: 2px solid #df0067;">
+            <h2 class="text-center mb-4"><strong>Richiedi un Preventivo Gratuito</strong></h2>
+            <p class="text-center mb-4">Compila il form e riceverai un preventivo dettagliato entro 24 ore</p>
+
+            <form action="https://formspree.io/f/mpwyyknb" method="POST">
+              <input type="hidden" name="_subject" value="🛒 Richiesta Preventivo PrestaShop">
+              <div class="mb-3">
+                <label class="form-label">Nome e Cognome *</label>
+                <input type="text" class="form-control" name="nome" required style="background: #0a0a0a; border-color: #333; color: #fff;">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" name="email" required style="background: #0a0a0a; border-color: #333; color: #fff;">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Telefono</label>
+                <input type="tel" class="form-control" name="telefono" style="background: #0a0a0a; border-color: #333; color: #fff;">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">URL Shop PrestaShop (se esistente)</label>
+                <input type="url" class="form-control" name="url_shop" style="background: #0a0a0a; border-color: #333; color: #fff;">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Versione PrestaShop Attuale</label>
+                <select class="form-control" name="versione" style="background: #0a0a0a; border-color: #333; color: #fff;">
+                  <option>Seleziona...</option>
+                  <option>PrestaShop 1.6</option>
+                  <option>PrestaShop 1.7</option>
+                  <option>PrestaShop 8.x</option>
+                  <option>Altro / Non so</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Di che servizio hai bisogno? *</label>
+                <select class="form-control" name="servizio" required style="background: #0a0a0a; border-color: #333; color: #fff;">
+                  <option>Migrazione PrestaShop 8.2</option>
+                  <option>Ottimizzazione Performance</option>
+                  <option>Sviluppo Modulo Custom</option>
+                  <option>Personalizzazione Tema</option>
+                  <option>Manutenzione e Supporto</option>
+                  <option>SEO E-commerce</option>
+                  <option>Altro</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Descrivi il tuo progetto *</label>
+                <textarea class="form-control" name="messaggio" rows="5" required style="background: #0a0a0a; border-color: #333; color: #fff;"></textarea>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="privacy" required>
+                <label class="form-check-label" for="privacy">
+                  Accetto la privacy policy *
+                </label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-lg" style="background: #df0067; color: white; border: none; padding: 1rem 3rem;">INVIA RICHIESTA</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI ALTERNATIVI -->
+  <section style="padding: 3rem 0; background: #0a0a0a; text-align: center;">
+    <div class="container">
+      <h3 class="mb-4">Preferisci un contatto diretto?</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <a href="https://wa.me/393516248936" class="btn btn-success btn-lg w-100" target="_blank">
+            📱 WhatsApp: +39 351 624 8936
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a href="mailto:andreapiani.dev@gmail.com" class="btn btn-outline-light btn-lg w-100">
+            ✉️ andreapiani.dev@gmail.com
+          </a>
+        </div>
+      </div>
+      <p class="mt-4"><a href="index.html" style="color: #df0067;">← Torna alla Homepage</a></p>
+    </div>
+  </section>
+
+  <!-- Footer GDPR -->
+  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0; margin-top: 4rem;">
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="footer-links" style="margin-bottom: 1.5rem;">
+          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">📄 Privacy Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🍪 Cookie Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="#" class="footer-manage-cookies" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">⚙️ Gestisci Cookie</a>
+          <span style="color: #666;">|</span>
+          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🏠 Home</a>
+          <span style="color: #666;">|</span>
+          <a href="progetti-open-source.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">💻 Portfolio</a>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc;">
+          <strong style="color: #fff;">Andrea Piani</strong> - Sviluppatore iOS/Android/Web Freelance<br>
+          Via Pelliccerie 10, 33100 Udine (UD) - P.IVA: 02915190306<br>
+          Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc; text-decoration: none;">andreapiani.dev@gmail.com</a> |
+          Tel: <a href="tel:+393516248936" style="color: #149dcc; text-decoration: none;">+39 351 624 8936</a>
+          <br><br>© 2025 Andrea Piani. Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.footer-manage-cookies').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.CookieConsent) window.CookieConsent.reset();
+      });
+    });
+  </script>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Cookie Consent Banner GDPR -->
+  <script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+
+  <script src="animations.js"></script>
+
+  <!-- New Features -->
+  <script src="utilities.js"></script>
+  <script src="performance.js"></script>
+
+  <script>
+    // Form submission with loading state and toast notification
+    document.querySelectorAll('form[action*="formspree"]').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn && window.AppUtils) {
+          window.AppUtils.setButtonLoading(btn, true);
+        }
+
+        if (window.AppUtils) {
+          window.AppUtils.trackEvent('Form', 'Submit', 'Contact Form');
+        }
+
+        setTimeout(() => {
+          if (btn && window.AppUtils) {
+            window.AppUtils.setButtonLoading(btn, false);
+          }
+          if (window.Toast) {
+            window.Toast.success('Messaggio inviato! Ti risponderò entro 24h', 'Grazie!');
+          }
+        }, 1000);
+      });
+    });
+  </script>
+
+  <script src="assets/js/popup-loader.js"></script>
+</body>
+</html>

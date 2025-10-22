@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="Sviluppo App Mobile iOS e Android professionali: 15+ anni esperienza, 50+ app pubblicate. Native, Cross-Platform, Flutter, React Native. MVP startup 4-8 settimane. Preventivo gratuito 24h.">
+  <meta name="keywords" content="sviluppo app mobile, sviluppo applicazioni mobile, creare app mobile, agenzia sviluppo app, sviluppatore app mobile italia, app ios android, sviluppo app native, app cross platform, flutter react native, costo sviluppo app, preventivo app mobile, agenzia app mobile italia, programmatore app freelance">
+
+  <meta property="og:title" content="Sviluppo App Mobile iOS e Android | 50+ App Pubblicate">
+  <meta property="og:description" content="Sviluppo applicazioni mobile professionali per iOS e Android. 15+ anni esperienza, tecnologie native e cross-platform. Preventivo gratuito.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/oig4.rlcenpycolpxdbe.x2od.jpeg">
+  <meta property="og:url" content="https://www.andreapiani.com/sviluppo-app-mobile.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sviluppo App Mobile iOS e Android Professionali">
+  <meta name="twitter:description" content="50+ app pubblicate, 15+ anni esperienza. Native, Cross-Platform, Flutter, React Native.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/oig4.rlcenpycolpxdbe.x2od.jpeg">
+
+  <link rel="canonical" href="https://www.andreapiani.com/sviluppo-app-mobile.html" />
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <title>Sviluppo App Mobile iOS Android | 50+ App Pubblicate | Andrea Piani</title>
+
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Andrea Piani - Sviluppo App Mobile",
+    "description": "Sviluppo applicazioni mobile professionali per iOS e Android con tecnologie native (Swift, Kotlin) e cross-platform (Flutter, React Native). 15+ anni esperienza, 50+ app pubblicate su App Store e Play Store.",
+    "url": "https://www.andreapiani.com/sviluppo-app-mobile.html",
+    "telephone": "+393516248936",
+    "email": "andreapiani.dev@gmail.com",
+    "areaServed": "IT",
+    "priceRange": "€€€",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi Sviluppo App Mobile",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sviluppo App iOS Native",
+            "description": "Applicazioni iPhone e iPad native con Swift e SwiftUI per performance massime"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sviluppo App Android Native",
+            "description": "Applicazioni Android native con Kotlin e Jetpack Compose"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "App Cross-Platform Flutter",
+            "description": "Un codice unico per iOS e Android con Flutter"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Backend e API Mobile",
+            "description": "Backend scalabili con Node.js, database cloud, API REST/GraphQL"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sviluppo App Mobile",
+        "item": "https://www.andreapiani.com/sviluppo-app-mobile.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <style>
+    body { background-color: #000000; color: #ffffff; font-family: 'Jost', sans-serif; }
+    .hero-mobile {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      padding: 5rem 0;
+      color: white;
+    }
+    .hero-mobile h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    .tech-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin: 0.25rem;
+      font-size: 0.9rem;
+    }
+    .process-card {
+      background: #1a1a1a;
+      border-left: 5px solid #6366f1;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s;
+    }
+    .process-card:hover {
+      transform: translateX(10px);
+      background: #222;
+    }
+    .process-number {
+      display: inline-block;
+      background: #6366f1;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+    .tech-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s;
+    }
+    .tech-card:hover {
+      border-color: #6366f1;
+      transform: translateY(-5px);
+    }
+    .case-study-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+      border: 2px solid #333;
+      border-radius: 15px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .pricing-box {
+      background: #1a1a1a;
+      border: 2px solid #6366f1;
+      border-radius: 15px;
+      padding: 2.5rem;
+      text-align: center;
+      height: 100%;
+    }
+    .faq-item {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .faq-question {
+      font-size: 1.2rem;
+      color: #6366f1;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      padding: 3rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+    .navbar-custom a:hover {
+      color: #6366f1 !important;
+    }
+    .comparison-table {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: #6366f1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+          <!-- MENU SERVIZI CON POPUP -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="serviziMenuBtn" onclick="openServiziPopup(); return false;">
+              Servizi ▾
+            </a>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>    </div>
+  </div>
+
+
+
+  <!-- HERO SECTION -->
+  <section class="hero-mobile gradient-animate scroll-animate" style="background-size: 200% 200%;">
+    <div class="container hero-animate">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="animate-fadeInUp">Sviluppo App Mobile Professionali<br>per iOS e Android</h1>
+          <h2 class="h3 mb-4 animate-fadeInUp animate-delay-1">Trasforma la Tua Idea in un'App di Successo</h2>
+          <p class="lead mb-4 animate-fadeInUp animate-delay-2">
+            <strong>15+ anni di esperienza</strong> nello sviluppo di applicazioni mobile con <strong>50+ app pubblicate</strong> su App Store e Google Play.
+            Tecnologie native (Swift, Kotlin) e cross-platform (Flutter, React Native) per creare app performanti, sicure e scalabili.
+          </p>
+          <div class="mb-4 animate-fadeInUp animate-delay-3">
+            <span class="tech-badge">Swift</span>
+            <span class="tech-badge">Kotlin</span>
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">Jetpack Compose</span>
+          </div>
+          <div class="mt-4 animate-fadeInUp animate-delay-4">
+            <a href="#preventivo" class="btn btn-light btn-lg me-2 glow-animate">RICHIEDI PREVENTIVO GRATUITO</a>
+            <a href="https://wa.me/393516248936" class="btn btn-outline-light btn-lg">CONTATTAMI SU WHATSAPP</a>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center mt-4 mt-lg-0 animate-fadeInUp animate-delay-3">
+          <div class="scroll-animate" style="background: rgba(0, 0, 0, 0.6); padding: 2rem; border-radius: 15px; border: 2px solid rgba(255,255,255,0.3);">
+            <div class="icon-pulse" style="font-size: 4rem; margin-bottom: 1rem;">📱</div>
+            <div class="card-animate" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+              <h3 class="icon-pulse" style="color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 2.5rem; margin-bottom: 0.5rem;"><strong>50+</strong></h3>
+              <p style="color: #fff; margin-bottom: 0;">App Pubblicate</p>
+            </div>
+            <div class="card-animate" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; animation-delay: 0.1s;">
+              <h3 class="icon-pulse" style="color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 2.5rem; margin-bottom: 0.5rem;"><strong>15+</strong></h3>
+              <p style="color: #fff; margin-bottom: 0;">Anni Esperienza</p>
+            </div>
+            <div class="card-animate" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; animation-delay: 0.2s;">
+              <h3 class="icon-pulse" style="color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 2.5rem; margin-bottom: 0.5rem;"><strong>100%</strong></h3>
+              <p style="color: #fff; margin-bottom: 0;">Progetti Completati</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHE SCEGLIERE ME -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>Perché Scegliere Me per la Tua App Mobile?</strong></h2>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card text-center">
+            <div style="font-size: 3rem; color: #6366f1; margin-bottom: 1rem;">🎯</div>
+            <h4><strong>Expertise Completo</strong></h4>
+            <p>Sviluppo full-stack: mobile (iOS/Android), backend (Node.js), database cloud (Firebase, AWS), API REST/GraphQL. Tutto gestito internamente.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card text-center">
+            <div style="font-size: 3rem; color: #6366f1; margin-bottom: 1rem;">⚡</div>
+            <h4><strong>Performance Native</strong></h4>
+            <p>Specializzato in app native (Swift per iOS, Kotlin per Android) per massime performance, UX fluida, accesso completo API piattaforma.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card text-center">
+            <div style="font-size: 3rem; color: #6366f1; margin-bottom: 1rem;">🚀</div>
+            <h4><strong>MVP Rapidi</strong></h4>
+            <p>Sviluppo MVP (Minimum Viable Product) in 4-8 settimane per startup che cercano investitori. Prototipo funzionante, non solo mockup.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card text-center">
+            <div style="font-size: 3rem; color: #6366f1; margin-bottom: 1rem;">✅</div>
+            <h4><strong>Pubblicazione Stores</strong></h4>
+            <p>Gestione completa review App Store e Google Play. ASO (App Store Optimization) per massimizzare download organici.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO SVILUPPO -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>Il Processo di Sviluppo App Mobile</strong></h2>
+      <p class="text-center lead mb-5">Dalla tua idea all'app pubblicata negli store: 7 step collaudati in 50+ progetti</p>
+
+      <div class="process-card">
+        <div class="d-flex align-items-center mb-3">
+          <span class="process-number">1</span>
+          <h3 class="mb-0"><strong>Discovery & Analisi (3-5 giorni)</strong></h3>
+        </div>
+        <p><strong>Obiettivo:</strong> Comprendere a fondo la tua idea, obiettivi business, target utenti.</p>
+        <ul>
+          <li><strong>Kickoff meeting:</strong> Discussione idea, pain points, soluzione proposta</li>
+          <li><strong>Analisi competitori:</strong> Studio app simili su App Store/Play Store, identificazione gap</li>
+          <li><strong>Definizione MVP:</strong> Quali funzionalità sono essenziali vs nice-to-have</li>
+          <li><strong>Target user personas:</strong> Chi userà l'app, quali device, comportamenti</li>
+          <li><strong>Scelta tecnologica:</strong> Native vs cross-platform, backend necessario</li>
+        </ul>
+        <p><strong>Deliverable:</strong> Documento analisi con roadmap, tech stack, budget preliminare</p>
+      </div>
+
+      <div class="process-card">
+        <div class="d-flex align-items-center mb-3">
+          <span class="process-number">2</span>
+          <h3 class="mb-0"><strong>UX/UI Design (1-2 settimane)</strong></h3>
+        </div>
+        <p><strong>Obiettivo:</strong> Creare design intuitivo, user-friendly, brand-consistent.</p>
+        <ul>
+          <li><strong>Wireframes:</strong> Struttura pagine, flussi navigazione, information architecture</li>
+          <li><strong>Mockup high-fidelity:</strong> Design grafico finale con colori, font, icone, immagini</li>
+          <li><strong>Prototipo interattivo:</strong> Figma/Adobe XD navigabile per testare UX</li>
+          <li><strong>Design System:</strong> Componenti riutilizzabili, guidelines, accessibilità WCAG</li>
+          <li><strong>Review iterativi:</strong> Feedback continuo, modifiche prima di sviluppo</li>
+        </ul>
+        <p><strong>Deliverable:</strong> Mockup finali, prototipo Figma, design system documentato</p>
+      </div>
+
+      <div class="process-card">
+        <div class="d-flex align-items-center mb-3">
+          <span class="process-number">3</span>
+          <h3 class="mb-0"><strong>Setup Backend & API (1 settimana)</strong></h3>
+        </div>
+        <p><strong>Obiettivo:</strong> Infrastruttura cloud scalabile, sicura, performante.</p>
+        <ul>
+          <li><strong>Scelta stack:</strong> Node.js/NestJS, database (PostgreSQL/MongoDB), cloud (AWS/Firebase)</li>
+          <li><strong>Architettura API:</strong> REST o GraphQL, autenticazione JWT, rate limiting</li>
+          <li><strong>Database design:</strong> Schema relazionale/NoSQL, indici, ottimizzazioni</li>
+          <li><strong>Storage media:</strong> S3/Cloud Storage per immagini, video, documenti</li>
+          <li><strong>Push notifications:</strong> FCM (Firebase Cloud Messaging) setup</li>
+        </ul>
+        <p><strong>Deliverable:</strong> Backend funzionante, API documentate (Swagger), environment staging</p>
+      </div>
+
+      <div class="process-card">
+        <div class="d-flex align-items-center mb-3">
+          <span class="process-number">4</span>
+          <h3 class="mb-0"><strong>Sviluppo Mobile App (4-10 settimane)</strong></h3>
+        </div>
+        <p><strong>Obiettivo:</strong> Codificare l'app seguendo best practices, clean code, testing.</p>
+        <ul>
+          <li><strong>iOS Native:</strong> Swift + SwiftUI/UIKit, architettura MVVM, Combine/async-await</li>
+          <li><strong>Android Native:</strong> Kotlin + Jetpack Compose, architettura MVVM, Coroutines/Flow</li>
+          <li><strong>Cross-Platform:</strong> Flutter (Dart) o React Native (TypeScript)</li>
+          <li><strong>Integrazioni:</strong> API backend, payment (Stripe), maps, analytics, crash reporting</li>
+          <li><strong>Testing:</strong> Unit test, integration test, UI test automatizzati</li>
+          <li><strong>CI/CD:</strong> GitHub Actions per build automatiche, deployment staging</li>
+        </ul>
+        <p><strong>Deliverable:</strong> App funzionante su staging, codice versionato Git, test coverage >70%</p>
+      </div>
+
+      <div class="process-card">
+        <div class="d-flex align-items-center mb-3">
+          <span class="process-number">5</span>
+          <h3 class="mb-0"><strong>Testing & QA (1-2 settimane)</strong></h3>
+        </div>
+        <p><strong>Obiettivo:</strong> Zero bug critici, app stabile, UX ottimale su tutti i device.</p>
+        <ul>
+          <li><strong>Test funzionali:</strong> Verifica tutte le feature secondo acceptance criteria</li>
+          <li><strong>Test multi-device:</strong> iPhone (12/13/14/15), iPad, Android (Samsung, Pixel, OnePlus)</li>
+          <li><strong>Test performance:</strong> Tempi risposta, memoria, batteria, network (3G/4G/5G/WiFi)</li>
+          <li><strong>Test sicurezza:</strong> Penetration test, analisi vulnerabilità, OWASP Mobile Top 10</li>
+          <li><strong>User Acceptance Testing (UAT):</strong> Test con utenti reali, feedback qualitativo</li>
+        </ul>
+        <p><strong>Deliverable:</strong> Bug report, app stabile pronta per stores, documentazione test</p>
+      </div>
+
+      <div class="process-card">
+        <div class="d-flex align-items-center mb-3">
+          <span class="process-number">6</span>
+          <h3 class="mb-0"><strong>Pubblicazione Stores (3-7 giorni)</strong></h3>
+        </div>
+        <p><strong>Obiettivo:</strong> App live su App Store e Google Play, conformità guidelines.</p>
+        <ul>
+          <li><strong>Account Apple/Google:</strong> Setup developer account (se non esistente)</li>
+          <li><strong>Store listing:</strong> Titolo, descrizione, screenshot, video preview, keywords ASO</li>
+          <li><strong>Privacy policy & Terms:</strong> Documenti legali GDPR-compliant hosted</li>
+          <li><strong>App Store review:</strong> Submit + gestione eventuali rejection (Apple 1-3 giorni)</li>
+          <li><strong>Google Play review:</strong> Submit (automatica, ~24 ore)</li>
+          <li><strong>Rollout progressivo:</strong> Release graduale (10% → 50% → 100% utenti)</li>
+        </ul>
+        <p><strong>Deliverable:</strong> App pubblicata, analytics configurati (Firebase/Mixpanel), monitoring attivo</p>
+      </div>
+
+      <div class="process-card">
+        <div class="d-flex align-items-center mb-3">
+          <span class="process-number">7</span>
+          <h3 class="mb-0"><strong>Supporto Post-Lancio (ongoing)</strong></h3>
+        </div>
+        <p><strong>Obiettivo:</strong> Manutenzione, bug fix, nuove funzionalità, aggiornamenti OS.</p>
+        <ul>
+          <li><strong>Monitoring 24/7:</strong> Crash reporting (Crashlytics), performance monitoring, error tracking</li>
+          <li><strong>Bug fix prioritari:</strong> Risoluzione bug critici entro 24-48h</li>
+          <li><strong>Aggiornamenti OS:</strong> Compatibilità con nuove versioni iOS/Android</li>
+          <li><strong>Analytics & insights:</strong> Report mensili: utenti, retention, funnel conversione</li>
+          <li><strong>Feature updates:</strong> Sviluppo nuove funzionalità post-lancio</li>
+        </ul>
+        <p><strong>Deliverable:</strong> SLA maintenance, update regolari stores, report analytics</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFRONTO TECNOLOGIE -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>Native vs Cross-Platform: Quale Scegliere?</strong></h2>
+      <p class="text-center lead mb-5">Confronto dettagliato tra approcci di sviluppo mobile app</p>
+
+      <div class="table-responsive">
+        <table class="table table-dark table-bordered comparison-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Caratteristica</th>
+              <th style="width: 25%;">Native (Swift/Kotlin)</th>
+              <th style="width: 25%;">Flutter</th>
+              <th style="width: 25%;">React Native</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Performance</strong></td>
+              <td style="color: #28a745;">⭐⭐⭐⭐⭐ Massima<br><small>Compilato in codice nativo</small></td>
+              <td style="color: #28a745;">⭐⭐⭐⭐ Ottima<br><small>Rendering nativo Skia</small></td>
+              <td style="color: #ffc107;">⭐⭐⭐ Buona<br><small>JavaScript bridge overhead</small></td>
+            </tr>
+            <tr>
+              <td><strong>UX Nativa</strong></td>
+              <td style="color: #28a745;">⭐⭐⭐⭐⭐ Perfetta<br><small>100% API native</small></td>
+              <td style="color: #ffc107;">⭐⭐⭐⭐ Molto buona<br><small>Material/Cupertino widgets</small></td>
+              <td style="color: #ffc107;">⭐⭐⭐ Buona<br><small>Componenti nativi limitati</small></td>
+            </tr>
+            <tr>
+              <td><strong>Tempo Sviluppo</strong></td>
+              <td style="color: #dc3545;">Più lungo<br><small>2 codebase separati</small></td>
+              <td style="color: #28a745;">Veloce<br><small>1 codebase, hot reload</small></td>
+              <td style="color: #28a745;">Veloce<br><small>1 codebase, fast refresh</small></td>
+            </tr>
+            <tr>
+              <td><strong>Costo Sviluppo</strong></td>
+              <td style="color: #dc3545;">€€€€<br><small>2 team (iOS + Android)</small></td>
+              <td style="color: #28a745;">€€<br><small>1 team, riuso codice 95%</small></td>
+              <td style="color: #28a745;">€€<br><small>1 team, riuso codice 90%</small></td>
+            </tr>
+            <tr>
+              <td><strong>Accesso API Device</strong></td>
+              <td style="color: #28a745;">Completo<br><small>Tutte API iOS/Android</small></td>
+              <td style="color: #28a745;">Completo<br><small>Plugin community estesi</small></td>
+              <td style="color: #ffc107;">Buono<br><small>Moduli nativi custom necessari</small></td>
+            </tr>
+            <tr>
+              <td><strong>Maturità Ecosystem</strong></td>
+              <td style="color: #28a745;">Maturo<br><small>Swift 2014, Kotlin 2016</small></td>
+              <td style="color: #28a745;">Maturo<br><small>Flutter 2017, Google backed</small></td>
+              <td style="color: #28a745;">Maturo<br><small>RN 2015, Meta backed</small></td>
+            </tr>
+            <tr>
+              <td><strong>Community & Librerie</strong></td>
+              <td style="color: #28a745;">Enorme<br><small>Milioni sviluppatori</small></td>
+              <td style="color: #28a745;">Grande<br><small>Crescita rapida, pub.dev</small></td>
+              <td style="color: #28a745;">Enorme<br><small>npm ecosystem</small></td>
+            </tr>
+            <tr>
+              <td><strong>Dimensione App</strong></td>
+              <td style="color: #28a745;">Ottimale<br><small>iOS ~20MB, Android ~10MB</small></td>
+              <td style="color: #ffc107;">Media<br><small>+4-8MB per Flutter engine</small></td>
+              <td style="color: #ffc107;">Media<br><small>+8-12MB per React bundle</small></td>
+            </tr>
+            <tr>
+              <td><strong>Curva Apprendimento</strong></td>
+              <td style="color: #ffc107;">Media-Alta<br><small>2 linguaggi diversi</small></td>
+              <td style="color: #28a745;">Media<br><small>Dart simile Java/JS</small></td>
+              <td style="color: #28a745;">Facile<br><small>JavaScript/React.js</small></td>
+            </tr>
+            <tr>
+              <td><strong>Quando Scegliere</strong></td>
+              <td>🎯 App complesse<br>🎯 Performance critiche<br>🎯 UX perfetta<br>🎯 Gaming, AR/VR<br>🎯 Budget adeguato</td>
+              <td>🎯 MVP rapidi<br>🎯 Budget limitato<br>🎯 UI custom<br>🎯 Animazioni complesse<br>🎯 B2C consumer app</td>
+              <td>🎯 Team web esistente<br>🎯 Prototipo veloce<br>🎯 App semplici<br>🎯 Startup early stage</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="lead"><strong>La mia raccomandazione:</strong></p>
+        <p class="lead">
+          <span style="color: #6366f1;">▸</span> <strong>Native (Swift/Kotlin)</strong> per app mission-critical, e-commerce con pagamenti, fintech, health, gaming<br>
+          <span style="color: #6366f1;">▸</span> <strong>Flutter</strong> per MVP startup, app consumer con UI custom, progetti con budget medio-basso<br>
+          <span style="color: #6366f1;">▸</span> <strong>React Native</strong> per team con expertise React.js, app content-based semplici
+        </p>
+        <a href="app-native-vs-cross-platform.html" class="btn btn-outline-light mt-3">Approfondimento Dettagliato →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASI STUDIO -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>Casi Studio: App Mobile Reali Sviluppate</strong></h2>
+
+      <div class="case-study-card">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="mb-3">
+              <span style="background: #28a745; color: white; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold;">HEALTH & FITNESS</span>
+              <span style="background: #6366f1; color: white; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold; margin-left: 0.5rem;">iOS + ANDROID NATIVE</span>
+            </div>
+            <h3><strong>App Fitness con Personal Trainer Virtuale</strong></h3>
+            <p class="mt-3"><strong>Cliente:</strong> Startup italiana health-tech seed round €500k</p>
+            <p><strong>Obiettivo:</strong> Creare app fitness con AI personal trainer, piani allenamento personalizzati, tracking progressi</p>
+            <p><strong>Soluzione Tecnica:</strong></p>
+            <ul>
+              <li><strong>iOS Native:</strong> Swift + SwiftUI, HealthKit integration, Core ML per AI recommendations</li>
+              <li><strong>Android Native:</strong> Kotlin + Jetpack Compose, Google Fit API, TensorFlow Lite</li>
+              <li><strong>Backend:</strong> Node.js + NestJS, PostgreSQL, Redis cache, AWS S3 per video workout</li>
+              <li><strong>AI Engine:</strong> Algoritmo ML custom per generazione piani basato su livello utente</li>
+              <li><strong>Payment:</strong> Stripe integration per subscription mensile €9.99</li>
+            </ul>
+            <p><strong>Risultati Post-Lancio:</strong></p>
+            <ul style="color: #28a745;">
+              <li>✅ 50.000+ download primi 6 mesi organici + ads</li>
+              <li>✅ 4.8⭐ rating App Store, 4.7⭐ Google Play</li>
+              <li>✅ 25% conversion free → paid subscriber (ottimo per fitness)</li>
+              <li>✅ €45k MRR (Monthly Recurring Revenue) dopo 1 anno</li>
+              <li>✅ Startup ha chiuso Series A €2.5M grazie a traction app</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div style="background: #6366f1; padding: 2rem; border-radius: 10px;">
+              <h4 style="color: white;"><strong>Timeline</strong></h4>
+              <p style="color: white; margin-bottom: 0.5rem;">Discovery: 1 settimana</p>
+              <p style="color: white; margin-bottom: 0.5rem;">Design: 2 settimane</p>
+              <p style="color: white; margin-bottom: 0.5rem;">Backend: 2 settimane</p>
+              <p style="color: white; margin-bottom: 0.5rem;">iOS Dev: 8 settimane</p>
+              <p style="color: white; margin-bottom: 0.5rem;">Android Dev: 8 settimane</p>
+              <p style="color: white; margin-bottom: 0.5rem;">Testing: 2 settimane</p>
+              <p style="color: white; margin-bottom: 1rem;">Stores: 1 settimana</p>
+              <h3 style="color: white;"><strong>Totale: 3.5 mesi</strong></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-card">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="mb-3">
+              <span style="background: #149dcc; color: white; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold;">E-COMMERCE</span>
+              <span style="background: #8b5cf6; color: white; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold; margin-left: 0.5rem;">FLUTTER CROSS-PLATFORM</span>
+            </div>
+            <h3><strong>App E-commerce Fashion con AR Try-On</strong></h3>
+            <p class="mt-3"><strong>Cliente:</strong> Brand fashion italiano con 20 negozi fisici</p>
+            <p><strong>Obiettivo:</strong> App mobile e-commerce con prova virtuale AR accessori (occhiali, orologi)</p>
+            <p><strong>Soluzione Tecnica:</strong></p>
+            <ul>
+              <li><strong>Flutter Cross-Platform:</strong> Un codice per iOS + Android, riuso 95%</li>
+              <li><strong>AR Foundation:</strong> ARCore (Android) + ARKit (iOS) per virtual try-on</li>
+              <li><strong>Backend PrestaShop:</strong> Integrazione API REST esistente e-commerce</li>
+              <li><strong>Payment:</strong> Stripe + PayPal + Apple Pay + Google Pay</li>
+              <li><strong>Shipping:</strong> Tracking real-time con carrier API</li>
+            </ul>
+            <p><strong>Risultati:</strong></p>
+            <ul style="color: #28a745;">
+              <li>✅ Sviluppo completato in 2.5 mesi (vs 4-5 mesi native)</li>
+              <li>✅ Budget risparmiato 40% rispetto a iOS + Android separati</li>
+              <li>✅ 15.000+ download primi 3 mesi (clienti negozi fisici)</li>
+              <li>✅ AR try-on ha aumentato conversion rate del +35%</li>
+              <li>✅ 60% ordini ora arrivano da app mobile vs sito web</li>
+              <li>✅ AOV (Average Order Value) app €120 vs sito €85 (+41%)</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div style="background: #8b5cf6; padding: 2rem; border-radius: 10px;">
+              <h4 style="color: white;"><strong>Budget Investito</strong></h4>
+              <p style="color: white; font-size: 2.5rem; margin: 1rem 0;"><strong>€18.000</strong></p>
+              <p style="color: white; margin-bottom: 1rem;">vs €30k per native iOS+Android</p>
+              <h4 style="color: white; margin-top: 2rem;"><strong>ROI Primo Anno</strong></h4>
+              <p style="color: white; font-size: 2.5rem; margin: 1rem 0;"><strong>420%</strong></p>
+              <p style="color: white; margin-bottom: 0;">€75k revenue incrementale da app</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-card">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="mb-3">
+              <span style="background: #dc3545; color: white; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold;">FINTECH</span>
+              <span style="background: #6366f1; color: white; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold; margin-left: 0.5rem;">iOS NATIVE + ANDROID NATIVE</span>
+            </div>
+            <h3><strong>App Banking Digitale con Biometrics</strong></h3>
+            <p class="mt-3"><strong>Cliente:</strong> Fintech italiana licensed PSD2</p>
+            <p><strong>Obiettivo:</strong> App banking mobile sicura con Face ID, transazioni istantanee, open banking</p>
+            <p><strong>Soluzione Tecnica:</strong></p>
+            <ul>
+              <li><strong>iOS Native Swift:</strong> Face ID/Touch ID, Keychain per credenziali, Certificate Pinning</li>
+              <li><strong>Android Native Kotlin:</strong> BiometricPrompt API, EncryptedSharedPreferences</li>
+              <li><strong>Sicurezza:</strong> End-to-end encryption, JWT short-lived, rate limiting, 2FA</li>
+              <li><strong>Backend:</strong> Microservices architecture, PSD2 API integration, audit logging</li>
+              <li><strong>Compliance:</strong> GDPR, PSD2, AML/KYC verification automation</li>
+            </ul>
+            <p><strong>Perché Native:</strong> Fintech richiede massima sicurezza, performance, accesso biometrics nativo, certificazione banking</p>
+            <p><strong>Risultati:</strong></p>
+            <ul style="color: #28a745;">
+              <li>✅ App certificata standard bancari italiani/europei</li>
+              <li>✅ Zero vulnerabilità security audit (penetration test passed)</li>
+              <li>✅ 100.000+ utenti registrati primo anno</li>
+              <li>✅ 4.9⭐ iOS, 4.8⭐ Android (trust fondamentale fintech)</li>
+              <li>✅ 99.95% uptime, tempi risposta <300ms</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div style="background: #dc3545; padding: 2rem; border-radius: 10px;">
+              <h4 style="color: white;"><strong>Complessità</strong></h4>
+              <p style="color: white; margin-top: 1rem;"><strong>Alta</strong></p>
+              <p style="color: white;">Timeline: 5 mesi</p>
+              <p style="color: white;">Budget: €55k</p>
+              <p style="color: white; margin-top: 2rem;"><strong>Team:</strong></p>
+              <p style="color: white;">1 iOS dev (me)</p>
+              <p style="color: white;">1 Android dev partner</p>
+              <p style="color: white;">1 Backend dev</p>
+              <p style="color: white;">1 Security auditor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="lead">Vuoi vedere altre app che ho sviluppato?</p>
+        <a href="app-pubblicate-store.html" class="btn btn-outline-light btn-lg">Portfolio Completo App Pubblicate →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVP: APPROCCIO IDEALE PER LA TUA IDEA -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-4"><strong>Trasforma la Tua Idea in App con un MVP</strong></h2>
+      <p class="text-center lead mb-5">L'approccio smart per startare: investimento contenuto, risultati concreti in 4-8 settimane</p>
+
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mb-4">
+          <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 3rem; border-radius: 15px; height: 100%;">
+            <h3 style="color: white; margin-bottom: 1.5rem;"><strong>🚀 Cos'è un MVP (Minimum Viable Product)?</strong></h3>
+            <p style="color: white; font-size: 1.1rem; line-height: 1.8;">
+              Un MVP è una <strong>versione iniziale della tua app</strong> che include solo le <strong>funzionalità essenziali</strong> per validare l'idea sul mercato.
+              Non è un prototipo statico, ma un'<strong>app reale funzionante</strong> pubblicabile su App Store e Google Play.
+            </p>
+            <p style="color: white; font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">
+              Focus su <strong>core features che risolvono il problema principale</strong> degli utenti. Feature avanzate arrivano dopo, quando hai validato l'idea e ottenuto feedback reali.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 3rem; border-radius: 15px; border: 2px solid #6366f1; height: 100%;">
+            <h3 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>⏱️ Timeline MVP Tipica</strong></h3>
+            <div style="border-left: 4px solid #6366f1; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+              <h5 style="color: white;"><strong>Settimana 1:</strong> Discovery & Design</h5>
+              <p style="color: #ccc; margin-bottom: 0;">Wireframes, flussi utente, mockup essenziali</p>
+            </div>
+            <div style="border-left: 4px solid #6366f1; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+              <h5 style="color: white;"><strong>Settimana 2-3:</strong> Backend & API Setup</h5>
+              <p style="color: #ccc; margin-bottom: 0;">Infrastruttura cloud, autenticazione, database</p>
+            </div>
+            <div style="border-left: 4px solid #6366f1; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+              <h5 style="color: white;"><strong>Settimana 4-6:</strong> Sviluppo App</h5>
+              <p style="color: #ccc; margin-bottom: 0;">Codifica core features iOS/Android</p>
+            </div>
+            <div style="border-left: 4px solid #6366f1; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+              <h5 style="color: white;"><strong>Settimana 7:</strong> Testing & Bug Fix</h5>
+              <p style="color: #ccc; margin-bottom: 0;">QA completo, stabilizzazione, ottimizzazioni</p>
+            </div>
+            <div style="border-left: 4px solid #6366f1; padding-left: 1.5rem;">
+              <h5 style="color: white;"><strong>Settimana 8:</strong> Pubblicazione Stores</h5>
+              <p style="color: #ccc; margin-bottom: 0;">Review Apple/Google, lancio ufficiale</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-center mb-5" style="color: #6366f1;"><strong>💡 Perché un MVP è la Scelta Giusta per Te</strong></h3>
+
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="tech-card" style="border-color: #6366f1;">
+            <div style="font-size: 3rem; color: #6366f1; text-align: center; margin-bottom: 1rem;">💰</div>
+            <h4 style="color: #6366f1; text-align: center; margin-bottom: 1.5rem;"><strong>Investimento Contenuto</strong></h4>
+            <ul style="line-height: 2;">
+              <li><strong>Budget accessibile</strong> rispetto a sviluppo full app (risparmio 50-70%)</li>
+              <li><strong>Rischio ridotto:</strong> investi poco per testare se l'idea funziona</li>
+              <li><strong>ROI veloce:</strong> lanci in 4-8 settimane e inizi a monetizzare subito</li>
+              <li><strong>Nessun debito tecnico:</strong> codice pulito, scalabile, pronto per evolvere</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="tech-card" style="border-color: #6366f1;">
+            <div style="font-size: 3rem; color: #6366f1; text-align: center; margin-bottom: 1rem;">🎯</div>
+            <h4 style="color: #6366f1; text-align: center; margin-bottom: 1.5rem;"><strong>Validazione Rapida</strong></h4>
+            <ul style="line-height: 2;">
+              <li><strong>Feedback utenti reali</strong> in poche settimane invece di mesi</li>
+              <li><strong>Dati concreti:</strong> retention, engagement, conversioni reali vs ipotesi</li>
+              <li><strong>Pivot possibile:</strong> se scopri che qualcosa non funziona, correggi rapidamente</li>
+              <li><strong>Proof of concept</strong> tangibile per partner, investitori, clienti</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="tech-card" style="border-color: #6366f1;">
+            <div style="font-size: 3rem; color: #6366f1; text-align: center; margin-bottom: 1rem;">🚀</div>
+            <h4 style="color: #6366f1; text-align: center; margin-bottom: 1.5rem;"><strong>Time-to-Market Veloce</strong></h4>
+            <ul style="line-height: 2;">
+              <li><strong>Lanci in 4-8 settimane</strong> vs 4-6 mesi app completa</li>
+              <li><strong>First-mover advantage:</strong> batti i competitor sul tempo</li>
+              <li><strong>Feedback loop rapido:</strong> impara, migliora, espandi iterativamente</li>
+              <li><strong>Momentum:</strong> team motivato vedendo app reale pubblicata subito</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-6 mb-4">
+          <div class="tech-card" style="border-color: #28a745;">
+            <div style="font-size: 3rem; color: #28a745; text-align: center; margin-bottom: 1rem;">💼</div>
+            <h4 style="color: #28a745; text-align: center; margin-bottom: 1.5rem;"><strong>Perfetto per Startup & Fundraising</strong></h4>
+            <ul style="line-height: 2;">
+              <li><strong>Pitch investitori con app funzionante</strong> invece di sole slide PowerPoint</li>
+              <li><strong>Traction dimostrabile:</strong> utenti attivi, metriche, crescita reale</li>
+              <li><strong>Valutazione maggiore:</strong> startup con prodotto vale 3-5x più di idea su carta</li>
+              <li><strong>Credibilità:</strong> team che esegue > team che promette</li>
+              <li><strong>Due diligence facilitata:</strong> investitori testano app in prima persona</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="tech-card" style="border-color: #ff9800;">
+            <div style="font-size: 3rem; color: #ff9800; text-align: center; margin-bottom: 1rem;">📈</div>
+            <h4 style="color: #ff9800; text-align: center; margin-bottom: 1.5rem;"><strong>Strategia di Crescita Scalabile</strong></h4>
+            <ul style="line-height: 2;">
+              <li><strong>Fase 1 (MVP):</strong> Funzionalità core, validazione mercato, primi utenti</li>
+              <li><strong>Fase 2 (Post-feedback):</strong> Feature più richieste, UX improvements</li>
+              <li><strong>Fase 3 (Scaling):</strong> Automazioni, AI, integrazioni avanzate</li>
+              <li><strong>Fase 4 (Enterprise):</strong> Personalizzazioni, white-label, B2B features</li>
+              <li><strong>Roadmap basata su dati</strong> reali invece di assunzioni</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); border: 3px solid #6366f1; border-radius: 15px; padding: 3rem; margin-top: 3rem;">
+        <h3 class="text-center mb-4" style="color: #6366f1;"><strong>🎯 Cosa Include un MVP Mobile App</strong></h3>
+        <div class="row">
+          <div class="col-md-6">
+            <h5 style="color: white; margin-bottom: 1.5rem;"><strong>✅ Incluso nel MVP:</strong></h5>
+            <ul style="line-height: 2; color: #ccc;">
+              <li>Autenticazione utenti (signup/login)</li>
+              <li>3-5 funzionalità core essenziali</li>
+              <li>UI/UX design professionale (semplice ma efficace)</li>
+              <li>Backend cloud scalabile (Firebase o Node.js)</li>
+              <li>Database strutturato per crescita futura</li>
+              <li>Push notifications base</li>
+              <li>Analytics integration (Firebase/Mixpanel)</li>
+              <li>Crash reporting (Crashlytics)</li>
+              <li>Pubblicazione App Store + Google Play</li>
+              <li>Documentazione tecnica</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 style="color: white; margin-bottom: 1.5rem;"><strong>⏳ Postponed Fase 2:</strong></h5>
+            <ul style="line-height: 2; color: #999;">
+              <li>Feature avanzate non-critiche</li>
+              <li>Integrazioni API esterne complesse</li>
+              <li>Chat in-app real-time</li>
+              <li>Payment/monetizzazione (se non core business)</li>
+              <li>Admin dashboard web</li>
+              <li>Notifiche push avanzate (segmentazione)</li>
+              <li>Localizzazione multi-lingua</li>
+              <li>Gamification/reward system</li>
+              <li>Social login multipli</li>
+              <li>Funzionalità "nice-to-have"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <h4 class="mb-4" style="color: white;"><strong>Vuoi capire se un MVP è adatto alla tua idea?</strong></h4>
+        <p class="lead mb-4">Richied i un preventivo gratuito personalizzato. Analizzo la tua idea e ti propongo l'approccio migliore.</p>
+        <a href="mvp-app-startup.html" class="btn btn-outline-light btn-lg me-3">📖 Guida Completa MVP per Startup</a>
+        <a href="#preventivo" class="btn btn-lg" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; border: none;">💬 Richiedi Consulenza Gratuita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>Domande Frequenti su Sviluppo App Mobile</strong></h2>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="faq-item">
+            <h3 class="faq-question">È meglio sviluppare app native o cross-platform?</h3>
+            <p><strong>Dipende dal tuo caso specifico:</strong></p>
+            <p><strong>Scegli Native (Swift/Kotlin)</strong> se:</p>
+            <ul>
+              <li>Performance critiche (gaming, AR/VR, video editing)</li>
+              <li>App complessa con funzionalità avanzate</li>
+              <li>Budget adeguato (€25k+)</li>
+              <li>UX perfetta requisito fondamentale</li>
+              <li>Settori regolamentati (fintech, health)</li>
+            </ul>
+            <p><strong>Scegli Cross-Platform (Flutter/RN)</strong> se:</p>
+            <ul>
+              <li>MVP rapido per validare idea</li>
+              <li>Budget limitato (€10k-20k)</li>
+              <li>Time-to-market critico (3-6 settimane)</li>
+              <li>App content-based standard</li>
+              <li>Startup pre-funding</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Quanto tempo serve per sviluppare un'app mobile?</h3>
+            <p>Timeline realistiche basate su complessità:</p>
+            <ul>
+              <li><strong>App semplice:</strong> 1-2 mesi (es. catalogo prodotti, booking)</li>
+              <li><strong>App media:</strong> 2-4 mesi (es. e-commerce, social, fitness)</li>
+              <li><strong>App complessa:</strong> 4-6+ mesi (es. fintech, marketplace, telemedicine)</li>
+              <li><strong>MVP startup:</strong> 4-8 settimane (funzionalità core only)</li>
+            </ul>
+            <p>Fattori che influenzano timeline:</p>
+            <ul>
+              <li>Numero funzionalità e complessità</li>
+              <li>Custom design vs template</li>
+              <li>Backend da zero vs esistente</li>
+              <li>Native (più lungo) vs cross-platform (più rapido)</li>
+              <li>Integrazioni API esterne</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Posso pubblicare l'app da solo sugli store?</h3>
+            <p>Tecnicamente sì, ma <strong>non consigliato</strong> se non hai esperienza:</p>
+            <p><strong>Pubblicazione App Store (Apple):</strong></p>
+            <ul>
+              <li>Review manuale 1-3 giorni, rejection rate ~40% prima volta</li>
+              <li>Guidelines strictissime: privacy, design, content, performance</li>
+              <li>Documentazione compliance GDPR, Terms, Privacy Policy</li>
+              <li>Screenshot specifici per ogni device (iPhone 6.5", 5.5", iPad Pro)</li>
+            </ul>
+            <p><strong>Pubblicazione Google Play:</strong></p>
+            <ul>
+              <li>Review automatica ~24h, meno restrizioni Apple</li>
+              <li>Policy content, malware, permissions compliance</li>
+              <li>Asset grafici: icon, feature graphic, screenshots</li>
+            </ul>
+            <p><strong>Il mio servizio include:</strong> Gestione completa pubblicazione, ASO (keywords, descrizioni), asset grafici, gestione rejection/appeal, monitoring post-lancio.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Serve un backend cloud per la mia app?</h3>
+            <p><strong>Dipende dalle funzionalità dell'app:</strong></p>
+            <p><strong>Backend NON necessario</strong> per:</p>
+            <ul>
+              <li>App offline-first (calcolatrici, utility, giochi single-player)</li>
+              <li>Contenuto statico embedded nell'app</li>
+              <li>Dati salvati solo in locale (device storage)</li>
+            </ul>
+            <p><strong>Backend NECESSARIO</strong> per:</p>
+            <ul>
+              <li>Autenticazione utenti (login/registrazione)</li>
+              <li>Sync dati multi-device</li>
+              <li>Chat/messaggistica real-time</li>
+              <li>Payment/transazioni</li>
+              <li>Push notifications</li>
+              <li>User-generated content</li>
+              <li>Analytics/monitoring</li>
+            </ul>
+            <p><strong>Opzioni backend:</strong></p>
+            <ul>
+              <li><strong>Firebase (Google):</strong> Veloce setup, pay-as-you-go, ottimo MVP (€0-100/mese iniziale)</li>
+              <li><strong>Custom Node.js:</strong> Controllo totale, scalabile, costo fisso VPS (€20-200/mese)</li>
+              <li><strong>AWS/Azure:</strong> Enterprise-grade, auto-scaling, costo variabile</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Come proteggo la mia idea quando ti contatto?</h3>
+            <p><strong>Privacy e confidenzialità garantite:</strong></p>
+            <ul>
+              <li><strong>NDA (Non-Disclosure Agreement)</strong> firmabile prima di ogni call se richiesto</li>
+              <li>Policy interna strict: zero condivisione info clienti, progetti confidenziali</li>
+              <li>15+ anni reputazione: mai violata confidenzialità cliente</li>
+              <li>Codice sorgente: proprietà 100% cliente, consegna repo GitHub privato</li>
+            </ul>
+            <p><strong>Nota importante:</strong> Le idee di per sé hanno poco valore. L'esecuzione è tutto. Ho visto 100+ idee simili, ciò che fa differenza è il team, execution, marketing, timing. Focus su validare idea velocemente con MVP, non proteggere eccessivamente.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="faq-item">
+            <h3 class="faq-question">Quanto costa mantenere un'app dopo il lancio?</h3>
+            <p><strong>Budget annuale tipico: 15-20% del costo sviluppo iniziale</strong></p>
+            <p><strong>Costi fissi mensili:</strong></p>
+            <ul>
+              <li><strong>Hosting/Backend:</strong> €20-200/mese (Firebase/VPS/AWS)</li>
+              <li><strong>Apple Developer:</strong> €99/anno</li>
+              <li><strong>Google Play Developer:</strong> $25 una-tantum</li>
+              <li><strong>Certificati SSL:</strong> €0-50/anno (Let's Encrypt gratuito)</li>
+              <li><strong>Push notifications:</strong> €0-100/mese (Firebase free tier generoso)</li>
+              <li><strong>Analytics:</strong> €0-50/mese (Firebase/Mixpanel free tier)</li>
+            </ul>
+            <p><strong>Costi variabili:</strong></p>
+            <ul>
+              <li><strong>Bug fix:</strong> €500-2000/anno (dipende da qualità codice)</li>
+              <li><strong>Aggiornamenti OS:</strong> €1000-3000/anno (iOS/Android nuove versioni)</li>
+              <li><strong>Nuove features:</strong> €2000-10000/anno (opzionali)</li>
+              <li><strong>ASO optimization:</strong> €500-2000/anno (keywords, screenshot A/B test)</li>
+            </ul>
+            <p><strong>Pacchetti maintenance offerti:</strong></p>
+            <ul>
+              <li><strong>Basic:</strong> €200/mese (bug fix, monitoring, backup)</li>
+              <li><strong>Standard:</strong> €500/mese (+ aggiornamenti OS, analytics report)</li>
+              <li><strong>Premium:</strong> €1000+/mese (+ nuove feature, priority support)</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Posso iniziare con MVP e espandere dopo?</h3>
+            <p><strong>Assolutamente sì, ed è l'approccio che consiglio per startup!</strong></p>
+            <p><strong>Strategia MVP-first:</strong></p>
+            <ol>
+              <li><strong>Fase 1 - MVP (4-8 settimane, €10k-20k):</strong> Funzionalità core only, design semplice ma professionale, backend scalabile preparato per crescita</li>
+              <li><strong>Fase 2 - Validazione (2-3 mesi):</strong> Lancia su stores, raccogli feedback utenti reali, monitora analytics (retention, engagement, conversion)</li>
+              <li><strong>Fase 3 - Funding (se startup):</strong> Usa app funzionante per pitch investitori (traction > slides), mostra metriche reali, chiudi seed/Series A</li>
+              <li><strong>Fase 4 - Scale (post-funding):</strong> Espandi con funzionalità avanzate, migliora UX, scala backend, aggiungi piattaforme</li>
+            </ol>
+            <p><strong>Vantaggi approccio MVP:</strong></p>
+            <ul>
+              <li>✅ Investimento iniziale ridotto 50-70%</li>
+              <li>✅ Time-to-market velocissimo (1-2 mesi vs 6+)</li>
+              <li>✅ Feedback reale utenti prima di investire troppo</li>
+              <li>✅ Pivot possibile se idea non funziona</li>
+              <li>✅ Traction dimostrabile per investitori</li>
+            </ul>
+            <p><a href="mvp-app-startup.html" style="color: #6366f1;"><strong>→ Guida Completa MVP per Startup</strong></a></p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Offri garanzia sul codice sviluppato?</h3>
+            <p><strong>Sì, garanzie chiare incluse:</strong></p>
+            <ul>
+              <li><strong>Bug fix gratuiti 60 giorni post-lancio:</strong> Qualsiasi bug presente al lancio viene fixato gratis</li>
+              <li><strong>Codice pulito e manutenibile:</strong> Best practices, architettura solida (MVVM/Clean), comments, documentation</li>
+              <li><strong>Test coverage minimo 70%:</strong> Unit test + integration test per componenti critici</li>
+              <li><strong>Code ownership 100% cliente:</strong> Repository GitHub privato consegnato, nessun vendor lock-in</li>
+              <li><strong>Documentazione tecnica:</strong> Setup guide, API docs, architecture decision records (ADR)</li>
+            </ul>
+            <p><strong>Non coperto da garanzia:</strong></p>
+            <ul>
+              <li>Modifiche richieste dopo approvazione finale</li>
+              <li>Nuove funzionalità non previste in scope iniziale</li>
+              <li>Bug causati da modifiche codice post-consegna</li>
+              <li>Problemi infrastruttura/hosting gestiti da cliente</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Lavori da solo o hai un team?</h3>
+            <p><strong>Approccio flessibile basato su progetto:</strong></p>
+            <p><strong>Progetti piccoli/medi (€8k-25k):</strong></p>
+            <ul>
+              <li>Lavoro principalmente da solo</li>
+              <li>Gestisco iOS + Backend + Pubblicazione stores</li>
+              <li>Partner Android dev trusted per parte Android (se native)</li>
+              <li>Designer freelance per UI/UX custom se richiesto</li>
+            </ul>
+            <p><strong>Progetti grandi/complessi (€25k+):</strong></p>
+            <ul>
+              <li>Team assemblato ad-hoc per progetto</li>
+              <li>iOS dev (me) + Android dev + Backend dev + Designer</li>
+              <li>Network di professionisti senior testati in 50+ progetti</li>
+              <li>Io rimango Project Manager e punto contatto unico cliente</li>
+            </ul>
+            <p><strong>Vantaggi approccio freelance vs agenzia:</strong></p>
+            <ul>
+              <li>✅ Costi inferiori 40-60% (no overhead agenzia)</li>
+              <li>✅ Comunicazione diretta con developer, zero intermediari</li>
+              <li>✅ Flessibilità massima su scope/budget/timeline</li>
+              <li>✅ Qualità codice alta (senior dev, no junior come agenzie)</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Accetti pagamenti rateizzati?</h3>
+            <p><strong>Sì, pagamenti milestone-based standard:</strong></p>
+            <p><strong>Schema tipico progetti €15k-30k:</strong></p>
+            <ul>
+              <li><strong>30% upfront:</strong> Firma contratto, kickoff, reserva slot calendario</li>
+              <li><strong>30% milestone intermedia:</strong> Design approvato + backend completato</li>
+              <li><strong>30% pre-lancio:</strong> App funzionante su staging, testing completato</li>
+              <li><strong>10% post-lancio:</strong> App pubblicata stores, documentazione consegnata</li>
+            </ul>
+            <p><strong>Progetti più piccoli (€8k-15k):</strong></p>
+            <ul>
+              <li>50% upfront + 50% pre-lancio</li>
+            </ul>
+            <p><strong>Startup early-stage:</strong></p>
+            <ul>
+              <li>Possibile equity option se progetto molto interessante</li>
+              <li>Valuto caso per caso, preferisco fee + small equity</li>
+              <li>Mai 100% equity (red flag per freelancer)</li>
+            </ul>
+            <p><strong>Metodi pagamento:</strong> Bonifico bancario, PayPal, Stripe, fattura con P.IVA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIE -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>Tecnologie e Competenze</strong></h2>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>📱 Mobile Native</strong></h5>
+            <ul style="line-height: 2;">
+              <li>Swift 5.x</li>
+              <li>SwiftUI + UIKit</li>
+              <li>Combine / async-await</li>
+              <li>Kotlin</li>
+              <li>Jetpack Compose</li>
+              <li>Coroutines / Flow</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>🔄 Cross-Platform</strong></h5>
+            <ul style="line-height: 2;">
+              <li>Flutter / Dart</li>
+              <li>React Native</li>
+              <li>Expo</li>
+              <li>Capacitor</li>
+              <li>Ionic</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>🖥️ Backend & API</strong></h5>
+            <ul style="line-height: 2;">
+              <li>Node.js / NestJS</li>
+              <li>Express.js</li>
+              <li>PostgreSQL / MongoDB</li>
+              <li>Redis cache</li>
+              <li>GraphQL / REST</li>
+              <li>WebSockets</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>☁️ Cloud & DevOps</strong></h5>
+            <ul style="line-height: 2;">
+              <li>Firebase / Firestore</li>
+              <li>AWS (EC2, S3, RDS)</li>
+              <li>Docker</li>
+              <li>GitHub Actions CI/CD</li>
+              <li>Fastlane</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>💳 Payment & API</strong></h5>
+            <ul style="line-height: 2;">
+              <li>Stripe</li>
+              <li>PayPal</li>
+              <li>Apple Pay / Google Pay</li>
+              <li>In-App Purchase</li>
+              <li>Subscriptions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>🔐 Security</strong></h5>
+            <ul style="line-height: 2;">
+              <li>OAuth 2.0 / JWT</li>
+              <li>Face ID / Touch ID</li>
+              <li>Keychain / Biometrics</li>
+              <li>SSL Pinning</li>
+              <li>Encryption E2E</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>📊 Analytics & Monitoring</strong></h5>
+            <ul style="line-height: 2;">
+              <li>Firebase Analytics</li>
+              <li>Mixpanel</li>
+              <li>Crashlytics</li>
+              <li>Sentry</li>
+              <li>App Store Connect</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="tech-card">
+            <h5 style="color: #6366f1; margin-bottom: 1.5rem;"><strong>🎨 Design & Tools</strong></h5>
+            <ul style="line-height: 2;">
+              <li>Figma</li>
+              <li>Adobe XD</li>
+              <li>Sketch</li>
+              <li>Xcode</li>
+              <li>Android Studio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA PREVENTIVO -->
+  <section id="preventivo" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="display-3 mb-4"><strong>Pronto a Creare la Tua App Mobile?</strong></h2>
+        <p class="lead mb-4">
+          Trasforma la tua idea in un'app di successo. 15+ anni esperienza, 50+ app pubblicate, tecnologie all'avanguardia.
+          Ricevi un <strong>preventivo gratuito dettagliato entro 24 ore</strong>.
+        </p>
+        <h3 class="mb-4">✅ Preventivo Gratuito | ✅ Consulenza Strategica | ✅ No Impegno</h3>
+        <div class="mt-4">
+          <a href="preventivo-app.html" class="btn btn-light btn-lg me-3">
+            <strong>📋 RICHIEDI PREVENTIVO DETTAGLIATO</strong>
+          </a>
+          <a href="https://wa.me/393516248936" class="btn btn-outline-light btn-lg">
+            <strong>📱 CONTATTAMI SU WHATSAPP</strong>
+          </a>
+        </div>
+        <p class="mt-4 mb-0"><small>Risposta garantita entro 24 ore | Consulenza gratuita 30 minuti | NDA disponibile</small></p>
+      </div>
+
+      <div class="row mt-5 text-center">
+        <div class="col-md-4 mb-3">
+          <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 10px;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
+            <h5><strong>iOS Native</strong></h5>
+            <p class="mb-0">App iPhone/iPad con Swift</p>
+            <a href="sviluppo-app-ios.html" class="btn btn-sm btn-outline-light mt-2">Scopri →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 10px;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤖</div>
+            <h5><strong>Android Native</strong></h5>
+            <p class="mb-0">App Android con Kotlin</p>
+            <a href="sviluppo-app-android.html" class="btn btn-sm btn-outline-light mt-2">Scopri →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 10px;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+            <h5><strong>MVP Startup</strong></h5>
+            <p class="mb-0">Prototipo in 4-8 settimane</p>
+            <a href="mvp-app-startup.html" class="btn btn-sm btn-outline-light mt-2">Scopri →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #0a0a0a; padding: 2rem 0; border-top: 1px solid #333;">
+    <div class="container text-center">
+      <p class="mb-2">&copy; 2025 Andrea Piani - Sviluppo App Mobile iOS e Android</p>
+      <p class="mb-2">
+        <a href="tel:+393516248936" style="color: #6366f1; text-decoration: none;">📞 +39 351 624 8936</a> |
+        <a href="mailto:andreapiani.dev@gmail.com" style="color: #6366f1; text-decoration: none;">✉️ andreapiani.dev@gmail.com</a>
+      </p>
+      <p class="mb-2">
+        <a href="index.html" style="color: #6366f1;">Home</a> |
+        <a href="sviluppo-app-ios.html" style="color: #6366f1;">App iOS</a> |
+        <a href="sviluppo-app-android.html" style="color: #6366f1;">App Android</a> |
+        <a href="servizi-prestashop.html" style="color: #6366f1;">PrestaShop</a> |
+        <a href="preventivo-app.html" style="color: #6366f1;">Preventivo</a>
+      </p>
+      <p class="mb-0">
+        <a href="#" class="footer-manage-cookies" style="color: #999; text-decoration: none;">⚙️ Gestisci Cookie</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="animations.js"></script>
+
+  <!-- New Features -->
+  <script src="utilities.js"></script>
+  <script src="performance.js"></script>
+
+  <script>
+    // Form submission with loading state and toast notification
+    document.querySelectorAll('form[action*="formspree"]').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn && window.AppUtils) {
+          window.AppUtils.setButtonLoading(btn, true);
+        }
+
+        if (window.AppUtils) {
+          window.AppUtils.trackEvent('Form', 'Submit', 'Contact Form Mobile');
+        }
+
+        setTimeout(() => {
+          if (btn && window.AppUtils) {
+            window.AppUtils.setButtonLoading(btn, false);
+          }
+          if (window.Toast) {
+            window.Toast.success('Messaggio inviato! Ti risponderò entro 24h', 'Grazie!');
+          }
+        }, 1000);
+      });
+    });
+  </script>
+
+  <script src="assets/js/popup-loader.js"></script>
+</body>
+</html>

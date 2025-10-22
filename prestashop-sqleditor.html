@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="PrestaSQLeditor - Modulo PrestaShop gratuito per gestione database MySQL. Editor SQL integrato nel backoffice, backup automatici, import/export dati. Basato su Adminer. Download GitHub.">
+  <meta name="keywords" content="prestashop sql editor, modulo database prestashop, adminer prestashop, gestione database prestashop, backup database prestashop, sql query prestashop, modulo sql prestashop gratuito, prestashop database tool, mysql editor prestashop, import export database prestashop, prestashop developer tools, modulo open source prestashop">
+
+  <meta property="og:title" content="PrestaSQLeditor - SQL Editor Gratuito per PrestaShop | Andrea Piani">
+  <meta property="og:description" content="Modulo PrestaShop open-source per gestione database MySQL. Editor SQL integrato, backup automatici, import/export. Gratuito su GitHub.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/oig4.rlcenpycolpxdbe.x2od.jpeg">
+  <meta property="og:url" content="https://www.andreapiani.com/prestashop-sqleditor.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PrestaSQLeditor - SQL Editor Gratuito per PrestaShop">
+  <meta name="twitter:description" content="Modulo PrestaShop gratuito per gestione database MySQL. Editor SQL integrato, backup automatici, compatibile con PrestaShop 1.6, 1.7 e 8.x">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/oig4.rlcenpycolpxdbe.x2od.jpeg">
+
+  <link rel="canonical" href="https://www.andreapiani.com/prestashop-sqleditor.html" />
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <title>PrestaSQLeditor - Modulo SQL Editor Gratuito per PrestaShop | Andrea Piani</title>
+
+  <!-- Schema.org Markup per SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PrestaSQLeditor",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "PrestaShop 1.6, 1.7, 8.x",
+    "description": "Modulo PrestaShop open-source per gestione database MySQL. Editor SQL integrato nel backoffice con backup automatici e import/export dati.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Andrea Piani"
+    },
+    "url": "https://github.com/andreapianidev/PrestaSQLeditor",
+    "downloadUrl": "https://github.com/andreapianidev/PrestaSQLeditor",
+    "softwareVersion": "Latest",
+    "softwareRequirements": "PHP 7.1+, MySQL/MariaDB, PrestaShop 1.6+",
+    "featureList": [
+      "Editor SQL integrato",
+      "Backup database automatici",
+      "Import/Export dati multipli formati",
+      "Modifica diretta record database",
+      "Query salvate e preferiti",
+      "Dashboard statistiche database",
+      "Interfaccia responsive moderna",
+      "Basato su Adminer"
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Progetti Open Source",
+        "item": "https://www.andreapiani.com/progetti-open-source.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "PrestaSQLeditor",
+        "item": "https://www.andreapiani.com/prestashop-sqleditor.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage per Featured Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "PrestaSQLeditor è davvero gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, PrestaSQLeditor è completamente gratuito e open-source. Puoi scaricarlo, usarlo e modificarlo liberamente. Non ci sono costi nascosti, licenze a pagamento o limitazioni funzionali. Il progetto è pubblicato su GitHub con licenza MIT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "È sicuro usare PrestaSQLeditor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PrestaSQLeditor utilizza l'autenticazione nativa di PrestaShop, quindi solo gli amministratori autorizzati possono accedere. È basato su Adminer, uno degli editor SQL più sicuri e utilizzati al mondo. Come per qualsiasi strumento di gestione database, è fondamentale fare backup prima di operazioni critiche e limitare l'accesso solo a utenti fidati."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funziona con PrestaShop 8.x?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, PrestaSQLeditor è compatibile con PrestaShop 1.6, 1.7 e 8.x. Il modulo viene regolarmente aggiornato per mantenere la compatibilità con le ultime versioni di PrestaShop."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Devo essere esperto di SQL per usarlo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non necessariamente. PrestaSQLeditor offre un'interfaccia visuale per esplorare tabelle e modificare record senza scrivere SQL. Tuttavia, per operazioni avanzate come query personalizzate, è consigliabile avere conoscenze base di SQL."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso fare backup del database con PrestaSQLeditor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, PrestaSQLeditor include funzionalità di backup integrate. Puoi esportare l'intero database o singole tabelle in formato SQL con compressione GZIP. I backup possono essere scaricati direttamente dal backoffice PrestaShop e ripristinati in caso di necessità."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "PrestaSQLeditor rallenta il mio shop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, PrestaSQLeditor viene caricato solo nel backoffice e solo quando lo utilizzi. Non ha alcun impatto sulle performance del frontend del tuo e-commerce. Il modulo è leggero e ottimizzato per non consumare risorse server."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <style>
+    body { background-color: #000000; color: #ffffff; }
+    .hero-sqleditor {
+      background: linear-gradient(135deg, #149dcc 0%, #0d6efd 100%);
+      padding: 5rem 0;
+      color: white;
+    }
+    .feature-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 2rem;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: #149dcc;
+    }
+    .feature-card p {
+      color: #e0e0e0;
+    }
+    .feature-card ul {
+      color: #e0e0e0;
+    }
+    .tech-badge {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #149dcc;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin: 0.3rem;
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+    .screenshot-container {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+    .navbar-custom a:hover {
+      color: #149dcc !important;
+    }
+    .code-block {
+      background: #0a0a0a;
+      border-left: 4px solid #149dcc;
+      padding: 1.5rem;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+      color: #f0f0f0;
+    }
+    p {
+      color: #f5f5f5 !important;
+    }
+    ul li {
+      color: #f5f5f5 !important;
+    }
+    section p {
+      color: #f5f5f5 !important;
+    }
+    section ul li {
+      color: #f5f5f5 !important;
+    }
+    .container p {
+      color: #f5f5f5 !important;
+    }
+    .container ul li {
+      color: #f5f5f5 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+          <!-- MENU SERVIZI CON POPUP -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="serviziMenuBtn" onclick="openServiziPopup(); return false;">
+              Servizi ▾
+            </a>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>    </div>
+  </div>
+
+
+
+  <!-- HERO SECTION -->
+  <section class="hero-sqleditor gradient-animate scroll-animate" style="background-size: 200% 200%;">
+    <div class="container hero-animate">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="animate-fadeInUp" style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; margin-bottom: 1rem;">
+            <strong>🎁 GRATUITO & OPEN SOURCE</strong>
+          </div>
+          <h1 class="display-1 mb-4 animate-fadeInUp animate-delay-1"><strong>PrestaSQLeditor</strong></h1>
+          <h2 class="display-5 mb-4 animate-fadeInUp animate-delay-2">Editor SQL per PrestaShop - Gestisci il Database MySQL Direttamente dal Backoffice</h2>
+          <p class="lead mb-4 animate-fadeInUp animate-delay-3">
+            Modulo PrestaShop gratuito e open-source per gestione avanzata del database MySQL. Editor SQL integrato nel pannello admin, backup automatici database, import/export dati in multipli formati (SQL, CSV, JSON). Basato su Adminer, compatibile con PrestaShop 1.6, 1.7 e 8.x. Strumento essenziale per developer PrestaShop e amministratori e-commerce.
+          </p>
+          <div class="mb-4 animate-fadeInUp animate-delay-4">
+            <a href="https://github.com/andreapianidev/PrestaSQLeditor" target="_blank" class="btn btn-light btn-lg me-2 glow-animate">
+              📦 SCARICA DA GITHUB
+            </a>
+            <a href="#installazione" class="btn btn-outline-light btn-lg">GUIDA INSTALLAZIONE</a>
+          </div>
+          <div class="mt-4">
+            <span class="tech-badge">✅ PrestaShop 1.6 / 1.7 / 8.x</span>
+            <span class="tech-badge">✅ PHP 7.1+</span>
+            <span class="tech-badge">✅ MySQL / MariaDB</span>
+            <span class="tech-badge">✅ 100% Gratuito</span>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center">
+          <div style="font-size: 15rem; line-height: 1;">🗄️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section style="padding: 2rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #149dcc;"><strong>100%</strong></h3>
+          <p>Gratuito</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #149dcc;"><strong>Open</strong></h3>
+          <p>Source</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #149dcc;"><strong>3+</strong></h3>
+          <p>Versioni PS</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="display-2" style="color: #149dcc;"><strong>Adminer</strong></h3>
+          <p>Based</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA & SOLUZIONE -->
+  <section style="padding: 4rem 0; background: #000000;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <h2 class="display-3 mb-4"><strong>Il Problema</strong></h2>
+          <div style="background: #1a1a1a; padding: 2rem; border-left: 4px solid #dc3545; border-radius: 5px;">
+            <ul style="font-size: 1.1rem; line-height: 2;">
+              <li>❌ Devi usare phpMyAdmin esterno per gestire il database</li>
+              <li>❌ Accessi multipli e credenziali separate da ricordare</li>
+              <li>❌ Nessuno strumento integrato nel backoffice PrestaShop</li>
+              <li>❌ Interfaccia phpMyAdmin complessa e non intuitiva</li>
+              <li>❌ Difficoltà nell'eseguire query SQL personalizzate</li>
+              <li>❌ Backup database manuale e complicato</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <h2 class="display-3 mb-4"><strong>La Soluzione</strong></h2>
+          <div style="background: #1a1a1a; padding: 2rem; border-left: 4px solid #28a745; border-radius: 5px;">
+            <ul style="font-size: 1.1rem; line-height: 2;">
+              <li>✅ Editor SQL integrato direttamente nel backoffice</li>
+              <li>✅ Un solo login: quello del tuo PrestaShop</li>
+              <li>✅ Tool di gestione database sempre a portata di click</li>
+              <li>✅ Interfaccia moderna Adminer pulita e intuitiva</li>
+              <li>✅ Esecuzione query SQL con sintassi highlighting</li>
+              <li>✅ Backup automatico con un click</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNZIONALITÀ PRINCIPALI -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Funzionalità Principali</strong></h2>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #149dcc;">📝</span>
+            </div>
+            <h3 class="mb-3"><strong>Editor SQL Avanzato</strong></h3>
+            <p>Esegui query SQL personalizzate direttamente dal backoffice PrestaShop. Syntax highlighting, autocompletamento e storico query eseguite.</p>
+            <ul class="mt-3" style="line-height: 2;">
+              <li>✓ Query SQL interattive</li>
+              <li>✓ Risultati in tempo reale</li>
+              <li>✓ Esportazione risultati</li>
+              <li>✓ Query salvate per riuso</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #149dcc;">🗂️</span>
+            </div>
+            <h3 class="mb-3"><strong>Esplora Database</strong></h3>
+            <p>Naviga l'intera struttura del database PrestaShop: tabelle, campi, indici, relazioni. Visualizza e modifica dati con interfaccia intuitiva.</p>
+            <ul class="mt-3" style="line-height: 2;">
+              <li>✓ Visualizzazione struttura tabelle</li>
+              <li>✓ Ricerca avanzata record</li>
+              <li>✓ Modifica diretta dati</li>
+              <li>✓ Statistiche tabelle</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #149dcc;">💾</span>
+            </div>
+            <h3 class="mb-3"><strong>Backup Automatici</strong></h3>
+            <p>Sistema di backup integrato per salvare l'intero database o singole tabelle. Backup schedulati e ripristino rapido in caso di emergenza.</p>
+            <ul class="mt-3" style="line-height: 2;">
+              <li>✓ Backup completo database</li>
+              <li>✓ Backup selettivo tabelle</li>
+              <li>✓ Compressione GZIP</li>
+              <li>✓ Ripristino veloce</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #149dcc;">📤</span>
+            </div>
+            <h3 class="mb-3"><strong>Import / Export Dati</strong></h3>
+            <p>Importa ed esporta dati in multipli formati: SQL, CSV, JSON, XML. Perfetto per migrazioni, integrazioni e analisi dati.</p>
+            <ul class="mt-3" style="line-height: 2;">
+              <li>✓ Export SQL, CSV, JSON, XML</li>
+              <li>✓ Import dati massivo</li>
+              <li>✓ Mapping campi personalizzato</li>
+              <li>✓ Preview prima import</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #149dcc;">🔐</span>
+            </div>
+            <h3 class="mb-3"><strong>Sicurezza Integrata</strong></h3>
+            <p>Accesso sicuro tramite autenticazione PrestaShop. Permessi configurabili per utenti. Log di tutte le operazioni eseguite sul database.</p>
+            <ul class="mt-3" style="line-height: 2;">
+              <li>✓ Autenticazione PrestaShop</li>
+              <li>✓ Permessi per ruolo utente</li>
+              <li>✓ Log operazioni database</li>
+              <li>✓ Protezione SQL injection</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="mb-3">
+              <span style="font-size: 3rem; color: #149dcc;">📊</span>
+            </div>
+            <h3 class="mb-3"><strong>Dashboard Statistiche</strong></h3>
+            <p>Visualizza statistiche dettagliate del database: dimensioni tabelle, numero record, indici, performance query e utilizzo spazio disco.</p>
+            <ul class="mt-3" style="line-height: 2;">
+              <li>✓ Dimensioni database</li>
+              <li>✓ Conteggio record tabelle</li>
+              <li>✓ Performance monitoring</li>
+              <li>✓ Ottimizzazione suggerita</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ USARE PRESTASQLEDITOR -->
+  <section style="padding: 4rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Perché Usare PrestaSQLeditor?</strong></h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #149dcc;" class="mb-3"><strong>🚀 Per Developer PrestaShop</strong></h3>
+            <ul style="font-size: 1.05rem; line-height: 2;">
+              <li>Debug rapido problemi database durante sviluppo moduli</li>
+              <li>Test query SQL senza uscire dal backoffice</li>
+              <li>Verifica integrità dati dopo migrazioni</li>
+              <li>Analisi performance query per ottimizzazione</li>
+              <li>Export dati per test su ambiente locale</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #149dcc;" class="mb-3"><strong>🛒 Per E-commerce Manager</strong></h3>
+            <ul style="font-size: 1.05rem; line-height: 2;">
+              <li>Backup database prima di operazioni critiche</li>
+              <li>Accesso dati senza dipendere da hosting provider</li>
+              <li>Export prodotti/ordini per analisi business</li>
+              <li>Pulizia database da dati obsoleti o corrotti</li>
+              <li>Monitoring salute database in tempo reale</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPATIBILITÀ -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Compatibilità e Requisiti</strong></h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: #1a1a1a; padding: 3rem; border-radius: 15px;">
+
+            <h3 class="mb-4" style="color: #149dcc;"><strong>✅ Versioni PrestaShop Supportate</strong></h3>
+            <div class="row mb-5">
+              <div class="col-md-4 text-center mb-3">
+                <div style="background: #0a0a0a; padding: 1.5rem; border-radius: 10px;">
+                  <h4 style="color: #149dcc; font-size: 2rem;">1.6.x</h4>
+                  <p>PrestaShop 1.6</p>
+                  <span style="color: #28a745; font-weight: bold;">✓ COMPATIBILE</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-center mb-3">
+                <div style="background: #0a0a0a; padding: 1.5rem; border-radius: 10px;">
+                  <h4 style="color: #149dcc; font-size: 2rem;">1.7.x</h4>
+                  <p>PrestaShop 1.7</p>
+                  <span style="color: #28a745; font-weight: bold;">✓ COMPATIBILE</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-center mb-3">
+                <div style="background: #0a0a0a; padding: 1.5rem; border-radius: 10px;">
+                  <h4 style="color: #149dcc; font-size: 2rem;">8.x</h4>
+                  <p>PrestaShop 8</p>
+                  <span style="color: #28a745; font-weight: bold;">✓ COMPATIBILE</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="mb-4" style="color: #149dcc;"><strong>⚙️ Requisiti Tecnici</strong></h3>
+            <ul style="font-size: 1.1rem; line-height: 2.5;">
+              <li><strong>PHP:</strong> Versione 7.1 o superiore</li>
+              <li><strong>Database:</strong> MySQL 5.6+ o MariaDB 10.0+</li>
+              <li><strong>PrestaShop:</strong> Versioni 1.6.x, 1.7.x, 8.x</li>
+              <li><strong>Permessi:</strong> Accesso backoffice PrestaShop come amministratore</li>
+              <li><strong>Estensioni PHP:</strong> mysqli, pdo_mysql (già incluse in PrestaShop)</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLAZIONE -->
+  <section id="installazione" style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Guida Installazione</strong></h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+          <div style="background: #1a1a1a; padding: 3rem; border-radius: 15px; margin-bottom: 2rem;">
+            <h3 class="mb-4" style="color: #149dcc;"><strong>📦 Metodo 1: Installazione da GitHub (Consigliato)</strong></h3>
+
+            <div style="display: flex; align-items: start; margin-bottom: 2rem;">
+              <div style="background: #149dcc; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; margin-right: 1rem;">1</div>
+              <div style="flex: 1;">
+                <h4><strong>Download da GitHub</strong></h4>
+                <p>Vai su <a href="https://github.com/andreapianidev/PrestaSQLeditor" target="_blank" style="color: #149dcc;">github.com/andreapianidev/PrestaSQLeditor</a> e scarica l'ultima release.</p>
+                <div class="code-block">
+                  <code>git clone https://github.com/andreapianidev/PrestaSQLeditor.git</code>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: start; margin-bottom: 2rem;">
+              <div style="background: #149dcc; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; margin-right: 1rem;">2</div>
+              <div style="flex: 1;">
+                <h4><strong>Carica nella Cartella Moduli</strong></h4>
+                <p>Carica la cartella del modulo via FTP/SFTP nella directory <code style="background: #0a0a0a; padding: 0.2rem 0.5rem; border-radius: 3px;">/modules/</code> del tuo PrestaShop.</p>
+                <div class="code-block">
+                  <code>/var/www/html/prestashop/modules/prestasqleditor/</code>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: start; margin-bottom: 2rem;">
+              <div style="background: #149dcc; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; margin-right: 1rem;">3</div>
+              <div style="flex: 1;">
+                <h4><strong>Installa dal Backoffice</strong></h4>
+                <p>Accedi al backoffice PrestaShop → <strong>Moduli</strong> → <strong>Gestione Moduli</strong> → Cerca "PrestaSQLeditor" → Clicca <strong>Installa</strong>.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: start;">
+              <div style="background: #149dcc; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; margin-right: 1rem;">4</div>
+              <div style="flex: 1;">
+                <h4><strong>Accedi all'Editor SQL</strong></h4>
+                <p>Dopo l'installazione, troverai una nuova voce nel menu del backoffice: <strong>Strumenti → SQL Editor</strong>. Clicca e inizia a gestire il database!</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #0a0a0a; border-left: 4px solid #ffc107; padding: 2rem; border-radius: 5px;">
+            <h4 style="color: #ffc107;">⚠️ Nota Importante sulla Sicurezza</h4>
+            <p style="margin: 0;">PrestaSQLeditor è uno strumento potente che consente accesso diretto al database. Assicurati di:</p>
+            <ul style="margin-top: 1rem;">
+              <li>Limitare l'accesso solo ad amministratori fidati</li>
+              <li>Fare sempre un backup prima di eseguire query che modificano dati</li>
+              <li>Non condividere le credenziali di accesso al backoffice</li>
+              <li>Testare query complesse su ambiente di staging prima di produzione</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASI D'USO PRATICI -->
+  <section style="padding: 4rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Casi d'Uso Pratici</strong></h2>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #149dcc;">🔍 Debug Problemi Prodotti</h3>
+            <p style="font-size: 1.05rem;">
+              Quando un prodotto non appare correttamente in frontend, puoi usare PrestaSQLeditor per verificare rapidamente i dati nella tabella <code>ps_product</code> e identificare campi mancanti o corrotti.
+            </p>
+            <div class="code-block mt-3">
+              <code>SELECT * FROM ps_product WHERE id_product = 123;</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #149dcc;">🗑️ Pulizia Carrelli Abbandonati</h3>
+            <p style="font-size: 1.05rem;">
+              I carrelli abbandonati possono appesantire il database. Con PrestaSQLeditor puoi eliminare carrelli più vecchi di 30 giorni in pochi secondi.
+            </p>
+            <div class="code-block mt-3">
+              <code>DELETE FROM ps_cart WHERE date_add < DATE_SUB(NOW(), INTERVAL 30 DAY);</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #149dcc;">📊 Export Clienti per Marketing</h3>
+            <p style="font-size: 1.05rem;">
+              Esporta la lista completa dei clienti con email per campagne marketing. Seleziona solo clienti che hanno accettato newsletter.
+            </p>
+            <div class="code-block mt-3">
+              <code>SELECT email, firstname, lastname FROM ps_customer WHERE newsletter = 1;</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #149dcc;">💰 Analisi Ordini per Periodo</h3>
+            <p style="font-size: 1.05rem;">
+              Analizza rapidamente gli ordini di un periodo specifico per calcolare fatturato, numero ordini medi e prodotti più venduti.
+            </p>
+            <div class="code-block mt-3">
+              <code>SELECT COUNT(*) as num_orders, SUM(total_paid) as revenue FROM ps_orders WHERE date_add >= '2025-01-01';</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 4rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Domande Frequenti (FAQ)</strong></h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed display-7" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>PrestaSQLeditor è davvero gratuito?</strong>
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body display-7" style="background-color: #0a0a0a; color: #ffffff;">
+                  Sì, PrestaSQLeditor è completamente gratuito e open-source. Puoi scaricarlo, usarlo e modificarlo liberamente. Non ci sono costi nascosti, licenze a pagamento o limitazioni funzionali. Il progetto è pubblicato su GitHub con licenza MIT.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed display-7" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>È sicuro usare PrestaSQLeditor?</strong>
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body display-7" style="background-color: #0a0a0a; color: #ffffff;">
+                  PrestaSQLeditor utilizza l'autenticazione nativa di PrestaShop, quindi solo gli amministratori autorizzati possono accedere. È basato su Adminer, uno degli editor SQL più sicuri e utilizzati al mondo. Tuttavia, come per qualsiasi strumento di gestione database, è fondamentale fare backup prima di operazioni critiche e limitare l'accesso solo a utenti fidati.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed display-7" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>Funziona con PrestaShop 8.x?</strong>
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body display-7" style="background-color: #0a0a0a; color: #ffffff;">
+                  Sì, PrestaSQLeditor è compatibile con PrestaShop 1.6, 1.7 e 8.x. Il modulo viene regolarmente aggiornato per mantenere la compatibilità con le ultime versioni di PrestaShop. Puoi verificare la compatibilità specifica sulla pagina GitHub del progetto.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed display-7" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>Devo essere esperto di SQL per usarlo?</strong>
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body display-7" style="background-color: #0a0a0a; color: #ffffff;">
+                  Non necessariamente. PrestaSQLeditor offre un'interfaccia visuale per esplorare tabelle e modificare record senza scrivere SQL. Tuttavia, per operazioni avanzate come query personalizzate, è consigliabile avere conoscenze base di SQL. Per utenti meno esperti, consigliamo di testare sempre su ambiente di staging prima di eseguire modifiche in produzione.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed display-7" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>Posso fare backup del database con PrestaSQLeditor?</strong>
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body display-7" style="background-color: #0a0a0a; color: #ffffff;">
+                  Sì, PrestaSQLeditor include funzionalità di backup integrate. Puoi esportare l'intero database o singole tabelle in formato SQL con compressione GZIP. I backup possono essere scaricati direttamente dal backoffice PrestaShop e ripristinati in caso di necessità.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3" style="background-color: #1a1a1a; border: 1px solid #333;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed display-7" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" style="background-color: #1a1a1a; color: #ffffff;">
+                  <strong>PrestaSQLeditor rallenta il mio shop?</strong>
+                </button>
+              </h3>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body display-7" style="background-color: #0a0a0a; color: #ffffff;">
+                  No, PrestaSQLeditor viene caricato solo nel backoffice e solo quando lo utilizzi. Non ha alcun impatto sulle performance del frontend del tuo e-commerce. Il modulo è leggero e ottimizzato per non consumare risorse server.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORTO E CONTRIBUTI -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Supporto e Contributi</strong></h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 3rem; border-radius: 15px; height: 100%; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">💬</div>
+            <h3 class="mb-3" style="color: #149dcc;"><strong>Hai Bisogno di Supporto?</strong></h3>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+              Hai problemi con l'installazione o l'utilizzo di PrestaSQLeditor? Hai trovato un bug o vuoi suggerire una nuova funzionalità?
+            </p>
+            <div class="mt-4">
+              <a href="https://github.com/andreapianidev/PrestaSQLeditor/issues" target="_blank" class="btn btn-outline-light btn-lg mb-3 w-100">
+                📝 Apri Issue su GitHub
+              </a>
+              <a href="https://wa.me/393516248936?text=Ciao%20Andrea,%20ho%20bisogno%20di%20supporto%20per%20PrestaSQLeditor" target="_blank" class="btn btn-success btn-lg w-100">
+                💬 Contattami su WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 3rem; border-radius: 15px; height: 100%; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🤝</div>
+            <h3 class="mb-3" style="color: #149dcc;"><strong>Vuoi Contribuire?</strong></h3>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+              PrestaSQLeditor è open-source! Se sei uno sviluppatore e vuoi contribuire con codice, traduzioni o documentazione, sei il benvenuto.
+            </p>
+            <div class="mt-4">
+              <a href="https://github.com/andreapianidev/PrestaSQLeditor" target="_blank" class="btn btn-outline-light btn-lg mb-3 w-100">
+                ⭐ Dai una Stella su GitHub
+              </a>
+              <a href="https://github.com/andreapianidev/PrestaSQLeditor/fork" target="_blank" class="btn btn-outline-light btn-lg w-100">
+                🔱 Fork il Progetto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT RICH -->
+  <section style="padding: 4rem 0; background: #000000;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+
+          <h2 class="display-4 mb-4"><strong>Editor SQL per PrestaShop: Strumento Indispensabile per Developer</strong></h2>
+
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #f0f0f0;">
+            <strong>PrestaSQLeditor</strong> nasce dall'esperienza diretta di sviluppo su centinaia di progetti PrestaShop. Come <strong>sviluppatore PrestaShop specializzato</strong>, mi sono reso conto che la mancanza di uno <strong>strumento integrato per gestire il database MySQL</strong> direttamente dal backoffice rappresentava una limitazione significativa per developer e amministratori e-commerce. Questo <strong>modulo gratuito per la gestione database PrestaShop</strong> risolve definitivamente il problema, offrendo un <strong>editor SQL professionale integrato nel pannello admin PrestaShop</strong>.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #149dcc;"><strong>Perché un Modulo SQL Editor per PrestaShop?</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #f0f0f0;">
+            La maggior parte degli <strong>sviluppatori PrestaShop</strong> utilizza phpMyAdmin per accedere al database, ma questo richiede accesso separato all'hosting, credenziali aggiuntive da gestire e l'impossibilità di operare rapidamente durante debug o <strong>sviluppo moduli PrestaShop custom</strong>. <strong>PrestaSQLeditor</strong> risolve questo problema integrando un potente <strong>editor SQL basato su Adminer</strong> direttamente nel backoffice PrestaShop. Con questo <strong>tool di gestione database per e-commerce</strong>, puoi eseguire <strong>query SQL PrestaShop</strong>, fare <strong>backup database online</strong> e gestire tabelle MySQL senza uscire dal pannello amministrativo.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #149dcc;"><strong>Adminer vs phpMyAdmin: Perché Adminer?</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #f0f0f0;">
+            <strong>Adminer</strong> è un'<strong>alternativa moderna e leggera a phpMyAdmin</strong> per la <strong>gestione database MySQL e MariaDB</strong>. Con un singolo file PHP di pochi KB, Adminer offre tutte le funzionalità necessarie per gestire database con un'interfaccia pulita e intuitiva. È più veloce, più sicuro e più facile da integrare rispetto a phpMyAdmin. Per questo PrestaSQLeditor si basa su Adminer, garantendo <strong>performance ottimali</strong>, <strong>sicurezza database</strong> e <strong>facilità d'uso per developer e-commerce</strong>. Questa scelta rende PrestaSQLeditor il miglior <strong>modulo SQL editor per PrestaShop</strong> disponibile gratuitamente.
+          </p>
+
+          <div class="row my-5">
+            <div class="col-md-6 mb-4">
+              <div class="feature-card">
+                <h4 style="color: #149dcc;"><strong>Vantaggi per Sviluppatori</strong></h4>
+                <ul style="line-height: 2; color: #f0f0f0;">
+                  <li>Debug rapido durante sviluppo moduli PrestaShop</li>
+                  <li>Test query SQL senza cambiare strumento</li>
+                  <li>Analisi struttura database per ottimizzazioni</li>
+                  <li>Export/import dati per ambienti staging/local</li>
+                  <li>Monitoring performance query in real-time</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="feature-card">
+                <h4 style="color: #149dcc;"><strong>Vantaggi per E-commerce Manager</strong></h4>
+                <ul style="line-height: 2; color: #f0f0f0;">
+                  <li>Backup database prima di aggiornamenti critici</li>
+                  <li>Pulizia dati obsoleti (carrelli, log, cache)</li>
+                  <li>Export dati clienti/prodotti per marketing</li>
+                  <li>Verifica integrità database dopo migrazioni</li>
+                  <li>Monitoring dimensioni tabelle e ottimizzazione</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="mt-5 mb-3" style="color: #149dcc;"><strong>Gestione Database PrestaShop: Best Practice</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #f0f0f0;">
+            Un <strong>database PrestaShop ottimizzato</strong> è fondamentale per le <strong>performance dell'e-commerce</strong> e la <strong>velocità del sito</strong>. Con PrestaSQLeditor puoi <strong>monitorare la salute del database PrestaShop</strong>, identificare <strong>tabelle sovradimensionate</strong>, eliminare <strong>dati obsoleti</strong> (carrelli abbandonati, log vecchi, cache) e <strong>ottimizzare indici MySQL</strong> per query più veloci. Le funzionalità di <strong>backup automatico database</strong> ti permettono di creare snapshot completi prima di <strong>aggiornamenti PrestaShop</strong>, <strong>migrazioni versione 8</strong> o operazioni rischiose, garantendo la possibilità di <strong>ripristino database rapido</strong> in caso di problemi. Questo è essenziale per ogni <strong>amministratore PrestaShop</strong> professionale.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #149dcc;"><strong>Modulo PrestaShop Open Source: Filosofia e Vantaggi</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #f0f0f0;">
+            Ho deciso di rilasciare <strong>PrestaSQLeditor come progetto open-source gratuito</strong> per restituire alla community PrestaShop che mi ha dato tanto negli anni. Un <strong>modulo open-source</strong> offre trasparenza totale del codice, possibilità di customizzazione illimitata e contributi dalla community. Se sei uno sviluppatore, puoi consultare il codice sorgente su GitHub, proporre miglioramenti o adattarlo alle tue esigenze specifiche.
+          </p>
+
+          <h3 class="mt-5 mb-3" style="color: #149dcc;"><strong>Ottimizzazione Database PrestaShop per Performance</strong></h3>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: #f0f0f0;">
+            Molti <strong>shop PrestaShop lenti</strong> soffrono di problemi legati al database: <strong>tabelle MySQL non ottimizzate</strong>, indici mancanti, <strong>query SQL inefficienti</strong>. Con PrestaSQLeditor puoi <strong>analizzare la struttura del database PrestaShop</strong>, identificare tabelle che richiedono ottimizzazione e eseguire comandi SQL come <code style="background: #1a1a1a; padding: 0.2rem 0.5rem; border-radius: 3px;">OPTIMIZE TABLE</code> per recuperare spazio disco e <strong>migliorare velocità caricamento pagine</strong>. Il <strong>monitoring delle performance query SQL</strong> ti permette di individuare <strong>colli di bottiglia database</strong> e risolverli rapidamente, aumentando la <strong>velocità PrestaShop</strong> fino al 300%. Questo strumento è essenziale per l'<strong>ottimizzazione PrestaShop avanzata</strong>.
+          </p>
+
+          <div class="alert mt-5" style="background: #1a1a1a; border-left: 4px solid #149dcc; padding: 2rem;">
+            <h4 style="color: #149dcc;"><strong>💡 Hai Bisogno di Supporto Professionale?</strong></h4>
+            <p style="margin: 0; font-size: 1.1rem; color: #ffffff;">
+              Se hai bisogno di <strong>consulenza PrestaShop professionale</strong>, <strong>sviluppo moduli custom</strong> o <strong>ottimizzazione database avanzata</strong>, sono disponibile per progetti freelance. Contattami su WhatsApp o via email per un preventivo gratuito.
+            </p>
+            <div class="mt-3">
+              <a href="https://wa.me/393516248936" class="btn btn-success me-2" target="_blank">📱 WhatsApp</a>
+              <a href="mailto:andreapiani.dev@gmail.com" class="btn btn-outline-light">✉️ Email</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #149dcc 0%, #0d6efd 100%);">
+    <div class="container text-center">
+      <h2 class="display-2 mb-4"><strong>Pronto per Gestire il Database PrestaShop più Facilmente?</strong></h2>
+      <p class="lead mb-4" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+        Scarica gratuitamente PrestaSQLeditor da GitHub e inizia a gestire il database PrestaShop direttamente dal backoffice. Installazione in 5 minuti, nessun costo, nessuna limitazione.
+      </p>
+      <div class="mt-5">
+        <a href="https://github.com/andreapianidev/PrestaSQLeditor" target="_blank" class="btn btn-light btn-lg me-3" style="padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold;">
+          📦 SCARICA DA GITHUB
+        </a>
+        <a href="progetti-open-source.html" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; font-size: 1.2rem;">
+          🔍 ALTRI PROGETTI OPEN SOURCE
+        </a>
+      </div>
+      <p class="mt-4" style="font-size: 1.1rem;">
+        ⭐ Se ti piace il progetto, lascia una stella su GitHub!
+      </p>
+    </div>
+  </section>
+
+  <!-- ALTRI PROGETTI -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="text-center display-3 mb-5"><strong>Altri Progetti Open Source</strong></h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card text-center">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🛒</div>
+            <h4 class="mb-3" style="color: #149dcc;"><strong>Moduli PrestaShop</strong></h4>
+            <p>Scopri altri moduli PrestaShop gratuiti e open-source che ho sviluppato per la community.</p>
+            <a href="progetti-open-source.html" class="btn btn-outline-light mt-3">Vedi Tutti i Progetti</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card text-center">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">📱</div>
+            <h4 class="mb-3" style="color: #149dcc;"><strong>App iOS/Android</strong></h4>
+            <p>Sviluppo anche app mobile native e cross-platform per iOS e Android.</p>
+            <a href="sviluppo-app-ios.html" class="btn btn-outline-light mt-3">Scopri di Più</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-card text-center">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">⚙️</div>
+            <h4 class="mb-3" style="color: #149dcc;"><strong>Servizi PrestaShop</strong></h4>
+            <p>Migrazione, ottimizzazione, sviluppo moduli custom e supporto professionale PrestaShop.</p>
+            <a href="servizi-prestashop.html" class="btn btn-outline-light mt-3">Richiedi Preventivo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section style="padding: 3rem 0; background: #000000; text-align: center;">
+    <div class="container">
+      <h3 class="mb-4">Hai Domande su PrestaSQLeditor?</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <a href="https://wa.me/393516248936?text=Ciao%20Andrea,%20ho%20domande%20su%20PrestaSQLeditor" class="btn btn-success btn-lg w-100" target="_blank">
+            📱 WhatsApp: +39 351 624 8936
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a href="mailto:andreapiani.dev@gmail.com" class="btn btn-outline-light btn-lg w-100">
+            ✉️ andreapiani.dev@gmail.com
+          </a>
+        </div>
+      </div>
+      <p class="mt-4"><a href="index.html" style="color: #149dcc;">← Torna alla Homepage</a></p>
+    </div>
+  </section>
+
+  <!-- Footer GDPR -->
+  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0; margin-top: 4rem;">
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="footer-links" style="margin-bottom: 1.5rem;">
+          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">📄 Privacy Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🍪 Cookie Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="#" class="footer-manage-cookies" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">⚙️ Gestisci Cookie</a>
+          <span style="color: #666;">|</span>
+          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🏠 Home</a>
+          <span style="color: #666;">|</span>
+          <a href="progetti-open-source.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">💻 Portfolio</a>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 1.8; color: #e0e0e0;">
+          <strong style="color: #fff;">Andrea Piani</strong> - Sviluppatore iOS/Android/Web/PrestaShop Freelance<br>
+          Via Pelliccerie 10, 33100 Udine (UD) - P.IVA: 02915190306<br>
+          Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc; text-decoration: none;">andreapiani.dev@gmail.com</a> |
+          Tel: <a href="tel:+393516248936" style="color: #149dcc; text-decoration: none;">+39 351 624 8936</a>
+          <br><br>© 2025 Andrea Piani. Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.footer-manage-cookies').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.CookieConsent) window.CookieConsent.reset();
+      });
+    });
+  </script>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Cookie Consent Banner GDPR -->
+  <script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+
+  <script src="animations.js"></script>
+  <script src="assets/js/popup-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Sviluppo App iOS Native per iPhone e iPad con Swift e SwiftUI. Oltre 15 anni di esperienza, 50+ app pubblicate su App Store. Preventivo gratuito.">
+  <meta name="keywords" content="sviluppo app iOS, app iPhone, app iPad, Swift developer, SwiftUI, sviluppatore iOS italiano, preventivo app iOS">
+
+  <meta property="og:title" content="Sviluppo App iOS Native per iPhone e iPad | Andrea Piani">
+  <meta property="og:description" content="Sviluppo App iOS Native con Swift e SwiftUI. 15+ anni esperienza, 50+ app su App Store. Preventivo gratuito.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/image1-652x1412.png">
+  <meta property="og:url" content="https://www.andreapiani.com/sviluppo-app-ios.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sviluppo App iOS Native | Swift & SwiftUI">
+  <meta name="twitter:description" content="Sviluppatore iOS freelance con 15+ anni esperienza. 50+ app pubblicate su App Store.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/image1-652x1412.png">
+
+  <title>Sviluppo App iOS Native per iPhone e iPad | Andrea Piani</title>
+
+  <link rel="canonical" href="https://www.andreapiani.com/sviluppo-app-ios.html" />
+
+  <!-- Schema.org Markup per SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Andrea Piani - Programmatore iOS Freelance Italia",
+    "image": "https://www.andreapiani.com/assets/images/image1-652x1412.png",
+    "url": "https://www.andreapiani.com/sviluppo-app-ios.html",
+    "telephone": "+393516248936",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "addressCountry": "IT"
+    },
+    "priceRange": "Preventivo personalizzato",
+    "description": "Sviluppatore iOS freelance con 15+ anni esperienza. Sviluppo app iPhone e iPad native con Swift e SwiftUI. 50+ app pubblicate su App Store. Specializzato in MVP per startup.",
+    "serviceType": "Sviluppo App iOS Native",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi Sviluppo iOS",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sviluppo App iOS Native con Swift",
+            "description": "Creazione applicazioni iPhone e iPad native ad alte performance"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "MVP iOS per Startup",
+            "description": "Sviluppo Minimum Viable Product per trovare investitori velocemente"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Migrazione App iOS Legacy",
+            "description": "Aggiornamento app Objective-C a Swift moderno"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pubblicazione App Store",
+            "description": "Gestione completa review Apple e ottimizzazione ASO"
+          }
+        }
+      ]
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Italia"
+    },
+    "sameAs": [
+      "https://github.com/andreapianidev",
+      "https://apps.apple.com/it/developer/immaginet-srl/id545184631"
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sviluppo App iOS",
+        "item": "https://www.andreapiani.com/sviluppo-app-ios.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+
+  <style>
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .navbar-custom a:hover {
+      color: #149dcc !important;
+    }
+    .navbar-custom .active {
+      color: #149dcc !important;
+    }
+    .navbar-brand {
+      color: #149dcc !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .navbar-nav {
+      align-items: center;
+    }
+    .dropdown-menu {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+    }
+    .dropdown-item {
+      color: #ffffff !important;
+      padding: 0.75rem 1.5rem;
+      transition: 0.2s;
+    }
+    .dropdown-item:hover {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+    }
+    .dropdown-item.active {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+      font-weight: bold;
+    }
+    .dropdown-divider {
+      border-color: #333 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+          <!-- MENU SERVIZI CON POPUP -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="serviziMenuBtn" onclick="openServiziPopup(); return false;">
+              Servizi ▾
+            </a>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb Navigation -->
+  <div style="background: #000000; border-bottom: 1px solid #333;">
+    <div class="container" style="padding: 12px 20px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background: transparent; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li class="breadcrumb-item"><a href="index.html" style="color: #149dcc; text-decoration: none;">🏠 Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff;">Sviluppo App iOS</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <section class="header1 gradient-animate" style="padding: 4rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; background-size: 200% 200%;">
+    <div class="container hero-animate">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-7">
+          <h1 class="display-1 mb-4 animate-fadeInUp"><strong>Sviluppo App iOS Native</strong></h1>
+          <h2 class="display-5 mb-4 animate-fadeInUp animate-delay-1">Applicazioni iPhone e iPad con Swift e SwiftUI</h2>
+          <p class="lead mb-4 animate-fadeInUp animate-delay-2">
+            Realizzo app iOS native ad alte performance per App Store. Oltre 15 anni di esperienza, 50+ app pubblicate, competenza certificata Apple.
+          </p>
+          <div class="mb-4 animate-fadeInUp animate-delay-3">
+            <a href="preventivo-app.html" class="btn btn-warning btn-lg me-2 glow-animate">RICHIEDI PREVENTIVO GRATUITO</a>
+            <a href="https://wa.me/393516248936" class="btn btn-outline-light btn-lg">CONTATTAMI SU WHATSAPP</a>
+          </div>
+          <p class="mt-3" style="font-size: 1rem; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
+            📚 <strong>Risorse Gratuite:</strong> <a href="#" onclick="showExitPopup(); return false;" style="color: #ffc107; text-decoration: underline; cursor: pointer;">Guida Completa 2025: Come Sviluppare un'App iOS con Budget Ottimizzato</a>
+          </p>
+        </div>
+        <div class="col-12 col-lg-5">
+          <img src="assets/images/image1-652x1412.png" alt="Sviluppo App iOS iPhone iPad" class="img-fluid" style="max-height: 500px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Perché Scegliere App iOS Native</strong></h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="p-4 text-center">
+            <h3 class="display-1" style="color: #149dcc;">⚡</h3>
+            <h4><strong>Performance Ottimali</strong></h4>
+            <p>Le app native iOS sfruttano al massimo l'hardware Apple, garantendo fluidità e velocità superiori rispetto alle soluzioni cross-platform.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="p-4 text-center">
+            <h3 class="display-1" style="color: #149dcc;">🎨</h3>
+            <h4><strong>UX Nativa Apple</strong></h4>
+            <p>Design e interazioni perfettamente allineate alle linee guida Apple Human Interface, per un'esperienza utente premium.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="p-4 text-center">
+            <h3 class="display-1" style="color: #149dcc;">🔐</h3>
+            <h4><strong>Sicurezza Massima</strong></h4>
+            <p>Accesso completo a tutte le API di sicurezza iOS: Face ID, Touch ID, Keychain, crittografia hardware.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 4rem 0; background: #f8f9fa;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Tecnologie e Competenze iOS</strong></h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h3><strong>Linguaggi e Framework</strong></h3>
+          <ul style="font-size: 1.1rem; line-height: 2;">
+            <li>✓ <strong>Swift 5.9+</strong> - Linguaggio moderno e performante</li>
+            <li>✓ <strong>SwiftUI</strong> - UI dichiarativa e reactive</li>
+            <li>✓ <strong>UIKit</strong> - Per progetti enterprise complessi</li>
+            <li>✓ <strong>Objective-C</strong> - Mantenimento codice legacy</li>
+          </ul>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3><strong>Architetture e Pattern</strong></h3>
+          <ul style="font-size: 1.1rem; line-height: 2;">
+            <li>✓ <strong>MVVM, MVC, VIPER</strong> - Codice scalabile</li>
+            <li>✓ <strong>Combine Framework</strong> - Programming reattiva</li>
+            <li>✓ <strong>Core Data, Realm</strong> - Database locali</li>
+            <li>✓ <strong>CloudKit, Firebase</strong> - Backend cloud</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Funzionalità iOS Avanzate</strong></h2>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="p-3 border-start border-5" style="border-color: #149dcc !important;">
+            <h4>📱 Widget & Live Activities</h4>
+            <p>Widget per home screen e lock screen, Live Activities per info real-time</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3 border-start border-5" style="border-color: #149dcc !important;">
+            <h4>🔔 Push Notifications</h4>
+            <p>Notifiche push locali e remote, rich notifications con media</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3 border-start border-5" style="border-color: #149dcc !important;">
+            <h4>📍 Geolocalizzazione</h4>
+            <p>CoreLocation, MapKit, geofencing e tracking in background</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3 border-start border-5" style="border-color: #149dcc !important;">
+            <h4>💳 In-App Purchase</h4>
+            <p>Acquisti in-app, abbonamenti, StoreKit 2</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3 border-start border-5" style="border-color: #149dcc !important;">
+            <h4>📸 Fotocamera e Media</h4>
+            <p>AVFoundation, filtri real-time, riconoscimento immagini con Core ML</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3 border-start border-5" style="border-color: #149dcc !important;">
+            <h4>🎮 ARKit e Realtà Aumentata</h4>
+            <p>Esperienze AR immersive con ARKit e RealityKit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scroll-animate" style="padding: 4rem 0; background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%); color: white;">
+    <div class="container text-center">
+      <h2 class="display-2 mb-4 animate-fadeInUp"><strong>Sviluppo MVP iOS per Startup</strong></h2>
+      <p class="lead mb-5 animate-fadeInUp animate-delay-1">Non hai budget per un'app completa? Sviluppa un MVP (Minimum Viable Product) per trovare investitori</p>
+
+      <div class="row justify-content-center mt-5 stagger-animate">
+        <div class="col-md-4 mb-4">
+          <div class="p-4 card-animate" style="background: rgba(255,255,255,0.15); border-radius: 15px;">
+            <h3 class="display-1 icon-pulse">⚡</h3>
+            <h4><strong>Lancio Rapido</strong></h4>
+            <p>4-8 settimane invece di 6-12 mesi per un'app completa</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="p-4 card-animate" style="background: rgba(255,255,255,0.15); border-radius: 15px; animation-delay: 0.1s;">
+            <h3 class="display-1 icon-pulse">💰</h3>
+            <h4><strong>Costi Ridotti</strong></h4>
+            <p>60-70% in meno rispetto a un'applicazione con tutte le funzionalità</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="p-4 card-animate" style="background: rgba(255,255,255,0.15); border-radius: 15px; animation-delay: 0.2s;">
+            <h3 class="display-1 icon-pulse">🎯</h3>
+            <h4><strong>Solo Funzioni Core</strong></h4>
+            <p>Focus sulle funzionalità essenziali per validare l'idea sul mercato</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <p class="lead"><strong>Un MVP iOS ti permette di:</strong></p>
+        <div class="text-start" style="max-width: 600px; margin: 0 auto;">
+          <p>✅ Presentare un prodotto tangibile a investitori e business angel</p>
+          <p>✅ Validare la tua idea con utenti reali prima di investire troppo</p>
+          <p>✅ Ottenere feedback immediato dal mercato iOS</p>
+          <p>✅ Iterare velocemente in base ai dati raccolti</p>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <a href="preventivo-app.html" class="btn btn-warning btn-lg">RICHIEDI PREVENTIVO MVP iOS GRATUITO</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-2 mb-5"><strong>Il Mio Processo di Sviluppo iOS</strong></h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h3>1️⃣ Analisi e Progettazione</h3>
+          <p>Studio delle funzionalità, definizione architettura, wireframe UX/UI conformi alle HIG Apple</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3>2️⃣ Sviluppo Iterativo</h3>
+          <p>Sprint di sviluppo con rilasci beta TestFlight per raccogliere feedback continui</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3>3️⃣ Testing su Dispositivi Reali</h3>
+          <p>Test su iPhone e iPad reali, ottimizzazione per tutte le dimensioni schermo</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3>4️⃣ Pubblicazione App Store</h3>
+          <p>Gestione completa del processo di review Apple, ottimizzazione ASO per massimizzare download</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENUTI SEO APPROFONDITI -->
+  <section style="padding: 4rem 0; background: #ffffff;">
+    <div class="container">
+      <h2 class="display-2 mb-5"><strong>Programmatore iOS Freelance: 15+ Anni di Esperienza</strong></h2>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Sono <strong>Andrea Piani</strong>, <strong>sviluppatore iOS freelance</strong> con oltre 15 anni di esperienza nella creazione di applicazioni native per iPhone e iPad. Ho pubblicato <strong>50+ app su App Store</strong>, lavorando sia per startup che per aziende enterprise. Come <strong>programmatore iOS indipendente</strong>, offro la flessibilità e l'attenzione personalizzata che le grandi agenzie non possono garantire.
+      </p>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>Perché Scegliere un Programmatore iOS Freelance?</strong></h3>
+
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <div class="p-4" style="background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 8px;">
+            <h4>❌ <strong>Problemi Comuni con le Agenzie</strong></h4>
+            <ul style="line-height: 2;">
+              <li>Costi elevati (tariffe gonfiate per coprire overhead)</li>
+              <li>Comunicazione filtrata attraverso project manager</li>
+              <li>Developer junior assegnati al tuo progetto</li>
+              <li>Tempi di risposta lenti (burocrazia interna)</li>
+              <li>Upselling continuo di servizi non necessari</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-4" style="background: #d1ecf1; border-left: 4px solid #0dcaf0; border-radius: 8px;">
+            <h4>✅ <strong>I Vantaggi di un Freelance iOS Esperto</strong></h4>
+            <ul style="line-height: 2;">
+              <li>Tariffe 40-60% più economiche a parità di qualità</li>
+              <li>Comunicazione diretta con chi scrive il codice</li>
+              <li>Developer senior con 15+ anni esperienza iOS</li>
+              <li>Risposte immediate e decisioni rapide</li>
+              <li>Focus 100% sul successo del tuo progetto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>Swift vs Objective-C: Quale Linguaggio Scegliere nel 2025?</strong></h3>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Se stai pianificando lo <strong>sviluppo di un'app iOS</strong>, la scelta del linguaggio è fondamentale. <strong>Swift</strong> è il linguaggio moderno raccomandato da Apple per tutte le nuove applicazioni iPhone e iPad. Rispetto all'ormai obsoleto <strong>Objective-C</strong>, Swift offre:
+      </p>
+
+      <ul style="font-size: 1.1rem; line-height: 2;">
+        <li>✓ <strong>Performance superiori del 40%</strong> grazie all'ottimizzazione del compilatore LLVM</li>
+        <li>✓ <strong>Sintassi moderna e leggibile</strong> che riduce gli errori e accelera lo sviluppo</li>
+        <li>✓ <strong>Gestione automatica della memoria</strong> (ARC avanzato)</li>
+        <li>✓ <strong>Type safety</strong> che previene bug comuni a runtime</li>
+        <li>✓ <strong>Supporto completo per SwiftUI</strong>, il framework UI dichiarativo di Apple</li>
+      </ul>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Come <strong>programmatore Swift esperto</strong>, sviluppo app iOS utilizzando le tecnologie più moderne: <strong>Swift 5.9+</strong>, <strong>SwiftUI</strong> per interfacce reattive, <strong>Combine</strong> per programmazione funzionale reattiva, e <strong>async/await</strong> per gestione asincrona pulita. Se hai un'app legacy in Objective-C, offro servizi di <strong>migrazione a Swift</strong> per modernizzare il codice e garantire compatibilità con iOS 17+.
+      </p>
+
+      <table class="table table-bordered mt-4 mb-5">
+        <thead style="background: #149dcc; color: white;">
+          <tr>
+            <th>Caratteristica</th>
+            <th>Freelance iOS Developer</th>
+            <th>Agenzia Sviluppo App</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Costo Orario</strong></td>
+            <td>✅ 50-80€/h (tariffa reale sviluppatore senior)</td>
+            <td>❌ 100-150€/h (markup agenzia + overhead)</td>
+          </tr>
+          <tr>
+            <td><strong>Comunicazione</strong></td>
+            <td>✅ Diretta con chi scrive il codice</td>
+            <td>❌ Filtrata da project manager</td>
+          </tr>
+          <tr>
+            <td><strong>Esperienza Developer</strong></td>
+            <td>✅ 15+ anni iOS, 50+ app pubblicate</td>
+            <td>❌ Spesso junior/mid-level assegnati</td>
+          </tr>
+          <tr>
+            <td><strong>Flessibilità</strong></td>
+            <td>✅ Orari flessibili, call dirette quando serve</td>
+            <td>❌ Burocrazia, riunioni programmate</td>
+          </tr>
+          <tr>
+            <td><strong>Qualità Codice</strong></td>
+            <td>✅ Codice pulito, responsabilità diretta</td>
+            <td>❌ Variabile (dipende da chi ti assegnano)</td>
+          </tr>
+          <tr>
+            <td><strong>Tempi Risposta</strong></td>
+            <td>✅ Immediate (24-48h max)</td>
+            <td>❌ Lenti (processi interni rallentano)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>La Tua App iOS è Lenta? Problemi Comuni e Soluzioni</strong></h3>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Molti clienti mi contattano perché la loro <strong>app iPhone è troppo lenta</strong>, l'interfaccia si blocca, o il consumo batteria è eccessivo. Questi sono i problemi più comuni che risolvo:
+      </p>
+
+      <div class="row mb-4">
+        <div class="col-md-6 mb-3">
+          <div class="p-3" style="background: #f8d7da; border-radius: 8px;">
+            <h5 style="color: #842029;">🐌 <strong>Problema: Scrolling Non Fluido</strong></h5>
+            <p><strong>Causa:</strong> UITableView/UICollectionView mal ottimizzate, caricamento immagini sul main thread</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3" style="background: #d1e7dd; border-radius: 8px;">
+            <h5 style="color: #0f5132;">✅ <strong>Soluzione:</strong></h5>
+            <p>Cell reuse corretto, lazy loading, SDWebImage/Kingfisher per cache immagini, prefetching intelligente</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="p-3" style="background: #f8d7da; border-radius: 8px;">
+            <h5 style="color: #842029;">🔋 <strong>Problema: Consumo Batteria Elevato</strong></h5>
+            <p><strong>Causa:</strong> GPS sempre attivo, network polling continuo, background tasks non ottimizzati</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3" style="background: #d1e7dd; border-radius: 8px;">
+            <h5 style="color: #0f5132;">✅ <strong>Soluzione:</strong></h5>
+            <p>Location tracking intelligente, WebSocket invece di polling, background fetch ottimizzato</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="p-3" style="background: #f8d7da; border-radius: 8px;">
+            <h5 style="color: #842029;">💥 <strong>Problema: Crash Frequenti</strong></h5>
+            <p><strong>Causa:</strong> Memory leaks, retain cycles, race conditions nel codice concorrente</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="p-3" style="background: #d1e7dd; border-radius: 8px;">
+            <h5 style="color: #0f5132;">✅ <strong>Soluzione:</strong></h5>
+            <p>Instruments profiling, weak references, async/await per concorrenza sicura, Crashlytics monitoring</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Offro servizi di <strong>audit performance app iOS</strong> per identificare e risolvere questi problemi. Un'app ottimizzata non solo garantisce recensioni migliori su App Store, ma riduce anche i costi di supporto e aumenta la retention utenti.
+      </p>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>Pubblicazione App Store: Gestisco Tutto Io</strong></h3>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Pubblicare un'app su <strong>App Store</strong> non è semplice come caricare un file. Apple ha <strong>linee guida rigide</strong> (App Store Review Guidelines) e molte app vengono rifiutate al primo tentativo. Con la mia esperienza di <strong>50+ app pubblicate</strong>, conosco esattamente cosa cerca il team di review Apple:
+      </p>
+
+      <ul style="font-size: 1.1rem; line-height: 2;">
+        <li>✓ <strong>App Store Connect setup</strong>: Bundle ID, certificati, provisioning profiles</li>
+        <li>✓ <strong>Screenshot e metadata ottimizzati</strong> per ASO (App Store Optimization)</li>
+        <li>✓ <strong>Gestione review</strong>: risolvo rapidamente eventuali rejection reasons</li>
+        <li>✓ <strong>TestFlight</strong>: beta testing con utenti reali prima del lancio pubblico</li>
+        <li>✓ <strong>Aggiornamenti</strong>: gestisco nuove release e bugfix post-lancio</li>
+      </ul>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Non devi preoccuparti degli aspetti tecnici: penso io a tutto, dall'upload iniziale alla gestione delle versioni successive.
+      </p>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>Sviluppo App iOS per Startup: Come Trovare Investitori con un MVP</strong></h3>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Molte <strong>startup</strong> non hanno budget per sviluppare un'app completa. La soluzione è un <strong>MVP iOS (Minimum Viable Product)</strong>: un'applicazione con solo le funzionalità essenziali, sviluppata in tempi rapidi e con costi ridotti del 60-70%.
+      </p>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Un <strong>MVP per startup</strong> ti permette di:
+      </p>
+
+      <ul style="font-size: 1.1rem; line-height: 2;">
+        <li>✓ <strong>Presentare un prodotto tangibile</strong> a investitori e business angel (molto più efficace di sole slide)</li>
+        <li>✓ <strong>Validare l'idea sul mercato reale</strong> con utenti iOS prima di investire troppo</li>
+        <li>✓ <strong>Raccogliere metriche d'uso</strong> (retention, engagement) da mostrare ai finanziatori</li>
+        <li>✓ <strong>Iterare velocemente</strong> in base ai feedback raccolti da TestFlight beta testers</li>
+        <li>✓ <strong>Lanciare in 4-8 settimane</strong> invece di attendere 6-12 mesi per un'app completa</li>
+      </ul>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Come <strong>consulente iOS per startup</strong>, ho aiutato decine di imprenditori a lanciare il loro MVP e trovare investimenti. La mia metodologia si basa su sprint di sviluppo brevi, rilasci frequenti su TestFlight, e focus assoluto sulle funzionalità core che dimostrano il valore del prodotto.
+      </p>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>Tecnologie iOS Avanzate che Padroneggio</strong></h3>
+
+      <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+          <div class="p-3" style="background: #e7f1ff; border-radius: 8px;">
+            <h5><strong>🎯 Core Technologies</strong></h5>
+            <ul>
+              <li>Swift 5.9+ & SwiftUI</li>
+              <li>Combine & Async/Await</li>
+              <li>UIKit & Auto Layout</li>
+              <li>Core Data & Realm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="p-3" style="background: #e7f1ff; border-radius: 8px;">
+            <h5><strong>☁️ Backend & Cloud</strong></h5>
+            <ul>
+              <li>Firebase (Auth, Firestore, Cloud Functions)</li>
+              <li>CloudKit & iCloud Sync</li>
+              <li>REST API & GraphQL</li>
+              <li>Push Notifications (APNs)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="p-3" style="background: #e7f1ff; border-radius: 8px;">
+            <h5><strong>🚀 Advanced Features</strong></h5>
+            <ul>
+              <li>ARKit & RealityKit</li>
+              <li>Core ML & Machine Learning</li>
+              <li>HealthKit & Apple Watch</li>
+              <li>In-App Purchase & StoreKit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>Quanto Costa Sviluppare un'App iOS con un Freelance?</strong></h3>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Una delle domande più frequenti quando si cerca un <strong>preventivo app iPhone</strong> è: "quanto mi costerà?". La risposta dipende dalla complessità, ma come <strong>sviluppatore iOS freelance</strong> le mie tariffe sono <strong>40-60% più economiche</strong> rispetto a un'agenzia, perché non ho overhead di struttura.
+      </p>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        <strong>Non pubblico listini prezzi fissi</strong> perché ogni progetto è unico. Tuttavia, posso dirti che:
+      </p>
+
+      <ul style="font-size: 1.1rem; line-height: 2;">
+        <li>Un <strong>MVP iOS con funzionalità base</strong> per startup costa molto meno di un'app completa (ideale per trovare investitori)</li>
+        <li>Un'<strong>app iOS completa con tutte le funzionalità</strong> richiede un investimento maggiore ma garantisce un prodotto finito pronto per scalare</li>
+        <li>Offro <strong>pacchetti di manutenzione</strong> mensili per aggiornamenti continui e supporto post-lancio</li>
+      </ul>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        <strong>Richiedi un preventivo personalizzato gratuito:</strong> ti rispondo entro 24 ore con una stima accurata basata sulle tue esigenze specifiche, senza impegno.
+      </p>
+
+      <div class="p-4 mt-5 mb-5 text-center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 15px;">
+        <h4 class="mb-4"><strong>🎁 Preventivo Gratuito in 24 Ore</strong></h4>
+        <p class="lead mb-4">Descrivi il tuo progetto e ricevi una stima dettagliata senza impegno. Include consulenza gratuita di 30 minuti per discutere la migliore strategia iOS.</p>
+        <a href="preventivo-app.html" class="btn btn-warning btn-lg">RICHIEDI PREVENTIVO PERSONALIZZATO</a>
+      </div>
+
+      <h3 class="mt-5 mb-4" style="color: #149dcc;"><strong>Zone Servite: Sviluppatore iOS in Tutta Italia (e Remoto)</strong></h3>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Lavoro come <strong>programmatore iOS freelance remoto</strong>, il che significa che posso seguire progetti in tutta Italia ed Europa. Che tu sia a Milano, Roma, Torino, Firenze, Bologna, Napoli o qualsiasi altra città, la collaborazione è identica: comunicazione via Slack/Teams, meeting su Google Meet/Zoom quando necessario, e repository Git condiviso per trasparenza totale sul codice.
+      </p>
+
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        Il lavoro remoto offre vantaggi concreti: <strong>nessun costo trasferta</strong>, <strong>flessibilità oraria</strong> per call anche serali se serve, e <strong>focus puro sullo sviluppo</strong> senza perdite di tempo in riunioni inutili.
+      </p>
+
+    </div>
+  </section>
+
+  <section style="padding: 4rem 0; background: #f8f9fa;">
+    <div class="container text-center">
+      <h2 class="display-2 mb-4"><strong>Pronto a Sviluppare la Tua App iOS?</strong></h2>
+      <p class="lead mb-4">Contattami per una consulenza gratuita e un preventivo personalizzato</p>
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8">
+          <div style="background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 10px; padding: 1.5rem;">
+            <p style="margin: 0; color: #333; font-size: 1.05rem;">
+              💰 <strong>Vuoi sapere come monetizzare la tua app?</strong> Leggi la guida completa su <a href="come-creare-app-guadagnare.html" style="color: #149dcc; font-weight: bold; text-decoration: none;">come creare un'app e guadagnare</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="preventivo-app.html" class="btn btn-primary btn-lg me-3">RICHIEDI PREVENTIVO</a>
+        <a href="https://wa.me/393516248936" class="btn btn-success btn-lg">WHATSAPP</a>
+      </div>
+      <p class="mt-4"><a href="index.html">← Torna alla Homepage</a></p>
+    </div>
+  </section>
+
+  <!-- Footer GDPR -->
+  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0; margin-top: 4rem;">
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="footer-links" style="margin-bottom: 1.5rem;">
+          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">📄 Privacy Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🍪 Cookie Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="#" class="footer-manage-cookies" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">⚙️ Gestisci Cookie</a>
+          <span style="color: #666;">|</span>
+          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🏠 Home</a>
+          <span style="color: #666;">|</span>
+          <a href="progetti-open-source.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">💻 Portfolio</a>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc;">
+          <strong style="color: #fff;">Andrea Piani</strong> - Sviluppatore iOS/Android/Web Freelance<br>
+          Via Pelliccerie 10, 33100 Udine (UD) - P.IVA: 02915190306<br>
+          Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc; text-decoration: none;">andreapiani.dev@gmail.com</a> |
+          Tel: <a href="tel:+393516248936" style="color: #149dcc; text-decoration: none;">+39 351 624 8936</a>
+          <br><br>© 2025 Andrea Piani. Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.footer-manage-cookies').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.CookieConsent) window.CookieConsent.reset();
+      });
+    });
+  </script>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Exit Intent Popup -->
+  <div id="exit-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 99999; align-items: center; justify-content: center;">
+    <div style="background: white; border-radius: 20px; padding: 3rem; max-width: 600px; margin: 2rem; position: relative; animation: slideIn 0.3s ease-out;">
+      <button onclick="closeExitPopup()" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #999;">&times;</button>
+
+      <div style="text-align: center;">
+        <h2 style="color: #149dcc; font-size: 2rem; margin-bottom: 1rem;">🎁 Aspetta! Regalo per Te</h2>
+        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Guida Gratuita: "Come Sviluppare un'App con Budget Ottimizzato nel 2025"</h3>
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+          Scopri come sviluppare la tua app partendo da un MVP, i tempi di sviluppo realistici e come attrarre investitori. Guida completa con 14 capitoli, tabelle interattive, casi studio reali e strategie pratiche. <strong>Riceverai il link via email!</strong>
+        </p>
+
+        <ul style="text-align: left; margin-bottom: 2rem; font-size: 1rem; color: #333;">
+          <li>✓ Swift vs Flutter vs React Native: quale tecnologia scegliere</li>
+          <li>✓ Come ottenere i primi 1000 utenti con budget limitato</li>
+          <li>✓ 5 modelli di monetizzazione che funzionano + metriche</li>
+          <li>✓ Aspetti legali: GDPR, contratti, compliance App Store</li>
+          <li>✓ Checklist operative, roadmap dettagliata e preventivi realistici</li>
+        </ul>
+
+        <form id="exit-form" action="https://formspree.io/f/mpwyyknb" method="POST" style="margin-bottom: 1rem;">
+          <input type="hidden" name="_next" value="https://www.andreapiani.com/grazie-guida.html">
+          <input type="hidden" name="_subject" value="📥 Richiesta Guida Gratuita MVP - Link HTML">
+          <input type="hidden" name="tipo_richiesta" value="Guida HTML - Invia link via email">
+          <input type="email" name="email" id="exit-email" placeholder="La tua email" required style="width: 100%; padding: 15px; font-size: 1rem; border: 2px solid #ddd; border-radius: 50px; margin-bottom: 1rem;">
+          <button type="submit" style="width: 100%; padding: 15px; font-size: 1.2rem; background: linear-gradient(135deg, #149dcc 0%, #0f7ba3 100%); color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold;">
+            RICEVI IL LINK VIA EMAIL
+          </button>
+        </form>
+
+        <p style="font-size: 0.9rem; color: #999;">Niente spam. La tua email è al sicuro.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <script>
+    // Exit Intent Detection
+    let exitPopupShown = false;
+
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY < 0 && !exitPopupShown && !sessionStorage.getItem('exitPopupShown')) {
+        showExitPopup();
+      }
+    });
+
+    function showExitPopup() {
+      document.getElementById('exit-popup').style.display = 'flex';
+      exitPopupShown = true;
+      sessionStorage.setItem('exitPopupShown', 'true');
+    }
+
+    function closeExitPopup() {
+      document.getElementById('exit-popup').style.display = 'none';
+    }
+
+    // Form exit-intent gestito direttamente da Formspree
+    // Chiude il popup dopo l'invio
+    document.getElementById('exit-form')?.addEventListener('submit', function() {
+      setTimeout(() => {
+        closeExitPopup();
+        alert('Grazie! Controlla la tua email per scaricare la guida gratuita.');
+      }, 1000);
+    });
+  </script>
+
+  <!-- Cookie Consent Banner GDPR -->
+  <script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="animations.js"></script>
+
+  <!-- New Features -->
+  <script src="utilities.js"></script>
+  <script src="performance.js"></script>
+
+  <script>
+    // Form submission with loading state and toast notification
+    document.querySelectorAll('form[action*="formspree"]').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn && window.AppUtils) {
+          window.AppUtils.setButtonLoading(btn, true);
+        }
+
+        if (window.AppUtils) {
+          window.AppUtils.trackEvent('Form', 'Submit', 'Exit Intent Form iOS');
+        }
+
+        setTimeout(() => {
+          if (btn && window.AppUtils) {
+            window.AppUtils.setButtonLoading(btn, false);
+          }
+          if (window.Toast) {
+            window.Toast.success('Controlla la tua email per la guida gratuita!', 'Richiesta Inviata!');
+          }
+        }, 1000);
+      });
+    });
+  </script>
+
+  <script src="assets/js/popup-loader.js"></script>
+</body>
+</html>

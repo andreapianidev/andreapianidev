@@ -1,0 +1,20 @@
+# robots.txt per andreapiani.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.andreapiani.com/sitemap.xml
+
+# Blocca directory non utili per SEO
+Disallow: /assets/
+Disallow: /cgi-bin/
+Disallow: /*.json$
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Consenti crawling blog
+Allow: /blog/
+
+# Crawl delay (opzionale)
+Crawl-delay: 1

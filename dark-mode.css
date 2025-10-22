@@ -1,0 +1,326 @@
+/* ============================================
+   DARK MODE STYLES
+   ============================================ */
+
+/* Dark Mode Variables */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --navbar-bg: #000000;
+}
+
+body.dark-mode {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --border-color: #333333;
+  --card-bg: #1a1a1a;
+  --navbar-bg: #0a0a0a;
+}
+
+/* ===== DARK MODE TOGGLE BUTTON ===== */
+.dark-mode-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dark-mode-toggle::after {
+  content: '☀️';
+  position: absolute;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background: #149dcc;
+}
+
+body.dark-mode .dark-mode-toggle::after {
+  content: '🌙';
+  left: 33px;
+}
+
+.dark-mode-toggle:hover {
+  opacity: 0.8;
+}
+
+/* ===== DARK MODE TRANSITIONS ===== */
+body,
+.navbar-custom,
+.card,
+.benefit-card,
+.tech-card,
+.stats-box,
+.process-card,
+.step-card,
+.comparison-card,
+.price-card,
+.feature-card,
+section,
+footer {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===== DARK MODE BASE STYLES ===== */
+body.dark-mode {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body.dark-mode section {
+  background: var(--bg-primary) !important;
+}
+
+body.dark-mode section[style*="background: #f8f9fa"],
+body.dark-mode section[style*="background: #ffffff"] {
+  background: var(--bg-secondary) !important;
+}
+
+body.dark-mode section[style*="background: #0a0a0a"],
+body.dark-mode section[style*="background: #000000"] {
+  background: var(--bg-primary) !important;
+}
+
+/* ===== DARK MODE CARDS ===== */
+body.dark-mode .card,
+body.dark-mode .benefit-card,
+body.dark-mode .tech-card,
+body.dark-mode .stats-box,
+body.dark-mode .process-card,
+body.dark-mode .step-card,
+body.dark-mode .comparison-card,
+body.dark-mode .price-card,
+body.dark-mode .feature-card,
+body.dark-mode .app-card,
+body.dark-mode .case-study-card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* ===== DARK MODE TEXT ===== */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--text-primary);
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span {
+  color: var(--text-secondary);
+}
+
+body.dark-mode strong {
+  color: var(--text-primary);
+}
+
+/* ===== DARK MODE NAVBAR ===== */
+body.dark-mode .navbar-custom {
+  background: var(--navbar-bg) !important;
+  border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .navbar-custom a {
+  color: var(--text-primary) !important;
+}
+
+/* ===== DARK MODE BUTTONS ===== */
+body.dark-mode .btn-outline-light {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+body.dark-mode .btn-outline-light:hover {
+  background: var(--bg-tertiary);
+  border-color: #149dcc;
+}
+
+/* ===== DARK MODE TABLES ===== */
+body.dark-mode .table,
+body.dark-mode .comparison-table {
+  color: var(--text-primary);
+}
+
+body.dark-mode .comparison-table td {
+  border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .comparison-table tr:hover {
+  background: var(--bg-tertiary);
+}
+
+/* ===== DARK MODE ACCORDIONS ===== */
+body.dark-mode .accordion-button {
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+body.dark-mode .accordion-body {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* ===== DARK MODE FOOTER ===== */
+body.dark-mode footer {
+  background: var(--navbar-bg) !important;
+  color: var(--text-primary);
+}
+
+body.dark-mode footer a {
+  color: var(--text-secondary);
+}
+
+body.dark-mode footer a:hover {
+  color: #149dcc;
+}
+
+/* ===== DARK MODE GRADIENTS (keep vibrant) ===== */
+body.dark-mode .gradient-animate,
+body.dark-mode [style*="linear-gradient"] {
+  /* Gradients stay vibrant in dark mode */
+  filter: brightness(0.9);
+}
+
+body.dark-mode .hero-section,
+body.dark-mode .hero-mvp,
+body.dark-mode .hero-mobile,
+body.dark-mode .hero-python,
+body.dark-mode .hero-trading,
+body.dark-mode .hero-crm,
+body.dark-mode .hero-gestionale {
+  filter: brightness(0.85);
+}
+
+/* ===== DARK MODE BORDERS ===== */
+body.dark-mode [style*="border:"],
+body.dark-mode [style*="border-left:"],
+body.dark-mode [style*="border-right:"],
+body.dark-mode [style*="border-top:"],
+body.dark-mode [style*="border-bottom:"] {
+  border-color: var(--border-color) !important;
+}
+
+/* ===== DARK MODE SHADOWS ===== */
+body.dark-mode [style*="box-shadow"] {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ===== DARK MODE CODE BLOCKS ===== */
+body.dark-mode pre,
+body.dark-mode code {
+  background: var(--bg-tertiary);
+  color: #e0e0e0;
+  border-color: var(--border-color);
+}
+
+/* ===== DARK MODE TRUST BADGES ===== */
+body.dark-mode .trust-badge {
+  background: rgba(20, 157, 204, 0.2);
+  border-color: rgba(20, 157, 204, 0.4);
+}
+
+/* ===== DARK MODE SPECIFIC OVERRIDES ===== */
+body.dark-mode .alert-box {
+  background: rgba(255, 152, 0, 0.15) !important;
+  border-color: rgba(255, 152, 0, 0.3) !important;
+}
+
+body.dark-mode .success-box {
+  background: rgba(40, 167, 69, 0.15) !important;
+  border-color: rgba(40, 167, 69, 0.3) !important;
+}
+
+body.dark-mode .info-box {
+  background: rgba(23, 162, 184, 0.15) !important;
+  border-color: rgba(23, 162, 184, 0.3) !important;
+}
+
+body.dark-mode .warning-box {
+  background: rgba(255, 193, 7, 0.15) !important;
+  border-color: rgba(255, 193, 7, 0.3) !important;
+}
+
+/* ===== DARK MODE IMAGES ===== */
+body.dark-mode img:not([src*=".svg"]) {
+  opacity: 0.9;
+}
+
+body.dark-mode img:hover {
+  opacity: 1;
+}
+
+/* ===== DARK MODE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    width: 50px;
+    height: 26px;
+    margin-left: 0.5rem;
+  }
+
+  .dark-mode-toggle::after {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  body.dark-mode .dark-mode-toggle::after {
+    left: 27px;
+  }
+}
+
+/* ===== DARK MODE PRINT ===== */
+@media print {
+  body.dark-mode {
+    background: white;
+    color: black;
+  }
+
+  body.dark-mode * {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ===== RESPECT USER PREFERENCE ===== */
+@media (prefers-color-scheme: dark) {
+  /* Auto dark mode if user prefers it */
+  /* Uncomment to enable auto dark mode:
+  :root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2a2a2a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --border-color: #333333;
+    --card-bg: #1a1a1a;
+    --navbar-bg: #0a0a0a;
+  }
+  */
+}

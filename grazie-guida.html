@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grazie! Ecco la Tua Guida - Andrea Piani</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700&display=swap&subset=latin,latin-ext">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            animation: bounce 0.6s ease-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .guide-box {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .guide-box h2 {
+            color: #764ba2;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-features {
+            text-align: left;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .guide-features li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #28a745 0%, #20893a 100%);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 1.5rem 0;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
+        }
+
+        .secondary-cta {
+            background: linear-gradient(135deg, #149dcc 0%, #0f7ba3 100%);
+            box-shadow: 0 5px 20px rgba(20, 157, 204, 0.4);
+            font-size: 1.1rem;
+            padding: 15px 40px;
+            margin-top: 1rem;
+        }
+
+        .secondary-cta:hover {
+            box-shadow: 0 8px 25px rgba(20, 157, 204, 0.6);
+        }
+
+        .info-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .info-box strong {
+            color: #856404;
+        }
+
+        .next-steps {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .next-steps h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .next-steps ol {
+            text-align: left;
+            margin: 1rem 0 1rem 2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+            color: #666;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">🎉</div>
+
+        <h1>Grazie! La Tua Guida è Pronta!</h1>
+
+        <p class="subtitle">
+            Ottimo! Hai appena fatto il primo passo verso lo sviluppo della tua app con budget ottimizzato.
+        </p>
+
+        <div class="guide-box">
+            <h2>📱 Guida Completa 2025</h2>
+            <p style="color: #555; margin-bottom: 1rem;">
+                "Come Sviluppare un'App con Budget Ottimizzato nel 2025"
+            </p>
+
+            <ul class="guide-features">
+                <li>✅ <strong>14 Capitoli completi</strong> con strategie pratiche</li>
+                <li>✅ <strong>Tabelle interattive</strong> con costi e preventivi realistici</li>
+                <li>✅ <strong>3 Casi studio reali</strong> (successi + fallimento con pivot)</li>
+                <li>✅ <strong>Checklist operative</strong> e roadmap passo-passo</li>
+                <li>✅ <strong>Swift vs Flutter vs React Native</strong> - quale scegliere</li>
+                <li>✅ <strong>Come ottenere i primi 1000 utenti</strong> con budget limitato</li>
+                <li>✅ <strong>5 modelli di monetizzazione</strong> che funzionano</li>
+                <li>✅ <strong>Aspetti legali:</strong> GDPR, contratti, compliance</li>
+            </ul>
+
+            <a href="guida-sviluppo-app-mvp-2025.html" class="cta-button" target="_blank">
+                🚀 LEGGI LA GUIDA ORA
+            </a>
+
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                <strong>Nota:</strong> Salva questa pagina nei preferiti o il link della guida!
+            </p>
+        </div>
+
+        <div class="info-box">
+            <strong>💡 Suggerimento:</strong> Ti consiglio di leggere la guida con calma, prendendo appunti sui capitoli più rilevanti per il tuo progetto. Ogni sezione è piena di consigli pratici che possono farti risparmiare migliaia di euro!
+        </div>
+
+        <div class="next-steps">
+            <h3>🎯 I Tuoi Prossimi Passi</h3>
+            <ol>
+                <li><strong>Leggi la guida completa</strong> (tempo stimato: 30-40 minuti)</li>
+                <li><strong>Compila la checklist</strong> delle 15 domande (Capitolo 3)</li>
+                <li><strong>Valida la tua idea</strong> seguendo il framework 3-step (Capitolo 7)</li>
+                <li><strong>Richiedi un preventivo personalizzato</strong> per il tuo progetto</li>
+            </ol>
+        </div>
+
+        <a href="preventivo-app.html" class="cta-button secondary-cta">
+            📋 Richiedi Preventivo Gratuito
+        </a>
+
+        <div class="contact-info">
+            <p><strong>Hai domande sulla guida o sul tuo progetto?</strong></p>
+            <p style="margin-top: 0.5rem;">
+                Contattami direttamente: <a href="mailto:info@andreapiani.com">info@andreapiani.com</a>
+            </p>
+            <p style="margin-top: 1rem;">
+                <a href="index.html">← Torna alla Home</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Track page view for analytics if needed
+        console.log('Thank you page loaded - Guide download');
+
+        // Optional: Send event to analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                'event_category': 'Lead Generation',
+                'event_label': 'Guide Download'
+            });
+        }
+    </script>
+  <script src="assets/js/popup-loader.js"></script>
+</body>
+</html>
