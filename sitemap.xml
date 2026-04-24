@@ -15,7 +15,7 @@
   <!-- Homepage Inglese -->
   <url>
     <loc>https://www.andreapiani.com/indexen.html</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -92,7 +92,7 @@
 
   <url>
     <loc>https://www.andreapiani.com/progetti-open-source.html</loc>
-    <lastmod>2025-10-13</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -121,7 +121,7 @@
 
   <url>
     <loc>https://www.andreapiani.com/sviluppo-app-react-web.html</loc>
-    <lastmod>2025-10-13</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -158,7 +158,7 @@
   <!-- Pagine SEO Landing Phase 2 (Media Priorità) -->
   <url>
     <loc>https://www.andreapiani.com/app-native-vs-cross-platform.html</loc>
-    <lastmod>2025-10-13</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -173,7 +173,7 @@
   <!-- Risorse Lead Magnet -->
   <url>
     <loc>https://www.andreapiani.com/guida-sviluppo-app-mvp-2025.html</loc>
-    <lastmod>2025-10-13</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -224,17 +224,65 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- SaaS Live: Landing Agente Immobiliare AI -->
+  <url>
+    <loc>https://www.andreapiani.com/agente-immobiliare-ai.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SaaS Live: Landing CheckIn Digitale Hotel -->
+  <url>
+    <loc>https://www.andreapiani.com/checkin-digitale-hotel.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SaaS Live: Landing CRM Centri Estetici -->
+  <url>
+    <loc>https://www.andreapiani.com/crm-centri-estetici.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Inserimento Prodotti E-commerce -->
+  <url>
+    <loc>https://www.andreapiani.com/inserimento-prodotti-ecommerce.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Price Calculator Tool -->
+  <url>
+    <loc>https://www.andreapiani.com/price-calculator.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Privacy Policy PrestaShop -->
+  <url>
+    <loc>https://www.andreapiani.com/PrivacyPolicyPS.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- Pagine Legali GDPR (Italiano) -->
   <url>
     <loc>https://www.andreapiani.com/privacy-policy.html</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/cookie-policy.html</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -242,21 +290,21 @@
   <!-- Pagine Legali GDPR (English) -->
   <url>
     <loc>https://www.andreapiani.com/privacy-policy-en.html</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/cookie-policy-en.html</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/wtprivacy.html</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
