@@ -1,0 +1,234 @@
+/**
+ * POPUP MENU STYLES - Sistema Centralizzato
+ * Stili per il popup menu dei servizi
+ */
+
+/* Overlay popup */
+.popup-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.popup-menu.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+/* Contenuto popup */
+.popup-content {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Titolo popup */
+.popup-content h3 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Bottone chiusura */
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.popup-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+/* Grid sezioni */
+.popup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Singola sezione */
+.popup-section {
+    background: #0a0a0a;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.popup-section:hover {
+    border-color: #ff6b35;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+/* Titolo sezione */
+.popup-section h4 {
+    color: #ff6b35;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Lista link */
+.popup-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-section li {
+    margin-bottom: 10px;
+}
+
+.popup-section a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.popup-section a:hover {
+    background: rgba(255, 107, 53, 0.1);
+    color: #ff6b35;
+    padding-left: 20px;
+}
+
+/* Scrollbar personalizzata */
+.popup-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-radius: 10px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #ff6b35;
+    border-radius: 10px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background: #ff8555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 30px 20px;
+        max-height: 95vh;
+    }
+
+    .popup-content h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .popup-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .popup-section {
+        padding: 20px;
+    }
+
+    .popup-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .popup-close {
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-menu {
+        padding: 10px;
+    }
+
+    .popup-content {
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+
+    .popup-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .popup-section h4 {
+        font-size: 1.1rem;
+    }
+
+    .popup-section a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Accessibilità */
+.popup-menu:focus-within .popup-close {
+    outline: 2px solid #ff6b35;
+    outline-offset: 2px;
+}
+
+/* Prevent body scroll quando popup aperto */
+body.popup-open {
+    overflow: hidden;
+}

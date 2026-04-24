@@ -47,9 +47,9 @@
       "telephone": "+393516248936",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Via Pelliccerie 10",
-        "addressLocality": "Udine",
-        "postalCode": "33100",
+        "streetAddress": "Piazza della Repubblica, 19",
+        "addressLocality": "Milano",
+        "postalCode": "20124",
         "addressCountry": "IT"
       }
     },
@@ -315,14 +315,8 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
 
-          <!-- MENU SERVIZI CON POPUP -->
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="serviziMenuBtn" onclick="openServiziPopup(); return false;">
-              Servizi ▾
-            </a>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
           <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
           <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
         </ul>
@@ -339,8 +333,8 @@
         <div class="col-lg-8">
           <h1 class="animate-fadeInUp">⚡ Sviluppatore Node.js Freelance - Backend Scalabile</h1>
           <p class="animate-fadeInUp animate-delay-1">
-            Sviluppatore Node.js freelance con <strong>15+ anni di esperienza</strong> specializzato in <strong>API REST</strong>, <strong>GraphQL</strong>, <strong>WebSocket real-time</strong> e <strong>microservizi</strong>.
-            Framework: <strong>Express</strong>, <strong>NestJS</strong>, <strong>Fastify</strong>. <strong>TypeScript</strong> per codice type-safe. <strong>Lavoro 100% remoto</strong> per startup, PMI e aziende in tutta Italia.
+            Sviluppatore Node.js freelance con <strong>15+ anni di esperienza</strong> specializzato in <strong><a href="creazione-api-rest.html" style="color:#fff; text-decoration:underline;">API REST</a></strong>, <strong>GraphQL</strong>, <strong>WebSocket real-time</strong> e <strong>microservizi</strong>.
+            Framework: <strong>Express</strong>, <strong>NestJS</strong>, <strong>Fastify</strong>. <strong>TypeScript</strong> per codice type-safe. Ideale anche come backend per <a href="gestionali-personalizzati.html" style="color:#fff; text-decoration:underline;">gestionali personalizzati</a> e <a href="sviluppo-app-react-web.html" style="color:#fff; text-decoration:underline;">React web app</a>. <strong>Lavoro 100% remoto</strong> per startup, PMI e aziende in tutta Italia.
           </p>
           <div class="animate-fadeInUp animate-delay-2">
             <a href="preventivo-app.html" class="btn-nodejs me-3 glow-animate">RICHIEDI PREVENTIVO GRATUITO</a>
@@ -669,7 +663,111 @@
         </div>
       </div>
       <div class="text-center mt-4">
-        <a href="progetti-open-source.html" class="btn-nodejs">Vedi Tutti i 40+ Progetti GitHub</a>
+        <a href="progetti-open-source.html" class="btn-nodejs">Vedi Tutti i 40+ Progetti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASO STUDIO NODE.JS IN PRODUZIONE -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0a0a0a 0%, #1a2f1a 100%);">
+    <div class="container">
+      <h2 class="section-title">🚀 SaaS Node.js Live in Produzione</h2>
+      <p style="text-align: center; font-size: 1.2rem; color: #ccc; max-width: 900px; margin: 0 auto 3rem;">
+        <strong>CheckIn Facile</strong> — Gestionale hospitality completo con <strong>Node.js + React + MongoDB</strong>, 
+        online e utilizzato da strutture ricettive in tutta Italia. Esempio concreto di architettura MERN production-ready.
+      </p>
+
+      <div style="background: linear-gradient(135deg, #1a1a1a 0%, #1f2d3a 100%); border: 2px solid #68A063; border-radius: 15px; overflow: hidden;">
+        <div style="background: linear-gradient(135deg, #68A063 0%, #3d7a3d 100%); padding: 2rem; color: white;">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h3 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">✅ CheckIn Facile</h3>
+              <p style="font-size: 1.2rem; opacity: 0.95; margin: 0;">
+                Digitalizzazione check-in per hotel e B&B — <em>Node.js, Express, MongoDB, React PWA</em>
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+              <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px;">🏨 Hospitality Tech</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 2.5rem;">
+          <div class="row">
+            <div class="col-lg-6">
+              <h4 style="color: #68A063; font-size: 1.3rem; margin-bottom: 1rem;">🛠️ Architettura Backend Node.js</h4>
+              <ul style="color: #ccc; line-height: 2; margin-bottom: 1.5rem;">
+                <li><strong style="color: #fff;">Node.js + Express:</strong> REST API con struttura MVC modulare</li>
+                <li><strong style="color: #fff;">MongoDB + Mongoose:</strong> Schema flessibile per dati ospiti/documenti</li>
+                <li><strong style="color: #fff;">JWT Auth:</strong> Autenticazione stateless con refresh tokens</li>
+                <li><strong style="color: #fff;">Multer + Sharp:</strong> Upload e processing immagini ottimizzato</li>
+                <li><strong style="color: #fff;">Node-cron:</strong> Job scheduling per reminder automatici</li>
+                <li><strong style="color: #fff;">Nodemailer + Twilio:</strong> Notifiche multi-canale email/SMS</li>
+              </ul>
+
+              <h4 style="color: #68A063; font-size: 1.3rem; margin: 1.5rem 0 1rem;">🤖 Integrazioni & API</h4>
+              <ul style="color: #ccc; line-height: 2;">
+                <li><strong style="color: #fff;">Tesseract.js:</strong> OCR documenti d'identità lato server</li>
+                <li><strong style="color: #fff;">Alloggiati Web:</strong> Export XML per Polizia di Stato</li>
+                <li><strong style="color: #fff;">Booking.com API:</strong> Sincronizzazione prenotazioni</li>
+                <li><strong style="color: #fff;">Stripe:</strong> Pagamenti online per extra servizi</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <h4 style="color: #68A063; font-size: 1.3rem; margin-bottom: 1rem;">⚡ Stack Completo (MERN)</h4>
+              <div style="background: #151515; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <div style="margin-bottom: 1rem;">
+                  <span style="color: #888; font-size: 0.85rem;">BACKEND</span><br>
+                  <span style="background: #339933; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">Node.js</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">Express.js</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">TypeScript</span>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <span style="color: #888; font-size: 0.85rem;">DATABASE</span><br>
+                  <span style="background: #47a248; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">MongoDB</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">Mongoose</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Redis</span>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <span style="color: #888; font-size: 0.85rem;">FRONTEND</span><br>
+                  <span style="background: #61dafb; color: #000; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">React.js</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">PWA</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Material UI</span>
+                </div>
+                <div>
+                  <span style="color: #888; font-size: 0.85rem;">DEVOPS</span><br>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">Docker</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-right: 0.5rem;">AWS S3</span>
+                  <span style="background: #444; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">PM2</span>
+                </div>
+              </div>
+
+              <div style="background: linear-gradient(135deg, #1e3a2b 0%, #2d5a3d 100%); border-radius: 10px; padding: 1.5rem; text-align: center;">
+                <p style="color: #4caf50; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">✅ ONLINE DA SETTEMBRE 2023</p>
+                <p style="color: #aaa; font-size: 0.85rem; margin: 0;">Utilizzato da strutture in tutta Italia</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #333;">
+            <a href="https://checkinfacile.com" target="_blank" class="btn-nodejs" style="padding: 1rem 2rem; font-size: 1.1rem;">
+              🚀 Prova la Demo Node.js Live →
+            </a>
+            <p style="color: #888; margin-top: 1rem; margin-bottom: 0; font-size: 0.9rem;">
+              Node.js • Express • MongoDB • REST API • PWA • Docker • AWS
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANNER RIEPILOGATIVO -->
+      <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%); border-radius: 15px; border: 1px solid #333;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</p>
+        <p style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">
+          <strong>MERN Stack Production</strong> — Node.js + Express + MongoDB + React
+        </p>
+        <p style="color: #888; font-size: 0.95rem; margin: 0;">
+          REST API • JWT Auth • File Upload • OCR • Cron Jobs • Third-party Integrations
+        </p>
       </div>
     </div>
   </section>
@@ -695,6 +793,36 @@
     </div>
   </section>
 
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#68A063; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="creazione-api-rest.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#68A063'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🚀</div>
+            <h3 style="color:#68A063; font-size:1.3rem; margin-bottom:0.75rem;">API REST &amp; GraphQL</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Progettazione di API enterprise: OpenAPI, JWT auth, rate limiting, versioning semantico.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-python.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#68A063'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🐍</div>
+            <h3 style="color:#68A063; font-size:1.3rem; margin-bottom:0.75rem;">Sviluppo Python</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Quando serve ML/AI, data science, scraping: Python come complemento del backend Node.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="gestionali-personalizzati.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#68A063'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">💼</div>
+            <h3 style="color:#68A063; font-size:1.3rem; margin-bottom:0.75rem;">Gestionali personalizzati</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Node.js è lo stack preferito per gestionali real-time multi-utente con dashboard live.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER GDPR -->
   <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0; margin-top: 4rem;">
     <div class="container">
@@ -712,10 +840,10 @@
         </div>
         <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc; margin-bottom: 1rem;">
           <strong style="color: #fff;">Andrea Piani</strong> - Sviluppatore Node.js Freelance Remoto<br>
-          Via Pelliccerie 10, 33100 Udine (UD) - P.IVA: 02915190306<br>
+          Italia: Piazza della Repubblica, 19 20124 Milano (MI) - Spagna: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife<br>
           Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #68A063; text-decoration: none;">andreapiani.dev@gmail.com</a> |
           Tel: <a href="tel:+393516248936" style="color: #68A063; text-decoration: none;">+39 351 624 8936</a>
-          <br><br>© 2025 Andrea Piani. Tutti i diritti riservati.
+          <br><br>© 2026 Andrea Piani. Tutti i diritti riservati.
         </div>
         <div>
           <a href="https://github.com/andreapianidev" target="_blank" style="color: #68A063; text-decoration: none; margin: 0 0.5rem;">GitHub</a>

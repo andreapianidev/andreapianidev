@@ -162,14 +162,8 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
 
-          <!-- MENU SERVIZI CON POPUP -->
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="serviziMenuBtn" onclick="openServiziPopup(); return false;">
-              Servizi ▾
-            </a>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
           <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
           <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
         </ul>
@@ -188,8 +182,8 @@
           <h1 class="animate-fadeInUp">🔍 Scanner Sicurezza PrestaShop Gratuito</h1>
           <h2 class="h3 mb-4 animate-fadeInUp animate-delay-1">Analizza Vulnerabilità e Rischi del Tuo E-commerce in 30 Secondi</h2>
           <p class="lead mb-4 animate-fadeInUp animate-delay-2">
-            <strong>pyprestascan</strong> è il mio tool gratuito per analizzare la sicurezza del tuo shop PrestaShop.
-            Scopri vulnerabilità CVE critiche, versione PHP obsoleta, moduli insicuri e configurazioni errate prima che gli hacker lo facciano.
+            <strong>pyprestascan</strong> è il mio tool gratuito (scritto in <a href="sviluppo-python.html" style="color:#fff; text-decoration:underline;">Python</a>) per analizzare la sicurezza del tuo shop <a href="servizi-prestashop.html" style="color:#fff; text-decoration:underline;">PrestaShop</a>.
+            Scopri vulnerabilità CVE critiche, versione PHP obsoleta, moduli insicuri e configurazioni errate prima che gli hacker lo facciano. Dopo l'audit, consiglio di procedere con la <a href="migrazione-prestashop-8-9.html" style="color:#fff; text-decoration:underline;">migrazione a PrestaShop 8/9</a>.
           </p>
           <div class="alert-box">
             <h4>⚠️ Il 68% dei Shop PrestaShop Ha Vulnerabilità Critiche</h4>
@@ -459,6 +453,36 @@
           </a>
         </div>
         <p class="mt-4 mb-0"><small>Interventi urgenti 3-5 giorni | Preventivo gratuito in 24h</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #000; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#df0067; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="migrazione-prestashop-8-9.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#df0067'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🔄</div>
+            <h3 style="color:#df0067; font-size:1.3rem; margin-bottom:0.75rem;">Migrazione 1.7 → 8/9</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">La fix definitiva alle vulnerabilità rilevate: upgrade completo a versione supportata.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="prestashop-sqleditor.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#df0067'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🗃️</div>
+            <h3 style="color:#df0067; font-size:1.3rem; margin-bottom:0.75rem;">PrestaSQLeditor</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Modulo gratuito per pulire database compromessi e rimuovere backdoor SQL residue.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="servizi-prestashop.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#df0067'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🛒</div>
+            <h3 style="color:#df0067; font-size:1.3rem; margin-bottom:0.75rem;">Tutti i servizi PrestaShop</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Hardening, monitoraggio, backup automatico, hosting ottimizzato, incident response.</p>
+          </a>
+        </div>
       </div>
     </div>
   </section>
