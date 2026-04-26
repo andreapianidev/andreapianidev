@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cookie Policy | Andrea Piani - Sviluppatore iOS e PrestaShop</title>
-  <meta name="description" content="Cookie Policy del sito andreapiani.com: tipologie di cookie utilizzati (tecnici, analitici, di profilazione), finalità, durata e come gestire le preferenze.">
+  <meta name="description" content="Cookie Policy del sito andreapiani.com: tipologie di cookie utilizzati (tecnici, analitici), tecnologie di archiviazione locale (localStorage), assistente AI Andrea AI, finalità, durata e come gestire le preferenze.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.andreapiani.com/cookie-policy.html" />
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -39,11 +39,38 @@
       margin-top: 2rem;
       margin-bottom: 0.8rem;
     }
+    h4 {
+      color: #444;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
     .info-box {
       background: #f0f8ff;
       border-left: 4px solid #149dcc;
       padding: 1.5rem;
       margin: 2rem 0;
+    }
+    .info-box strong {
+      color: #149dcc;
+    }
+    .warning-box {
+      background: #fff8e1;
+      border-left: 4px solid #f9a825;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .warning-box strong {
+      color: #b26a00;
+    }
+    .danger-box {
+      background: #ffebee;
+      border-left: 4px solid #c62828;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .danger-box strong {
+      color: #b71c1c;
     }
     .cookie-type {
       background: #f8f9fa;
@@ -53,11 +80,29 @@
     }
     .cookie-type h4 {
       color: #149dcc;
+      margin-top: 0;
       margin-bottom: 1rem;
     }
     table {
       margin: 2rem 0;
       font-size: 0.95rem;
+      width: 100%;
+    }
+    .toc {
+      background: #f8f9fa;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .toc ol {
+      margin-bottom: 0;
+    }
+    .toc a {
+      color: #149dcc;
+      text-decoration: none;
+    }
+    .toc a:hover {
+      text-decoration: underline;
     }
     .back-link {
       display: inline-block;
@@ -75,6 +120,7 @@
       border-radius: 4px;
       font-family: monospace;
       color: #d63384;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -84,47 +130,93 @@
 
   <h1>Cookie Policy</h1>
 
-  <p><strong>Ultimo aggiornamento:</strong> 11 Ottobre 2025</p>
+  <p><strong>Ultimo aggiornamento:</strong> 25 Aprile 2026<br>
+     <strong>Versione:</strong> 3.0<br>
+     <strong>Versione precedente:</strong> 11 Ottobre 2025</p>
 
   <div class="info-box">
     <p><strong>Titolare del Sito:</strong></p>
     <p>
-      <strong>Andrea Piani</strong><br>
-      Italia: Piazza della Repubblica, 19 20124 Milano (MI)<br>
-      Spagna: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife<br>
-      Email: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a>
+      <strong>Andrea Piani</strong> (Ditta individuale)<br>
+      Sede operativa Italia: Piazza della Repubblica, 19 – 20124 Milano (MI)<br>
+      Sede operativa Spagna: Camino El Pinar 106, Tijarafe – 38780 Santa Cruz de Tenerife<br>
+      Email: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a><br>
+      Telefono / WhatsApp: <a href="tel:+393516248936">+39 351 624 8936</a>
     </p>
   </div>
 
   <p>
-    Questa Cookie Policy spiega cosa sono i cookie, come li utilizziamo sul sito <strong>www.andreapiani.com</strong>, quali tipologie di cookie sono presenti e come puoi gestirli o disabilitarli.
+    Questa Cookie Policy spiega cosa sono i cookie e le tecnologie similari, come vengono utilizzati sul sito <strong>www.andreapiani.com</strong>, quali tipologie sono presenti, come puoi gestirli o disabilitarli e quali sono i tuoi diritti.
   </p>
 
-  <h2>1. Cosa Sono i Cookie?</h2>
-
-  <p>
-    I <strong>cookie</strong> sono piccoli file di testo che i siti web visitati inviano al dispositivo dell'utente (computer, smartphone, tablet), dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.
-  </p>
-
-  <p>I cookie permettono di:</p>
+  <p>Il documento è redatto in conformità con:</p>
   <ul>
-    <li>✓ Ricordare le tue preferenze e impostazioni</li>
-    <li>✓ Migliorare l'esperienza di navigazione</li>
-    <li>✓ Raccogliere statistiche anonime sul traffico</li>
-    <li>✓ Far funzionare correttamente il sito web</li>
+    <li><strong>Regolamento (UE) 2016/679</strong> ("GDPR");</li>
+    <li><strong>Direttiva 2002/58/CE</strong> ("ePrivacy") come recepita dall'<strong>Art. 122 D.Lgs. 196/2003</strong> (Codice Privacy);</li>
+    <li><strong>Linee guida del Garante Privacy del 10 giugno 2021</strong> sull'uso dei cookie e di altri strumenti di tracciamento;</li>
+    <li><strong>Provvedimento del Garante Privacy n. 229/2014</strong> in materia di cookie tecnici;</li>
+    <li><strong>Regolamento (UE) 2024/1689</strong> ("AI Act") per gli aspetti relativi all'assistente AI integrato nel Sito.</li>
   </ul>
 
-  <h2>2. Tipologie di Cookie Utilizzati</h2>
+  <div class="toc">
+    <strong>Indice</strong>
+    <ol>
+      <li><a href="#sez-1">Definizioni: cookie e tecnologie similari</a></li>
+      <li><a href="#sez-2">Cookie tecnici (no consenso)</a></li>
+      <li><a href="#sez-3">Cookie analitici (con consenso)</a></li>
+      <li><a href="#sez-4">Cookie di terze parti e fornitori esterni</a></li>
+      <li><a href="#sez-5">Tecnologie di archiviazione locale (localStorage)</a></li>
+      <li><a href="#sez-6">Assistente AI "Andrea AI" (DeepSeek)</a></li>
+      <li><a href="#sez-7">Trasferimenti di dati extra-UE</a></li>
+      <li><a href="#sez-8">Base giuridica del trattamento</a></li>
+      <li><a href="#sez-9">Gestione del consenso</a></li>
+      <li><a href="#sez-10">Come disabilitare cookie e archiviazione locale</a></li>
+      <li><a href="#sez-11">Durata e conservazione</a></li>
+      <li><a href="#sez-12">Diritti dell'interessato</a></li>
+      <li><a href="#sez-13">Aggiornamenti alla Cookie Policy</a></li>
+      <li><a href="#sez-14">Contatti</a></li>
+    </ol>
+  </div>
+
+  <h2 id="sez-1">1. Definizioni: Cookie e Tecnologie Similari</h2>
+
+  <p>
+    I <strong>cookie</strong> sono piccoli file di testo che i siti web visitati inviano al dispositivo dell'utente (computer, smartphone, tablet), dove vengono memorizzati per essere ritrasmessi agli stessi siti alla visita successiva.
+  </p>
+
+  <p>
+    Oltre ai cookie tradizionali, le linee guida del Garante (10/06/2021) considerano "<strong>strumenti di tracciamento</strong>" anche tecnologie alternative che svolgono funzioni analoghe, tra cui <strong>localStorage</strong>, <strong>sessionStorage</strong>, <strong>IndexedDB</strong>, <strong>fingerprinting</strong> e <strong>identificatori univoci di dispositivo</strong>. Tutte queste tecnologie sono soggette agli stessi obblighi di trasparenza e consenso previsti per i cookie.
+  </p>
+
+  <p>I cookie e le tecnologie similari permettono di:</p>
+  <ul>
+    <li>✓ Ricordare preferenze e impostazioni;</li>
+    <li>✓ Migliorare l'esperienza di navigazione;</li>
+    <li>✓ Raccogliere statistiche aggregate sul traffico;</li>
+    <li>✓ Far funzionare correttamente il sito web e i suoi componenti (es. chatbot, dark mode);</li>
+    <li>✓ Garantire la sicurezza del sito e prevenire abusi.</li>
+  </ul>
+
+  <h3>1.1 Classificazione</h3>
+  <p>I cookie possono essere classificati secondo diversi criteri:</p>
+  <ul>
+    <li><strong>Per durata</strong>: <em>di sessione</em> (eliminati alla chiusura del browser) o <em>persistenti</em> (rimangono fino alla scadenza o cancellazione);</li>
+    <li><strong>Per provenienza</strong>: <em>di prima parte</em> (impostati dal Sito) o <em>di terze parti</em> (impostati da fornitori esterni);</li>
+    <li><strong>Per finalità</strong>: <em>tecnici/necessari</em> (no consenso) o <em>analitici/profilazione</em> (consenso obbligatorio).</li>
+  </ul>
+
+  <h2 id="sez-2">2. Cookie Tecnici Necessari (NON richiedono consenso)</h2>
 
   <div class="cookie-type">
-    <h4>🔧 Cookie Tecnici Necessari (NON richiedono consenso)</h4>
+    <h4>🔧 Cookie essenziali al funzionamento</h4>
     <p>
-      Sono cookie <strong>essenziali</strong> per il funzionamento del sito. Senza questi cookie, alcune funzionalità non possono essere fornite. Ai sensi del Provvedimento del Garante Privacy n. 229/2014, <strong>non richiedono il consenso dell'utente</strong>.
+      Sono cookie <strong>strettamente necessari</strong> per la fruizione del Sito. Senza di essi, alcune funzionalità non potrebbero essere fornite. Ai sensi dell'<strong>Art. 122 D.Lgs. 196/2003</strong> e del <strong>Provvedimento Garante n. 229/2014</strong>, non richiedono il consenso dell'utente.
     </p>
     <table class="table table-bordered">
       <thead style="background: #149dcc; color: white;">
         <tr>
-          <th>Nome Cookie</th>
+          <th>Nome</th>
+          <th>Tipo</th>
           <th>Finalità</th>
           <th>Durata</th>
         </tr>
@@ -132,27 +224,28 @@
       <tbody>
         <tr>
           <td><code>cookie_consent</code></td>
-          <td>Memorizza le tue preferenze sui cookie (consenso/rifiuto)</td>
+          <td>Cookie di prima parte</td>
+          <td>Memorizza le tue preferenze sui cookie (consenso/rifiuto analitici, timestamp del consenso)</td>
           <td>12 mesi</td>
-        </tr>
-        <tr>
-          <td><code>PHPSESSID</code></td>
-          <td>Gestione sessione utente (form multi-step)</td>
-          <td>Sessione (si cancella chiudendo il browser)</td>
         </tr>
       </tbody>
     </table>
+    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+      <strong>Nota:</strong> il Sito è statico (HTML/CSS/JS) ospitato su Vercel e <strong>non utilizza cookie di sessione lato server</strong> (es. <code>PHPSESSID</code>). Eventuali cookie tecnici aggiuntivi possono essere impostati dal CDN per finalità di sicurezza/load-balancing.
+    </p>
   </div>
 
+  <h2 id="sez-3">3. Cookie Analitici (RICHIEDONO consenso)</h2>
+
   <div class="cookie-type">
-    <h4>📊 Cookie Analitici (richiedono consenso)</h4>
+    <h4>📊 Statistiche aggregate sul traffico</h4>
     <p>
-      Utilizzati per raccogliere informazioni aggregate e anonime sul numero di visitatori e su come questi utilizzano il sito. Aiutano a migliorare le prestazioni e l'usabilità.
+      Utilizzati per raccogliere informazioni <strong>aggregate e pseudonimizzate</strong> sul numero di visitatori e su come essi utilizzano il Sito. Il consenso è raccolto tramite il <strong>cookie banner</strong> visualizzato al primo accesso. Senza consenso, questi cookie non vengono impostati.
     </p>
     <table class="table table-bordered">
       <thead style="background: #0d6efd; color: white;">
         <tr>
-          <th>Nome Cookie</th>
+          <th>Nome</th>
           <th>Provider</th>
           <th>Finalità</th>
           <th>Durata</th>
@@ -161,141 +254,328 @@
       <tbody>
         <tr>
           <td><code>_ga</code></td>
-          <td>Google Analytics</td>
-          <td>Distingue gli utenti unici (conteggio visitatori)</td>
+          <td>Google Analytics 4</td>
+          <td>Distingue gli utenti unici per il conteggio dei visitatori</td>
           <td>2 anni</td>
         </tr>
         <tr>
           <td><code>_ga_&lt;container-id&gt;</code></td>
           <td>Google Analytics 4</td>
-          <td>Mantiene lo stato della sessione</td>
+          <td>Mantiene lo stato della sessione e i parametri di campagna</td>
           <td>2 anni</td>
-        </tr>
-        <tr>
-          <td><code>_gid</code></td>
-          <td>Google Analytics</td>
-          <td>Distingue gli utenti (24 ore)</td>
-          <td>24 ore</td>
-        </tr>
-        <tr>
-          <td><code>_gat</code></td>
-          <td>Google Analytics</td>
-          <td>Limita la frequenza delle richieste</td>
-          <td>1 minuto</td>
         </tr>
       </tbody>
     </table>
-    <p><strong>Privacy Policy Google Analytics:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-    <p><strong>Opt-out Google Analytics:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">https://tools.google.com/dlpage/gaoptout</a></p>
+    <p>
+      <strong>Anonimizzazione IP</strong>: il Sito attiva l'opzione <code>anonymize_ip</code> di Google Analytics, che tronca l'ultimo ottetto dell'indirizzo IP prima della memorizzazione, conformemente alle indicazioni del Garante.
+    </p>
+    <ul>
+      <li><strong>Privacy Policy Google Analytics:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      <li><strong>Opt-out browser add-on:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a></li>
+    </ul>
   </div>
 
-  <h2>3. Cookie di Terze Parti</h2>
+  <h2 id="sez-4">4. Cookie di Terze Parti e Fornitori Esterni</h2>
 
-  <p>Alcuni cookie sono installati da servizi di terze parti che compaiono sulle nostre pagine:</p>
+  <p>Alcuni cookie e richieste di rete sono generati da servizi di terze parti che il Sito utilizza per il proprio funzionamento. Si fornisce di seguito l'elenco completo:</p>
 
   <table class="table table-bordered">
     <thead style="background: #6c757d; color: white;">
       <tr>
+        <th>Fornitore</th>
         <th>Servizio</th>
-        <th>Finalità</th>
+        <th>Sede</th>
         <th>Privacy Policy</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Google Analytics</strong></td>
-        <td>Statistiche anonime sul traffico del sito</td>
-        <td><a href="https://policies.google.com/privacy" target="_blank">Link</a></td>
+        <td><strong>Vercel Inc.</strong></td>
+        <td>Hosting, CDN, protezione DDoS</td>
+        <td>USA (California)</td>
+        <td><a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></td>
       </tr>
       <tr>
-        <td><strong>Formspree</strong></td>
-        <td>Gestione form di contatto/preventivo</td>
-        <td><a href="https://formspree.io/legal/privacy-policy" target="_blank">Link</a></td>
+        <td><strong>Google LLC</strong></td>
+        <td>Google Analytics 4</td>
+        <td>USA (California)</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
       </tr>
       <tr>
-        <td><strong>Google Fonts</strong></td>
-        <td>Caricamento font (può impostare cookie)</td>
-        <td><a href="https://policies.google.com/privacy" target="_blank">Link</a></td>
+        <td><strong>Google LLC</strong></td>
+        <td>Google Fonts (caricamento font tipografici)</td>
+        <td>USA (California)</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Formspree Inc.</strong></td>
+        <td>Gestione invio form di contatto/preventivo</td>
+        <td>USA (Massachusetts)</td>
+        <td><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>DeepSeek</strong></td>
+        <td>API LLM per assistente "Andrea AI"</td>
+        <td>Cina (Hangzhou)</td>
+        <td><a href="https://chat.deepseek.com/downloads/DeepSeek%20Privacy%20Policy.html" target="_blank" rel="noopener">DeepSeek Privacy Policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>WhatsApp Ireland Ltd.</strong> (Meta)</td>
+        <td>Bottoni "Contatta su WhatsApp" (apertura link esterno, no embed)</td>
+        <td>Irlanda / USA</td>
+        <td><a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy-eea</a></td>
       </tr>
     </tbody>
   </table>
 
-  <p><strong>Nota:</strong> Non abbiamo controllo diretto sui cookie di terze parti. Ti invitiamo a consultare le rispettive privacy policy.</p>
+  <p><strong>Nota:</strong> il Titolare non ha controllo diretto sui cookie installati da terze parti. Per disattivarli puoi consultare le rispettive privacy policy o utilizzare gli strumenti del browser (vedi §10).</p>
 
-  <h2>4. Base Giuridica (GDPR)</h2>
+  <p><strong>Google Fonts</strong>: il Sito carica i font Jost e Source Code Pro dai server di Google. Tale richiesta comporta la trasmissione dell'IP dell'utente a Google. Per ridurre questo trasferimento, è in valutazione la migrazione a un caricamento self-hosted dei font.</p>
 
-  <ul>
-    <li><strong>Cookie Tecnici:</strong> Legittimo interesse del Titolare (Art. 6.1.f GDPR) - non richiedono consenso (Provv. Garante 229/2014)</li>
-    <li><strong>Cookie Analitici:</strong> Consenso esplicito dell'utente (Art. 6.1.a GDPR) tramite cookie banner</li>
-  </ul>
-
-  <h2>5. Come Gestiamo il Tuo Consenso</h2>
-
-  <p>All'accesso al sito, visualizzi un <strong>cookie banner</strong> che ti permette di:</p>
-  <ul>
-    <li>✅ <strong>Accettare tutti i cookie</strong> (tecnici + analitici)</li>
-    <li>❌ <strong>Rifiutare i cookie non necessari</strong> (solo tecnici, nessun tracking)</li>
-    <li>⚙️ <strong>Personalizzare le preferenze</strong> (scegliere singolarmente)</li>
-  </ul>
-
-  <p>Il tuo consenso viene memorizzato per <strong>12 mesi</strong> tramite il cookie tecnico <code>cookie_consent</code>. Puoi modificare le tue preferenze in qualsiasi momento usando il link a fondo pagina "Gestisci Cookie".</p>
-
-  <h2>6. Come Disabilitare i Cookie</h2>
-
-  <h3>6.1 Tramite il Banner del Sito</h3>
-  <p>
-    Usa il nostro cookie banner (al primo accesso) o clicca su <strong>"Gestisci Cookie"</strong> nel footer per modificare le tue preferenze.
-  </p>
-
-  <h3>6.2 Tramite le Impostazioni del Browser</h3>
-  <p>Puoi disabilitare i cookie direttamente dalle impostazioni del tuo browser:</p>
-  <ul>
-    <li><strong>Chrome:</strong> Impostazioni → Privacy e sicurezza → Cookie e altri dati dei siti</li>
-    <li><strong>Firefox:</strong> Opzioni → Privacy e sicurezza → Cookie e dati dei siti web</li>
-    <li><strong>Safari:</strong> Preferenze → Privacy → Blocca tutti i cookie</li>
-    <li><strong>Edge:</strong> Impostazioni → Cookie e autorizzazioni sito → Cookie e dati dei siti</li>
-  </ul>
-
-  <p><strong>⚠️ Attenzione:</strong> Disabilitare completamente i cookie potrebbe impedire il corretto funzionamento di alcune parti del sito (es. form multi-step).</p>
-
-  <h3>6.3 Opt-out Google Analytics</h3>
-  <p>
-    Puoi installare il componente aggiuntivo del browser per la disattivazione di Google Analytics:<br>
-    <a href="https://tools.google.com/dlpage/gaoptout" target="_blank"><strong>https://tools.google.com/dlpage/gaoptout</strong></a>
-  </p>
-
-  <h2>7. Cookie e Dispositivi Mobile</h2>
-
-  <p>Se navighi da smartphone/tablet, puoi gestire i cookie tramite:</p>
-  <ul>
-    <li><strong>iOS (Safari):</strong> Impostazioni → Safari → Privacy e sicurezza → Blocca cookie</li>
-    <li><strong>Android (Chrome):</strong> Impostazioni → Impostazioni sito → Cookie</li>
-  </ul>
-
-  <h2>8. Durata dei Cookie</h2>
-
-  <p>Esistono due categorie di durata:</p>
-  <ul>
-    <li><strong>Cookie di sessione:</strong> Si cancellano automaticamente quando chiudi il browser (es. <code>PHPSESSID</code>)</li>
-    <li><strong>Cookie persistenti:</strong> Rimangono sul dispositivo per un periodo definito (es. <code>_ga</code> per 2 anni, <code>cookie_consent</code> per 12 mesi)</li>
-  </ul>
-
-  <h2>9. Aggiornamenti alla Cookie Policy</h2>
+  <h2 id="sez-5">5. Tecnologie di Archiviazione Locale (localStorage)</h2>
 
   <p>
-    Questa Cookie Policy può essere aggiornata periodicamente. Le modifiche saranno pubblicate su questa pagina con aggiornamento della data. Ti invitiamo a consultarla regolarmente.
+    Il Sito utilizza il meccanismo <strong>localStorage</strong> del browser (che, a differenza dei cookie, non viene mai trasmesso al server del Titolare) per salvare preferenze e dati funzionali. I dati restano sul tuo dispositivo finché non vengono cancellati manualmente o tramite la pulizia dei dati di navigazione del browser.
   </p>
 
-  <h2>10. Contatti</h2>
+  <table class="table table-bordered">
+    <thead style="background: #149dcc; color: white;">
+      <tr>
+        <th>Chiave</th>
+        <th>Categoria</th>
+        <th>Contenuto</th>
+        <th>Durata</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>darkMode</code></td>
+        <td>Preferenza UI – Tecnico</td>
+        <td>Stato del tema scuro/chiaro selezionato dall'utente</td>
+        <td>Persistente fino a cancellazione</td>
+      </tr>
+      <tr>
+        <td><code>andreaAiConsent</code></td>
+        <td>Consenso – Tecnico</td>
+        <td>Consenso prestato per l'utilizzo del chatbot AI: <code>{granted, version, timestamp}</code></td>
+        <td>Persistente fino a revoca</td>
+      </tr>
+      <tr>
+        <td><code>andreaAiHistory</code></td>
+        <td>Funzionale chatbot</td>
+        <td>Cronologia degli ultimi 20 messaggi della conversazione con Andrea AI (testo e ruolo)</td>
+        <td>Persistente fino a "Ricomincia" o pulizia dati</td>
+      </tr>
+      <tr>
+        <td><code>andreaAiRate</code></td>
+        <td>Sicurezza – Anti-abuso</td>
+        <td>Contatore richieste API al chatbot per applicare il rate-limit di 30 messaggi/ora</td>
+        <td>1 ora (rolling window)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <strong>Importante:</strong> i dati salvati in localStorage <strong>non vengono mai inviati al server del Titolare</strong>. L'unica eccezione è il contenuto della chiave <code>andreaAiHistory</code>, che viene trasmesso all'API DeepSeek (Cina) ad ogni nuova richiesta del chatbot, esclusivamente come contesto della conversazione e solo dopo aver prestato il consenso esplicito tramite la checkbox "Accetto la Privacy Policy".
+  </p>
+
+  <h2 id="sez-6">6. Assistente AI "Andrea AI" (Chatbot DeepSeek)</h2>
+
+  <div class="warning-box">
+    <p><strong>Tracciamento AI:</strong> il Sito integra un assistente conversazionale denominato "Andrea AI", basato sul modello <strong>deepseek-chat</strong> di DeepSeek (sede in Cina). L'utilizzo è <strong>facoltativo</strong> e <strong>subordinato al consenso esplicito</strong> dell'utente prestato tramite checkbox dedicata.</p>
+  </div>
+
+  <h3>6.1 Funzionamento</h3>
+  <ul>
+    <li>Alla prima apertura del widget, viene mostrata una <strong>schermata di consenso</strong> con checkbox "Accetto la <a href="privacy-policy.html">Privacy Policy</a>". Senza spunta, l'input è disabilitato e nessun dato viene trasmesso a DeepSeek.</li>
+    <li>Una volta accettato, viene salvato in localStorage il record <code>andreaAiConsent</code> (vedi §5).</li>
+    <li>Ogni messaggio inviato al chatbot viene trasmesso, insieme alla cronologia recente (massimo 20 messaggi), all'API DeepSeek.</li>
+    <li>Le risposte sono generate dal modello e visualizzate al ritorno della richiesta.</li>
+  </ul>
+
+  <h3>6.2 Cosa NON viene fatto</h3>
+  <ul>
+    <li>❌ <strong>Nessun log delle conversazioni viene memorizzato sul server del Titolare</strong> (le richieste vanno direttamente dal browser dell'utente all'API DeepSeek).</li>
+    <li>❌ Nessuna profilazione comportamentale né decisione automatizzata vincolante (vedi §10 della <a href="privacy-policy.html">Privacy Policy</a>).</li>
+    <li>❌ Nessun cookie di tracciamento è installato dal widget.</li>
+  </ul>
+
+  <p>Per una descrizione esaustiva del trattamento operato dal chatbot AI, consulta la <a href="privacy-policy.html#sez-5"><strong>Sezione 5 della Privacy Policy</strong></a>.</p>
+
+  <h2 id="sez-7">7. Trasferimenti di Dati Extra-UE</h2>
+
+  <p>L'utilizzo del Sito comporta il trasferimento di alcuni dati al di fuori dello Spazio Economico Europeo (SEE):</p>
+
+  <h4>7.1 Stati Uniti</h4>
+  <p>Per i fornitori USA (Vercel, Google, Formspree, Meta), il trasferimento è basato su:</p>
+  <ul>
+    <li>✓ <strong>EU-US Data Privacy Framework</strong> (Decisione di adeguatezza UE 2023/1795) per i fornitori certificati;</li>
+    <li>✓ <strong>Clausole Contrattuali Standard</strong> (Decisione UE 2021/914) ove applicabili;</li>
+    <li>✓ Misure supplementari secondo la giurisprudenza <em>Schrems II</em> (CGUE C-311/18).</li>
+  </ul>
+
+  <h4>7.2 Cina (DeepSeek – Andrea AI)</h4>
+  <div class="danger-box">
+    <p><strong>⚠️ Avviso:</strong> i messaggi inviati al chatbot Andrea AI sono trasferiti su <strong>server in Cina</strong>, paese che <strong>non gode di una decisione di adeguatezza</strong> ai sensi dell'Art. 45 GDPR.</p>
+    <p>Il trasferimento si fonda sul <strong>consenso esplicito dell'utente</strong> (Art. 49.1.a GDPR) prestato tramite la checkbox di accettazione della Privacy Policy prima dell'utilizzo del chatbot.</p>
+    <p><strong>Si raccomanda di NON inserire nella chat dati sensibili</strong> (salute, opinioni politiche/religiose, dati giudiziari, credenziali, codici fiscali, documenti d'identità, segreti commerciali).</p>
+  </div>
+
+  <p>Per ulteriori dettagli vedi <a href="privacy-policy.html#sez-8">§8 della Privacy Policy</a>.</p>
+
+  <h2 id="sez-8">8. Base Giuridica del Trattamento</h2>
+
+  <table class="table table-bordered">
+    <thead style="background: #149dcc; color: white;">
+      <tr>
+        <th>Categoria</th>
+        <th>Base giuridica</th>
+        <th>Necessario consenso?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cookie tecnici (es. <code>cookie_consent</code>)</td>
+        <td>Legittimo interesse (Art. 6.1.f GDPR) + Art. 122 Codice Privacy</td>
+        <td>NO (Provv. Garante 229/2014)</td>
+      </tr>
+      <tr>
+        <td>localStorage tecnico (es. <code>darkMode</code>, <code>andreaAiConsent</code>, <code>andreaAiRate</code>)</td>
+        <td>Legittimo interesse (Art. 6.1.f) – funzionamento del Sito</td>
+        <td>NO</td>
+      </tr>
+      <tr>
+        <td>Cookie analitici Google Analytics</td>
+        <td>Consenso esplicito (Art. 6.1.a GDPR)</td>
+        <td>SÌ (cookie banner)</td>
+      </tr>
+      <tr>
+        <td>Chatbot Andrea AI (<code>andreaAiHistory</code> + invio API DeepSeek)</td>
+        <td>Esecuzione misure precontrattuali (Art. 6.1.b) + Consenso esplicito per trasferimento extra-UE (Art. 49.1.a)</td>
+        <td>SÌ (checkbox dedicata)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="sez-9">9. Gestione del Consenso</h2>
+
+  <h3>9.1 Cookie banner</h3>
+  <p>All'accesso al Sito, viene visualizzato un <strong>cookie banner</strong> che ti permette di:</p>
+  <ul>
+    <li>✅ <strong>Accettare tutti i cookie</strong> (tecnici + analitici);</li>
+    <li>❌ <strong>Solo Necessari</strong> (rifiuta gli analitici, mantiene solo i tecnici).</li>
+  </ul>
+
+  <p>Il banner è strutturato secondo le <strong>linee guida del Garante Privacy (10/06/2021)</strong>:</p>
+  <ul>
+    <li>✓ Pulsanti "Accetta" e "Rifiuta" hanno pari evidenza grafica e sono allo stesso livello di visibilità;</li>
+    <li>✓ La chiusura del banner senza scelta NON equivale ad accettazione;</li>
+    <li>✓ Il consenso è registrato con timestamp ISO ed è facilmente revocabile;</li>
+    <li>✓ Lo scroll della pagina NON viene interpretato come consenso.</li>
+  </ul>
+
+  <p>Il consenso viene memorizzato per <strong>12 mesi</strong> (durata massima consigliata dal Garante: 6 mesi rinnovabili) tramite il cookie tecnico <code>cookie_consent</code>. Trascorsi i 12 mesi, il banner riapparirà per richiedere un nuovo consenso.</p>
+
+  <h3>9.2 Consenso AI (separato e specifico)</h3>
+  <p>L'utilizzo del chatbot Andrea AI richiede un <strong>consenso separato e specifico</strong>, prestato tramite checkbox al primo utilizzo del widget. Questo consenso è indipendente da quello dei cookie analitici: puoi rifiutare gli analitici e accettare l'AI, o viceversa.</p>
+
+  <h2 id="sez-10">10. Come Disabilitare Cookie e Archiviazione Locale</h2>
+
+  <h3>10.1 Tramite il banner del Sito</h3>
+  <p>Al primo accesso usa il pulsante "<strong>Solo Necessari</strong>" del cookie banner. Per modificare le scelte successivamente, clicca sul link "<strong>Gestisci Cookie</strong>" nel footer del Sito (oppure cancella il cookie <code>cookie_consent</code> dal browser per far riapparire il banner).</p>
+
+  <h3>10.2 Per il chatbot AI</h3>
+  <p>Per revocare il consenso al chatbot Andrea AI:</p>
+  <ul>
+    <li>Cancella i dati del sito dal browser (rimuove <code>andreaAiConsent</code>, <code>andreaAiHistory</code>, <code>andreaAiRate</code>);</li>
+    <li>Oppure usa il pulsante "Ricomincia" nell'header della chat (cancella solo la cronologia, non il consenso);</li>
+    <li>Naviga in modalità incognito per impedire qualsiasi persistenza locale.</li>
+  </ul>
+
+  <h3>10.3 Tramite le impostazioni del browser</h3>
+  <p>Puoi disabilitare cookie e archiviazione locale direttamente dal tuo browser:</p>
+  <ul>
+    <li><strong>Chrome:</strong> Impostazioni → Privacy e sicurezza → Cookie e altri dati dei siti → <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">guida Google</a></li>
+    <li><strong>Firefox:</strong> Impostazioni → Privacy e sicurezza → Cookie e dati dei siti web → <a href="https://support.mozilla.org/it/kb/Eliminare%20i%20cookie" target="_blank" rel="noopener">guida Mozilla</a></li>
+    <li><strong>Safari (macOS):</strong> Preferenze → Privacy → Gestisci dati siti web → <a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener">guida Apple</a></li>
+    <li><strong>Edge:</strong> Impostazioni → Cookie e autorizzazioni sito → <a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">guida Microsoft</a></li>
+    <li><strong>Brave / Opera / altri browser Chromium:</strong> simile a Chrome.</li>
+  </ul>
+
+  <p><strong>⚠️ Attenzione:</strong> disabilitare completamente cookie e localStorage potrebbe impedire alcune funzionalità (es. memorizzazione preferenze, dark mode, banner cookie ricorrente ad ogni visita).</p>
+
+  <h3>10.4 Da dispositivo mobile</h3>
+  <ul>
+    <li><strong>iOS Safari:</strong> Impostazioni → Safari → Privacy e sicurezza → Blocca tutti i cookie</li>
+    <li><strong>Android Chrome:</strong> Impostazioni → Impostazioni sito → Cookie</li>
+  </ul>
+
+  <h3>10.5 Opt-out specifico Google Analytics</h3>
+  <p>Per disattivare globalmente Google Analytics su tutti i siti, installa il componente aggiuntivo ufficiale: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener"><strong>tools.google.com/dlpage/gaoptout</strong></a></p>
+
+  <h3>10.6 Modalità Do Not Track / Global Privacy Control</h3>
+  <p>Il Sito attualmente non interpreta automaticamente i segnali <em>Do Not Track</em> (DNT) o <em>Global Privacy Control</em> (GPC) inviati dal browser, in attesa di indicazioni più stabili da parte delle Autorità europee. Puoi comunque esprimere le tue preferenze tramite il cookie banner come descritto sopra.</p>
+
+  <h2 id="sez-11">11. Durata e Conservazione</h2>
+
+  <p>Esistono diverse durate per i cookie e le tecnologie similari utilizzati:</p>
+  <ul>
+    <li><strong>Cookie di sessione:</strong> si cancellano automaticamente alla chiusura del browser;</li>
+    <li><strong>Cookie persistenti:</strong> rimangono per il periodo definito (vedi tabelle §2-§3);</li>
+    <li><strong>localStorage:</strong> persistente fino a cancellazione manuale o pulizia dati del browser (vedi §5).</li>
+  </ul>
+
+  <p>Le durate massime applicate sono coerenti con il principio di <strong>limitazione della conservazione</strong> (Art. 5.1.e GDPR): non superano quanto strettamente necessario alla finalità per cui i dati sono raccolti.</p>
+
+  <h2 id="sez-12">12. Diritti dell'Interessato</h2>
+
+  <p>In qualità di interessato, hai diritto a:</p>
+  <ul>
+    <li><strong>Accesso</strong> ai dati raccolti tramite cookie e tecnologie similari (Art. 15 GDPR);</li>
+    <li><strong>Rettifica</strong> di dati inesatti (Art. 16);</li>
+    <li><strong>Cancellazione</strong> dei dati ("diritto all'oblio", Art. 17);</li>
+    <li><strong>Limitazione</strong> del trattamento (Art. 18);</li>
+    <li><strong>Portabilità</strong> dei dati (Art. 20);</li>
+    <li><strong>Opposizione</strong> al trattamento basato su legittimo interesse (Art. 21);</li>
+    <li><strong>Revoca del consenso</strong> in qualsiasi momento (Art. 7.3);</li>
+    <li><strong>Reclamo al Garante Privacy</strong> (Art. 77).</li>
+  </ul>
+
+  <p>Per esercitare i tuoi diritti, scrivi a <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a>. Risposta entro 30 giorni (Art. 12.3 GDPR). Per il dettaglio completo dei diritti, consulta <a href="privacy-policy.html#sez-9">§9 della Privacy Policy</a>.</p>
+
+  <h2 id="sez-13">13. Aggiornamenti alla Cookie Policy</h2>
+
+  <p>Questa Cookie Policy può essere aggiornata periodicamente per:</p>
+  <ul>
+    <li>Conformità a nuove disposizioni normative (UE, italiane);</li>
+    <li>Modifiche ai cookie utilizzati o ai fornitori esterni;</li>
+    <li>Recepimento di nuove linee guida del Garante Privacy o dell'EDPB;</li>
+    <li>Aggiunta o rimozione di tecnologie integrate sul Sito.</li>
+  </ul>
+
+  <p>La data di "Ultimo aggiornamento" in alto è indicativa della versione vigente. Le modifiche sostanziali (introduzione di nuovi cookie analitici/profilazione) saranno comunicate tramite ripresentazione del cookie banner per richiedere un nuovo consenso.</p>
+
+  <h2 id="sez-14">14. Contatti</h2>
 
   <div class="info-box">
     <p><strong>Per domande su questa Cookie Policy o per esercitare i tuoi diritti:</strong></p>
     <p>
-      <strong>Andrea Piani</strong><br>
+      <strong>Andrea Piani</strong> – Titolare del Trattamento<br>
       Email: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a><br>
-      Telefono: <a href="tel:+393516248936">+39 351 624 8936</a>
+      Telefono / WhatsApp: <a href="tel:+393516248936">+39 351 624 8936</a><br>
+      Sede operativa Italia: Piazza della Repubblica, 19 – 20124 Milano (MI)
     </p>
-    <p>Per informazioni sulla protezione dei dati personali, consulta la nostra <a href="privacy-policy.html"><strong>Privacy Policy</strong></a>.</p>
+    <p>Per il quadro completo sul trattamento dei dati personali, consulta la nostra <a href="privacy-policy.html"><strong>Privacy Policy</strong></a>.</p>
+  </div>
+
+  <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
+    <p><strong>Autorità di Controllo:</strong></p>
+    <p>
+      <strong>Garante per la Protezione dei Dati Personali</strong><br>
+      Piazza Venezia 11, 00187 Roma<br>
+      Sito web: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a><br>
+      Email: <a href="mailto:protocollo@gpdp.it">protocollo@gpdp.it</a>
+    </p>
   </div>
 
   <a href="index.html" class="back-link">← Torna alla Homepage</a>

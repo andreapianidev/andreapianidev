@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy | Andrea Piani - Sviluppatore iOS e PrestaShop</title>
-  <meta name="description" content="Privacy Policy del sito andreapiani.com: finalità del trattamento, tipi di dati raccolti, cookie, diritti dell'utente ai sensi del GDPR e contatti del titolare Andrea Piani.">
+  <meta name="description" content="Privacy Policy del sito andreapiani.com: finalità del trattamento, tipi di dati raccolti, cookie, assistente AI Andrea AI (DeepSeek), trasferimenti extra-UE, diritti dell'utente ai sensi del GDPR e contatti del titolare Andrea Piani.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.andreapiani.com/privacy-policy.html" />
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -39,6 +39,12 @@
       margin-top: 2rem;
       margin-bottom: 0.8rem;
     }
+    h4 {
+      color: #444;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
     .info-box {
       background: #f0f8ff;
       border-left: 4px solid #149dcc;
@@ -48,8 +54,43 @@
     .info-box strong {
       color: #149dcc;
     }
+    .warning-box {
+      background: #fff8e1;
+      border-left: 4px solid #f9a825;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .warning-box strong {
+      color: #b26a00;
+    }
+    .danger-box {
+      background: #ffebee;
+      border-left: 4px solid #c62828;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .danger-box strong {
+      color: #b71c1c;
+    }
     table {
       margin: 2rem 0;
+      width: 100%;
+    }
+    .toc {
+      background: #f8f9fa;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .toc ol {
+      margin-bottom: 0;
+    }
+    .toc a {
+      color: #149dcc;
+      text-decoration: none;
+    }
+    .toc a:hover {
+      text-decoration: underline;
     }
     .back-link {
       display: inline-block;
@@ -61,6 +102,13 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      color: #c7254e;
+    }
   </style>
 </head>
 <body>
@@ -69,151 +117,374 @@
 
   <h1>Privacy Policy</h1>
 
-  <p><strong>Ultimo aggiornamento:</strong> 11 Ottobre 2025</p>
+  <p><strong>Ultimo aggiornamento:</strong> 25 Aprile 2026<br>
+     <strong>Versione:</strong> 3.0<br>
+     <strong>Versione precedente:</strong> 11 Ottobre 2025</p>
 
   <div class="info-box">
     <p><strong>Titolare del Trattamento dei Dati:</strong></p>
     <p>
-      <strong>Andrea Piani</strong><br>
-      Italia: Piazza della Repubblica, 19 20124 Milano (MI)<br>
-      Spagna: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife<br>
+      <strong>Andrea Piani</strong> (Ditta individuale)<br>
+      Sede operativa Italia: Piazza della Repubblica, 19 - 20124 Milano (MI)<br>
+      Sede operativa Spagna: Camino El Pinar 106, Tijarafe - 38780 Santa Cruz de Tenerife<br>
       Email: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a><br>
-      Telefono: <a href="tel:+393516248936">+39 351 624 8936</a>
+      PEC / Email certificata: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a><br>
+      Telefono / WhatsApp: <a href="tel:+393516248936">+39 351 624 8936</a>
     </p>
   </div>
 
   <p>
-    Questa Privacy Policy descrive le modalità con cui il sito <strong>www.andreapiani.com</strong> (di seguito "Sito") raccoglie, utilizza e protegge i dati personali degli utenti, in conformità con il <strong>Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679)</strong> e il <strong>Codice della Privacy italiano (D.Lgs. 196/2003 e successive modifiche)</strong>.
+    La presente Privacy Policy descrive le modalità con cui il sito <strong>www.andreapiani.com</strong> (di seguito "Sito") raccoglie, utilizza, conserva e protegge i dati personali degli utenti, in conformità con:
   </p>
-
-  <h2>1. Tipologie di Dati Raccolti</h2>
-
-  <p>Il Titolare raccoglie le seguenti tipologie di dati personali:</p>
-
-  <h3>1.1 Dati Forniti Volontariamente dall'Utente</h3>
-  <p>Quando compili i form di contatto o richiesta preventivo sul Sito, raccogliamo:</p>
   <ul>
-    <li><strong>Nome e Cognome</strong></li>
-    <li><strong>Email</strong></li>
-    <li><strong>Numero di telefono</strong> (opzionale)</li>
-    <li><strong>Azienda/Società</strong> (opzionale)</li>
-    <li><strong>Descrizione del progetto</strong> e altre informazioni tecniche fornite nei form</li>
+    <li><strong>Regolamento (UE) 2016/679</strong> ("GDPR") relativo alla protezione delle persone fisiche con riguardo al trattamento dei dati personali;</li>
+    <li><strong>D.Lgs. 196/2003</strong> ("Codice della Privacy") come modificato dal D.Lgs. 101/2018;</li>
+    <li><strong>Direttiva ePrivacy 2002/58/CE</strong> e relative linee guida del Garante Privacy in materia di cookie (Provv. 10 giugno 2021);</li>
+    <li><strong>Regolamento (UE) 2024/1689</strong> ("AI Act") in materia di intelligenza artificiale, per quanto applicabile all'assistente AI presente sul Sito;</li>
+    <li><strong>Regolamento (UE) 2022/2065</strong> ("Digital Services Act") per gli obblighi di trasparenza dei servizi digitali.</li>
   </ul>
 
-  <h3>1.2 Dati di Navigazione (Cookie Tecnici)</h3>
-  <p>Durante la navigazione, il Sito raccoglie automaticamente:</p>
-  <ul>
-    <li><strong>Indirizzo IP</strong></li>
-    <li><strong>Tipo di browser</strong> e dispositivo utilizzato</li>
-    <li><strong>Pagine visitate</strong> e tempo di permanenza</li>
-    <li><strong>Sistema operativo</strong></li>
-    <li><strong>Referrer</strong> (sito da cui provieni)</li>
-  </ul>
-  <p>Questi dati sono raccolti in forma aggregata e anonima per finalità statistiche.</p>
+  <div class="toc">
+    <strong>Indice</strong>
+    <ol>
+      <li><a href="#sez-1">Definizioni</a></li>
+      <li><a href="#sez-2">Tipologie di dati raccolti</a></li>
+      <li><a href="#sez-3">Finalità del trattamento e base giuridica</a></li>
+      <li><a href="#sez-4">Modalità di trattamento e tempi di conservazione</a></li>
+      <li><a href="#sez-5">Assistente AI "Andrea AI" (DeepSeek)</a></li>
+      <li><a href="#sez-6">Cookie e tecnologie di archiviazione locale</a></li>
+      <li><a href="#sez-7">Comunicazione, destinatari e responsabili esterni</a></li>
+      <li><a href="#sez-8">Trasferimenti di dati extra-UE</a></li>
+      <li><a href="#sez-9">Diritti dell'interessato</a></li>
+      <li><a href="#sez-10">Decisioni automatizzate e profilazione</a></li>
+      <li><a href="#sez-11">Sicurezza dei dati e Data Breach</a></li>
+      <li><a href="#sez-12">Minori</a></li>
+      <li><a href="#sez-13">Modifiche alla Privacy Policy</a></li>
+      <li><a href="#sez-14">Contatti, reclami e Autorità di Controllo</a></li>
+    </ol>
+  </div>
 
-  <h3>1.3 Cookie e Tecnologie di Tracciamento</h3>
-  <p>Il Sito utilizza:</p>
-  <ul>
-    <li><strong>Cookie tecnici necessari:</strong> per il funzionamento del sito (memorizzazione consensi, sessioni)</li>
-    <li><strong>Cookie analitici:</strong> Google Analytics per statistiche anonime sul traffico (solo con consenso)</li>
-  </ul>
-  <p>Per maggiori dettagli, consulta la nostra <a href="cookie-policy.html">Cookie Policy</a>.</p>
+  <h2 id="sez-1">1. Definizioni</h2>
 
-  <h2>2. Finalità del Trattamento e Base Giuridica</h2>
+  <p>Ai fini della presente informativa si intende per:</p>
+  <ul>
+    <li><strong>Dato personale</strong>: qualsiasi informazione riguardante una persona fisica identificata o identificabile (Art. 4.1 GDPR).</li>
+    <li><strong>Trattamento</strong>: qualsiasi operazione effettuata su dati personali (raccolta, registrazione, organizzazione, conservazione, consultazione, uso, comunicazione, cancellazione, ecc.).</li>
+    <li><strong>Titolare del Trattamento</strong>: la persona fisica o giuridica che determina finalità e mezzi del trattamento. In questo caso: Andrea Piani.</li>
+    <li><strong>Responsabile del Trattamento</strong>: il fornitore esterno che tratta i dati per conto del Titolare (es. hosting provider, Formspree, Google).</li>
+    <li><strong>Interessato</strong>: la persona fisica cui si riferiscono i dati personali (l'utente del Sito).</li>
+    <li><strong>Consenso</strong>: manifestazione di volontà libera, specifica, informata e inequivocabile.</li>
+    <li><strong>Profilazione</strong>: qualsiasi forma di trattamento automatizzato volto a valutare aspetti personali (Art. 4.4 GDPR).</li>
+    <li><strong>Sistema di IA</strong>: sistema basato su macchine progettato per operare con livelli di autonomia variabili (Art. 3 AI Act).</li>
+  </ul>
+
+  <h2 id="sez-2">2. Tipologie di Dati Raccolti</h2>
+
+  <h3>2.1 Dati Forniti Volontariamente dall'Utente</h3>
+  <p>Quando compili form di contatto, richiesta preventivo o ti iscrivi a comunicazioni sul Sito, possono essere raccolti:</p>
+  <ul>
+    <li><strong>Nome e cognome</strong> (obbligatorio)</li>
+    <li><strong>Indirizzo email</strong> (obbligatorio)</li>
+    <li><strong>Numero di telefono</strong> con prefisso internazionale (obbligatorio per il form preventivo dal 31/03/2026, opzionale negli altri form)</li>
+    <li><strong>Azienda / Partita IVA</strong> (opzionale)</li>
+    <li><strong>Descrizione del progetto</strong> e altre informazioni tecniche (obbligatorio nei form preventivo)</li>
+    <li><strong>Eventuali allegati</strong> caricati dall'utente</li>
+    <li><strong>Contenuti della conversazione</strong> con l'assistente AI "Andrea AI" (vedi §5)</li>
+  </ul>
+
+  <h3>2.2 Dati Raccolti Automaticamente Durante la Navigazione</h3>
+  <p>Durante la navigazione, il Sito e i fornitori terzi raccolgono automaticamente:</p>
+  <ul>
+    <li><strong>Indirizzo IP</strong> (anonimizzato per finalità statistiche, in chiaro nei log di sicurezza)</li>
+    <li><strong>User Agent</strong>: tipo di browser, versione, dispositivo, sistema operativo</li>
+    <li><strong>Pagine visitate</strong>, ora di accesso, tempo di permanenza, percorso di navigazione</li>
+    <li><strong>Referrer</strong> (sito di provenienza)</li>
+    <li><strong>Risoluzione schermo e lingua del browser</strong></li>
+    <li><strong>Log server</strong>: richieste HTTP, codici di risposta, dimensione delle risposte</li>
+  </ul>
+
+  <h3>2.3 Dati Generati dall'Interazione con l'Assistente AI</h3>
+  <p>Se utilizzi il widget "Andrea AI" presente in basso a destra sul Sito, vengono trattati:</p>
+  <ul>
+    <li><strong>Testo dei messaggi inviati</strong></li>
+    <li><strong>Risposte generate dal modello</strong></li>
+    <li><strong>Cronologia conversazione</strong> (massimo 20 messaggi, salvati in <code>localStorage</code> sul tuo dispositivo)</li>
+    <li><strong>Dati tecnici di rate-limiting</strong> (numero richieste/ora, salvati in <code>localStorage</code>)</li>
+    <li><strong>Eventuali dati personali che inserisci spontaneamente nel testo</strong> (nome, email, dettagli del progetto, ecc.)</li>
+  </ul>
+  <p>Vedi sezione <a href="#sez-5">§5 dedicata all'assistente AI</a> per dettagli completi.</p>
+
+  <h3>2.4 Dati di Archiviazione Locale (localStorage / sessionStorage)</h3>
+  <p>Il Sito utilizza meccanismi di archiviazione locale del browser (non cookie tradizionali) per salvare:</p>
+  <ul>
+    <li><code>andreaAiHistory</code> – cronologia conversazione AI (durata: fino a cancellazione manuale o reset del browser)</li>
+    <li><code>andreaAiRate</code> – contatore richieste API per anti-abuso (durata: 1 ora)</li>
+    <li><code>andreaAiConsent</code> – consenso prestato per l'uso del chatbot AI con relativo timestamp e versione (durata: persistente fino a revoca)</li>
+    <li><code>darkMode</code> – preferenza tema scuro/chiaro (durata: persistente)</li>
+  </ul>
+  <p>Questi dati restano sul tuo dispositivo e non sono mai inviati al Titolare, salvo i contenuti delle conversazioni AI che transitano sui server DeepSeek (vedi §5 e §8).</p>
+
+  <h2 id="sez-3">3. Finalità del Trattamento e Base Giuridica</h2>
 
   <table class="table table-bordered">
     <thead style="background: #149dcc; color: white;">
       <tr>
         <th>Finalità</th>
-        <th>Base Giuridica (GDPR)</th>
-        <th>Durata Conservazione</th>
+        <th>Base giuridica (GDPR)</th>
+        <th>Conservazione</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Rispondere a richieste di preventivo/contatto</strong></td>
-        <td>Esecuzione di misure precontrattuali (Art. 6.1.b GDPR)</td>
-        <td>12 mesi dalla richiesta</td>
+        <td><strong>Risposta a richieste di preventivo / contatto commerciale</strong></td>
+        <td>Esecuzione di misure precontrattuali su richiesta dell'interessato (Art. 6.1.b)</td>
+        <td>24 mesi dall'ultimo contatto, salvo conclusione contratto</td>
       </tr>
       <tr>
-        <td><strong>Invio comunicazioni commerciali/newsletter</strong></td>
-        <td>Consenso esplicito (Art. 6.1.a GDPR)</td>
-        <td>Fino a revoca consenso</td>
+        <td><strong>Esecuzione di contratti di servizio</strong></td>
+        <td>Esecuzione del contratto (Art. 6.1.b)</td>
+        <td>10 anni dalla conclusione (obblighi civilistici e fiscali)</td>
       </tr>
       <tr>
-        <td><strong>Adempimenti fiscali e contabili</strong></td>
-        <td>Obbligo legale (Art. 6.1.c GDPR)</td>
-        <td>10 anni (obbligo fiscale)</td>
+        <td><strong>Adempimenti fiscali, contabili e antiriciclaggio</strong></td>
+        <td>Obbligo legale (Art. 6.1.c) – DPR 633/1972, D.Lgs. 231/2007</td>
+        <td>10 anni dall'ultimo documento fiscale</td>
       </tr>
       <tr>
-        <td><strong>Statistiche anonime traffico (Analytics)</strong></td>
-        <td>Legittimo interesse (Art. 6.1.f GDPR) con consenso cookie</td>
-        <td>26 mesi (Google Analytics)</td>
+        <td><strong>Invio newsletter e comunicazioni commerciali</strong></td>
+        <td>Consenso esplicito e revocabile (Art. 6.1.a, Art. 7)</td>
+        <td>Fino a revoca del consenso</td>
       </tr>
       <tr>
-        <td><strong>Sicurezza del sito e prevenzione abusi</strong></td>
-        <td>Legittimo interesse (Art. 6.1.f GDPR)</td>
+        <td><strong>Statistiche aggregate sul traffico (Analytics)</strong></td>
+        <td>Consenso (Art. 6.1.a) per cookie analitici di terze parti</td>
+        <td>Massimo 26 mesi (Google Analytics)</td>
+      </tr>
+      <tr>
+        <td><strong>Funzionamento dell'assistente AI "Andrea AI"</strong></td>
+        <td>Esecuzione di misure precontrattuali su richiesta dell'utente (Art. 6.1.b) e legittimo interesse alla qualificazione dei lead (Art. 6.1.f)</td>
+        <td>Cronologia conversazione: solo lato client (vedi §5). Log API DeepSeek: vedi loro privacy</td>
+      </tr>
+      <tr>
+        <td><strong>Sicurezza del Sito, prevenzione abusi e attacchi</strong></td>
+        <td>Legittimo interesse (Art. 6.1.f) – CONSIDERANDO 49 GDPR</td>
         <td>12 mesi (log server)</td>
+      </tr>
+      <tr>
+        <td><strong>Difesa in giudizio e accertamento responsabilità</strong></td>
+        <td>Legittimo interesse (Art. 6.1.f) o obbligo legale</td>
+        <td>Fino al termine prescrizione (max 10 anni)</td>
+      </tr>
+      <tr>
+        <td><strong>Adempimento richieste di esercizio diritti GDPR</strong></td>
+        <td>Obbligo legale (Art. 6.1.c)</td>
+        <td>5 anni dalla risposta (per prova adempimento)</td>
       </tr>
     </tbody>
   </table>
 
-  <h2>3. Modalità di Trattamento</h2>
+  <h2 id="sez-4">4. Modalità di Trattamento e Tempi di Conservazione</h2>
 
-  <p>I dati personali sono trattati con strumenti informatici e telematici, nel rispetto delle misure di sicurezza previste dal GDPR. Il trattamento è effettuato:</p>
+  <p>I dati personali sono trattati con strumenti informatici e telematici, prevalentemente in modalità automatizzata, per il tempo strettamente necessario alle finalità per cui sono stati raccolti. Il trattamento è effettuato:</p>
   <ul>
-    <li>✓ Con modalità prevalentemente automatizzate</li>
-    <li>✓ Per il tempo strettamente necessario alle finalità per cui sono stati raccolti</li>
-    <li>✓ Con accesso limitato solo al Titolare e ai responsabili del trattamento autorizzati</li>
-    <li>✓ Adottando misure di sicurezza tecniche e organizzative adeguate (crittografia HTTPS, backup, firewall)</li>
+    <li>✓ Con accesso limitato al solo Titolare e ai responsabili autorizzati;</li>
+    <li>✓ Adottando misure di sicurezza tecniche e organizzative adeguate (vedi §11);</li>
+    <li>✓ Nel rispetto del principio di <strong>minimizzazione</strong> (Art. 5.1.c GDPR): raccogliamo solo i dati necessari;</li>
+    <li>✓ Nel rispetto del principio di <strong>limitazione della conservazione</strong> (Art. 5.1.e GDPR): cancellazione alla scadenza dei termini indicati in tabella §3.</li>
   </ul>
 
-  <h2>4. Comunicazione e Diffusione dei Dati</h2>
+  <p>Decorsi i termini di conservazione, i dati saranno cancellati o resi anonimi in modo irreversibile, salvo eventuali obblighi di legge ulteriori o esigenze di difesa in giudizio.</p>
 
-  <h3>4.1 Destinatari dei Dati</h3>
-  <p>I tuoi dati personali possono essere comunicati a:</p>
+  <h2 id="sez-5">5. Assistente AI "Andrea AI" (Chatbot DeepSeek)</h2>
+
+  <div class="warning-box">
+    <p><strong>Informativa specifica:</strong> il Sito integra un assistente AI conversazionale denominato <strong>"Andrea AI"</strong>, accessibile tramite il pulsante flottante in basso a destra. L'assistente è alimentato da un modello di linguaggio di grandi dimensioni (LLM) di terza parte e tratta i tuoi messaggi come descritto di seguito. <strong>L'utilizzo dell'assistente è del tutto facoltativo.</strong></p>
+  </div>
+
+  <h3>5.1 Fornitore del modello AI</h3>
+  <p>L'assistente Andrea AI utilizza il modello <strong>"deepseek-chat"</strong> fornito da:</p>
   <ul>
-    <li><strong>Formspree Inc.</strong> - Servizio di gestione form (USA) - <a href="https://formspree.io/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
-    <li><strong>Google LLC</strong> - Google Analytics per statistiche (USA) - <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-    <li><strong>Fornitori hosting</strong> - Server e infrastruttura tecnica del sito</li>
-    <li><strong>Commercialista/consulenti fiscali</strong> - Solo per adempimenti contrattuali/fiscali</li>
+    <li><strong>Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd.</strong> ("DeepSeek")</li>
+    <li>Sede legale: Repubblica Popolare Cinese</li>
+    <li>Endpoint API: <code>https://api.deepseek.com/chat/completions</code></li>
+    <li>Privacy Policy DeepSeek: <a href="https://chat.deepseek.com/downloads/DeepSeek%20Privacy%20Policy.html" target="_blank" rel="noopener">https://chat.deepseek.com/downloads/DeepSeek Privacy Policy.html</a></li>
   </ul>
-  <p><strong>Trasferimenti extra-UE:</strong> Alcuni fornitori (Formspree, Google) sono basati negli USA. Il trasferimento avviene tramite:</p>
+
+  <h3>5.2 Quali dati vengono trattati</h3>
   <ul>
-    <li>✓ Clausole contrattuali standard approvate dalla Commissione Europea</li>
-    <li>✓ Garanzie adeguate previste dagli Art. 44-49 GDPR</li>
+    <li><strong>Testo dei messaggi che invii</strong> al chatbot (può contenere dati personali se li inserisci);</li>
+    <li><strong>Cronologia della conversazione corrente</strong> (max 20 messaggi inviati al modello come contesto);</li>
+    <li><strong>Risposte generate</strong> dal modello;</li>
+    <li><strong>Metadati tecnici della richiesta API</strong>: indirizzo IP del tuo dispositivo (visibile a DeepSeek), timestamp, user agent.</li>
   </ul>
 
-  <h3>4.2 Nessuna Diffusione Pubblica</h3>
-  <p>I tuoi dati personali <strong>non saranno mai diffusi pubblicamente</strong> né venduti a terze parti per finalità commerciali.</p>
+  <h3>5.3 Dove vengono archiviati i dati</h3>
+  <ul>
+    <li><strong>Sul tuo dispositivo</strong>: la cronologia conversazione è salvata esclusivamente nel <code>localStorage</code> del tuo browser sotto la chiave <code>andreaAiHistory</code>. Puoi cancellarla in qualsiasi momento usando il pulsante "Ricomincia" nella chat o pulendo i dati del sito dalle impostazioni del browser.</li>
+    <li><strong>Sui server DeepSeek</strong>: i tuoi messaggi sono inviati ai server DeepSeek per generare la risposta. Secondo la privacy policy DeepSeek, i dati possono essere utilizzati per migliorare il servizio e conservati secondo le loro policy interne. <strong>Il Titolare non ha controllo diretto sulla conservazione lato DeepSeek.</strong></li>
+    <li><strong>Sul server del Sito</strong>: <strong>NESSUN log delle conversazioni</strong> viene memorizzato sul server del Titolare. Le richieste vanno direttamente dal browser dell'utente all'API DeepSeek.</li>
+  </ul>
 
-  <h2>5. I Tuoi Diritti (Artt. 15-22 GDPR)</h2>
+  <h3>5.4 Trasferimento extra-UE verso la Cina</h3>
+  <div class="danger-box">
+    <p><strong>⚠️ Avviso importante:</strong> i messaggi inviati all'assistente AI sono trasferiti e trattati su <strong>server localizzati nella Repubblica Popolare Cinese</strong>, paese che <strong>non gode di una decisione di adeguatezza</strong> della Commissione Europea ai sensi dell'Art. 45 GDPR.</p>
+    <p>Il trasferimento avviene sulla base del <strong>consenso esplicito dell'utente</strong> (Art. 49.1.a GDPR), prestato in modo informato attraverso una <strong>checkbox dedicata "Accetto la Privacy Policy"</strong> che deve essere obbligatoriamente spuntata prima che la chat diventi operativa. Senza tale spunta, l'input è disabilitato e nessun messaggio viene inviato a DeepSeek. Il consenso viene memorizzato localmente sul dispositivo (chiave <code>andreaAiConsent</code>) ed è revocabile in qualsiasi momento cancellando i dati del sito dal browser.</p>
+    <p>Le autorità cinesi potrebbero, in determinate circostanze, accedere ai dati ai sensi della normativa locale. <strong>Si raccomanda di NON inserire nella chat dati sensibili</strong> (dati relativi a salute, orientamento sessuale, opinioni politiche/religiose, dati giudiziari, dati di minori, segreti commerciali, credenziali, numeri di carta di credito, codici fiscali, documenti d'identità).</p>
+  </div>
+
+  <h3>5.5 Base giuridica</h3>
+  <p>Il trattamento si fonda su:</p>
+  <ul>
+    <li><strong>Esecuzione di misure precontrattuali</strong> (Art. 6.1.b GDPR): la chat è strumento di primo contatto commerciale;</li>
+    <li><strong>Legittimo interesse</strong> (Art. 6.1.f GDPR) del Titolare a qualificare lead e fornire informazioni sui propri servizi;</li>
+    <li><strong>Consenso esplicito</strong> (Art. 49.1.a GDPR) per il trasferimento extra-UE verso la Cina, prestato avviando una conversazione dopo essere stati informati con la presente policy.</li>
+  </ul>
+
+  <h3>5.6 Limiti tecnici e disclaimer</h3>
+  <ul>
+    <li>Le risposte sono generate da un modello statistico e <strong>possono contenere imprecisioni o "allucinazioni"</strong>;</li>
+    <li>Le indicazioni fornite (prezzi, tempi, soluzioni tecniche) sono <strong>puramente preliminari</strong> e non costituiscono offerta contrattuale ai sensi dell'Art. 1336 c.c.;</li>
+    <li>Per preventivi e impegni vincolanti è necessario un contatto diretto con Andrea Piani via WhatsApp/email;</li>
+    <li>Il sistema applica un <strong>rate-limiting</strong> di 30 messaggi/ora per dispositivo per prevenire abusi;</li>
+    <li>L'assistente AI è classificabile, ai sensi dell'AI Act (Reg. UE 2024/1689), come <strong>sistema di IA a rischio limitato</strong> con obbligo di trasparenza (Art. 50 AI Act): <strong>l'utente è informato che sta interagendo con un sistema di IA</strong> e non con un essere umano.</li>
+  </ul>
+
+  <h3>5.7 Come escludere il trattamento e revocare il consenso</h3>
+  <p>Puoi evitare qualsiasi trattamento da parte dell'assistente AI semplicemente <strong>non spuntando la checkbox di consenso</strong> all'apertura del chatbot, oppure <strong>non utilizzando il widget</strong>. Nessun dato viene inviato a DeepSeek finché non hai prestato il consenso e inviato un messaggio. Il widget non appare in alcun modo nelle pagine legali (privacy, cookie policy, ecc.).</p>
+
+  <p>Per <strong>revocare il consenso</strong> già prestato e cancellare la cronologia salvata localmente:</p>
+  <ul>
+    <li>Clicca sul pulsante "Ricomincia" (icona freccia circolare) nell'header della chat per cancellare la cronologia conversazione;</li>
+    <li>Cancella i dati del sito dal tuo browser per rimuovere anche il consenso (Impostazioni → Privacy → Cancella dati di navigazione → seleziona "Cookie e dati dei siti");</li>
+    <li>Oppure usa la modalità navigazione in incognito per impedire qualsiasi persistenza locale;</li>
+    <li>Una volta revocato il consenso, la prossima volta che aprirai il chatbot ti verrà nuovamente richiesto di accettare la Privacy Policy prima di poter scrivere.</li>
+  </ul>
+
+  <h2 id="sez-6">6. Cookie e Tecnologie di Archiviazione Locale</h2>
+
+  <p>Il Sito utilizza <strong>cookie tecnici necessari</strong> al funzionamento (non richiedono consenso, ai sensi delle linee guida del Garante 10/06/2021) e, previo consenso, <strong>cookie analitici di terze parti</strong>.</p>
+
+  <p>Per l'elenco completo, durata, finalità e istruzioni per disabilitarli, consulta la nostra <a href="cookie-policy.html"><strong>Cookie Policy</strong></a>.</p>
+
+  <p>Oltre ai cookie tradizionali, il Sito utilizza anche <strong>localStorage</strong> e <strong>sessionStorage</strong> del browser per salvare preferenze e dati funzionali (vedi §2.4). Questi meccanismi sono soggetti agli stessi principi di trasparenza e consenso dei cookie quando archiviano informazioni non strettamente necessarie.</p>
+
+  <h2 id="sez-7">7. Comunicazione, Destinatari e Responsabili Esterni</h2>
+
+  <p>I dati personali raccolti possono essere comunicati ai seguenti destinatari, nominati ove richiesto Responsabili del Trattamento ex Art. 28 GDPR:</p>
+
+  <table class="table table-bordered">
+    <thead style="background: #149dcc; color: white;">
+      <tr>
+        <th>Fornitore</th>
+        <th>Servizio</th>
+        <th>Sede</th>
+        <th>Privacy Policy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Vercel Inc.</strong></td>
+        <td>Hosting e CDN del Sito</td>
+        <td>USA (California)</td>
+        <td><a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Formspree Inc.</strong></td>
+        <td>Gestione invio form contatto/preventivo</td>
+        <td>USA (Massachusetts)</td>
+        <td><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Google LLC</strong></td>
+        <td>Google Analytics 4 (statistiche aggregate)</td>
+        <td>USA (California)</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Google LLC</strong></td>
+        <td>Google Fonts (font tipografici)</td>
+        <td>USA (California)</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>DeepSeek</strong></td>
+        <td>API LLM per assistente "Andrea AI"</td>
+        <td>Cina (Hangzhou)</td>
+        <td><a href="https://chat.deepseek.com/downloads/DeepSeek%20Privacy%20Policy.html" target="_blank" rel="noopener">DeepSeek Privacy Policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>WhatsApp Ireland Ltd.</strong> (Meta)</td>
+        <td>Comunicazione via WhatsApp Business</td>
+        <td>Irlanda / USA</td>
+        <td><a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy-eea</a></td>
+      </tr>
+      <tr>
+        <td><strong>Google LLC</strong> (Gmail)</td>
+        <td>Posta elettronica del Titolare</td>
+        <td>USA / Irlanda</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Commercialista / Studio fiscale</strong></td>
+        <td>Adempimenti fiscali e contabili</td>
+        <td>Italia</td>
+        <td>Su richiesta</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Categorie aggiuntive di destinatari:</strong> autorità giudiziarie, di pubblica sicurezza o altre autorità competenti, su richiesta legittima e nei limiti previsti dalla legge.</p>
+
+  <h3>7.1 Nessuna diffusione né vendita</h3>
+  <p>I dati personali <strong>non sono mai diffusi pubblicamente</strong> né venduti, ceduti o concessi in licenza a terze parti per finalità di marketing diretto, profilazione commerciale o data brokering.</p>
+
+  <h2 id="sez-8">8. Trasferimenti di Dati Extra-UE</h2>
+
+  <p>Alcuni fornitori (vedi tabella §7) sono basati al di fuori dello Spazio Economico Europeo (SEE). Il trasferimento dei dati avviene sulla base delle seguenti garanzie:</p>
+
+  <h4>8.1 Trasferimenti verso gli Stati Uniti</h4>
+  <p>Per i fornitori USA (Vercel, Formspree, Google, Meta), il trasferimento è basato su:</p>
+  <ul>
+    <li>✓ <strong>Decisione di adeguatezza UE-USA Data Privacy Framework</strong> (Decisione di esecuzione UE 2023/1795 del 10 luglio 2023), per i fornitori certificati;</li>
+    <li>✓ <strong>Clausole Contrattuali Standard</strong> (SCC) approvate dalla Commissione Europea (Decisione 2021/914);</li>
+    <li>✓ Eventuali misure supplementari richieste a seguito della sentenza <em>Schrems II</em> (CGUE C-311/18).</li>
+  </ul>
+
+  <h4>8.2 Trasferimenti verso la Cina (DeepSeek)</h4>
+  <p>La Repubblica Popolare Cinese <strong>non beneficia di una decisione di adeguatezza</strong> e <strong>non sono attualmente in vigore SCC bilaterali</strong> tra Andrea Piani e DeepSeek. Il trasferimento si fonda quindi sul <strong>consenso esplicito dell'interessato</strong> ai sensi dell'<strong>Art. 49.1.a GDPR</strong> (deroga in caso di situazioni specifiche), prestato in modo informato attraverso l'utilizzo volontario dell'assistente AI dopo lettura dell'informativa specifica al §5.</p>
+
+  <p>L'utente è consapevole che, nel paese di destinazione, il livello di protezione dei dati personali può essere inferiore agli standard UE e che le autorità locali potrebbero accedere ai dati ai sensi della normativa cinese (es. <em>Cybersecurity Law 2017</em>, <em>Data Security Law 2021</em>, <em>Personal Information Protection Law 2021</em>).</p>
+
+  <h2 id="sez-9">9. Diritti dell'Interessato (Artt. 15-22 GDPR)</h2>
 
   <p>In qualità di interessato, hai il diritto di:</p>
 
   <div class="row">
     <div class="col-md-6">
       <h3>📄 Diritto di Accesso (Art. 15)</h3>
-      <p>Ottenere conferma dell'esistenza di tuoi dati personali e riceverne una copia.</p>
+      <p>Ottenere conferma dell'esistenza di tuoi dati personali, riceverne copia gratuita e conoscere finalità, categorie, destinatari, periodo di conservazione.</p>
 
       <h3>✏️ Diritto di Rettifica (Art. 16)</h3>
-      <p>Correggere dati inesatti o incompleti.</p>
+      <p>Correggere senza ingiustificato ritardo dati inesatti o incompleti.</p>
 
       <h3>🗑️ Diritto di Cancellazione (Art. 17)</h3>
-      <p>Ottenere la cancellazione dei tuoi dati (diritto all'oblio), salvo obblighi legali.</p>
+      <p>Ottenere la cancellazione dei tuoi dati ("diritto all'oblio"), salvo obblighi legali di conservazione.</p>
 
       <h3>⏸️ Diritto di Limitazione (Art. 18)</h3>
-      <p>Limitare il trattamento in specifici casi previsti dal GDPR.</p>
+      <p>Limitare il trattamento in caso di contestazione esattezza, trattamento illecito o opposizione in attesa di verifica.</p>
     </div>
     <div class="col-md-6">
       <h3>📦 Diritto di Portabilità (Art. 20)</h3>
-      <p>Ricevere i tuoi dati in formato strutturato e leggibile da dispositivo automatico.</p>
+      <p>Ricevere i tuoi dati in formato strutturato, di uso comune e leggibile da dispositivo automatico (CSV, JSON), o richiederne il trasferimento ad altro titolare.</p>
 
       <h3>🚫 Diritto di Opposizione (Art. 21)</h3>
-      <p>Opporti al trattamento basato su legittimo interesse o per finalità di marketing.</p>
+      <p>Opporti al trattamento basato su legittimo interesse o per finalità di marketing diretto (in qualsiasi momento e gratuitamente).</p>
 
       <h3>🔄 Revoca del Consenso (Art. 7.3)</h3>
-      <p>Revocare il consenso in qualsiasi momento (senza pregiudicare la liceità del trattamento pregresso).</p>
+      <p>Revocare il consenso in qualsiasi momento senza pregiudicare la liceità del trattamento pregresso.</p>
+
+      <h3>🤖 Diritto sui Processi Automatizzati (Art. 22)</h3>
+      <p>Non essere sottoposto a decisione basata unicamente su trattamento automatizzato, inclusa profilazione, che produca effetti giuridici. Vedi §10.</p>
 
       <h3>⚖️ Diritto di Reclamo (Art. 77)</h3>
       <p>Presentare reclamo all'Autorità Garante per la Protezione dei Dati Personali.</p>
@@ -222,59 +493,101 @@
 
   <div class="info-box" style="margin-top: 2rem;">
     <p><strong>Come Esercitare i Tuoi Diritti:</strong></p>
-    <p>Puoi inviare una richiesta via email a: <a href="mailto:andreapiani.dev@gmail.com"><strong>andreapiani.dev@gmail.com</strong></a></p>
-    <p>Ti risponderemo entro <strong>30 giorni</strong> dalla ricezione della richiesta, come previsto dall'Art. 12.3 GDPR.</p>
+    <p>Puoi inviare una richiesta via email a: <a href="mailto:andreapiani.dev@gmail.com"><strong>andreapiani.dev@gmail.com</strong></a> con oggetto "Esercizio diritti GDPR".</p>
+    <p>Allega un documento d'identità (anche oscurando i dati non necessari) per consentirci di verificare la tua identità ed evitare comunicazioni a terzi non autorizzati.</p>
+    <p>Ti risponderemo <strong>entro 30 giorni</strong> dalla ricezione della richiesta (estensibili a 60 giorni per richieste complesse, con avviso preventivo), come previsto dall'<strong>Art. 12.3 GDPR</strong>. La risposta è gratuita; un contributo spese è dovuto solo per richieste manifestamente infondate o eccessive (Art. 12.5 GDPR).</p>
   </div>
 
-  <h2>6. Sicurezza dei Dati</h2>
+  <h2 id="sez-10">10. Decisioni Automatizzate e Profilazione</h2>
 
-  <p>Il Titolare adotta misure di sicurezza tecniche e organizzative adeguate per proteggere i dati personali da accessi non autorizzati, perdita, distruzione o divulgazione, tra cui:</p>
+  <p>Il Titolare <strong>NON adotta processi decisionali interamente automatizzati</strong> ai sensi dell'Art. 22 GDPR che producano effetti giuridici sull'interessato o incidano significativamente sulla sua persona.</p>
+
+  <p>L'assistente AI "Andrea AI" descritto al §5 è uno strumento conversazionale di supporto pre-vendita: <strong>non prende decisioni automatizzate vincolanti</strong>. Ogni preventivo, contratto o decisione commerciale è valutato e firmato personalmente da Andrea Piani.</p>
+
+  <p>Il Sito <strong>non effettua profilazione</strong> degli utenti per finalità di marketing comportamentale o pubblicità mirata. Google Analytics, se attivato col consenso, raccoglie dati esclusivamente in forma <strong>aggregata e anonimizzata</strong> per finalità statistiche.</p>
+
+  <h2 id="sez-11">11. Sicurezza dei Dati e Notifica Data Breach</h2>
+
+  <p>Il Titolare adotta misure tecniche e organizzative adeguate (Art. 32 GDPR) per garantire un livello di sicurezza appropriato al rischio:</p>
+
+  <h3>11.1 Misure tecniche</h3>
   <ul>
-    <li>✓ <strong>Crittografia HTTPS/SSL</strong> per tutte le comunicazioni</li>
-    <li>✓ <strong>Backup regolari</strong> dei dati</li>
-    <li>✓ <strong>Firewall e sistemi antivirus</strong> aggiornati</li>
-    <li>✓ <strong>Accesso limitato</strong> ai dati solo a personale autorizzato</li>
-    <li>✓ <strong>Pseudonimizzazione</strong> dei dati quando possibile</li>
+    <li>✓ <strong>Crittografia HTTPS/TLS 1.3</strong> per tutte le comunicazioni client-server;</li>
+    <li>✓ <strong>Certificato SSL</strong> valido e aggiornato;</li>
+    <li>✓ <strong>Header di sicurezza HTTP</strong>: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security;</li>
+    <li>✓ <strong>Firewall applicativo (WAF)</strong> e protezione DDoS tramite Vercel;</li>
+    <li>✓ <strong>Backup regolari</strong> dei dati critici;</li>
+    <li>✓ <strong>Aggiornamenti software</strong> tempestivi (CMS, librerie, dipendenze);</li>
+    <li>✓ <strong>Pseudonimizzazione</strong> dei dati di analytics quando possibile;</li>
+    <li>✓ <strong>Rate-limiting</strong> sui form e sull'assistente AI per prevenire abusi.</li>
   </ul>
 
-  <h2>7. Cookie e Tecnologie Similari</h2>
-
-  <p>Il Sito utilizza cookie tecnici necessari e, previo consenso, cookie analitici. Per informazioni dettagliate su:</p>
+  <h3>11.2 Misure organizzative</h3>
   <ul>
-    <li>Tipologie di cookie utilizzati</li>
-    <li>Durata e finalità</li>
-    <li>Come gestire/disabilitare i cookie</li>
+    <li>✓ <strong>Accesso ai dati limitato</strong> al solo Titolare e a soggetti autorizzati con credenziali individuali;</li>
+    <li>✓ <strong>Autenticazione a due fattori (2FA)</strong> sugli account di gestione del Sito e dei servizi correlati;</li>
+    <li>✓ <strong>Password manager</strong> per la gestione sicura delle credenziali;</li>
+    <li>✓ <strong>Formazione continua</strong> sulle tematiche privacy e sicurezza informatica;</li>
+    <li>✓ <strong>Verifica periodica</strong> dei fornitori e dei loro standard di sicurezza.</li>
   </ul>
-  <p>Consulta la nostra <a href="cookie-policy.html"><strong>Cookie Policy</strong></a>.</p>
 
-  <h2>8. Minori</h2>
+  <h3>11.3 Notifica violazione dei dati personali (Data Breach)</h3>
+  <p>In caso di <strong>violazione dei dati personali</strong> ai sensi degli Artt. 33-34 GDPR, il Titolare:</p>
+  <ul>
+    <li>Notificherà il Garante Privacy <strong>entro 72 ore</strong> dalla conoscenza del fatto, ove la violazione presenti un rischio per i diritti e le libertà delle persone fisiche;</li>
+    <li>Comunicherà la violazione <strong>direttamente agli interessati senza ingiustificato ritardo</strong>, qualora la violazione presenti un rischio elevato;</li>
+    <li>Documenterà ogni violazione in apposito registro interno (Art. 33.5 GDPR).</li>
+  </ul>
 
-  <p>I servizi del Sito non sono rivolti a minori di 16 anni. Non raccogliamo consapevolmente dati personali di minori. Se ritieni che un minore abbia fornito dati personali, contattaci per la cancellazione immediata.</p>
+  <h2 id="sez-12">12. Tutela dei Minori</h2>
 
-  <h2>9. Modifiche alla Privacy Policy</h2>
+  <p>I servizi del Sito non sono rivolti a minori di <strong>14 anni</strong> (soglia italiana ex Art. 2-quinquies del Codice Privacy, inferiore ai 16 anni del GDPR di base). Non raccogliamo consapevolmente dati personali di minori senza il consenso del titolare della responsabilità genitoriale.</p>
 
-  <p>Questa Privacy Policy può essere aggiornata periodicamente per conformità normativa o modifiche ai servizi. Le modifiche saranno pubblicate su questa pagina con aggiornamento della data in alto. Ti invitiamo a consultare regolarmente questa pagina.</p>
+  <p>L'assistente AI è progettato per scopi B2B/professionali e non è indirizzato a minori. Se vieni a conoscenza che un minore ha fornito dati personali tramite il Sito, contattaci immediatamente all'indirizzo <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a> per la cancellazione tempestiva.</p>
 
-  <h2>10. Contatti e Reclami</h2>
+  <h2 id="sez-13">13. Modifiche alla Privacy Policy</h2>
+
+  <p>Questa Privacy Policy può essere aggiornata periodicamente per:</p>
+  <ul>
+    <li>Conformità a nuove disposizioni normative (UE, italiane o internazionali);</li>
+    <li>Modifiche ai servizi offerti, ai fornitori utilizzati o alle tecnologie integrate;</li>
+    <li>Recepimento di linee guida del Garante Privacy o dell'EDPB;</li>
+    <li>Miglioramenti di trasparenza e chiarezza espositiva.</li>
+  </ul>
+
+  <p>Le modifiche sostanziali saranno comunicate con preavviso, ove possibile via email agli utenti registrati o tramite avviso evidente sul Sito. La data di "Ultimo aggiornamento" in alto è sempre indicativa della versione vigente. Le versioni precedenti sono conservate dal Titolare e disponibili su richiesta.</p>
+
+  <p>Si consiglia di consultare periodicamente questa pagina per restare aggiornato.</p>
+
+  <h2 id="sez-14">14. Contatti, Reclami e Autorità di Controllo</h2>
 
   <div class="info-box">
-    <p><strong>Per qualsiasi domanda sulla Privacy Policy o per esercitare i tuoi diritti:</strong></p>
+    <p><strong>Per qualsiasi domanda, esercizio dei diritti o segnalazione:</strong></p>
     <p>
-      <strong>Andrea Piani</strong><br>
+      <strong>Andrea Piani</strong> – Titolare del Trattamento<br>
       Email: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a><br>
-      Telefono: <a href="tel:+393516248936">+39 351 624 8936</a><br>
-      Indirizzo: Piazza della Repubblica, 19 20124 Milano (MI), Italia
+      Telefono / WhatsApp: <a href="tel:+393516248936">+39 351 624 8936</a><br>
+      Sede operativa Italia: Piazza della Repubblica, 19 – 20124 Milano (MI)
     </p>
+    <p><em>Tempo di risposta: entro 30 giorni dalla ricezione (Art. 12.3 GDPR).</em></p>
+  </div>
+
+  <div class="warning-box">
+    <p><strong>Designazione del DPO (Data Protection Officer):</strong></p>
+    <p>Il Titolare, in quanto ditta individuale che non rientra nei casi obbligatori ex Art. 37 GDPR (autorità pubblica, monitoraggio sistematico su larga scala, trattamento su larga scala di dati particolari), <strong>non ha nominato un DPO</strong>. Per qualsiasi questione privacy puoi rivolgerti direttamente al Titolare ai contatti sopra indicati.</p>
   </div>
 
   <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
-    <p><strong>Autorità di Controllo (Garante Privacy):</strong></p>
+    <p><strong>Autorità di Controllo (Garante Privacy Italia):</strong></p>
     <p>
       <strong>Garante per la Protezione dei Dati Personali</strong><br>
       Piazza Venezia 11, 00187 Roma<br>
-      Sito web: <a href="https://www.garanteprivacy.it" target="_blank">www.garanteprivacy.it</a><br>
-      Email: <a href="mailto:garante@gpdp.it">garante@gpdp.it</a>
+      Centralino: +39 06 696771<br>
+      Sito web: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a><br>
+      Email: <a href="mailto:protocollo@gpdp.it">protocollo@gpdp.it</a><br>
+      PEC: <a href="mailto:protocollo@pec.gpdp.it">protocollo@pec.gpdp.it</a>
     </p>
+    <p>Hai sempre il diritto di proporre reclamo all'Autorità di controllo dello Stato membro di tua residenza abituale, del luogo di lavoro o del luogo della presunta violazione (Art. 77 GDPR).</p>
   </div>
 
   <a href="index.html" class="back-link">← Torna alla Homepage</a>

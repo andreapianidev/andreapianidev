@@ -2,74 +2,6 @@
    UTILITIES.CSS - Features Avanzate
    ============================================ */
 
-/* ===== FLOATING WHATSAPP BUTTON ===== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  z-index: 9999;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  animation: float-bounce 3s ease-in-out infinite;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-}
-
-.whatsapp-float svg {
-  width: 32px;
-  height: 32px;
-  fill: white;
-}
-
-.whatsapp-tooltip {
-  position: absolute;
-  right: 70px;
-  background: white;
-  color: #333;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-
-.whatsapp-float:hover .whatsapp-tooltip {
-  opacity: 1;
-}
-
-@keyframes float-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    bottom: 20px;
-    right: 20px;
-    width: 55px;
-    height: 55px;
-  }
-  .whatsapp-tooltip {
-    display: none; /* Hide tooltip on mobile */
-  }
-}
-
 /* ===== TOAST NOTIFICATIONS ===== */
 .toast-container {
   position: fixed;
@@ -291,38 +223,6 @@ html {
   100% { transform: translateX(100%); }
 }
 
-/* ===== SCROLL TO TOP BUTTON ===== */
-.scroll-to-top {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: #149dcc;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  z-index: 9998;
-  box-shadow: 0 4px 12px rgba(20, 157, 204, 0.4);
-}
-
-.scroll-to-top.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.scroll-to-top:hover {
-  background: #0d7a9e;
-  transform: translateY(-5px);
-}
-
 /* ===== MODAL OVERLAY ===== */
 .modal-overlay {
   position: fixed;
@@ -473,13 +373,6 @@ body.dark-mode .form-input:focus {
   .toast {
     min-width: auto;
     max-width: calc(100vw - 40px);
-  }
-
-  .scroll-to-top {
-    bottom: 80px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
   }
 
   .modal-content {

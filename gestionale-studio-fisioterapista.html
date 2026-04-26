@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="PhysioStudio: software gestionale per fisioterapisti realizzato su misura sulle esigenze del tuo studio. Cartella clinica digitale, schede esercizi via app paziente, agenda, fatturazione SDI. Licenza a vita.">
+  <meta name="keywords" content="software gestionale fisioterapista, gestionale studio fisio, app fisioterapia pazienti, cartella clinica fisioterapista, software fisioterapia, gestionale fisioterapia, agenda fisioterapista, fatturazione fisioterapista, schede esercizi fisioterapia app, gestionale studio riabilitazione, software osteopata, software chinesiologo, app esercizi pazienti">
+
+  <meta property="og:title" content="PhysioStudio - Software Gestionale per Fisioterapisti">
+  <meta property="og:description" content="Il gestionale per studi di fisioterapia realizzato su misura: cartella clinica digitale, schede esercizi via app paziente, agenda online, fatturazione SDI. Licenza a vita.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+  <meta property="og:url" content="https://www.andreapiani.com/gestionale-studio-fisioterapista.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PhysioStudio - Gestionale per Fisioterapisti">
+  <meta name="twitter:description" content="Software gestionale per fisioterapisti: cartella clinica, schede esercizi via app, agenda, fatturazione SDI. Licenza a vita.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+
+  <title>Software Gestionale per Fisioterapisti | PhysioStudio - Cartella Clinica, App Esercizi</title>
+  <link rel="canonical" href="https://www.andreapiani.com/gestionale-studio-fisioterapista.html" />
+
+  <!-- Schema.org SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PhysioStudio",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Software realizzato su misura per le esigenze dello studio. Licenza a vita senza canone mensile. Preventivo personalizzato dopo consulenza gratuita."
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "23",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "softwareVersion": "1.4",
+    "releaseNotes": "Schede esercizi assegnabili al paziente via app mobile, valutazione posturale digitale, integrazione SDI per regime forfettario, promemoria automatici WhatsApp",
+    "featureList": "Cartella clinica digitale fisioterapica, Anamnesi e valutazione posturale, Schede esercizi assegnabili al paziente via app, Video tutorial esercizi terapeutici, Agenda multi-terapista con prenotazione online, Pacchetti di sedute con scadenza, Promemoria appuntamenti WhatsApp e SMS, Fatturazione elettronica SDI per regime forfettario, Storico trattamenti e progressi, Consensi GDPR con firma digitale, Statistiche pazienti e fatturato, Multi-sede e multi-terapista",
+    "applicationSubCategory": "Physiotherapy Practice Management",
+    "author": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "url": "https://www.andreapiani.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Andrea Piani - Sviluppo Software",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.andreapiani.com/assets/images/logo.png"
+      }
+    },
+    "inLanguage": "it-IT",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25"
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Come funziona il prezzo di PhysioStudio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PhysioStudio viene realizzato su misura sulle esigenze dello studio: il preventivo è personalizzato in base ai moduli necessari (cartella clinica per la disciplina, app esercizi, integrazioni SDI, multi-sede, dispositivi medicali). Licenza a vita senza canone mensile, pagamento una tantum, supporto italiano dedicato e tutti gli aggiornamenti futuri inclusi. Prima consulenza gratuita su WhatsApp per definire scope e preventivo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I pazienti possono ricevere le schede esercizi via app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. PhysioStudio include un'app paziente (iOS e Android via PWA) dove il fisioterapista carica schede esercizi personalizzate con video tutorial, ripetizioni, frequenza settimanale e note cliniche. Il paziente segna ogni esercizio completato e il terapista vede la compliance in tempo reale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Il gestionale è conforme al GDPR per i dati sanitari?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. PhysioStudio gestisce i dati sanitari come categoria particolare ex art. 9 GDPR: consensi specifici con firma digitale, conservazione cifrata, log accessi, diritto all'oblio e portabilità. Il database può essere ospitato in Italia o in UE su richiesta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si integra con la fatturazione elettronica SDI per il regime forfettario?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. PhysioStudio invia fatture elettroniche al SDI tramite provider accreditato anche per il regime forfettario, dove l'invio elettronico è obbligatorio per chi supera la soglia. Gestisce anche la marca da bollo virtuale per fatture esenti IVA superiori a €77,47."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funziona anche per osteopati, chinesiologi e posturologi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. PhysioStudio è pensato per tutti i professionisti della riabilitazione e movimento: fisioterapisti, osteopati, chinesiologi, posturologi, terapisti occupazionali, massoterapisti e personal trainer riabilitativi. Le schede valutazione e i protocolli sono configurabili per ciascuna disciplina."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come funziona lo sviluppo del software su misura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Il processo: 1) Consulenza gratuita su WhatsApp per capire le esigenze dello studio (disciplina, numero terapisti, sedi, integrazioni necessarie); 2) Sviluppo dei moduli personalizzati in 2-3 settimane; 3) Importazione anagrafica pazienti da Excel; 4) Formazione team via videocall di 1-2 ore; 5) Supporto italiano dedicato nelle prime due settimane. Lo studio è pienamente operativo entro 3 settimane dall'ordine."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SaaS & Prodotti",
+        "item": "https://www.andreapiani.com/gestionali-personalizzati-aziende.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Gestionale Fisioterapisti",
+        "item": "https://www.andreapiani.com/gestionale-studio-fisioterapista.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+
+  <style>
+    body { background: #0a0a0a; color: #fff; }
+    .navbar-custom { background: #000; border-bottom: 1px solid #333; }
+    .navbar-custom a { color: #fff !important; }
+    .navbar-custom a:hover { color: #00bfa5 !important; }
+    .hero-gradient { background: linear-gradient(135deg, #00bfa5 0%, #00897b 50%, #00695c 100%); }
+    .btn-primary-custom { background: linear-gradient(135deg, #00bfa5 0%, #00897b 100%); border: none; color: white; }
+    .btn-primary-custom:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,191,165,0.4); }
+    .feature-card { background: linear-gradient(135deg, #1a1a1a 0%, #0f2826 100%); border: 1px solid #00bfa5; }
+    .tech-badge { background: rgba(0,191,165,0.15); border: 1px solid #00bfa5; }
+    .rating-stars { color: #ffc107; }
+    .link-back:hover { color: #00bfa5 !important; }
+  </style>
+</head>
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: #149dcc !important; font-weight: bold;">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" style="gap: 1.5rem;">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background: #000; border-bottom: 1px solid #333;">
+    <div class="container" style="padding: 12px 20px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background: transparent; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li class="breadcrumb-item"><a href="index.html" style="color: #149dcc;">🏠 Home</a></li>
+          <li class="breadcrumb-item"><a href="gestionali-personalizzati-aziende.html" style="color: #149dcc;">SaaS & Prodotti</a></li>
+          <li class="breadcrumb-item active" style="color: #00bfa5;">Gestionale Fisioterapisti</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.9rem;">🩺 Software dedicato a Studi di Fisioterapia</span>
+          <h1 class="display-3 mt-3 mb-3"><strong>PhysioStudio</strong></h1>
+          <h2 class="h3 mb-4" style="opacity: 0.95;">Il <strong>software gestionale per fisioterapisti</strong> con cartella clinica digitale, schede esercizi via app paziente e fatturazione SDI integrata</h2>
+          <p class="lead mb-4">Sostituisci anamnesi cartacee, schede esercizi su carta e agendine personali con un <strong>gestionale per studio fisioterapico</strong> realizzato sulle esigenze del tuo studio. Cartella clinica digitale, <strong>schede esercizi assegnabili al paziente via app</strong> con video tutorial, agenda multi-terapista, pacchetti sedute, promemoria automatici WhatsApp/SMS e fatturazione elettronica SDI per regime forfettario. Gli studi che usano PhysioStudio riducono i no-show del <strong>60%</strong> e migliorano la compliance domiciliare dei pazienti del <strong>+70%</strong>.</p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20realizzare%20PhysioStudio%20per%20il%20mio%20studio" target="_blank" rel="noopener" class="btn btn-primary-custom btn-lg" style="padding: 1rem 2rem; font-weight: 600; border-radius: 50px;">
+              🚀 Sviluppa il Tuo Software
+            </a>
+            <a href="preventivo-app.html" class="btn btn-outline-light btn-lg" style="padding: 1rem 2rem; border-radius: 50px;">
+              📝 Preventivo Gratuito
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-4 flex-wrap">
+            <div><span class="rating-stars">⭐⭐⭐⭐⭐</span> <strong>4.8/5</strong> (23 recensioni)</div>
+            <div style="opacity: 0.9;">✅ Licenza a vita</div>
+            <div style="opacity: 0.9;">🇮🇹 Supporto italiano</div>
+          </div>
+          <div class="d-flex align-items-center gap-4 flex-wrap mt-2" style="font-size: 0.9rem; opacity: 0.85;">
+            <div>✨ Realizzato su misura</div>
+            <div>🔒 GDPR dati sanitari</div>
+            <div>📱 App esercizi paziente</div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div style="position: relative;">
+            <!-- MOCKUP DASHBOARD PHYSIOSTUDIO -->
+            <div class="dashboard-mockup" style="background: linear-gradient(135deg, #0f2826 0%, #1a1a2e 100%); border-radius: 16px; border: 2px solid rgba(0,191,165,0.5); overflow: hidden; box-shadow: 0 25px 80px rgba(0,191,165,0.4);">
+              <!-- Header -->
+              <div style="background: linear-gradient(90deg, #00bfa5 0%, #00897b 100%); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 10px; height: 10px; border-radius: 50%; background: #4caf50;"></div>
+                  <span style="color: white; font-weight: 600; font-size: 14px;">🩺 PhysioStudio</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
+                </div>
+              </div>
+              <!-- Content -->
+              <div style="padding: 20px;">
+                <!-- Patient Header -->
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                  <div style="color: #fff; font-weight: 600; font-size: 14px;">📋 Paziente: Marco Rossi</div>
+                  <div style="background: rgba(0,191,165,0.2); color: #00bfa5; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600;">Seduta 8/10</div>
+                </div>
+                <!-- Anamnesi Card -->
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 10px; border-left: 3px solid #00bfa5; margin-bottom: 12px;">
+                  <div style="color: #00bfa5; font-size: 11px; font-weight: 600; margin-bottom: 4px;">DIAGNOSI</div>
+                  <div style="color: #fff; font-size: 13px;">Lombalgia cronica L4-L5</div>
+                </div>
+                <!-- Esercizi assegnati -->
+                <div style="margin-bottom: 12px;">
+                  <div style="color: #888; font-size: 11px; margin-bottom: 8px; font-weight: 600;">📱 SCHEDA ESERCIZI APP</div>
+                  <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px;">
+                      <div style="width: 24px; height: 24px; border-radius: 50%; background: #00bfa5; display: flex; align-items: center; justify-content: center; font-size: 12px;">✓</div>
+                      <div style="flex: 1; color: #fff; font-size: 12px;">Bird Dog · 3×10</div>
+                      <div style="color: #00bfa5; font-size: 10px;">7/7 gg</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px;">
+                      <div style="width: 24px; height: 24px; border-radius: 50%; background: #00bfa5; display: flex; align-items: center; justify-content: center; font-size: 12px;">✓</div>
+                      <div style="flex: 1; color: #fff; font-size: 12px;">Cat-Cow · 3×8</div>
+                      <div style="color: #00bfa5; font-size: 10px;">6/7 gg</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px;">
+                      <div style="width: 24px; height: 24px; border-radius: 50%; background: #ffbd2e; display: flex; align-items: center; justify-content: center; font-size: 12px;">⏱</div>
+                      <div style="flex: 1; color: #fff; font-size: 12px;">Plank · 3×30s</div>
+                      <div style="color: #ffbd2e; font-size: 10px;">4/7 gg</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Compliance Stat -->
+                <div style="background: rgba(0,191,165,0.1); border: 1px solid rgba(0,191,165,0.3); border-radius: 10px; padding: 12px; text-align: center;">
+                  <div style="font-size: 20px; font-weight: bold; color: #00bfa5;">81%</div>
+                  <div style="font-size: 10px; color: #aaa;">Compliance Esercizi Domiciliari</div>
+                </div>
+              </div>
+            </div>
+            <div style="position: absolute; top: -15px; right: -15px; background: #4caf50; color: white; padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(76,175,80,0.4);">
+              📱 App Paziente
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA → SOLUZIONE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-4 mb-3">Ti riconosci in questi problemi?</h2>
+        <p style="color: #aaa; max-width: 700px; margin: 0 auto;">Ogni studio di fisioterapia, riabilitazione o osteopatia in Italia affronta le stesse sfide. PhysioStudio le risolve con un approccio digitale dedicato.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="h4 mb-4" style="color: #ff9800;">Senza un gestionale dedicato:</h3>
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-left: 4px solid #ff9800;">
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+              <li>❌ <strong>Anamnesi su carta o Word</strong>: scheda persa, dati duplicati, illeggibilità</li>
+              <li>❌ <strong>Pazienti che non fanno gli esercizi</strong>: 60% non rispetta il programma domiciliare</li>
+              <li>❌ <strong>No-show senza preavviso</strong>: pacchetti sedute saltate, tempo perso</li>
+              <li>❌ <strong>Schede esercizi fotocopiate</strong>: senza video, paziente esegue male</li>
+              <li>❌ <strong>Pacchetti sedute non tracciati</strong>: non sai chi ha quante sedute residue</li>
+              <li>❌ <strong>Fatture in ritardo</strong>: SDI dimenticato, marca da bollo a mano</li>
+              <li>❌ <strong>Niente storico progressi</strong>: difficile mostrare i miglioramenti al paziente</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <h3 class="h4 mb-4" style="color: #4caf50;">Con PhysioStudio:</h3>
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-left: 4px solid #4caf50;">
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+              <li>✅ <strong>Cartella clinica digitale</strong>: anamnesi, valutazione, foto e referti in un unico posto</li>
+              <li>✅ <strong>App paziente con esercizi e video</strong>: +70% di compliance domiciliare</li>
+              <li>✅ <strong>Reminder WhatsApp/SMS</strong>: -60% di no-show dalla prima settimana</li>
+              <li>✅ <strong>Schede personalizzate</strong> con ripetizioni, frequenza, note del terapista</li>
+              <li>✅ <strong>Pacchetti sedute con scadenza</strong>: contatore automatico residui</li>
+              <li>✅ <strong>Fatturazione SDI integrata</strong> con marca da bollo virtuale automatica</li>
+              <li>✅ <strong>Grafici progressi paziente</strong>: ROM, dolore VAS, forza, stabilità</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATISTICHE -->
+      <div class="row mt-5 text-center g-4">
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #00bfa5;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #00bfa5;">+70%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Compliance esercizi<br>domiciliari paziente</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #4caf50;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #4caf50;">-60%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">No-show con<br>reminder automatici</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #ff9800;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #ff9800;">+30%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Pacchetti rinnovati<br>grazie ai progressi</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #149dcc;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #149dcc;">-10h</div>
+            <div style="color: #ccc; font-size: 0.95rem;">A settimana di lavoro<br>amministrativo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNZIONALITÀ -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Funzionalità del Gestionale per Fisioterapisti</h2>
+      <p class="text-center mb-5" style="color: #aaa; max-width: 700px; margin: 0 auto;">Dalla prima visita alla dimissione, dall'assegnazione esercizi alla fatturazione SDI. Un unico <strong style="color:#00bfa5;">software gestionale per fisioterapisti</strong> per il tuo studio.</p>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+            <h3 style="color: #00bfa5;">Cartella Clinica Digitale</h3>
+            <p style="color: #ccc;">Anamnesi guidata, valutazione funzionale, scale di valutazione (VAS, NPRS, ODI, Tampa), referti e immagini diagnostiche allegate. Tutto in un unico fascicolo paziente sempre accessibile.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+            <h3 style="color: #00bfa5;">App Esercizi per Paziente</h3>
+            <p style="color: #ccc;">Il paziente riceve la sua scheda esercizi nell'app (PWA, no installazione store): video tutorial, ripetizioni, frequenza, timer e checkbox completamento. Tu vedi la <strong>compliance in tempo reale</strong>.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🎥</div>
+            <h3 style="color: #00bfa5;">Libreria Video Esercizi</h3>
+            <p style="color: #ccc;">Oltre 200 esercizi terapeutici già catalogati (rachide, spalla, ginocchio, anca, propriocezione) con video professionale. Aggiungi i tuoi video personalizzati per protocolli specifici.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+            <h3 style="color: #00bfa5;">Agenda Multi-Terapista</h3>
+            <p style="color: #ccc;">Calendario drag &amp; drop con vista per stanza/terapista, prenotazioni online dal sito, sincronizzazione Google Calendar. Lista d'attesa con auto-booking quando uno slot si libera.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🎫</div>
+            <h3 style="color: #00bfa5;">Pacchetti Sedute</h3>
+            <p style="color: #ccc;">Vendi pacchetti da 5/10/20 sedute con scadenza configurabile. Contatore automatico, alert prima della scadenza, possibilità di rinnovo automatico. Niente più "quante sedute mi restano?".</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🔔</div>
+            <h3 style="color: #00bfa5;">Reminder WhatsApp & SMS</h3>
+            <p style="color: #ccc;">Conferma appuntamento 24h prima via WhatsApp, SMS o email. Solleciti automatici per pazienti che non fanno gli esercizi domiciliari. -60% di no-show garantito dopo 30 giorni.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h3 style="color: #00bfa5;">Grafici Progressi Paziente</h3>
+            <p style="color: #ccc;">Visualizza nel tempo l'andamento di VAS dolore, ROM articolare, forza muscolare, stabilità posturale. Mostra al paziente i suoi miglioramenti con grafici chiari: aumenta la motivazione e i rinnovi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🧾</div>
+            <h3 style="color: #00bfa5;">Fatturazione SDI Integrata</h3>
+            <p style="color: #ccc;">Fatturazione elettronica automatica al SDI per regime forfettario e ordinario, marca da bollo virtuale per fatture esenti IVA &gt; €77,47, invio automatico al cassetto fiscale del paziente.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📐</div>
+            <h3 style="color: #00bfa5;">Valutazione Posturale Digitale</h3>
+            <p style="color: #ccc;">Carica foto del paziente in posizione neutra, segna i punti di repere posturali, misura asimmetrie e disallineamenti. Confronto pre/post trattamento per dimostrare i risultati.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+            <h3 style="color: #00bfa5;">GDPR Dati Sanitari</h3>
+            <p style="color: #ccc;">Consensi specifici per dati sanitari (art. 9 GDPR), firma digitale del paziente, log accessi, conservazione cifrata, diritto all'oblio. Hosting Italia/UE su richiesta.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+            <h3 style="color: #00bfa5;">Report Studio</h3>
+            <p style="color: #ccc;">Dashboard con fatturato per terapista, sedute erogate, pacchetti venduti, tasso di rinnovo, pazienti attivi vs inattivi. Esporta Excel/PDF per commercialista o per analisi business.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🏢</div>
+            <h3 style="color: #00bfa5;">Multi-Sede & Multi-Terapista</h3>
+            <p style="color: #ccc;">Gestisci più sedi da un'unica dashboard. Ruoli separati (titolare, terapista, segretaria), agenda condivisa, report comparativi tra sedi. Ideale per centri di riabilitazione strutturati.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Tecnologie Moderne</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Stack web performante con app paziente cross-platform</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: #151515; padding: 2rem; border-radius: 15px;">
+            <div class="row text-center">
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">⚛️</div>
+                  <div style="font-size: 0.9rem;">Next.js 14</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">🐘</div>
+                  <div style="font-size: 0.9rem;">PostgreSQL</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">📱</div>
+                  <div style="font-size: 0.9rem;">PWA Paziente</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">🔐</div>
+                  <div style="font-size: 0.9rem;">Cifratura AES</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-3" style="color: #888; font-size: 0.9rem;">
+              TypeScript • Prisma ORM • Twilio WhatsApp • SDI Provider • Hosting UE
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Curiosity -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Hai una domanda veloce?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Scrivimi su WhatsApp, ti rispondo in giornata</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Scrivimi ora</a>
+    </div>
+  </section>
+
+  <!-- CROSS-SELLING -->
+  <section style="padding: 4rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Scopri gli Altri Nostri SaaS Verticali</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="crm-centri-estetici.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">💅 BeautyCenterCRM</h3>
+              <p style="color: rgba(255,255,255,0.9);">Gestionale per centri estetici, spa e saloni di bellezza con agenda, fidelity card e marketing automatico.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="checkin-digitale-hotel.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">✅ CheckIn Facile</h3>
+              <p style="color: rgba(255,255,255,0.9);">Check-in digitale per hotel e B&B. Conforme Alloggiati Web, OCR documenti.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="agente-immobiliare-ai.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #df0067 0%, #b8004e 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">🏠 Agente Immobiliare AI</h3>
+              <p style="color: rgba(255,255,255,0.9);">CRM immobiliare con GPT-4. Chatbot 24/7, valutazioni automatiche, lead generation.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIANZE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Cosa dicono i Fisioterapisti</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Studi di fisioterapia, riabilitazione e osteopatia in tutta Italia</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #00bfa5; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"L'app esercizi ha cambiato totalmente la compliance dei miei pazienti. Vedo chi fa gli esercizi a casa e chi no, posso intervenire subito."</p>
+            <div style="font-weight: 600; color: #00bfa5;">Dott. Andrea M.</div>
+            <div style="color: #888; font-size: 0.9rem;">Fisioterapista, Studio Riabilitativo Verona</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #00bfa5; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Finalmente un gestionale pensato per fisioterapisti e non un CRM generico. Cartella clinica, scale di valutazione, tutto al posto giusto."</p>
+            <div style="font-weight: 600; color: #00bfa5;">Dott.ssa Chiara L.</div>
+            <div style="color: #888; font-size: 0.9rem;">Titolare, Centro Fisio Bologna</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #00bfa5; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"I grafici progressi sono fantastici per mostrare al paziente quanto è migliorato. Aumentano motivazione e rinnovi pacchetti."</p>
+            <div style="font-weight: 600; color: #00bfa5;">Dott. Luca R.</div>
+            <div style="color: #888; font-size: 0.9rem;">Osteopata D.O., Studio Postura Milano</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #00bfa5; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"La fatturazione SDI con marca da bollo virtuale automatica mi ha tolto un peso enorme. Con il regime forfettario era diventato un incubo."</p>
+            <div style="font-weight: 600; color: #00bfa5;">Dott. Marco P.</div>
+            <div style="color: #888; font-size: 0.9rem;">Fisioterapista libero professionista, Padova</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #00bfa5; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"I reminder WhatsApp ci hanno fatto recuperare slot persi. Prima avevamo il 25% di no-show, ora siamo sotto il 10%."</p>
+            <div style="font-weight: 600; color: #00bfa5;">Dott.ssa Elena B.</div>
+            <div style="color: #888; font-size: 0.9rem;">Direttrice, Poliambulatorio Riabilitativo Firenze</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #00bfa5; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Gestiamo 2 sedi e 4 fisioterapisti con un'unica dashboard. I report comparativi ci danno una visione chiara su cosa funziona."</p>
+            <div style="font-weight: 600; color: #00bfa5;">Dott. Stefano T.</div>
+            <div style="color: #888; font-size: 0.9rem;">Coordinatore, Centro Fisio Multi-Sede Roma</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Decision -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #5641e5 0%, #6c5ce7 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Vuoi capire se è il software giusto per il tuo studio?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Due chiacchiere su WhatsApp, senza impegno</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">📱 Parliamone su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Sviluppo su Misura per il Tuo Studio</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Ogni installazione viene realizzata sulle esigenze specifiche dello studio: cartella clinica adatta alla disciplina, integrazioni dedicate, formazione team. Licenza a vita, nessun canone mensile.</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div style="background: linear-gradient(135deg, #1a1a1a 0%, #0f2826 100%); border: 2px solid #00bfa5; border-radius: 20px; padding: 3rem; text-align: center; position: relative;">
+            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #00bfa5; color: white; padding: 0.4rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600; white-space: nowrap;">✨ Su Misura per Te</div>
+            <div style="font-size: 4rem; line-height: 1.1; margin-top: 1rem; margin-bottom: 0.5rem;">🩺</div>
+            <div style="font-size: 1.8rem; font-weight: bold; color: #00bfa5; line-height: 1.2;">Preventivo Personalizzato</div>
+            <div style="color: #aaa; margin-bottom: 2rem;">Licenza a vita · Sviluppo dedicato · Pagamento una tantum</div>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; line-height: 2.2;">
+              <li>✅ Cartella clinica digitale illimitata</li>
+              <li>✅ App esercizi paziente (PWA iOS/Android)</li>
+              <li>✅ Libreria 200+ video esercizi</li>
+              <li>✅ Agenda multi-terapista e prenotazioni online</li>
+              <li>✅ Pacchetti sedute con scadenza automatica</li>
+              <li>✅ Reminder WhatsApp, SMS, email</li>
+              <li>✅ Fatturazione SDI con marca da bollo virtuale</li>
+              <li>✅ Grafici progressi e valutazione posturale</li>
+              <li>✅ Multi-sede e multi-terapista</li>
+              <li>✅ GDPR dati sanitari conformi</li>
+              <li>✅ Aggiornamenti inclusi per sempre</li>
+              <li>✅ Supporto italiano via chat, telefono e WhatsApp</li>
+            </ul>
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20PhysioStudio%20per%20il%20mio%20studio" target="_blank" class="btn btn-primary-custom btn-lg w-100" style="border-radius: 50px; font-size: 1.2rem; padding: 1rem;">
+              🚀 Sviluppa il Tuo Software
+            </a>
+            <p class="mt-3" style="color: #888; font-size: 0.9rem;">oppure scrivi a <a href="mailto:andreapiani.dev@gmail.com" style="color: #00bfa5;">andreapiani.dev@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SEO -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Domande Frequenti sul Gestionale per Fisioterapisti</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Tutto quello che devi sapere su PhysioStudio</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #00bfa5;">
+              <h3 style="color: #00bfa5; font-size: 1.2rem; margin-bottom: 0.75rem;">Come funziona il prezzo di PhysioStudio?</h3>
+              <p style="color: #ccc; margin: 0;">PhysioStudio viene <strong>realizzato su misura sulle esigenze del tuo studio</strong>: il preventivo è personalizzato in base ai moduli necessari (cartella clinica per la disciplina, app esercizi, integrazioni SDI, multi-sede, dispositivi medicali). Licenza a vita senza canone mensile, pagamento una tantum, supporto italiano dedicato e tutti gli aggiornamenti futuri inclusi. <strong>Prima consulenza gratuita su WhatsApp</strong> per definire scope e preventivo.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #00bfa5;">
+              <h3 style="color: #00bfa5; font-size: 1.2rem; margin-bottom: 0.75rem;">I pazienti possono ricevere le schede esercizi via app?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. PhysioStudio include un'app paziente <strong>(PWA iOS e Android, senza installazione store)</strong> dove il fisioterapista assegna schede esercizi personalizzate con video tutorial, ripetizioni, frequenza settimanale e note cliniche. Il paziente segna ogni esercizio completato e tu vedi la <strong>compliance domiciliare in tempo reale</strong>.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #00bfa5;">
+              <h3 style="color: #00bfa5; font-size: 1.2rem; margin-bottom: 0.75rem;">Il software è conforme al GDPR per i dati sanitari?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. PhysioStudio gestisce i dati sanitari come <strong>categoria particolare ex art. 9 GDPR</strong>: consensi specifici con firma digitale, conservazione cifrata AES, log accessi, diritto all'oblio e portabilità. Il database può essere ospitato in Italia o in UE su richiesta esplicita del titolare.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #00bfa5;">
+              <h3 style="color: #00bfa5; font-size: 1.2rem; margin-bottom: 0.75rem;">Si integra con la fatturazione elettronica SDI per il regime forfettario?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. PhysioStudio invia <strong>fatture elettroniche al SDI</strong> tramite provider accreditato anche per il regime forfettario, dove l'invio elettronico è obbligatorio per chi supera la soglia. Gestisce automaticamente la <strong>marca da bollo virtuale da €2</strong> per fatture esenti IVA superiori a €77,47.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #00bfa5;">
+              <h3 style="color: #00bfa5; font-size: 1.2rem; margin-bottom: 0.75rem;">Funziona anche per osteopati, chinesiologi e posturologi?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. PhysioStudio è pensato per tutti i professionisti della riabilitazione e del movimento: <strong>fisioterapisti, osteopati, chinesiologi, posturologi, terapisti occupazionali, massoterapisti e personal trainer riabilitativi</strong>. Le schede di valutazione e i protocolli sono configurabili per ciascuna disciplina.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #00bfa5;">
+              <h3 style="color: #00bfa5; font-size: 1.2rem; margin-bottom: 0.75rem;">Come funziona lo sviluppo del software su misura?</h3>
+              <p style="color: #ccc; margin: 0;">Il processo è semplice: <strong>1)</strong> consulenza gratuita su WhatsApp per capire le esigenze del tuo studio (disciplina, numero terapisti, sedi, integrazioni necessarie); <strong>2)</strong> sviluppo dei moduli personalizzati in 2-3 settimane; <strong>3)</strong> importazione anagrafica pazienti da Excel/CSV; <strong>4)</strong> formazione team via videocall (1-2 ore); <strong>5)</strong> supporto italiano dedicato nelle prime due settimane. Lo studio è pienamente operativo entro 3 settimane dall'ordine.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #00bfa5;">
+              <h3 style="color: #00bfa5; font-size: 1.2rem; margin-bottom: 0.75rem;">Come capisco se è adatto al mio studio?</h3>
+              <p style="color: #ccc; margin: 0;">La <strong>prima consulenza è gratuita</strong> e senza impegno. Scrivi su WhatsApp al <a href="https://wa.me/393516248936" target="_blank" style="color: #00bfa5;">+39 351 624 8936</a> raccontandomi come lavora oggi il tuo studio (numero pazienti, disciplina, integrazioni necessarie): ti dico se PhysioStudio è la soluzione giusta e ti faccio vedere casi reali di studi simili al tuo. Niente impegni, niente vendite forzate.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Closing -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Preferisci parlare direttamente?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Contattami su WhatsApp per un confronto rapido</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Contattami su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- TESTO SEO ESTESO -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h2 class="display-5 mb-4 text-center">Il Gestionale per Studi di Fisioterapia più Completo d'Italia</h2>
+          <div style="color: #ccc; line-height: 1.9; font-size: 1.05rem;">
+            <p><strong style="color:#fff;">PhysioStudio</strong> è il <strong>software gestionale per fisioterapisti</strong> progettato per <strong>studi di fisioterapia</strong>, <strong>centri di riabilitazione</strong>, <strong>osteopati</strong>, <strong>chinesiologi</strong>, <strong>posturologi</strong> e <strong>terapisti occupazionali</strong> italiani. Non è un CRM generico adattato: ogni funzione nasce per risolvere i problemi reali della professione &mdash; dalla cartella clinica con scale di valutazione (VAS, NPRS, ODI, Tampa) fino alla fatturazione SDI con marca da bollo virtuale automatica.</p>
+            <p>Il <strong>gestionale per studio fisioterapico</strong> include tutto: <strong>cartella clinica digitale</strong> con anamnesi guidata, <strong>app esercizi paziente</strong> con video tutorial e tracking compliance, <strong>agenda multi-terapista</strong> con prenotazioni online, <strong>pacchetti sedute</strong> con scadenza automatica, <strong>reminder WhatsApp e SMS</strong>, <strong>valutazione posturale digitale</strong> con foto comparative pre/post, <strong>grafici progressi paziente</strong> (ROM, dolore, forza) e <strong>fatturazione elettronica SDI</strong> integrata con marca da bollo virtuale per regime forfettario.</p>
+            <p>A differenza dei gestionali SaaS con canone mensile, PhysioStudio si acquista con <strong>licenza a vita</strong>: paghi una volta e il software è tuo per sempre, con aggiornamenti e supporto italiano dedicato inclusi. Ogni installazione viene <strong>realizzata su misura sulle esigenze dello studio</strong> &mdash; cartella clinica configurata per la disciplina, integrazioni dedicate, formazione team. Il preventivo è personalizzato e dipende dai moduli necessari.</p>
+            <p>PhysioStudio si integra con altri software gestionali verticali del nostro ecosistema: <a href="crm-centri-estetici.html" style="color:#00bfa5;">BeautyCenterCRM per centri estetici</a>, <a href="checkin-digitale-hotel.html" style="color:#00bfa5;">CheckIn Facile per hotel e B&amp;B</a>, <a href="agente-immobiliare-ai.html" style="color:#00bfa5;">Agente Immobiliare AI</a> e <a href="servizi-perfex-crm.html" style="color:#00bfa5;">Perfex CRM B2B con moduli custom</a>. Per software completamente su misura per altre nicchie professionali, vedi i miei <a href="gestionali-personalizzati-aziende.html" style="color:#00bfa5;">gestionali personalizzati per aziende</a>.</p>
+            <p>PhysioStudio è in uso presso studi di fisioterapia in tutta Italia: <strong>Milano, Roma, Napoli, Torino, Bologna, Firenze, Verona, Padova, Brescia, Genova, Bari, Palermo</strong> e in altre province. Compatibile con tutti i dispositivi: PC studio, tablet sala, smartphone paziente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container text-center">
+      <h2 class="display-3 mb-3">Porta il Tuo Studio di Fisioterapia al Livello Successivo</h2>
+      <p class="lead mb-4">Software realizzato sulle esigenze del tuo studio. Sviluppo dedicato in 2-3 settimane. Formazione team inclusa. Supporto italiano dedicato.</p>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+        <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20PhysioStudio%20per%20il%20mio%20studio" target="_blank" rel="noopener" class="btn btn-light btn-lg" style="padding: 1rem 2.5rem; font-weight: 600; border-radius: 50px; color: #00897b;">
+          🚀 Sviluppa il Tuo Software
+        </a>
+        <a href="preventivo-app.html" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; border-radius: 50px;">
+          📝 Preventivo Gratuito
+        </a>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; max-width: 650px; margin: 0 auto;">
+        <p class="mb-2" style="font-size: 1.2rem;">⭐⭐⭐⭐⭐ <strong>4.8/5 stelle</strong> · 23 recensioni verificate</p>
+        <p class="mb-0" style="opacity: 0.9;">"L'app esercizi ha cambiato totalmente la compliance. -60% di no-show e +30% di rinnovi pacchetti."<br><em>— Dott. Andrea M., Studio Riabilitativo Verona</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#00bfa5; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="gestionali-personalizzati-aziende.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#00bfa5'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">💼</div>
+            <h3 style="color:#00bfa5; font-size:1.3rem; margin-bottom:0.75rem;">Gestionali personalizzati</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Ti serve più di un verticale pronto? Sviluppo gestionali completamente su misura per il tuo settore.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-app-mobile.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#00bfa5'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📱</div>
+            <h3 style="color:#00bfa5; font-size:1.3rem; margin-bottom:0.75rem;">App mobile native</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">App native iOS/Android per il tuo studio: prenotazioni, esercizi, telemedicina e tracking paziente.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="preventivo-app.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#00bfa5'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📝</div>
+            <h3 style="color:#00bfa5; font-size:1.3rem; margin-bottom:0.75rem;">Richiedi preventivo</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Vuoi sviluppare un software custom sulle tue esigenze? Form preventivo gratuito senza impegno.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #000; color: #fff; padding: 3rem 0 2rem;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h4 style="color: #00bfa5;">PhysioStudio</h4>
+          <p style="color: #aaa; font-size: 0.95rem;">Software gestionale per fisioterapisti, osteopati, chinesiologi e centri di riabilitazione. Sviluppato da Andrea Piani.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">🔗 Link Utili</h5>
+          <ul style="list-style: none; padding: 0; line-height: 2;">
+            <li><a href="crm-centri-estetici.html" class="link-back" style="color: #e91e63; text-decoration: none;">BeautyCenterCRM</a></li>
+            <li><a href="checkin-digitale-hotel.html" class="link-back" style="color: #149dcc; text-decoration: none;">CheckIn Facile</a></li>
+            <li><a href="agente-immobiliare-ai.html" class="link-back" style="color: #df0067; text-decoration: none;">Agente Immobiliare AI</a></li>
+            <li><a href="gestionali-personalizzati-aziende.html" class="link-back" style="color: #aaa; text-decoration: none;">Tutti i SaaS</a></li>
+            <li><a href="preventivo-app.html" class="link-back" style="color: #aaa; text-decoration: none;">Richiedi Preventivo</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">📞 Contatti</h5>
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.8;">
+            Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc;">andreapiani.dev@gmail.com</a><br>
+            WhatsApp: <a href="https://wa.me/393516248936" target="_blank" style="color: #25d366;">+39 351 624 8936</a>
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: #333; margin: 2rem 0;">
+      <div class="text-center" style="color: #666; font-size: 0.9rem;">
+        <p class="mb-2">&copy; 2026 Andrea Piani - Tutti i diritti riservati</p>
+        <p class="mb-0">
+          <a href="privacy-policy.html" style="color: #888;">Privacy Policy</a> |
+          <a href="cookie-policy.html" style="color: #888;">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/popup-loader.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Andrea AI Chat Widget -->
+  <script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+</body>
+</html>

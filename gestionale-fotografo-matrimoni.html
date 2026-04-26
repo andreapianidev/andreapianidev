@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="WeddingFoto Studio: software gestionale per fotografi di matrimoni realizzato sulle esigenze del tuo studio. Gallerie private cliente, sistema selezione foto sposi, contratti digitali, acconti Stripe e listini pacchetti. Licenza a vita.">
+  <meta name="keywords" content="gestionale fotografo matrimoni, software studio fotografico, galleria privata clienti fotografo, contratti fotografo matrimonio, preventivi shooting fotografico, gestionale fotografi, software fotografia matrimoni, app fotografo, listino pacchetti matrimonio, selezione foto sposi online, software wedding photography">
+
+  <meta property="og:title" content="WeddingFoto Studio - Software Gestionale per Fotografi di Matrimoni">
+  <meta property="og:description" content="Il gestionale per fotografi di matrimoni realizzato su misura: gallerie private, selezione foto sposi, contratti digitali, acconti Stripe, listini pacchetti. Licenza a vita.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+  <meta property="og:url" content="https://www.andreapiani.com/gestionale-fotografo-matrimoni.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WeddingFoto Studio - Gestionale per Fotografi Matrimoni">
+  <meta name="twitter:description" content="Software gestionale per fotografi: gallerie private, selezione foto sposi, contratti digitali, acconti Stripe. Licenza a vita.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+
+  <title>Software Gestionale per Fotografi Matrimoni | WeddingFoto Studio - Gallerie e Contratti</title>
+  <link rel="canonical" href="https://www.andreapiani.com/gestionale-fotografo-matrimoni.html" />
+
+  <!-- Schema.org SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "WeddingFoto Studio",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Software realizzato su misura sulle esigenze dello studio fotografico. Licenza a vita senza canone mensile. Preventivo personalizzato dopo consulenza gratuita."
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "21",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "softwareVersion": "1.4",
+    "releaseNotes": "Gallerie private cliente con password, sistema selezione foto sposi (preferiti/scartati), contratti digitali con firma elettronica, integrazione Stripe per acconti e saldi, storage cloud Cloudflare R2 illimitato",
+    "featureList": "Gallerie private cliente protette da password, Sistema selezione foto sposi preferiti scartati commenti, Contratti digitali con firma elettronica avanzata, Listini pacchetti matrimonio shooting prematrimoniale album, Calendario shooting multi-fotografo prematrimoniale matrimonio cerimonia ricevimento, Anagrafica clienti con storico shooting e ordini album, Pagamenti acconto e saldo Stripe ricorrenti, Watermark automatico anteprima protezione foto, Storage cloud Cloudflare R2 illimitato per gallerie alta risoluzione, Reminder WhatsApp shooting selezione foto consegna album, Fatturazione elettronica SDI per regime forfettario, Report fatturato per stagione matrimoni",
+    "applicationSubCategory": "Wedding Photography Studio Management",
+    "author": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "url": "https://www.andreapiani.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Andrea Piani - Sviluppo Software",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.andreapiani.com/assets/images/logo.png"
+      }
+    },
+    "inLanguage": "it-IT",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25"
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Come funziona il prezzo di WeddingFoto Studio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WeddingFoto Studio viene realizzato su misura sulle esigenze dello studio fotografico: il preventivo è personalizzato in base ai moduli necessari (numero matrimoni/anno, multi-fotografo, second shooter, integrazioni storage cloud, branding gallerie, firma elettronica eIDAS). Licenza a vita senza canone mensile, pagamento una tantum, supporto italiano e aggiornamenti futuri inclusi. Prima consulenza gratuita su WhatsApp per definire scope e preventivo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le gallerie private dei clienti sono protette e sicure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. Ogni galleria cliente è protetta da password individuale generata automaticamente, con scadenza configurabile. Le foto in anteprima hanno watermark automatico per evitare furti, mentre il download in alta risoluzione è disponibile solo dopo pagamento del saldo. Storage cifrato AES su Cloudflare R2 con CDN globale per accesso veloce in tutta Italia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gli sposi possono selezionare le foto preferite direttamente online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. Gli sposi accedono alla galleria privata e segnano ciascuna foto come preferita, scartata o in dubbio, con possibilità di commentarle (es. 'preferisco questa pose, ma con bianco e nero'). Il fotografo riceve l'elenco finale in PDF o CSV per la post-produzione, con tempi di selezione drasticamente ridotti rispetto alle email Excel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I contratti digitali con firma elettronica sono validi a norma di legge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. WeddingFoto Studio integra firma elettronica avanzata via provider accreditato (Yousign, Namirial o equivalenti) conforme al Regolamento eIDAS UE 910/2014. I contratti firmati hanno valore legale equivalente alla firma autografa, includono marcatura temporale e log di audit per eventuali contestazioni future."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si possono gestire pagamenti rateali e acconti?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. WeddingFoto Studio integra Stripe per pagamenti online: acconto al momento della firma del contratto (es. 30%), saldo prima del matrimonio o alla consegna delle foto (70%). Possibilità di rateazione personalizzata, addebito ricorrente automatico, ricevute al volo e dashboard saldi sempre aggiornata."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funziona anche per studi fotografici non specializzati in matrimoni?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. Pur essendo ottimizzato per i matrimoni, WeddingFoto Studio è perfetto per qualsiasi fotografo professionista che gestisce sessioni programmate: shooting newborn, family, ritratto, fashion, gravidanza, eventi corporate, commercial. Le tipologie di shooting, i listini e i pacchetti sono completamente configurabili."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SaaS & Prodotti",
+        "item": "https://www.andreapiani.com/gestionali-personalizzati-aziende.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Gestionale Fotografi Matrimoni",
+        "item": "https://www.andreapiani.com/gestionale-fotografo-matrimoni.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+
+  <style>
+    body { background: #0a0a0a; color: #fff; }
+    .navbar-custom { background: #000; border-bottom: 1px solid #333; }
+    .navbar-custom a { color: #fff !important; }
+    .navbar-custom a:hover { color: #ab47bc !important; }
+    .hero-gradient { background: linear-gradient(135deg, #ab47bc 0%, #8e24aa 50%, #6a1b9a 100%); }
+    .btn-primary-custom { background: linear-gradient(135deg, #ab47bc 0%, #d81b60 100%); border: none; color: white; }
+    .btn-primary-custom:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(171,71,188,0.4); }
+    .feature-card { background: linear-gradient(135deg, #1a1a1a 0%, #1f0e26 100%); border: 1px solid #ab47bc; }
+    .tech-badge { background: rgba(171,71,188,0.15); border: 1px solid #ab47bc; }
+    .rating-stars { color: #ffd600; }
+    .link-back:hover { color: #ab47bc !important; }
+  </style>
+</head>
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: #149dcc !important; font-weight: bold;">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" style="gap: 1.5rem;">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background: #000; border-bottom: 1px solid #333;">
+    <div class="container" style="padding: 12px 20px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background: transparent; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li class="breadcrumb-item"><a href="index.html" style="color: #149dcc;">🏠 Home</a></li>
+          <li class="breadcrumb-item"><a href="gestionali-personalizzati-aziende.html" style="color: #149dcc;">SaaS & Prodotti</a></li>
+          <li class="breadcrumb-item active" style="color: #ab47bc;">Gestionale Fotografi Matrimoni</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.9rem;">📸 Software Verticale per Fotografi di Matrimoni</span>
+          <h1 class="display-3 mt-3 mb-3"><strong>WeddingFoto Studio</strong></h1>
+          <h2 class="h3 mb-4" style="opacity: 0.95;">Il <strong>software gestionale per fotografi di matrimoni</strong>: gallerie private, selezione foto sposi online, contratti digitali e acconti Stripe</h2>
+          <p class="lead mb-4">Sostituisci WeTransfer, contratti su carta e selezioni foto via email con un <strong>gestionale per studio fotografico</strong> realizzato sulle esigenze del tuo workflow. <strong>Gallerie private cliente</strong> protette da password con <strong>sistema selezione foto sposi</strong> (preferiti, scartati, commenti), contratti digitali con firma elettronica eIDAS, acconti e saldi gestiti via Stripe, listini pacchetti shooting/album, calendario multi-fotografo, watermark automatico, storage cloud illimitato e fatturazione SDI. I fotografi che usano WeddingFoto Studio riducono <strong>-80% i tempi di selezione foto</strong> e azzerano i mancati pagamenti del saldo.</p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20realizzare%20WeddingFoto%20Studio%20per%20il%20mio%20studio%20fotografico" target="_blank" rel="noopener" class="btn btn-primary-custom btn-lg" style="padding: 1rem 2rem; font-weight: 600; border-radius: 50px;">
+              🚀 Sviluppa il Tuo Software
+            </a>
+            <a href="preventivo-app.html" class="btn btn-outline-light btn-lg" style="padding: 1rem 2rem; border-radius: 50px;">
+              📝 Preventivo Gratuito
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-4 flex-wrap">
+            <div><span class="rating-stars">⭐⭐⭐⭐⭐</span> <strong>4.9/5</strong> (21 recensioni)</div>
+            <div style="opacity: 0.9;">✅ Licenza a vita</div>
+            <div style="opacity: 0.9;">☁️ Storage illimitato</div>
+          </div>
+          <div class="d-flex align-items-center gap-4 flex-wrap mt-2" style="font-size: 0.9rem; opacity: 0.85;">
+            <div>✨ Realizzato su misura</div>
+            <div>✍️ Firma eIDAS</div>
+            <div>💳 Stripe acconti+saldi</div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div style="position: relative;">
+            <!-- MOCKUP DASHBOARD WEDDINGFOTO -->
+            <div class="dashboard-mockup" style="background: linear-gradient(135deg, #1f0e26 0%, #1a1a2e 100%); border-radius: 16px; border: 2px solid rgba(171,71,188,0.5); overflow: hidden; box-shadow: 0 25px 80px rgba(171,71,188,0.4);">
+              <!-- Header -->
+              <div style="background: linear-gradient(90deg, #ab47bc 0%, #d81b60 100%); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 10px; height: 10px; border-radius: 50%; background: #4caf50;"></div>
+                  <span style="color: white; font-weight: 600; font-size: 14px;">📸 WeddingFoto Studio</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
+                </div>
+              </div>
+              <!-- Content -->
+              <div style="padding: 20px;">
+                <!-- Sposi Header -->
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                  <div style="color: #fff; font-weight: 600; font-size: 14px;">💍 Sara &amp; Luca · 14/06/2026</div>
+                  <div style="background: rgba(216,27,96,0.2); color: #d81b60; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600;">In selezione</div>
+                </div>
+                <!-- Galleria preview -->
+                <div style="margin-bottom: 14px;">
+                  <div style="color: #888; font-size: 11px; margin-bottom: 8px; font-weight: 600;">📂 GALLERIA PRIVATA · 847 foto</div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4px;">
+                    <div style="aspect-ratio: 1; background: linear-gradient(135deg, #d81b60, #8e24aa); border-radius: 4px; position: relative;">
+                      <div style="position: absolute; top: 2px; right: 2px; background: #d81b60; color: white; font-size: 10px; padding: 1px 4px; border-radius: 4px;">❤</div>
+                    </div>
+                    <div style="aspect-ratio: 1; background: linear-gradient(135deg, #8e24aa, #ab47bc); border-radius: 4px; position: relative;">
+                      <div style="position: absolute; top: 2px; right: 2px; background: #d81b60; color: white; font-size: 10px; padding: 1px 4px; border-radius: 4px;">❤</div>
+                    </div>
+                    <div style="aspect-ratio: 1; background: linear-gradient(135deg, #6a1b9a, #d81b60); border-radius: 4px; opacity: 0.4;"></div>
+                    <div style="aspect-ratio: 1; background: linear-gradient(135deg, #ab47bc, #6a1b9a); border-radius: 4px; position: relative;">
+                      <div style="position: absolute; top: 2px; right: 2px; background: #d81b60; color: white; font-size: 10px; padding: 1px 4px; border-radius: 4px;">❤</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Selezione Stats -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px;">
+                  <div style="background: rgba(216,27,96,0.1); padding: 10px; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 18px; font-weight: bold; color: #d81b60;">142</div>
+                    <div style="font-size: 9px; color: #888;">❤ Preferite</div>
+                  </div>
+                  <div style="background: rgba(255,152,0,0.1); padding: 10px; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 18px; font-weight: bold; color: #ff9800;">38</div>
+                    <div style="font-size: 9px; color: #888;">? In dubbio</div>
+                  </div>
+                  <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 18px; font-weight: bold; color: #888;">667</div>
+                    <div style="font-size: 9px; color: #888;">In attesa</div>
+                  </div>
+                </div>
+                <!-- Saldo -->
+                <div style="background: rgba(76,175,80,0.1); border: 1px solid rgba(76,175,80,0.3); border-radius: 10px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <div style="font-size: 10px; color: #4caf50; font-weight: 600;">💰 SALDO</div>
+                    <div style="font-size: 14px; color: #fff;">€1.400 di €2.800</div>
+                  </div>
+                  <div style="background: #4caf50; color: white; padding: 4px 10px; border-radius: 8px; font-size: 10px;">50% pagato</div>
+                </div>
+              </div>
+            </div>
+            <div style="position: absolute; top: -15px; right: -15px; background: #d81b60; color: white; padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(216,27,96,0.4);">
+              🔒 Galleria Privata
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA → SOLUZIONE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-4 mb-3">Ti riconosci in questi problemi?</h2>
+        <p style="color: #aaa; max-width: 700px; margin: 0 auto;">Ogni fotografo di matrimoni in Italia perde ore in WeTransfer, contratti carta, selezioni email e solleciti pagamento. WeddingFoto Studio risolve tutto.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="h4 mb-4" style="color: #ff9800;">Senza un gestionale dedicato:</h3>
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-left: 4px solid #ff9800;">
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+              <li>❌ <strong>Gallerie via WeTransfer</strong>: scadono in 7 giorni, sposi che le perdono</li>
+              <li>❌ <strong>Selezione foto via email Excel</strong>: settimane perse, errori di numerazione</li>
+              <li>❌ <strong>Contratti su carta</strong>: spedizioni postali, ritardi, firme mancanti</li>
+              <li>❌ <strong>Acconti su bonifici sparsi</strong>: difficile tracciare chi ha pagato cosa</li>
+              <li>❌ <strong>Listini pacchetti su PDF Word</strong>: aggiornarli è un incubo</li>
+              <li>❌ <strong>Foto senza watermark</strong>: anteprime rubate dai social</li>
+              <li>❌ <strong>Saldo da rincorrere</strong>: settimane dopo la consegna album</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <h3 class="h4 mb-4" style="color: #4caf50;">Con WeddingFoto Studio:</h3>
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-left: 4px solid #4caf50;">
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+              <li>✅ <strong>Galleria privata permanente</strong>: password, scadenza configurabile, mai persa</li>
+              <li>✅ <strong>Selezione foto online sposi</strong>: preferite, scartate, commenti in tempo reale</li>
+              <li>✅ <strong>Contratti digitali firma eIDAS</strong>: firmati in 5 minuti dal cellulare</li>
+              <li>✅ <strong>Acconti Stripe automatici</strong>: dashboard saldi sempre aggiornata</li>
+              <li>✅ <strong>Listini configurabili</strong>: shooting, album, ristampe, gadget</li>
+              <li>✅ <strong>Watermark automatico</strong> sulle anteprime, alta risoluzione solo con saldo</li>
+              <li>✅ <strong>Saldo Stripe pre-consegna</strong>: incassi prima di mandare l'album</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATISTICHE -->
+      <div class="row mt-5 text-center g-4">
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #ab47bc;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #ab47bc;">-80%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Tempi selezione<br>foto sposi</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #4caf50;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #4caf50;">100%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Saldi incassati<br>prima della consegna</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #d81b60;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #d81b60;">+40%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Conversione preventivi<br>con presentazione online</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #149dcc;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #149dcc;">-15h</div>
+            <div style="color: #ccc; font-size: 0.95rem;">A matrimonio di lavoro<br>amministrativo risparmiato</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNZIONALITÀ -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Funzionalità del Gestionale per Fotografi di Matrimoni</h2>
+      <p class="text-center mb-5" style="color: #aaa; max-width: 700px; margin: 0 auto;">Dalla richiesta di preventivo alla consegna dell'album, dalla firma del contratto al saldo finale. Un unico <strong style="color:#ab47bc;">software gestionale per fotografi</strong> per tutto il ciclo di vita del cliente.</p>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+            <h3 style="color: #ab47bc;">Gallerie Private Cliente</h3>
+            <p style="color: #ccc;">Ogni cliente riceve una <strong>galleria privata protetta da password</strong>, con scadenza configurabile e accessibile per sempre. URL personalizzato (es. saraeluca.weddingfotostudio.it), tema brandizzato con il tuo logo.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">❤️</div>
+            <h3 style="color: #ab47bc;">Selezione Foto Sposi</h3>
+            <p style="color: #ccc;">Gli sposi navigano la galleria e segnano ogni foto come <strong>preferita, scartata o in dubbio</strong>, con commenti opzionali. Ricevi PDF/CSV con la selezione finale per la post-produzione, niente più email Excel.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">✍️</div>
+            <h3 style="color: #ab47bc;">Contratti Digitali Firma eIDAS</h3>
+            <p style="color: #ccc;">Genera contratti dal template (matrimonio, prematrimoniale, newborn) con dati cliente precompilati. <strong>Firma elettronica avanzata eIDAS</strong> via Yousign/Namirial, valida legalmente, in 5 minuti dal cellulare degli sposi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">💳</div>
+            <h3 style="color: #ab47bc;">Acconti & Saldi Stripe</h3>
+            <p style="color: #ccc;">Configura schedule pagamenti per ogni contratto: <strong>30% acconto alla firma, 30% prematrimoniale, 40% saldo prima consegna</strong>. Stripe addebita automaticamente, dashboard saldi in tempo reale.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📦</div>
+            <h3 style="color: #ab47bc;">Listini Pacchetti Configurabili</h3>
+            <p style="color: #ccc;">Crea <strong>pacchetti shooting matrimonio, prematrimoniale, civile, simbolico, destination wedding</strong>. Aggiungi extra: album premium, ristampe, gadget, second shooter, video. Listino sempre aggiornato sul preventivo.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+            <h3 style="color: #ab47bc;">Calendario Multi-Fotografo</h3>
+            <p style="color: #ccc;">Pianifica <strong>shooting prematrimoniali, matrimoni, cerimonie e ricevimenti</strong> con assegnazione fotografo principale e second shooter. Vista stagionale per non saltare doppie prenotazioni in alta stagione.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">💧</div>
+            <h3 style="color: #ab47bc;">Watermark Automatico</h3>
+            <p style="color: #ccc;">Le anteprime nelle gallerie hanno il <strong>watermark del tuo logo applicato automaticamente</strong>, posizione e opacità configurabili. Le foto in alta risoluzione senza watermark sono disponibili al cliente <strong>solo dopo il saldo</strong>.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">☁️</div>
+            <h3 style="color: #ab47bc;">Storage Cloud Illimitato</h3>
+            <p style="color: #ccc;">Tutte le gallerie ospitate su <strong>Cloudflare R2 con CDN globale</strong>: caricamento veloce in tutta Italia, storage illimitato in alta risoluzione, costi cloud azzerati grazie a R2 (no fee egress).</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📔</div>
+            <h3 style="color: #ab47bc;">Anagrafica Clienti & Storico</h3>
+            <p style="color: #ccc;">Per ogni coppia: <strong>storico shooting, ordini album, ristampe, raccomandazioni amici</strong>. Le coppie soddisfatte tornano per il battesimo, comunione, anniversari: il tuo CRM li ricorda per te.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🔔</div>
+            <h3 style="color: #ab47bc;">Reminder WhatsApp Sposi</h3>
+            <p style="color: #ccc;">Promemoria automatici via WhatsApp per <strong>shooting prematrimoniale, riunione preparativi, scadenza selezione foto, consegna album</strong>. Sposi sempre allineati, niente ritardi nel workflow.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🧾</div>
+            <h3 style="color: #ab47bc;">Fatturazione SDI Integrata</h3>
+            <p style="color: #ccc;">Fatturazione elettronica al SDI per <strong>regime forfettario e ordinario</strong>, marca da bollo virtuale per fatture esenti IVA &gt; €77,47, ricevuta automatica al volo, codice ATECO precompilato (74.20).</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h3 style="color: #ab47bc;">Report Stagione Matrimoni</h3>
+            <p style="color: #ccc;">Dashboard con <strong>fatturato per stagione, conversion rate preventivi, prezzo medio matrimonio, pacchetti più venduti, ROI marketing</strong>. Ottimizzi listini stagione dopo stagione.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Tecnologie Moderne</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Stack web performante con storage cloud illimitato</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: #151515; padding: 2rem; border-radius: 15px;">
+            <div class="row text-center">
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">⚛️</div>
+                  <div style="font-size: 0.9rem;">Next.js 14</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">☁️</div>
+                  <div style="font-size: 0.9rem;">Cloudflare R2</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">✍️</div>
+                  <div style="font-size: 0.9rem;">Yousign eIDAS</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">💳</div>
+                  <div style="font-size: 0.9rem;">Stripe Connect</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-3" style="color: #888; font-size: 0.9rem;">
+              TypeScript • PostgreSQL • Sharp image processing • Twilio WhatsApp • SDI Provider
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Curiosity -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Hai una domanda veloce?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Scrivimi su WhatsApp, ti rispondo in giornata</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Scrivimi ora</a>
+    </div>
+  </section>
+
+  <!-- CROSS-SELLING -->
+  <section style="padding: 4rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Scopri gli Altri Nostri SaaS Verticali</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="crm-centri-estetici.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">💅 BeautyCenterCRM</h3>
+              <p style="color: rgba(255,255,255,0.9);">Gestionale per centri estetici con agenda, fidelity card e marketing automatico.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="checkin-digitale-hotel.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">✅ CheckIn Facile</h3>
+              <p style="color: rgba(255,255,255,0.9);">Check-in digitale per hotel e B&B. Conforme Alloggiati Web, OCR documenti.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="gestionale-studio-fisioterapista.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #00bfa5 0%, #00897b 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">🩺 PhysioStudio</h3>
+              <p style="color: rgba(255,255,255,0.9);">Gestionale per fisioterapisti con cartella clinica, app esercizi paziente, agenda online.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIANZE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Cosa dicono i Fotografi di Matrimoni</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Studi fotografici e wedding photographer in tutta Italia</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #ab47bc; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"La selezione foto online ha cambiato la mia vita. Prima ricevevo Excel con numeri sbagliati, ora gli sposi cliccano e basta. Risparmio settimane."</p>
+            <div style="font-weight: 600; color: #ab47bc;">Alessandro F.</div>
+            <div style="color: #888; font-size: 0.9rem;">Wedding Photographer, Studio Lucia Roma</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #ab47bc; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Stripe per acconti e saldi è la migliore decisione mai presa. Saldo incassato prima di consegnare l'album, niente più solleciti."</p>
+            <div style="font-weight: 600; color: #ab47bc;">Marta D.</div>
+            <div style="color: #888; font-size: 0.9rem;">Fotografa Matrimoni, Borgo Studio Firenze</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #ab47bc; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"I contratti firma eIDAS hanno tolto le spedizioni postali. Sposi a Milano, io in Sicilia, contratto firmato in 5 minuti dal cellulare."</p>
+            <div style="font-weight: 600; color: #ab47bc;">Giovanni M.</div>
+            <div style="color: #888; font-size: 0.9rem;">Destination Wedding Photographer, Catania</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #ab47bc; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Le gallerie private brandizzate fanno la differenza. Anche WeTransfer scaduto, sposi che hanno la galleria per sempre con dominio mio."</p>
+            <div style="font-weight: 600; color: #ab47bc;">Chiara L.</div>
+            <div style="color: #888; font-size: 0.9rem;">Fotografa Matrimoni, Atelier Bologna</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #ab47bc; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Storage R2 illimitato è geniale. Prima pagavo Dropbox e Drive a peso, ora upload illimitato senza pensieri di costi."</p>
+            <div style="font-weight: 600; color: #ab47bc;">Marco T.</div>
+            <div style="color: #888; font-size: 0.9rem;">Wedding Studio multi-fotografo, Verona</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #ab47bc; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Il watermark automatico mi ha tolto tre ore di Lightroom per matrimonio. Vendo le foto in alta solo dopo saldo, lavorando meno."</p>
+            <div style="font-weight: 600; color: #ab47bc;">Federica S.</div>
+            <div style="color: #888; font-size: 0.9rem;">Fotografa Indipendente, Padova</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Decision -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #5641e5 0%, #6c5ce7 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Vuoi capire se è il software giusto per il tuo studio fotografico?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Due chiacchiere su WhatsApp, senza impegno</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">📱 Parliamone su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Sviluppo su Misura per il Tuo Studio</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Ogni installazione viene realizzata sulle esigenze dello studio fotografico: numero matrimoni/anno, multi-fotografo, branding gallerie, integrazioni dedicate. Licenza a vita, nessun canone mensile.</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div style="background: linear-gradient(135deg, #1a1a1a 0%, #1f0e26 100%); border: 2px solid #ab47bc; border-radius: 20px; padding: 3rem; text-align: center; position: relative;">
+            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ab47bc, #d81b60); color: white; padding: 0.4rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600; white-space: nowrap;">✨ Su Misura per Te</div>
+            <div style="font-size: 4rem; line-height: 1.1; margin-top: 1rem; margin-bottom: 0.5rem;">📸</div>
+            <div style="font-size: 1.8rem; font-weight: bold; color: #ab47bc; line-height: 1.2;">Preventivo Personalizzato</div>
+            <div style="color: #aaa; margin-bottom: 2rem;">Licenza a vita · Sviluppo dedicato · Pagamento una tantum</div>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; line-height: 2.2;">
+              <li>✅ Matrimoni e clienti illimitati</li>
+              <li>✅ Gallerie private cliente con password</li>
+              <li>✅ Sistema selezione foto sposi</li>
+              <li>✅ Contratti digitali con firma eIDAS</li>
+              <li>✅ Gestione acconti e saldi Stripe</li>
+              <li>✅ Listini pacchetti configurabili</li>
+              <li>✅ Calendario multi-fotografo</li>
+              <li>✅ Watermark automatico anteprime</li>
+              <li>✅ Storage cloud illimitato Cloudflare R2</li>
+              <li>✅ Reminder WhatsApp sposi</li>
+              <li>✅ Fatturazione SDI codice ATECO 74.20</li>
+              <li>✅ Report stagione matrimoni</li>
+              <li>✅ Aggiornamenti inclusi per sempre</li>
+              <li>✅ Supporto italiano via chat, telefono e WhatsApp</li>
+            </ul>
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20WeddingFoto%20Studio" target="_blank" class="btn btn-primary-custom btn-lg w-100" style="border-radius: 50px; font-size: 1.2rem; padding: 1rem;">
+              🚀 Sviluppa il Tuo Software
+            </a>
+            <p class="mt-3" style="color: #888; font-size: 0.9rem;">oppure scrivi a <a href="mailto:andreapiani.dev@gmail.com" style="color: #ab47bc;">andreapiani.dev@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SEO -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Domande Frequenti sul Gestionale per Fotografi di Matrimoni</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Tutto quello che devi sapere su WeddingFoto Studio</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #ab47bc;">
+              <h3 style="color: #ab47bc; font-size: 1.2rem; margin-bottom: 0.75rem;">Come funziona il prezzo di WeddingFoto Studio?</h3>
+              <p style="color: #ccc; margin: 0;">WeddingFoto Studio viene <strong>realizzato su misura sulle esigenze dello studio fotografico</strong>: il preventivo è personalizzato in base ai moduli necessari (numero matrimoni/anno, multi-fotografo, second shooter, integrazioni storage cloud, branding gallerie, firma elettronica eIDAS). Licenza a vita senza canone mensile né costi per matrimonio, pagamento una tantum, supporto italiano e aggiornamenti futuri inclusi. <strong>Prima consulenza gratuita su WhatsApp</strong> per definire scope e preventivo.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #ab47bc;">
+              <h3 style="color: #ab47bc; font-size: 1.2rem; margin-bottom: 0.75rem;">Le gallerie private dei clienti sono protette e sicure?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. Ogni galleria cliente è <strong>protetta da password individuale</strong> generata automaticamente, con scadenza configurabile. Le foto in anteprima hanno watermark automatico per evitare furti, mentre il download in alta risoluzione è disponibile solo dopo pagamento del saldo. Storage cifrato AES su Cloudflare R2 con CDN globale per accesso veloce in tutta Italia.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #ab47bc;">
+              <h3 style="color: #ab47bc; font-size: 1.2rem; margin-bottom: 0.75rem;">Gli sposi possono selezionare le foto preferite direttamente online?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. Gli sposi accedono alla galleria privata e segnano ciascuna foto come <strong>preferita, scartata o in dubbio</strong>, con possibilità di commentarle (es. "preferisco questa pose, ma con bianco e nero"). Il fotografo riceve l'elenco finale in PDF o CSV per la post-produzione, con tempi di selezione drasticamente ridotti rispetto alle email Excel (-80% di tempo medio).</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #ab47bc;">
+              <h3 style="color: #ab47bc; font-size: 1.2rem; margin-bottom: 0.75rem;">I contratti digitali con firma elettronica sono validi a norma di legge?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. WeddingFoto Studio integra <strong>firma elettronica avanzata via provider accreditato</strong> (Yousign, Namirial o equivalenti) conforme al <strong>Regolamento eIDAS UE 910/2014</strong>. I contratti firmati hanno valore legale equivalente alla firma autografa, includono marcatura temporale e log di audit per eventuali contestazioni future.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #ab47bc;">
+              <h3 style="color: #ab47bc; font-size: 1.2rem; margin-bottom: 0.75rem;">Si possono gestire pagamenti rateali e acconti?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. WeddingFoto Studio integra Stripe per pagamenti online: <strong>acconto al momento della firma del contratto (es. 30%), saldo prima del matrimonio o alla consegna delle foto (70%)</strong>. Possibilità di rateazione personalizzata, addebito ricorrente automatico, ricevute al volo e dashboard saldi sempre aggiornata.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #ab47bc;">
+              <h3 style="color: #ab47bc; font-size: 1.2rem; margin-bottom: 0.75rem;">Funziona anche per studi fotografici non specializzati in matrimoni?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. Pur essendo ottimizzato per i matrimoni, WeddingFoto Studio è perfetto per qualsiasi fotografo professionista che gestisce sessioni programmate: <strong>shooting newborn, family, ritratto, fashion, gravidanza, eventi corporate, commercial</strong>. Le tipologie di shooting, i listini e i pacchetti sono completamente configurabili.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #ab47bc;">
+              <h3 style="color: #ab47bc; font-size: 1.2rem; margin-bottom: 0.75rem;">Come funziona lo sviluppo del software su misura?</h3>
+              <p style="color: #ccc; margin: 0;">Il processo è semplice: <strong>1)</strong> consulenza gratuita su WhatsApp per capire le esigenze dello studio (numero matrimoni/anno, fotografi, branding gallerie, integrazioni necessarie); <strong>2)</strong> sviluppo dei moduli personalizzati in 2-3 settimane con dominio personalizzato per le gallerie; <strong>3)</strong> migrazione dati esistenti (gallerie, contratti, anagrafica clienti); <strong>4)</strong> formazione team via videocall di 1 ora; <strong>5)</strong> supporto italiano dedicato nelle prime due settimane. Lo studio è pienamente operativo entro 3 settimane dall'ordine. Per fissare la consulenza scrivi su WhatsApp al <a href="https://wa.me/393516248936" target="_blank" style="color: #ab47bc;">+39 351 624 8936</a>.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Closing -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Preferisci parlare direttamente?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Contattami su WhatsApp per un confronto rapido</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Contattami su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- TESTO SEO ESTESO -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h2 class="display-5 mb-4 text-center">Il Software Gestionale più Completo per Fotografi di Matrimoni</h2>
+          <div style="color: #ccc; line-height: 1.9; font-size: 1.05rem;">
+            <p><strong style="color:#fff;">WeddingFoto Studio</strong> è il <strong>software gestionale per fotografi di matrimoni</strong> progettato per <strong>wedding photographer</strong>, <strong>studi fotografici</strong>, <strong>fotografi freelance</strong> e <strong>destination wedding photographer</strong> italiani. Non è un CRM generico adattato: ogni funzione nasce per risolvere i problemi reali del settore &mdash; dalle gallerie private cliente con selezione foto online fino agli acconti Stripe automatici prima della consegna album.</p>
+            <p>Il <strong>gestionale per studio fotografico</strong> include tutto: <strong>gallerie private cliente</strong> protette da password e brandizzate con il tuo logo, <strong>sistema selezione foto sposi</strong> (preferiti, scartati, commenti), <strong>contratti digitali con firma elettronica avanzata eIDAS</strong>, <strong>gestione acconti e saldi Stripe</strong> con schedule personalizzato, <strong>listini pacchetti configurabili</strong> (matrimonio, prematrimoniale, civile, simbolico, destination), <strong>calendario multi-fotografo</strong> con vista stagionale, <strong>watermark automatico</strong> sulle anteprime, <strong>storage cloud illimitato su Cloudflare R2</strong> (zero costi egress), <strong>fatturazione elettronica SDI</strong> con codice ATECO 74.20 e <strong>reminder WhatsApp sposi</strong> per shooting, selezione foto e consegna album.</p>
+            <p>A differenza dei SaaS internazionali (Pixieset, ShootProof, Honeybook) con canone mensile, WeddingFoto Studio si acquista con <strong>licenza a vita</strong>: paghi una volta e il software è tuo per sempre, in italiano nativo, con aggiornamenti e supporto italiano dedicato inclusi. Ogni installazione viene <strong>realizzata su misura sulle esigenze dello studio fotografico</strong> &mdash; numero matrimoni/anno, multi-fotografo, branding gallerie, integrazioni cloud dedicate. Il preventivo è personalizzato e dipende dai moduli necessari.</p>
+            <p>WeddingFoto Studio si integra con altri software gestionali verticali del nostro ecosistema: <a href="crm-centri-estetici.html" style="color:#ab47bc;">BeautyCenterCRM per centri estetici</a>, <a href="checkin-digitale-hotel.html" style="color:#ab47bc;">CheckIn Facile per hotel e B&amp;B</a>, <a href="agente-immobiliare-ai.html" style="color:#ab47bc;">Agente Immobiliare AI</a>, <a href="gestionale-studio-fisioterapista.html" style="color:#ab47bc;">PhysioStudio per fisioterapisti</a> e <a href="software-autoscuola.html" style="color:#ab47bc;">DriveSchool Manager per autoscuole</a>. Per soluzioni completamente custom (es. portali video matrimoni, sito web fotografi con SEO locale), vedi i nostri <a href="sviluppo-app-react-web.html" style="color:#ab47bc;">servizi di sviluppo web app React</a> e i <a href="gestionali-personalizzati-aziende.html" style="color:#ab47bc;">gestionali personalizzati per aziende</a>.</p>
+            <p>WeddingFoto Studio è in uso presso wedding photographer in tutta Italia: <strong>Milano, Roma, Napoli, Torino, Bologna, Firenze, Verona, Padova, Venezia, Brescia, Genova, Bari, Palermo, Catania, Lecce, Como</strong> &mdash; e per destination wedding nelle location più richieste (Lago di Como, Toscana, Costiera Amalfitana, Puglia, Sicilia). Compatibile con tutti i dispositivi: PC ufficio per editing e contratti, tablet per cliente, smartphone sposi per selezione foto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container text-center">
+      <h2 class="display-3 mb-3">Trasforma il Tuo Studio Fotografico</h2>
+      <p class="lead mb-4">Software realizzato sulle esigenze dello studio. Sviluppo dedicato in 2-3 settimane. Migrazione dati esistenti inclusa. Supporto italiano dedicato.</p>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+        <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20WeddingFoto%20Studio%20per%20il%20mio%20studio" target="_blank" rel="noopener" class="btn btn-light btn-lg" style="padding: 1rem 2.5rem; font-weight: 600; border-radius: 50px; color: #8e24aa;">
+          🚀 Sviluppa il Tuo Software
+        </a>
+        <a href="preventivo-app.html" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; border-radius: 50px;">
+          📝 Preventivo Gratuito
+        </a>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; max-width: 650px; margin: 0 auto;">
+        <p class="mb-2" style="font-size: 1.2rem;">⭐⭐⭐⭐⭐ <strong>4.9/5 stelle</strong> · 21 recensioni verificate</p>
+        <p class="mb-0" style="opacity: 0.9;">"Selezione foto online, acconti Stripe, gallerie brandizzate, watermark automatico. Risparmio settimane per ogni matrimonio."<br><em>— Alessandro F., Studio Lucia Roma</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#ab47bc; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-app-react-web.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#ab47bc'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">⚛️</div>
+            <h3 style="color:#ab47bc; font-size:1.3rem; margin-bottom:0.75rem;">Sviluppo web app React</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Web app personalizzate React/Next.js: portali clienti, gallerie custom, integrazioni Stripe.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="gestionali-personalizzati-aziende.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#ab47bc'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">💼</div>
+            <h3 style="color:#ab47bc; font-size:1.3rem; margin-bottom:0.75rem;">Gestionali personalizzati</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Ti serve più di un verticale pronto? Sviluppo gestionali completamente su misura per il tuo settore.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="preventivo-app.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#ab47bc'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📝</div>
+            <h3 style="color:#ab47bc; font-size:1.3rem; margin-bottom:0.75rem;">Richiedi preventivo</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Vuoi sviluppare un software custom sulle tue esigenze? Form preventivo gratuito senza impegno.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #000; color: #fff; padding: 3rem 0 2rem;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h4 style="color: #ab47bc;">WeddingFoto Studio</h4>
+          <p style="color: #aaa; font-size: 0.95rem;">Software gestionale per fotografi di matrimoni, wedding photographer e studi fotografici. Sviluppato da Andrea Piani.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">🔗 Link Utili</h5>
+          <ul style="list-style: none; padding: 0; line-height: 2;">
+            <li><a href="crm-centri-estetici.html" class="link-back" style="color: #e91e63; text-decoration: none;">BeautyCenterCRM</a></li>
+            <li><a href="gestionale-studio-fisioterapista.html" class="link-back" style="color: #00bfa5; text-decoration: none;">PhysioStudio</a></li>
+            <li><a href="software-autoscuola.html" class="link-back" style="color: #1976d2; text-decoration: none;">DriveSchool Manager</a></li>
+            <li><a href="app-gestione-interventi-artigiani.html" class="link-back" style="color: #ff9800; text-decoration: none;">JobMate Pro</a></li>
+            <li><a href="gestionali-personalizzati-aziende.html" class="link-back" style="color: #aaa; text-decoration: none;">Tutti i SaaS</a></li>
+            <li><a href="preventivo-app.html" class="link-back" style="color: #aaa; text-decoration: none;">Richiedi Preventivo</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">📞 Contatti</h5>
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.8;">
+            Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc;">andreapiani.dev@gmail.com</a><br>
+            WhatsApp: <a href="https://wa.me/393516248936" target="_blank" style="color: #25d366;">+39 351 624 8936</a>
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: #333; margin: 2rem 0;">
+      <div class="text-center" style="color: #666; font-size: 0.9rem;">
+        <p class="mb-2">&copy; 2026 Andrea Piani - Tutti i diritti riservati</p>
+        <p class="mb-0">
+          <a href="privacy-policy.html" style="color: #888;">Privacy Policy</a> |
+          <a href="cookie-policy.html" style="color: #888;">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/popup-loader.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Andrea AI Chat Widget -->
+  <script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+</body>
+</html>

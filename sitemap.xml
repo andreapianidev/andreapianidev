@@ -248,6 +248,46 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- SaaS Live: Landing Sito Web Officine Meccaniche con AI -->
+  <url>
+    <loc>https://www.andreapiani.com/sito-web-officina-meccanica.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SaaS Live: PhysioStudio - Gestionale Fisioterapisti -->
+  <url>
+    <loc>https://www.andreapiani.com/gestionale-studio-fisioterapista.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SaaS Live: DriveSchool Manager - Gestionale Autoscuole -->
+  <url>
+    <loc>https://www.andreapiani.com/software-autoscuola.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SaaS Live: JobMate Pro - App Artigiani Idraulici Elettricisti -->
+  <url>
+    <loc>https://www.andreapiani.com/app-gestione-interventi-artigiani.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SaaS Live: WeddingFoto Studio - Gestionale Fotografi Matrimoni -->
+  <url>
+    <loc>https://www.andreapiani.com/gestionale-fotografo-matrimoni.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Inserimento Prodotti E-commerce -->
   <url>
     <loc>https://www.andreapiani.com/inserimento-prodotti-ecommerce.html</loc>
