@@ -1567,3 +1567,40 @@ label.adm-label {
   .adm-aisum-foot { font-size: 10px; }
   .adm-aisum-popup { left: 12px; right: 12px; max-width: none; }
 }
+
+/* AI summary flash banners (after redirect from refresh-summary.php) */
+.adm-aisum-flash {
+  position: relative;
+  margin: 0 0 14px;
+  padding: 12px 40px 12px 16px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  border: 1px solid;
+}
+.adm-aisum-flash--ok {
+  background: var(--success-soft);
+  border-color: rgba(16,185,129,.4);
+  color: #34d399;
+}
+.adm-aisum-flash--err {
+  background: var(--danger-soft);
+  border-color: rgba(239,68,68,.4);
+  color: #fca5a5;
+}
+.adm-aisum-flash-close {
+  position: absolute;
+  top: 6px; right: 10px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  opacity: .7;
+  line-height: 1;
+}
+.adm-aisum-flash-close:hover { opacity: 1; }
+
+.adm-aisum-refresh-form {
+  margin: 0;
+  padding: 0;
+  display: contents;
+}

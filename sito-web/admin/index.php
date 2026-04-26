@@ -197,6 +197,8 @@ $summaryBundle = aai_summary_load_best($summaryToday);
 $summaryError = aai_summary_load_error();
 $summaryShouldAuto = aai_summary_should_auto_generate($summaryToday);
 $summaryCsrf = aai_admin_csrf();
+$summaryFlashOk  = !empty($_GET['summary_ok']);
+$summaryFlashErr = isset($_GET['summary_err']) ? (string)$_GET['summary_err'] : '';
 
 aai_admin_header('Dashboard', 'index');
 ?>
@@ -211,9 +213,19 @@ $sumStale   = $summaryBundle['is_stale'];
 $sumDate    = $summaryBundle['used_date'];
 $showErrorPopup = is_array($summaryError) && empty($summaryError['acknowledged']);
 ?>
+<?php if ($summaryFlashErr): ?>
+  <div class="adm-aisum-flash adm-aisum-flash--err">
+    ⚠ Errore generazione riassunto AI: <?= aai_h($summaryFlashErr) ?>
+    <a href="index.php" class="adm-aisum-flash-close" aria-label="Chiudi">×</a>
+  </div>
+<?php elseif ($summaryFlashOk): ?>
+  <div class="adm-aisum-flash adm-aisum-flash--ok">
+    ✓ Riassunto AI rigenerato.
+    <a href="index.php" class="adm-aisum-flash-close" aria-label="Chiudi">×</a>
+  </div>
+<?php endif; ?>
 <section class="adm-aisum<?= $sumPayload ? '' : ' adm-aisum--empty' ?><?= $sumStale ? ' adm-aisum--stale' : '' ?>"
          data-aisum-csrf="<?= aai_h($summaryCsrf) ?>"
-         data-aisum-auto="<?= ($summaryShouldAuto && !$sumPayload) ? '1' : '0' ?>"
          data-aisum-show-error="<?= $showErrorPopup ? '1' : '0' ?>"
          <?php if ($showErrorPopup): ?>data-aisum-error="<?= aai_h($summaryError['error'] ?? '') ?>"<?php endif; ?>>
   <div class="adm-aisum-head">
@@ -228,9 +240,13 @@ $showErrorPopup = is_array($summaryError) && empty($summaryError['acknowledged']
         Nessun riassunto disponibile
       <?php endif; ?>
     </h2>
-    <button type="button" class="adm-aisum-refresh" data-aisum-refresh title="Rigenera riassunto AI" aria-label="Rigenera riassunto">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
-    </button>
+    <form method="post" action="api/refresh-summary.php" class="adm-aisum-refresh-form"
+          onsubmit="return confirm('Generare nuovo riassunto AI? Costa 1 chiamata API DeepSeek.');">
+      <input type="hidden" name="csrf" value="<?= aai_h($summaryCsrf) ?>">
+      <button type="submit" class="adm-aisum-refresh" title="Rigenera riassunto AI" aria-label="Rigenera riassunto">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+      </button>
+    </form>
   </div>
 
   <?php if ($sumPayload): ?>
@@ -265,7 +281,11 @@ $showErrorPopup = is_array($summaryError) && empty($summaryError['acknowledged']
   <?php else: ?>
     <div class="adm-aisum-empty-body">
       <p>Il riassunto AI di oggi non è ancora stato generato.</p>
-      <button type="button" class="adm-btn adm-btn--primary" data-aisum-refresh>✨ Genera ora</button>
+      <form method="post" action="api/refresh-summary.php"
+            onsubmit="return confirm('Generare riassunto AI? Costa 1 chiamata API DeepSeek.');">
+        <input type="hidden" name="csrf" value="<?= aai_h($summaryCsrf) ?>">
+        <button type="submit" class="adm-btn adm-btn--primary">✨ Genera ora</button>
+      </form>
     </div>
   <?php endif; ?>
 </section>

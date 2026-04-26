@@ -19,48 +19,59 @@ require_once __DIR__ . '/../lib/daily-summary.php';
 aai_admin_require();
 aai_require_post();
 
-header('Content-Type: application/json; charset=utf-8');
+// Detect if the client wants JSON (fetch) or HTML (plain form submit fallback).
+$wantsJson = stripos($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') !== false
+          || stripos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false;
+
+if ($wantsJson) {
+    header('Content-Type: application/json; charset=utf-8');
+}
 header('Cache-Control: no-store');
 
-$body = aai_read_body();
-if (!aai_admin_csrf_check($body['csrf'] ?? null)) {
-    http_response_code(403);
-    echo json_encode(['error' => 'csrf_failed']);
+$body = $wantsJson ? aai_read_body() : $_POST;
+$csrf = $body['csrf'] ?? ($_POST['csrf'] ?? null);
+
+function aai_refresh_respond_err(bool $json, int $code, string $key, string $msg): void {
+    if ($json) {
+        http_response_code($code);
+        echo json_encode(['error' => $key, 'message' => $msg]);
+    } else {
+        header('Location: /admin/index.php?summary_err=' . urlencode($msg), true, 302);
+    }
     exit;
+}
+
+function aai_refresh_respond_ok(bool $json, array $extra = []): void {
+    if ($json) {
+        echo json_encode(array_merge(['ok' => true], $extra));
+    } else {
+        header('Location: /admin/index.php?summary_ok=1', true, 302);
+    }
+    exit;
+}
+
+if (!aai_admin_csrf_check($csrf)) {
+    aai_refresh_respond_err($wantsJson, 403, 'csrf_failed', 'CSRF token non valido');
 }
 
 // --- Branch: ack last error ---
 if (!empty($_GET['ack'])) {
     aai_summary_ack_error();
-    echo json_encode(['ok' => true]);
-    exit;
+    aai_refresh_respond_ok($wantsJson);
 }
 
 // --- Branch: regenerate ---
-$today = gmdate('Y-m-d');
-$auto  = !empty($body['auto']);
-
 $lock = aai_summary_acquire_lock();
 if (!$lock) {
-    http_response_code(409);
-    echo json_encode(['error' => 'lock_busy', 'message' => 'Generazione già in corso, riprova tra qualche secondo.']);
-    exit;
+    aai_refresh_respond_err($wantsJson, 409, 'lock_busy', 'Generazione già in corso, riprova tra qualche secondo');
 }
 
 try {
-    if ($auto && file_exists(aai_summary_path($today))) {
-        echo json_encode(['ok' => true, 'skipped' => true, 'reason' => 'already_exists']);
-        exit;
-    }
-    $payload = aai_summary_generate($auto ? 'auto_fallback' : 'manual');
-    echo json_encode([
-        'ok'      => true,
-        'payload' => $payload,
-    ]);
+    $payload = aai_summary_generate('manual');
+    aai_refresh_respond_ok($wantsJson, ['payload' => $payload]);
 } catch (Throwable $e) {
-    aai_summary_save_error($e->getMessage(), $auto ? 'auto_fallback' : 'manual');
-    http_response_code(500);
-    echo json_encode(['error' => 'generation_failed', 'message' => $e->getMessage()]);
+    aai_summary_save_error($e->getMessage(), 'manual');
+    aai_refresh_respond_err($wantsJson, 500, 'generation_failed', $e->getMessage());
 } finally {
     aai_summary_release_lock($lock);
 }
