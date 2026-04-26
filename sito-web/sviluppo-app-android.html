@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Sviluppo App Android Native con Kotlin e Jetpack Compose. 15+ anni esperienza, 60+ app su Google Play Store. Specializzato in MVP per startup e Material Design 3.">
+  <meta name="keywords" content="sviluppo app android, app android nativa, kotlin developer, jetpack compose, programmatore android freelance, preventivo app android, material design">
+
+  <meta property="og:title" content="Sviluppo App Android Native con Kotlin | Andrea Piani">
+  <meta property="og:description" content="Sviluppo App Android Native con Kotlin e Jetpack Compose. 60+ app su Play Store. Preventivo gratuito.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/image2-652x1412.png">
+  <meta property="og:url" content="https://www.andreapiani.com/sviluppo-app-android.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sviluppo App Android Native | Kotlin & Jetpack Compose">
+  <meta name="twitter:description" content="Sviluppatore Android freelance con 15+ anni esperienza. 60+ app pubblicate su Play Store.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/image2-652x1412.png">
+
+  <title>Sviluppo App Android Native con Kotlin | Programmatore Freelance Italia</title>
+
+  <link rel="canonical" href="https://www.andreapiani.com/sviluppo-app-android.html" />
+
+  <!-- Schema.org Markup per SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Andrea Piani - Programmatore Android Freelance Italia",
+    "image": "https://www.andreapiani.com/assets/images/image1-652x1412.png",
+    "url": "https://www.andreapiani.com/sviluppo-app-android.html",
+    "telephone": "+393516248936",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "addressCountry": "IT"
+    },
+    "priceRange": "Preventivo personalizzato",
+    "description": "Sviluppatore Android freelance con 15+ anni esperienza. Sviluppo app Android native con Kotlin e Jetpack Compose. 60+ app su Google Play Store. Specializzato in MVP per startup.",
+    "serviceType": "Sviluppo App Android Native",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi Sviluppo Android",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sviluppo App Android Native con Kotlin",
+            "description": "Creazione applicazioni Android native ad alte performance con Kotlin e Jetpack Compose"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "MVP Android per Startup",
+            "description": "Sviluppo Minimum Viable Product per trovare investitori velocemente"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Migrazione App Android Legacy",
+            "description": "Aggiornamento app Java a Kotlin moderno con Jetpack Compose"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pubblicazione Google Play Store",
+            "description": "Gestione completa review Google e ottimizzazione ASO"
+          }
+        }
+      ]
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Italia"
+    },
+    "sameAs": [
+      "https://github.com/andreapianidev",
+      "https://play.google.com/store/apps/dev?id=5938177410099648623"
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sviluppo App Android",
+        "item": "https://www.andreapiani.com/sviluppo-app-android.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+
+  <style>
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .navbar-custom a:hover {
+      color: #149dcc !important;
+    }
+    .navbar-custom .active {
+      color: #149dcc !important;
+    }
+    .navbar-brand {
+      color: #149dcc !important;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .dropdown-menu {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+    }
+    .dropdown-item {
+      color: #ffffff !important;
+      padding: 0.75rem 1.5rem;
+      transition: 0.2s;
+    }
+    .dropdown-item:hover {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+    }
+    .dropdown-item.active {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+      font-weight: bold;
+    }
+    .dropdown-divider {
+      border-color: #333 !important;
+    }
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+    }
+    .benefit-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .benefit-card:hover {
+      border-color: #149dcc;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(20, 157, 204, 0.2);
+    }
+    .benefit-card h3 {
+      color: #149dcc;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-button {
+      background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+      border: none;
+      font-size: 1.1rem;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(20, 157, 204, 0.4);
+      color: white;
+    }
+    .comparison-table {
+      width: 100%;
+      margin: 2rem 0;
+      border-collapse: collapse;
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%);
+      color: white;
+      padding: 1.2rem;
+      text-align: left;
+      font-weight: 700;
+    }
+    .comparison-table td {
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid #333;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .comparison-table tr:hover {
+      background: #222;
+    }
+    .tech-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #3ddc84 0%, #2d9f61 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin: 0.3rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-custom navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Breadcrumb Navigation -->
+  <div style="background: #000000; border-bottom: 1px solid #333;">
+    <div class="container" style="padding: 12px 20px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background: transparent; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li class="breadcrumb-item"><a href="index.html" style="color: #149dcc; text-decoration: none;">🏠 Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff;">Sviluppo App Android</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="gradient-animate" style="padding: 6rem 0 4rem 0; background: linear-gradient(135deg, #3ddc84 0%, #2d9f61 100%); color: white; text-align: center; background-size: 200% 200%;">
+    <div class="container hero-animate">
+      <h1 class="display-1 mb-4 animate-fadeInUp" style="font-weight: 800;">Sviluppo App Android Native con Kotlin</h1>
+      <p class="lead mb-5 animate-fadeInUp animate-delay-1" style="font-size: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <strong>15+ anni di esperienza</strong> nello sviluppo di <a href="sviluppo-app-mobile.html" style="color:#fff; text-decoration:underline;">applicazioni Android native</a>. 60+ app pubblicate su <a href="pubblicazione-app-store-play.html" style="color:#fff; text-decoration:underline;">Google Play Store</a> con <strong>Kotlin, Jetpack Compose e Material Design 3</strong>. Serve anche <a href="sviluppo-app-ios.html" style="color:#fff; text-decoration:underline;">versione iOS</a>? Sviluppo cross-platform o parallelo.
+      </p>
+      <a href="preventivo-app.html" class="cta-button glow-animate animate-fadeInUp animate-delay-2">📱 Richiedi Preventivo Gratuito</a>
+    </div>
+  </section>
+
+  <!-- MVP Section -->
+  <section class="scroll-animate gradient-animate" style="padding: 4rem 0; background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%); color: white; background-size: 200% 200%;">
+    <div class="container">
+      <h2 class="display-2 mb-4 text-center"><strong>Sviluppo MVP Android per Startup</strong></h2>
+      <p class="lead mb-5 text-center" style="font-size: 1.3rem; max-width: 900px; margin: 0 auto;">
+        Non hai budget per un'app completa? Sviluppa un <strong>MVP (Minimum Viable Product)</strong> per validare l'idea e trovare investitori con il <strong>60-70% di risparmio</strong>.
+      </p>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+            <h3 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 1rem;">⏱️ Time-to-Market Rapido</h3>
+            <p style="font-size: 1.1rem;"><strong>4-8 settimane</strong> invece di 6-12 mesi per un'app completa. Lancia l'app velocemente e raccogli feedback reali dagli utenti.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+            <h3 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 1rem;">💰 Risparmio Significativo</h3>
+            <p style="font-size: 1.1rem;">Un MVP costa il <strong>60-70% in meno</strong> rispetto a un'app completa. Investi solo nelle funzionalità essenziali che servono per validare l'idea.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+            <h3 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 1rem;">📊 Validazione Reale</h3>
+            <p style="font-size: 1.1rem;">Testa l'app con utenti reali prima di investire tutto il budget. Scopri cosa funziona (e cosa no) prima di sviluppare funzionalità costose.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+            <h3 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 1rem;">💼 Convincere Investitori</h3>
+            <p style="font-size: 1.1rem;">Un MVP funzionante con i primi 100-1000 utenti è <strong>10x più convincente</strong> di una presentazione PowerPoint per trovare investitori.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="mvp-app-startup.html" class="cta-button">📖 Scopri di più sugli MVP per Startup</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5" style="color: #3ddc84;"><strong>Programmatore Android Freelance: 15+ Anni di Esperienza</strong></h2>
+
+      <p class="lead mb-4" style="font-size: 1.2rem; line-height: 1.8;">
+        Sono <strong>Andrea Piani</strong>, programmatore Android freelance specializzato nello <strong>sviluppo di app native ad alte performance</strong> con Kotlin, Jetpack Compose e le ultime tecnologie Google. Ho pubblicato oltre <strong>60 applicazioni su Google Play Store</strong> in 15 anni di carriera, lavorando con startup, PMI e grandi aziende in tutta Italia.
+      </p>
+
+      <p class="mb-5" style="font-size: 1.1rem; line-height: 1.8;">
+        Il mio approccio si basa su <strong>codice pulito, architettura MVVM moderna</strong> e best practice Android per creare app scalabili, performanti e facili da manutenere nel tempo. Utilizzo <strong>Firebase, Room Database, Retrofit</strong> per backend robusti e <strong>Material Design 3</strong> per interfacce utente moderne e intuitive.
+      </p>
+
+      <h3 class="mb-4" style="color: #3ddc84; font-size: 2rem;"><strong>Perché Scegliere un Programmatore Android Freelance?</strong></h3>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Aspetto</th>
+            <th>🧑‍💻 Freelance Specializzato (Andrea Piani)</th>
+            <th>🏢 Agenzia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Costo Orario</strong></td>
+            <td>€40-60/ora (risparmio del 50-60%)</td>
+            <td>€80-150/ora</td>
+          </tr>
+          <tr>
+            <td><strong>Comunicazione</strong></td>
+            <td>✅ Diretta con lo sviluppatore (nessun intermediario)</td>
+            <td>❌ Tramite project manager (ritardi e fraintendimenti)</td>
+          </tr>
+          <tr>
+            <td><strong>Flessibilità</strong></td>
+            <td>✅ Modifiche rapide, iterazioni veloci</td>
+            <td>❌ Procedure burocratiche, preventivi per ogni modifica</td>
+          </tr>
+          <tr>
+            <td><strong>Qualità Codice</strong></td>
+            <td>✅ Coerenza (stesso programmatore dall'inizio alla fine)</td>
+            <td>⚠️ Variabile (team diversi, turnover)</td>
+          </tr>
+          <tr>
+            <td><strong>Esperienza</strong></td>
+            <td>✅ 15+ anni, 60+ app pubblicate, specialista Android</td>
+            <td>⚠️ Junior developer supervisionati da senior (quando va bene)</td>
+          </tr>
+          <tr>
+            <td><strong>Supporto Post-Lancio</strong></td>
+            <td>✅ Conosco ogni riga di codice, risolvo bug in ore</td>
+            <td>❌ Chi ha scritto il codice potrebbe non lavorare più lì</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="text-center mt-5">
+        <a href="preventivo-app.html" class="cta-button">📞 Richiedi Consulenza Gratuita</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tecnologie Section -->
+  <section class="scroll-animate" style="padding: 5rem 0; background: #1a1a1a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5 text-center animate-fadeInUp" style="color: #3ddc84;"><strong>Tecnologie Android Moderne</strong></h2>
+
+      <p class="lead mb-5 text-center animate-fadeInUp animate-delay-1" style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">
+        Utilizzo le <strong>tecnologie più moderne</strong> dell'ecosistema Android per garantire app performanti, scalabili e future-proof. Niente codice legacy: solo <strong>Kotlin moderno, Jetpack Compose e le ultime API Android 14+</strong>.
+      </p>
+
+      <div class="row stagger-animate">
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card card-animate">
+            <h3>🚀 Kotlin: Linguaggio Ufficiale Android</h3>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              <strong>Kotlin</strong> è il linguaggio raccomandato da Google per lo sviluppo Android dal 2019. Sostituisce Java con una sintassi più moderna, sicura (no null pointer exceptions) e concisa (<strong>40% meno codice</strong> rispetto a Java).
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              Con Kotlin scrivo app più velocemente, con meno bug e più facili da manutenere. Include features avanzate come <strong>coroutines per operazioni asincrone</strong>, extension functions e null safety nativa.
+            </p>
+            <div class="mt-3">
+              <span class="tech-badge">Kotlin 2.0</span>
+              <span class="tech-badge">Coroutines</span>
+              <span class="tech-badge">Flow</span>
+              <span class="tech-badge">KMP (Kotlin Multiplatform)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>🎨 Jetpack Compose: UI Dichiarativa</h3>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              <strong>Jetpack Compose</strong> è il toolkit UI moderno di Google che sostituisce i vecchi XML layout. Con Compose creo interfacce <strong>reattive e dinamiche</strong> con il 50% meno codice e zero file XML da gestire.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              L'approccio dichiarativo rende il codice UI più leggibile e manutenibile. Le animazioni fluide e le transizioni automatiche rendono l'app <strong>più moderna e piacevole da usare</strong>. Compose supporta anche <strong>Material Design 3</strong> nativo.
+            </p>
+            <div class="mt-3">
+              <span class="tech-badge">Compose UI</span>
+              <span class="tech-badge">Material Design 3</span>
+              <span class="tech-badge">Animations</span>
+              <span class="tech-badge">Adaptive Layouts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>🏗️ Jetpack Libraries: Architettura Robusta</h3>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              Le <strong>Android Jetpack Libraries</strong> sono componenti ufficiali Google per costruire app scalabili seguendo le best practice. Utilizzo <strong>ViewModel, LiveData, Navigation Component, Room Database</strong> per architetture MVVM pulite.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              Con Jetpack l'app resiste ai cambiamenti di configurazione (rotazione schermo), gestisce correttamente il ciclo di vita e separa logica business dalla UI. Questo significa <strong>meno crash, meno bug e codice testabile</strong>.
+            </p>
+            <div class="mt-3">
+              <span class="tech-badge">ViewModel</span>
+              <span class="tech-badge">Room DB</span>
+              <span class="tech-badge">Navigation</span>
+              <span class="tech-badge">WorkManager</span>
+              <span class="tech-badge">Paging 3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>☁️ Firebase & Backend-as-a-Service</h3>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              Integro <strong>Firebase</strong> (piattaforma Google) per autenticazione, database real-time, storage file, notifiche push e analytics. Firebase elimina la necessità di costruire un backend custom, <strong>riducendo tempi e costi del 60-70%</strong>.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+              Per progetti più complessi utilizzo <strong>Retrofit + REST API</strong> oppure <strong>Supabase</strong> (alternativa open-source a Firebase). Gestisco autenticazione OAuth, JWT, sincronizzazione offline con Room Database e caching intelligente.
+            </p>
+            <div class="mt-3">
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Retrofit</span>
+              <span class="tech-badge">OkHttp</span>
+              <span class="tech-badge">Supabase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="lead" style="font-size: 1.2rem; color: #ccc;">
+          Utilizzo anche: <strong>Dagger/Hilt (Dependency Injection), Coil (Image Loading), ExoPlayer (Video Streaming), Google Maps SDK, Stripe/PayPal Integration, Jetpack Security (Encryption)</strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Funzionalità Android Section -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5" style="color: #3ddc84;"><strong>Funzionalità Android Avanzate</strong></h2>
+
+      <p class="lead mb-5" style="font-size: 1.2rem; line-height: 1.8;">
+        Android offre accesso a funzionalità hardware e software che iOS non permette (o permette in modo limitato). Posso integrare <strong>widget home screen personalizzati, automazioni, app drawer integrations, notifiche avanzate</strong> e molto altro.
+      </p>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>📲 Widget Home Screen</h3>
+            <p style="font-size: 1.05rem;">
+              Creo widget interattivi per la home screen Android che mostrano informazioni in tempo reale senza aprire l'app: meteo, to-do list, tracker abitudini, dashboard analytics. I widget aumentano il <strong>retention rate del 40%</strong> perché l'utente vede l'app ogni giorno.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>🔔 Notifiche Push Avanzate</h3>
+            <p style="font-size: 1.05rem;">
+              Le notifiche Android supportano <strong>azioni personalizzate, risposte inline, big pictures, progresso download</strong> e molto altro. Implemento notifiche intelligenti che segmentano gli utenti e inviano messaggi al momento giusto.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>🎤 Riconoscimento Vocale & Speech-to-Text</h3>
+            <p style="font-size: 1.05rem;">
+              Integro <strong>Google Speech API</strong> per comandi vocali, trascrizione automatica, dettatura testi. Perfetto per app di produttività, assistenti virtuali, note vocali. Supporto anche offline con ML Kit on-device.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>📷 Camera2 API & ML Kit</h3>
+            <p style="font-size: 1.05rem;">
+              Utilizzo <strong>Camera2 API</strong> per controllo manuale della fotocamera (esposizione, focus, HDR) e <strong>ML Kit</strong> per riconoscimento testi (OCR), barcode scanner, face detection, object detection. Tutto on-device senza inviare dati a server esterni.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>📍 Geolocalizzazione & Mappe</h3>
+            <p style="font-size: 1.05rem;">
+              Integro <strong>Google Maps SDK</strong> per mappe interattive, geofencing, navigazione turn-by-turn. Android offre accesso preciso al GPS e permette tracking in background per app fitness, delivery, tracking flotte aziendali.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>⚙️ Background Tasks & WorkManager</h3>
+            <p style="font-size: 1.05rem;">
+              Android permette task in background che iOS limita: <strong>sincronizzazione periodica, backup automatici, download grandi file, elaborazione dati</strong>. Utilizzo WorkManager per task garantiti anche dopo riavvio dispositivo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Android vs iOS Section -->
+  <section style="padding: 5rem 0; background: #1a1a1a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5 text-center" style="color: #3ddc84;"><strong>Android vs iOS: Quale Scegliere?</strong></h2>
+
+      <p class="lead mb-5 text-center" style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">
+        La scelta tra Android e iOS dipende dal <strong>target audience, budget e funzionalità richieste</strong>. Ecco un confronto obiettivo per aiutarti a decidere quale piattaforma sviluppare per prima (o se sviluppare entrambe).
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Aspetto</th>
+            <th>🤖 Android</th>
+            <th>🍎 iOS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Market Share Italia</strong></td>
+            <td>✅ 67% degli smartphone (2 utenti su 3)</td>
+            <td>33% (1 utente su 3)</td>
+          </tr>
+          <tr>
+            <td><strong>Market Share Globale</strong></td>
+            <td>✅ 71% del mercato mondiale</td>
+            <td>28%</td>
+          </tr>
+          <tr>
+            <td><strong>Demografia Utenti</strong></td>
+            <td>Ampio spettro: giovani, adulti, anziani, B2B</td>
+            <td>⚠️ Fascia alta, età 25-45, reddito medio-alto</td>
+          </tr>
+          <tr>
+            <td><strong>Costo Sviluppo</strong></td>
+            <td>✅ Leggermente inferiore (meno restrizioni)</td>
+            <td>Simile, ma più tempo per testing dispositivi</td>
+          </tr>
+          <tr>
+            <td><strong>Tempo Sviluppo</strong></td>
+            <td>⚠️ +20% (più dispositivi e versioni da testare)</td>
+            <td>✅ Meno varianti hardware = testing più veloce</td>
+          </tr>
+          <tr>
+            <td><strong>Costo Pubblicazione</strong></td>
+            <td>✅ €25 una tantum (a vita)</td>
+            <td>€99/anno (abbonamento ricorrente)</td>
+          </tr>
+          <tr>
+            <td><strong>Tempo Review</strong></td>
+            <td>✅ 1-3 giorni (automatico)</td>
+            <td>3-7 giorni (revisione manuale Apple)</td>
+          </tr>
+          <tr>
+            <td><strong>Flessibilità</strong></td>
+            <td>✅ Widget, automazioni, personalizzazione totale</td>
+            <td>⚠️ Limitazioni imposte da Apple (più restrittivo)</td>
+          </tr>
+          <tr>
+            <td><strong>Monetizzazione</strong></td>
+            <td>€5-8 ARPU medio, più utenti freemium</td>
+            <td>✅ €15-25 ARPU medio, utenti pagano di più</td>
+          </tr>
+          <tr>
+            <td><strong>Frammentazione</strong></td>
+            <td>⚠️ Migliaia di dispositivi diversi da testare</td>
+            <td>✅ Solo iPhone (10-15 modelli attivi)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mt-5">
+        <h3 style="color: #3ddc84; font-size: 2rem; margin-bottom: 2rem;"><strong>Quando Scegliere Android?</strong></h3>
+        <ul style="font-size: 1.1rem; line-height: 2;">
+          <li><strong>Mercato di massa:</strong> Vuoi raggiungere il maggior numero di utenti possibile (67% in Italia, 71% globale)</li>
+          <li><strong>App B2B/Enterprise:</strong> Le aziende usano principalmente Android (Samsung, Google Pixel per lavoro)</li>
+          <li><strong>Budget limitato:</strong> Pubblicazione costa €25 una tantum invece di €99/anno</li>
+          <li><strong>Funzionalità avanzate:</strong> Serve widget, automazioni, integrazioni profonde con il sistema</li>
+          <li><strong>Mercati emergenti:</strong> India, Sud America, Africa usano principalmente Android economici</li>
+          <li><strong>Distribuzione alternativa:</strong> Puoi distribuire APK al di fuori del Play Store (utile per app aziendali)</li>
+        </ul>
+
+        <h3 style="color: #3ddc84; font-size: 2rem; margin: 3rem 0 2rem 0;"><strong>Quando Scegliere iOS?</strong></h3>
+        <ul style="font-size: 1.1rem; line-height: 2; margin-bottom: 3rem;">
+          <li><strong>Monetizzazione premium:</strong> Gli utenti iOS spendono 2-3x più degli utenti Android</li>
+          <li><strong>Target fascia alta:</strong> Il tuo prodotto è premium e vuoi un pubblico con reddito medio-alto</li>
+          <li><strong>Testing veloce:</strong> Hai poco tempo e vuoi testare su meno dispositivi (iPhone ha solo 10-15 modelli attivi)</li>
+          <li><strong>App creative/media:</strong> iOS ha ecosistema più forte per foto, video, musica (es. influencer usano iPhone)</li>
+          <li><strong>Privacy e sicurezza:</strong> Gli utenti iOS sono più attenti alla privacy (Apple come valore brand)</li>
+        </ul>
+
+        <div class="text-center" style="background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%); padding: 3rem; border-radius: 12px;">
+          <h3 style="color: white; font-size: 1.8rem; margin-bottom: 1.5rem;"><strong>💡 La Soluzione Ideale?</strong></h3>
+          <p style="font-size: 1.2rem; color: white; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+            Se il budget lo permette, sviluppo <strong>un MVP Android per validare l'idea velocemente</strong> (mercato più ampio, costi inferiori), poi una volta trovato il product-market fit espando su iOS per monetizzare meglio. Oppure sviluppo direttamente <strong>cross-platform con Flutter/React Native</strong> per avere 80% del codice condiviso.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="sviluppo-app-ios.html" class="cta-button" style="background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%);">📱 Scopri i miei servizi iOS</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Play Store Section -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5" style="color: #3ddc84;"><strong>Pubblicazione su Google Play Store</strong></h2>
+
+      <p class="lead mb-5" style="font-size: 1.2rem; line-height: 1.8;">
+        Gestisco l'intero processo di pubblicazione su <strong>Google Play Store</strong>, dalla creazione dell'account sviluppatore alla ottimizzazione ASO (App Store Optimization) per far scoprire l'app organicamente a migliaia di utenti.
+      </p>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>📝 Creazione Account Sviluppatore</h3>
+            <p style="font-size: 1.05rem;">
+              Ti aiuto a creare l'<strong>account Google Play Developer</strong> (costo €25 una tantum). Compilo tutte le informazioni richieste, privacy policy, contatti, documenti fiscali per superare la verifica Google senza intoppi.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>🎨 Creazione Asset Grafici</h3>
+            <p style="font-size: 1.05rem;">
+              Preparo tutti gli asset richiesti da Google Play: <strong>icona app, screenshot (6 obbligatori), banner promo, video demo</strong>. Gli screenshot ottimizzati aumentano il <strong>conversion rate del 30-40%</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>📄 Conformità Policy Google</h3>
+            <p style="font-size: 1.05rem;">
+              Mi assicuro che l'app rispetti tutte le <strong>Google Play Policy</strong>: privacy, permissions, contenuti, sicurezza bambini (COPPA), pubblicità. Evito rejection per problemi facilmente prevenibili.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="benefit-card">
+            <h3>🔐 Firma APK/AAB & Security</h3>
+            <p style="font-size: 1.05rem;">
+              Genero <strong>keystore sicuro</strong> per firmare l'app, configuro <strong>App Signing by Google Play</strong> per protezione anti-pirateria, abilito ProGuard/R8 per offuscare il codice e ridurre dimensione APK del 30-50%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color: #3ddc84; font-size: 2rem; margin: 3rem 0 2rem 0;"><strong>ASO (App Store Optimization): Fatti Scoprire Gratis</strong></h3>
+
+      <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+        L'<strong>ASO (App Store Optimization)</strong> è la SEO per app mobile. Ottimizzando titolo, descrizione, keyword e screenshot, l'app può apparire nei risultati di ricerca del Play Store e ottenere <strong>migliaia di download organici gratuiti</strong> senza spendere in pubblicità.
+      </p>
+
+      <div class="benefit-card" style="background: linear-gradient(135deg, #1a1a1a 0%, #0d7a9e 20%, #0d0d0d 100%); border-color: #149dcc;">
+        <h3 style="color: #3ddc84;">🔍 Le 5 Ottimizzazioni ASO Essenziali</h3>
+        <ol style="font-size: 1.05rem; line-height: 1.8; margin-top: 1.5rem;">
+          <li><strong>Titolo app (30 caratteri):</strong> Includo keyword principale + benefit chiaro (es. "FitTracker - Conta Calorie & Dieta")</li>
+          <li><strong>Descrizione breve (80 caratteri):</strong> Hook convincente che spiega perché scaricare l'app in 1 frase</li>
+          <li><strong>Descrizione lunga (4000 caratteri):</strong> Testo ottimizzato con keyword secondarie, benefici, social proof, CTA</li>
+          <li><strong>Screenshot con testi overlay:</strong> Non solo schermate, ma immagini con testi che evidenziano le funzionalità chiave</li>
+          <li><strong>Recensioni positive (4.5+ stelle):</strong> Implemento sistema in-app per chiedere recensioni agli utenti soddisfatti al momento giusto</li>
+        </ol>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="lead" style="font-size: 1.2rem; color: #ccc;">
+          Con una strategia ASO ben fatta, le tue app possono ottenere <strong>500-2000 download organici al mese</strong> senza spendere 1€ in advertising. Ho app nel Play Store che ricevono 30-50 download al giorno solo da ricerca organica.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Processo Section -->
+  <section style="padding: 5rem 0; background: #1a1a1a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5 text-center" style="color: #3ddc84;"><strong>Il Mio Processo di Sviluppo Android</strong></h2>
+
+      <p class="lead mb-5 text-center" style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">
+        Utilizzo una metodologia <strong>agile e iterativa</strong> che ti coinvolge in ogni fase del progetto. Ricevi aggiornamenti settimanali con build di test per vedere l'app in sviluppo dal primo giorno.
+      </p>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card" style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+            <h3>1. Discovery Workshop</h3>
+            <p style="font-size: 1.05rem;">
+              Call iniziale (1-2 ore) per capire obiettivi, target audience, funzionalità must-have. Analizziamo competitor e definiamo <strong>MVP scope</strong> con framework MoSCoW.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card" style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+            <h3>2. Wireframe & Mockup</h3>
+            <p style="font-size: 1.05rem;">
+              Creo wireframe in Figma per validare il <strong>user flow</strong> prima di scrivere codice. Ti mostro come l'utente navigherà l'app e dove cliccare per ogni funzionalità.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card" style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+            <h3>3. Sprint Sviluppo</h3>
+            <p style="font-size: 1.05rem;">
+              Sviluppo in <strong>sprint settimanali</strong>. Ogni venerdì ricevi build di test (APK) per vedere i progressi e dare feedback. Itero velocemente basandomi sui tuoi input.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card" style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🧪</div>
+            <h3>4. Testing & QA</h3>
+            <p style="font-size: 1.05rem;">
+              Testo l'app su <strong>10+ dispositivi Android</strong> (Samsung, Google Pixel, Xiaomi, OnePlus) con diverse versioni Android (11-14). Risolvo bug e ottimizzazioni performance.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card" style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+            <h3>5. Launch & ASO</h3>
+            <p style="font-size: 1.05rem;">
+              Pubblico su <strong>Google Play Store</strong> con descrizione ottimizzata ASO, screenshot professionali, video demo. Gestisco la review Google e il lancio.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card" style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h3>6. Monitoring & Iterate</h3>
+            <p style="font-size: 1.05rem;">
+              Monitoro <strong>Firebase Analytics e Crashlytics</strong> per crash, performance, user behavior. Itero in base ai dati reali: aggiungo/rimuovo features, ottimizzazioni.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5 text-center" style="color: #3ddc84;"><strong>Case Study: App Android di Successo</strong></h2>
+
+      <div class="benefit-card" style="border-color: #3ddc84; background: linear-gradient(135deg, #1a1a1a 0%, #0a2e1a 50%, #0d0d0d 100%);">
+        <h3 style="color: #3ddc84; font-size: 2rem;">📱 App Fitness & Nutrition Tracking</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+          <strong>Cliente:</strong> Startup italiana del settore fitness<br>
+          <strong>Obiettivo:</strong> MVP Android per trovare investitori e validare product-market fit<br>
+          <strong>Timeline:</strong> 6 settimane (discovery → launch)
+        </p>
+
+        <h4 style="color: #3ddc84; margin-top: 2rem; font-size: 1.5rem;">🎯 Sfida</h4>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          La startup aveva <strong>budget limitato</strong> (non poteva permettersi un'app completa iOS + Android con tutte le funzionalità). Volevano lanciare velocemente per testare l'idea con utenti reali e dimostrare traction agli investitori.
+        </p>
+
+        <h4 style="color: #3ddc84; margin-top: 2rem; font-size: 1.5rem;">💡 Soluzione MVP</h4>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          Ho sviluppato un <strong>MVP Android nativo</strong> con le 3 funzionalità core:
+        </p>
+        <ul style="font-size: 1.05rem; line-height: 1.8;">
+          <li><strong>Tracking calorie:</strong> Database locale con Room + barcode scanner per alimenti</li>
+          <li><strong>Workout timer:</strong> HIIT timer con notifiche sonore e vibrazione</li>
+          <li><strong>Progress charts:</strong> Grafici peso/calorie con MPAndroidChart library</li>
+        </ul>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          <strong>NO social network, NO piano alimentare personalizzato, NO integrazione wearable</strong> (funzionalità nice-to-have rimandate a versione 2.0 dopo validazione).
+        </p>
+
+        <h4 style="color: #3ddc84; margin-top: 2rem; font-size: 1.5rem;">📊 Risultati</h4>
+        <ul style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0;">
+          <li>✅ <strong>1.200 download</strong> nei primi 3 mesi (solo Play Store, no advertising)</li>
+          <li>✅ <strong>Rating 4.6/5</strong> con 180+ recensioni positive</li>
+          <li>✅ <strong>42% retention rate</strong> a 30 giorni (ottimo per fitness app)</li>
+          <li>✅ <strong>Investimento seed di €150K</strong> ottenuto dopo 4 mesi grazie a traction dimostrata</li>
+          <li>✅ <strong>60% risparmio costi</strong> rispetto a sviluppo app completa multipiattaforma</li>
+        </ul>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="progetti-open-source.html" class="cta-button">💼 Vedi Altri Progetti nel Portfolio</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="padding: 5rem 0; background: #1a1a1a;">
+    <div class="container">
+
+      <h2 class="display-3 mb-5 text-center" style="color: #3ddc84;"><strong>Domande Frequenti (FAQ)</strong></h2>
+
+      <div class="benefit-card">
+        <h3 style="color: #3ddc84;">❓ Quanto tempo ci vuole per sviluppare un'app Android?</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          Dipende dalla complessità. Un <strong>MVP semplice</strong> (3-5 schermate, funzionalità base) richiede <strong>4-6 settimane</strong>. Un'app media (login, database, notifiche push, pagamenti) richiede <strong>8-12 settimane</strong>. App complesse con funzionalità avanzate (AI, video streaming, social network) richiedono <strong>3-6 mesi</strong>. Durante la call iniziale ti fornisco una stima precisa basata sulle tue esigenze specifiche.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3 style="color: #3ddc84;">💰 Quanto costa sviluppare un'app Android?</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          Un <strong>MVP Android</strong> parte da qualche migliaio di euro. App medie con funzionalità standard richiedono un budget maggiore. Il mio <strong>tariffa oraria è €40-60/ora</strong>, significativamente inferiore rispetto alle agenzie (€80-150/ora). Durante la consulenza gratuita ti fornisco un preventivo dettagliato. <a href="quanto-costa-sviluppare-app.html" style="color: #3ddc84; font-weight: bold;">→ Leggi la guida completa ai costi</a>
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3 style="color: #3ddc84;">📱 Sviluppo anche per iOS oltre ad Android?</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          Sì, sono programmatore sia <strong>Android (Kotlin)</strong> che <strong>iOS (Swift)</strong>. Posso sviluppare l'app per entrambe le piattaforme. In alternativa, se serve massima condivisione codice, sviluppo con <strong>Flutter</strong> (cross-platform) per avere un'unica codebase Android + iOS. <a href="sviluppo-app-ios.html" style="color: #3ddc84; font-weight: bold;">→ Scopri i servizi iOS</a>
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3 style="color: #3ddc84;">🔧 Offri manutenzione post-lancio?</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          Sì, offro <strong>pacchetti di manutenzione mensili</strong> che includono: aggiornamenti per nuove versioni Android, bugfix prioritari, piccole modifiche/miglioramenti, monitoring Firebase Crashlytics, aggiornamento dipendenze per sicurezza. La manutenzione garantisce che l'app continui a funzionare correttamente negli anni con le nuove versioni di Android (Google rilascia Android 15, 16, ecc.).
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3 style="color: #3ddc84;">🎨 Fornisci anche il design UI/UX oppure solo sviluppo?</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          Fornisco <strong>wireframe e mockup basic</strong> inclusi nel preventivo (utilizzo Figma). Se serve un design UI/UX professionale custom con branding, animazioni complesse, illustrazioni, posso collaborare con designer professionisti di fiducia oppure partire dal tuo design se hai già un designer. La maggior parte dei miei progetti utilizza <strong>Material Design 3</strong> (design system Google) che è già moderno e professionale.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3 style="color: #3ddc84;">🚀 Posso vedere l'app in sviluppo prima del lancio?</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7;">
+          Assolutamente sì! Lavoro in <strong>sprint settimanali</strong> e ogni settimana ti invio una <strong>build APK di test</strong> che puoi installare sul tuo telefono Android. In questo modo vedi i progressi in tempo reale e puoi dare feedback immediato. Utilizzo anche <strong>Firebase App Distribution</strong> per inviare aggiornamenti automatici senza dover scaricare manualmente APK ogni volta.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #3ddc84 0%, #2d9f61 100%); color: white; text-align: center;">
+    <div class="container">
+      <h2 class="display-2 mb-4" style="font-weight: 800;">Pronto a Sviluppare la Tua App Android?</h2>
+      <p class="lead mb-5" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+        Richiedi una <strong>consulenza gratuita di 30 minuti</strong> per discutere il tuo progetto. Ti fornirò un preventivo dettagliato e consigli strategici su come procedere (MVP vs app completa, Android vs iOS, native vs cross-platform).
+      </p>
+      <a href="preventivo-app.html" class="cta-button" style="background: #ffffff; color: #2d9f61; font-size: 1.2rem; padding: 1.2rem 3rem;">📞 Richiedi Preventivo Gratuito</a>
+      <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
+        ✅ Nessun impegno • ✅ Risposta entro 24 ore • ✅ Consulenza gratuita inclusa
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#3ddc84; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-app-ios.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#3ddc84'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📱</div>
+            <h3 style="color:#3ddc84; font-size:1.3rem; margin-bottom:0.75rem;">App iOS native</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Swift e SwiftUI per iPhone e iPad: la versione iOS della tua app con TestFlight.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-app-react-web.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#3ddc84'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">⚛️</div>
+            <h3 style="color:#3ddc84; font-size:1.3rem; margin-bottom:0.75rem;">React Native &amp; PWA</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Alternativa cross-platform per coprire Android + iOS con un solo codebase TypeScript.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="pubblicazione-app-store-play.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#3ddc84'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📲</div>
+            <h3 style="color:#3ddc84; font-size:1.3rem; margin-bottom:0.75rem;">Pubblicazione Google Play</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Internal/Open testing, asset grafici, privacy policy, review process, rollout graduale.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer GDPR -->
+  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0;">
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="footer-links" style="margin-bottom: 1.5rem;">
+          <a href="privacy-policy.html" style="color: #149dcc; text-decoration: none; margin: 0 1rem;">📄 Privacy Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="cookie-policy.html" style="color: #149dcc; text-decoration: none; margin: 0 1rem;">🍪 Cookie Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="#" class="footer-manage-cookies" style="color: #149dcc; text-decoration: none; margin: 0 1rem;">⚙️ Gestisci Cookie</a>
+          <span style="color: #666;">|</span>
+          <a href="progetti-open-source.html" style="color: #149dcc; text-decoration: none; margin: 0 1rem;">💻 Portfolio</a>
+          <span style="color: #666;">|</span>
+          <a href="indexen.html" style="color: #149dcc; text-decoration: none; margin: 0 1rem;">🇬🇧 English</a>
+        </div>
+
+        <div style="font-size: 0.9rem; color: #ccc; line-height: 1.8;">
+          <p style="margin-bottom: 0.5rem;">
+            <strong style="color: #ffffff;">Andrea Piani</strong> - Sviluppatore iOS/Android/Web Freelance
+          </p>
+          <p style="margin-bottom: 0.5rem;">
+            Italia: Piazza della Repubblica, 19 20124 Milano (MI)<br>
+            Spagna: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife
+          </p>
+          <p style="margin-bottom: 1rem;">
+            Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc; text-decoration: none;">andreapiani.dev@gmail.com</a> |
+            Tel: <a href="tel:+393516248936" style="color: #149dcc; text-decoration: none;">+39 351 624 8936</a>
+          </p>
+          <p style="font-size: 0.85rem; color: #999; margin-top: 1rem;">
+            © 2026 Andrea Piani. Tutti i diritti riservati.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script>
+    document.querySelectorAll('.footer-manage-cookies').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.CookieConsent) {
+          window.CookieConsent.reset();
+        }
+      });
+    });
+  </script>
+
+  <script src="animations.js"></script>
+
+  <!-- New Features -->
+  <script src="utilities.js"></script>
+  <script src="performance.js"></script>
+
+  <script>
+    // Form submission with loading state and toast notification
+    document.querySelectorAll('form[action*="formspree"]').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn && window.AppUtils) {
+          window.AppUtils.setButtonLoading(btn, true);
+        }
+
+        if (window.AppUtils) {
+          window.AppUtils.trackEvent('Form', 'Submit', 'Contact Form Android');
+        }
+
+        setTimeout(() => {
+          if (btn && window.AppUtils) {
+            window.AppUtils.setButtonLoading(btn, false);
+          }
+          if (window.Toast) {
+            window.Toast.success('Messaggio inviato! Ti risponderò entro 24h', 'Grazie!');
+          }
+        }, 1000);
+      });
+    });
+  </script>
+
+  <script src="assets/js/popup-loader.js"></script>
+<!-- Andrea AI Chat Widget -->
+<script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
+<script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+<script src="assets/js/analytics.js" defer data-aai-analytics="1"></script>
+</body>
+</html>

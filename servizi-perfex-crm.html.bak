@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="Sviluppo moduli custom Perfex CRM, personalizzazione avanzata, integrazioni API. Esperto Perfex CRM con 10+ anni esperienza. Preventivo gratuito, supporto italiano.">
+  <meta name="keywords" content="sviluppo moduli perfex crm, moduli custom perfex, personalizzazione perfex crm, integrazioni perfex api, consulenza perfex crm, esperto perfex italia">
+
+  <meta property="og:title" content="Servizi Perfex CRM: Sviluppo Moduli Custom e Personalizzazione | Andrea Piani">
+  <meta property="og:description" content="Sviluppo moduli custom, personalizzazione avanzata, integrazioni API per Perfex CRM. Preventivo gratuito, supporto italiano.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/screenshot-7.png">
+  <meta property="og:url" content="https://www.andreapiani.com/servizi-perfex-crm.html">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://www.andreapiani.com/servizi-perfex-crm.html" />
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <title>Sviluppo Moduli Custom Perfex CRM: Personalizzazione Avanzata | Andrea Piani</title>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "serviceType": "Sviluppo Moduli Custom e Personalizzazione Perfex CRM",
+    "name": "Servizi Perfex CRM - Andrea Piani",
+    "provider": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "jobTitle": "Sviluppatore Moduli Perfex CRM",
+      "url": "https://www.andreapiani.com",
+      "email": "andreapiani.dev@gmail.com",
+      "telephone": "+393516248936"
+    },
+    "areaServed": "IT",
+    "description": "Sviluppo moduli custom per Perfex CRM, personalizzazione avanzata, integrazioni API esterne, workflow automatizzati, report personalizzati. Supporto completo in italiano.",
+    "priceRange": "€€"
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.andreapiani.com"},
+      {"@type": "ListItem", "position": 2, "name": "Perfex CRM", "item": "https://www.andreapiani.com/crm.html"},
+      {"@type": "ListItem", "position": 3, "name": "Servizi Perfex CRM", "item": "https://www.andreapiani.com/servizi-perfex-crm.html"}
+    ]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto costa sviluppare un modulo custom per Perfex CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Il costo di sviluppo di un modulo custom per Perfex CRM parte da €599 e varia in base alla complessità. Moduli semplici (workflow automatizzati, report custom) €599-1.200. Moduli medi (integrazioni API, dashboard avanzate) €1.200-2.500. Moduli complessi (verticali settoriali, portal custom) €2.500-5.000+. Preventivo include analisi requisiti, sviluppo, testing, deploy e 60 giorni supporto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo serve per sviluppare un modulo Perfex CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tempistiche sviluppo: Moduli semplici 1-2 settimane, moduli medi 2-4 settimane, moduli complessi 4-8 settimane. Include analisi requisiti, sviluppo iterativo con demo settimanali, testing completo e deploy produzione."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso integrare Perfex CRM con WooCommerce o PrestaShop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, realizzo integrazioni bidirezionali Perfex CRM con e-commerce (WooCommerce, PrestaShop, Shopify). Include import automatico ordini, sincronizzazione clienti, tracking spedizioni, gestione resi. Costo da €399 a €899."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Jost', sans-serif;
+    }
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .navbar-custom a:hover { color: #149dcc !important; }
+    .navbar-brand {
+      color: #149dcc !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .hero-services {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 6rem 0;
+      color: white;
+      text-align: center;
+    }
+    .hero-services h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #667eea;
+    }
+    .service-card {
+      background: #1a1a1a;
+      border: 2px solid #667eea;
+      border-radius: 15px;
+      padding: 2.5rem;
+      height: 100%;
+      transition: 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    }
+    .service-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+    .service-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+    .service-price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 1.5rem 0;
+    }
+    .btn-crm {
+      background: #667eea;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+      border: none;
+    }
+    .btn-crm:hover {
+      background: #ffffff;
+      color: #667eea;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    }
+    .dropdown-menu {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+    }
+    .dropdown-item {
+      color: #ffffff !important;
+      padding: 0.75rem 1.5rem;
+      transition: 0.2s;
+    }
+    .dropdown-item:hover {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+    }
+    .dropdown-item.active {
+      background-color: #2a2a2a !important;
+      color: #df0067 !important;
+      font-weight: bold;
+    }
+    .dropdown-divider {
+      border-color: #333 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>    </div>
+  </div>
+
+
+
+  <!-- HERO -->
+  <section class="hero-services gradient-animate scroll-animate" style="background-size: 200% 200%;">
+    <div class="container hero-animate">
+      <h1 class="animate-fadeInUp">🛠️ Sviluppo Moduli Custom Perfex CRM</h1>
+      <p class="animate-fadeInUp animate-delay-1" style="font-size: 1.4rem; max-width: 900px; margin: 0 auto 2rem auto;">
+        Estendi le funzionalità di <strong><a href="crm.html" style="color:#fff; text-decoration:underline;">Perfex CRM</a></strong> con moduli personalizzati su misura.<br>
+        Integrazioni API, workflow automatizzati, report custom, funzionalità verticali settoriali — dai <a href="gestionali-personalizzati.html" style="color:#fff; text-decoration:underline;">gestionali su misura</a> ai CRM verticali pronti.
+      </p>
+      <div class="animate-fadeInUp animate-delay-2">
+        <a href="https://wa.me/393516248936" class="btn-crm glow-animate">RICHIEDI PREVENTIVO GRATUITO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section style="padding: 5rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="section-title">Servizi Specializzati Perfex CRM</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3 class="service-title">Installazione Professionale</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Setup completo su tuo hosting/VPS/cloud con configurazione ottimizzata per performance e sicurezza. Include traduzione italiana, SMTP, SSL, gateway pagamenti.
+            </p>
+            <div class="service-price">Da €299</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Setup server (Apache/Nginx, PHP, MySQL)</li>
+              <li>Installazione Perfex CRM latest</li>
+              <li>Configurazione SMTP transazionale</li>
+              <li>Setup Stripe/PayPal gateway</li>
+              <li>Traduzione interfaccia italiana</li>
+              <li>Import dati da vecchio sistema</li>
+              <li>Formazione base team (2 ore)</li>
+              <li>Supporto post-lancio 30 giorni</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3 class="service-title">Personalizzazione Tema</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Customizzazione visuale completa per match perfetto con brand identity aziendale. Logo, colori, template email e PDF branded.
+            </p>
+            <div class="service-price">Da €199</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Logo e palette colori aziendali</li>
+              <li>Template email transazionali custom</li>
+              <li>Template PDF fatture/preventivi branded</li>
+              <li>Custom CSS per UI modifications</li>
+              <li>Header/footer personalizzati</li>
+              <li>Favicon e meta tags SEO</li>
+              <li>Ottimizzazione mobile responsive</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🔌</div>
+            <h3 class="service-title">Integrazioni API</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Connessioni con sistemi esterni: e-commerce, contabilità, marketing automation, ERP. Sincronizzazione dati bidirezionale real-time o scheduled.
+            </p>
+            <div class="service-price">Da €399</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li><a href="creazione-api-rest.html" style="color:#ccc;">API REST/GraphQL</a> custom</li>
+              <li>Sync WooCommerce/<a href="servizi-prestashop.html" style="color:#ccc;">PrestaShop</a>/Shopify</li>
+              <li>Integrazione Fatture in Cloud/Danea</li>
+              <li>Webhook Slack/Telegram/Zapier</li>
+              <li>Import automatico lead da form/landing</li>
+              <li>Sincronizzazione Google Calendar/Drive</li>
+              <li>Integrazione CRM telefonico (VoIP)</li>
+              <li>Email marketing (Mailchimp/Sendinblue)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3 class="service-title">Moduli Custom Su Misura</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              <strong>Sviluppo moduli personalizzati</strong> per funzionalità non presenti in Perfex standard. Workflow automatizzati, report avanzati, integrazioni verticali settoriali — come il <a href="crm-centri-estetici.html" style="color:#ccc;">CRM per centri estetici</a> o il <a href="checkin-digitale-hotel.html" style="color:#ccc;">check-in digitale hotel</a>.
+            </p>
+            <div class="service-price">Da €599</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Workflow automatizzati trigger-based (<a href="sviluppo-python.html" style="color:#ccc;">automazioni Python</a>)</li>
+              <li>Report e dashboard custom con KPI specifici</li>
+              <li>Moduli verticali (<a href="agente-immobiliare-ai.html" style="color:#ccc;">immobiliare</a>, legale, medico)</li>
+              <li>Automazioni email/task/notifiche avanzate</li>
+              <li>Gestione documenti advanced (OCR, firma digitale)</li>
+              <li>Timesheet avanzato con fatturazione automatica</li>
+              <li>Portal clienti custom con funzioni extra</li>
+              <li>Script import/export massivo dati</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESEMPI MODULI -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Esempi Moduli Custom Sviluppati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div style="background: #1a1a1a; border-left: 4px solid #667eea; padding: 2rem; border-radius: 10px;">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">📊 Dashboard KPI Custom</h4>
+            <p style="color: #ccc;">
+              Dashboard personalizzata con metriche specifiche business: conversion rate lead, margini progetto real-time, forecast revenue mensile, heatmap attività team.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div style="background: #1a1a1a; border-left: 4px solid #667eea; padding: 2rem; border-radius: 10px;">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">🏠 Modulo Immobiliare</h4>
+            <p style="color: #ccc;">
+              Gestione proprietà con galleria foto, virtual tour, ricerca avanzata filtri (prezzo, mq, zona), matching automatico proprietà-lead, alert nuove richieste.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div style="background: #1a1a1a; border-left: 4px solid #667eea; padding: 2rem; border-radius: 10px;">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">⚖️ Modulo Studio Legale</h4>
+            <p style="color: #ccc;">
+              Gestione pratiche legali con deadline scadenze, deposito atti automatico, timesheet fatturabile per pratica, reminder udienze, integrazione PEC.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div style="background: #1a1a1a; border-left: 4px solid #667eea; padding: 2rem; border-radius: 10px;">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">📦 Sync E-commerce Avanzata</h4>
+            <p style="color: #ccc;">
+              Sincronizzazione bidirezionale ordini/clienti WooCommerce → Perfex. Creazione automatica fatture da ordini, tracking spedizioni, gestione resi, stock sync.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div style="background: #1a1a1a; border-left: 4px solid #667eea; padding: 2rem; border-radius: 10px;">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">🤖 Workflow Automazioni</h4>
+            <p style="color: #ccc;">
+              Automazioni trigger: lead inattivo >7gg → email follow-up automatica. Fattura scaduta → reminder automatico +3/+7/+15gg. Progetto completato → survey NPS cliente.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div style="background: #1a1a1a; border-left: 4px solid #667eea; padding: 2rem; border-radius: 10px;">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">💳 Pagamenti Ricorrenti Avanzati</h4>
+            <p style="color: #ccc;">
+              Gestione subscription con addebito automatico Stripe, fatturazione ricorrente, retry pagamenti falliti, dunning management, portal self-service clienti.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- CTA WhatsApp - Curiosity -->
+<section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Hai una domanda veloce?</h3>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Scrivimi su WhatsApp, ti rispondo in giornata</p>
+    <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Scrivimi ora</a>
+  </div>
+</section>
+
+
+  <!-- PROCESSO -->
+  <section style="padding: 5rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="section-title">Come Funziona lo Sviluppo Moduli Custom</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div style="text-align: center;">
+            <div style="font-size: 4rem; color: #667eea; margin-bottom: 1rem;">1️⃣</div>
+            <h4 style="color: #667eea; margin-bottom: 1rem;">Analisi Requisiti</h4>
+            <p style="color: #ccc;">Call 1 ora per definire scope, workflow da automatizzare, integrazioni, output attesi. Stesura specifiche tecniche dettagliate.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div style="text-align: center;">
+            <div style="font-size: 4rem; color: #667eea; margin-bottom: 1rem;">2️⃣</div>
+            <h4 style="color: #667eea; margin-bottom: 1rem;">Preventivo & Timeline</h4>
+            <p style="color: #ccc;">Preventivo dettagliato con breakdown costi e milestone. Timeline realistica: moduli semplici 1-2 settimane, complessi 3-6 settimane.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div style="text-align: center;">
+            <div style="font-size: 4rem; color: #667eea; margin-bottom: 1rem;">3️⃣</div>
+            <h4 style="color: #667eea; margin-bottom: 1rem;">Sviluppo & Test</h4>
+            <p style="color: #ccc;">Sviluppo modulo su ambiente staging. Demo settimanali per feedback iterativo. Testing completo funzionalità e edge cases.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div style="text-align: center;">
+            <div style="font-size: 4rem; color: #667eea; margin-bottom: 1rem;">4️⃣</div>
+            <h4 style="color: #667eea; margin-bottom: 1rem;">Deploy & Supporto</h4>
+            <p style="color: #ccc;">Deploy su produzione, formazione team utilizzo modulo, documentazione tecnica. Supporto bug-fixing 60 giorni post-lancio incluso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- CTA WhatsApp - Closing -->
+<section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Preferisci parlare direttamente?</h3>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Contattami su WhatsApp per un confronto rapido</p>
+    <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Contattami su WhatsApp</a>
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 0; text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 3rem; color: #fff; margin-bottom: 2rem;">Hai un Progetto in Mente?</h2>
+      <p style="font-size: 1.3rem; color: #fff; max-width: 800px; margin: 0 auto 3rem auto;">
+        Contattami per una <strong>consulenza gratuita di 30 minuti</strong>. Analizzeremo le tue esigenze specifiche e ti fornirò un <strong>preventivo personalizzato dettagliato</strong> con timeline realistica.
+      </p>
+      <div>
+        <a href="https://wa.me/393516248936" target="_blank" class="btn btn-light btn-lg me-3" style="padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold;">
+          💬 WHATSAPP: +39 351 624 8936
+        </a>
+        <a href="mailto:andreapiani.dev@gmail.com" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; font-size: 1.2rem;">
+          📧 EMAIL
+        </a>
+      </div>
+      <p style="margin-top: 2rem; color: #fff;">
+        <a href="crm.html" style="color: #fff; text-decoration: underline;">← Torna alla pagina Perfex CRM</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#667eea; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="gestionali-personalizzati.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#667eea'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">💼</div>
+            <h3 style="color:#667eea; font-size:1.3rem; margin-bottom:0.75rem;">Gestionali personalizzati</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Quando Perfex non basta: sviluppo software gestionale su misura per il tuo settore.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="checkin-digitale-hotel.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#667eea'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🏨</div>
+            <h3 style="color:#667eea; font-size:1.3rem; margin-bottom:0.75rem;">Check-in digitale hotel</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Verticale Perfex per strutture ricettive: PMS, OTA, gestione prenotazioni.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-python.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#667eea'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🐍</div>
+            <h3 style="color:#667eea; font-size:1.3rem; margin-bottom:0.75rem;">Automazioni Python</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Script custom per alimentare Perfex: scraping, integrazioni, import massivo dati.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0;">
+    <div class="container">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 1.5rem;">
+          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem;">📄 Privacy Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem;">🍪 Cookie Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem;">🏠 Home</a>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc;">
+          <strong style="color: #fff;">Andrea Piani</strong> - Esperto Perfex CRM e Sviluppatore<br>
+          Italia: Piazza della Repubblica, 19 20124 Milano (MI) | Spagna: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife<br>
+          <a href="mailto:andreapiani.dev@gmail.com" style="color: #667eea;">andreapiani.dev@gmail.com</a><br>
+          © 2026 Andrea Piani. Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+
+  <script src="animations.js"></script>
+  <script src="assets/js/popup-loader.js"></script>
+<!-- Andrea AI Chat Widget -->
+<script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
+<script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+</body>
+</html>

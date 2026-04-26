@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="canonical" href="https://www.andreapiani.com" />
 <head>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Handmade">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
-  <link rel="canonical" href="https://www.andreapiani.com/indexen.html" />
-
-  <!-- Hreflang Tags per Multi-lingua -->
-  <link rel="alternate" hreflang="it" href="https://www.andreapiani.com/" />
-  <link rel="alternate" hreflang="en" href="https://www.andreapiani.com/indexen.html" />
-  <link rel="alternate" hreflang="x-default" href="https://www.andreapiani.com/" />
-
   <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
   <meta name="description" content="Sono Andrea Piani, uno sviluppatore Full Stack Developer specializzato in app iOS e Android e Web Cloud App.">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-  <meta property="og:title" content="Andrea Piani - iOS, Android and Web App Developer">
-  <meta property="og:description" content="Andrea Piani, Full Stack Developer from Italy specialized in iOS, Android and Web Cloud Apps. 15+ years of experience, free quote within 24h.">
-  <meta property="og:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
-  <meta property="og:url" content="https://www.andreapiani.com/indexen.html">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="it_IT">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Andrea Piani - iOS, Android and Web App Developer">
-  <meta name="twitter:description" content="Full Stack Developer specialized in iOS, Android and Web Cloud Apps. 15+ years experience.">
-  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
-
+  
+  
   <title>Andrea Piani - Sviluppatore di App iOS e Android</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="navbar-fix.css">
-  <link rel="stylesheet" href="animations.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="utilities.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,800,900,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,800,900,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -819,76 +796,10 @@
         </div>
     </div>
 </section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/theme/js/script.js"></script>  
-
-  <!-- Footer GDPR -->
-  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0; margin-top: 2rem;">
-    <div class="container">
-      <div style="text-align: center;">
-        <div style="margin-bottom: 1rem; font-size: 0.9rem;">
-          <a href="privacy-policy-en.html" style="color: #ffffff; text-decoration: none; margin: 0 0.8rem;">📄 Privacy Policy</a>
-          <span style="color: #666;">|</span>
-          <a href="cookie-policy-en.html" style="color: #ffffff; text-decoration: none; margin: 0 0.8rem;">🍪 Cookie Policy</a>
-          <span style="color: #666;">|</span>
-          <a href="#" class="footer-manage-cookies" style="color: #ffffff; text-decoration: none; margin: 0 0.8rem;">⚙️ Manage Cookies</a>
-          <span style="color: #666;">|</span>
-          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 0.8rem;">🇮🇹 Italiano</a>
-        </div>
-        <div style="font-size: 0.85rem; color: #ccc;">
-          <strong>Andrea Piani</strong> - iOS/Android/Web Developer<br>
-          Italy: Piazza della Repubblica, 19 20124 Milano (MI) | Spain: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife<br>
-          <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc; text-decoration: none;">andreapiani.dev@gmail.com</a>
-          <br>© 2026 Andrea Piani. All rights reserved.
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-    document.querySelectorAll('.footer-manage-cookies').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (window.CookieConsent) window.CookieConsent.reset();
-      });
-    });
-  </script>
-
+  
+  
   <!-- Cookie Consent Banner GDPR -->
-  <script src="navbar-fix.js"></script>
   <script src="cookie-consent.js"></script>
 
-  <script src="animations.js"></script>
-
-  <!-- New Features -->
-  <script src="utilities.js"></script>
-  <script src="performance.js"></script>
-
-  <script>
-    // Form submission with loading state and toast notification
-    document.querySelectorAll('form[action*="formspree"]').forEach(form => {
-      form.addEventListener('submit', function(e) {
-        const btn = this.querySelector('button[type="submit"]');
-        if (btn && window.AppUtils) {
-          window.AppUtils.setButtonLoading(btn, true);
-        }
-
-        if (window.AppUtils) {
-          window.AppUtils.trackEvent('Form', 'Submit', 'Contact Form');
-        }
-
-        setTimeout(() => {
-          if (btn && window.AppUtils) {
-            window.AppUtils.setButtonLoading(btn, false);
-          }
-          if (window.Toast) {
-            window.Toast.success('Messaggio inviato! Ti risponderò entro 24h', 'Grazie!');
-          }
-        }, 1000);
-      });
-    });
-  </script>
-
-  <script src="assets/js/popup-loader.js"></script>
-<!-- Andrea AI Chat Widget -->
-<script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
-<script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
 </body>
 </html>

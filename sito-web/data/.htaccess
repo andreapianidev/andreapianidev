@@ -1,0 +1,8 @@
+# Block all direct web access to /data/
+# Files inside are read/written only by PHP scripts in /api/ and /admin/
+Order deny,allow
+Deny from all
+
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>

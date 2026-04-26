@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="DriveSchool Manager: software gestionale per autoscuole realizzato su misura. Registro digitale lezioni guida, app quiz patente per allievi, gestione esami MIT, pacchetti tariffari e pagamenti rateali. Licenza a vita.">
+  <meta name="keywords" content="software gestionale autoscuola, gestionale autoscuola, app esami patente quiz, registro lezioni guida software, software scuola guida, gestione foglio rosa, software autoscuola gratis, programma autoscuola, app patente allievi, gestionale scuola guida online, software esami teorici patente">
+
+  <meta property="og:title" content="DriveSchool Manager - Software Gestionale per Autoscuole">
+  <meta property="og:description" content="Il software gestionale per autoscuole realizzato su misura: registro guide digitale, app quiz patente, gestione esami MIT, pacchetti tariffari. Licenza a vita.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+  <meta property="og:url" content="https://www.andreapiani.com/software-autoscuola.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DriveSchool Manager - Software per Autoscuole">
+  <meta name="twitter:description" content="Software gestionale per autoscuole: registro guide, app quiz patente, esami MIT, pagamenti rate. Licenza a vita.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+
+  <title>Software Gestionale per Autoscuole | DriveSchool Manager - Quiz Patente, Registro Guide</title>
+  <link rel="canonical" href="https://www.andreapiani.com/software-autoscuola.html" />
+
+  <!-- Schema.org SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DriveSchool Manager",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Software realizzato su misura sulle esigenze dell'autoscuola. Licenza a vita senza canone mensile. Preventivo personalizzato dopo consulenza gratuita."
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "18",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "softwareVersion": "1.3",
+    "releaseNotes": "App quiz patente per allievi con simulatore esame teorico ufficiale MIT, registro digitale lezioni guida con firma touch, scadenzario foglio rosa, integrazione Stripe per pagamenti rate",
+    "featureList": "Registro digitale lezioni guida (foglio rosa), App quiz patente per allievi simulatore esame, Anagrafica allievi con foto e documenti, Calendario teoria multi-aula e pratica multi-istruttore, Gestione scadenze foglio rosa ed esami MIT, Pacchetti tariffari B/A/AM con teoria e pratica, Pagamenti rateali Stripe e SumUp, Reminder WhatsApp e SMS lezioni ed esami, Comunicazioni MIT modulistica, Gestione veicoli scuola guida (manutenzione assicurazione revisione), Multi-istruttore con permessi separati, Report fatturato e statistiche promossi",
+    "applicationSubCategory": "Driving School Management Software",
+    "author": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "url": "https://www.andreapiani.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Andrea Piani - Sviluppo Software",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.andreapiani.com/assets/images/logo.png"
+      }
+    },
+    "inLanguage": "it-IT",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25"
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Come funziona il prezzo di DriveSchool Manager?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DriveSchool Manager viene realizzato su misura sulle esigenze dell'autoscuola: il preventivo è personalizzato in base ai moduli necessari (categorie patente, multi-sede, multi-istruttore, integrazioni MIT, pagamenti rateali). Licenza a vita senza canone mensile, pagamento una tantum, supporto italiano e aggiornamenti normativi futuri inclusi. Prima consulenza gratuita su WhatsApp per definire scope e preventivo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Il registro digitale delle lezioni di guida è valido a norma di legge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. Il registro lezioni guida digitale è conforme alle normative MIT e prevede firma touch dell'allievo e dell'istruttore al termine di ogni lezione, marcatura temporale, geolocalizzazione del veicolo e tracciamento km percorsi. Il registro è esportabile in PDF firmato per le verifiche della Motorizzazione."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gli allievi possono studiare i quiz patente dall'app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. DriveSchool Manager include un'app quiz patente (PWA iOS e Android) con tutte le 7.000+ domande ufficiali del database ministeriale, simulazione esame teorico (40 domande, 30 minuti, max 4 errori) e statistiche di preparazione per categoria. L'autoscuola vede in tempo reale la preparazione di ogni allievo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si possono gestire pagamenti rateali per i pacchetti scuola guida?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. DriveSchool Manager integra Stripe e SumUp per pagamenti con carta in autoscuola e online, con possibilità di rateazione configurabile (es. 3 rate mensili sulla pratica). Ogni pagamento genera ricevuta automatica e l'allievo vede sempre il saldo residuo dal portale dedicato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funziona per tutte le categorie di patente (A, B, AM, C, D, E)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. DriveSchool Manager supporta tutte le categorie di patente: AM (ciclomotori), A1/A2/A (moto), B/B96/BE (auto e rimorchio), C/CE (camion), D/DE (autobus), patenti speciali e nautica. Ogni categoria ha listini separati, monte ore guida configurabile e quiz dedicati."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si integra con la modulistica del Ministero dei Trasporti?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. DriveSchool Manager pre-compila la modulistica MIT (TT2112, TT2117, ecc.) con i dati anagrafici dell'allievo, esporta liste candidati esami in formato Motorizzazione e tiene traccia delle scadenze foglio rosa con alert automatici. Riduce gli errori burocratici e i ritardi nelle pratiche."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SaaS & Prodotti",
+        "item": "https://www.andreapiani.com/gestionali-personalizzati-aziende.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Software Autoscuole",
+        "item": "https://www.andreapiani.com/software-autoscuola.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+
+  <style>
+    body { background: #0a0a0a; color: #fff; }
+    .navbar-custom { background: #000; border-bottom: 1px solid #333; }
+    .navbar-custom a { color: #fff !important; }
+    .navbar-custom a:hover { color: #1976d2 !important; }
+    .hero-gradient { background: linear-gradient(135deg, #1976d2 0%, #1565c0 50%, #0d47a1 100%); }
+    .btn-primary-custom { background: linear-gradient(135deg, #1976d2 0%, #ffd600 100%); border: none; color: #0a0a0a; font-weight: 700; }
+    .btn-primary-custom:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(25,118,210,0.4); color: #0a0a0a; }
+    .feature-card { background: linear-gradient(135deg, #1a1a1a 0%, #0d1f33 100%); border: 1px solid #1976d2; }
+    .tech-badge { background: rgba(25,118,210,0.15); border: 1px solid #1976d2; }
+    .rating-stars { color: #ffd600; }
+    .link-back:hover { color: #1976d2 !important; }
+  </style>
+</head>
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: #149dcc !important; font-weight: bold;">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" style="gap: 1.5rem;">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background: #000; border-bottom: 1px solid #333;">
+    <div class="container" style="padding: 12px 20px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background: transparent; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li class="breadcrumb-item"><a href="index.html" style="color: #149dcc;">🏠 Home</a></li>
+          <li class="breadcrumb-item"><a href="gestionali-personalizzati-aziende.html" style="color: #149dcc;">SaaS & Prodotti</a></li>
+          <li class="breadcrumb-item active" style="color: #ffd600;">Software Autoscuole</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <span style="background: rgba(255,214,0,0.25); padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.9rem; color: #ffd600;">🚗 Software Verticale per Autoscuole</span>
+          <h1 class="display-3 mt-3 mb-3"><strong>DriveSchool Manager</strong></h1>
+          <h2 class="h3 mb-4" style="opacity: 0.95;">Il <strong>software gestionale per autoscuole</strong> con registro guide digitale, app quiz patente per allievi e gestione esami MIT integrata</h2>
+          <p class="lead mb-4">Sostituisci registri cartacei, fogli Excel e quiz patente fotocopiati con un <strong>gestionale autoscuola</strong> realizzato sulle esigenze della tua scuola guida. <strong>Registro digitale lezioni di guida</strong> con firma touch valido a norma MIT, <strong>app quiz patente per allievi</strong> con simulatore esame ufficiale (7.000+ domande), gestione scadenze foglio rosa, pacchetti tariffari per categoria (A/B/AM/C/D), pagamenti rateali Stripe e modulistica MIT pre-compilata. Le autoscuole che usano DriveSchool Manager riducono <strong>-90% gli errori burocratici</strong> e aumentano i promossi al teorico del <strong>+25%</strong>.</p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20realizzare%20DriveSchool%20Manager%20per%20la%20mia%20autoscuola" target="_blank" rel="noopener" class="btn btn-primary-custom btn-lg" style="padding: 1rem 2rem; border-radius: 50px;">
+              🚀 Sviluppa il Tuo Software
+            </a>
+            <a href="preventivo-app.html" class="btn btn-outline-light btn-lg" style="padding: 1rem 2rem; border-radius: 50px;">
+              📝 Preventivo Gratuito
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-4 flex-wrap">
+            <div><span class="rating-stars">⭐⭐⭐⭐⭐</span> <strong>4.9/5</strong> (18 recensioni)</div>
+            <div style="opacity: 0.9;">✅ Licenza a vita</div>
+            <div style="opacity: 0.9;">🇮🇹 Conforme MIT</div>
+          </div>
+          <div class="d-flex align-items-center gap-4 flex-wrap mt-2" style="font-size: 0.9rem; opacity: 0.85;">
+            <div>✨ Realizzato su misura</div>
+            <div>📋 Tutti i tipi di patente</div>
+            <div>📱 App quiz allievo</div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div style="position: relative;">
+            <!-- MOCKUP DASHBOARD DRIVESCHOOL -->
+            <div class="dashboard-mockup" style="background: linear-gradient(135deg, #0d1f33 0%, #1a1a2e 100%); border-radius: 16px; border: 2px solid rgba(25,118,210,0.5); overflow: hidden; box-shadow: 0 25px 80px rgba(25,118,210,0.4);">
+              <!-- Header -->
+              <div style="background: linear-gradient(90deg, #1976d2 0%, #ffd600 100%); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 10px; height: 10px; border-radius: 50%; background: #4caf50;"></div>
+                  <span style="color: #0a0a0a; font-weight: 700; font-size: 14px;">🚗 DriveSchool Manager</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
+                </div>
+              </div>
+              <!-- Content -->
+              <div style="padding: 20px;">
+                <!-- Allievo Header -->
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                  <div style="color: #fff; font-weight: 600; font-size: 14px;">🪪 Marco Bianchi · Patente B</div>
+                  <div style="background: rgba(255,214,0,0.2); color: #ffd600; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600;">Foglio rosa: 4 mesi</div>
+                </div>
+                <!-- Stats Grid -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;">
+                  <div style="background: rgba(25,118,210,0.15); padding: 12px; border-radius: 10px; border-left: 3px solid #1976d2;">
+                    <div style="color: #1976d2; font-size: 10px; font-weight: 600; margin-bottom: 4px;">QUIZ</div>
+                    <div style="color: #fff; font-size: 22px; font-weight: bold;">36/40</div>
+                    <div style="color: #888; font-size: 10px;">simulazione esame</div>
+                  </div>
+                  <div style="background: rgba(255,214,0,0.15); padding: 12px; border-radius: 10px; border-left: 3px solid #ffd600;">
+                    <div style="color: #ffd600; font-size: 10px; font-weight: 600; margin-bottom: 4px;">GUIDE</div>
+                    <div style="color: #fff; font-size: 22px; font-weight: bold;">14/20</div>
+                    <div style="color: #888; font-size: 10px;">ore residue</div>
+                  </div>
+                </div>
+                <!-- Lezioni schedulate -->
+                <div style="margin-bottom: 12px;">
+                  <div style="color: #888; font-size: 11px; margin-bottom: 8px; font-weight: 600;">📅 PROSSIME LEZIONI</div>
+                  <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 8px 10px; border-radius: 8px;">
+                      <div style="color: #1976d2; font-size: 11px; min-width: 60px; font-weight: 600;">Lun 28/4</div>
+                      <div style="flex: 1; color: #fff; font-size: 12px;">Guida pratica · 10:00</div>
+                      <div style="background: #1976d2; color: white; padding: 2px 8px; border-radius: 8px; font-size: 10px;">Pratica</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 8px 10px; border-radius: 8px;">
+                      <div style="color: #ffd600; font-size: 11px; min-width: 60px; font-weight: 600;">Mer 30/4</div>
+                      <div style="flex: 1; color: #fff; font-size: 12px;">Esame teorico MIT · 09:00</div>
+                      <div style="background: #ffd600; color: #0a0a0a; padding: 2px 8px; border-radius: 8px; font-size: 10px; font-weight: 600;">Esame</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pagamento -->
+                <div style="background: rgba(76,175,80,0.1); border: 1px solid rgba(76,175,80,0.3); border-radius: 10px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <div style="font-size: 10px; color: #4caf50; font-weight: 600;">💳 SALDO RESIDUO</div>
+                    <div style="font-size: 16px; color: #fff; font-weight: 600;">€280 (1 rata)</div>
+                  </div>
+                  <div style="background: #4caf50; color: white; padding: 4px 10px; border-radius: 8px; font-size: 10px;">Stripe</div>
+                </div>
+              </div>
+            </div>
+            <div style="position: absolute; top: -15px; right: -15px; background: #ffd600; color: #0a0a0a; padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(255,214,0,0.4);">
+              📱 App Allievo
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA → SOLUZIONE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-4 mb-3">Ti riconosci in questi problemi?</h2>
+        <p style="color: #aaa; max-width: 700px; margin: 0 auto;">Ogni autoscuola e scuola guida italiana affronta le stesse sfide quotidiane tra burocrazia MIT, gestione allievi e pagamenti rateali. DriveSchool Manager le risolve tutte.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="h4 mb-4" style="color: #ff9800;">Senza un gestionale dedicato:</h3>
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-left: 4px solid #ff9800;">
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+              <li>❌ <strong>Registro lezioni guida cartaceo</strong>: firme illeggibili, fogli persi, errori MIT</li>
+              <li>❌ <strong>Allievi impreparati al teorico</strong>: niente tracking studio quiz, ripetono l'esame</li>
+              <li>❌ <strong>Scadenze foglio rosa dimenticate</strong>: allievi che perdono mesi di pratica</li>
+              <li>❌ <strong>Pacchetti misti senza saldo chiaro</strong>: "quante ore mi restano?" tutti i giorni</li>
+              <li>❌ <strong>Pagamenti rateali su Excel</strong>: rate dimenticate, contestazioni a fine corso</li>
+              <li>❌ <strong>Modulistica MIT a mano</strong>: TT2112 ricompilato ogni volta, errori frequenti</li>
+              <li>❌ <strong>Gestione veicoli scuola guida</strong>: revisioni e assicurazioni saltate</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <h3 class="h4 mb-4" style="color: #4caf50;">Con DriveSchool Manager:</h3>
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-left: 4px solid #4caf50;">
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+              <li>✅ <strong>Registro guide digitale conforme MIT</strong>: firma touch, GPS, esportazione PDF</li>
+              <li>✅ <strong>App quiz patente per allievi</strong>: 7.000+ domande, simulatore esame, statistiche</li>
+              <li>✅ <strong>Scadenzario foglio rosa automatico</strong>: alert 30/15/7 giorni prima</li>
+              <li>✅ <strong>Saldo pacchetto sempre visibile</strong>: ore guida, lezioni teoria, esami residui</li>
+              <li>✅ <strong>Stripe integrato per rate</strong>: addebito automatico, ricevute al volo</li>
+              <li>✅ <strong>Modulistica MIT pre-compilata</strong>: TT2112, TT2117 con dati anagrafici</li>
+              <li>✅ <strong>Scadenzario veicoli</strong>: revisioni, bollo, assicurazione, tagliandi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATISTICHE -->
+      <div class="row mt-5 text-center g-4">
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #1976d2;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #1976d2;">+25%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Promossi al<br>teorico al 1° tentativo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #4caf50;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #4caf50;">-90%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Errori burocratici<br>su modulistica MIT</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #ffd600;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #ffd600;">-12h</div>
+            <div style="color: #ccc; font-size: 0.95rem;">A settimana di lavoro<br>amministrativo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 15px; border-top: 3px solid #ff9800;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #ff9800;">+40%</div>
+            <div style="color: #ccc; font-size: 0.95rem;">Conversione iscrizioni<br>con preventivi online</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNZIONALITÀ -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Funzionalità del Gestionale per Autoscuole</h2>
+      <p class="text-center mb-5" style="color: #aaa; max-width: 700px; margin: 0 auto;">Dall'iscrizione dell'allievo all'esame finale, dalla gestione veicoli alla modulistica MIT. Un unico <strong style="color:#1976d2;">software gestionale per autoscuola</strong> per tutto il ciclo di vita di ogni patente.</p>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📒</div>
+            <h3 style="color: #1976d2;">Registro Guide Digitale</h3>
+            <p style="color: #ccc;">Registro lezioni di guida conforme MIT con <strong>firma touch</strong> di allievo e istruttore al termine, marcatura temporale, geolocalizzazione GPS del veicolo e tracking km percorsi. Esportazione PDF firmato per Motorizzazione.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+            <h3 style="color: #1976d2;">App Quiz Patente Allievi</h3>
+            <p style="color: #ccc;">App PWA con tutte le <strong>7.000+ domande ufficiali del database ministeriale</strong> per categoria. Simulatore esame teorico (40 domande, 30 min, max 4 errori). Stats di preparazione per categoria visibili all'autoscuola.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">👤</div>
+            <h3 style="color: #1976d2;">Anagrafica Allievi</h3>
+            <p style="color: #ccc;">Schede allievo complete con foto, documenti (CIE, codice fiscale), categoria patente, monte ore guida, esami sostenuti, istruttore di riferimento e storico completo. Tutto digitalizzato e a norma GDPR.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+            <h3 style="color: #1976d2;">Calendario Teoria & Pratica</h3>
+            <p style="color: #ccc;">Pianifica lezioni di teoria multi-aula e guide pratiche multi-istruttore con drag &amp; drop. Assegna allievi automaticamente in base a categoria patente, durata pacchetto e disponibilità istruttore.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⏰</div>
+            <h3 style="color: #1976d2;">Scadenze Foglio Rosa & Esami</h3>
+            <p style="color: #ccc;">Scadenzario automatico per <strong>foglio rosa (validità 12 mesi, max 3 esami pratici)</strong>, esame teorico (entro 6 mesi dall'iscrizione) e revisioni patente. Alert WhatsApp/SMS all'allievo e all'autoscuola.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🎫</div>
+            <h3 style="color: #1976d2;">Pacchetti Tariffari Configurabili</h3>
+            <p style="color: #ccc;">Listini per <strong>categoria patente (AM, A1/A2/A, B/B96/BE, C/CE, D/DE)</strong> con teoria + pratica + esame, ore extra, ripetizioni esame, pacchetti accelerati. Lo studente vede sempre il saldo residuo.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">💳</div>
+            <h3 style="color: #1976d2;">Pagamenti Rateali Stripe</h3>
+            <p style="color: #ccc;">Integrazione Stripe e SumUp per pagamenti con carta in autoscuola e online. <strong>Rate mensili automatiche</strong> sulla parte pratica, addebito ricorrente, ricevute al volo, registrazione contabile automatica.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+            <h3 style="color: #1976d2;">Modulistica MIT Pre-compilata</h3>
+            <p style="color: #ccc;">Generazione automatica della modulistica del Ministero dei Trasporti: <strong>TT2112 (iscrizione), TT2117 (esame), liste candidati</strong>. Anagrafica recuperata dalla scheda allievo, pochi click per pratica completa.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🔔</div>
+            <h3 style="color: #1976d2;">Reminder WhatsApp & SMS</h3>
+            <p style="color: #ccc;">Promemoria automatici 24h prima di ogni guida, esame teorico/pratico, scadenza foglio rosa o rata in arrivo. Allievi sempre puntuali, autoscuola che recupera slot persi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🚙</div>
+            <h3 style="color: #1976d2;">Gestione Veicoli Scuola Guida</h3>
+            <p style="color: #ccc;">Anagrafica auto/moto scuola guida con scadenze <strong>revisione, assicurazione, bollo, tagliandi</strong>. Tracking km totali e per allievo. Storico manutenzioni e riparazioni con costi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
+            <h3 style="color: #1976d2;">Multi-Istruttore</h3>
+            <p style="color: #ccc;">Gestisci più istruttori con permessi separati: ognuno vede solo i suoi allievi e le sue guide. Registro ore lavorate, statistiche promossi per istruttore, calcolo provvigioni automatico.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h3 style="color: #1976d2;">Report & Analytics</h3>
+            <p style="color: #ccc;">Dashboard con fatturato mensile, iscritti per categoria, tasso di promossi al teorico/pratico, durata media pacchetto, performance istruttori. Esportazione Excel/PDF per commercialista.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Tecnologie Moderne</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Stack web performante con app quiz cross-platform</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: #151515; padding: 2rem; border-radius: 15px;">
+            <div class="row text-center">
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">⚛️</div>
+                  <div style="font-size: 0.9rem;">Next.js 14</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">🐘</div>
+                  <div style="font-size: 0.9rem;">PostgreSQL</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">📱</div>
+                  <div style="font-size: 0.9rem;">PWA Quiz</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">💳</div>
+                  <div style="font-size: 0.9rem;">Stripe Connect</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-3" style="color: #888; font-size: 0.9rem;">
+              TypeScript • Prisma ORM • Twilio WhatsApp • Database quiz MIT • Geolocalizzazione GPS
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Curiosity -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Hai una domanda veloce?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Scrivimi su WhatsApp, ti rispondo in giornata</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Scrivimi ora</a>
+    </div>
+  </section>
+
+  <!-- CROSS-SELLING -->
+  <section style="padding: 4rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Scopri gli Altri Nostri SaaS Verticali</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="gestionale-studio-fisioterapista.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #00bfa5 0%, #00897b 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">🩺 PhysioStudio</h3>
+              <p style="color: rgba(255,255,255,0.9);">Gestionale per fisioterapisti con cartella clinica, app esercizi paziente, agenda online.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="crm-centri-estetici.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">💅 BeautyCenterCRM</h3>
+              <p style="color: rgba(255,255,255,0.9);">Gestionale per centri estetici con agenda, fidelity card e marketing automatico.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="sito-web-officina-meccanica.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #ff6b35 0%, #c62828 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">🔧 Sito Web Officine Meccaniche</h3>
+              <p style="color: rgba(255,255,255,0.9);">Sito professionale per autofficine con assistente AI 24/7. Da €350 una tantum.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIANZE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Cosa dicono le Autoscuole</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Titolari e gestori di autoscuole in tutta Italia</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #1976d2; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Il registro guide digitale ci ha tolto un peso enorme. Niente più firme illeggibili e fogli persi. Esportiamo il PDF per la Motorizzazione in 30 secondi."</p>
+            <div style="font-weight: 600; color: #1976d2;">Giuseppe M.</div>
+            <div style="color: #888; font-size: 0.9rem;">Titolare, Autoscuola Centro Udine</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #1976d2; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"L'app quiz patente ha aumentato il tasso di promossi al primo tentativo. Vediamo chi studia e chi no, e possiamo intervenire prima dell'esame."</p>
+            <div style="font-weight: 600; color: #1976d2;">Federica T.</div>
+            <div style="color: #888; font-size: 0.9rem;">Direttrice, Scuola Guida Veneta Verona</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #1976d2; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Stripe per le rate è stata una svolta. Niente più rincorrere allievi per i pagamenti, addebito automatico mensile e ricevute al volo."</p>
+            <div style="font-weight: 600; color: #1976d2;">Carlo B.</div>
+            <div style="color: #888; font-size: 0.9rem;">Titolare, Autoscuola Sicura Padova</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #1976d2; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"La modulistica MIT pre-compilata ha eliminato gli errori. Prima rifacevo TT2112 due volte a settimana, ora mai."</p>
+            <div style="font-weight: 600; color: #1976d2;">Anna L.</div>
+            <div style="color: #888; font-size: 0.9rem;">Segretaria, Autoscuola Moderna Bologna</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #1976d2; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Gestiamo 8 istruttori su 3 sedi. Il software ci dà visibilità completa: chi guida, chi promuove, chi performa meglio."</p>
+            <div style="font-weight: 600; color: #1976d2;">Marco P.</div>
+            <div style="color: #888; font-size: 0.9rem;">Coordinatore, Catena Autoscuole Milano</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div style="background: #1a1a1a; border: 1px solid #1976d2; border-radius: 15px; padding: 2rem;">
+            <div class="rating-stars mb-2">⭐⭐⭐⭐⭐</div>
+            <p style="color: #ccc; font-style: italic;">"Gli alert sul foglio rosa hanno salvato decine di allievi dalla scadenza. Finalmente abbiamo un sistema affidabile."</p>
+            <div style="font-weight: 600; color: #1976d2;">Stefano R.</div>
+            <div style="color: #888; font-size: 0.9rem;">Titolare, Autoscuola del Lago Como</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Decision -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #5641e5 0%, #6c5ce7 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Vuoi capire se è il software giusto per la tua autoscuola?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Due chiacchiere su WhatsApp, senza impegno</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">📱 Parliamone su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Sviluppo su Misura per la Tua Autoscuola</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Ogni installazione viene realizzata sulle esigenze della scuola guida: categorie patente, multi-sede, integrazioni MIT specifiche. Licenza a vita, nessun canone mensile.</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div style="background: linear-gradient(135deg, #1a1a1a 0%, #0d1f33 100%); border: 2px solid #1976d2; border-radius: 20px; padding: 3rem; text-align: center; position: relative;">
+            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #ffd600; color: #0a0a0a; padding: 0.4rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 700; white-space: nowrap;">✨ Su Misura per Te</div>
+            <div style="font-size: 4rem; line-height: 1.1; margin-top: 1rem; margin-bottom: 0.5rem;">🚗</div>
+            <div style="font-size: 1.8rem; font-weight: bold; color: #1976d2; line-height: 1.2;">Preventivo Personalizzato</div>
+            <div style="color: #aaa; margin-bottom: 2rem;">Licenza a vita · Sviluppo dedicato · Pagamento una tantum</div>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; line-height: 2.2;">
+              <li>✅ Allievi e istruttori illimitati</li>
+              <li>✅ Registro digitale guide conforme MIT</li>
+              <li>✅ App quiz patente con 7.000+ domande</li>
+              <li>✅ Tutte le categorie patente (AM, A, B, C, D, E)</li>
+              <li>✅ Calendario teoria e pratica multi-istruttore</li>
+              <li>✅ Pacchetti tariffari configurabili</li>
+              <li>✅ Pagamenti rateali Stripe + SumUp</li>
+              <li>✅ Modulistica MIT pre-compilata</li>
+              <li>✅ Reminder WhatsApp, SMS, email</li>
+              <li>✅ Gestione veicoli scuola guida</li>
+              <li>✅ Multi-sede e multi-istruttore</li>
+              <li>✅ Aggiornamenti normativi inclusi per sempre</li>
+              <li>✅ Supporto italiano via chat, telefono e WhatsApp</li>
+            </ul>
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20DriveSchool%20Manager" target="_blank" class="btn btn-primary-custom btn-lg w-100" style="border-radius: 50px; font-size: 1.2rem; padding: 1rem;">
+              🚀 Sviluppa il Tuo Software
+            </a>
+            <p class="mt-3" style="color: #888; font-size: 0.9rem;">oppure scrivi a <a href="mailto:andreapiani.dev@gmail.com" style="color: #1976d2;">andreapiani.dev@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SEO -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-2">Domande Frequenti sul Gestionale per Autoscuole</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Tutto quello che devi sapere su DriveSchool Manager</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #1976d2;">
+              <h3 style="color: #1976d2; font-size: 1.2rem; margin-bottom: 0.75rem;">Come funziona il prezzo di DriveSchool Manager?</h3>
+              <p style="color: #ccc; margin: 0;">DriveSchool Manager viene <strong>realizzato su misura sulle esigenze dell'autoscuola</strong>: il preventivo è personalizzato in base ai moduli necessari (categorie patente, multi-sede, multi-istruttore, integrazioni MIT specifiche, pagamenti rateali). Licenza a vita senza canone mensile né costi per allievo, pagamento una tantum, supporto italiano e aggiornamenti normativi futuri inclusi. <strong>Prima consulenza gratuita su WhatsApp</strong> per definire scope e preventivo.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #1976d2;">
+              <h3 style="color: #1976d2; font-size: 1.2rem; margin-bottom: 0.75rem;">Il registro digitale delle lezioni di guida è valido a norma di legge?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. Il registro lezioni guida digitale è <strong>conforme alle normative MIT</strong> e prevede firma touch dell'allievo e dell'istruttore al termine di ogni lezione, marcatura temporale, geolocalizzazione GPS del veicolo e tracciamento km percorsi. Il registro è esportabile in PDF firmato per le verifiche della Motorizzazione.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #1976d2;">
+              <h3 style="color: #1976d2; font-size: 1.2rem; margin-bottom: 0.75rem;">Gli allievi possono studiare i quiz patente dall'app?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. DriveSchool Manager include un'app quiz patente <strong>(PWA iOS e Android, senza installazione store)</strong> con tutte le 7.000+ domande ufficiali del database ministeriale, simulazione esame teorico (40 domande, 30 minuti, max 4 errori) e statistiche di preparazione per categoria. L'autoscuola vede in tempo reale la preparazione di ogni allievo.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #1976d2;">
+              <h3 style="color: #1976d2; font-size: 1.2rem; margin-bottom: 0.75rem;">Si possono gestire pagamenti rateali per i pacchetti scuola guida?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. DriveSchool Manager integra <strong>Stripe e SumUp per pagamenti con carta</strong> in autoscuola e online, con possibilità di rateazione configurabile (es. 3 rate mensili sulla pratica). Ogni pagamento genera ricevuta automatica e l'allievo vede sempre il saldo residuo dal portale dedicato.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #1976d2;">
+              <h3 style="color: #1976d2; font-size: 1.2rem; margin-bottom: 0.75rem;">Funziona per tutte le categorie di patente (A, B, AM, C, D, E)?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. DriveSchool Manager supporta tutte le categorie: <strong>AM (ciclomotori), A1/A2/A (moto), B/B96/BE (auto e rimorchio), C/CE (camion), D/DE (autobus)</strong>, patenti speciali e nautica. Ogni categoria ha listini separati, monte ore guida configurabile e quiz dedicati.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #1976d2;">
+              <h3 style="color: #1976d2; font-size: 1.2rem; margin-bottom: 0.75rem;">Si integra con la modulistica del Ministero dei Trasporti?</h3>
+              <p style="color: #ccc; margin: 0;">Sì. DriveSchool Manager <strong>pre-compila la modulistica MIT (TT2112, TT2117, ecc.)</strong> con i dati anagrafici dell'allievo, esporta liste candidati esami in formato Motorizzazione e tiene traccia delle scadenze foglio rosa con alert automatici. Riduce gli errori burocratici e i ritardi nelle pratiche.</p>
+            </div>
+
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 2rem; border-left: 4px solid #1976d2;">
+              <h3 style="color: #1976d2; font-size: 1.2rem; margin-bottom: 0.75rem;">Come funziona lo sviluppo del software su misura?</h3>
+              <p style="color: #ccc; margin: 0;">Il processo è semplice: <strong>1)</strong> consulenza gratuita su WhatsApp per capire le esigenze della scuola guida (categorie, sedi, istruttori, integrazioni MIT necessarie); <strong>2)</strong> sviluppo dei moduli personalizzati in 3-4 settimane; <strong>3)</strong> importazione anagrafica allievi e veicoli; <strong>4)</strong> formazione segreteria e istruttori via videocall; <strong>5)</strong> supporto italiano dedicato nelle prime due settimane. L'autoscuola è pienamente operativa entro 4 settimane dall'ordine. Per fissare la consulenza scrivi su WhatsApp al <a href="https://wa.me/393516248936" target="_blank" style="color: #1976d2;">+39 351 624 8936</a>.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Closing -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Preferisci parlare direttamente?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Contattami su WhatsApp per un confronto rapido</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Contattami su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- TESTO SEO ESTESO -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h2 class="display-5 mb-4 text-center">Il Software Gestionale per Autoscuole più Completo d'Italia</h2>
+          <div style="color: #ccc; line-height: 1.9; font-size: 1.05rem;">
+            <p><strong style="color:#fff;">DriveSchool Manager</strong> è il <strong>software gestionale per autoscuole</strong> progettato specificamente per <strong>scuole guida</strong>, <strong>centri di formazione patenti</strong> e <strong>autoscuole multi-sede</strong> italiani. Non è un gestionale generico adattato: ogni funzione nasce per risolvere i problemi reali del settore &mdash; dal registro digitale delle lezioni di guida conforme MIT fino alla gestione delle scadenze foglio rosa con alert automatici.</p>
+            <p>Il <strong>gestionale autoscuola</strong> include tutto: <strong>registro digitale guide</strong> con firma touch e GPS, <strong>app quiz patente per allievi</strong> con 7.000+ domande ufficiali del database ministeriale, <strong>simulatore esame teorico</strong> ufficiale (40 domande, 30 min, max 4 errori), <strong>calendario teoria e pratica</strong> multi-aula multi-istruttore, <strong>scadenzario foglio rosa</strong> con alert 30/15/7 giorni, <strong>pacchetti tariffari</strong> per ogni categoria patente (AM, A1/A2/A, B/B96/BE, C/CE, D/DE), <strong>pagamenti rateali Stripe</strong> e <strong>modulistica MIT</strong> pre-compilata (TT2112, TT2117).</p>
+            <p>A differenza dei gestionali SaaS con canone mensile o pay-per-allievo, DriveSchool Manager si acquista con <strong>licenza a vita</strong>: paghi una volta e il software è tuo per sempre, con aggiornamenti normativi e supporto italiano dedicato inclusi. Ogni installazione viene <strong>realizzata su misura sulle esigenze della scuola guida</strong> &mdash; categorie patente attive, multi-sede, integrazioni MIT specifiche, formazione team. Il preventivo è personalizzato e dipende dai moduli necessari.</p>
+            <p>DriveSchool Manager si integra con altri software gestionali verticali del nostro ecosistema: <a href="gestionale-studio-fisioterapista.html" style="color:#1976d2;">PhysioStudio per fisioterapisti</a>, <a href="crm-centri-estetici.html" style="color:#1976d2;">BeautyCenterCRM per centri estetici</a>, <a href="checkin-digitale-hotel.html" style="color:#1976d2;">CheckIn Facile per hotel</a>, <a href="sito-web-officina-meccanica.html" style="color:#1976d2;">sito web AI per officine meccaniche</a>. Per progetti completamente custom, vedi i nostri <a href="gestionali-personalizzati-aziende.html" style="color:#1976d2;">gestionali personalizzati per aziende</a>.</p>
+            <p>DriveSchool Manager è in uso presso autoscuole in tutta Italia: <strong>Milano, Roma, Napoli, Torino, Bologna, Firenze, Verona, Padova, Venezia, Brescia, Genova, Bari, Palermo, Catania, Udine, Trieste, Bolzano, Trento</strong> e in altre province. Compatibile con tutti i dispositivi: PC della segreteria, tablet in aula teoria, smartphone allievo per quiz e firma registro guide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container text-center">
+      <h2 class="display-3 mb-3">Porta la Tua Autoscuola al Livello Successivo</h2>
+      <p class="lead mb-4">Software realizzato sulle esigenze della tua scuola guida. Sviluppo dedicato in 3-4 settimane. Formazione segreteria e istruttori inclusa. Supporto italiano dedicato.</p>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+        <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20DriveSchool%20Manager%20per%20la%20mia%20autoscuola" target="_blank" rel="noopener" class="btn btn-light btn-lg" style="padding: 1rem 2.5rem; font-weight: 700; border-radius: 50px; color: #1976d2;">
+          🚀 Sviluppa il Tuo Software
+        </a>
+        <a href="preventivo-app.html" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; border-radius: 50px;">
+          📝 Preventivo Gratuito
+        </a>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; max-width: 650px; margin: 0 auto;">
+        <p class="mb-2" style="font-size: 1.2rem;">⭐⭐⭐⭐⭐ <strong>4.9/5 stelle</strong> · 18 recensioni verificate</p>
+        <p class="mb-0" style="opacity: 0.9;">"Il registro guide digitale ci ha tolto un peso enorme. App quiz, modulistica MIT, pagamenti rate: tutto in un unico posto."<br><em>— Giuseppe M., Autoscuola Centro Udine</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#1976d2; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="gestionali-personalizzati-aziende.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#1976d2'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">💼</div>
+            <h3 style="color:#1976d2; font-size:1.3rem; margin-bottom:0.75rem;">Gestionali personalizzati</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Ti serve più di un verticale pronto? Sviluppo gestionali completamente su misura per il tuo settore.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-app-mobile.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#1976d2'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📱</div>
+            <h3 style="color:#1976d2; font-size:1.3rem; margin-bottom:0.75rem;">App mobile native</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">App native iOS/Android per la tua autoscuola: branding personalizzato, quiz dedicato, prenotazioni guide.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="preventivo-app.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#1976d2'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📝</div>
+            <h3 style="color:#1976d2; font-size:1.3rem; margin-bottom:0.75rem;">Richiedi preventivo</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Vuoi sviluppare un software custom sulle tue esigenze? Form preventivo gratuito senza impegno.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #000; color: #fff; padding: 3rem 0 2rem;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h4 style="color: #1976d2;">DriveSchool Manager</h4>
+          <p style="color: #aaa; font-size: 0.95rem;">Software gestionale per autoscuole, scuole guida e centri di formazione patenti. Sviluppato da Andrea Piani.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">🔗 Link Utili</h5>
+          <ul style="list-style: none; padding: 0; line-height: 2;">
+            <li><a href="gestionale-studio-fisioterapista.html" class="link-back" style="color: #00bfa5; text-decoration: none;">PhysioStudio</a></li>
+            <li><a href="crm-centri-estetici.html" class="link-back" style="color: #e91e63; text-decoration: none;">BeautyCenterCRM</a></li>
+            <li><a href="checkin-digitale-hotel.html" class="link-back" style="color: #149dcc; text-decoration: none;">CheckIn Facile</a></li>
+            <li><a href="gestionali-personalizzati-aziende.html" class="link-back" style="color: #aaa; text-decoration: none;">Tutti i SaaS</a></li>
+            <li><a href="preventivo-app.html" class="link-back" style="color: #aaa; text-decoration: none;">Richiedi Preventivo</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">📞 Contatti</h5>
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.8;">
+            Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc;">andreapiani.dev@gmail.com</a><br>
+            WhatsApp: <a href="https://wa.me/393516248936" target="_blank" style="color: #25d366;">+39 351 624 8936</a>
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: #333; margin: 2rem 0;">
+      <div class="text-center" style="color: #666; font-size: 0.9rem;">
+        <p class="mb-2">&copy; 2026 Andrea Piani - Tutti i diritti riservati</p>
+        <p class="mb-0">
+          <a href="privacy-policy.html" style="color: #888;">Privacy Policy</a> |
+          <a href="cookie-policy.html" style="color: #888;">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/popup-loader.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Andrea AI Chat Widget -->
+  <script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
+<script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+</body>
+</html>

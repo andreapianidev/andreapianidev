@@ -1,0 +1,182 @@
+/* Admin AI Analyst floating widget — bottom-left bubble + collapsible chat panel.
+   Uses same dark-luxe palette as admin.css. */
+
+.aai-bw-fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hi) 100%);
+  border: 0;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(99,102,241,.45), 0 2px 6px rgba(0,0,0,.4);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.aai-bw-fab:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 12px 32px rgba(99,102,241,.6), 0 4px 8px rgba(0,0,0,.5); }
+.aai-bw-fab:active { transform: scale(.96); }
+.aai-bw-fab .aai-bw-bot {
+  display: block;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,.25));
+}
+.aai-bw-fab:hover .aai-bot-eyes { animation: aai-bot-blink 0.32s ease; }
+@keyframes aai-bot-blink {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(.1); }
+}
+.aai-bot-eyes { transform-origin: 32px 30px; }
+.aai-bw-fab .aai-bw-pulse {
+  position: absolute; inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-hi);
+  opacity: 0;
+  animation: aai-bw-pulse 2.4s infinite;
+  pointer-events: none;
+}
+@keyframes aai-bw-pulse {
+  0%   { transform: scale(.85); opacity: .6; }
+  70%  { transform: scale(1.25); opacity: 0; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+.aai-bw-panel {
+  position: fixed;
+  right: 22px;
+  bottom: 92px;
+  width: 380px;
+  max-width: calc(100vw - 30px);
+  height: 560px;
+  max-height: calc(100vh - 130px);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.55), 0 4px 16px rgba(0,0,0,.4);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: bottom right;
+  transform: scale(.85) translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .22s cubic-bezier(.2,.9,.3,1.2), opacity .18s;
+}
+.aai-bw-panel.is-open {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.aai-bw-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-base);
+}
+.aai-bw-head .ttl {
+  display: flex; align-items: center; gap: 9px;
+  font-weight: 600; font-size: 14px; color: var(--text);
+}
+.aai-bw-head .ttl .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+.aai-bw-head .ttl .sub {
+  font-weight: 400; font-size: 11.5px; color: var(--text-mute); margin-left: 4px;
+}
+.aai-bw-head .acts { display: flex; gap: 6px; }
+.aai-bw-head button {
+  background: transparent; border: 1px solid var(--border-hi); color: var(--text-dim);
+  width: 28px; height: 28px; border-radius: 7px; cursor: pointer;
+  font-size: 13px; display: flex; align-items: center; justify-content: center;
+  transition: all .15s;
+}
+.aai-bw-head button:hover { color: var(--text); border-color: var(--accent); }
+.aai-bw-head button.danger:hover { color: var(--danger); border-color: var(--danger); }
+
+.aai-bw-msgs {
+  flex: 1; overflow-y: auto;
+  padding: 14px; display: flex; flex-direction: column; gap: 10px;
+  scrollbar-width: thin;
+}
+.aai-bw-msg {
+  max-width: 86%; padding: 9px 12px; border-radius: 11px;
+  line-height: 1.45; font-size: 13.5px;
+  white-space: pre-wrap; word-wrap: break-word;
+}
+.aai-bw-msg.user      { align-self: flex-end; background: var(--accent-soft); border: 1px solid var(--accent-ring); color: var(--text); }
+.aai-bw-msg.assistant { align-self: flex-start; background: var(--bg-hover); border: 1px solid var(--border); color: var(--text); }
+.aai-bw-msg.error     { align-self: center; background: var(--danger-soft); border: 1px solid var(--danger); color: var(--danger); font-size: 12px; padding: 7px 12px; }
+.aai-bw-msg.assistant { white-space: normal; }
+.aai-bw-msg.assistant p { margin: 0 0 8px; }
+.aai-bw-msg.assistant p:last-child { margin-bottom: 0; }
+.aai-bw-msg.assistant strong { color: var(--text); font-weight: 600; }
+.aai-bw-msg.assistant em { color: var(--text); font-style: italic; }
+.aai-bw-msg.assistant code { font-family: var(--font-mono); font-size: 12px; background: var(--bg-base); padding: 1px 5px; border-radius: 4px; border: 1px solid var(--border-soft); }
+
+.aai-bw-trace {
+  align-self: flex-start; max-width: 86%;
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--text-mute);
+  background: var(--bg-base); border: 1px solid var(--border-soft);
+  border-radius: 7px; padding: 6px 10px;
+}
+.aai-bw-trace summary { color: var(--accent-hi); cursor: pointer; outline: none; }
+.aai-bw-trace pre { margin: 5px 0 0; white-space: pre-wrap; word-break: break-all; }
+
+.aai-bw-typing {
+  align-self: flex-start; display: flex; gap: 4px;
+  padding: 11px 13px; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 11px;
+}
+.aai-bw-typing span {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+  animation: aai-bw-bounce 1s infinite ease-in-out;
+}
+.aai-bw-typing span:nth-child(2) { animation-delay: .15s; }
+.aai-bw-typing span:nth-child(3) { animation-delay: .3s; }
+@keyframes aai-bw-bounce { 0%,80%,100% { transform: scale(.6); opacity: .5; } 40% { transform: scale(1); opacity: 1; } }
+
+.aai-bw-empty { text-align: center; color: var(--text-mute); padding: 30px 10px; font-size: 13px; }
+.aai-bw-empty .big { font-size: 28px; margin-bottom: 6px; }
+
+.aai-bw-prompts {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  padding: 0 14px 10px; border-top: 1px solid var(--border-soft);
+}
+.aai-bw-prompts button {
+  background: var(--bg-base); border: 1px solid var(--border); color: var(--text-dim);
+  padding: 5px 10px; border-radius: 16px; font-size: 11.5px; cursor: pointer;
+  transition: all .15s;
+}
+.aai-bw-prompts button:hover { color: var(--accent-hi); border-color: var(--accent); }
+
+.aai-bw-form {
+  display: flex; gap: 8px; padding: 12px;
+  border-top: 1px solid var(--border); background: var(--bg-base);
+}
+.aai-bw-form textarea {
+  flex: 1; background: var(--bg-input); border: 1px solid var(--border-hi);
+  color: var(--text); border-radius: 9px; padding: 9px 11px;
+  font-family: var(--font-sans); font-size: 13.5px; resize: none;
+  min-height: 38px; max-height: 120px; line-height: 1.4;
+}
+.aai-bw-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-ring); }
+.aai-bw-form button {
+  background: var(--accent); border: 0; color: #fff;
+  padding: 0 16px; border-radius: 9px; cursor: pointer;
+  font-weight: 600; font-size: 13px; transition: background .15s;
+}
+.aai-bw-form button:hover:not(:disabled) { background: var(--accent-hi); }
+.aai-bw-form button:disabled { opacity: .5; cursor: not-allowed; }
+
+@media (max-width: 480px) {
+  .aai-bw-panel { left: 10px; right: 10px; width: auto; bottom: 80px; }
+  .aai-bw-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; font-size: 22px; }
+}

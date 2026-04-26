@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Reindirizzamento da HTTP a HTTPS
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Reindirizzamento da non-www a www
+RewriteCond %{HTTP_HOST} ^andreapiani\.com [NC]
+RewriteRule ^(.*)$ https://www.andreapiani.com/$1 [L,R=301]
+
+# Andrea AI — backend env vars (DO NOT remove)
+SetEnv AAI_IP_SALT "5462cba8c9fa2c314d103464e738b6a4667bcab25cb78d0cd4a15766be94be93"
+SetEnv AAI_CRON_TOKEN "e3ad3a2429c7e08f8889682f1bfe39e4080766acf77f704b"

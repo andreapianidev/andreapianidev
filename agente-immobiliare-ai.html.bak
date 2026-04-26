@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="ImmobiliareAI: software di valutazione immobiliare automatica con intelligenza artificiale per titolari di agenzie immobiliari. Genera stime casa in 60 secondi, cattura lead qualificati 24/7 e aumenta gli incarichi di vendita del +40%. Esclusiva territoriale garantita: solo 1 agenzia per zona. Da €2.500 una tantum, senza canoni mensili.">
+  <meta name="keywords" content="valutazione immobiliare automatica, stima casa AI, software valutazione immobiliare, lead generation agenzie immobiliari, valutazione casa 60 secondi, esclusiva territoriale software immobiliare, acquisizione incarichi immobiliari, valutazione immobile online, software stima immobiliare Italia, agenzia immobiliare AI, software per agenti immobiliari, CRM immobiliare intelligenza artificiale, acquisizione immobili online, perizia immobiliare automatica, stima appartamento online, valutazione gratuita casa, software titolari agenzie immobiliari, generare incarichi immobiliari, aumentare fatturato agenzia immobiliare, marketing immobiliare digitale, lead qualificati venditori casa, digitalizzazione agenzia immobiliare, OMI agenzia entrate software, intelligenza artificiale mercato immobiliare, sistema valutazione case automatico">
+
+  <meta property="og:title" content="ImmobiliareAI - Valutazione Casa in 60 Secondi con AI | Esclusiva Territoriale">
+  <meta property="og:description" content="Software di valutazione immobiliare automatica. Trasforma i proprietari curiosi in lead qualificati. Esclusiva territoriale garantita - solo 1 agenzia per zona. Da €2.500 una tantum.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+  <meta property="og:url" content="https://www.andreapiani.com/agente-immobiliare-ai.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ImmobiliareAI - Valutazione Casa in 60 Secondi con AI">
+  <meta name="twitter:description" content="Software di valutazione immobiliare automatica. Esclusiva territoriale garantita. Trasforma visitatori in lead qualificati.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+
+  <title>ImmobiliareAI - Valutazione Immobiliare Automatica con AI | Lead Generation Esclusiva Territoriale</title>
+  <link rel="canonical" href="https://www.andreapiani.com/agente-immobiliare-ai.html" />
+
+  <!-- Schema.org SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ImmobiliareAI",
+    "alternateName": "Software Valutazione Immobiliare Automatica",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "2500",
+      "priceCurrency": "EUR",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "description": "Esclusiva territoriale da €2.500 una tantum. Demo gratuita disponibile."
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "softwareVersion": "2.1",
+    "releaseNotes": "Aggiunto supporto multi-lingua, integrazione WhatsApp Business API",
+    "featureList": "Chatbot AI 24/7, Valutazioni automatiche GPT-4, Lead generation dai portali, Gestione appuntamenti, Contratti digitali, Report analitici",
+    "screenshot": "https://www.andreapiani.com/assets/images/agente-immobiliare-ai-dashboard.jpg",
+    "url": "https://www.agenteimmobiliareai.com",
+    "downloadUrl": "https://www.agenteimmobiliareai.com",
+    "author": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "url": "https://www.andreapiani.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Andrea Piani - Sviluppo Software",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.andreapiani.com/assets/images/logo.png"
+      }
+    },
+    "inLanguage": "it-IT",
+    "datePublished": "2024-01-15",
+    "dateModified": "2026-04-24"
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SaaS & Prodotti",
+        "item": "https://www.andreapiani.com/gestionali-personalizzati-aziende.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Agente Immobiliare AI",
+        "item": "https://www.andreapiani.com/agente-immobiliare-ai.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto costa Agente Immobiliare AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Agente Immobiliare AI offre una demo gratuita completa. I piani partono da €99/mese per singolo agente, con sconti per agenzie multiple. Contattaci per un preventivo personalizzato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "L'AI risponde veramente come un agente immobiliare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì! Il chatbot utilizza GPT-4 e viene addestrato sui tuoi annunci immobiliari. Risponde 24/7 a domande su prezzi, metrature, servizi, e qualifica automaticamente i lead prima di passarli a te."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si integra con Immobiliare.it e Idealista?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Assolutamente sì. Il sistema cattura automaticamente i lead dai principali portali immobiliari italiani e li importa nel CRM con scoring automatico basato sull'intenzione d'acquisto."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+
+  <style>
+    body { background: #0a0a0a; color: #fff; overflow-x: hidden; }
+    .navbar-custom { background: #000; border-bottom: 1px solid #333; }
+    .navbar-custom a { color: #fff !important; transition: color .3s ease; }
+    .navbar-custom a:hover { color: #df0067 !important; }
+
+    /* ===== HERO GRADIENT ANIMATO ===== */
+    .hero-gradient {
+      background: linear-gradient(135deg, #df0067 0%, #b8004e 35%, #8b0050 70%, #5a0033 100%);
+      background-size: 300% 300%;
+      animation: heroShift 15s ease infinite;
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes heroShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    /* Particle dots floating nel hero */
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 1px, transparent 2px),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,0.06) 1px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.05) 1px, transparent 2px);
+      background-size: 180px 180px, 240px 240px, 300px 300px;
+      animation: particleDrift 20s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes particleDrift {
+      from { background-position: 0 0, 0 0, 0 0; }
+      to { background-position: 180px 180px, -240px 240px, 300px -300px; }
+    }
+    .hero-gradient > .container { position: relative; z-index: 2; }
+
+    /* ===== BOTTONI ===== */
+    .btn-primary-custom {
+      background: linear-gradient(135deg, #df0067 0%, #b8004e 100%);
+      border: none; color: white;
+      transition: all .3s cubic-bezier(.4,0,.2,1);
+      position: relative; overflow: hidden;
+    }
+    .btn-primary-custom::after {
+      content: ''; position: absolute; top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left .6s ease;
+    }
+    .btn-primary-custom:hover::after { left: 100%; }
+    .btn-primary-custom:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(223,0,103,0.5);
+    }
+    .btn-outline-light { transition: all .3s ease; }
+    .btn-outline-light:hover { transform: translateY(-3px); }
+
+    /* ===== FEATURE CARD HOVER ===== */
+    .feature-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d1f2f 100%);
+      border: 1px solid #df0067;
+      transition: all .4s cubic-bezier(.4,0,.2,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, #df0067, #ff4081, #df0067, transparent);
+      background-size: 200% 100%;
+      animation: borderShine 3s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(223,0,103,0.3);
+      border-color: #ff4081;
+    }
+    @keyframes borderShine {
+      from { background-position: 200% 0; }
+      to { background-position: -200% 0; }
+    }
+
+    .tech-badge {
+      background: rgba(223,0,103,0.2);
+      border: 1px solid #df0067;
+      transition: all .3s ease;
+    }
+    .tech-badge:hover {
+      background: rgba(223,0,103,0.35);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(223,0,103,0.4);
+    }
+
+    .screenshot-shadow { box-shadow: 0 20px 60px rgba(223,0,103,0.3); }
+    .rating-stars { color: #ffc107; }
+    .link-back { transition: color .3s ease, transform .3s ease; }
+    .link-back:hover { color: #df0067 !important; transform: translateX(4px); }
+
+    /* ===== DASHBOARD MOCKUP ANIMATO ===== */
+    .dashboard-mockup {
+      animation: mockupFloat 6s ease-in-out infinite;
+    }
+    @keyframes mockupFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(-0.5deg); }
+    }
+    .dashboard-mockup .stat-num {
+      background: linear-gradient(135deg, #df0067, #ff4081);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .live-badge {
+      animation: pulseBadge 2s ease-in-out infinite;
+    }
+    @keyframes pulseBadge {
+      0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(76,175,80,0.4); }
+      50% { transform: scale(1.08); box-shadow: 0 6px 25px rgba(76,175,80,0.7); }
+    }
+    .live-dot {
+      animation: blinkDot 1.5s ease-in-out infinite;
+    }
+    @keyframes blinkDot {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px #4caf50; }
+      50% { opacity: 0.4; box-shadow: 0 0 0 #4caf50; }
+    }
+    .typing-cursor::after {
+      content: '▋';
+      animation: typingBlink 1s step-end infinite;
+      color: #df0067;
+    }
+    @keyframes typingBlink {
+      50% { opacity: 0; }
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .8s cubic-bezier(.4,0,.2,1), transform .8s cubic-bezier(.4,0,.2,1);
+      will-change: opacity, transform;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { transform: translateX(-60px); }
+    .reveal-left.visible { transform: translateX(0); }
+    .reveal-right { transform: translateX(60px); }
+    .reveal-right.visible { transform: translateX(0); }
+    .reveal-scale { transform: scale(0.9); }
+    .reveal-scale.visible { transform: scale(1); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+
+    /* ===== STATS COUNTER ===== */
+    .stat-hero-num {
+      background: linear-gradient(135deg, #fff, #ffd1e2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 900;
+    }
+
+    /* ===== GRADIENT TITLE ===== */
+    .gradient-title {
+      background: linear-gradient(90deg, #df0067, #ff4081, #df0067);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: titleShine 4s linear infinite;
+    }
+    @keyframes titleShine {
+      to { background-position: 200% center; }
+    }
+
+    /* ===== ICONE FEATURE ANIMATE ===== */
+    .feature-icon {
+      display: inline-block;
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+    }
+    .feature-card:hover .feature-icon {
+      transform: scale(1.2) rotate(-8deg);
+    }
+
+    /* ===== STEP NUMBER PULSE ===== */
+    .step-num {
+      animation: stepPulse 2.5s ease-in-out infinite;
+    }
+    @keyframes stepPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(223,0,103,0.6); }
+      50% { box-shadow: 0 0 0 15px rgba(223,0,103,0); }
+    }
+
+    /* ===== HIGHLIGHTED SECTION ===== */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(223,0,103,0.15) 0%, rgba(223,0,103,0.05) 100%);
+      border: 1px solid rgba(223,0,103,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .highlight-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(223,0,103,0.15) 0%, transparent 60%);
+      animation: highlightRotate 20s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes highlightRotate {
+      to { transform: rotate(360deg); }
+    }
+    .highlight-box > * { position: relative; z-index: 1; }
+
+    /* ===== SEO RICH COPY ===== */
+    .seo-block p {
+      color: #bbb;
+      line-height: 1.9;
+      font-size: 1.02rem;
+    }
+    .seo-block strong { color: #fff; }
+    .seo-block .kw { color: #ff4081; font-weight: 600; }
+
+    /* ===== TIMELINE/PROCESS LINES ===== */
+    .process-line {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .process-line {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #df0067 0%, transparent 100%);
+        z-index: 0;
+      }
+    }
+
+    /* ===== ACCORDION FAQ ===== */
+    .accordion-button:not(.collapsed) {
+      background: linear-gradient(135deg, #df0067, #b8004e) !important;
+      color: #fff !important;
+      box-shadow: 0 4px 20px rgba(223,0,103,0.3);
+    }
+    .accordion-button:focus {
+      box-shadow: 0 0 0 3px rgba(223,0,103,0.3) !important;
+    }
+    .accordion-button::after {
+      filter: invert(1) brightness(2);
+    }
+
+    /* ===== CTA PULSE ===== */
+    .cta-pulse {
+      animation: ctaPulse 2.5s ease-in-out infinite;
+    }
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 10px 30px rgba(223,0,103,0.4); }
+      50% { box-shadow: 0 15px 50px rgba(223,0,103,0.7); }
+    }
+
+    /* ===== FOMO TICKER ===== */
+    .fomo-ticker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(255,189,46,0.15);
+      border: 1px solid rgba(255,189,46,0.4);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: #ffbd2e;
+      font-weight: 600;
+    }
+    .fomo-dot {
+      width: 8px; height: 8px;
+      background: #ffbd2e;
+      border-radius: 50%;
+      animation: blinkDot 1s ease-in-out infinite;
+    }
+
+    /* ===== TARGET SECTION ===== */
+    .target-card {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 15px;
+      padding: 2rem;
+      height: 100%;
+      transition: all .4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .target-card:hover {
+      border-color: #df0067;
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(223,0,103,0.2);
+    }
+    .target-card .icon-circle {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #df0067, #b8004e);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 8px 20px rgba(223,0,103,0.3);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: #149dcc !important; font-weight: bold;">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" style="gap: 1.5rem;">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div style="background: #000; border-bottom: 1px solid #333;">
+    <div class="container" style="padding: 12px 20px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background: transparent; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li class="breadcrumb-item"><a href="index.html" style="color: #149dcc;">🏠 Home</a></li>
+          <li class="breadcrumb-item"><a href="gestionali-personalizzati-aziende.html" style="color: #149dcc;">SaaS & Prodotti</a></li>
+          <li class="breadcrumb-item active" style="color: #df0067;">ImmobiliareAI - Valutazione Automatica</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <span class="fomo-ticker mb-2"><span class="fomo-dot"></span>Esclusiva territoriale • Solo 1 agenzia per zona</span>
+          <h1 class="display-3 mt-3 mb-3"><strong>Valutazione Immobiliare Automatica con <span class="gradient-title">Intelligenza Artificiale</span></strong></h1>
+          <h2 class="h3 mb-4" style="opacity: 0.95; font-weight: 400;">Il software pensato per <strong>titolari di agenzie immobiliari</strong> che vogliono <strong>acquisire nuovi incarichi di vendita</strong> ogni giorno, senza inseguire clienti freddi. I proprietari ricevono la <strong>stima della loro casa in meno di 60 secondi</strong>, tu ricevi i loro contatti in tempo reale.</h2>
+          <p class="lead mb-4">ImmobiliareAI è la piattaforma italiana di <strong>lead generation immobiliare</strong> basata su <a href="sviluppo-python.html" style="color:#fff; text-decoration:underline;">intelligenza artificiale</a>, dati OMI ufficiali dell'Agenzia delle Entrate e oltre 50 parametri di valutazione. Trasforma il servizio più richiesto del web — "<em>quanto vale casa mia?</em>" — nel tuo canale di acquisizione più redditizio, automatico e scalabile. Funziona 24 ore su 24, 7 giorni su 7, anche mentre dormi o sei in appuntamento.</p>
+
+          <!-- Stats Hero -->
+          <div class="d-flex flex-wrap gap-4 mb-4" style="background: rgba(255,255,255,0.12); padding: 1.2rem 1.5rem; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);">
+            <div style="text-align: center; flex: 1; min-width: 110px;">
+              <div class="stat-hero-num" style="font-size: 2.3rem;">8/10</div>
+              <div style="font-size: 0.82rem; opacity: 0.9;">Proprietari cercano stima online prima di chiamare</div>
+            </div>
+            <div style="text-align: center; flex: 1; min-width: 110px;">
+              <div class="stat-hero-num" style="font-size: 2.3rem;">&lt;60s</div>
+              <div style="font-size: 0.82rem; opacity: 0.9;">Tempo medio valutazione immobile AI</div>
+            </div>
+            <div style="text-align: center; flex: 1; min-width: 110px;">
+              <div class="stat-hero-num" style="font-size: 2.3rem;">+40%</div>
+              <div style="font-size: 0.82rem; opacity: 0.9;">Incarichi di vendita in più nel primo trimestre</div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="https://www.agenteimmobiliareai.com" target="_blank" rel="noopener" class="btn btn-primary-custom btn-lg cta-pulse" style="padding: 1rem 2rem; font-weight: 600; border-radius: 50px;">
+              🚀 Prova la Demo Gratuita
+            </a>
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20ImmobiliareAI" target="_blank" class="btn btn-outline-light btn-lg" style="padding: 1rem 2rem; border-radius: 50px;">
+              💬 Info su WhatsApp
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-4 flex-wrap">
+            <div><span class="rating-stars">⭐⭐⭐⭐⭐</span> <strong>4.8/5</strong> (19 recensioni)</div>
+            <div style="opacity: 0.9;">✅ Setup in 7 giorni</div>
+            <div style="opacity: 0.9;">🇮🇹 100% Italiano</div>
+            <div style="opacity: 0.9;">🔒 GDPR Compliant</div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div style="position: relative;">
+            <!-- MOCKUP DASHBOARD CRM -->
+            <div class="dashboard-mockup" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; border: 2px solid rgba(223,0,103,0.5); overflow: hidden; box-shadow: 0 25px 80px rgba(223,0,103,0.4);">
+              <!-- Header -->
+              <div style="background: linear-gradient(90deg, #df0067 0%, #ff4081 100%); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div class="live-dot" style="width: 10px; height: 10px; border-radius: 50%; background: #4caf50;"></div>
+                  <span style="color: white; font-weight: 600; font-size: 14px;">🏠 CRM Immobiliare AI</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
+                </div>
+              </div>
+              <!-- Content -->
+              <div style="padding: 20px;">
+                <!-- Stats Row -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px;">
+                  <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; text-align: center; border: 1px solid rgba(223,0,103,0.3);">
+                    <div style="font-size: 24px; font-weight: bold; color: #df0067;">247</div>
+                    <div style="font-size: 11px; color: #aaa;">Lead Totali</div>
+                  </div>
+                  <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; text-align: center; border: 1px solid rgba(223,0,103,0.3);">
+                    <div style="font-size: 24px; font-weight: bold; color: #4caf50;">+40%</div>
+                    <div style="font-size: 11px; color: #aaa;">Conversioni</div>
+                  </div>
+                  <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; text-align: center; border: 1px solid rgba(223,0,103,0.3);">
+                    <div style="font-size: 24px; font-weight: bold; color: #ffbd2e;">12</div>
+                    <div style="font-size: 11px; color: #aaa;">Trattative</div>
+                  </div>
+                </div>
+                <!-- AI Chat -->
+                <div style="background: rgba(223,0,103,0.1); border: 1px solid rgba(223,0,103,0.3); border-radius: 12px; padding: 15px; margin-bottom: 15px;">
+                  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #df0067, #ff4081); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px;">🤖</div>
+                    <div style="color: #fff; font-weight: 600; font-size: 13px;">GPT-4 Assistant</div>
+                  </div>
+                  <div data-typing style="background: rgba(255,255,255,0.1); padding: 10px 14px; border-radius: 10px; color: #ddd; font-size: 12px; line-height: 1.5; min-height: 54px;">
+                    "Ho analizzato la richiesta del cliente. Valutazione automatica: €450.000 - €480.000. Posso inviare la proposta?"
+                  </div>
+                </div>
+                <!-- Property Card -->
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 12px; display: flex; gap: 12px; align-items: center;">
+                  <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">🏢</div>
+                  <div style="flex: 1;">
+                    <div style="color: #fff; font-weight: 600; font-size: 13px;">Via Roma 42, Milano</div>
+                    <div style="color: #df0067; font-size: 14px; font-weight: bold;">€465.000</div>
+                  </div>
+                  <div style="background: #4caf50; color: white; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">NUOVO</div>
+                </div>
+              </div>
+            </div>
+            <div class="live-badge" style="position: absolute; top: -15px; right: -15px; background: #4caf50; color: white; padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; font-size: 0.9rem;">
+              🟢 Live Demo
+            </div>
+            <div style="position: absolute; bottom: -18px; left: -15px; background: linear-gradient(135deg, #ffbd2e, #ff9800); color: #1a1a1a; padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; font-size: 0.85rem; box-shadow: 0 4px 15px rgba(255,189,46,0.4);">
+              ⚡ +247 lead questo mese
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO BLOCK: PER CHI È PENSATO -->
+  <section class="seo-block" style="padding: 5rem 0; background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 text-center reveal">
+          <span class="fomo-ticker mb-3" style="color: #ff4081; background: rgba(223,0,103,0.1); border-color: rgba(223,0,103,0.3);">PER TITOLARI DI AGENZIE IMMOBILIARI</span>
+          <h2 class="display-4 mt-3 mb-4"><span class="gradient-title">Il tuo sito lavora per te, 24 ore al giorno</span></h2>
+          <p class="lead" style="color: #ccc; max-width: 900px; margin: 0 auto;">Se sei <strong>titolare di un'agenzia immobiliare</strong> o <strong>agente immobiliare indipendente</strong>, sai bene qual è il tuo problema più grande: <strong class="kw">acquisire nuovi incarichi di vendita</strong> senza bruciare ore in sopralluoghi inutili, portali saturi e lead freddi che non richiamano mai.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 reveal reveal-delay-1">
+          <div class="target-card">
+            <div class="icon-circle">🏢</div>
+            <h3 style="color: #fff; font-size: 1.3rem;">Titolari di Agenzia</h3>
+            <p style="color: #bbb; line-height: 1.8;">Hai un'agenzia strutturata e vuoi <span class="kw">scalare l'acquisizione di immobili</span> senza assumere nuovi collaboratori. ImmobiliareAI ti dà un <strong>canale di lead immobiliari automatico</strong>, integrato nel tuo sito, che riempie la pipeline dei tuoi agenti di proprietari già interessati a vendere casa.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-2">
+          <div class="target-card">
+            <div class="icon-circle">👔</div>
+            <h3 style="color: #fff; font-size: 1.3rem;">Agenti Immobiliari</h3>
+            <p style="color: #bbb; line-height: 1.8;">Sei un <strong>consulente immobiliare indipendente</strong> o monomandatario e vuoi smettere di pagare portali che condividono i tuoi lead con 20 concorrenti. Con l'<span class="kw">esclusiva territoriale</span> i proprietari della tua zona arrivano solo a te, senza concorrenza interna.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-3">
+          <div class="target-card">
+            <div class="icon-circle">🌐</div>
+            <h3 style="color: #fff; font-size: 1.3rem;">Network & Franchising</h3>
+            <p style="color: #bbb; line-height: 1.8;">Gestisci un <strong>network immobiliare</strong> o sei affiliato a un franchising e vuoi differenziarti con un <span class="kw">tool di valutazione immobiliare automatica</span> che nessun altro affiliato della zona può avere. ImmobiliareAI ti dà un vantaggio competitivo duraturo e misurabile.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto reveal">
+          <div class="highlight-box" style="border-radius: 20px; padding: 2.5rem;">
+            <h3 style="color: #fff; margin-bottom: 1rem;">💡 Il Paradosso dell'Agente Immobiliare Moderno</h3>
+            <p style="color: #ddd; line-height: 1.9; font-size: 1.05rem; margin-bottom: 1rem;">
+              Ogni mese in Italia vengono effettuate oltre <strong>1.200.000 ricerche Google</strong> con query come "<em>quanto vale la mia casa</em>", "<em>valutazione gratuita immobile</em>", "<em>stima appartamento online</em>". Sono <strong class="kw">potenziali venditori</strong> che stanno entrando nel funnel di vendita. Il 70% di loro firmerà un mandato entro 90 giorni.
+            </p>
+            <p style="color: #ddd; line-height: 1.9; font-size: 1.05rem; margin-bottom: 0;">
+              Il problema? <strong>Nel 97% dei siti di agenzie immobiliari non c'è nessun modo di ricevere una valutazione immediata.</strong> Questi proprietari lasciano il tuo sito in 8 secondi e finiscono nelle mani del primo competitor che offre uno strumento automatico. Con <strong class="kw">ImmobiliareAI</strong> quel proprietario non scappa più: lascia nome, telefono, email e dettagli immobile per ricevere la sua stima, e tu lo richiami prima che abbia il tempo di contattare un altro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ AUMENTERAI I TUOI INCARICHI -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="display-4 mb-3" style="color: #df0067;">Perché Aumenterai del +40% gli Incarichi di Vendita</h2>
+        <p class="lead" style="color: #aaa; max-width: 900px; margin: 0 auto;">Lavora anche mentre dormi, mentre sei in appuntamento o in ferie. <strong style="color:#fff;">Nessun limite</strong> al numero di valutazioni giornaliere. Il sistema di <strong style="color:#fff;">stima immobiliare AI</strong> che trasforma il servizio gratuito più richiesto del web — la valutazione casa online — nel tuo canale di <strong style="color:#fff;">acquisizione incarichi</strong> più potente, prevedibile e scalabile. Senza Facebook Ads, senza portali immobiliari, senza call center.</p>
+      </div>
+      
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 text-center">
+          <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+            <a href="https://www.agenteimmobiliareai.com" target="_blank" rel="noopener" class="btn btn-primary-custom btn-lg" style="padding: 1rem 2.5rem; font-weight: 600; border-radius: 50px;">
+              🚀 Prova la Demo Gratuita
+            </a>
+          </div>
+          <p style="color: #888; font-size: 0.9rem;">✓ Nessuna carta di credito richiesta • ✓ Demo completa e funzionante</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 reveal reveal-delay-1">
+          <div class="target-card" style="text-align: center;">
+            <div class="feature-icon" style="font-size: 3.5rem; margin-bottom: 1rem;">🎯</div>
+            <h3 style="color: #df0067; margin-bottom: 1rem;">Lead Immobiliari Qualificati</h3>
+            <p style="color: #ccc; line-height: 1.8;">Solo <strong>proprietari di immobili realmente intenzionati a vendere</strong>: non curiosi, non agenti concorrenti, non studenti. Ricevi contatti pre-qualificati con <strong>nome, email verificata, numero di telefono e scheda immobile completa</strong> (indirizzo, metratura, stato, anno di costruzione, piano, classe energetica). Tutti i dati compilati dal proprietario stesso durante la richiesta di valutazione.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-2">
+          <div class="target-card" style="text-align: center;">
+            <div class="feature-icon" style="font-size: 3.5rem; margin-bottom: 1rem;">⚡</div>
+            <h3 style="color: #df0067; margin-bottom: 1rem;">Risposta in Tempo Reale</h3>
+            <p style="color: #ccc; line-height: 1.8;">Valutazione immobiliare professionale generata dall'<strong>intelligenza artificiale in meno di 60 secondi</strong>. Il proprietario ottiene valore immediato e percepisce la tua agenzia come moderna, tecnologica, affidabile. Tu ricevi una <strong>notifica email e WhatsApp istantanea</strong> con tutti i dati del lead e puoi richiamare mentre il ferro è ancora caldo.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-3">
+          <div class="target-card" style="text-align: center;">
+            <div class="feature-icon" style="font-size: 3.5rem; margin-bottom: 1rem;">🌙</div>
+            <h3 style="color: #df0067; margin-bottom: 1rem;">Acquisizione 24/7 Automatica</h3>
+            <p style="color: #ccc; line-height: 1.8;">Il sistema di <strong>lead generation immobiliare automatico</strong> lavora mentre dormi, mentre sei in ferie, mentre accompagni un cliente in sopralluogo. Al mattino trovi <strong>nuovi proprietari pronti nella tua inbox e nel CRM</strong>. Nessun call center da gestire, nessun portale immobiliare da pagare — solo risultati diretti, tracciabili e misurabili.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+          <div style="background: linear-gradient(135deg, rgba(223,0,103,0.1) 0%, rgba(223,0,103,0.05) 100%); border: 1px solid rgba(223,0,103,0.3); border-radius: 15px; padding: 2rem;">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h3 style="color: #fff; margin-bottom: 1rem;">Quando offri valore, arrivano le vendite.</h3>
+                <p style="color: #ccc; line-height: 1.7;">Regala ai proprietari una valutazione reale della loro casa e lascia che sia la tecnologia a trovarti nuovi incarichi ogni giorno.</p>
+              </div>
+              <div class="col-md-6">
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+                  <div style="color: #4caf50; font-weight: 600; margin-bottom: 0.5rem;">✓ Loro ottengono valore immediato</div>
+                  <p style="color: #aaa; font-size: 0.9rem; margin: 0;">Una valutazione professionale, gratuita e immediata della loro casa. Basata su dati OMI ufficiali e oltre 50 parametri specifici.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px;">
+                  <div style="color: #df0067; font-weight: 600; margin-bottom: 0.5rem;">✓ Tu ottieni un nuovo incarico</div>
+                  <p style="color: #aaa; font-size: 0.9rem; margin: 0;">Contatti pre-qualificati di proprietari pronti a vendere. Con nome, email, telefono e tutti i dettagli dell'immobile già raccolti.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIMA VS DOPO -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <div class="reveal">
+      <h2 class="display-4 text-center mb-3">Titolare di Agenzia Immobiliare? Ecco Come Cambia la Tua Giornata</h2>
+      <p class="text-center mb-3" style="color: #aaa; font-size: 1.2rem;">Offri ai proprietari una <strong style="color: #fff;">valutazione immobiliare immediata, professionale e gratuita</strong> direttamente dal tuo sito web.</p>
+      <p class="text-center mb-5" style="color: #ccc; max-width: 900px; margin: 0 auto 3rem;">Tu ricevi solo <strong style="color: #4caf50;">lead qualificati pre-filtrati dall'AI</strong>: proprietari di casa realmente intenzionati a vendere, con <strong>scheda immobile già compilata</strong>, pronti per il primo contatto telefonico. Basta sopralluoghi gratuiti dispersivi, basta rincorrere contatti freddi da Immobiliare.it o Idealista.</p>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <!-- PRIMA -->
+        <div class="col-md-6">
+          <div style="background: #1a1a1a; border: 2px solid #ff4444; border-radius: 15px; padding: 2rem; height: 100%;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <span style="font-size: 2.5rem;">😓</span>
+              <h3 style="color: #ff4444; margin: 0;">Prima: Lavoro Manuale</h3>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; color: #ccc; line-height: 2.2;">
+              <li>• Ricevi 20 chiamate al giorno per &ldquo;Quanto vale?&rdquo;</li>
+              <li>• Perdi 2 ore a fare sopralluoghi gratuiti</li>
+              <li>• 8 su 10 non sono davvero interessati</li>
+              <li>• Energie sprecate su lead freddi</li>
+            </ul>
+          </div>
+        </div>
+        <!-- CON AI -->
+        <div class="col-md-6">
+          <div style="background: linear-gradient(135deg, rgba(76,175,80,0.1) 0%, #1a1a1a 100%); border: 2px solid #4caf50; border-radius: 15px; padding: 2rem; height: 100%; position: relative;">
+            <div style="position: absolute; top: -15px; right: 20px; background: #ffbd2e; color: #333; font-weight: 700; padding: 0.3rem 1rem; border-radius: 25px; font-size: 0.85rem;">CON AI</div>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <span style="font-size: 2.5rem;">🚀</span>
+              <h3 style="color: #4caf50; margin: 0;">Dopo: Automatico</h3>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; color: #ccc; line-height: 2.2;">
+              <li>• L'IA risponde alle 20 richieste in automatico</li>
+              <li>• Tu ricevi solo i contatti caldi già filtrati</li>
+              <li>• Hai già tutti i dati: indirizzo, mq, stato, contatti</li>
+              <li>• <strong style="color: #4caf50;">Chiami solo chi è pronto a vendere</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="display-4 text-center mb-2 mt-5">Cosa Include ImmobiliareAI</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Ogni funzionalità pensata per trovare, valutare e acquisire immobili automaticamente</p>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1rem;">🏠</div>
+            <h3 style="color: #df0067;">Valutazione Immobiliare AI</h3>
+            <p style="color: #ccc; line-height: 1.8;">L'<strong>algoritmo di stima automatica</strong> analizza oltre <strong>50 parametri</strong>: metratura, zona, piano, stato, classe energetica, affacci, pertinenze, anno di costruzione, prestazioni degli ultimi venduti. Incrociati con <strong>dati OMI personalizzati</strong> della tua microzona per restituire una <strong>valutazione immobiliare professionale</strong> in meno di 60 secondi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+            <h3 style="color: #df0067;">Lead Diretti Senza Intermediari</h3>
+            <p style="color: #ccc; line-height: 1.8;">Nessun portale, nessun broker di lead, nessuna commissione su appuntamento. I <strong>contatti immobiliari</strong> arrivano <strong>direttamente nel tuo CRM</strong> con nome, telefono verificato, email, indirizzo completo e scheda tecnica dell'immobile. Lead <strong>esclusivi</strong>, non condivisi con altre agenzie della zona.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+            <h3 style="color: #df0067;">Notifiche in Tempo Reale</h3>
+            <p style="color: #ccc; line-height: 1.8;">Appena un proprietario completa la valutazione, ricevi <strong>notifica WhatsApp, email e push</strong> istantanea sullo smartphone. Ogni secondo di ritardo riduce del 7% la probabilità di conversione: con ImmobiliareAI richiami il <strong>lead immobiliare caldo</strong> prima che pensi a contattare un'altra agenzia.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h3 style="color: #df0067;">Dati OMI Agenzia Entrate</h3>
+            <p style="color: #ccc; line-height: 1.8;">Ogni installazione viene <strong>calibrata con i dati OMI</strong> (Osservatorio del Mercato Immobiliare) ufficiali dell'Agenzia delle Entrate, aggiornati semestralmente per la tua specifica microzona. Stime <strong>precise, credibili e difendibili</strong> in sede di trattativa con il proprietario. Valutazioni che ti fanno percepire come esperto del tuo territorio.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+            <h3 style="color: #df0067;">White Label Totale</h3>
+            <p style="color: #ccc; line-height: 1.8;">Il <strong>software di valutazione immobiliare</strong> si integra perfettamente nel tuo sito web con il <strong>tuo brand, i tuoi colori, il tuo logo, il tuo dominio</strong>. I proprietari vedono solo la tua agenzia, non percepiscono mai la presenza di una piattaforma esterna. Personalizzazione grafica 100% conforme alla tua brand identity. Anche <strong>pagina dedicata SEO-optimized</strong> inclusa.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+          <div class="feature-card p-4 h-100" style="border-radius: 15px;">
+            <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+            <h3 style="color: #df0067;">Dashboard & CRM Immobiliare</h3>
+            <p style="color: #ccc; line-height: 1.8;">Gestionale completo con <strong>dashboard in tempo reale</strong>: tutti i lead ricevuti, valutazioni effettuate, tasso di conversione, storico chiamate, note appuntamenti, pipeline trattative. Esporta in CSV, integrazione API con <strong>Gestim, Imgest, Realgest, 4Dem, Hubspot</strong> e principali CRM immobiliari italiani. Mai più un lead perso in un'email dimenticata.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Tecnologie di Punta</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Architettura moderna per performance ed affidabilità</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: #151515; padding: 2rem; border-radius: 15px;">
+            <div class="row text-center">
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">⚛️</div>
+                  <div style="font-size: 0.9rem;">Next.js 14</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">🤖</div>
+                  <div style="font-size: 0.9rem;">GPT-4</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">🐘</div>
+                  <div style="font-size: 0.9rem;">PostgreSQL</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="tech-badge p-3" style="border-radius: 10px;">
+                  <div style="font-size: 2rem;">⚡</div>
+                  <div style="font-size: 0.9rem;">tRPC</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-3" style="color: #888; font-size: 0.9rem;">
+              Prisma ORM • TypeScript • Tailwind CSS • Redis • Vercel Edge
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- CTA WhatsApp - Curiosity -->
+<section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Hai una domanda veloce?</h3>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Scrivimi su WhatsApp, ti rispondo in giornata</p>
+    <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Scrivimi ora</a>
+  </div>
+</section>
+
+
+  <!-- INTEGRAZIONI -->
+  <section style="padding: 4rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Integrazioni Native</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Si connette con tutto il tuo ecosistema immobiliare</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row g-3 text-center">
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏠</div>
+                <div style="font-weight: 600;">Immobiliare.it</div>
+                <div style="font-size: 0.85rem; color: #888;">Lead sync</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏡</div>
+                <div style="font-weight: 600;">Idealista</div>
+                <div style="font-size: 0.85rem; color: #888;">Auto import</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+                <div style="font-weight: 600;">Subito</div>
+                <div style="font-size: 0.85rem; color: #888;">Cattura lead</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+                <div style="font-weight: 600;">WhatsApp</div>
+                <div style="font-size: 0.85rem; color: #888;">Business API</div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 text-center mt-3">
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📧</div>
+                <div style="font-weight: 600;">PEC Aruba</div>
+                <div style="font-size: 0.85rem; color: #888;">Fatturazione</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📍</div>
+                <div style="font-weight: 600;">Google Maps</div>
+                <div style="font-size: 0.85rem; color: #888;">Geocoding</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📅</div>
+                <div style="font-weight: 600;">Google Calendar</div>
+                <div style="font-size: 0.85rem; color: #888;">Sync agenda</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏛️</div>
+                <div style="font-weight: 600;">Agenzia Entrate</div>
+                <div style="font-size: 0.85rem; color: #888;">Visure</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA IN 3 STEP -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-3">Come Funziona in 3 Semplici Step</h2>
+      <p class="text-center mb-5" style="color: #aaa; max-width: 700px; margin: 0 auto 3rem;">Un processo automatico che trasforma visitatori del tuo sito in lead qualificati pronti a diventare incarichi</p>
+      
+      <div class="row g-4">
+        <div class="col-md-4 reveal reveal-delay-1">
+          <div style="background: #1a1a1a; padding: 2.5rem 2rem; border-radius: 15px; border: 2px solid #df0067; text-align: center; height: 100%; position: relative;">
+            <div class="step-num" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: #df0067; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">1</div>
+            <div style="font-size: 3rem; margin: 1rem 0;">🏠</div>
+            <h3 style="color: #df0067; margin-bottom: 1rem;">Il Proprietario Richiede la Stima</h3>
+            <p style="color: #ccc; line-height: 1.8;">Un proprietario atterra sul tuo sito web cercando <strong>"quanto vale la mia casa"</strong> su Google. Trova il tuo <strong>widget di valutazione immobiliare</strong> in evidenza, compila indirizzo, metratura, stato di conservazione, piano, anno di costruzione e <strong>lascia nome, email e telefono</strong> per ricevere la stima gratuita. I suoi dati sono già tuoi.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-2">
+          <div style="background: #1a1a1a; padding: 2.5rem 2rem; border-radius: 15px; border: 2px solid #df0067; text-align: center; height: 100%; position: relative;">
+            <div class="step-num" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: #df0067; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">2</div>
+            <div style="font-size: 3rem; margin: 1rem 0;">🤖</div>
+            <h3 style="color: #df0067; margin-bottom: 1rem;">L'AI Genera la Valutazione</h3>
+            <p style="color: #ccc; line-height: 1.8;">L'<strong>algoritmo di intelligenza artificiale</strong> incrocia i dati inseriti con le quotazioni <strong>OMI ufficiali</strong> della microzona, gli immobili venduti negli ultimi 24 mesi e oltre 50 parametri tecnici. In 60 secondi il proprietario riceve una <strong>valutazione professionale</strong> con range di prezzo minimo/massimo. Tu ricevi notifica WhatsApp + email con tutti i dati.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-3">
+          <div style="background: #1a1a1a; padding: 2.5rem 2rem; border-radius: 15px; border: 2px solid #4caf50; text-align: center; height: 100%; position: relative;">
+            <div class="step-num" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: #4caf50; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">3</div>
+            <div style="font-size: 3rem; margin: 1rem 0;">💼</div>
+            <h3 style="color: #4caf50; margin-bottom: 1rem;">Tu Firmi l'Incarico di Vendita</h3>
+            <p style="color: #ccc; line-height: 1.8;">Richiami il <strong>lead qualificato</strong> entro pochi minuti, con lo script giusto: sai già indirizzo, metratura, stato e prezzo percepito dal proprietario. Fissi il sopralluogo, presenti la tua <strong>analisi comparativa di mercato</strong> e firmi il <strong>mandato di vendita in esclusiva</strong>. Tasso di chiusura medio: <strong>18-25%</strong>.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <div style="background: rgba(223,0,103,0.1); border: 1px solid rgba(223,0,103,0.3); border-radius: 15px; padding: 2rem;">
+            <h3 style="color: #fff; margin-bottom: 1rem;">🎯 Database di Proprietari Qualificati che Vogliono Vendere</h3>
+            <p style="color: #ccc; line-height: 1.7; margin-bottom: 1.5rem;">Ogni giorno ricevi nuovi contatti già pre-qualificati dal processo di valutazione automatica. Non sono semplici visitatori curiosi: sono proprietari che hanno già fornito i dati del loro immobile e aspettano la tua chiamata.</p>
+            <a href="https://www.agenteimmobiliareai.com" target="_blank" rel="noopener" class="btn btn-primary-custom" style="padding: 1rem 2rem; font-weight: 600; border-radius: 50px;">Scopri Tutti i Dettagli →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESCLUSIVITÀ TERRITORIALE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-4 mb-3" style="color: #df0067;">🔥 Esclusiva Territoriale: Solo 1 Agenzia per Zona</h2>
+        <p class="lead" style="color: #aaa; max-width: 900px; margin: 0 auto;">A differenza di altri software venduti a decine di agenzie concorrenti nella stessa città, ImmobiliareAI viene concesso in esclusiva territoriale.</p>
+      </div>
+      
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <!-- Altri Software -->
+            <div style="background: linear-gradient(135deg, #2d1f1f 0%, #1a1a1a 100%); border: 2px solid #ff4444; border-radius: 15px; padding: 2rem;">
+              <h3 style="color: #ff4444; margin-bottom: 1.5rem; text-align: center;">❌ Altri Software (Problema)</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; color: #ccc;">
+                <li>• Venduto a 5-10 agenzie nella stessa zona</li>
+                <li>• I tuoi competitor hanno lo stesso strumento</li>
+                <li>• Lead condivisi = vanificato il vantaggio</li>
+                <li>• Il proprietario riceve 5 chiamate diverse</li>
+              </ul>
+            </div>
+            
+            <!-- ImmobiliareAI -->
+            <div style="background: linear-gradient(135deg, #1f2d1f 0%, #1a1a1a 100%); border: 2px solid #4caf50; border-radius: 15px; padding: 2rem;">
+              <h3 style="color: #4caf50; margin-bottom: 1.5rem; text-align: center;">✅ ImmobiliareAI (Soluzione)</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; color: #ccc;">
+                <li>• Solo tu nella tua zona puoi averlo</li>
+                <li>• I competitor non possono ottenerlo</li>
+                <li>• 100% dei lead della zona vengono a te</li>
+                <li>• Vantaggio competitivo garantito e duraturo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div style="background: rgba(223,0,103,0.1); border: 1px solid rgba(223,0,103,0.3); border-radius: 15px; padding: 2rem; text-align: center;">
+            <h4 style="color: #fff; margin-bottom: 1rem;">💡 Garanzia Esclusiva</h4>
+            <p style="color: #ccc; line-height: 1.7; margin-bottom: 1.5rem;">Una volta assegnata la tua zona, nessun'altra agenzia nel tuo territorio potrà mai acquistare ImmobiliareAI. <strong>Zero competizione interna garantita per contratto.</strong></p>
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20sull'esclusiva%20territoriale%20ImmobiliareAI" target="_blank" class="btn btn-primary-custom" style="padding: 1rem 2rem; font-weight: 600; border-radius: 50px;">Verifica Disponibilità della Tua Zona</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- CTA WhatsApp - Decision -->
+<section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #5641e5 0%, #6c5ce7 100%); text-align: center;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Vuoi capire se è il servizio giusto per te?</h3>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Due chiacchiere su WhatsApp, senza impegno</p>
+    <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">📱 Parliamone su WhatsApp</a>
+  </div>
+</section>
+
+
+  <!-- PERCHÉ BATTE LA PUBBLICITÀ TRADIZIONALE -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-3">Perché Batte Qualsiasi Pubblicità Tradizionale</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Confronto reale tra investimenti pubblicitari classici e ImmobiliareAI</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <!-- Facebook Ads -->
+            <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 15px; padding: 2rem;">
+              <h3 style="color: #ff4444; margin-bottom: 1rem;">❌ Facebook Ads Classici</h3>
+              <div style="font-size: 3rem; font-weight: bold; color: #ff4444; margin-bottom: 0.5rem;">2-7%</div>
+              <div style="color: #888; margin-bottom: 1.5rem;">Tasso di conversione moduli</div>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #aaa; font-size: 0.95rem; line-height: 1.8;">
+                <li>• Costi pubblicitari sempre in aumento</li>
+                <li>• Lead generici poco qualificati</li>
+                <li>• Difficile tracciare il ROI reale</li>
+                <li>• Concorrenza agguerrita</li>
+              </ul>
+            </div>
+            
+            <!-- ImmobiliareAI -->
+            <div style="background: linear-gradient(135deg, rgba(76,175,80,0.1) 0%, #1a1a1a 100%); border: 2px solid #4caf50; border-radius: 15px; padding: 2rem;">
+              <h3 style="color: #4caf50; margin-bottom: 1rem;">✅ ImmobiliareAI</h3>
+              <div style="font-size: 3rem; font-weight: bold; color: #4caf50; margin-bottom: 0.5rem;">25%</div>
+              <div style="color: #888; margin-bottom: 1.5rem;">Picchi di conversione raggiunti (media 15%)</div>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #aaa; font-size: 0.95rem; line-height: 1.8;">
+                <li>• ✅ Lead generation 24/7 automatica</li>
+                <li>• ✅ Proprietari già interessati a vendere</li>
+                <li>• ✅ ROI tracciabile e misurabile</li>
+                <li>• ✅ Nessun costo pubblicitario ricorrente</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-4 mb-3">Investimento Trasparente, ROI Garantito</h2>
+        <p class="lead" style="color: #aaa;">Prezzo personalizzato in base alle tue esigenze. Nessun costo nascosto o abbonamento mensile.</p>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: linear-gradient(135deg, rgba(223,0,103,0.1) 0%, rgba(223,0,103,0.05) 100%); border: 3px solid #df0067; border-radius: 20px; padding: 3rem; text-align: center;">
+            <div style="font-size: 1.2rem; color: #aaa; margin-bottom: 1rem;">Esclusiva Territoriale da</div>
+            <div style="font-size: 4rem; font-weight: bold; color: #df0067; margin-bottom: 0.5rem;">€2.500</div>
+            <div style="font-size: 1.2rem; color: #aaa; margin-bottom: 2rem;">+ IVA • Pagamento unico • Esclusiva permanente</div>
+            
+            <div style="background: rgba(255,255,255,0.05); border-radius: 10px; padding: 1.5rem; margin-bottom: 2rem;">
+              <p style="color: #ccc; margin: 0;"><strong>Solo 1 agenzia per zona</strong> • Il prezzo varia in base al numero di città/comuni dell'esclusiva territoriale</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; text-align: left; margin-bottom: 2rem;">
+              <div style="color: #ccc;">✓ Raccolta e Configurazione Dati OMI Custom</div>
+              <div style="color: #ccc;">✓ Addestramento AI Specifico</div>
+              <div style="color: #ccc;">✓ Integrazione Completa nel Tuo Sito</div>
+              <div style="color: #ccc;">✓ Personalizzazione Branding</div>
+              <div style="color: #ccc;">✓ Formazione del Team</div>
+              <div style="color: #ccc;">✓ Supporto Post-Installazione</div>
+            </div>
+            
+            <div style="background: rgba(76,175,80,0.1); border: 1px solid rgba(76,175,80,0.3); border-radius: 10px; padding: 1.5rem; margin-bottom: 2rem;">
+              <h4 style="color: #4caf50; margin-bottom: 0.5rem;">💰 Basta 1 Incarico per Ripagarsi</h4>
+              <p style="color: #ccc; margin: 0;">Con una media di 8-12 contatti qualificati a settimana, il sistema si ripaga in meno di un mese. Tutti i lead successivi sono profitto puro.</p>
+            </div>
+            
+            <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20un%20preventivo%20per%20ImmobiliareAI" target="_blank" class="btn btn-primary-custom btn-lg" style="padding: 1rem 3rem; font-weight: 600; border-radius: 50px;">Richiedi Preventivo su WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-4">
+        <div class="col-lg-8 mx-auto text-center">
+          <p style="color: #888; font-size: 0.9rem;">💡 <strong>Come Funziona il Pricing:</strong> Il prezzo per l'esclusiva territoriale parte da €2.500 + IVA per una singola città/comune. Se operi su più territori, il prezzo viene calcolato in base al numero di zone da coprire con esclusiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI & FOMO SECTION -->
+  <section style="padding: 5rem 0; background: linear-gradient(135deg, #1a0f0f 0%, #0a0a0a 100%);">
+    <div class="container">
+      <h2 class="display-4 text-center mb-5" style="color: #df0067;">⚠️ ATTENZIONE: ESCLUSIVA LIMITATA</h2>
+      
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <p class="text-center lead" style="color: #ccc; margin-bottom: 3rem;">ImmobiliareAI viene assegnato in ordine cronologico di richiesta. <strong>Chi contatta per primo, ottiene l'esclusiva. Gli altri restano fuori.</strong></p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <!-- Se Decidi Oggi -->
+            <div style="background: linear-gradient(135deg, rgba(76,175,80,0.1) 0%, #1a1a1a 100%); border: 2px solid #4caf50; border-radius: 15px; padding: 2rem;">
+              <h3 style="color: #4caf50; margin-bottom: 1.5rem;">✅ Se Decidi Oggi</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #ccc; line-height: 2;">
+                <li>• Ottieni l'esclusiva sulla tua zona</li>
+                <li>• Blocchi i competitor per sempre</li>
+                <li>• Inizi a generare lead in 7 giorni</li>
+                <li>• ROI in meno di 60 giorni</li>
+              </ul>
+            </div>
+            
+            <!-- Se Aspetti -->
+            <div style="background: linear-gradient(135deg, rgba(255,68,68,0.1) 0%, #1a1a1a 100%); border: 2px solid #ff4444; border-radius: 15px; padding: 2rem;">
+              <h3 style="color: #ff4444; margin-bottom: 1.5rem;">❌ Se Aspetti Troppo</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #ccc; line-height: 2;">
+                <li>• Un competitor ti precede</li>
+                <li>• La zona viene assegnata ad altri</li>
+                <li>• Guardi i lead andare al competitor</li>
+                <li>• Resti indietro per sempre</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <div style="background: rgba(223,0,103,0.1); border: 1px solid rgba(223,0,103,0.3); border-radius: 15px; padding: 2rem;">
+            <h3 style="color: #fff; margin-bottom: 1rem;">🔥 Non è una Questione di "SE", ma di "QUANDO"</h3>
+            <p style="color: #ccc; line-height: 1.7; margin-bottom: 1.5rem;">Qualcuno nella tua zona otterrà ImmobiliareAI. È inevitabile.<br>La vera domanda è: <strong>sarai tu o un tuo competitor?</strong></p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="https://www.agenteimmobiliareai.com" target="_blank" rel="noopener" class="btn btn-primary-custom btn-lg" style="padding: 1rem 2.5rem; font-weight: 600; border-radius: 50px;">Prova la Demo Ora</a>
+              <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20verificare%20disponibilità%20esclusiva" target="_blank" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; border-radius: 50px;">Chiamami su WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- CTA WhatsApp - Closing -->
+<section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #6c5ce7 0%, #5641e5 100%); text-align: center;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Preferisci parlare direttamente?</h3>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Contattami su WhatsApp per un confronto rapido</p>
+    <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Contattami su WhatsApp</a>
+  </div>
+</section>
+
+
+  <!-- CROSS-SELLING ALTRI SAAS -->
+  <section style="padding: 4rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Scopri Anche gli Altri Nostri SaaS</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Soluzioni verticali per settori specifici</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="checkin-digitale-hotel.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #149dcc 0%, #0d7a9e 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">✅ CheckIn Facile</h3>
+              <p style="color: rgba(255,255,255,0.9);">Digitalizzazione check-in per hotel e B&B. Conforme Alloggiati Web. OCR documenti, firma digitale.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="crm-centri-estetici.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">💅 Beauty Center CRM</h3>
+              <p style="color: rgba(255,255,255,0.9);">Gestionale completo per centri estetici e spa. Agenda drag-drop, fidelity card QR, reminder automatici.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="sito-web-officina-meccanica.html" style="text-decoration: none; color: inherit;">
+            <div style="background: linear-gradient(135deg, #ff6b35 0%, #c62828 100%); padding: 2rem; border-radius: 15px; transition: transform 0.3s;" class="h-100" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+              <h3 style="color: white;">🔧 Sito Web + AI per Officine Meccaniche</h3>
+              <p style="color: rgba(255,255,255,0.9);">Sito professionale per autofficine con assistente AI 24/7. Da €350 una tantum. Online in 7-14 giorni.</p>
+              <span style="color: #ffc107; font-weight: 600;">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="hero-gradient" style="padding: 5rem 0; color: white;">
+    <div class="container text-center">
+      <h2 class="display-3 mb-3">Più stime. Più lead. Più vendite.</h2>
+      <p class="lead mb-2">Automatizza la parte più noiosa del tuo lavoro e concentrati solo sugli <strong>incarichi concreti.</strong></p>
+      <p class="mb-4" style="opacity: 0.9; font-size: 1.1rem;">La tua IA gestisce il resto.</p>
+      
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+        <a href="https://www.agenteimmobiliareai.com" target="_blank" rel="noopener" class="btn btn-light btn-lg" style="padding: 1rem 2.5rem; font-weight: 600; border-radius: 50px; color: #df0067;">
+          🚀 Inizia Demo Gratuita
+        </a>
+        <a href="https://wa.me/393516248936?text=Ciao%2C%20vorrei%20info%20su%20Agente%20Immobiliare%20AI" target="_blank" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; border-radius: 50px;">
+          💬 Parla con lo Sviluppatore
+        </a>
+      </div>
+
+      <div class="row justify-content-center g-4 mb-2">
+        <div class="col-md-5">
+          <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; text-align: left;">
+            <p class="mb-2" style="font-size: 1rem;">⭐⭐⭐⭐⭐ <strong>5/5</strong></p>
+            <p class="mb-1" style="opacity: 0.95; font-style: italic;">"Finalmente non devo più fare sopralluoghi gratuiti. Ricevo solo i lead qualificati già pronti a vendere."</p>
+            <p class="mb-0" style="opacity: 0.7; font-size: 0.9rem;">— Giulia R., Agenzia Immobiliare Torino</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; text-align: left;">
+            <p class="mb-2" style="font-size: 1rem;">⭐⭐⭐⭐⭐ <strong>5/5</strong></p>
+            <p class="mb-1" style="opacity: 0.95; font-style: italic;">"In 3 mesi ho generato più incarichi che in tutto l'anno precedente. L'esclusiva sulla mia zona vale il doppio."</p>
+            <p class="mb-0" style="opacity: 0.7; font-size: 0.9rem;">— Marco B., Agente Immobiliare Milano</p>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3" style="opacity: 0.7; font-size: 0.9rem;">✓ Nessuna carta di credito richiesta &nbsp;•&nbsp; ✓ Demo completa e funzionante</p>
+    </div>
+  </section>
+
+  <!-- FAQ ESTESA -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="display-4 text-center mb-3">Domande Frequenti su ImmobiliareAI</h2>
+      <p class="text-center mb-5" style="color: #aaa;">Tutto quello che devi sapere sul software di valutazione immobiliare automatica</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="background: #1a1a1a; color: #fff;">
+                  💰 Quanto costa ImmobiliareAI? C'è un abbonamento mensile?
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  <strong>No abbonamento mensile!</strong> ImmobiliareAI si paga una sola volta. L'esclusiva territoriale parte da <strong>€2.500 + IVA</strong> per una singola città. Include setup completo, dati OMI custom, addestramento AI, integrazione nel tuo sito e formazione. Demo gratuita disponibile prima dell'acquisto.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="background: #1a1a1a; color: #fff;">
+                  🎯 Come funziona l'esclusiva territoriale?
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  Una volta acquistata l'esclusiva per la tua zona (città/comune), <strong>nessun'altra agenzia immobiliare potrà mai ottenere ImmobiliareAI</strong> in quel territorio. Garanzia contrattuale. Se operi su più comuni, il prezzo viene calcolato in base al numero di zone. Chi contatta per primo, ottiene l'esclusiva.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="background: #1a1a1a; color: #fff;">
+                  🤖 La valutazione AI è davvero precisa?
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  Sì! L'AI analizza oltre <strong>50 parametri</strong> basati su dati OMI (Osservatorio del Mercato Immobiliare) ufficiali Agenzia delle Entrate. Ogni zona viene calibrata specificamente con i dati reali del tuo mercato locale. La stima include confronto con immobili simili venduti, andamento prezzi, microzona, stato conservazione, ecc. Risultato: valutazione professionale come quella di un esperto, in 60 secondi.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="background: #1a1a1a; color: #fff;">
+                  ⏱️ Quanto tempo serve per attivare tutto?
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  <strong>Setup completo in 7-10 giorni lavorativi.</strong> Il processo include: 1) Raccolta dati OMI della tua zona (3-4 giorni), 2) Configurazione e addestramento AI (2-3 giorni), 3) Integrazione nel tuo sito web (1-2 giorni), 4) Personalizzazione grafica con il tuo brand (1 giorno), 5) Test e formazione del tuo team (1 giorno). Assistenza completa inclusa.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" style="background: #1a1a1a; color: #fff;">
+                  📊 Quanti lead posso aspettarmi ogni mese?
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  Dipende dal traffico del tuo sito e dalla zona, ma in media le agenzie ricevono <strong>8-12 contatti qualificati a settimana</strong> (32-48 al mese). Ricorda: non sono lead freddi da portali, ma proprietari che hanno già fornito dettagli del loro immobile e aspettano la tua chiamata. Tasso di conversione in incarichi: 15-25%.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" style="background: #1a1a1a; color: #fff;">
+                  🔧 Si integra con il mio sito web esistente?
+                </button>
+              </h3>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  <strong>Sì, compatibile con qualsiasi sito web.</strong> WordPress, Joomla, Drupal, Wix, siti custom, HTML puro — funziona ovunque. Forniamo uno snippet di codice da incollare dove vuoi (widget, pagina dedicata, popup). Supporto tecnico incluso per l'integrazione. Anche integrazione con CRM esistenti tramite API.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" style="background: #1a1a1a; color: #fff;">
+                  💎 Perché dovrei scegliere ImmobiliareAI invece di fare pubblicità?
+                </button>
+              </h3>
+              <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  La pubblicità tradizionale (Facebook Ads, Google Ads) ha costi mensili ricorrenti e lead generici. Con ImmobiliareAI: 1) <strong>Paghi una sola volta</strong>, 2) I lead sono <strong>già qualificati</strong> (hanno fornito dati immobile), 3) Funziona <strong>24/7 automatico</strong>, 4) <strong>ROI tracciabile</strong>, 5) <strong>Esclusiva territoriale</strong> — nessun competitor può copiarti. Confronto reale: Facebook Ads 2-7% conversione, ImmobiliareAI 15-25% conversione.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" style="background: #1a1a1a; color: #fff;">
+                  🔐 I dati dei proprietari sono conformi al GDPR?
+                </button>
+              </h3>
+              <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  <strong>Assolutamente sì.</strong> ImmobiliareAI è <strong>100% conforme al Regolamento UE 2016/679 (GDPR)</strong> e al Codice Privacy italiano. Ogni proprietario che richiede la valutazione firma digitalmente il <strong>consenso al trattamento dei dati personali</strong> per finalità di marketing immobiliare. I dati sono ospitati su server UE crittografati, cancellabili su richiesta, con registro delle attività di trattamento automatico. Tu ricevi lead <strong>legalmente contattabili</strong>, senza rischio sanzioni Garante Privacy.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" style="background: #1a1a1a; color: #fff;">
+                  🆚 Che differenza c'è tra ImmobiliareAI e Immobiliare.it/Idealista?
+                </button>
+              </h3>
+              <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  I <strong>portali immobiliari</strong> (Immobiliare.it, Idealista, Casa.it, Subito) sono <strong>vetrine di annunci a pagamento</strong>: tu metti in vendita gli immobili che hai già in portafoglio. ImmobiliareAI è l'opposto: è un <strong>sistema di acquisizione di nuovi incarichi di vendita</strong>. Il portale ti fa trovare dai compratori, ImmobiliareAI ti fa trovare dai venditori. Sono strumenti complementari: il portale riempie il tuo portafoglio compratori, ImmobiliareAI riempie il tuo portafoglio venditori. Con un vantaggio: i lead ImmobiliareAI sono <strong>esclusivi e gratuiti per sempre</strong> dopo il pagamento una tantum.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" style="background: #1a1a1a; border: 1px solid #333; margin-bottom: 1rem; border-radius: 10px; overflow: hidden;">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" style="background: #1a1a1a; color: #fff;">
+                  👥 Funziona anche se non ho un sito web?
+                </button>
+              </h3>
+              <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: #0a0a0a; color: #ccc;">
+                  Sì! Se non hai un sito web o il tuo è datato, <strong>creiamo gratuitamente una landing page SEO-optimized</strong> dedicata alla valutazione immobiliare, collegata al tuo dominio (o a un dominio nuovo) e ottimizzata per keyword come <em>"valutazione casa [tua città]"</em>, <em>"stima immobile [tuo comune]"</em>. Inclusa nel pacchetto esclusiva territoriale, senza costi aggiuntivi. In alternativa, possiamo integrarci con il tuo sito WordPress, Wix, Squarespace o <a href="creazione-api-rest.html" style="color:#df0067;">CMS custom via API REST</a>.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#df0067; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="gestionali-personalizzati.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#df0067'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">💼</div>
+            <h3 style="color:#df0067; font-size:1.3rem; margin-bottom:0.75rem;">Gestionali personalizzati</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Software su misura per reti di agenzie, network immobiliari, franchising con esigenze uniche.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-python.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#df0067'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🐍</div>
+            <h3 style="color:#df0067; font-size:1.3rem; margin-bottom:0.75rem;">Sviluppo Python &amp; AI</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Lo stack AI dietro ImmobiliareAI: OpenAI GPT-4, scraping portali immobiliari, automazioni OMI.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="creazione-api-rest.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#df0067'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🚀</div>
+            <h3 style="color:#df0067; font-size:1.3rem; margin-bottom:0.75rem;">API REST per integrazione</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Collega ImmobiliareAI al tuo CRM esistente, al gestionale aziendale o a portali come Idealista.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #000; color: #fff; padding: 3rem 0 2rem;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h4 style="color: #df0067;">ImmobiliareAI</h4>
+          <p style="color: #aaa; font-size: 0.95rem;">Software di valutazione immobiliare automatica per agenzie. Trova, valuta e acquisisce immobili con intelligenza artificiale. Esclusiva territoriale garantita.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">🔗 Link Utili</h5>
+          <ul style="list-style: none; padding: 0; line-height: 2;">
+            <li><a href="checkin-digitale-hotel.html" class="link-back" style="color: #149dcc; text-decoration: none;">✅ CheckIn Facile (Hotel)</a></li>
+            <li><a href="crm-centri-estetici.html" class="link-back" style="color: #e91e63; text-decoration: none;">💅 Beauty Center CRM</a></li>
+            <li><a href="sito-web-officina-meccanica.html" class="link-back" style="color: #ff6b35; text-decoration: none;">🔧 Sito Web Officine Meccaniche</a></li>
+            <li><a href="gestionali-personalizzati-aziende.html" class="link-back" style="color: #aaa; text-decoration: none;">📋 Tutti i SaaS Live</a></li>
+            <li><a href="preventivo-app.html" class="link-back" style="color: #aaa; text-decoration: none;">📊 Richiedi Preventivo</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 style="color: #fff;">📞 Contatti</h5>
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.8;">
+            Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc;">andreapiani.dev@gmail.com</a><br>
+            Tel: <a href="tel:+393516248936" style="color: #149dcc;">+39 351 624 8936</a><br>
+            WhatsApp: <a href="https://wa.me/393516248936" target="_blank" style="color: #25d366;">💬 Chatta su WhatsApp</a>
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: #333; margin: 2rem 0;">
+      <div class="text-center" style="color: #666; font-size: 0.9rem;">
+        <p class="mb-2">&copy; 2026 Andrea Piani - Sviluppo Software | Tutti i diritti riservati</p>
+        <p class="mb-0">
+          <a href="privacy-policy.html" style="color: #888;">Privacy Policy</a> | 
+          <a href="cookie-policy.html" style="color: #888;">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- POPUP SERVIZI -->
+  <script src="assets/js/popup-loader.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- SCROLL REVEAL + COUNTER -->
+  <script>
+    (function() {
+      // IntersectionObserver per .reveal
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      }
+
+      // Counter animato per stat hero (+40%, 8/10, 247)
+      const counterEls = document.querySelectorAll('[data-count]');
+      const counterIO = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.count, 10);
+            const suffix = el.dataset.suffix || '';
+            let current = 0;
+            const step = Math.max(1, Math.ceil(target / 30));
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) { current = target; clearInterval(timer); }
+              el.textContent = current + suffix;
+            }, 40);
+            counterIO.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      counterEls.forEach(el => counterIO.observe(el));
+
+      // Typing effect sul messaggio chatbot dashboard
+      const chatMsg = document.querySelector('.dashboard-mockup [data-typing]');
+      if (chatMsg) {
+        const full = chatMsg.textContent;
+        let idx = 0;
+        chatMsg.textContent = '';
+        chatMsg.classList.add('typing-cursor');
+        const typer = setInterval(() => {
+          chatMsg.textContent = full.slice(0, idx++);
+          if (idx > full.length) {
+            clearInterval(typer);
+            setTimeout(() => chatMsg.classList.remove('typing-cursor'), 800);
+          }
+        }, 35);
+      }
+    })();
+  </script>
+<!-- Andrea AI Chat Widget -->
+<script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
+<script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+</body>
+</html>

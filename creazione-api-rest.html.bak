@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="Sviluppo API REST e GraphQL professionali in Italia. Integrazione sistemi, microservizi, documentazione OpenAPI. Esperto backend per startup, SaaS e PMI. Preventivo gratuito.">
+
+  <meta property="og:title" content="Sviluppo API REST e GraphQL Professionali | Andrea Piani">
+  <meta property="og:description" content="Creazione API REST, GraphQL e microservizi. Integrazione sistemi legacy, documentazione completa, sicurezza enterprise. Sviluppatore backend esperto.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/screenshot-7.png">
+  <meta property="og:url" content="https://www.andreapiani.com/creazione-api-rest.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sviluppo API REST e GraphQL Professionali">
+  <meta name="twitter:description" content="Creazione API backend scalabili, sicure e documentate. Integrazione sistemi aziendali.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/screenshot-7.png">
+
+  <link rel="canonical" href="https://www.andreapiani.com/creazione-api-rest.html" />
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <title>Sviluppo API REST e GraphQL: Integrazione Sistemi e Microservizi | Andrea Piani</title>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="utilities.css">
+  <link rel="stylesheet" href="assets/css/popup-menu.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Sviluppo API REST e GraphQL",
+    "provider": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "jobTitle": "Sviluppatore Backend e API Architect",
+      "url": "https://www.andreapiani.com",
+      "email": "andreapiani.dev@gmail.com",
+      "telephone": "+393516248936"
+    },
+    "areaServed": "IT",
+    "description": "Sviluppo API REST, GraphQL e microservizi per integrazione sistemi aziendali, SaaS e applicazioni mobile. Documentazione OpenAPI, autenticazione OAuth2/JWT, performance ottimizzate.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andreapiani.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sviluppo API REST",
+        "item": "https://www.andreapiani.com/creazione-api-rest.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto costa sviluppare un'API REST professionale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Il costo dipende dalla complessità del progetto e dalle esigenze specifiche. Ogni preventivo è personalizzato in base a: numero di endpoint, complessità logica business, integrazioni necessarie, requisiti di sicurezza e performance. Include: architettura RESTful, documentazione OpenAPI/Swagger, autenticazione JWT/OAuth2, validazione input, gestione errori, rate limiting, test automatici. Richiedi un preventivo gratuito personalizzato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Che differenza c'è tra API REST e GraphQL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "REST usa endpoint multipli (es. /users, /posts), risponde con dati fissi, richiede più chiamate per dati correlati, caching semplice con HTTP. GraphQL usa un singolo endpoint, client richiede solo dati necessari, una query per dati complessi, caching più complesso. Consiglio REST per: API pubbliche, CRUD semplici, mobile apps, integrazione legacy. GraphQL per: dashboard complesse, over-fetching problema, client multipli con esigenze diverse."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come si integra un'API con sistemi legacy aziendali?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Metodi integrazione: Layer API moderno sopra database legacy (wrapper), Middleware ETL per sincronizzazione dati, Web services SOAP to REST converter, Database views per esporre dati in modo sicuro, Message queue (RabbitMQ/Kafka) per comunicazione asincrona. Vantaggi: zero modifiche ai sistemi esistenti, app moderne accedono a dati legacy, sicurezza centralizzata, monitoraggio traffico, scalabilità indipendente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un'API richiede manutenzione continua?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dipende dall'uso. Manutenzione ordinaria (consigliata): aggiornamenti sicurezza, monitoring performance, backup database, rinnovo certificati SSL. Offriamo diversi piani di manutenzione con hosting, monitoraggio e supporto inclusi. Manutenzione straordinaria (a consumo): nuovi endpoint, modifiche logica business, integrazioni aggiuntive. Molte API funzionano anni senza modifiche se ben progettate. Contattaci per un preventivo personalizzato."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
+
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Jost', sans-serif;
+    }
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .navbar-custom a:hover { color: #149dcc !important; }
+    .navbar-custom .active { color: #149dcc !important; }
+    .navbar-brand {
+      color: #149dcc !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .hero-crm {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 6rem 0;
+      color: white;
+    }
+    .hero-crm h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    .hero-crm p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .btn-crm {
+      background: #667eea;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+      border: none;
+    }
+    .btn-crm:hover {
+      background: #ffffff;
+      color: #667eea;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #667eea;
+    }
+    .feature-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 15px;
+      padding: 2rem;
+      height: 100%;
+      transition: 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: #667eea;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+    .feature-text {
+      color: #cccccc;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .stats-box {
+      background: #1a1a1a;
+      border: 2px solid #667eea;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .stats-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #667eea;
+    }
+    .stats-label {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .cta-section p {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 3rem;
+    }
+    .pricing-card {
+      background: #1a1a1a;
+      border: 2px solid #667eea;
+      border-radius: 15px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: 0.3s;
+      height: 100%;
+    }
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    }
+    .pricing-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+    .pricing-price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+    .case-study-card {
+      background: #1a1a1a;
+      border-left: 4px solid #667eea;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .case-study-title {
+      font-size: 1.6rem;
+      color: #667eea;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    /* Popup Servizi */
+    .servizi-popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .servizi-popup-overlay.active {
+      display: flex;
+    }
+    .servizi-popup-content {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    .servizi-popup-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: 0.3s;
+      line-height: 1;
+    }
+    .servizi-popup-close:hover {
+      color: #667eea;
+      transform: rotate(90deg);
+    }
+    .servizi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .servizi-category {
+      background: #0a0a0a;
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid #333;
+      transition: 0.3s;
+    }
+    .servizi-category:hover {
+      border-color: #667eea;
+      transform: translateY(-5px);
+    }
+    .servizi-link {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 5px 0;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+    .servizi-link:hover {
+      background: rgba(102, 126, 234, 0.2);
+      color: #667eea;
+      padding-left: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU NAVIGAZIONE -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-crm gradient-animate scroll-animate" style="background-size: 200% 200%;">
+    <div class="container hero-animate">
+      <div class="row align-items-center">
+        <div class="col-lg-12 text-center">
+          <h1 class="animate-fadeInUp">🚀 Sviluppo API REST e GraphQL Professionali</h1>
+          <p class="animate-fadeInUp animate-delay-1">
+            Creo API backend <strong>scalabili, sicure e perfettamente documentate</strong> per integrare sistemi aziendali, alimentare <a href="sviluppo-app-mobile.html" style="color:#fff; text-decoration:underline;">app mobile</a> e <a href="sviluppo-app-react-web.html" style="color:#fff; text-decoration:underline;">web app React</a>, costruire microservizi moderni che trasformano il tuo business digitale.
+          </p>
+          <p class="animate-fadeInUp animate-delay-1" style="font-size: 1.2rem; margin-bottom: 2rem;">
+            <strong><a href="sviluppo-nodejs.html" style="color:#fff; text-decoration:underline;">Node.js</a> • <a href="sviluppo-python.html" style="color:#fff; text-decoration:underline;">Python</a> • PHP • PostgreSQL • MongoDB • Docker • AWS • Kubernetes</strong>
+          </p>
+          <div class="animate-fadeInUp animate-delay-2">
+            <a href="https://wa.me/393516248936" class="btn-crm me-3 glow-animate">RICHIEDI CONSULENZA GRATUITA</a>
+            <a href="preventivo-app.html" class="btn btn-outline-light btn-lg">RICHIEDI PREVENTIVO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSA SONO LE API -->
+  <section style="padding: 5rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="section-title">Cosa Sono le API e Perché Sono Fondamentali per il Tuo Business</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="feature-card">
+            <p class="feature-text" style="font-size: 1.15rem;">
+              <strong>API (Application Programming Interface)</strong> è l'acronimo di "Interfaccia di Programmazione delle Applicazioni". In parole semplici, un'API è un <strong>ponte digitale</strong> che permette a due software diversi di comunicare tra loro in modo sicuro e standardizzato.
+            </p>
+            <p class="feature-text" style="font-size: 1.15rem; margin-top: 1.5rem;">
+              Immagina le API come i "camerieri" di un ristorante: tu (il cliente/app frontend) ordini un piatto dal menu, il cameriere (l'API) porta la tua richiesta in cucina (il server/database), e ti restituisce il piatto pronto (i dati richiesti). Tutto questo avviene in modo ordinato, veloce e senza che tu debba entrare in cucina.
+            </p>
+            <h4 class="feature-title" style="margin-top: 2rem;">Perché Ogni Azienda Moderna Ha Bisogno di API</h4>
+            <ul class="feature-text" style="font-size: 1.05rem; line-height: 2;">
+              <li><strong>🔗 Integrazione Sistemi:</strong> Le API permettono a sistemi diversi (ERP, CRM, e-commerce, magazzino) di scambiarsi dati automaticamente, eliminando il 90% dei data entry manuali e gli errori umani.</li>
+              <li><strong>📱 App Mobile e Web:</strong> Ogni app moderna (Instagram, Uber, Netflix) funziona grazie ad API che collegano l'interfaccia utente al backend dove risiedono dati e logica business.</li>
+              <li><strong>⚡ Velocità di Sviluppo:</strong> Con un'API ben progettata, team frontend e backend lavorano in parallelo, riducendo i tempi di sviluppo del 50%.</li>
+              <li><strong>💰 Monetizzazione:</strong> Esponi i tuoi servizi a partner e sviluppatori terzi tramite API a pagamento (modello Stripe, Twilio, Google Maps).</li>
+              <li><strong>🔐 Sicurezza Centralizzata:</strong> Un unico punto di accesso protetto ai dati aziendali è più facile da monitorare e mettere in sicurezza rispetto a 10 sistemi diversi.</li>
+              <li><strong>📊 Scalabilità:</strong> Architettura API-first permette di crescere da 100 a 100.000 utenti senza dover riscrivere l'intera applicazione.</li>
+            </ul>
+            <p class="feature-text" style="font-size: 1.15rem; margin-top: 2rem; font-style: italic; color: #667eea;">
+              <strong>Dato di fatto:</strong> Secondo Gartner, entro il 2026 oltre l'80% delle aziende utilizzerà API per integrazioni critiche business. Le aziende API-first crescono del 12% più velocemente rispetto ai competitor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ API PROFESSIONALI -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Perché Investire in API Professionali (Non "Fatte in Casa")</h2>
+      <p style="text-align: center; font-size: 1.2rem; color: #ccc; margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+        La differenza tra un'API "che funziona" e un'API professionale è come la differenza tra una bicicletta e un'automobile: entrambe ti portano a destinazione, ma solo una è adatta per un business serio.
+      </p>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h4 class="feature-title">App Mobile e Web Performanti</h4>
+            <p class="feature-text">
+              Le tue app iOS, Android e web necessitano di un backend robusto per gestire dati, autenticazione, logica business. Un'API ben progettata rende lo sviluppo frontend più veloce (tempo ridotto del 40%), l'app più performante (latenza sotto i 200ms) e l'esperienza utente fluida. Senza API, ogni app dovrebbe connettersi direttamente al database: un disastro per sicurezza e performance.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <h4 class="feature-title">Integrazione Sistemi Aziendali</h4>
+            <p class="feature-text">
+              Connetti ERP, CRM, e-commerce, magazzino, contabilità in un ecosistema unico. Un'API centralizzata sincronizza dati tra piattaforme diverse (esempio: ordine su Shopify → aggiorna magazzino su SAP → invia fattura da Perfex CRM), elimina doppi inserimenti, riduce errori umani del 90%. ROI medio: recuperi costi sviluppo in 6-12 mesi grazie al risparmio operativo.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h4 class="feature-title">Scalabilità Business Illimitata</h4>
+            <p class="feature-text">
+              Architettura microservizi: ogni componente scala indipendentemente. Da 100 a 100.000 utenti senza riscrivere codice. Deploy su cloud (AWS, Azure, GCP) con autoscaling: paghi solo le risorse che usi, risparmi fino al 70% vs server tradizionali. API professionali gestiscono picchi di traffico (Black Friday, campagne virali) senza crash: downtime = perdita fatturato.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h4 class="feature-title">Sicurezza e Compliance GDPR</h4>
+            <p class="feature-text">
+              Autenticazione OAuth2/JWT enterprise-grade, rate limiting anti-DDoS, validazione input contro SQL injection/XSS, crittografia HTTPS/TLS 1.3, audit logs immutabili. Un solo punto di accesso ai dati aziendali rende più semplice proteggere informazioni sensibili, rispettare GDPR (right to delete, data export), superare audit sicurezza. Multa GDPR media: €50.000 - evitabile con API compliant.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h4 class="feature-title">Monetizzazione e Nuovi Ricavi</h4>
+            <p class="feature-text">
+              Esponi i tuoi servizi a partner e sviluppatori terzi con modelli pricing flessibili: pay-per-call (€0,01/richiesta), subscription (€29-299/mese), freemium (primi 1000 call gratis). Stripe/PayPal integration per pagamenti automatici. Revenue stream ricorrente senza effort aggiuntivo. Esempio reale: azienda dati meteo genera €12K/mese MRR con API pubblica a 450 developer.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h4 class="feature-title">Time-to-Market Velocissimo</h4>
+            <p class="feature-text">
+              Team frontend e mobile lavorano in parallelo con backend usando mock server: sviluppo 50% più veloce. Documentazione automatica Swagger/OpenAPI elimina ambiguità, onboarding nuovo sviluppatore in 2 ore vs 2 giorni. Prototipo funzionante in 2-3 settimane per validare idea prima di investire 6 mesi nello sviluppo completo. API-first = fail fast, pivot rapido, vantaggio competitivo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASI D'USO REALI -->
+  <section style="padding: 5rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="section-title">Casi d'Uso Reali: Come le API Trasformano i Business</h2>
+      <p style="text-align: center; font-size: 1.2rem; color: #ccc; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        Storie vere di aziende che hanno risolto problemi concreti con API professionali. Numeri reali, ROI misurato, risultati tangibili.
+      </p>
+
+      <div class="case-study-card">
+        <div class="case-study-title">🛒 E-commerce Headless: Da WooCommerce Lento a App Native Velocissima</div>
+        <p class="feature-text"><strong>Cliente:</strong> E-commerce abbigliamento 5.000 prodotti, 50K visite/mese</p>
+        <p class="feature-text"><strong>Problema:</strong> WooCommerce su WordPress lentissimo (5-8 secondi caricamento pagina prodotto). Cliente voleva app mobile iOS/Android per aumentare conversioni, ma WooCommerce non performante per app native. Budget limitato, non potevano riscrivere tutto da zero.</p>
+        <p class="feature-text"><strong>Soluzione Sviluppata:</strong></p>
+        <ul class="feature-text">
+          <li>API REST custom in Node.js + PostgreSQL che espone prodotti, carrello, checkout, ordini</li>
+          <li>WooCommerce diventa solo pannello admin per gestire catalogo (parte che conoscono già)</li>
+          <li>Sincronizzazione automatica WooCommerce DB → PostgreSQL ogni 5 minuti (webhook + cron job)</li>
+          <li>App React Native che consuma API per iOS e Android (codebase condiviso = costi dimezzati)</li>
+          <li>CDN Cloudflare per immagini prodotti, Redis per cache prodotti più venduti</li>
+        </ul>
+        <p class="feature-text"><strong>Risultati Misurati (dopo 6 mesi):</strong></p>
+        <ul class="feature-text">
+          <li>✅ Caricamento prodotti app: da 5-8s a 0.8s (6x più veloce)</li>
+          <li>✅ Tasso conversione app: +32% vs sito web mobile</li>
+          <li>✅ Valore medio ordine app: +18% (UX migliore = più acquisti impulso)</li>
+          <li>✅ ROI: investimento API recuperato in 8 mesi, ora 40% vendite da app</li>
+          <li>✅ Bonus: facile aggiungere PWA, Alexa Skill, chatbot usando stessa API</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>Revenue aggiuntivo anno 1:</strong> €45.000 — ROI eccezionale rispetto all'investimento iniziale
+        </p>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-title">🏭 Integrazione ERP-CRM: Addio Data Entry Manuale</div>
+        <p class="feature-text"><strong>Cliente:</strong> Azienda manifatturiera 80 dipendenti, settore automotive</p>
+        <p class="feature-text"><strong>Problema:</strong> Commerciali acquisivano ordini su Perfex CRM, poi ufficio operativo inseriva manualmente stesso ordine in ERP AS400 per produzione. Processo richiedeva 2 ore/ordine, errori di battitura nel 15% dei casi (codici prodotto sbagliati, quantità errate), ritardi consegna, clienti insoddisfatti. Perdita stimata: €80K/anno tra errori e inefficienza.</p>
+        <p class="feature-text"><strong>Soluzione Sviluppata:</strong></p>
+        <ul class="feature-text">
+          <li>Middleware API Python che sincronizza Perfex CRM con ERP AS400 (connessione ODBC + SOAP)</li>
+          <li>Webhook Perfex: quando commerciale conferma ordine, trigger automatico chiama API</li>
+          <li>API legge dati ordine da Perfex, valida campi obbligatori, mappa prodotti CRM → codici ERP</li>
+          <li>Inserimento automatico ordine in AS400 via chiamate SOAP, gestione errori con retry logic</li>
+          <li>Email notifiche: conferma a commerciale, alert a produzione, tracking numero ordine</li>
+          <li>Dashboard monitoring real-time: ordini sincronizzati, fallimenti, tempi elaborazione</li>
+        </ul>
+        <p class="feature-text"><strong>Risultati Misurati (dopo 12 mesi):</strong></p>
+        <ul class="feature-text">
+          <li>✅ Data entry manuale: da 2 ore a 2 minuti (99% riduzione tempo)</li>
+          <li>✅ Errori inserimento: da 15% a 0.5% (solo ordini anomali richiedono intervento)</li>
+          <li>✅ Tempo risposta cliente: da 24-48h a 1h (ordine entra subito in produzione)</li>
+          <li>✅ Personale ufficio liberato per attività valore aggiunto (analisi dati, KPI, customer care)</li>
+          <li>✅ ROI: investimento recuperato in 4 mesi, risparmio netto anno 1 = €65K</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>Risparmio annuo:</strong> €80.000 — ROI recuperato in pochi mesi
+        </p>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-title">🏢 SaaS Multi-Tenant: Da Idea a 1000+ Clienti</div>
+        <p class="feature-text"><strong>Cliente:</strong> Startup proptech (settore immobiliare), idea innovativa ma zero codice esistente</p>
+        <p class="feature-text"><strong>Problema:</strong> Volevano lanciare piattaforma SaaS per gestione affitti brevi (stile Booking/Airbnb per property manager). Serviva architettura che scalasse da 10 a 10.000 proprietà senza esplodere costi. Database separato per tenant = insostenibile. Budget startup limitato, serviva MVP veloce per raccogliere seed round.</p>
+        <p class="feature-text"><strong>Soluzione Sviluppata:</strong></p>
+        <ul class="feature-text">
+          <li>API Node.js/NestJS + PostgreSQL con row-level security (RLS) per isolamento dati tenant</li>
+          <li>Schema database condiviso, tenant_id in ogni tabella, query automaticamente filtrate da RLS</li>
+          <li>Autenticazione JWT con tenant_id embedded: ogni utente vede solo dati sua azienda</li>
+          <li>Subscription management Stripe: piani Free (3 proprietà), Pro (€49/mese illimitate), Enterprise (custom)</li>
+          <li>Onboarding automatico: nuovo cliente → genera subdomain (cliente.piattaforma.com) → provisioning DB + welcome email</li>
+          <li>API pubbliche per integrazioni: connessione Booking.com, Airbnb, Expedia (calendari sincronizzati)</li>
+        </ul>
+        <p class="feature-text"><strong>Risultati Misurati (dopo 18 mesi):</strong></p>
+        <ul class="feature-text">
+          <li>✅ Clienti acquisiti: 1.200+ property manager (target superato 200%)</li>
+          <li>✅ Onboarding nuovo cliente: 5 minuti automatico (vs 2 giorni setup manuale competitor)</li>
+          <li>✅ Costi hosting: €1.800/mese per 1200 tenant (database condiviso vs €50K+ con DB separati)</li>
+          <li>✅ MRR (Monthly Recurring Revenue): €38.000 (70% clienti su piano Pro)</li>
+          <li>✅ Seed round: raccolti €500K investitori grazie a traction + architettura scalabile</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>Tempi:</strong> 6 settimane sviluppo — <strong>ARR (Annual Recurring Revenue):</strong> €456.000
+        </p>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-title">🌦️ API Pubblica Monetizzata: Da Dati Interni a Prodotto</div>
+        <p class="feature-text"><strong>Cliente:</strong> Azienda agricola-tech con rete 500 stazioni meteo IoT su territorio nazionale</p>
+        <p class="feature-text"><strong>Problema:</strong> Raccoglievano dati meteo/terreno per uso interno (ottimizzare irrigazione, prevenire malattie piante). Molti developer e aziende richiedevano accesso dati per loro app/servizi, ma non esisteva modo strutturato per venderli. Opportunità revenue inesplorata.</p>
+        <p class="feature-text"><strong>Soluzione Sviluppata:</strong></p>
+        <ul class="feature-text">
+          <li>API REST pubblica con endpoint dati meteo storici, real-time, forecast (machine learning)</li>
+          <li>API Gateway Kong per gestione traffico, rate limiting, analytics, API keys auto-generate</li>
+          <li>Piani pricing: Free (1000 call/mese), Starter (€29/mese 10K call), Pro (€99/mese 100K call), Enterprise (custom)</li>
+          <li>Developer portal con documentazione Swagger interattiva, code examples (Python, JS, PHP), sandbox test</li>
+          <li>Stripe Billing integration: signup → generazione API key → addebito automatico mensile → fattura PDF</li>
+          <li>Dashboard analytics per clienti: chiamate consumate, endpoint più usati, latenza, errori</li>
+        </ul>
+        <p class="feature-text"><strong>Risultati Misurati (dopo 12 mesi):</strong></p>
+        <ul class="feature-text">
+          <li>✅ Developer registrati: 650+ da 12 paesi (developer italiani, startup agritech EU, università)</li>
+          <li>✅ Clienti paganti: 180 (conversion rate 27% da free a paid plan)</li>
+          <li>✅ MRR: €14.500 (revenue 100% passivo, zero effort vendita dopo setup iniziale)</li>
+          <li>✅ Churn rate: 8% (molto basso per SaaS, API affidabili = clienti fedeli)</li>
+          <li>✅ Nuove opportunità: 3 clienti enterprise passati a contratti custom €500-1.200/mese</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>Risultato:</strong> <strong>ARR:</strong> €174.000 (revenue stream completamente nuovo)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Servizi di Sviluppo API: Cosa Offro</h2>
+      <p style="text-align: center; font-size: 1.2rem; color: #ccc; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        Ogni progetto API è unico. Analizzo le tue esigenze specifiche e propongo la soluzione tecnologica ottimale per obiettivi, budget e tempi.
+      </p>
+      <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h5 class="feature-title">🔷 API REST Custom da Zero</h5>
+            <p class="feature-text">
+              Progettazione e sviluppo API RESTful seguendo best practice <strong>Richardson Maturity Model Level 3</strong>. Endpoint intuitivi, risposte JSON strutturate, codici HTTP semantici (200, 201, 400, 404, 500), HATEOAS opzionale per navigazione risorse.
+              <br><br>
+              <strong>Cosa include:</strong>
+            </p>
+            <ul class="feature-text">
+              <li>Analisi requisiti funzionali con workshop (1-2 sessioni)</li>
+              <li>Design architettura endpoint e risorse (diagrammi UML/C4)</li>
+              <li>Autenticazione JWT stateless o OAuth2 con refresh tokens</li>
+              <li>Validazione input con Joi/Yup/Zod (prevenzione errori client-side)</li>
+              <li>Gestione errori consistente con messaggi user-friendly + error codes</li>
+              <li>Rate limiting per prevenire abusi (es. 100 req/min per IP)</li>
+              <li>Compressione GZIP automatica (riduzione bandwidth 70%)</li>
+              <li>CORS configurabile per integrazioni cross-domain</li>
+              <li>Versioning API (v1, v2) per backward compatibility</li>
+            </ul>
+            <p class="feature-text" style="margin-top: 1rem; font-style: italic;">
+              <strong>Ideale per:</strong> App mobile, SaaS, e-commerce, dashboard admin
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h5 class="feature-title">⚡ GraphQL API per Query Complesse</h5>
+            <p class="feature-text">
+              Server GraphQL con <strong>Apollo Server</strong> o <strong>Express-GraphQL</strong> e schema type-safe. Query flessibili (client chiede solo dati che servono), mutations per modifiche, subscriptions real-time via WebSocket. Perfetto per SaaS e dashboard con dati relazionali complessi.
+              <br><br>
+              <strong>Cosa include:</strong>
+            </p>
+            <ul class="feature-text">
+              <li>Schema design con types, queries, mutations, subscriptions</li>
+              <li>Resolver efficienti con DataLoader (previene N+1 query problem)</li>
+              <li>Caching intelligente per ridurre load database</li>
+              <li>Autenticazione context-based (JWT in header Authorization)</li>
+              <li>Playground GraphiQL per test interattivo queries</li>
+              <li>Integrazione TypeScript + TypeGraphQL per type safety end-to-end</li>
+              <li>Batching richieste per ottimizzare performance</li>
+              <li>Error handling custom con estensioni GraphQL</li>
+            </ul>
+            <p class="feature-text" style="margin-top: 1rem; font-style: italic;">
+              <strong>Ideale per:</strong> Admin panel complessi, real-time apps, piattaforme multi-device
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h5 class="feature-title">📦 Architettura Microservizi</h5>
+            <p class="feature-text">
+              Decomposizione monolite in microservizi indipendenti: ogni servizio gestisce dominio specifico (users, payments, notifications, inventory). Comunicazione asincrona via <strong>RabbitMQ/Kafka</strong>. Orchestrazione <strong>Docker Compose</strong> (dev) o <strong>Kubernetes</strong> (production).
+              <br><br>
+              <strong>Cosa include:</strong>
+            </p>
+            <ul class="feature-text">
+              <li>Domain-Driven Design (DDD): identificazione bounded contexts</li>
+              <li>Service discovery automatico (Consul, Eureka, K8s Services)</li>
+              <li>API Gateway centralizzato (Kong, Express Gateway, AWS API Gateway)</li>
+              <li>Circuit breaker pattern per resilienza (se servizio X down, fallback)</li>
+              <li>Distributed tracing con Jaeger/Zipkin (debug request multi-servizi)</li>
+              <li>Centralized logging aggregato (ELK Stack: Elasticsearch + Logstash + Kibana)</li>
+              <li>Health checks e readiness probes per auto-healing</li>
+              <li>Blue-green deployment o canary release per zero-downtime updates</li>
+            </ul>
+            <p class="feature-text" style="margin-top: 1rem; font-style: italic;">
+              <strong>Ideale per:</strong> Applicazioni enterprise, high-traffic, team multipli
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h5 class="feature-title">🔌 Integrazione Sistemi Legacy</h5>
+            <p class="feature-text">
+              Wrapper moderni per sistemi esistenti: database SQL/NoSQL legacy, SOAP web services anni '90, FTP/SFTP file transfer, mainframe AS400/IBM i. Esponi dati legacy via API REST moderna <strong>senza toccare codice vecchio</strong>. Migrazione graduale zero-downtime.
+              <br><br>
+              <strong>Cosa include:</strong>
+            </p>
+            <ul class="feature-text">
+              <li>Reverse engineering database schema e relazioni</li>
+              <li>Mapping entità legacy → modelli API moderni (normalizzazione)</li>
+              <li>ETL (Extract-Transform-Load) per sincronizzazione dati bidrezionale</li>
+              <li>Middleware trasformazione: SOAP to REST, XML to JSON, CSV to database</li>
+              <li>Retry logic esponenziale per chiamate a sistemi instabili</li>
+              <li>Fallback mechanisms: se legacy offline, API risponde con dati cache</li>
+              <li>Monitoring compatibilità e alerting anomalie (es. schema legacy cambiato)</li>
+              <li>Documentazione dettagliata mapping e data flow per manutenzione futura</li>
+            </ul>
+            <p class="feature-text" style="margin-top: 1rem; font-style: italic;">
+              <strong>Ideale per:</strong> Aziende con ERP/CRM legacy, modernizzazione graduale
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h5 class="feature-title">📚 Documentazione OpenAPI/Swagger Interattiva</h5>
+            <p class="feature-text">
+              Documentazione API che si auto-genera dal codice (single source of truth). Developer testano endpoint direttamente nel browser con <strong>Swagger UI</strong>. Export specifica OpenAPI 3.0 per generare SDK client automatici (Java, Python, TypeScript, PHP).
+              <br><br>
+              <strong>Cosa include:</strong>
+            </p>
+            <ul class="feature-text">
+              <li>Annotazioni JSDoc (Node.js) o decoratori (NestJS, FastAPI) nel codice</li>
+              <li>Generazione automatica spec OpenAPI da annotazioni</li>
+              <li>Esempi richieste/risposte per ogni endpoint (copy-paste ready)</li>
+              <li>Schemi validazione JSON Schema per request/response bodies</li>
+              <li>Documentazione auth flows (OAuth2, API keys, JWT)</li>
+              <li>Webhook callbacks e async operations</li>
+              <li>Changelog versioni API con breaking changes evidenziati</li>
+              <li>Branding personalizzato (logo aziendale, colori custom)</li>
+              <li>Export Postman Collection per import diretto</li>
+            </ul>
+            <p class="feature-text" style="margin-top: 1rem; font-style: italic;">
+              <strong>Ideale per:</strong> API pubbliche, onboarding developer, API marketplace
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h5 class="feature-title">🔔 Webhook & Architettura Event-Driven</h5>
+            <p class="feature-text">
+              Notifiche push real-time verso sistemi terzi. Webhook HTTP POST affidabili con <strong>retry exponential backoff</strong>, firma HMAC per sicurezza, dashboard gestione subscriptions. Perfetto per integrare Stripe, Shopify, Zapier, n8n.
+              <br><br>
+              <strong>Cosa include:</strong>
+            </p>
+            <ul class="feature-text">
+              <li>Event emitter pattern: quando succede X, trigger webhook a URL registrati</li>
+              <li>Payload JSON customizzabile (client sceglie campi da ricevere)</li>
+              <li>Filtri eventi (es. solo order.created, non order.updated)</li>
+              <li>Retry automatico: 3 tentativi con delay 1s, 5s, 30s</li>
+              <li>Logs delivery dettagliati (timestamp, status code, response body, latency)</li>
+              <li>Verifica URL endpoint: ping test prima di attivare webhook</li>
+              <li>Rotazione secret keys per sicurezza (invalida vecchie signature)</li>
+              <li>Dead letter queue per eventi falliti dopo max retry (analisi post-mortem)</li>
+            </ul>
+            <p class="feature-text" style="margin-top: 1rem; font-style: italic;">
+              <strong>Ideale per:</strong> Piattaforme pagamento, e-commerce, automazioni workflow
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIE -->
+  <section style="padding: 5rem 0; background: #000000;">
+    <div class="container">
+      <h2 class="section-title">Stack Tecnologico: Linguaggi, Framework, Database</h2>
+      <p style="text-align: center; font-size: 1.2rem; color: #ccc; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        Scelgo la tecnologia ottimale per ogni progetto in base a requisiti performance, scalabilità, budget, competenze team cliente.
+      </p>
+      <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h4 class="feature-title">Backend Languages & Frameworks</h4>
+            <p class="feature-text"><strong>Node.js (Express, Fastify, NestJS):</strong> La mia scelta preferita per API moderne. Ideale per I/O intensivo, real-time (WebSocket), microservizi veloci. Event-driven non-blocking = gestisce 10.000+ connessioni concorrenti su singola istanza. NestJS ottimo per progetti enterprise con TypeScript + dependency injection. Performance eccellenti, ecosystem npm vastissimo.</p>
+            <p class="feature-text"><strong>Python (FastAPI, Django REST Framework, Flask):</strong> Perfetto per integrazione ML/AI (TensorFlow, PyTorch), data science, automazioni complesse. FastAPI ultraperformante (basato su Starlette + Pydantic), type hints nativi, auto-generazione OpenAPI. Django REST ottimo se esiste già progetto Django. Flask per API minimaliste lightweight.</p>
+            <p class="feature-text"><strong>PHP (Laravel, Symfony, Slim):</strong> Ottimo per CMS customizzazioni (WordPress/Drupal API), legacy enterprise PHP che vuole aggiungere API moderne. Laravel Eloquent ORM intuitivo, middleware potenti. Symfony per progetti enterprise complessi con FOSRestBundle.</p>
+            <p class="feature-text"><strong>Go (Gin, Echo, Fiber):</strong> Performance critiche, latenza sub-5ms, concorrenza elevata (goroutines), DevOps tooling. Compilato = binario singolo portabile, consumo RAM minimo. Ideale high-frequency trading, IoT backend, gaming servers.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h4 class="feature-title">Database: SQL e NoSQL</h4>
+            <p class="feature-text"><strong>PostgreSQL:</strong> Il mio database SQL preferito. Supporto JSON/JSONB (best of both worlds SQL+NoSQL), full-text search integrato, row-level security per multi-tenant, estensioni potenti (PostGIS geospaziale, pg_cron scheduling). Performance eccellenti, ACID compliant, open-source maturo.</p>
+            <p class="feature-text"><strong>MySQL/MariaDB:</strong> Ottimo per e-commerce (WooCommerce, Magento, PrestaShop), hosting condiviso economico. MariaDB più performante di MySQL vanilla, compatibilità totale.</p>
+            <p class="feature-text"><strong>MongoDB:</strong> Schema flessibile per dati destrutturati, prototipazione rapida, storing documenti complessi (nested objects). Aggregation pipeline potente. Ottimo per CMS, cataloghi prodotti variabili, logs/analytics.</p>
+            <p class="feature-text"><strong>Redis:</strong> In-memory key-value store velocissimo (sub-millisecondo). Uso per caching (riduce 70-90% query DB), session storage, rate limiting counters, real-time leaderboards, pub/sub messaging.</p>
+            <p class="feature-text"><strong>Elasticsearch:</strong> Search engine full-text distribuito. Ottimo per e-commerce con milioni prodotti (filtri facet, autocomplete, typo tolerance), log aggregation, analytics real-time su big data.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h4 class="feature-title">ORM/ODM & Query Builders</h4>
+            <p class="feature-text"><strong>Prisma (Node.js):</strong> ORM next-gen type-safe. Schema definito in prisma.schema, auto-generazione TypeScript types, migrations versionate. Developer experience fantastica, autocomplete IDE, prevenzione errori compile-time.</p>
+            <p class="feature-text"><strong>TypeORM (Node.js):</strong> Supporto multi-database (Postgres, MySQL, SQLite, MSSQL), decoratori TypeScript eleganti, migrations automatiche, repository pattern.</p>
+            <p class="feature-text"><strong>Sequelize (Node.js):</strong> ORM maturo feature-rich, supporto transazioni complesse, eager/lazy loading, hooks lifecycle.</p>
+            <p class="feature-text"><strong>Mongoose (MongoDB + Node.js):</strong> ODM standard per MongoDB, schema validation, middleware pre/post hooks, virtuals, population (simula join).</p>
+            <p class="feature-text"><strong>SQLAlchemy (Python):</strong> ORM potentissimo, query expression language espressivo, supporto raw SQL quando serve performance estreme.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h4 class="feature-title">Autenticazione & Sicurezza</h4>
+            <p class="feature-text"><strong>JWT (JSON Web Tokens):</strong> Stateless auth, token contiene claims (user ID, roles, expiration). Refresh tokens per session lunghe senza compromettere sicurezza. Blacklist logout via Redis.</p>
+            <p class="feature-text"><strong>OAuth2:</strong> Standard industry per social login (Google, Facebook, GitHub), SSO aziendale (Azure AD, Okta). Delego autenticazione a provider fidati, riduci superficie attacco password.</p>
+            <p class="feature-text"><strong>Passport.js (Node.js):</strong> Middleware auth con 500+ strategie pronte (local, JWT, OAuth, SAML). Centralizza logica autenticazione, facilmente estensibile.</p>
+            <p class="feature-text"><strong>Auth0 / Supabase Auth:</strong> Authentication-as-a-Service per startup che vogliono focus su business logic, non reinventare ruota auth. Compliance GDPR, audit logs, MFA inclusi.</p>
+            <p class="feature-text"><strong>Security headers:</strong> Helmet.js (Node.js), validazione input rigorosa, parametrized queries (prevenzione SQL injection), HTTPS obbligatorio, CORS policies restrittive.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h4 class="feature-title">DevOps, Deploy & Monitoring</h4>
+            <p class="feature-text"><strong>Docker:</strong> Containerizzazione app per portabilità totale. Multi-stage builds per immagini ottimizzate (dimensione ridotta 10x). Docker Compose per local development multi-container.</p>
+            <p class="feature-text"><strong>Kubernetes (K8s):</strong> Orchestrazione container production-grade. Autoscaling horizontal (replica pod dinamicamente), self-healing (rilancia pod crashati), rolling updates zero-downtime. Managed K8s: AWS EKS, Google GKE, Azure AKS.</p>
+            <p class="feature-text"><strong>CI/CD:</strong> GitHub Actions, GitLab CI, Jenkins. Pipeline automatiche: push code → run tests → build Docker image → deploy staging → approval gate → deploy production. Deploy frequency: multiple volte al giorno vs mesi in approccio tradizionale.</p>
+            <p class="feature-text"><strong>Cloud providers:</strong> AWS (Lambda serverless, API Gateway, RDS database, S3 storage, CloudFront CDN), Azure, Google Cloud Platform, DigitalOcean (economico per startup).</p>
+            <p class="feature-text"><strong>Monitoring:</strong> Prometheus + Grafana (metriche real-time: latenza P95/P99, throughput req/s, error rate 5xx), alerting Slack/email su soglie, uptime monitoring (UptimeRobot, Pingdom).</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+          <div class="feature-card">
+            <h4 class="feature-title">Testing & Quality Assurance</h4>
+            <p class="feature-text"><strong>Unit tests:</strong> Jest (Node.js), pytest (Python). Test singole funzioni in isolamento, mock dipendenze esterne. Coverage target >80% business logic critica.</p>
+            <p class="feature-text"><strong>Integration tests:</strong> Supertest (Node.js), requests (Python). Test endpoint API end-to-end con database reale (o test database), verifica status codes, response schemas, edge cases.</p>
+            <p class="feature-text"><strong>Load testing:</strong> Artillery, k6, Locust. Simula 1000+ utenti concorrenti, identifica bottleneck performance prima del lancio. Target: <200ms latency P95, <1% error rate sotto load.</p>
+            <p class="feature-text"><strong>Contract testing:</strong> Pact per API consumer-driven. Frontend definisce contratto atteso, backend deve rispettarlo. Previene breaking changes accidentali.</p>
+            <p class="feature-text"><strong>Security testing:</strong> OWASP ZAP scan vulnerabilità (SQL injection, XSS), dependency scanning (npm audit, Snyk) per CVE note in librerie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO SVILUPPO -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Processo di Sviluppo API: Dalla Consulenza al Deploy</h2>
+      <p style="text-align: center; font-size: 1.2rem; color: #ccc; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        Metodologia agile con consegne incrementali ogni 1-2 settimane. Feedback continuo, trasparenza totale, nessuna sorpresa.
+      </p>
+
+      <div class="feature-card mb-4">
+        <h4 class="feature-title">📋 Fase 1: Discovery & Analisi Requisiti (1 settimana)</h4>
+        <p class="feature-text"><strong>Obiettivo:</strong> Capire a fondo il tuo business, utenti finali, problemi da risolvere, vincoli tecnici/budget.</p>
+        <p class="feature-text"><strong>Attività:</strong></p>
+        <ul class="feature-text">
+          <li>Workshop iniziale 2-3 ore (video call o presenza): discutiamo use case, attori, flussi utente prioritari</li>
+          <li>Questionario dettagliato: volume dati, traffico stimato (utenti/mese, req/s), integrazioni esistenti, competenze team</li>
+          <li>Analisi sistemi esistenti: accesso a database/API legacy se integrazione necessaria, reverse engineering schema</li>
+          <li>Mappatura entità database: diagrammi ER (Entity-Relationship), relazioni, cardinalità, indici necessari</li>
+          <li>Definizione MVP (Minimum Viable Product): quali feature core per lancio vs nice-to-have posticipabili</li>
+        </ul>
+        <p class="feature-text"><strong>Deliverable:</strong></p>
+        <ul class="feature-text">
+          <li>Documento requisiti funzionali (15-30 pagine): user stories prioritizzate (MoSCoW: Must/Should/Could/Won't have)</li>
+          <li>Architettura high-level: diagrammi C4 (Context, Container, Component), tech stack proposto con pro/contro</li>
+          <li>Stima effort dettagliata: breakdown ore per feature, costo totale, timeline realistica</li>
+          <li>Proposta commerciale: 3 opzioni (MVP essenziale, Standard, Premium full-featured) per adattarsi a budget</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>Investimento fase discovery:</strong> Incluso nel preventivo finale se procedi con il progetto
+        </p>
+      </div>
+
+      <div class="feature-card mb-4">
+        <h4 class="feature-title">🎨 Fase 2: Design API & Database Schema (1-2 settimane)</h4>
+        <p class="feature-text"><strong>Obiettivo:</strong> Definire contratto API preciso prima di scrivere codice. API-first approach evita refactoring costosi.</p>
+        <p class="feature-text"><strong>Attività:</strong></p>
+        <ul class="feature-text">
+          <li>Design endpoint RESTful: risorse (nouns not verbs), metodi HTTP (GET/POST/PUT/DELETE), URL structure (/api/v1/users/:id)</li>
+          <li>Definizione request/response schemas JSON: quali campi obbligatori/opzionali, tipi dato, validazioni, esempi concreti</li>
+          <li>Error handling strategy: codici HTTP semantici, formato errori consistente, messaggi user-friendly localizzabili</li>
+          <li>Autenticazione flow: JWT con refresh tokens, OAuth2 authorization code flow, API keys per server-to-server</li>
+          <li>Database schema design: normalizzazione 3NF (elimina ridondanze), indici per query frequenti (B-tree, GIN full-text), constraints foreign key</li>
+          <li>Migration strategy: script SQL versionati (Flyway, Liquibase), rollback plan se deploy fallisce</li>
+        </ul>
+        <p class="feature-text"><strong>Deliverable:</strong></p>
+        <ul class="feature-text">
+          <li>Specifica OpenAPI 3.0 YAML completa: importabile in Postman, Swagger UI, generatori SDK</li>
+          <li>Diagrammi ER database: tabelle, colonne, tipi dato, indici, constraints, trigger se necessari</li>
+          <li>Mock server Prism (generato da OpenAPI): frontend può iniziare sviluppo in parallelo con risposte fake ma realistiche</li>
+          <li>Approvazione formale: cliente firma-off su design prima di coding (evita "non è così che lo volevo" a fine progetto)</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>Valore:</strong> Modificare design costa 2 ore, modificare codice finito costa 20 ore. API-first = risparmio 10x.
+        </p>
+      </div>
+
+      <div class="feature-card mb-4">
+        <h4 class="feature-title">💻 Fase 3: Sviluppo Iterativo Agile (3-12 settimane)</h4>
+        <p class="feature-text"><strong>Obiettivo:</strong> Consegnare software funzionante incrementalmente, raccogliere feedback early, adattare direzione se necessario.</p>
+        <p class="feature-text"><strong>Metodologia sprint 1-2 settimane:</strong></p>
+        <ul class="feature-text">
+          <li><strong>Sprint planning:</strong> Scegliamo subset feature da implementare (es. autenticazione + CRUD users + CRUD posts)</li>
+          <li><strong>Development TDD:</strong> Scrivo test automatici prima di codice (red-green-refactor). Coverage >80% logica business</li>
+          <li><strong>Daily async update:</strong> Messaggio Slack/email ogni giorno con progress, blockers eventuali, ETA</li>
+          <li><strong>Code review:</strong> Ogni feature passa peer review (anche se sono solo, faccio self-review checklist rigorosa)</li>
+          <li><strong>Deploy staging automatico:</strong> Ogni merge su branch main → CI/CD pipeline → deploy ambiente test con dati fake</li>
+          <li><strong>Sprint review/demo:</strong> Video call 30-60 min fine sprint: mostro API funzionanti via Postman/Swagger, spiego decisioni tecniche</li>
+          <li><strong>Sprint retrospective:</strong> Cosa è andato bene, cosa migliorare prossimo sprint, adattamento velocità/scope</li>
+        </ul>
+        <p class="feature-text"><strong>Visibilità totale:</strong></p>
+        <ul class="feature-text">
+          <li>Accesso repository Git (GitHub/GitLab): vedi ogni commit real-time, nessun codice nascosto</li>
+          <li>Board Trello/Jira condivisa: task in To Do / In Progress / Done, chiaro cosa manca per chiudere milestone</li>
+          <li>Staging environment sempre accessibile: testa API appena sviluppate, segnala bug subito (fix rapido)</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>Benefit approccio agile:</strong> Se budget finisce o priorità cambiano, hai sempre software funzionante parziale (non "90% fatto ma 0% usabile")
+        </p>
+      </div>
+
+      <div class="feature-card mb-4">
+        <h4 class="feature-title">📖 Fase 4: Documentazione & Developer Onboarding (1 settimana)</h4>
+        <p class="feature-text"><strong>Obiettivo:</strong> Developer esterni (tuo team, partner, clienti) possono integrare API autonomamente in <2 ore.</p>
+        <p class="feature-text"><strong>Attività:</strong></p>
+        <ul class="feature-text">
+          <li>Documentazione Swagger UI interattiva: Try-it-now per testare endpoint direttamente da browser, zero setup</li>
+          <li>Getting Started guide step-by-step: registrazione account → generazione API key → prima chiamata in 5 minuti</li>
+          <li>Code examples multi-language: snippet copy-paste ready per curl, JavaScript (fetch/axios), Python (requests), PHP (Guzzle)</li>
+          <li>Postman Collection completa: workspace con esempi pre-configurati, variabili environment (dev/staging/prod), test scripts</li>
+          <li>Authentication tutorial dettagliato: come ottenere token, dove metterlo (header Authorization: Bearer), refresh quando expira</li>
+          <li>Error handling guide: tabella codici errore API custom (es. USER_NOT_FOUND, INVALID_TOKEN), come gestirli client-side</li>
+          <li>Rate limits & quotas: documenta limiti (es. 1000 req/h), header response X-RateLimit-Remaining, cosa fare se 429 Too Many Requests</li>
+          <li>Changelog API: log modifiche ogni versione, breaking changes evidenziati, deprecation notices con ETA sunset</li>
+        </ul>
+        <p class="feature-text"><strong>Video tutorial (opzionale):</strong></p>
+        <ul class="feature-text">
+          <li>Quickstart 5 minuti: registrazione → prima chiamata → interpretare response</li>
+          <li>Authentication deep-dive 10 minuti: flow OAuth2 completo con redirect, exchange code for token</li>
+          <li>Use case esempio 15 minuti: implementare feature concreta (es. "costruire feed social" usando endpoint API)</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>ROI documentazione:</strong> Ogni developer onboarding manuale costa 2-4 ore tuo tempo. Documentazione self-service = scalabilità infinita.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h4 class="feature-title">🚀 Fase 5: Deploy Production & Monitoring (ongoing)</h4>
+        <p class="feature-text"><strong>Obiettivo:</strong> Lancio API production con zero-downtime, monitoring proattivo, reazione rapida a incidenti.</p>
+        <p class="feature-text"><strong>Attività pre-lancio:</strong></p>
+        <ul class="feature-text">
+          <li>Load testing: simula 1000+ utenti concorrenti, identifica bottleneck (es. query DB lenta, endpoint che esplode sotto stress)</li>
+          <li>Security hardening: scan vulnerabilità OWASP, penetration testing light, fix CVE critical in dependencies</li>
+          <li>Backup strategy: snapshot database giornalieri, retention 30 giorni, test restore per verificare funzionamento</li>
+          <li>SSL certificate setup: Let's Encrypt gratuito auto-renew, A+ rating SSL Labs, HTTPS strict transport security header</li>
+          <li>DNS configuration: record A/CNAME, TTL breve per switch rapido se problema, CloudFlare CDN per asset statici</li>
+        </ul>
+        <p class="feature-text"><strong>Deploy production:</strong></p>
+        <ul class="feature-text">
+          <li>Blue-green deployment: nuovo codice su server "green" (utenti ancora su "blue"), smoke test, switch traffico graduale (10% → 50% → 100%)</li>
+          <li>Rollback automatico: se error rate >5% o latency P95 >2x baseline, rollback automatico a versione stabile precedente</li>
+          <li>Database migrations: run migrations prima di deploy app, backward-compatible (nuova app funziona con vecchio schema temporaneamente)</li>
+        </ul>
+        <p class="feature-text"><strong>Monitoring & alerting 24/7:</strong></p>
+        <ul class="feature-text">
+          <li>Metriche real-time: dashboard Grafana con latenza P50/P95/P99, throughput req/s, error rate 4xx/5xx, saturazione CPU/RAM/disk</li>
+          <li>Uptime monitoring: ping ogni 60s da 5 datacenter globali, alert se >2 regioni segnalano down</li>
+          <li>Error tracking: Sentry cattura exception non gestite, stack trace completo, frequenza, affected users, alert se spike anomalo</li>
+          <li>Log aggregation: ELK Stack o CloudWatch Logs, query fulltext, alert su pattern specifici (es. "database connection refused")</li>
+          <li>Alerting multi-channel: Slack #incidents (response time <10 min), email (backup), PagerDuty (escalation se nessuna risposta 30 min)</li>
+        </ul>
+        <p class="feature-text"><strong>Manutenzione continuativa (opzionale):</strong></p>
+        <ul class="feature-text">
+          <li>Aggiornamenti sicurezza dependencies (npm audit fix, pip-audit): weekly automated check + deploy patch</li>
+          <li>Scaling proattivo: analisi trend traffico, provisioning risorse extra prima di eventi high-load (Black Friday, lancio campagna)</li>
+          <li>Performance optimization: profiling query DB lente (pg_stat_statements), aggiunta indici, caching layer Redis</li>
+          <li>Incident response: disponibilità per firefighting in caso problemi critici, post-mortem incident con root cause analysis</li>
+        </ul>
+        <p class="feature-text" style="font-style: italic; color: #667eea; margin-top: 1rem;">
+          <strong>SLA garantito (piano Enterprise):</strong> 99.9% uptime (max 43 min downtime/mese), response time <500ms P95, support prioritario 24/7
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding: 5rem 0; background: #000000;" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Soluzioni API Personalizzate per Ogni Esigenza</h2>
+      <p style="text-align: center; font-size: 1.2rem; color: #ccc; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        Ogni progetto è unico. Il costo dipende dalle tue esigenze specifiche, complessità e obiettivi. Richiedi un preventivo personalizzato gratuito.
+      </p>
+      <div class="row">
+        <div class="col-12 col-md-4 mb-4">
+          <div class="pricing-card">
+            <div class="pricing-title">API Starter</div>
+            <div class="pricing-price">Preventivo Personalizzato</div>
+            <p class="feature-text text-start">
+              <strong>Ideale per:</strong> MVP, prototipo validazione idea, app semplice, progetto personale/startup pre-seed
+              <br><br>
+              <strong>Cosa include:</strong><br>
+              ✅ 5-10 endpoint CRUD (Create Read Update Delete)<br>
+              ✅ Autenticazione JWT base (login, logout, refresh token)<br>
+              ✅ Database PostgreSQL o MySQL<br>
+              ✅ Documentazione Swagger interattiva<br>
+              ✅ Deploy cloud (DigitalOcean/AWS)<br>
+              ✅ Testing automatico base (unit tests core logic)<br>
+              ✅ Supporto post-lancio via email<br>
+              <br>
+              <strong>Tempi:</strong> 2-3 settimane<br>
+              <strong>Tecnologie tipiche:</strong> Node.js/Express + PostgreSQL, Python/FastAPI + SQLite
+            </p>
+            <a href="https://wa.me/393516248936" class="btn-crm w-100 mt-3 text-center">Richiedi Preventivo</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-4">
+          <div class="pricing-card" style="border-color: #667eea; border-width: 3px;">
+            <div style="background: #667eea; color: white; padding: 0.5rem; margin: -2.5rem -2.5rem 1rem -2.5rem; border-radius: 15px 15px 0 0; font-weight: bold;">🔥 PIÙ POPOLARE</div>
+            <div class="pricing-title">API Professional</div>
+            <div class="pricing-price">Preventivo Personalizzato</div>
+            <p class="feature-text text-start">
+              <strong>Ideale per:</strong> SaaS, e-commerce, app B2B/B2C, startup post-seed, PMI digitalizzazione
+              <br><br>
+              <strong>Cosa include:</strong><br>
+              ✅ 15-30 endpoint business logic complessa<br>
+              ✅ OAuth2 / Social login (Google, Facebook, Apple)<br>
+              ✅ Rate limiting & caching Redis (performance 10x)<br>
+              ✅ Webhook & notifiche email/push<br>
+              ✅ CI/CD pipeline automatizzato (GitHub Actions)<br>
+              ✅ Monitoring Grafana & alerting Slack<br>
+              ✅ Postman Collection + code examples 3 linguaggi<br>
+              ✅ Load testing report (capacity planning)<br>
+              ✅ Supporto post-lancio + hotfix prioritari<br>
+              <br>
+              <strong>Tempi:</strong> 4-8 settimane<br>
+              <strong>Tecnologie tipiche:</strong> Node.js/NestJS + PostgreSQL + Redis, Python/Django + Celery
+            </p>
+            <a href="https://wa.me/393516248936" class="btn-crm w-100 mt-3 text-center">Richiedi Preventivo</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-4">
+          <div class="pricing-card">
+            <div class="pricing-title">API Enterprise</div>
+            <div class="pricing-price">Preventivo Personalizzato</div>
+            <p class="feature-text text-start">
+              <strong>Ideale per:</strong> Microservizi, integrazioni mission-critical, high-traffic (1M+ req/giorno), compliance strict
+              <br><br>
+              <strong>Cosa include:</strong><br>
+              ✅ Architettura microservizi scalabile infinitamente<br>
+              ✅ GraphQL + REST APIs (flexibility massima)<br>
+              ✅ Message queue RabbitMQ/Kafka (async processing)<br>
+              ✅ Multi-tenant SaaS architecture (row-level security)<br>
+              ✅ Kubernetes orchestration (autoscaling, self-healing)<br>
+              ✅ Security audit completo + penetration testing<br>
+              ✅ Developer portal custom brandizzato<br>
+              ✅ SLA 99.9% uptime garantito<br>
+              ✅ Support 24/7 prioritario + dedicated Slack channel<br>
+              ✅ Training on-site team (1-2 giorni)<br>
+              <br>
+              <strong>Tempi:</strong> 8-16 settimane<br>
+              <strong>Tecnologie tipiche:</strong> Node.js/NestJS microservices + K8s, Go + gRPC, Python ML pipelines
+            </p>
+            <a href="https://wa.me/393516248936" class="btn-crm w-100 mt-3 text-center">Richiedi Preventivo</a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="feature-card">
+            <h4 class="feature-title text-center">Servizi Aggiuntivi e Manutenzione</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="feature-text"><strong>📦 Manutenzione ordinaria (opzionale):</strong></p>
+                <ul class="feature-text">
+                  <li><strong>Piano Basic:</strong> Hosting + backup giornalieri + SSL auto-renew + monitoring uptime + aggiornamenti sicurezza critical</li>
+                  <li><strong>Piano Pro:</strong> Basic + performance optimization trimestrale + support prioritario email <24h + incident response</li>
+                  <li><strong>Piano Enterprise:</strong> Pro + dedicated DevOps + SLA 99.9% + support 24/7 + scaling proattivo</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p class="feature-text"><strong>⚡ Sviluppo aggiuntivo (post-lancio):</strong></p>
+                <ul class="feature-text">
+                  <li><strong>Nuovi endpoint:</strong> Costo variabile secondo complessità logica business</li>
+                  <li><strong>Integrazione terze parti:</strong> Stripe, Twilio, SendGrid, Google Maps, etc.</li>
+                  <li><strong>Consulenza oraria:</strong> Feature aggiuntive, refactoring, code review</li>
+                  <li><strong>Training developer:</strong> Sessioni on-site o remote per il tuo team</li>
+                </ul>
+              </div>
+            </div>
+            <p class="feature-text text-center" style="margin-top: 2rem; font-size: 1.1rem; color: #667eea;">
+              <strong>💡 Garanzia soddisfatti o rimborsati:</strong> Se dopo milestone 1 (discovery + design) non sei convinto della direzione, rimborso 100% acconto. Zero rischio.
+            </p>
+            <div class="text-center mt-4">
+              <a href="preventivo-app.html" class="btn-crm me-3">Richiedi Preventivo Dettagliato</a>
+              <a href="https://wa.me/393516248936" class="btn btn-outline-light btn-lg">Contattami su WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Pronto a Trasformare il Tuo Business con API Professionali?</h2>
+      <p style="max-width: 900px; margin: 0 auto 3rem auto;">
+        Prenota una <strong>consulenza gratuita di 30 minuti</strong> (video call o presenza se in Friuli Venezia Giulia). Analizziamo insieme:<br>
+        ✅ La tua architettura attuale e pain points<br>
+        ✅ Opportunità API per ottimizzare processi e aumentare revenue<br>
+        ✅ Tech stack ottimale per i tuoi obiettivi<br>
+        ✅ Stima effort realistica, timeline, costi trasparenti<br>
+        ✅ Roadmap sviluppo incrementale (MVP → full product)<br>
+        <br>
+        <strong>Zero impegno, zero pressione vendita.</strong> Anche se non collaboriamo, esci con idee chiare su architettura API e prossimi step.
+      </p>
+      <div>
+        <a href="https://wa.me/393516248936" target="_blank" class="btn btn-light btn-lg me-3" style="padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: bold;">
+          💬 CONTATTAMI SU WHATSAPP
+        </a>
+        <a href="mailto:andreapiani.dev@gmail.com" class="btn btn-outline-light btn-lg" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+          📧 INVIA EMAIL
+        </a>
+      </div>
+      <p style="margin-top: 2rem; font-size: 1rem; color: #fff;">
+        ⏱️ Risposta entro 2 ore lavorative · 📍 Udine, Friuli Venezia Giulia · 🇮🇹 Supporto 100% in italiano · 🌍 Progetti remote worldwide
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#149dcc; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-nodejs.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#149dcc'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">⚡</div>
+            <h3 style="color:#149dcc; font-size:1.3rem; margin-bottom:0.75rem;">Backend Node.js</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Lo stack principale per API REST ad alte performance: Express, NestJS, Fastify, TypeScript.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-python.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#149dcc'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🐍</div>
+            <h3 style="color:#149dcc; font-size:1.3rem; margin-bottom:0.75rem;">Sviluppo Python</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">API in FastAPI, Django REST Framework e Flask quando servono ML, AI o data pipeline.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="servizi-perfex-crm.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#149dcc'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📞</div>
+            <h3 style="color:#149dcc; font-size:1.3rem; margin-bottom:0.75rem;">Integrazioni Perfex CRM</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Use case tipico di API REST: collegare Perfex a e-commerce, fatturazione, calendari.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER GDPR -->
+  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0; margin-top: 4rem;">
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="footer-links" style="margin-bottom: 1.5rem;">
+          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">📄 Privacy Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🍪 Cookie Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="#" id="footer-manage-cookies" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">⚙️ Gestisci Cookie</a>
+          <span style="color: #666;">|</span>
+          <a href="progetti-open-source.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">💻 Portfolio GitHub</a>
+          <span style="color: #666;">|</span>
+          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🏠 Home</a>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc; margin-bottom: 1rem;">
+          <strong style="color: #fff;">Andrea Piani</strong> - Sviluppatore Backend e API Architect<br>
+          Italia: Piazza della Repubblica, 19 20124 Milano (MI) - Spagna: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife<br>
+          Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #667eea; text-decoration: none;">andreapiani.dev@gmail.com</a> |
+          Tel: <a href="tel:+393516248936" style="color: #667eea; text-decoration: none;">+39 351 624 8936</a>
+          <br><br>© 2026 Andrea Piani. Tutti i diritti riservati.
+        </div>
+        <div>
+          <a href="https://github.com/andreapianidev" target="_blank" style="color: #667eea; text-decoration: none; margin: 0 0.5rem;">GitHub</a>
+          <span style="color: #666;">·</span>
+          <a href="https://linktr.ee/andreapianidev" target="_blank" style="color: #667eea; text-decoration: none; margin: 0 0.5rem;">Linktree</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-manage-cookies').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (window.CookieConsent) window.CookieConsent.reset();
+    });
+  </script>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="animations.js"></script>
+  <script src="utilities.js"></script>
+  <script src="performance.js"></script>
+  <script src="assets/js/popup-loader.js"></script>
+
+<!-- Andrea AI Chat Widget -->
+<script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
+<script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+</body>
+</html>

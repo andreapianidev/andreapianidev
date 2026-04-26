@@ -1,9 +1,0 @@
-RewriteEngine On
-
-# Reindirizzamento da HTTP a HTTPS
-RewriteCond %{ENV:HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Reindirizzamento da non-www a www
-RewriteCond %{HTTP_HOST} ^andreapiani\.com [NC]
-RewriteRule ^(.*)$ https://www.andreapiani.com/$1 [L,R=301]

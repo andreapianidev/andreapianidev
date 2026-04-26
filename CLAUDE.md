@@ -15,39 +15,44 @@ This is a **static HTML/CSS/JavaScript portfolio website** for Andrea Piani, a f
 - **Icons**: Mobirise Icons 2 + Mobirise Icons Bold + Socicon
 - **Fonts**: Google Fonts (Source Code Pro, Jost)
 
-### Core File Structure
+### Repo layout (workspace vs deploy)
+
 ```
-Root HTML Pages (~38 files)
-├── index.html (homepage - Italian)
-├── indexen.html (homepage - English)
-├── Service Pages (17 files) - sviluppo-app-ios.html, sviluppo-python.html, etc.
-├── Informational Pages (7 files) - MVP guides, cost guides, comparisons
-├── Legal Pages (4 files) - privacy-policy.html, cookie-policy.html (IT/EN)
-└── Utility Pages - preventivo-app.html (quote form), progetti-open-source.html
+andreapiani.com/                          ← workspace di sviluppo
+│
+├── sito-web/                             ← TUTTO ciò che va sul server PHP (andreapiani.com)
+│   │                                       Quando deployi: carichi l'INTERO contenuto
+│   │                                       di questa cartella sul server (in root web).
+│   │
+│   ├── index.html, indexen.html, ...    Pagine HTML (38+ files)
+│   ├── chat-widget.html, popup-menu.html, navbar-template.html, footer-gdpr.html  Frammenti
+│   ├── assets/                          Bootstrap, theme, css, js, images, web/assets
+│   ├── lib/                             PHP helpers (config, storage, auth, csrf, ratelimit, util, setup)
+│   ├── api/                             Endpoints (start-session, log-message, log-event, submit-phone, stats/, cron/)
+│   ├── admin/                           PHP admin panel (login, sessions, contacts, reminders, export, settings)
+│   ├── data/                            JSON storage (web-blocked via own .htaccess)
+│   ├── pyprestascanimages/              Immagini di prodotto
+│   ├── *.png                            Screenshots prodotti (autoclicker, bcs, talky, ecc.)
+│   ├── animations.{css,js}, dark-mode.{css,js}, utilities.{css,js},
+│   │   performance.js, cookie-consent.js, navbar-fix.{css,js}    Custom features
+│   ├── sitemap.xml, robots.txt, google98e9eefca6d4b4b3.html    SEO + Search Console
+│   ├── .htaccess                        HTTPS+www redirect, RewriteRule per Authorization, SetEnv AAI_*
+│   └── setup-web.php                    One-shot installer (visit once, then renames itself)
+│
+├── docs/superpowers/specs/               ← Spec/design docs (dev-only, NON va sul server)
+├── CLAUDE.md                             ← Questo file (dev docs)
+├── *.md, README_ANALYSIS.txt             ← Documentation (dev-only)
+├── *.sh                                  ← Build scripts (dev-only)
+│   ├── inject-backend-scripts.sh        Patcha gli HTML in sito-web/ aggiungendo i tag dei backend script
+│   ├── update-all-pages.sh, add-servizi-link.sh, remove-old-popups.sh
+├── project.mobirise                      ← Mobirise project file (locale, NON va sul server)
+├── .aai-credentials.json                 ← GITIGNORED — segreti generati una volta
+├── *.bak, *.backup                       ← Backup orfani da operazioni passate (puoi cancellare)
+└── .gitignore
+```
 
-assets/
-├── bootstrap/ (CSS/JS framework)
-├── theme/ (Main styling and scripts)
-├── mobirise/ (Mobirise-specific styling)
-├── css/ (popup-menu.css)
-├── js/ (popup-loader.js)
-├── images/ (Product images, logos)
-└── web/assets/ (Icons and fonts)
-
-Root-level CSS/JS (Custom Features):
-├── navbar-fix.css - Navbar customization (hamburger icon, alignment) + POPUP MENU STYLES
-├── animations.css - Animation system
-├── animations.js - Animation triggers
-├── utilities.css - Utility classes & advanced components
-├── utilities.js - WhatsApp button, toasts, modals
-├── dark-mode.css - Dark theme toggle
-├── dark-mode.js - Dark mode toggle logic
-├── performance.js - Performance optimization
-└── cookie-consent.js - GDPR cookie consent system
-
-Configuration:
-├── popup-menu.html - Centralized services menu template
-├── navbar-template.html - Navbar template
+**Workflow di deploy:**
+- Carica TUTTO il contenuto di `sito-web/` sul server `andreapiani.com` (FTP/cPanel). Sostituisci i file esistenti. Niente altri deploy o servizi.
 ├── sitemap.xml - SEO sitemap
 ├── robots.txt - Search engine directives
 └── .htaccess - Server configuration
@@ -219,6 +224,151 @@ The site has a modular custom features system documented in:
 
 **Auto-applied**: Buttons and cards automatically get hover animations when page loads.
 
+## Andrea AI Admin Panel (PHP backend)
+
+Logging and lead management system for the Andrea AI chat widget. Stores all
+conversations, captures phone numbers via hybrid trigger (AI marker + 6-turn
+rules fallback + manual button), and lets Andrea manage leads from a PHP admin UI.
+
+**Storage:** plain JSON files (no DB) under `/data/` (web-blocked by `.htaccess`).
+Atomic writes via `flock` + temp file + `rename`. See `lib/storage.php`.
+
+### Components (tutti dentro `sito-web/`)
+
+```
+sito-web/lib/                       Shared helpers (config, storage, util, csrf, ratelimit, auth, setup)
+sito-web/api/                       Public widget endpoints
+  start-session.php                   (widget: open new chat session, returns session_id + csrf_token)
+  log-message.php                     (widget: append message)
+  submit-phone.php                    (widget: capture phone, normalizes to E.164)
+  log-event.php                       (widget + analytics.js: track events)
+  cron/purge.php?token=...            (token-protected: 12-month conv retention, 90-day events)
+sito-web/admin/                     PHP UI (login, dashboard, sessions, session detail, contacts, reminders, export, settings)
+sito-web/data/                      Storage (NOT web-accessible — protected by data/.htaccess)
+  conversations/<date>_<sid>.json
+  contacts.json, index.json, reminders.json, csrf.json, ratelimit.json
+  stats/daily/<date>.json, stats/events.jsonl
+  auth/users.json (password_hash + api_token), auth/login_attempts.json
+  locks/                                  flock files
+sito-web/assets/js/chat-backend.js  Browser-side bridge: ensureSession, logMessage, logEvent, submitPhone, phone form UI
+sito-web/assets/js/analytics.js     Site-wide page_view + whatsapp_click tracking (loaded on every page)
+inject-backend-scripts.sh           (in root) Idempotent script to add backend+analytics tags to all pages in sito-web/
+```
+
+### Admin URLs (after deploy on www.andreapiani.com)
+
+- Login: `/admin/login.php`
+- Dashboard (KPI + reminders due today): `/admin/index.php`
+- Conversations list (filters): `/admin/sessions.php`
+- Conversation detail (CTAs: WhatsApp, call, copy, reminder, export, delete): `/admin/session.php?id=<sid>`
+- Contacts (per-phone view + GDPR delete-all): `/admin/contacts.php`
+- Reminders (today/overdue/done): `/admin/reminders.php`
+- Export JSON/CSV (filtered): `/admin/export.php`
+- Settings (password, api_token rotate, manual purge): `/admin/settings.php`
+
+### One-time setup (server)
+
+```bash
+# 1. Generate IP salt and cron token (write into .env or webserver env vars)
+php -r "echo 'AAI_IP_SALT=' . bin2hex(random_bytes(32)) . PHP_EOL;"
+php -r "echo 'AAI_CRON_TOKEN=' . bin2hex(random_bytes(24)) . PHP_EOL;"
+
+# 2. Create the first admin user (creates data/auth/users.json + api_token)
+php lib/setup.php <username> <password>   # password min 12 chars
+
+# 3. Schedule the weekly purge cron
+# Configure cron-job.org or server crontab to GET:
+#   https://www.andreapiani.com/api/cron/purge.php?token=<AAI_CRON_TOKEN>
+```
+
+### Security model
+
+- **Widget → backend** (write): origin check (`Origin/Referer` must start with `https://www.andreapiani.com`),
+  per-session CSRF token (created at start-session), rate limits (30 msgs/min per session, 10 new sessions/min per IP).
+- **Admin panel**: PHP session, Argon2id password hash, `HttpOnly + Secure + SameSite=Strict` cookie,
+  5/15min login throttling per IP.
+- **Stats API**: Bearer token in `Authorization` header, constant-time compare via `hash_equals`.
+- **IP privacy**: stored only as `sha256(salt + ip)`; raw IP never persisted (anti-spam only, GDPR-friendly).
+- **Retention**: conversations kept 12 months, events 90 days; purge runs weekly via cron.
+
+### Hybrid phone trigger flow
+
+The widget integrates with the backend through `assets/js/chat-backend.js`:
+1. **Primary** — DeepSeek system prompt (in `assets/js/chat-widget.js`) instructs the model
+   to emit `[ASK_PHONE]` at the end of replies when interest is concrete. The widget strips
+   the marker before render and shows the phone form inline.
+2. **Fallback** — after 6 user turns without phone or marker, the form is shown automatically.
+3. **Manual** — a small CTA "📞 Lascia il tuo numero" sits above the input at all times.
+
+The `phone_trigger` field (`ai_marker | rules_fallback | manual_button`) is stored on the
+session so we can later A/B which trigger converts best.
+
+### AI Analyst (admin bot, `/admin/bot.php`)
+
+Bot conversazionale powered by DeepSeek con accesso reale ai dati raccolti. Risponde a domande su statistiche, conversazioni, contatti, promemoria. Usa OpenAI-compatible function calling (12 tool functions) per recuperare dati invece di inventare.
+
+**File principali:**
+- `sito-web/lib/deepseek.php` — client API. Chiave letta da env `AAI_DEEPSEEK_KEY`, fallback alla deobfuscazione XOR di `chat-widget.js` (stessa chiave del frontend, single source of truth).
+- `sito-web/admin/lib/bot-tools.php` — schemi tool + handler che leggono `data/stats/`, `data/conversations/`, `data/index.json`, `data/contacts.json`, `data/reminders.json`.
+- `sito-web/admin/api/ask-bot.php` — endpoint POST con loop tool-calling (max 6 iterazioni). CSRF protetto.
+- `sito-web/admin/bot.php` — UI chat full-page (dark luxe, coerente col resto admin).
+- `sito-web/admin/assets/bot-widget.{css,js}` — floating widget bottom-left, presente in tutte le pagine admin autenticate (iniettato da `layout.php` footer). Bot.php sopprime il widget via `$GLOBALS['_aaiHideBotWidget'] = true`.
+- `sito-web/data/admin-bot/<username>.json` — cronologia persistente per utente (max 20 turn).
+
+**Tool disponibili al bot:**
+`get_overview`, `get_trend`, `get_top_pages`, `get_traffic_sources`, `get_devices`, `get_hourly_distribution`, `get_recent_sessions`, `get_session_detail`, `search_sessions`, `get_contacts`, `get_reminders`, `get_funnel`.
+
+**Per aggiungere un nuovo tool:** appendi schema in `aai_bot_tool_schemas()` e case in `aai_bot_dispatch_tool()` di `admin/lib/bot-tools.php`.
+
+**Costo stimato:** ~1.4k prompt token per chiamata (schema tool) + dati. DeepSeek pricing → frazioni di centesimo per chat tipica. Rotazione chiave: cambia il payload XOR in `chat-widget.js:36` (frontend e admin la prendono entrambi da lì).
+
+### Statistiche (pagina admin `/admin/stats.php`)
+
+Pagina aggregata che legge `data/stats/daily/<date>.json`:
+- KPI 7/30/90 giorni: visite, chat aperte/avviate, telefoni, click WhatsApp, % mobile
+- Trend chart (Chart.js da CDN, no build step) con 4 serie: visite / chat / telefoni / WA
+- Funnel verticale a barre: visite → chat aperte → consenso → chat avviate → telefoni → click WA
+- Top pagine (top 20 per visite)
+
+Nessun servizio esterno (Google Analytics, ecc.). Tutto on-prem.
+
+### Server-side env vars (PHP backend on andreapiani.com)
+
+Configurati nel `.htaccess` di `sito-web/`:
+
+```apache
+SetEnv AAI_IP_SALT "5462cba8c9fa2c314d103464e738b6a4667bcab25cb78d0cd4a15766be94be93"
+SetEnv AAI_CRON_TOKEN "e3ad3a2429c7e08f8889682f1bfe39e4080766acf77f704b"
+```
+
+### Cron purge (weekly retention)
+
+Configura su cron-job.org (free) → GET, settimanale:
+```
+https://www.andreapiani.com/api/cron/purge.php?token=e3ad3a2429c7e08f8889682f1bfe39e4080766acf77f704b
+```
+
+### Login credentials
+
+| Service | URL | Username / Password |
+|---------|-----|---------------------|
+| Admin PHP panel | https://www.andreapiani.com/admin/login.php | `andrea` · `TK8ChMMpGK5gfWt` |
+
+(cambia password dal pannello → Impostazioni)
+
+### One-shot server setup (already done)
+
+Il repo contiene `sito-web/setup-web.php` (rinominato in `setup-web.done.php` dopo il primo run). Il setup è **già stato eseguito** in produzione: utente `andrea` creato in `data/auth/users.json`. Non serve rifarlo.
+
+Per ricreare un utente admin in futuro, da SSH del server:
+```bash
+php sito-web/lib/setup.php <username> <password>
+```
+
+### Local credential file
+
+Tutti i segreti sono in `.aai-credentials.json` (gitignored). Trattalo come sensibile — password manager consigliato.
+
 ## Development Workflows
 
 ### Adding a New Service Page
@@ -252,7 +402,13 @@ The site has a modular custom features system documented in:
    <script src="dark-mode.js"></script>
    <script src="performance.js"></script>
    <script src="cookie-consent.js"></script>
+   <!-- Andrea AI Chat Widget (optional but recommended) -->
+   <script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
+   <script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
+   <!-- Site-wide analytics (always include, even on pages without the widget) -->
+   <script src="assets/js/analytics.js" defer data-aai-analytics="1"></script>
    ```
+   Or just run `./inject-backend-scripts.sh` after creating the page — it patches all HTML files idempotently.
 5. **Update `popup-menu.html`**: Add link to new service in appropriate category
 6. **Update `sitemap.xml`**: Add new URL with appropriate priority and changefreq
 7. **Test**: Verify popup menu, dark mode, animations, mobile responsiveness
