@@ -181,26 +181,9 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
 }
 
 // ===== SERVICE WORKER REGISTRATION (PWA) =====
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    // Only register if sw.js exists
-    fetch('/sw.js', { method: 'HEAD' })
-      .then(response => {
-        if (response.ok) {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-              console.log('✅ Service Worker registered:', registration.scope);
-            })
-            .catch(error => {
-              console.log('❌ Service Worker registration failed:', error);
-            });
-        }
-      })
-      .catch(() => {
-        // Service worker file not found, skip registration
-      });
-  });
-}
+// Disabled: there is no /sw.js shipped with this site. Re-enable only
+// after creating one — the previous HEAD probe was generating a noisy
+// 404 in the console on every page load.
 
 // ===== REDUCE MAIN THREAD WORK =====
 // Defer non-critical scripts

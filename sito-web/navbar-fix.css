@@ -6,6 +6,13 @@
   background-color: #000000 !important;
   border-bottom: 1px solid #333;
   padding: 1rem 0;
+  /* Sticky globale (anche mobile): la classe Bootstrap sticky-top non è sempre presente sulle pagine,
+     quindi forziamo qui per garantire navbar sempre visibile. */
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  -webkit-backdrop-filter: saturate(120%);
+  backdrop-filter: saturate(120%);
 }
 
 .navbar-toggler {
@@ -139,6 +146,16 @@
   .navbar-nav .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
+
+  /* Mobile menu aperto: sfondo nero pieno + scrollabile per viewport bassi */
+  .navbar-custom .navbar-collapse.show,
+  .navbar-custom .navbar-collapse.collapsing {
+    background-color: #000000;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
 }
 
 /* Sopra 1250px mantieni il menu orizzontale */
@@ -244,25 +261,38 @@
   box-shadow: 0 10px 30px rgba(20, 157, 204, 0.3);
 }
 
-.servizi-link {
+/* High specificity + !important to win over any page-level `a` overrides
+   from home-sell.css / servizi-prestashop.css / gestionali-personalizzati.css,
+   which inherit text color from the body theme (often dark on dark). */
+.servizi-popup-overlay a.servizi-link,
+.servizi-popup-overlay .servizi-link {
   display: block;
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffffff !important;
+  text-decoration: none !important;
   padding: 0.75rem 1rem;
   margin: 0.5rem 0;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05) !important;
   transition: all 0.3s ease;
   font-size: 1rem;
-  border: 1px solid transparent;
+  border: 1px solid transparent !important;
+  font-family: inherit;
 }
 
-.servizi-link:hover {
-  background: #149dcc;
-  color: #000;
+.servizi-popup-overlay a.servizi-link:hover,
+.servizi-popup-overlay .servizi-link:hover {
+  background: #149dcc !important;
+  color: #000000 !important;
   transform: translateX(10px);
-  border-color: #149dcc;
+  border-color: #149dcc !important;
   box-shadow: 0 5px 15px rgba(20, 157, 204, 0.4);
+}
+
+/* Re-assert category titles too, in case a page's h3 styles bleed in */
+.servizi-popup-overlay .servizi-category h3 {
+  font-family: inherit;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 /* Animazioni */
@@ -302,5 +332,179 @@
     width: 40px;
     height: 40px;
     font-size: 1.5rem;
+  }
+}
+
+/* ========================================
+   MOBILE HAMBURGER UNIVERSALE
+   Iniettato da popup-loader.js. Visibile solo <720px.
+   Apre il popup Servizi. Funziona su tutte le 18 pagine
+   con design custom (Home, Servizi, SaaS Live) e qualunque
+   pagina che includa navbar-fix.css + popup-loader.js.
+   ======================================== */
+.aai-mobile-hamburger {
+  display: none;
+  position: fixed;
+  top: env(safe-area-inset-top, 0);
+  right: 12px;
+  z-index: 99998; /* sotto il popup overlay 99999, sopra tutto il resto */
+  margin-top: max(env(safe-area-inset-top, 0), 12px);
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  border-radius: 14px;
+  padding: 9px 12px 9px 11px;
+  width: 60px;
+  height: 48px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 3px 3px 0 #000000, 0 8px 24px rgba(0,0,0,0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.aai-mobile-hamburger:hover,
+.aai-mobile-hamburger:focus {
+  background: #149dcc !important;
+  color: #ffffff !important;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000000, 0 8px 24px rgba(20,157,204,0.35);
+  outline: none;
+}
+.aai-mobile-hamburger:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #000000;
+}
+.aai-mobile-hamburger__bar {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background: currentColor;
+  border-radius: 2px;
+  position: absolute;
+  left: 9px;
+  transition: transform 0.2s ease;
+}
+.aai-mobile-hamburger__bar:nth-child(1) { top: 14px; }
+.aai-mobile-hamburger__bar:nth-child(2) { top: 22px; }
+.aai-mobile-hamburger__bar:nth-child(3) { top: 30px; }
+.aai-mobile-hamburger__lbl {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'IBM Plex Mono', 'Menlo', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  .aai-mobile-hamburger {
+    display: flex;
+  }
+}
+
+/* nasconde l'hamburger quando il popup è già aperto */
+body.popup-open .aai-mobile-hamburger,
+.aai-mobile-hamburger[hidden] {
+  display: none !important;
+}
+
+/* su pagine con popup attivo (sia legacy .popup-menu.active sia nuovo .servizi-popup-overlay.active) */
+@media (max-width: 768px) {
+  .servizi-popup-overlay.active ~ .aai-mobile-hamburger,
+  body:has(.servizi-popup-overlay.active) .aai-mobile-hamburger {
+    display: none;
+  }
+}
+
+/* prefers-reduced-motion: disabilita transitions */
+@media (prefers-reduced-motion: reduce) {
+  .aai-mobile-hamburger,
+  .aai-mobile-hamburger__bar {
+    transition: none !important;
+  }
+}
+
+/* ========================================
+   NAVBAR MOBILE RESPONSIVE — UNIVERSALE
+   Override globale per le 18 pagine custom Sabri Suby + ogni altra.
+   Sotto 768px, invece di display:none sui nav__links, li rendiamo
+   un nastro orizzontale scrollabile sotto al brand. L'utente vede
+   SEMPRE i link essenziali della pagina senza dover aprire l'hamburger.
+   Funziona per qualsiasi prefisso (.hs-/.ps-/.gp-/.px-/.sm-/.mv-/
+   .io-/.an-/.ar-/.py-/.nj-/.rw-/.bt-/.cm-/.re-/.ho-/.be-/.ph- ...).
+   ======================================== */
+@media (max-width: 768px) {
+  /* Lo wrapper nav diventa verticale: brand sopra, links sotto */
+  .hs-nav, .ps-nav, .gp-nav, .px-nav, .sm-nav, .mv-nav,
+  .io-nav, .an-nav, .ar-nav, .py-nav, .nj-nav, .rw-nav,
+  .bt-nav, .cm-nav, .re-nav, .ho-nav, .be-nav, .ph-nav {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.6rem !important;
+    padding-block: 0.9rem !important;
+  }
+
+  /* Brand: header row con la prima riga (mantiene size) */
+  .hs-nav__brand, .ps-nav__brand, .gp-nav__brand, .px-nav__brand,
+  .sm-nav__brand, .mv-nav__brand, .io-nav__brand, .an-nav__brand,
+  .ar-nav__brand, .py-nav__brand, .nj-nav__brand, .rw-nav__brand,
+  .bt-nav__brand, .cm-nav__brand, .re-nav__brand, .ho-nav__brand,
+  .be-nav .be-nav-brand, .ph-nav__brand {
+    align-self: flex-start;
+  }
+
+  /* I link diventano un nastro orizzontale scroll touch */
+  .hs-nav__links, .ps-nav__links, .gp-nav__links, .px-nav__links,
+  .sm-nav__links, .mv-nav__links, .io-nav__links, .an-nav__links,
+  .ar-nav__links, .py-nav__links, .nj-nav__links, .rw-nav__links,
+  .bt-nav__links, .cm-nav__links, .re-nav__links, .ho-nav__links,
+  .be-nav-links, .ph-nav__links {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    width: 100% !important;
+    gap: 1.1rem !important;
+    padding: 0.4rem 0.1rem !important;
+    margin: 0 !important;
+    font-size: 0.78rem !important;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent 100%);
+            mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent 100%);
+  }
+  .hs-nav__links::-webkit-scrollbar, .ps-nav__links::-webkit-scrollbar,
+  .gp-nav__links::-webkit-scrollbar, .px-nav__links::-webkit-scrollbar,
+  .sm-nav__links::-webkit-scrollbar, .mv-nav__links::-webkit-scrollbar,
+  .io-nav__links::-webkit-scrollbar, .an-nav__links::-webkit-scrollbar,
+  .ar-nav__links::-webkit-scrollbar, .py-nav__links::-webkit-scrollbar,
+  .nj-nav__links::-webkit-scrollbar, .rw-nav__links::-webkit-scrollbar,
+  .bt-nav__links::-webkit-scrollbar, .cm-nav__links::-webkit-scrollbar,
+  .re-nav__links::-webkit-scrollbar, .ho-nav__links::-webkit-scrollbar,
+  .be-nav-links::-webkit-scrollbar, .ph-nav__links::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Singoli link: piccoli e leggibili, no wrap */
+  .hs-nav__links a, .ps-nav__links a, .gp-nav__links a, .px-nav__links a,
+  .sm-nav__links a, .mv-nav__links a, .io-nav__links a, .an-nav__links a,
+  .ar-nav__links a, .py-nav__links a, .nj-nav__links a, .rw-nav__links a,
+  .bt-nav__links a, .cm-nav__links a, .re-nav__links a, .ho-nav__links a,
+  .be-nav-links a, .ph-nav__links a {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding: 0.35rem 0 !important;
+  }
+
+  /* L'hamburger floating resta visibile come accelleratore al popup Servizi.
+     Posizionato leggermente più alto per non sovrapporsi al nav adesso più alto. */
+  .aai-mobile-hamburger {
+    top: 4px;
+    margin-top: max(env(safe-area-inset-top, 0), 6px);
   }
 }

@@ -1,0 +1,1204 @@
+/* ============================================================
+   sviluppo-python.css — "Scientific Lab Notebook + Python REPL"
+   7ª aesthetic del sito: Jupyter Notebook + Stripe Press +
+   carta da tesi accademica. Paper off-white, ink carbon,
+   accent Python blue + giallo Python (sparingly).
+   Tutte le classi prefisso `.py-`.
+   ============================================================ */
+
+:root {
+  --py-paper:        #FAFAF7;          /* lab notebook off-white */
+  --py-paper-warm:   #F0EDE4;          /* notebook beige */
+  --py-paper-card:   #FFFFFF;
+  --py-ink:          #1A1611;          /* carbon black */
+  --py-ink-soft:     rgba(26, 22, 17, 0.74);
+  --py-muted:        #807268;          /* warm gray */
+  --py-hair:         rgba(26, 22, 17, 0.12);
+
+  --py-blue:         #306998;          /* python logo blue */
+  --py-blue-deep:    #1F4E73;
+  --py-blue-soft:    rgba(48, 105, 152, 0.12);
+  --py-yellow:       #FFD43B;          /* python logo yellow — solo highlight critico */
+  --py-yellow-deep:  #E0B82B;
+  --py-code-bg:      #22293A;          /* dark navy per snippet code */
+  --py-code-ink:     #E6EDF3;
+  --py-green:        #4A8F4A;          /* terminal green per [OK] */
+  --py-red:          #B0413E;          /* error red */
+
+  --py-shadow-1:     0 1px 0 rgba(26,22,17,0.04), 0 2px 14px rgba(26,22,17,0.06);
+  --py-shadow-2:     0 18px 50px rgba(26,22,17,0.12);
+  --py-shadow-hard:  8px 8px 0 var(--py-ink);
+  --py-shadow-blue:  8px 8px 0 var(--py-blue);
+
+  --py-bleed:        clamp(1.25rem, 4vw, 4rem);
+  --py-max:          1280px;
+
+  --py-font-display: 'Yeseva One', 'Times New Roman', Georgia, serif;
+  --py-font-body:    'EB Garamond', 'Iowan Old Style', Georgia, serif;
+  --py-font-sans:    'Inter Tight', 'Helvetica Neue', sans-serif;
+  --py-font-mono:    'Fira Code', 'Menlo', 'Courier New', monospace;
+}
+
+/* ===== BASE ============================================== */
+.py-page {
+  background-color: var(--py-paper);
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='1' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 0.025 0'/></filter><rect width='220' height='220' filter='url(%23g)'/></svg>");
+  background-size: 220px 220px;
+  color: var(--py-ink);
+  font-family: var(--py-font-body);
+  font-size: 1.08rem;
+  line-height: 1.6;
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+html.dark-mode .py-page,
+.py-page.dark-mode {
+  background-color: var(--py-paper) !important;
+  color: var(--py-ink) !important;
+}
+
+.py-page * { box-sizing: border-box; }
+.py-page img, .py-page svg { max-width: 100%; height: auto; }
+.py-page a { color: inherit; text-decoration-color: var(--py-blue); text-underline-offset: 3px; }
+.py-page a:hover { color: var(--py-blue); }
+.py-page :focus-visible {
+  outline: 3px solid var(--py-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.py-page ::selection { background: var(--py-yellow); color: var(--py-ink); }
+
+.py-wrap { max-width: var(--py-max); margin-inline: auto; padding-inline: var(--py-bleed); position: relative; }
+.py-section { padding-block: clamp(3rem, 8vw, 7rem); position: relative; }
+
+/* ===== TYPOGRAPHY ======================================= */
+.py-eyebrow {
+  font-family: var(--py-font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--py-blue);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.py-eyebrow::before {
+  content: attr(data-chapter);
+  background: var(--py-blue);
+  color: var(--py-paper);
+  padding: 0.18rem 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+}
+
+.py-h1, .py-h2, .py-h3, .py-h4 {
+  font-family: var(--py-font-display);
+  font-weight: 400;
+  margin: 0;
+  color: var(--py-ink);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+}
+.py-h1 {
+  font-size: clamp(2.6rem, 7.2vw, 6.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.py-h2 {
+  font-size: clamp(1.95rem, 4.6vw, 3.8rem);
+  line-height: 1.06;
+}
+.py-h3 { font-size: clamp(1.35rem, 2.3vw, 1.85rem); line-height: 1.15; }
+.py-h4 { font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.2; }
+
+.py-h1 em, .py-h2 em, .py-h3 em {
+  font-family: var(--py-font-body);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--py-blue);
+}
+.py-h1 .py-blue, .py-h2 .py-blue { color: var(--py-blue); }
+.py-h1 .py-yellow-mark, .py-h2 .py-yellow-mark {
+  background-image: linear-gradient(180deg, transparent 55%, var(--py-yellow) 55%, var(--py-yellow) 88%, transparent 88%);
+  padding: 0 0.08em;
+}
+
+.py-underline {
+  background-image: linear-gradient(90deg, var(--py-blue) 0%, var(--py-blue) 100%);
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.14em;
+  padding-bottom: 0.04em;
+}
+
+.py-body-lg {
+  font-family: var(--py-font-body);
+  font-size: clamp(1.1rem, 1.35vw, 1.3rem);
+  line-height: 1.55;
+  color: var(--py-ink-soft);
+}
+.py-mono { font-family: var(--py-font-mono); letter-spacing: 0; }
+
+/* "Notebook / cell" stamp */
+.py-issue-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--py-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--py-muted);
+}
+.py-issue-mark::before {
+  content: "";
+  width: 24px; height: 1px; background: var(--py-muted);
+}
+
+/* ===== TOPBAR ========================================== */
+.py-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--py-paper);
+  border-bottom: 1px solid var(--py-ink);
+  font-family: var(--py-font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  color: var(--py-ink);
+}
+.py-topbar__inner {
+  max-width: var(--py-max);
+  margin-inline: auto;
+  padding: 0.55rem var(--py-bleed);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.py-topbar__brand .dot {
+  display: inline-block;
+  width: 9px; height: 9px;
+  background: var(--py-blue);
+  margin-right: 8px;
+  transform: translateY(-1px);
+}
+.py-topbar__center {
+  justify-self: center;
+  background: var(--py-ink);
+  color: var(--py-paper);
+  padding: 0.4rem 0.9rem;
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-weight: 500;
+}
+.py-topbar__center .dot-yellow {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--py-yellow);
+  border-radius: 50%;
+  animation: py-pulse 1.6s ease-in-out infinite;
+}
+@keyframes py-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.55; }
+}
+.py-topbar__right { justify-self: end; display: inline-flex; gap: 1.2rem; flex-wrap: wrap; }
+.py-topbar__right a { text-decoration: none; }
+.py-topbar__right a:hover { color: var(--py-blue); }
+
+@media (max-width: 820px) {
+  .py-topbar__inner { grid-template-columns: 1fr auto; }
+  .py-topbar__right { display: none; }
+}
+@media (max-width: 520px) {
+  .py-topbar__inner { grid-template-columns: 1fr; }
+  .py-topbar__brand { display: none; }
+  .py-topbar__center { justify-self: stretch; justify-content: center; }
+}
+
+/* ===== NAV ============================================= */
+.py-nav {
+  padding: 1.4rem var(--py-bleed);
+  max-width: var(--py-max);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.py-nav__brand {
+  font-family: var(--py-font-display);
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: var(--py-ink);
+  letter-spacing: -0.012em;
+}
+.py-nav__brand em {
+  font-family: var(--py-font-body);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--py-blue);
+}
+.py-nav__links {
+  display: inline-flex;
+  gap: 1.5rem;
+  font-family: var(--py-font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+}
+.py-nav__links a { text-decoration: none; }
+.py-nav__links a:hover { color: var(--py-blue); }
+@media (max-width: 720px) { .py-nav__links { display: none; } }
+
+/* ===== HERO ============================================ */
+.py-hero { padding-block: clamp(2.5rem, 6vw, 5rem); position: relative; }
+.py-hero__issue { margin-bottom: 1.4rem; }
+.py-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+}
+.py-hero__h1 .ln { display: block; opacity: 0; transform: translateY(36px); }
+.is-loaded .py-hero__h1 .ln { animation: py-line-up 0.85s cubic-bezier(.2,.7,.2,1) forwards; }
+.is-loaded .py-hero__h1 .ln:nth-child(1) { animation-delay: 0.04s; }
+.is-loaded .py-hero__h1 .ln:nth-child(2) { animation-delay: 0.16s; }
+.is-loaded .py-hero__h1 .ln:nth-child(3) { animation-delay: 0.28s; }
+.is-loaded .py-hero__h1 .ln:nth-child(4) { animation-delay: 0.40s; }
+@keyframes py-line-up { to { opacity: 1; transform: translateY(0); } }
+
+.py-hero__lede {
+  margin-top: 1.4rem;
+  max-width: 55ch;
+  font-family: var(--py-font-body);
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--py-ink-soft);
+}
+.py-hero__sub {
+  margin-top: 1rem;
+  max-width: 50ch;
+  font-family: var(--py-font-body);
+  font-size: clamp(1rem, 1.2vw, 1.18rem);
+  color: var(--py-ink-soft);
+  line-height: 1.55;
+}
+.py-hero__cta-row {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem 2.2rem;
+  align-items: center;
+}
+.py-hero__secondary {
+  font-family: var(--py-font-mono);
+  font-size: 0.88rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--py-ink);
+}
+.py-hero__secondary:hover { color: var(--py-blue); }
+
+/* Code card laterale — Jupyter cell aesthetic */
+.py-hero__code {
+  background: var(--py-code-bg);
+  color: var(--py-code-ink);
+  font-family: var(--py-font-mono);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  padding: 0;
+  border: 2px solid var(--py-ink);
+  position: relative;
+  align-self: end;
+  box-shadow: var(--py-shadow-hard);
+}
+.py-hero__code::before {
+  content: "In [1]:";
+  position: absolute;
+  top: -1.1rem;
+  left: 0.6rem;
+  background: var(--py-yellow);
+  color: var(--py-ink);
+  font-family: var(--py-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem;
+}
+.py-hero__code-bar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.py-hero__code-bar span {
+  width: 11px; height: 11px; border-radius: 50%;
+}
+.py-hero__code-bar span:nth-child(1) { background: #FF5F56; }
+.py-hero__code-bar span:nth-child(2) { background: var(--py-yellow); }
+.py-hero__code-bar span:nth-child(3) { background: var(--py-green); }
+.py-hero__code-bar small {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: rgba(230,237,243,0.55);
+  letter-spacing: 0.05em;
+}
+.py-hero__code pre {
+  margin: 0;
+  padding: 1.1rem 1.2rem 1.3rem;
+  white-space: pre;
+  overflow-x: auto;
+  font-family: var(--py-font-mono);
+}
+.py-tok-kw   { color: #C586C0; }
+.py-tok-fn   { color: var(--py-yellow); }
+.py-tok-str  { color: #CE9178; }
+.py-tok-num  { color: #B5CEA8; }
+.py-tok-cmt  { color: #6A9955; font-style: italic; }
+.py-tok-cls  { color: #4EC9B0; }
+.py-tok-out  { color: var(--py-green); }
+.py-tok-prompt { color: var(--py-yellow); }
+
+@media (max-width: 820px) {
+  .py-hero__grid { grid-template-columns: 1fr; }
+}
+
+/* ===== CTA ============================================== */
+.py-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--py-blue);
+  color: var(--py-paper);
+  padding: 1.05rem 1.7rem;
+  border: 2px solid var(--py-ink);
+  font-family: var(--py-font-mono);
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  text-decoration: none;
+  border-radius: 0;
+  box-shadow: var(--py-shadow-hard);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+  cursor: pointer;
+}
+.py-cta:hover {
+  background: var(--py-ink);
+  color: var(--py-yellow);
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0 var(--py-blue);
+}
+.py-cta:active { transform: translate(4px, 4px); box-shadow: 2px 2px 0 var(--py-ink); }
+.py-cta__arrow { display: inline-block; transition: transform 0.18s ease; }
+.py-cta:hover .py-cta__arrow { transform: translateX(4px); }
+.py-cta--ghost { background: transparent; color: var(--py-ink); }
+.py-cta--ghost:hover { background: var(--py-ink); color: var(--py-yellow); }
+.py-cta--yellow {
+  background: var(--py-yellow); color: var(--py-ink);
+  box-shadow: 8px 8px 0 var(--py-ink);
+}
+.py-cta--yellow:hover { background: var(--py-ink); color: var(--py-yellow); box-shadow: 11px 11px 0 var(--py-blue); }
+.py-cta--xl { font-size: 0.98rem; padding: 1.3rem 2.2rem; }
+
+/* ===== FILTER (Dream Buyer) ============================ */
+.py-filter { background: var(--py-paper-warm); border-block: 1px solid var(--py-ink); }
+.py-filter__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-top: 2rem;
+}
+.py-filter__col {
+  padding: clamp(1.4rem, 2vw, 2rem);
+  background: var(--py-paper-card);
+  border: 2px solid var(--py-ink);
+  box-shadow: var(--py-shadow-1);
+  position: relative;
+}
+.py-filter__col h3 {
+  font-family: var(--py-font-display);
+  font-size: 1.85rem;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.05;
+}
+.py-filter__col h3 em { font-family: var(--py-font-body); font-style: italic; font-weight: 500; }
+.py-filter__col--yes h3 em { color: var(--py-blue); }
+.py-filter__col--no h3 em { color: var(--py-muted); text-decoration: line-through; }
+.py-filter__col--yes::before,
+.py-filter__col--no::before {
+  position: absolute;
+  top: -14px;
+  left: 1rem;
+  padding: 0.22rem 0.7rem;
+  font-family: var(--py-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.py-filter__col--yes::before { content: ">>> RUN ME"; background: var(--py-blue); color: var(--py-paper); }
+.py-filter__col--no::before { content: "# skip"; background: var(--py-ink); color: var(--py-paper); }
+.py-filter__col ul { padding: 0; margin: 0; list-style: none; }
+.py-filter__col li {
+  padding: 0.7rem 0 0.7rem 1.6rem;
+  border-bottom: 1px dashed var(--py-hair);
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+}
+.py-filter__col li:last-child { border-bottom: none; }
+.py-filter__col--yes li::before {
+  content: ">>>";
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  font-family: var(--py-font-mono);
+  color: var(--py-blue);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.py-filter__col--no li::before {
+  content: "#";
+  position: absolute;
+  left: 0.2rem;
+  top: 0.7rem;
+  font-family: var(--py-font-mono);
+  color: var(--py-muted);
+  font-size: 1rem;
+}
+@media (max-width: 740px) { .py-filter__grid { grid-template-columns: 1fr; } }
+
+/* ===== PAS (Mistakes) ================================= */
+.py-pas { }
+.py-pas__list {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+  display: grid;
+  gap: 1.2rem;
+}
+.py-pas__item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  padding: 1.6rem 1.7rem;
+  background: var(--py-paper-card);
+  border: 1px solid var(--py-ink);
+  border-left: 6px solid var(--py-red);
+  box-shadow: var(--py-shadow-1);
+  align-items: start;
+}
+.py-pas__item .num {
+  font-family: var(--py-font-mono);
+  font-size: 2.4rem;
+  color: var(--py-red);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.py-pas__item h4 {
+  font-family: var(--py-font-display);
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.15;
+}
+.py-pas__item p {
+  margin: 0;
+  font-family: var(--py-font-body);
+  font-size: 1.04rem;
+  line-height: 1.55;
+  color: var(--py-ink-soft);
+}
+.py-pas__kicker {
+  margin: 2.5rem 0 0;
+  font-family: var(--py-font-display);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.15;
+  color: var(--py-ink);
+  max-width: 32ch;
+}
+.py-pas__kicker em { font-family: var(--py-font-body); font-style: italic; color: var(--py-blue); font-weight: 500; }
+@media (max-width: 620px) {
+  .py-pas__item { grid-template-columns: 1fr; gap: 0.4rem; }
+  .py-pas__item .num { font-size: 1.8rem; }
+}
+
+/* ===== BIG IDEA (Decision tree) ======================= */
+.py-bigidea { background: var(--py-paper-warm); border-block: 1px solid var(--py-ink); }
+.py-bigidea__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+.py-bigidea__cell {
+  background: var(--py-paper-card);
+  border: 2px solid var(--py-ink);
+  padding: 1.4rem 1.3rem 1.5rem;
+  box-shadow: var(--py-shadow-1);
+  position: relative;
+}
+.py-bigidea__cell::before {
+  content: attr(data-tag);
+  position: absolute;
+  top: -12px;
+  left: 1rem;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--py-font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--py-blue);
+  color: var(--py-paper);
+}
+.py-bigidea__cell h4 {
+  font-family: var(--py-font-display);
+  font-size: 1.3rem;
+  margin: 0.4rem 0 0.6rem;
+  line-height: 1.1;
+}
+.py-bigidea__cell p {
+  margin: 0;
+  font-family: var(--py-font-body);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--py-ink-soft);
+}
+.py-bigidea__cell .when {
+  display: block;
+  margin-top: 0.8rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--py-hair);
+  font-family: var(--py-font-mono);
+  font-size: 0.78rem;
+  color: var(--py-blue);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 940px) { .py-bigidea__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .py-bigidea__grid { grid-template-columns: 1fr; } }
+
+/* ===== PROOF (case studies) ========================== */
+.py-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 2.5rem;
+}
+.py-proof__card {
+  background: var(--py-paper-card);
+  border: 2px solid var(--py-ink);
+  box-shadow: var(--py-shadow-1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.py-proof__card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0 var(--py-blue);
+}
+.py-proof__head {
+  font-family: var(--py-font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--py-ink);
+  color: var(--py-paper);
+  padding: 0.55rem 1rem;
+}
+.py-proof__head .ok {
+  display: inline-block;
+  background: var(--py-green);
+  color: var(--py-paper);
+  padding: 0 0.4rem;
+  margin-right: 0.4rem;
+  font-weight: 600;
+}
+.py-proof__figure {
+  background: var(--py-paper-warm);
+  padding: 1.2rem 1.4rem 0.4rem;
+  text-align: center;
+}
+.py-proof__figure img {
+  width: 100%; max-width: 220px;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid var(--py-ink);
+}
+.py-proof__body { padding: 1.2rem 1.4rem 1.5rem; }
+.py-proof__title {
+  font-family: var(--py-font-display);
+  font-size: 1.3rem;
+  margin: 0 0 0.7rem 0;
+  line-height: 1.15;
+}
+.py-proof__metric {
+  font-family: var(--py-font-display);
+  font-size: 2.4rem;
+  color: var(--py-blue);
+  margin: 0.2rem 0 0.5rem;
+  line-height: 1;
+}
+.py-proof__metric em {
+  font-family: var(--py-font-body);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--py-ink-soft);
+}
+.py-proof__quote {
+  margin: 0.6rem 0 1rem;
+  font-family: var(--py-font-body);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--py-ink-soft);
+  line-height: 1.5;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--py-yellow);
+}
+.py-proof__signature {
+  font-family: var(--py-font-mono);
+  font-size: 0.82rem;
+  color: var(--py-blue);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--py-blue);
+}
+.py-proof__signature:hover { color: var(--py-ink); border-bottom-color: var(--py-ink); }
+@media (max-width: 940px) { .py-proof__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .py-proof__grid { grid-template-columns: 1fr; } }
+
+/* ===== OFFER ========================================== */
+.py-offer { }
+.py-offer__card {
+  margin-top: 2.5rem;
+  background: var(--py-paper-card);
+  border: 2px solid var(--py-ink);
+  padding: clamp(1.6rem, 3.5vw, 3rem);
+  box-shadow: var(--py-shadow-2);
+  position: relative;
+}
+.py-offer__card::before {
+  content: "// pacchetto.py";
+  position: absolute;
+  top: -14px;
+  left: 1.5rem;
+  padding: 0.25rem 0.8rem;
+  background: var(--py-yellow);
+  color: var(--py-ink);
+  font-family: var(--py-font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.py-offer__stack {
+  list-style: none;
+  padding: 0;
+  margin: 1.6rem 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+.py-offer__stack li {
+  padding: 0.85rem 1rem 0.85rem 2.2rem;
+  background: var(--py-paper);
+  border: 1px solid var(--py-hair);
+  position: relative;
+  font-family: var(--py-font-body);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+.py-offer__stack li::before {
+  content: "[OK]";
+  position: absolute;
+  left: 0.7rem;
+  top: 0.85rem;
+  font-family: var(--py-font-mono);
+  font-size: 0.74rem;
+  color: var(--py-green);
+  font-weight: 600;
+}
+.py-offer__stack li.bonus {
+  background: var(--py-blue-soft);
+  border-color: var(--py-blue);
+}
+.py-offer__stack li.bonus::before {
+  content: "+";
+  color: var(--py-blue);
+  font-size: 1.1rem;
+  top: 0.65rem;
+}
+.py-offer__bonus-tag {
+  display: inline-block;
+  background: var(--py-blue);
+  color: var(--py-paper);
+  font-family: var(--py-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.py-offer__keep {
+  font-family: var(--py-font-mono);
+  font-size: 0.78rem;
+  color: var(--py-blue);
+  letter-spacing: 0.02em;
+}
+.py-offer__bundle {
+  margin-top: 2rem;
+  padding: 1.5rem 1.5rem;
+  background: var(--py-ink);
+  color: var(--py-paper);
+  border: 2px solid var(--py-ink);
+  text-align: center;
+}
+.py-offer__bundle-lbl {
+  font-family: var(--py-font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(250,250,247,0.7);
+}
+.py-offer__bundle-lbl .yellow { color: var(--py-yellow); font-weight: 600; }
+.py-offer__bundle-val {
+  font-family: var(--py-font-display);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin-top: 0.4rem;
+  color: var(--py-paper);
+}
+.py-offer__cta-wrap {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.8rem;
+  align-items: center;
+}
+.py-offer__scarcity {
+  font-family: var(--py-font-mono);
+  font-size: 0.82rem;
+  color: var(--py-ink-soft);
+  letter-spacing: 0.02em;
+}
+
+/* ===== GUARANTEE ===================================== */
+.py-guarantee__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+.py-guarantee__card {
+  background: var(--py-paper-card);
+  border: 2px solid var(--py-ink);
+  padding: 1.6rem 1.4rem 1.7rem;
+  text-align: center;
+  box-shadow: var(--py-shadow-1);
+  position: relative;
+}
+.py-guarantee__seal {
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+  filter: grayscale(1) contrast(1.2);
+}
+.py-guarantee__title {
+  font-family: var(--py-font-display);
+  font-size: 1.35rem;
+  margin: 0 0 0.7rem 0;
+  line-height: 1.15;
+}
+.py-guarantee__copy {
+  margin: 0;
+  font-family: var(--py-font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--py-ink-soft);
+}
+@media (max-width: 820px) { .py-guarantee__grid { grid-template-columns: 1fr; } }
+
+/* ===== FAQ =========================================== */
+.py-faq__list {
+  margin-top: 2rem;
+  border-top: 1px solid var(--py-ink);
+}
+.py-faq__list details {
+  border-bottom: 1px solid var(--py-hair);
+  padding: 1.2rem 0.2rem;
+  cursor: pointer;
+}
+.py-faq__list summary {
+  list-style: none;
+  font-family: var(--py-font-display);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  cursor: pointer;
+  position: relative;
+  padding-right: 2.2rem;
+  line-height: 1.25;
+  color: var(--py-ink);
+}
+.py-faq__list summary::-webkit-details-marker { display: none; }
+.py-faq__list summary::after {
+  content: ">>>";
+  position: absolute;
+  right: 0;
+  top: 0.1rem;
+  font-family: var(--py-font-mono);
+  color: var(--py-blue);
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+}
+.py-faq__list details[open] summary::after { transform: rotate(90deg); color: var(--py-yellow-deep); }
+.py-faq__answer {
+  margin: 0.9rem 0 0.4rem;
+  font-family: var(--py-font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--py-ink-soft);
+  max-width: 65ch;
+}
+.py-faq__answer a { color: var(--py-blue); }
+
+/* ===== BRIEF FORM (Lead magnet) ====================== */
+.py-brief { background: var(--py-paper-warm); border-block: 1px solid var(--py-ink); }
+.py-brief__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: 2rem;
+  align-items: start;
+}
+.py-brief__pitch p { font-family: var(--py-font-body); font-size: 1.1rem; line-height: 1.55; color: var(--py-ink-soft); }
+.py-brief__pitch p strong { color: var(--py-ink); }
+.py-brief__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.py-brief__bullets li {
+  padding: 0.6rem 0 0.6rem 1.6rem;
+  font-family: var(--py-font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  border-bottom: 1px dashed var(--py-hair);
+}
+.py-brief__bullets li::before {
+  content: ">>>";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  font-family: var(--py-font-mono);
+  color: var(--py-blue);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+.py-brief__form {
+  background: var(--py-paper-card);
+  border: 2px solid var(--py-ink);
+  padding: clamp(1.4rem, 2.5vw, 2rem);
+  box-shadow: var(--py-shadow-hard);
+}
+.py-brief__progress {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.4rem;
+}
+.py-brief__progress span {
+  flex: 1;
+  height: 6px;
+  background: var(--py-hair);
+  border-radius: 0;
+}
+.py-brief__progress span.done { background: var(--py-blue); }
+
+.py-brief__step {
+  display: none;
+}
+.py-brief__step.active { display: block; }
+.py-brief__hint {
+  font-family: var(--py-font-mono);
+  font-size: 0.74rem;
+  color: var(--py-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.py-brief__step legend {
+  font-family: var(--py-font-display);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  padding: 0;
+  color: var(--py-ink);
+}
+.py-brief__options {
+  display: grid;
+  gap: 0.55rem;
+}
+.py-brief__option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid var(--py-hair);
+  background: var(--py-paper);
+  cursor: pointer;
+  font-family: var(--py-font-body);
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.py-brief__option:hover { border-color: var(--py-blue); }
+.py-brief__option input { margin-top: 0.25rem; accent-color: var(--py-blue); }
+.py-brief__option input:checked + span { font-weight: 600; }
+.py-brief__option:has(input:checked) {
+  border-color: var(--py-blue);
+  background: var(--py-blue-soft);
+}
+.py-brief__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 620px) { .py-brief__row { grid-template-columns: 1fr; } }
+.py-brief__field { display: flex; flex-direction: column; gap: 0.35rem; }
+.py-brief__field label {
+  font-family: var(--py-font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--py-muted);
+}
+.py-brief__field input, .py-brief__field textarea {
+  font-family: var(--py-font-body);
+  font-size: 1rem;
+  padding: 0.7rem 0.85rem;
+  background: var(--py-paper);
+  border: 1.5px solid var(--py-hair);
+  color: var(--py-ink);
+  border-radius: 0;
+  width: 100%;
+}
+.py-brief__field input:focus, .py-brief__field textarea:focus {
+  outline: none;
+  border-color: var(--py-blue);
+}
+.py-brief__field textarea { min-height: 100px; resize: vertical; font-family: var(--py-font-body); }
+.py-brief__nav {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.py-brief__nav button {
+  font-family: var(--py-font-mono);
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid var(--py-ink);
+  background: var(--py-paper);
+  color: var(--py-ink);
+  cursor: pointer;
+  text-transform: lowercase;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.py-brief__nav button:hover { background: var(--py-ink); color: var(--py-yellow); }
+.py-brief__nav button:disabled { opacity: 0.4; cursor: not-allowed; }
+.py-brief__nav .py-brief__next {
+  background: var(--py-blue);
+  color: var(--py-paper);
+}
+.py-brief__nav .py-brief__next:hover { background: var(--py-ink); color: var(--py-yellow); }
+.py-brief__success {
+  margin-top: 1.2rem;
+  font-family: var(--py-font-body);
+  font-size: 1.04rem;
+  line-height: 1.55;
+  padding: 0.9rem 1.2rem;
+  border: 1.5px solid var(--py-hair);
+  background: var(--py-paper);
+  display: none;
+}
+.py-brief__success.visible { display: block; }
+.py-brief__success.ok { border-color: var(--py-blue); background: var(--py-blue-soft); }
+.py-brief__success.err { border-color: var(--py-red); background: rgba(176,65,62,0.08); color: var(--py-red); }
+
+@media (max-width: 820px) { .py-brief__layout { grid-template-columns: 1fr; } }
+
+/* ===== FINAL CTA ===================================== */
+.py-final { background: var(--py-ink); color: var(--py-paper); }
+.py-final .py-h2 { color: var(--py-paper); }
+.py-final .py-h2 em { color: var(--py-yellow); }
+.py-final .py-eyebrow { color: var(--py-yellow); }
+.py-final .py-eyebrow::before { background: var(--py-yellow); color: var(--py-ink); }
+.py-final__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.py-final__card {
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(250,250,247,0.18);
+  padding: 1.8rem 1.7rem;
+  position: relative;
+}
+.py-final__card-eyebrow {
+  font-family: var(--py-font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--py-yellow);
+}
+.py-final__card-title {
+  font-family: var(--py-font-display);
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  margin: 0.5rem 0 0.8rem 0;
+  line-height: 1.15;
+  color: var(--py-paper);
+}
+.py-final__card-copy {
+  margin: 0 0 1.3rem;
+  font-family: var(--py-font-body);
+  font-size: 1.04rem;
+  line-height: 1.55;
+  color: rgba(250,250,247,0.78);
+}
+.py-final__card .py-cta {
+  background: var(--py-yellow);
+  color: var(--py-ink);
+  border-color: var(--py-yellow);
+  box-shadow: 6px 6px 0 var(--py-blue);
+}
+.py-final__card .py-cta:hover {
+  background: var(--py-paper);
+  color: var(--py-ink);
+  box-shadow: 9px 9px 0 var(--py-blue);
+}
+.py-final__card .py-cta--ghost {
+  background: transparent;
+  color: var(--py-paper);
+  border-color: var(--py-paper);
+  box-shadow: 6px 6px 0 var(--py-yellow);
+}
+.py-final__card .py-cta--ghost:hover {
+  background: var(--py-paper);
+  color: var(--py-ink);
+}
+@media (max-width: 720px) { .py-final__grid { grid-template-columns: 1fr; } }
+
+/* ===== TOPIC CLUSTER ================================ */
+.py-cluster {
+  background: var(--py-paper-warm);
+  border-top: 1px solid var(--py-ink);
+}
+.py-cluster__grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.py-cluster__card {
+  padding: 1rem 1.15rem 1.15rem;
+  border: 1px solid var(--py-ink);
+  background: var(--py-paper-card);
+  text-decoration: none;
+  color: var(--py-ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.py-cluster__card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--py-blue);
+  color: var(--py-ink);
+}
+.py-cluster__num {
+  font-family: var(--py-font-mono);
+  font-size: 0.7rem;
+  color: var(--py-blue);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.py-cluster__title {
+  font-family: var(--py-font-display);
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  line-height: 1.15;
+}
+.py-cluster__desc {
+  font-family: var(--py-font-body);
+  font-size: 0.95rem;
+  color: var(--py-ink-soft);
+  margin: 0.5rem 0 0;
+  line-height: 1.45;
+}
+@media (max-width: 940px) { .py-cluster__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .py-cluster__grid { grid-template-columns: 1fr; } }
+
+/* ===== FOOTER ======================================== */
+.py-foot {
+  background: var(--py-paper);
+  border-top: 1px solid var(--py-ink);
+  padding: 1.6rem var(--py-bleed);
+  font-family: var(--py-font-mono);
+  font-size: 0.78rem;
+  color: var(--py-ink-soft);
+}
+.py-foot__inner {
+  max-width: var(--py-max);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+.py-foot__links { display: inline-flex; flex-wrap: wrap; gap: 0.9rem 1.4rem; }
+.py-foot__links a { text-decoration: none; color: var(--py-ink-soft); }
+.py-foot__links a:hover { color: var(--py-blue); }
+
+/* ===== REVEAL ANIMATIONS ============================= */
+.py-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.py-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .py-reveal { opacity: 1; transform: none; transition: none; }
+  .is-loaded .py-hero__h1 .ln { animation: none; opacity: 1; transform: none; }
+}
+
+/* ===== ASCII DIAGRAM (Method) ======================== */
+.py-flow {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.4rem;
+  background: var(--py-code-bg);
+  color: var(--py-code-ink);
+  border: 2px solid var(--py-ink);
+  box-shadow: var(--py-shadow-hard);
+  overflow-x: auto;
+  font-family: var(--py-font-mono);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+.py-flow pre { margin: 0; white-space: pre; }
+.py-flow .arrow { color: var(--py-yellow); }
+.py-flow .label { color: var(--py-green); }
+.py-flow .out   { color: #4EC9B0; }

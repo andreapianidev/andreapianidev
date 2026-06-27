@@ -965,8 +965,7 @@
             <h2 class="text-center mb-4"><strong>Richiedi Scansione SEO PrestaShop</strong></h2>
             <p class="text-center mb-4">Compila il form e ti ricontatto entro 24 ore per iniziare l'audit</p>
 
-            <form action="https://formspree.io/f/mpwyyknb" method="POST">
-              <input type="hidden" name="_subject" value="🔍 Richiesta Scansione SEO PrestaShop">
+            <form id="scansione-seo-form">
               <div class="mb-3">
                 <label class="form-label" style="color: #fff; font-weight: 500;">Nome e Cognome *</label>
                 <input type="text" class="form-control" name="nome" required style="background: #0a0a0a; border-color: #333; color: #fff;">
@@ -1023,6 +1022,46 @@
                 Dopo l'invio ti ricontatto entro 24h per confermare dettagli e accessi. Pagamento dopo conferma.
               </p>
             </form>
+            <script>
+              // Invio form via WhatsApp (nessun servizio esterno)
+              (function () {
+                const form = document.getElementById('scansione-seo-form');
+                if (!form) return;
+                const FIELD_LABELS = {
+                  nome: 'Nome e Cognome',
+                  email: 'Email',
+                  telefono: 'Telefono / WhatsApp',
+                  url_shop: 'URL Shop PrestaShop',
+                  versione: 'Versione PrestaShop',
+                  num_prodotti: 'Numero prodotti',
+                  problemi: 'Problemi SEO notati'
+                };
+                form.addEventListener('submit', function (e) {
+                  e.preventDefault();
+                  if (!form.checkValidity()) { form.reportValidity(); return; }
+
+                  const fd = new FormData(form);
+                  const seen = {};
+                  fd.forEach((value, key) => {
+                    if (key.charAt(0) === '_') return;
+                    const v = (value || '').toString().trim();
+                    if (!v) return;
+                    if (seen[key]) seen[key].push(v); else seen[key] = [v];
+                  });
+
+                  let msg = 'Ciao Andrea! Ho compilato il form per una scansione SEO PrestaShop sul sito.\n\n';
+                  Object.keys(seen).forEach(key => {
+                    const label = FIELD_LABELS[key] || key.replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                    msg += '• ' + label + ': ' + seen[key].join(', ') + '\n';
+                  });
+
+                  window.open('https://wa.me/393516248936?text=' + encodeURIComponent(msg), '_blank');
+
+                  if (window.AppUtils) window.AppUtils.trackEvent('Form', 'Submit', 'Scansione SEO');
+                  if (window.Toast) window.Toast.success('Ti sto aprendo WhatsApp per inviarmi la richiesta', 'Grazie!');
+                });
+              })();
+            </script>
           </div>
         </div>
       </div>
@@ -1099,7 +1138,6 @@
         </div>
         <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc;">
           <strong style="color: #fff;">Andrea Piani</strong> - Sviluppatore iOS/Android/Web Freelance<br>
-          Italia: Piazza della Repubblica, 19 20124 Milano (MI) - Spagna: Camino El Pinar 106 Tjiarafe, 38780 Santa Cruz De Tenerife<br>
           Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc; text-decoration: none;">andreapiani.dev@gmail.com</a> |
           Tel: <a href="tel:+393516248936" style="color: #149dcc; text-decoration: none;">+39 351 624 8936</a>
           <br><br>© 2026 Andrea Piani. Tutti i diritti riservati.
@@ -1124,34 +1162,8 @@
   <script src="utilities.js"></script>
   <script src="performance.js"></script>
 
-  <script>
-    document.querySelectorAll('form[action*="formspree"]').forEach(form => {
-      form.addEventListener('submit', function(e) {
-        const btn = this.querySelector('button[type="submit"]');
-        if (btn && window.AppUtils) {
-          window.AppUtils.setButtonLoading(btn, true);
-        }
-
-        if (window.AppUtils) {
-          window.AppUtils.trackEvent('Form', 'Submit', 'SEO Audit Request');
-        }
-
-        setTimeout(() => {
-          if (btn && window.AppUtils) {
-            window.AppUtils.setButtonLoading(btn, false);
-          }
-          if (window.Toast) {
-            window.Toast.success('Richiesta inviata! Ti ricontatto entro 24h', 'Grazie!');
-          }
-        }, 1000);
-      });
-    });
-  </script>
-
   <script src="assets/js/popup-loader.js"></script>
 <!-- Andrea AI Chat Widget -->
-<script src="assets/js/chat-backend.js" defer data-aai-backend="1"></script>
-<script src="assets/js/chat-widget.js" defer data-aai-js="1"></script>
-<script src="assets/js/analytics.js" defer data-aai-analytics="1"></script>
+  <script src="whatsapp-float.js" defer></script>
 </body>
 </html>

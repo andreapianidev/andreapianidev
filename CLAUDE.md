@@ -20,17 +20,15 @@ This is a **static HTML/CSS/JavaScript portfolio website** for Andrea Piani, a f
 ```
 andreapiani.com/                          ← workspace di sviluppo
 │
-├── sito-web/                             ← TUTTO ciò che va sul server PHP (andreapiani.com)
-│   │                                       Quando deployi: carichi l'INTERO contenuto
-│   │                                       di questa cartella sul server (in root web).
+├── sito-web/                             ← ROOT DEPLOY VERCEL (static, progetto `andreapiani`)
+│   │                                       Quando deployi: `cd sito-web && vercel --prod --yes`
 │   │
 │   ├── index.html, indexen.html, ...    Pagine HTML (38+ files)
-│   ├── chat-widget.html, popup-menu.html, navbar-template.html, footer-gdpr.html  Frammenti
+│   ├── popup-menu.html, navbar-template.html, footer-gdpr.html  Frammenti
+│   ├── whatsapp-float.js                Pulsante WhatsApp flottante globale (iniettato in tutte le pagine)
+│   ├── app-ads.txt                      Autorizzazione AdMob (pub-1193280742171051)
 │   ├── assets/                          Bootstrap, theme, css, js, images, web/assets
-│   ├── lib/                             PHP helpers (config, storage, auth, csrf, ratelimit, util, setup)
-│   ├── api/                             Endpoints (start-session, log-message, log-event, submit-phone, stats/, cron/)
-│   ├── admin/                           PHP admin panel (login, sessions, contacts, reminders, export, settings)
-│   ├── data/                            JSON storage (web-blocked via own .htaccess)
+│   ├── [RIMOSSO 2026-06-27] lib/ api/ admin/ data/ setup-web.php   ← backend PHP eliminato (non gira su Vercel)
 │   ├── pyprestascanimages/              Immagini di prodotto
 │   ├── *.png                            Screenshots prodotti (autoclicker, bcs, talky, ecc.)
 │   ├── animations.{css,js}, dark-mode.{css,js}, utilities.{css,js},
@@ -51,8 +49,37 @@ andreapiani.com/                          ← workspace di sviluppo
 └── .gitignore
 ```
 
-**Workflow di deploy:**
-- Carica TUTTO il contenuto di `sito-web/` sul server `andreapiani.com` (FTP/cPanel). Sostituisci i file esistenti. Niente altri deploy o servizi.
+**Workflow di deploy (AGGIORNATO 2026-06-27 — il sito è su VERCEL, non più OVH):**
+
+Il sito è migrato da OVH a **Vercel** (static hosting). Il backend PHP **non gira più** (Vercel non esegue PHP) — il sito è servito come puro static da `sito-web/`. Vedi sotto "Backend PHP" per le implicazioni.
+
+- **Cosa caricare:** SOLO il contenuto di `sito-web/`. È questa cartella la root del deploy (link Vercel in `sito-web/.vercel/project.json`).
+- **Progetto Vercel associato:** `andreapiani`
+  - Project ID: `prj_USlVh3XlJ7niE8hgJVs2kJzQRJue`
+  - Org/Team: `andrea-pianis-projects` (orgId `team_RzxBtLZwwUK4Em4UTauWKI7K`)
+  - Dashboard: https://vercel.com/andrea-pianis-projects/andreapiani
+  - ⚠️ Il file `sito-web/.vercel/project.json` ha `projectName:"sito-web"` ma è un'etichetta VECCHIA: il progetto è stato rinominato `andreapiani`. La CLI usa il `projectId`, quindi il link è corretto — non farti ingannare dal nome.
+- **Comando deploy** (dalla cartella `sito-web/`):
+  ```sh
+  cd sito-web && vercel --prod --yes
+  ```
+  Pubblica tutto e aggiorna l'alias `www.andreapiani.com`. Deploy via CLI, NON c'è auto-deploy da git.
+- **🔴 REGOLA FISSA (richiesta dall'utente 2026-06-27): dopo OGNI modifica al sito si fa SEMPRE, senza chiedere, in quest'ordine:**
+  1. `git add -A && git commit` (con messaggio sensato, co-author Claude)
+  2. `git push` su GitHub (`origin main` → andreapianidev/andreapianidev)
+  3. `cd sito-web && vercel --prod --yes` (deploy produzione)
+
+  Non lasciare mai modifiche solo in locale: commit + push + deploy sono parte integrante di ogni intervento.
+- **Dominio e DNS:** `andreapiani.com` + `www` → progetto `andreapiani`. DNS gestito su OVH (nameserver `ns111/dns111.ovh.net`), record `A → 76.76.21.21` (Vercel). L'apex fa 308 → `https://www.andreapiani.com` (canonico www).
+- **SSL:** certificato Let's Encrypt gestito e auto-rinnovato da Vercel.
+  - ⚠️ LEZIONE (giu 2026): l'SSL restava bloccato perché in zona DNS OVH c'erano due record **AAAA (IPv6)** verso il vecchio server OVH (`2001:41d0:301:11::23`). Let's Encrypt validava su IPv6 → colpiva OVH → emissione fallita. Fix: **rimuovere i record AAAA** su OVH (lasciare solo A → Vercel), poi `vercel certs issue andreapiani.com www.andreapiani.com --scope andrea-pianis-projects`. Se un cert non esce dopo che il DNS punta a Vercel, sospetta SEMPRE un AAAA stale.
+- **Email:** resta su OVH (MX `mx*.mail.ovh.net`, SPF `include:mx.ovh.com`). NON spostare i nameserver a Vercel senza prima ricreare MX+SPF, altrimenti la posta si rompe.
+
+**Backend PHP (RIMOSSO 2026-06-27):** le cartelle `api/`, `admin/`, `lib/`, `data/` e `setup-web.php` sono state **eliminate** da locale e dal sito (non giravano su Vercel). Chat widget / form / pannello admin / bot AI lato server NON esistono più. Recuperabili dalla storia git se mai servissero, ma andrebbero comunque riscritti come serverless functions (Vercel Functions). Residui innocui: `.htaccess` (ignorato da Vercel, contiene ancora `SetEnv AAI_*` morti) e `../.aai-credentials.json` (gitignored, segreti ormai inutili — si può cancellare).
+
+**Componenti globali iniettati su tutte le pagine:**
+- `whatsapp-float.js` — pulsante WhatsApp flottante fisso in basso a destra (numero `393516248936`, `wa.me`), self-contained (inietta stile + bottone, anti-doppione). Caricato via `<script src="whatsapp-float.js" defer>` prima di `</body>` su tutte le 47 pagine reali (esclusi i frammenti senza `</body>`: navbar-template, footer-gdpr, popup-menu, ecc.).
+- `app-ads.txt` — autorizzazione AdMob (`google.com, pub-1193280742171051, DIRECT, f08c47fec0942fa0`), servito su https://www.andreapiani.com/app-ads.txt.
 ├── sitemap.xml - SEO sitemap
 ├── robots.txt - Search engine directives
 └── .htaccess - Server configuration
@@ -225,6 +252,8 @@ The site has a modular custom features system documented in:
 **Auto-applied**: Buttons and cards automatically get hover animations when page loads.
 
 ## Andrea AI Admin Panel (PHP backend)
+
+> ⚠️ **OBSOLETO / NON ATTIVO (dal 2026-06-27).** Tutto questo backend PHP (admin panel, API, cron, env `AAI_*`, integrazione DeepSeek lato server) è stato **rimosso** con la migrazione a Vercel — Vercel non esegue PHP. La sezione resta SOLO come riferimento storico nel caso si voglia ricostruire il sistema come serverless functions. Niente di quanto descritto sotto è attualmente live.
 
 Logging and lead management system for the Andrea AI chat widget. Stores all
 conversations, captures phone numbers via hybrid trigger (AI marker + 6-turn

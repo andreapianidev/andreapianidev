@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.andreapiani.com/</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -38,8 +38,8 @@
 
   <url>
     <loc>https://www.andreapiani.com/sviluppo-app-ios.html</loc>
-    <lastmod>2025-10-11</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
@@ -53,7 +53,7 @@
   <!-- Pagina Servizio Migrazione PrestaShop -->
   <url>
     <loc>https://www.andreapiani.com/migrazione-prestashop-8-9.html</loc>
-    <lastmod>2025-10-13</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -82,12 +82,12 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Creazione API REST -->
+  <!-- Creazione API REST &amp; GraphQL -->
   <url>
     <loc>https://www.andreapiani.com/creazione-api-rest.html</loc>
-    <lastmod>2025-10-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
@@ -107,44 +107,44 @@
 
   <url>
     <loc>https://www.andreapiani.com/mvp-app-startup.html</loc>
-    <lastmod>2025-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/sviluppo-app-android.html</loc>
-    <lastmod>2025-10-13</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/sviluppo-app-react-web.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/sviluppo-python.html</loc>
-    <lastmod>2025-10-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/sviluppo-nodejs.html</loc>
-    <lastmod>2025-10-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.andreapiani.com/bot-trading.html</loc>
-    <lastmod>2025-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- Portfolio -->
@@ -186,12 +186,12 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Perfex CRM -->
+  <!-- CRM custom per PMI italiane -->
   <url>
     <loc>https://www.andreapiani.com/crm.html</loc>
-    <lastmod>2025-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
@@ -199,6 +199,14 @@
     <lastmod>2025-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+  </url>
+
+  <!-- Servizi Odoo ERP -->
+  <url>
+    <loc>https://www.andreapiani.com/servizi-odoo.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- Gestionali Personalizzati -->
@@ -211,7 +219,7 @@
 
   <url>
     <loc>https://www.andreapiani.com/gestionali-personalizzati-aziende.html</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -227,24 +235,24 @@
   <!-- SaaS Live: Landing Agente Immobiliare AI -->
   <url>
     <loc>https://www.andreapiani.com/agente-immobiliare-ai.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- SaaS Live: Landing CheckIn Digitale Hotel -->
   <url>
     <loc>https://www.andreapiani.com/checkin-digitale-hotel.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- SaaS Live: Landing CRM Centri Estetici -->
   <url>
     <loc>https://www.andreapiani.com/crm-centri-estetici.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
@@ -259,8 +267,8 @@
   <!-- SaaS Live: PhysioStudio - Gestionale Fisioterapisti -->
   <url>
     <loc>https://www.andreapiani.com/gestionale-studio-fisioterapista.html</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
@@ -348,5 +356,8 @@
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
+
+  <!-- ARTICOLI START -->
+  <!-- ARTICOLI END -->
 
 </urlset>

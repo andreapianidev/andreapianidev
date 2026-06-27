@@ -1,0 +1,21 @@
+# --- Backend PHP (Vercel non esegue PHP — vanno esclusi per non servirli in chiaro) ---
+admin/
+api/
+lib/
+data/
+*.php
+setup-web.php
+setup-web.done.php
+
+# --- Segreti / config server ---
+.htaccess
+**/.htaccess
+.env
+.env.*
+*credential*
+
+# --- Spazzatura ---
+**/.DS_Store
+*.bak
+*.backup
+*.log

@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="Consulente Odoo ERP in Italia: implementazione Odoo 17/18, sviluppo moduli custom, migrazione, integrazioni API, hosting, formazione. Community + Enterprise. Preventivo gratuito, supporto italiano.">
+  <meta name="keywords" content="odoo, odoo italia, consulente odoo, sviluppatore odoo, implementazione odoo, sviluppo moduli odoo, migrazione odoo, odoo erp, odoo community, odoo enterprise, odoo 17, odoo 18, hosting odoo, integrazione odoo, formazione odoo, partner odoo italia, odoo per pmi, manutenzione odoo, personalizzazione odoo, configurazione odoo">
+
+  <meta property="og:title" content="Servizi Odoo ERP Italia: Implementazione & Moduli Custom">
+  <meta property="og:description" content="Consulente Odoo in Italia. Implementazione Odoo 17/18, sviluppo moduli custom, migrazione, integrazioni API, hosting, formazione. Community + Enterprise.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&auto=format&q=80">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dashboard analytics Odoo ERP - implementazione e sviluppo moduli custom in Italia">
+  <meta property="og:url" content="https://www.andreapiani.com/servizi-odoo.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Servizi Odoo ERP Italia: Implementazione & Custom">
+  <meta name="twitter:description" content="Implementazione Odoo, moduli custom, migrazione, integrazioni API, hosting. Preventivo gratuito.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&auto=format&q=80">
+
+  <link rel="canonical" href="https://www.andreapiani.com/servizi-odoo.html" />
+  <link rel="alternate" hreflang="it" href="https://www.andreapiani.com/servizi-odoo.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.andreapiani.com/servizi-odoo.html" />
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <!-- Preconnect Unsplash CDN per immagini ottimizzate -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+  <title>Servizi Odoo ERP Italia: Implementazione & Custom | Andrea Piani</title>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "serviceType": "Implementazione, Sviluppo Moduli Custom e Consulenza Odoo ERP",
+    "name": "Servizi Odoo ERP - Andrea Piani",
+    "provider": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "jobTitle": "Consulente e Sviluppatore Odoo",
+      "url": "https://www.andreapiani.com",
+      "email": "andreapiani.dev@gmail.com",
+      "telephone": "+393516248936"
+    },
+    "areaServed": "IT",
+    "description": "Implementazione Odoo 17/18 Community ed Enterprise, sviluppo moduli custom Python/XML, migrazione da versioni precedenti, integrazioni API con e-commerce, fatturazione elettronica, e-fattura SDI, hosting gestito, formazione e supporto continuativo per PMI italiane.",
+    "priceRange": "€€€"
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.andreapiani.com"},
+      {"@type": "ListItem", "position": 2, "name": "Servizi", "item": "https://www.andreapiani.com/index.html#servizi"},
+      {"@type": "ListItem", "position": 3, "name": "Odoo ERP", "item": "https://www.andreapiani.com/servizi-odoo.html"}
+    ]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cos'è Odoo e perché sceglierlo come ERP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Odoo è una suite ERP open source modulare che integra CRM, vendite, acquisti, magazzino, contabilità, produzione (MRP), e-commerce, HR, project management e marketing in un'unica piattaforma. Disponibile in versione Community (gratuita) ed Enterprise (a pagamento). Vantaggi: oltre 40 moduli ufficiali, 30.000+ moduli community, interfaccia moderna, scalabilità da micro-impresa a multinazionale, costi di licenza nettamente inferiori a SAP, Oracle, Microsoft Dynamics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual è la differenza tra Odoo Community e Odoo Enterprise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Odoo Community è gratuita, open source (LGPL), include i moduli base: CRM, vendite, acquisti, magazzino, contabilità base, progetti, sito web. Odoo Enterprise (€31,10/utente/mese list price) aggiunge: contabilità completa con riconciliazione bancaria automatica, app mobile native, Studio (no-code builder), Marketing Automation, Field Service, Sign, Documents, manutenzione MRP avanzata, supporto ufficiale Odoo SA, upgrade automatici, hosting Odoo.sh. Per PMI italiane spesso la Community con moduli OCA italiani (l10n_it) basta. Per fatturazione elettronica B2B + SDI, Enterprise o moduli OCA dedicati."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto costa implementare Odoo in azienda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costo implementazione Odoo varia da €3.000 a €50.000+ in base a complessità e numero utenti. Pacchetto starter (Community, 1-5 utenti, contabilità + CRM + vendite) €2.500-€5.000. PMI standard (10-30 utenti, 5-8 moduli, integrazioni base) €8.000-€20.000. Implementazione complessa (50+ utenti, MRP, multi-azienda, integrazioni custom, sviluppo moduli verticali) €25.000-€80.000. Licenza Enterprise extra: €31,10/utente/mese (€24,90 con annual billing). Hosting Odoo.sh da €58/mese o self-hosted da €30/mese VPS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo serve per implementare Odoo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tempi implementazione: Quick-start Odoo Community con moduli standard 2-4 settimane. PMI tipica (5-10 moduli, import dati, formazione, 1-2 customizzazioni) 6-12 settimane. Progetto complesso con sviluppo moduli custom, integrazioni ERP legacy, migrazione storico multi-anno 4-8 mesi. Metodologia agile con sprint di 2 settimane e demo settimanali per ridurre rischi e validare requisiti."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si può migrare da un altro gestionale a Odoo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, supporto migrazioni da SAP Business One, Microsoft Dynamics 365 Business Central, Zucchetti Mago/Ad Hoc, TeamSystem Gamma Enterprise, Danea Easyfatt, Fatture in Cloud, Aruba Fatturazione, software custom legacy. Migrazione tipica include: mappatura schema dati, ETL con script Python custom, validazione integrità, dry-run su staging, formazione team, go-live con parallel run 2-4 settimane. Costo €2.500-€15.000 in base a volume dati e complessità trasformazioni."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si può migrare da Odoo 14/15/16 a Odoo 17 o 18?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, eseguo upgrade Odoo versione minore (es. 17.0 → 17.4) e major (15 → 18). Upgrade major richiede: analisi moduli custom esistenti, refactoring codice Python per nuove API (es. removal di @api.multi, nuovo ORM), test regressione, migrazione dati con script OpenUpgrade, parallel testing. Costo upgrade community €1.500-€8.000. Per Enterprise con database < 500MB il tool ufficiale upgrade.odoo.com è gratuito incluso nel contratto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Odoo supporta la fatturazione elettronica italiana SDI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. Odoo Enterprise include nativamente l'integrazione fatturazione elettronica italiana via SDI con provider certificati (es. ACube, Aruba, FattureInCloud). Per Odoo Community esiste il modulo OCA l10n_it_fatturapa che genera XML FatturaPA + integrazione SDI tramite intermediario. Implementazione completa con piano dei conti italiano, esterometro, intrastat, split payment, reverse charge €1.500-€4.000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si può integrare Odoo con PrestaShop, WooCommerce o Shopify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, sviluppo integrazioni bidirezionali Odoo ↔ e-commerce. Sincronizzazione catalogo prodotti, stock multi-magazzino, ordini, clienti, fatture, tracking spedizioni, varianti, listini multi-valuta. Per PrestaShop usato connettore OCA o sviluppo custom. Per WooCommerce/Shopify webhook + API REST con queue Redis per affidabilità. Costo integrazione €1.500-€6.000 in base a complessità."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso ospitare Odoo sul mio server o serve Odoo.sh?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entrambe le opzioni sono valide. Odoo.sh (PaaS ufficiale) parte da €58/mese, include backup automatici, staging environment, deploy via Git, upgrade gestiti — consigliato per chi vuole zero gestione sistemistica. Self-hosted su VPS Linux (Hetzner, OVH, Aruba Cloud) parte da €30/mese, richiede sysadmin per backup, sicurezza, upgrade — più flessibile e meno costoso a lungo termine. Offro setup self-hosted Docker con PostgreSQL ottimizzato, Nginx reverse proxy, Let's Encrypt SSL, backup automatici S3, monitoring Uptime Kuma."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sviluppi moduli Odoo custom da zero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, sviluppo moduli Odoo custom in Python + XML con OWL framework per il frontend. Esperienza in workflow approval custom, report PDF QWeb personalizzati, dashboard analytics con grafici, integrazioni API esterne (Sendinblue, HubSpot, fatturazione provider), moduli verticali settoriali (officine, immobiliare, hotel, studi professionali), automazioni cron, wizard guidati, web controller custom. Codice consegnato pulito, testato, conforme alle linee guida Odoo e pubblicabile su Odoo Apps se richiesto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Offri formazione e supporto post-implementazione?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, formazione per utenti finali (4-16 ore in base a moduli) e key-user (8-24 ore con focus configurazione e amministrazione). Materiale didattico in italiano con screenshot e video tutorial. Supporto post-go-live a canone mensile da €390/mese: SLA risposta 4h business hours, bug-fixing, piccole evolutive, monitoring proattivo, backup verification, upgrade minor. Pacchetti annuali con sconto del 15%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Odoo è adatto a piccole imprese o solo a grandi aziende?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Odoo è adatto a entrambi. Piccole imprese (1-10 dipendenti) usano tipicamente Community con 3-5 moduli base (CRM, vendite, fatturazione, magazzino) per €3.000-€8.000 di implementazione, totale ownership cost 80% inferiore a Zucchetti/TeamSystem. Aziende medie (10-100 dipendenti) traggono il massimo beneficio: copre tutte le aree gestionali in un'unica piattaforma evitando 5-10 software separati. Grandi aziende (100+) usano Enterprise con multi-azienda, multi-valuta, IFRS, integrazioni SAP legacy."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Jost', sans-serif;
+    }
+    .navbar-custom {
+      background: #000000;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    .navbar-custom a {
+      color: #ffffff !important;
+      margin: 0 1rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .navbar-custom a:hover { color: #875A7B !important; }
+    .navbar-brand {
+      color: #875A7B !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .hero-services {
+      background: linear-gradient(135deg, #875A7B 0%, #5e3d56 100%);
+      padding: 6rem 0;
+      color: white;
+      text-align: center;
+    }
+    .hero-services h1 {
+      font-size: 3.2rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    .hero-services p {
+      font-size: 1.3rem;
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin: 0.25rem;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #875A7B;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: #ccc;
+      font-size: 1.15rem;
+      max-width: 900px;
+      margin: -2rem auto 3rem auto;
+      line-height: 1.7;
+    }
+    .service-card {
+      background: #1a1a1a;
+      border: 2px solid #875A7B;
+      border-radius: 15px;
+      padding: 2.5rem;
+      height: 100%;
+      transition: 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(135, 90, 123, 0.4);
+    }
+    .service-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+    .service-title {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #875A7B;
+      margin-bottom: 1rem;
+    }
+    .service-price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 1.25rem 0;
+    }
+    .module-pill {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #875A7B;
+      color: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      margin: 0.3rem;
+      transition: 0.2s;
+    }
+    .module-pill:hover {
+      background: #875A7B;
+      transform: translateY(-2px);
+    }
+    .compare-table {
+      width: 100%;
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      border-collapse: collapse;
+    }
+    .compare-table th, .compare-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #2a2a2a;
+      text-align: left;
+      color: #ddd;
+    }
+    .compare-table th {
+      background: #875A7B;
+      color: #fff;
+      font-weight: 600;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td.yes { color: #4caf50; font-weight: 600; }
+    .compare-table td.no { color: #ff5252; }
+    .btn-odoo {
+      background: #875A7B;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+      border: none;
+    }
+    .btn-odoo:hover {
+      background: #ffffff;
+      color: #875A7B;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(135, 90, 123, 0.5);
+    }
+    .step-card {
+      background: #1a1a1a;
+      border-left: 4px solid #875A7B;
+      padding: 1.75rem;
+      border-radius: 10px;
+      height: 100%;
+    }
+    .step-num {
+      font-size: 3rem;
+      color: #875A7B;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .faq-item {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      color: #875A7B;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-q:hover { background: #222; }
+    .faq-a {
+      padding: 0 1.5rem 1.25rem 1.5rem;
+      color: #ccc;
+      line-height: 1.7;
+      display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .arrow { transition: transform 0.3s; }
+    .versus-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 2rem;
+      height: 100%;
+    }
+    .versus-card h4 { color: #875A7B; margin-bottom: 1rem; }
+    .versus-card ul { padding-left: 1.25rem; color: #ccc; line-height: 1.85; }
+    .industry-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a1a25 100%);
+      border: 1px solid #875A7B;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      height: 100%;
+      transition: 0.3s;
+    }
+    .industry-card:hover {
+      transform: translateY(-5px);
+      border-color: #fff;
+    }
+    .industry-card .icon { font-size: 3rem; margin-bottom: 1rem; }
+    .industry-card h4 { color: #875A7B; margin-bottom: 0.75rem; }
+    .industry-card p { color: #ccc; font-size: 0.95rem; line-height: 1.6; margin: 0; }
+
+    /* Hero con background image overlay */
+    .hero-services-bg {
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(135,90,123,0.92) 0%, rgba(94,61,86,0.94) 100%),
+        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=900&fit=crop&auto=format&q=75') center/cover no-repeat;
+      padding: 6rem 0;
+      color: white;
+      text-align: center;
+    }
+    .section-image {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(135,90,123,0.25);
+      border: 1px solid rgba(135,90,123,0.4);
+      display: block;
+    }
+    .section-image-wrap {
+      max-width: 1000px;
+      margin: 0 auto 3rem auto;
+      overflow: hidden;
+      border-radius: 16px;
+      position: relative;
+    }
+    .section-image-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.5) 100%);
+      pointer-events: none;
+      border-radius: 16px;
+    }
+    .section-image-caption {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      color: #fff;
+      font-size: 0.9rem;
+      z-index: 2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Andrea Piani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-services-bg scroll-animate">
+    <div class="container hero-animate">
+      <h1 class="animate-fadeInUp">🟣 Servizi Odoo ERP in Italia</h1>
+      <p class="animate-fadeInUp animate-delay-1">
+        <strong>Implementazione, sviluppo moduli custom e consulenza Odoo</strong> per piccole e medie imprese italiane.<br>
+        Odoo 17 e 18, Community ed Enterprise. Migrazione da gestionali legacy, integrazioni e-commerce, fatturazione elettronica SDI, hosting gestito e formazione team — tutto in italiano.
+      </p>
+      <div class="animate-fadeInUp animate-delay-2" style="margin-bottom: 1.5rem;">
+        <span class="hero-badge">✓ Odoo 17 / 18</span>
+        <span class="hero-badge">✓ Community + Enterprise</span>
+        <span class="hero-badge">✓ Fattura Elettronica SDI</span>
+        <span class="hero-badge">✓ Python + XML + OWL</span>
+        <span class="hero-badge">✓ PostgreSQL Tuning</span>
+      </div>
+      <div class="animate-fadeInUp animate-delay-2">
+        <a href="https://wa.me/393516248936" class="btn-odoo glow-animate">RICHIEDI PREVENTIVO GRATUITO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRODUZIONE -->
+  <section style="padding: 5rem 0; background: #000;">
+    <div class="container">
+      <h2 class="section-title">Perché scegliere Odoo come ERP per la tua azienda</h2>
+      <p class="section-subtitle">
+        Odoo è la suite ERP open source più diffusa al mondo con oltre 12 milioni di utenti in 120+ paesi. Un'unica piattaforma sostituisce 10 software gestionali separati: CRM, vendite, acquisti, magazzino, contabilità, produzione, e-commerce, HR, project management, marketing. Costi licenza fino all'80% inferiori rispetto a SAP, Oracle e Microsoft Dynamics. Per la PMI italiana è la scelta tecnologicamente più moderna e finanziariamente sostenibile.
+      </p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="versus-card">
+            <h4>💰 Costo totale inferiore</h4>
+            <p style="color:#ccc;">Community gratuita, Enterprise da €31,10/utente/mese vs Zucchetti €150+, SAP €200+. ROI tipico 12-18 mesi.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="versus-card">
+            <h4>🧩 Modularità reale</h4>
+            <p style="color:#ccc;">Attivi solo i moduli che ti servono. Aggiungi produzione, e-commerce o HR quando l'azienda cresce, senza migrazioni.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="versus-card">
+            <h4>🔓 No vendor lock-in</h4>
+            <p style="color:#ccc;">Open source LGPL: dati tuoi, esportabili, codice ispezionabile. Cambi partner o sistemi senza perdere il database.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="versus-card">
+            <h4>⚡ Stack moderno</h4>
+            <p style="color:#ccc;">Python 3.10+, PostgreSQL 15+, OWL framework, REST/XML-RPC API, Docker-ready. Codebase pulita, sviluppo veloce.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="versus-card">
+            <h4>🇮🇹 Localizzazione italiana</h4>
+            <p style="color:#ccc;">Piano dei conti italiano, F24, IVA, esterometro, intrastat, FatturaPA, split payment, reverse charge.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="versus-card">
+            <h4>📱 Mobile-first</h4>
+            <p style="color:#ccc;">App native iOS e Android (Enterprise) per CRM, vendite, magazzino. Anche la web app è completamente responsive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMMAGINE DASHBOARD -->
+  <section style="padding: 2rem 0 4rem 0; background: #000;">
+    <div class="container">
+      <div class="section-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop&auto=format&q=80"
+          srcset="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=300&fit=crop&auto=format&q=80 600w,
+                  https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop&auto=format&q=80 1200w,
+                  https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&h=900&fit=crop&auto=format&q=80 1800w"
+          sizes="(max-width: 1000px) 100vw, 1000px"
+          alt="Dashboard analytics ERP con grafici performance e KPI - implementazione Odoo per PMI italiane"
+          width="1200" height="600"
+          loading="lazy" decoding="async"
+          class="section-image">
+        <p class="section-image-caption">Dashboard analytics direzionale: KPI real-time, forecast, scaduto incassi e margini commessa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULI DISPONIBILI -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Moduli Odoo che configuro e personalizzo</h2>
+      <p class="section-subtitle">
+        Tutta la suite Odoo ufficiale più i moduli OCA italiani e dell'ecosistema community. Configurazione, personalizzazione, sviluppo estensioni custom su qualsiasi modulo.
+      </p>
+
+      <div style="margin-bottom: 2.5rem;">
+        <h3 style="color:#875A7B; font-size:1.4rem; margin-bottom:1rem;">📊 Vendite & CRM</h3>
+        <span class="module-pill">CRM</span>
+        <span class="module-pill">Vendite (Sale)</span>
+        <span class="module-pill">Punti Vendita (POS)</span>
+        <span class="module-pill">Subscription</span>
+        <span class="module-pill">Sign (Firma Digitale)</span>
+        <span class="module-pill">eCommerce</span>
+        <span class="module-pill">Sito Web</span>
+        <span class="module-pill">Marketing Automation</span>
+        <span class="module-pill">Email Marketing</span>
+        <span class="module-pill">SMS Marketing</span>
+        <span class="module-pill">Live Chat</span>
+        <span class="module-pill">Survey</span>
+      </div>
+
+      <div style="margin-bottom: 2.5rem;">
+        <h3 style="color:#875A7B; font-size:1.4rem; margin-bottom:1rem;">📦 Logistica & Produzione</h3>
+        <span class="module-pill">Magazzino (Inventory)</span>
+        <span class="module-pill">Acquisti (Purchase)</span>
+        <span class="module-pill">MRP Produzione</span>
+        <span class="module-pill">MRP II Pianificazione</span>
+        <span class="module-pill">Manutenzione</span>
+        <span class="module-pill">Qualità (Quality)</span>
+        <span class="module-pill">PLM Product Lifecycle</span>
+        <span class="module-pill">Multi-Warehouse</span>
+        <span class="module-pill">Barcode Scanner</span>
+        <span class="module-pill">Lotti & Numeri Serie</span>
+      </div>
+
+      <div style="margin-bottom: 2.5rem;">
+        <h3 style="color:#875A7B; font-size:1.4rem; margin-bottom:1rem;">💰 Contabilità & Finance</h3>
+        <span class="module-pill">Contabilità (Accounting)</span>
+        <span class="module-pill">Fatturazione</span>
+        <span class="module-pill">Riconciliazione Bancaria</span>
+        <span class="module-pill">Spese (Expenses)</span>
+        <span class="module-pill">Budget</span>
+        <span class="module-pill">Asset Management</span>
+        <span class="module-pill">l10n_it (Localizzazione IT)</span>
+        <span class="module-pill">FatturaPA SDI</span>
+        <span class="module-pill">Esterometro</span>
+        <span class="module-pill">Intrastat</span>
+        <span class="module-pill">F24</span>
+      </div>
+
+      <div style="margin-bottom: 2.5rem;">
+        <h3 style="color:#875A7B; font-size:1.4rem; margin-bottom:1rem;">👥 HR & Operations</h3>
+        <span class="module-pill">Dipendenti (HR)</span>
+        <span class="module-pill">Presenze (Attendance)</span>
+        <span class="module-pill">Ferie & Permessi</span>
+        <span class="module-pill">Recruitment</span>
+        <span class="module-pill">Payroll</span>
+        <span class="module-pill">Note Spese</span>
+        <span class="module-pill">Fleet Management</span>
+        <span class="module-pill">Project Management</span>
+        <span class="module-pill">Timesheet</span>
+        <span class="module-pill">Helpdesk</span>
+        <span class="module-pill">Field Service</span>
+        <span class="module-pill">Appointments</span>
+      </div>
+
+      <div>
+        <h3 style="color:#875A7B; font-size:1.4rem; margin-bottom:1rem;">🛠️ Tools & Productivity</h3>
+        <span class="module-pill">Documents (DMS)</span>
+        <span class="module-pill">Studio (No-Code Builder)</span>
+        <span class="module-pill">Approvals Workflow</span>
+        <span class="module-pill">Knowledge</span>
+        <span class="module-pill">Discuss (Chat Interno)</span>
+        <span class="module-pill">Calendar</span>
+        <span class="module-pill">Contacts</span>
+        <span class="module-pill">VOIP</span>
+        <span class="module-pill">WhatsApp Business</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI PRINCIPALI -->
+  <section style="padding: 5rem 0; background: #000;">
+    <div class="container">
+      <h2 class="section-title">I miei servizi Odoo ERP</h2>
+      <p class="section-subtitle">
+        Dalla prima call di analisi al supporto post-go-live continuativo. Tutto in italiano, con metodologia agile e demo settimanali.
+      </p>
+      <div class="row">
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🚀</div>
+            <h3 class="service-title">Implementazione Odoo da Zero</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Analisi processi, configurazione moduli, import dati, formazione team, go-live assistito. Metodologia agile con sprint da 2 settimane e demo iterative. Ideale per chi adotta un ERP per la prima volta o esce da gestionali legacy come Danea, Fatture in Cloud, Zucchetti, TeamSystem.
+            </p>
+            <div class="service-price">Da €3.000</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Workshop analisi requisiti (8-16 ore)</li>
+              <li>Setup ambiente: produzione + staging</li>
+              <li>Configurazione 3-10 moduli base</li>
+              <li>Import anagrafica clienti/fornitori/articoli</li>
+              <li>Personalizzazione documenti PDF (preventivi, fatture, DDT)</li>
+              <li>Configurazione fatturazione elettronica SDI</li>
+              <li>Formazione utenti finali e key-user</li>
+              <li>Go-live con parallel run 2 settimane</li>
+              <li>Supporto post-lancio 30 giorni incluso</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3 class="service-title">Sviluppo Moduli Custom</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Moduli Odoo su misura in Python + XML + OWL framework per funzionalità non coperte dai moduli standard. Workflow approval, dashboard custom, integrazioni API, report QWeb personalizzati, automazioni cron, wizard guidati, web controller. Codice pulito, testato, manutenibile, conforme alle linee guida Odoo SA.
+            </p>
+            <div class="service-price">Da €1.200</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Moduli verticali settoriali (immobiliare, fashion, food, edilizia)</li>
+              <li>Workflow approval multi-livello con notifiche</li>
+              <li>Dashboard analytics con grafici interattivi OWL</li>
+              <li>Report PDF QWeb branded e localizzati</li>
+              <li>Automazioni cron schedulate</li>
+              <li>Wizard guidati con form multi-step</li>
+              <li>API REST/JSON-RPC custom endpoints</li>
+              <li>Web controller pubblici per portali clienti</li>
+              <li>Test unitari Python + integration test</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🔄</div>
+            <h3 class="service-title">Migrazione Verso Odoo</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Migrazione completa da gestionali legacy: Danea Easyfatt, Fatture in Cloud, Aruba, Zucchetti Mago/Ad Hoc Enterprise, TeamSystem Gamma, SAP Business One, Microsoft Dynamics 365 Business Central, software custom MSSQL/MySQL. Mappatura schema, ETL Python custom, validazione integrità, dry-run, go-live con parallel run.
+            </p>
+            <div class="service-price">Da €2.500</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Analisi schema dati origine e mappatura su Odoo</li>
+              <li>Script ETL Python con <a href="sviluppo-python.html" style="color:#ccc;">pandas + SQLAlchemy</a></li>
+              <li>Import anagrafiche, articoli, stock, listini</li>
+              <li>Import storico fatture e movimenti contabili (5-10 anni)</li>
+              <li>Validazione integrità: matching totali, quadrature IVA</li>
+              <li>Dry-run su ambiente staging</li>
+              <li>Parallel run 2-4 settimane</li>
+              <li>Cutover go-live week-end con rollback plan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🔼</div>
+            <h3 class="service-title">Upgrade Versione Odoo</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Upgrade da Odoo 14/15/16/17 a 17 o 18. Analisi moduli custom, refactoring codice Python per nuove API ORM, test regressione, migrazione dati con OpenUpgrade, deploy. Per Enterprise con DB &lt;500MB upgrade gratuito via upgrade.odoo.com incluso nel contratto.
+            </p>
+            <div class="service-price">Da €1.500</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Audit codice moduli custom esistenti</li>
+              <li>Refactoring API ORM (rimozione @api.multi, new mixins)</li>
+              <li>Aggiornamento template XML/QWeb</li>
+              <li>Migrazione vista form/list a OWL framework</li>
+              <li>Script OpenUpgrade per dati</li>
+              <li>Test regressione completi su staging</li>
+              <li>Snapshot DB pre-upgrade per rollback</li>
+              <li>Deploy + smoke test produzione</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🔌</div>
+            <h3 class="service-title">Integrazioni con E-commerce e Sistemi Esterni</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Connettori Odoo bidirezionali verso PrestaShop, WooCommerce, Shopify, Magento, Amazon Seller Central, eBay. Sincronizzazione catalogo, stock multi-magazzino, ordini, clienti, fatture, tracking spedizioni. Webhook + queue Redis per affidabilità. Anche integrazioni con marketing tools, ERP legacy, gateway pagamento.
+            </p>
+            <div class="service-price">Da €1.500</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Connettore <a href="servizi-prestashop.html" style="color:#ccc;">PrestaShop</a> bidirezionale</li>
+              <li>WooCommerce REST API + webhook</li>
+              <li>Shopify Admin API + GraphQL</li>
+              <li>Amazon SP-API per marketplace</li>
+              <li>Provider fatturazione SDI (ACube, Aruba, FattureInCloud)</li>
+              <li>Spedizionieri (BRT, GLS, SDA, DHL, UPS, FedEx)</li>
+              <li>Gateway pagamento (Stripe, PayPal, Nexi, Satispay)</li>
+              <li>Marketing (Mailchimp, HubSpot, Sendinblue)</li>
+              <li>Banche (CBI/PSD2 per home banking)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">☁️</div>
+            <h3 class="service-title">Hosting Odoo Gestito</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Hosting self-managed su VPS Hetzner, OVH, Aruba Cloud, AWS. Setup Docker con PostgreSQL ottimizzato, Nginx reverse proxy, Let's Encrypt SSL, backup automatici S3-compatible, monitoring Uptime Kuma + Grafana, log aggregation. In alternativa, consulenza per Odoo.sh (PaaS ufficiale Odoo).
+            </p>
+            <div class="service-price">Da €390/mese</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>VPS dedicato 8GB+ RAM (Hetzner/OVH)</li>
+              <li>PostgreSQL 15+ tuning produzione</li>
+              <li>Backup automatici giornalieri criptati su S3</li>
+              <li>SSL Let's Encrypt auto-renewal</li>
+              <li>Monitoring 24/7 con alert Telegram</li>
+              <li>Update sicurezza OS mensili</li>
+              <li>Disaster recovery RTO 4h, RPO 24h</li>
+              <li>SLA 99,5% uptime</li>
+              <li>Staging environment incluso</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🎓</div>
+            <h3 class="service-title">Formazione Team</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Formazione strutturata per utenti finali e key-user con materiale didattico in italiano, screenshot, video tutorial dedicati ai processi della tua azienda. Sessioni in remoto via Google Meet/Zoom o in presenza per aziende del Friuli Venezia Giulia e Veneto.
+            </p>
+            <div class="service-price">Da €90/ora</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Formazione utenti finali (4-16 ore)</li>
+              <li>Formazione key-user e amministratori (8-24 ore)</li>
+              <li>Materiale didattico personalizzato in PDF/video</li>
+              <li>Knowledge base interna con FAQ</li>
+              <li>Sessioni Q&A mensili post-go-live</li>
+              <li>Onboarding nuovi assunti incluso</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="service-card">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Supporto Continuativo e Manutenzione</h3>
+            <p style="color: #ccc; line-height: 1.8;">
+              Contratto di supporto post-go-live a canone mensile con SLA, bug-fixing, piccole evolutive, monitoring proattivo, backup verification, upgrade minor, consulenza on-demand. Pacchetti annuali con sconto 15%.
+            </p>
+            <div class="service-price">Da €390/mese</div>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>SLA risposta 4h business hours</li>
+              <li>Bug-fixing su moduli custom illimitato</li>
+              <li>5-10 ore/mese evolutive incluse</li>
+              <li>Monitoring proattivo performance</li>
+              <li>Backup verification settimanale</li>
+              <li>Upgrade minor inclusi (es. 18.0 → 18.4)</li>
+              <li>Consulenza on-demand via chat</li>
+              <li>Report mensile attività</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY VS ENTERPRISE -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Odoo Community vs Odoo Enterprise</h2>
+      <p class="section-subtitle">
+        Quale versione scegliere? Dipende da dimensione aziendale, moduli necessari e budget. Per il 60% delle PMI italiane Community con moduli OCA italiani è sufficiente. Enterprise diventa necessario per riconciliazione bancaria automatica, MRP avanzato, supporto ufficiale Odoo SA e app mobile native.
+      </p>
+      <div class="table-responsive">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Caratteristica</th>
+              <th>Community (Free)</th>
+              <th>Enterprise (€31,10/utente/mese)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CRM, Vendite, Acquisti, Magazzino</td><td class="yes">✓ Incluso</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Contabilità base</td><td class="yes">✓ Incluso</td><td class="yes">✓ Avanzata</td></tr>
+            <tr><td>Riconciliazione bancaria automatica AI</td><td class="no">✗ Solo manuale</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Fatturazione elettronica SDI</td><td class="yes">✓ Via OCA l10n_it</td><td class="yes">✓ Nativo</td></tr>
+            <tr><td>MRP base produzione</td><td class="yes">✓ Incluso</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>MRP II pianificazione avanzata</td><td class="no">✗</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Studio (no-code builder)</td><td class="no">✗</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>App mobile native iOS/Android</td><td class="no">✗ Solo web responsive</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Marketing Automation</td><td class="no">✗</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Sign (firma digitale)</td><td class="no">✗</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Documents DMS</td><td class="no">✗</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Field Service</td><td class="no">✗</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Helpdesk</td><td class="no">✗ Via OCA</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Upgrade automatici versione major</td><td class="no">✗ Manuali</td><td class="yes">✓ Tool ufficiale gratuito</td></tr>
+            <tr><td>Supporto ufficiale Odoo SA</td><td class="no">✗ Solo community</td><td class="yes">✓ Incluso</td></tr>
+            <tr><td>Hosting Odoo.sh</td><td class="no">✗</td><td class="yes">✓ Disponibile</td></tr>
+            <tr><td>Codice sorgente open source</td><td class="yes">✓ LGPL</td><td class="yes">✓ Disponibile a clienti</td></tr>
+            <tr><td>Moduli community (OCA)</td><td class="yes">✓ 30.000+</td><td class="yes">✓ 30.000+</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center; color:#ccc; max-width:900px; margin:2.5rem auto 0; font-size:1.05rem; line-height:1.7;">
+        <strong style="color:#875A7B;">Consiglio:</strong> Per una PMI italiana fino a 15 utenti che fa fatturazione B2B + B2C, gestione magazzino e CRM, <strong>Odoo Community + l10n_it OCA</strong> è quasi sempre sufficiente. Risparmi €5.600/anno per ogni 15 utenti rispetto a Enterprise. Se invece serve riconciliazione bancaria automatica giornaliera, Studio per personalizzare schermate senza codice, o produzione complessa con MPS/MRP II, allora <strong>Enterprise</strong> giustifica il costo.
+      </p>
+    </div>
+  </section>
+
+  <!-- SETTORI VERTICALI -->
+  <section style="padding: 5rem 0; background: #000;">
+    <div class="container">
+      <h2 class="section-title">Settori in cui implemento Odoo</h2>
+      <p class="section-subtitle">
+        Configurazioni Odoo specifiche per processi settoriali. Combinazioni di moduli standard, OCA e custom per coprire la value chain completa di ogni vertical.
+      </p>
+      <div class="row">
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🏭</div>
+            <h4>Manifatturiero</h4>
+            <p>MRP, distinta base, lavorazioni esterne, qualità, controllo lotti, tracciabilità.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🛒</div>
+            <h4>Retail & E-commerce</h4>
+            <p>POS, multi-store, integrazione PrestaShop/Shopify, omnicanale, click&collect.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🚚</div>
+            <h4>Distribuzione & Logistica</h4>
+            <p>Multi-magazzino, picking strategie, barcode, integrazioni vettori, EDI fornitori.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🍕</div>
+            <h4>Food & HoReCa</h4>
+            <p>POS ristorante, gestione tavoli, ricette/distinta cucina, scadenze, HACCP.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">👗</div>
+            <h4>Moda & Abbigliamento</h4>
+            <p>Varianti taglia/colore, listini stagionali, riassortimento automatico, store performance.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🏥</div>
+            <h4>Healthcare & Studi Medici</h4>
+            <p>Anagrafica pazienti, appuntamenti, fatturazione SSN/privati, documenti.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🏗️</div>
+            <h4>Edilizia & Costruzioni</h4>
+            <p>SAL stato avanzamento lavori, cantieri, subappalti, dichiarazione materiali, sicurezza.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🚗</div>
+            <h4>Automotive & Officine</h4>
+            <p>Anagrafica veicoli, ricambi, lavorazioni officina, fatturazione clienti.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">📚</div>
+            <h4>Servizi & Consulenza</h4>
+            <p>Timesheet, fatturazione progetto, ritenute, gestione collaboratori, ricavi maturati.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🏨</div>
+            <h4>Hospitality</h4>
+            <p>Prenotazioni camere, check-in/out, integrazione PMS, fatturazione clienti soggiorno.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">⚖️</div>
+            <h4>Studi Professionali</h4>
+            <p>Pratiche, timesheet fatturabile, scadenze, archivio documentale, conservazione PEC.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="industry-card">
+            <div class="icon">🌱</div>
+            <h4>Agricoltura & Vivai</h4>
+            <p>Coltivazioni, magazzino sfuso, tracciabilità lotti, vendita ingrosso/dettaglio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMMAGINE LOGISTICA -->
+  <section style="padding: 2rem 0 4rem 0; background: #000;">
+    <div class="container">
+      <div class="section-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=600&fit=crop&auto=format&q=80"
+          srcset="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=300&fit=crop&auto=format&q=80 600w,
+                  https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=600&fit=crop&auto=format&q=80 1200w,
+                  https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1800&h=900&fit=crop&auto=format&q=80 1800w"
+          sizes="(max-width: 1000px) 100vw, 1000px"
+          alt="Magazzino logistico con scaffalature - gestione inventory Odoo, multi-warehouse, picking e barcode"
+          width="1200" height="600"
+          loading="lazy" decoding="async"
+          class="section-image">
+        <p class="section-image-caption">Gestione magazzino multi-deposito con Odoo Inventory: barcode, lotti, tracciabilità, picking strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRAZIONI ITALIA -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Localizzazione & Compliance Italia</h2>
+      <p class="section-subtitle">
+        Odoo è perfettamente conforme alle normative italiane. Il modulo OCA <code style="background:#1a1a1a; padding:0.2rem 0.5rem; border-radius:4px; color:#875A7B;">l10n_it</code> e i suoi satelliti coprono tutti gli obblighi fiscali.
+      </p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="versus-card">
+            <h4>📜 Fatturazione Elettronica</h4>
+            <ul>
+              <li>Generazione XML FatturaPA conforme allo schema 1.7+</li>
+              <li>Invio automatico via SDI tramite intermediari (ACube, Aruba, FatturePA)</li>
+              <li>Ricezione fatture passive con import automatico in contabilità</li>
+              <li>Notifiche e ricevute SDI tracciate</li>
+              <li>Conservazione sostitutiva a norma 10 anni</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="versus-card">
+            <h4>📊 Adempimenti Fiscali</h4>
+            <ul>
+              <li>Liquidazione IVA mensile/trimestrale</li>
+              <li>Esterometro per operazioni estero</li>
+              <li>Intrastat (cessioni/acquisti UE)</li>
+              <li>Split payment Pubblica Amministrazione</li>
+              <li>Reverse charge interno ed estero</li>
+              <li>F24 generazione e tracking</li>
+              <li>Spesometro / Comunicazione liquidazioni IVA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="versus-card">
+            <h4>🏦 Banche & Pagamenti</h4>
+            <ul>
+              <li>Import estratti conto MT940/CBI/CSV</li>
+              <li>Riconciliazione automatica match fatture</li>
+              <li>RIBA, SEPA Direct Debit, bonifici XML</li>
+              <li>PSD2/Open Banking per home banking diretto (con servizi terzi)</li>
+              <li>Gateway: Stripe, PayPal, Nexi, Satispay, Klarna</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="versus-card">
+            <h4>📋 Piano dei Conti & Bilancio</h4>
+            <ul>
+              <li>Piano dei conti italiano CEE/OIC pre-configurato</li>
+              <li>Codice 4-codice numerico modificabile</li>
+              <li>Bilancio CEE attivo/passivo</li>
+              <li>Conto economico con riclassificazioni</li>
+              <li>Libro giornale e mastrini</li>
+              <li>Export per commercialista (Profis, Sistemi, Buffetti)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section style="padding: 5rem 0; background: #000;">
+    <div class="container">
+      <h2 class="section-title">Stack tecnico Odoo</h2>
+      <p class="section-subtitle">
+        Odoo è costruito su tecnologie moderne e mature. Conoscenza approfondita di ogni layer per garantire performance, sicurezza e manutenibilità.
+      </p>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">🐍</div>
+            <h4 style="color:#875A7B;">Backend</h4>
+            <p style="color:#ccc;">Python 3.10+, framework Odoo, ORM custom, decoratori @api</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">🐘</div>
+            <h4 style="color:#875A7B;">Database</h4>
+            <p style="color:#ccc;">PostgreSQL 15+, tuning shared_buffers/work_mem, partitioning, replication</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">⚛️</div>
+            <h4 style="color:#875A7B;">Frontend</h4>
+            <p style="color:#ccc;">OWL framework, JavaScript ES2022, template XML, SCSS, Bootstrap 5</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">🌐</div>
+            <h4 style="color:#875A7B;">Web Server</h4>
+            <p style="color:#ccc;">Nginx reverse proxy, longpolling, WebSocket, gzip, Let's Encrypt</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">🐳</div>
+            <h4 style="color:#875A7B;">Container</h4>
+            <p style="color:#ccc;">Docker, Docker Compose, multi-stage build, immagini ufficiali odoo:18</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">🔌</div>
+            <h4 style="color:#875A7B;">API</h4>
+            <p style="color:#ccc;">XML-RPC, JSON-RPC, <a href="creazione-api-rest.html" style="color:#ccc;">REST custom</a>, webhook outbound, OAuth2</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">🔐</div>
+            <h4 style="color:#875A7B;">Security</h4>
+            <p style="color:#ccc;">Access rules, record rules ir.rule, 2FA, SAML/OAuth SSO, audit log</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="step-card">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">📦</div>
+            <h4 style="color:#875A7B;">DevOps</h4>
+            <p style="color:#ccc;">Git workflow, CI/CD GitLab/GitHub Actions, backup S3, monitoring Prometheus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMMAGINE TEAM -->
+  <section style="padding: 2rem 0 4rem 0; background: #000;">
+    <div class="container">
+      <div class="section-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=600&fit=crop&auto=format&q=80"
+          srcset="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=300&fit=crop&auto=format&q=80 600w,
+                  https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=600&fit=crop&auto=format&q=80 1200w,
+                  https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1800&h=900&fit=crop&auto=format&q=80 1800w"
+          sizes="(max-width: 1000px) 100vw, 1000px"
+          alt="Team al lavoro su lavagna - workshop analisi requisiti e metodologia agile implementazione Odoo ERP"
+          width="1200" height="600"
+          loading="lazy" decoding="async"
+          class="section-image">
+        <p class="section-image-caption">Workshop di analisi requisiti e sprint planning: metodologia agile con demo settimanali e validazione continua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGIA -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Metodologia di implementazione</h2>
+      <p class="section-subtitle">
+        Processo collaudato su oltre 30 implementazioni Odoo. Approccio agile con sprint da 2 settimane, demo iterative e validazione continua per evitare il classico effetto big-bang che fallisce nel 40% dei progetti ERP tradizionali.
+      </p>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h4 style="color: #875A7B;">Discovery & Analisi</h4>
+            <p style="color: #ccc;">Workshop iniziale 8-16 ore. Mappatura processi as-is, definizione to-be, gap analysis, scelta moduli e versione (Community vs Enterprise), pianificazione sprint.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h4 style="color: #875A7B;">Preventivo & Roadmap</h4>
+            <p style="color: #ccc;">Documento tecnico-economico con breakdown costi per modulo, timeline sprint, milestone, deliverable. Contratto con SLA e responsabilità chiare.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h4 style="color: #875A7B;">Setup Ambienti</h4>
+            <p style="color: #ccc;">Provisioning produzione + staging + dev. Configurazione Docker, PostgreSQL tuning, Nginx + SSL, backup automatici, monitoring, Git repository moduli custom.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <h4 style="color: #875A7B;">Configurazione Moduli</h4>
+            <p style="color: #ccc;">Attivazione moduli, settaggio company, piano dei conti, IVA, listini, magazzini, ruoli utente, workflow approval, template documenti.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">5</div>
+            <h4 style="color: #875A7B;">Sviluppo Custom</h4>
+            <p style="color: #ccc;">Moduli Python custom, integrazioni API, report QWeb branded, automazioni cron, dashboard OWL. Test unitari e integration test. Code review.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">6</div>
+            <h4 style="color: #875A7B;">Migrazione Dati</h4>
+            <p style="color: #ccc;">Script ETL Python con pandas. Import anagrafiche, articoli, stock, storico fatture. Validazione integrità con matching totali e quadrature.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">7</div>
+            <h4 style="color: #875A7B;">Test & UAT</h4>
+            <p style="color: #ccc;">User Acceptance Testing con key-user su scenari reali. Bug-fixing iterativo. Test prestazionali con dataset di produzione. Test backup/restore.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">8</div>
+            <h4 style="color: #875A7B;">Formazione</h4>
+            <p style="color: #ccc;">Sessioni dedicate utenti finali e key-user. Materiale didattico personalizzato. Knowledge base interna. Onboarding nuovi assunti incluso nel pacchetto.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="step-card">
+            <div class="step-num">9</div>
+            <h4 style="color: #875A7B;">Go-Live & Supporto</h4>
+            <p style="color: #ccc;">Cutover pianificato weekend. Parallel run 2-4 settimane. Supporto post-go-live 30 giorni incluso. Passaggio a contratto di manutenzione mensile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESEMPI MODULI CUSTOM -->
+  <section style="padding: 5rem 0; background: #000;">
+    <div class="container">
+      <h2 class="section-title">Esempi di moduli Odoo custom sviluppati</h2>
+      <p class="section-subtitle">
+        Personalizzazioni verticali realizzate per clienti italiani. Tutti i moduli sono manutenuti, documentati, conformi alle linee guida Odoo.
+      </p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">📊 Dashboard KPI Direzionale</h4>
+            <p style="color:#ccc;">Dashboard custom con OWL per CEO/CFO: revenue mensile real-time, margine commessa, cash flow forecasting 90 giorni, top clienti, scaduto incassi/pagamenti, alert deviazioni budget. Refresh automatico via WebSocket.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">📋 Workflow Approvazioni Multi-Livello</h4>
+            <p style="color:#ccc;">Modulo per RDA (richieste d'acquisto) e ordini con catena approvazioni configurabile: importo &lt; €500 capoufficio, €500-5k responsabile, &gt; €5k CFO. Notifiche email + Telegram, deleghe ferie, audit log completo.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">🏗️ Modulo Edilizia con SAL</h4>
+            <p style="color:#ccc;">Gestione cantieri edili con stato avanzamento lavori (SAL), computo metrico estimativo, subappalti, gestione mezzi e attrezzature, sicurezza POS/PSC, fatturazione progressiva ANAC-compliant.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">🛒 Connettore PrestaShop Bidirezionale</h4>
+            <p style="color:#ccc;">Sincronizzazione real-time Odoo ↔ PrestaShop: catalogo prodotti con varianti, stock multi-magazzino, prezzi listini, ordini, fatture, clienti, indirizzi. Webhook + queue Redis per affidabilità, retry automatici.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">🚚 Integrazione Vettori Italia</h4>
+            <p style="color:#ccc;">Integrazione native con BRT, GLS, SDA, DHL, UPS: creazione spedizione automatica da DDT, stampa etichette PDF, tracking real-time, notifiche clienti, gestione resi RMA, calcolo costi automatico.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">🤖 AI Lead Scoring</h4>
+            <p style="color:#ccc;">Modulo CRM con scoring lead basato su modello ML: probabilità conversione, deal size atteso, prossima azione consigliata. Pipeline auto-prioritizzata. Integrazione OpenAI per analisi sentiment email cliente.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">💰 Fatturazione SDI con ACube</h4>
+            <p style="color:#ccc;">Integrazione fatturazione elettronica via provider ACube: invio automatico fatture attive, ricezione passive con OCR su PDF, gestione notifiche SDI, conservazione sostitutiva a norma, riconciliazione automatica.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background:#1a1a1a; border-left:4px solid #875A7B; padding:2rem; border-radius:10px; height:100%;">
+            <h4 style="color:#875A7B; margin-bottom:1rem;">📱 App Mobile Field Service</h4>
+            <p style="color:#ccc;">App mobile React Native per tecnici esterni: visualizzazione interventi, timer lavorazione, foto pre/post, firma cliente, generazione DDT/fattura on-site, sync offline-first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Curiosity -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #875A7B 0%, #5e3d56 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Vuoi sapere se Odoo è adatto alla tua azienda?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Scrivimi su WhatsApp, analisi gratuita 30 minuti senza impegno</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Scrivimi su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- PREZZI -->
+  <section style="padding: 5rem 0; background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Pacchetti e prezzi indicativi</h2>
+      <p class="section-subtitle">
+        Tariffe trasparenti per i progetti più comuni. Ogni preventivo è personalizzato dopo la call di analisi gratuita. Possibilità di pagamento dilazionato e formule a SAL.
+      </p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="service-card" style="text-align:center;">
+            <div class="service-icon">🌱</div>
+            <h3 class="service-title">Starter</h3>
+            <p style="color:#ccc; line-height:1.6;">Per micro-impresa o startup. Community, 1-5 utenti, contabilità + CRM + vendite + magazzino base.</p>
+            <div class="service-price">€2.500 — €5.000</div>
+            <ul style="color:#ccc; text-align:left; line-height:1.8;">
+              <li>Setup hosting self-hosted</li>
+              <li>Configurazione 4 moduli base</li>
+              <li>Import anagrafiche</li>
+              <li>FatturaPA OCA</li>
+              <li>Formazione 8 ore</li>
+              <li>Supporto 30gg</li>
+            </ul>
+            <p style="margin-top:1.5rem;"><strong style="color:#875A7B;">Timeline:</strong> 2-4 settimane</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-card" style="text-align:center; border-color:#fff;">
+            <div class="service-icon">🚀</div>
+            <h3 class="service-title">PMI Standard</h3>
+            <p style="color:#ccc; line-height:1.6;">Per PMI 10-30 utenti. Community o Enterprise. 5-8 moduli, 1-2 integrazioni, 1-2 moduli custom medi.</p>
+            <div class="service-price">€8.000 — €20.000</div>
+            <ul style="color:#ccc; text-align:left; line-height:1.8;">
+              <li>Setup produzione + staging</li>
+              <li>5-8 moduli configurati</li>
+              <li>1-2 integrazioni API</li>
+              <li>Sviluppo modulo custom medio</li>
+              <li>Migrazione dati storici</li>
+              <li>Formazione 20 ore</li>
+              <li>Supporto 60gg</li>
+            </ul>
+            <p style="margin-top:1.5rem;"><strong style="color:#875A7B;">Timeline:</strong> 6-12 settimane</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-card" style="text-align:center;">
+            <div class="service-icon">🏢</div>
+            <h3 class="service-title">Enterprise</h3>
+            <p style="color:#ccc; line-height:1.6;">Per azienda 50+ utenti, multi-company, MRP, integrazioni ERP legacy, sviluppo verticale settoriale.</p>
+            <div class="service-price">€25.000 — €80.000+</div>
+            <ul style="color:#ccc; text-align:left; line-height:1.8;">
+              <li>Architettura HA + replication</li>
+              <li>10+ moduli configurati</li>
+              <li>Multi-azienda multi-valuta</li>
+              <li>Sviluppo modulo verticale</li>
+              <li>3+ integrazioni complesse</li>
+              <li>Migrazione storico multi-anno</li>
+              <li>Formazione completa</li>
+              <li>Supporto 90gg + contratto</li>
+            </ul>
+            <p style="margin-top:1.5rem;"><strong style="color:#875A7B;">Timeline:</strong> 4-8 mesi</p>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center; color:#ccc; margin-top:2rem; font-size:0.95rem;">
+        <em>Prezzi escludono licenze Enterprise (€31,10/utente/mese) e hosting (€30-€500/mese). Possibilità SAL 30/30/30/10.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 5rem 0; background: #000;">
+    <div class="container" style="max-width: 1000px;">
+      <h2 class="section-title">Domande frequenti su Odoo</h2>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Cos'è Odoo e perché sceglierlo come ERP? <span class="arrow">▼</span></div>
+        <div class="faq-a">Odoo è una suite ERP open source modulare che integra CRM, vendite, acquisti, magazzino, contabilità, produzione (MRP), e-commerce, HR, project management e marketing in un'unica piattaforma. Disponibile in versione Community (gratuita, open source LGPL) ed Enterprise (a pagamento). Vantaggi: oltre 40 moduli ufficiali, 30.000+ moduli community OCA, interfaccia moderna, scalabilità da micro-impresa a multinazionale, costi di licenza nettamente inferiori a SAP, Oracle, Microsoft Dynamics. Per il mercato italiano è la scelta più equilibrata in termini di rapporto funzionalità/costo/manutenibilità.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Qual è la differenza tra Odoo Community e Odoo Enterprise? <span class="arrow">▼</span></div>
+        <div class="faq-a">Community è gratuita e include CRM, vendite, acquisti, magazzino, contabilità base, progetti, sito web. Enterprise (€31,10/utente/mese list, €24,90 con annual billing) aggiunge: contabilità completa con riconciliazione bancaria AI, app mobile native iOS/Android, Studio (no-code builder), Marketing Automation, Field Service, Sign, Documents DMS, MRP II avanzato, supporto ufficiale Odoo SA, upgrade gestiti, hosting Odoo.sh. Per PMI italiane fino a 15 utenti la Community con moduli OCA italiani (l10n_it_*) basta nel 60% dei casi. Vedi la tabella comparativa in questa pagina.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Quanto costa implementare Odoo in azienda? <span class="arrow">▼</span></div>
+        <div class="faq-a">Da €3.000 a €50.000+ in base a complessità. Pacchetto starter (1-5 utenti, 3-5 moduli) €2.500-€5.000. PMI standard (10-30 utenti, 5-8 moduli, integrazioni base) €8.000-€20.000. Implementazione complessa (50+ utenti, MRP, multi-azienda, integrazioni custom, sviluppo moduli verticali) €25.000-€80.000. Aggiunge licenze Enterprise se necessarie (€31,10/utente/mese) e hosting (€30-€500/mese). Possibilità di pagamento dilazionato e formule SAL.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Quanto tempo serve per implementare Odoo? <span class="arrow">▼</span></div>
+        <div class="faq-a">Quick-start Community con moduli standard 2-4 settimane. PMI tipica (5-10 moduli, import dati, formazione, 1-2 customizzazioni) 6-12 settimane. Progetto complesso con sviluppo verticale, integrazioni ERP legacy, migrazione storico multi-anno 4-8 mesi. Uso metodologia agile con sprint da 2 settimane e demo settimanali per ridurre rischi e validare requisiti progressivamente.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Posso migrare da Danea, Fatture in Cloud, Zucchetti, TeamSystem o SAP a Odoo? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sì, supporto migrazioni da SAP Business One, Microsoft Dynamics 365 BC, Zucchetti Mago/Ad Hoc Enterprise, TeamSystem Gamma Enterprise, Danea Easyfatt, Fatture in Cloud, Aruba Fatturazione, software custom legacy MSSQL/MySQL. Migrazione tipica include: mappatura schema dati, ETL con script Python custom, validazione integrità (matching totali, quadrature IVA), dry-run su staging, formazione team, go-live con parallel run 2-4 settimane. Costo €2.500-€15.000 in base a volume dati e complessità trasformazioni.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Si può fare upgrade da Odoo 14/15/16 a Odoo 17 o 18? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sì. Upgrade minor (es. 17.0 → 17.4) è quasi automatico. Upgrade major richiede: audit moduli custom esistenti, refactoring codice Python per nuove API (es. rimozione decoratori obsoleti, nuovo ORM), aggiornamento vista form/list a OWL framework, test regressione, migrazione dati con script OpenUpgrade. Costo upgrade community €1.500-€8.000. Per Enterprise con DB &lt; 500MB il tool ufficiale upgrade.odoo.com è gratuito incluso nel contratto.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Odoo supporta la fatturazione elettronica italiana SDI? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sì. Odoo Enterprise include nativamente l'integrazione fatturazione elettronica italiana via SDI con provider certificati. Per Community c'è il modulo OCA <code>l10n_it_fatturapa</code> che genera XML FatturaPA conforme + integrazione SDI tramite intermediario (ACube, Aruba, FattureInCloud). Implementazione completa con piano dei conti italiano, esterometro, intrastat, split payment, reverse charge €1.500-€4.000. Conservazione sostitutiva a norma 10 anni inclusa.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Si può integrare Odoo con PrestaShop, WooCommerce o Shopify? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sì, sviluppo integrazioni bidirezionali Odoo ↔ e-commerce. Sincronizzazione catalogo prodotti, stock multi-magazzino, ordini, clienti, fatture, tracking spedizioni, varianti, listini multi-valuta. Per PrestaShop uso connettore OCA o sviluppo custom. Per WooCommerce/Shopify uso webhook + API REST con queue Redis per affidabilità. Costo integrazione €1.500-€6.000 in base a complessità e numero entità da sincronizzare.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Posso ospitare Odoo sul mio server o serve Odoo.sh? <span class="arrow">▼</span></div>
+        <div class="faq-a">Entrambe le opzioni sono valide. Odoo.sh (PaaS ufficiale) parte da €58/mese, include backup automatici, staging environment, deploy via Git, upgrade gestiti — consigliato per chi vuole zero gestione sistemistica. Self-hosted su VPS Linux (Hetzner, OVH, Aruba Cloud) parte da €30/mese, richiede sysadmin per backup, sicurezza, upgrade — più flessibile e meno costoso a lungo termine. Offro setup self-hosted Docker con PostgreSQL ottimizzato, Nginx reverse proxy, Let's Encrypt SSL, backup automatici S3, monitoring.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Sviluppi moduli Odoo custom da zero? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sì, sviluppo moduli Odoo custom in Python + XML + OWL framework. Esperienza in workflow approval custom, report PDF QWeb personalizzati, dashboard analytics con grafici, integrazioni API esterne (Sendinblue, HubSpot, fatturazione provider), moduli verticali settoriali (officine, immobiliare, hotel, studi professionali), automazioni cron, wizard guidati, web controller custom. Codice consegnato pulito, testato, conforme alle linee guida Odoo SA e pubblicabile su Odoo Apps Marketplace se richiesto.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Offri formazione e supporto post-implementazione? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sì. Formazione utenti finali (4-16 ore) e key-user (8-24 ore con focus configurazione e amministrazione). Materiale didattico in italiano con screenshot e video tutorial registrati sulla tua istanza. Supporto post-go-live a canone mensile da €390/mese: SLA risposta 4h business hours, bug-fixing su moduli custom illimitato, 5-10 ore evolutive incluse al mese, monitoring proattivo, backup verification settimanale, upgrade minor inclusi. Pacchetti annuali con sconto 15%.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Odoo è adatto a piccole imprese o solo a grandi aziende? <span class="arrow">▼</span></div>
+        <div class="faq-a">Adatto a entrambi. Piccole imprese (1-10 dipendenti) usano Community con 3-5 moduli base per €3.000-€8.000 di implementazione, total ownership cost 80% inferiore a Zucchetti/TeamSystem. Aziende medie (10-100 dipendenti) traggono il massimo beneficio: copre tutte le aree gestionali in un'unica piattaforma evitando 5-10 software separati con relativi costi di integrazione. Grandi aziende (100+) usano Enterprise con multi-azienda, multi-valuta, IFRS, integrazioni SAP legacy, ottenendo ROI 12-24 mesi.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Cosa sono i moduli OCA e perché sono importanti? <span class="arrow">▼</span></div>
+        <div class="faq-a">OCA (Odoo Community Association) è l'associazione no-profit che mantiene oltre 9.000 moduli open source di alta qualità per Odoo. Per il mercato italiano OCA fornisce l10n_it_fatturapa, l10n_it_split_payment, l10n_it_reverse_charge, l10n_it_intrastat e decine di altri moduli essenziali per la compliance fiscale. Tutti i moduli OCA sono testati su CI, manutenuti, gratuiti e compatibili con Odoo Community ed Enterprise.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Posso provare Odoo prima di acquistare? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sì, ci sono tre opzioni: 1) Demo online ufficiale gratuita su demo.odoo.com con dataset di esempio, 2) Trial Enterprise gratuito 15 giorni con tutti i moduli su odoo.com, 3) Posso allestire ambiente staging dedicato con i tuoi dati di esempio per validare configurazione e personalizzazioni prima del go-live. Quest'ultima opzione è la più consigliata per progetti reali.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Odoo è meglio di Zucchetti, TeamSystem o SAP? <span class="arrow">▼</span></div>
+        <div class="faq-a">Dipende dal contesto. Odoo vince su: costo licenza (80% inferiore), modernità interfaccia, modularità, ecosystem open source, no vendor lock-in, velocità di personalizzazione. Zucchetti/TeamSystem vincono su: copertura normativa italiana out-of-the-box senza moduli aggiuntivi, supporto commerciale capillare, integrazione con commercialisti italiani. SAP vince su: enterprise feature complesse (multi-paese, multi-valuta, IFRS), supporto 24/7 globale, casistica fortune-500. Per PMI italiana 10-200 dipendenti Odoo è quasi sempre la scelta migliore in termini di TCO.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMMAGINE CODICE/DEV -->
+  <section style="padding: 2rem 0 4rem 0; background: #000;">
+    <div class="container">
+      <div class="section-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop&auto=format&q=80"
+          srcset="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=300&fit=crop&auto=format&q=80 600w,
+                  https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop&auto=format&q=80 1200w,
+                  https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1800&h=900&fit=crop&auto=format&q=80 1800w"
+          sizes="(max-width: 1000px) 100vw, 1000px"
+          alt="Schermo con codice Python - sviluppo moduli Odoo custom in Python, XML e framework OWL"
+          width="1200" height="600"
+          loading="lazy" decoding="async"
+          class="section-image">
+        <p class="section-image-caption">Sviluppo moduli Odoo custom in Python + XML + OWL framework: workflow, API, dashboard, report QWeb branded.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp - Closing -->
+  <section data-bs-version="5.1" class="cta-whatsapp-block scroll-animate" style="padding: 4rem 1rem; background: linear-gradient(135deg, #875A7B 0%, #5e3d56 100%); text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="color: #ffffff; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.75rem;">Preferisci parlare direttamente?</h3>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.75rem;">Contattami su WhatsApp per un confronto rapido sul tuo progetto Odoo</p>
+      <a href="https://wa.me/393516248936" target="_blank" rel="noopener" style="background: #25d366; color: #ffffff; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💬 Contattami su WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section style="background: linear-gradient(135deg, #875A7B 0%, #5e3d56 100%); padding: 5rem 0; text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 3rem; color: #fff; margin-bottom: 2rem;">Pronto a portare la tua azienda su Odoo?</h2>
+      <p style="font-size: 1.3rem; color: #fff; max-width: 850px; margin: 0 auto 3rem auto;">
+        Richiedi una <strong>consulenza gratuita di 30 minuti</strong>: analizziamo insieme i tuoi processi e ricevi un <strong>preventivo personalizzato</strong> con timeline realistica entro 48 ore.
+      </p>
+      <div>
+        <a href="https://wa.me/393516248936" target="_blank" class="btn btn-light btn-lg me-3 mb-2" style="padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold;">
+          💬 WHATSAPP: +39 351 624 8936
+        </a>
+        <a href="mailto:andreapiani.dev@gmail.com" class="btn btn-outline-light btn-lg mb-2" style="padding: 1rem 2.5rem; font-size: 1.2rem;">
+          📧 EMAIL
+        </a>
+      </div>
+      <p style="margin-top: 2rem; color: #fff;">
+        <a href="preventivo-app.html" style="color: #fff; text-decoration: underline;">→ Compila il form preventivo dettagliato</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVIZI CORRELATI -->
+  <section style="padding: 4rem 0; background: #0a0a0a; border-top: 1px solid #222;">
+    <div class="container">
+      <h2 style="text-align:center; color:#875A7B; font-size:2rem; margin-bottom:2.5rem;">Servizi correlati</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="servizi-perfex-crm.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#875A7B'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📞</div>
+            <h3 style="color:#875A7B; font-size:1.3rem; margin-bottom:0.75rem;">Perfex CRM</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Alternativa più leggera a Odoo per chi serve solo CRM, preventivi, fatturazione e gestione progetti.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="gestionali-personalizzati-aziende.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#875A7B'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">💼</div>
+            <h3 style="color:#875A7B; font-size:1.3rem; margin-bottom:0.75rem;">Gestionali personalizzati</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Software gestionale da zero quando Odoo non è la soluzione giusta per i tuoi processi.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="servizi-prestashop.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#875A7B'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🛒</div>
+            <h3 style="color:#875A7B; font-size:1.3rem; margin-bottom:0.75rem;">PrestaShop</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">E-commerce PrestaShop integrato con Odoo per gestione catalogo, stock e ordini bidirezionale.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-python.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#875A7B'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🐍</div>
+            <h3 style="color:#875A7B; font-size:1.3rem; margin-bottom:0.75rem;">Sviluppo Python</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">Stesso stack di Odoo: Python è la mia lingua principale per backend, automazioni, ETL.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="creazione-api-rest.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#875A7B'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">🔌</div>
+            <h3 style="color:#875A7B; font-size:1.3rem; margin-bottom:0.75rem;">API REST & GraphQL</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">API custom per integrare Odoo con sistemi esterni, app mobile, portali clienti, marketplace.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="sviluppo-app-mobile.html" style="display:block; background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:2rem; text-decoration:none; color:#fff; height:100%; transition:0.3s;" onmouseover="this.style.borderColor='#875A7B'" onmouseout="this.style.borderColor='#333'">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📱</div>
+            <h3 style="color:#875A7B; font-size:1.3rem; margin-bottom:0.75rem;">App mobile per Odoo</h3>
+            <p style="color:#ccc; margin:0; line-height:1.6;">App iOS/Android custom collegate a Odoo per field service, vendite, magazzino, dashboard direzionali.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0;">
+    <div class="container">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 1.5rem;">
+          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem;">📄 Privacy Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem;">🍪 Cookie Policy</a>
+          <span style="color: #666;">|</span>
+          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem;">🏠 Home</a>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc;">
+          <strong style="color: #fff;">Andrea Piani</strong> — Consulente e Sviluppatore Odoo ERP<br>
+          <a href="mailto:andreapiani.dev@gmail.com" style="color: #875A7B;">andreapiani.dev@gmail.com</a> · +39 351 624 8936<br>
+          © 2026 Andrea Piani. Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="navbar-fix.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="animations.js"></script>
+  <script src="assets/js/popup-loader.js"></script>
+  <!-- Andrea AI Chat Widget -->
+  <script src="whatsapp-float.js" defer></script>
+</body>
+</html>
