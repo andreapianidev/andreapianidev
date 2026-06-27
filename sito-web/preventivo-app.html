@@ -68,537 +68,489 @@
   }
   </script>
 
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <!-- Fonts: Fraunces (display), Spectral (body), IBM Plex Mono (labels/numbers) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Popup menu (centralized navigation) + cookie banner styles -->
+  <link rel="stylesheet" href="assets/css/popup-menu.css">
   <link rel="stylesheet" href="navbar-fix.css">
-  <link rel="stylesheet" href="animations.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="utilities.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <style>
-    body {
-      font-family: 'Jost', sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      padding: 0;
+    :root{
+      --paper:#FAF7F2;
+      --paper-2:#F3ECE0;
+      --ink:#1A1612;
+      --ink-soft:#544B3F;
+      --clay:#8B7355;
+      --rule:#E4D9C6;
+      --marker:#F2C14E;       /* evidenziatore */
+      --rust:#B4471F;         /* margine rosso / accenti */
+      --wa:#1f8f4e;
+      --ok:#4f7a3a;
+      --shadow:0 28px 70px -30px rgba(26,22,18,.45);
+      --r:14px;
     }
-    .navbar-custom {
-      background: rgba(0,0,0,0.8);
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding: 1rem 0;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Spectral',Georgia,serif;
+      color:var(--ink);
+      background:var(--paper);
+      background-image:
+        radial-gradient(900px 500px at 88% -8%, rgba(242,193,78,.16), transparent 60%),
+        radial-gradient(800px 600px at -8% 108%, rgba(180,71,31,.08), transparent 55%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
     }
-    .navbar-custom a {
-      color: #ffffff !important;
-      margin: 0 1rem;
-      font-weight: 500;
-      text-decoration: none;
+    .wrap{width:min(1080px,92vw);margin-inline:auto}
+    .mono{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.04em}
+
+    /* ---------- TOPBAR ---------- */
+    .topbar{background:var(--ink);color:var(--paper);font-size:.78rem}
+    .topbar__in{width:min(1080px,92vw);margin-inline:auto;display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.55rem 0;flex-wrap:wrap}
+    .topbar__c{display:flex;align-items:center;gap:.5rem;color:#F2E6CF}
+    .dot-red{width:8px;height:8px;border-radius:50%;background:var(--rust);box-shadow:0 0 0 0 rgba(180,71,31,.7);animation:pulse 2.4s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(180,71,31,.6)}70%{box-shadow:0 0 0 8px rgba(180,71,31,0)}100%{box-shadow:0 0 0 0 rgba(180,71,31,0)}}
+    .topbar a{color:#F2E6CF;text-decoration:none}
+
+    /* ---------- NAV ---------- */
+    .nav{position:sticky;top:0;z-index:40;background:rgba(250,247,242,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+    .nav__in{width:min(1080px,92vw);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+    .brand em{font-style:italic;color:var(--clay)}
+    .nav__links{display:flex;gap:1.4rem;align-items:center}
+    .nav__links a{color:var(--ink-soft);text-decoration:none;font-size:.95rem;font-weight:500}
+    .nav__links a:hover{color:var(--ink)}
+    .nav__wa{color:var(--wa)!important}
+    @media(max-width:760px){.nav__links a:not(.nav__wa):not(.nav__home){display:none}}
+
+    /* ---------- HERO ---------- */
+    .hero{padding:4.2rem 0 1.5rem;text-align:center}
+    .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay)}
+    .hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.02;letter-spacing:-.02em;margin:1rem 0 0}
+    .mark{position:relative;white-space:nowrap}
+    .mark::before{content:"";position:absolute;left:-.05em;right:-.05em;bottom:.08em;height:.42em;background:var(--marker);z-index:-1;transform:rotate(-1.2deg);border-radius:3px;opacity:.85}
+    .hero p.sub{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--ink-soft);max-width:40ch;margin:1.2rem auto 0}
+    .stats{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+    .stat{display:flex;align-items:baseline;gap:.5rem;background:#fff;border:1px solid var(--rule);border-radius:50px;padding:.5rem 1.1rem;box-shadow:0 8px 20px -16px rgba(26,22,18,.5)}
+    .stat b{font-family:'IBM Plex Mono',monospace;font-size:1.05rem;color:var(--rust)}
+    .stat span{font-size:.86rem;color:var(--ink-soft)}
+
+    /* ---------- INFO TIP ---------- */
+    .tip{width:min(720px,92vw);margin:2.2rem auto 0;background:#fff;border:1px solid var(--rule);border-left:4px solid var(--marker);border-radius:12px;padding:1rem 1.2rem;font-size:1rem;color:var(--ink-soft)}
+    .tip a{color:var(--rust);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(180,71,31,.35)}
+
+    /* ---------- DOCUMENT / FORM ---------- */
+    .doc{width:min(760px,94vw);margin:2.6rem auto 0;background:#fff;border:1px solid var(--rule);border-radius:var(--r);box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .doc::before{content:"";position:absolute;top:0;bottom:0;left:46px;width:2px;background:rgba(180,71,31,.25)}     /* margine rosso */
+    .doc__head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.2rem 1.6rem 1.2rem 4rem;border-bottom:1px dashed var(--rule);background:linear-gradient(180deg,#fffdf9,#fff)}
+    .doc__title{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay)}
+    .doc__no{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--ink-soft)}
+    .doc__body{padding:2rem 1.8rem 2.2rem 4rem}
+    @media(max-width:560px){
+      .doc::before{left:24px}
+      .doc__head{padding-left:2.4rem}
+      .doc__body{padding-left:2.4rem;padding-right:1.2rem}
     }
-    .navbar-custom a:hover {
-      color: #149dcc !important;
-    }
-    .navbar-custom .active {
-      color: #149dcc !important;
-    }
-    .navbar-brand {
-      color: #149dcc !important;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    .dropdown-menu {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-    }
-    .dropdown-item {
-      color: #ffffff !important;
-      padding: 0.75rem 1.5rem;
-      transition: 0.2s;
-    }
-    .dropdown-item:hover {
-      background-color: #2a2a2a !important;
-      color: #df0067 !important;
-    }
-    .dropdown-item.active {
-      background-color: #2a2a2a !important;
-      color: #df0067 !important;
-      font-weight: bold;
-    }
-    .dropdown-divider {
-      border-color: #333 !important;
-    }
-    .main-content {
-      padding: 2rem 0;
-    }
-    .hero-section {
-      text-align: center;
-      color: white;
-      padding: 3rem 0;
-    }
-    .hero-section h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .hero-section p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-    }
-    .benefits {
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-      padding: 2rem;
-      margin: 2rem 0;
-      color: white;
-    }
-    .benefit-item {
-      padding: 1rem;
-      margin: 0.5rem 0;
-    }
-    .form-container {
-      background: white;
-      border-radius: 20px;
-      padding: 3rem;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-    .step-indicator {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-    }
-    .step {
-      flex: 1;
-      text-align: center;
-      padding: 0.5rem;
-      border-bottom: 3px solid #ddd;
-      position: relative;
-    }
-    .step.active {
-      border-bottom-color: #667eea;
-      font-weight: bold;
-      color: #667eea;
-    }
-    .step.completed {
-      border-bottom-color: #28a745;
-      color: #28a745;
-    }
-    .form-step {
-      display: none;
-    }
-    .form-step.active {
-      display: block;
-    }
-    .cta-button {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border: none;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: transform 0.3s;
-    }
-    .cta-button:hover {
-      transform: scale(1.05);
-      color: white;
-    }
-    .social-proof {
-      background: white;
-      border-radius: 15px;
-      padding: 2rem;
-      margin: 2rem 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+
+    /* progress */
+    .prog{display:flex;gap:.6rem;margin-bottom:1.8rem}
+    .prog__seg{flex:1}
+    .prog__bar{height:5px;border-radius:4px;background:var(--paper-2)}
+    .prog__seg.active .prog__bar{background:var(--ink)}
+    .prog__seg.done .prog__bar{background:var(--ok)}
+    .prog__lbl{margin-top:.4rem;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+    .prog__seg.active .prog__lbl{color:var(--ink)}
+
+    .step{display:none;animation:fade .4s ease}
+    .step.active{display:block}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .step h2{font-family:'Fraunces',serif;font-weight:800;font-size:clamp(1.5rem,3.6vw,2rem);line-height:1.1;margin:0 0 .3rem}
+    .step__hint{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--clay);margin-bottom:1.3rem}
+
+    /* radio cards */
+    .opt{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 1.1rem;border:1.5px solid var(--rule);border-radius:12px;margin-bottom:.7rem;cursor:pointer;position:relative;transition:border-color .2s,transform .15s,background .2s;background:#fff}
+    .opt:hover{border-color:var(--clay);transform:translateX(2px)}
+    .opt input{position:absolute;opacity:0;width:1px;height:1px}
+    .opt__tick{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid var(--rule);display:grid;place-items:center;margin-top:.15rem;transition:.2s;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--clay)}
+    .opt__t{font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem;display:block;line-height:1.25}
+    .opt__d{font-size:.92rem;color:var(--ink-soft)}
+    .opt:has(input:checked){border-color:var(--ink);background:#fffdf7}
+    .opt:has(input:checked)::after{content:"";position:absolute;left:1.1rem;right:1.1rem;top:1.15rem;height:.55em;background:var(--marker);opacity:.5;z-index:0;transform:rotate(-.6deg);border-radius:3px;max-width:62%}
+    .opt:has(input:checked) .opt__tick{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+    .opt:has(input:checked) .opt__tick::after{content:"✓"}
+    .opt:has(input:focus-visible){outline:2px solid var(--rust);outline-offset:2px}
+    .opt>div{position:relative;z-index:1}
+
+    /* fields */
+    .field{margin-bottom:1.1rem}
+    .field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.4rem}
+    .field input,.field textarea{width:100%;font-family:'Spectral',serif;font-size:1.02rem;color:var(--ink);background:var(--paper);border:1.5px solid var(--rule);border-radius:10px;padding:.8rem .9rem;transition:.2s}
+    .field input:focus,.field textarea:focus{outline:none;border-color:var(--ink);background:#fff;box-shadow:0 0 0 4px rgba(242,193,78,.25)}
+    .field textarea{resize:vertical;min-height:120px}
+    .sep{border:none;border-top:1px dashed var(--rule);margin:1.6rem 0}
+    .check{display:flex;gap:.6rem;align-items:flex-start;font-size:.95rem;color:var(--ink-soft);margin:.4rem 0 1.4rem}
+    .check input{margin-top:.25rem;width:18px;height:18px;accent-color:var(--rust)}
+    .check a{color:var(--rust)}
+
+    /* buttons */
+    .row-btn{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+    .btn{font-family:'IBM Plex Mono',monospace;font-weight:600;letter-spacing:.04em;border:none;border-radius:50px;padding:.95rem 1.7rem;font-size:.92rem;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
+    .btn--primary{background:var(--ink);color:var(--paper);box-shadow:0 12px 26px -14px rgba(26,22,18,.9)}
+    .btn--primary:hover{transform:translateY(-2px)}
+    .btn--ghost{background:transparent;color:var(--ink-soft);border:1.5px solid var(--rule)}
+    .btn--ghost:hover{border-color:var(--ink);color:var(--ink)}
+    .btn--send{background:var(--rust);color:#fff;font-size:1rem;box-shadow:0 14px 28px -12px rgba(180,71,31,.8)}
+    .btn--send:hover{transform:translateY(-2px)}
+    .btn--wa{background:var(--wa);color:#fff}
+    .btn--wa:hover{transform:translateY(-2px)}
+
+    /* social proof */
+    .proof{width:min(760px,94vw);margin:3rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:600px){.proof{grid-template-columns:1fr}}
+    .quote{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:1.4rem;position:relative}
+    .quote__stars{color:var(--marker);letter-spacing:2px;font-size:1rem;-webkit-text-stroke:.4px var(--clay)}
+    .quote p{font-style:italic;font-size:1.05rem;margin:.6rem 0 .8rem}
+    .quote cite{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--clay)}
+
+    /* closing */
+    .closing{text-align:center;padding:3.4rem 0 1rem}
+    .closing p{color:var(--ink-soft);font-size:1.1rem;margin-bottom:1.2rem}
+
+    /* footer */
+    footer.ft{background:var(--ink);color:#E9DFCE;margin-top:3.5rem;padding:2.6rem 0 2rem}
+    footer.ft .lks{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.2rem}
+    footer.ft a{color:#E9DFCE;text-decoration:none;font-size:.9rem}
+    footer.ft a:hover{color:var(--marker)}
+    footer.ft .meta{text-align:center;font-size:.86rem;color:#B9AC97;line-height:1.8}
+    footer.ft .meta a{color:var(--marker)}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.step{animation:none}}
   </style>
 </head>
 
 <body>
 
-  <!-- MENU NAVIGAZIONE -->
-  <nav class="navbar navbar-expand-custom navbar-custom sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Andrea Piani</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #fff;">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-
-          <li class="nav-item"><a class="nav-link" href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a></li>
-          <li class="nav-item"><a class="nav-link" href="progetti-open-source.html">Progetti</a></li>
-          <li class="nav-item"><a class="nav-link" href="preventivo-app.html">Preventivo</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://wa.me/393516248936" target="_blank" style="color: #25d366 !important;">WhatsApp</a></li>
-        </ul>
-      </div>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar__in">
+      <div class="mono">Andrea Piani — Sviluppo software su misura · Made in Italy</div>
+      <div class="topbar__c mono"><span class="dot-red" aria-hidden="true"></span><span data-slot-counter>Giugno 2026 — 1 slot libero su 2</span></div>
     </div>
-  </nav>    </div>
   </div>
 
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__in">
+      <a class="brand" href="index.html">Andrea <em>Piani</em></a>
+      <nav class="nav__links" aria-label="Navigazione principale">
+        <a class="nav__home" href="index.html">Home</a>
+        <a href="#" onclick="openServiziPopup(); return false;">Servizi ▾</a>
+        <a href="progetti-open-source.html">Progetti</a>
+        <a href="preventivo-app.html" aria-current="page">Preventivo</a>
+        <a class="nav__wa" href="https://wa.me/393516248936" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
 
-
-  <div class="container main-content">
-
-    <!-- Hero Section -->
-    <div class="hero-section">
-      <h1>Richiedi il Tuo Preventivo Gratuito</h1>
-      <p>Sviluppo App iOS e Android su Misura per la Tua Azienda</p>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="benefits">
-            <div class="row">
-              <div class="col-md-4 benefit-item">
-                <h3>✓ Preventivo in 24h</h3>
-                <p>Risposta rapida e dettagliata</p>
-              </div>
-              <div class="col-md-4 benefit-item">
-                <h3>✓ Consulenza Gratuita</h3>
-                <p>Analisi completa del progetto</p>
-              </div>
-              <div class="col-md-4 benefit-item">
-                <h3>✓ 15+ Anni Esperienza</h3>
-                <p>50+ app pubblicate</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow reveal">Preventivo gratuito · risposta in 24h · nessun impegno</span>
+      <h1 class="reveal">Quanto costa la tua app?<br>Scoprilo in <span class="mark">3 passi</span>.</h1>
+      <p class="sub reveal">Richiedi un <strong>preventivo gratuito</strong> per lo sviluppo della tua app iOS, Android o web. Te lo scrivo io, su misura, entro 24 ore.</p>
+      <div class="stats reveal">
+        <span class="stat"><b>24h</b><span>preventivo scritto</span></span>
+        <span class="stat"><b>15+</b><span>anni di codice</span></span>
+        <span class="stat"><b>50+</b><span>app pubblicate</span></span>
       </div>
     </div>
+  </section>
 
-    <!-- Info Box -->
-    <div class="row justify-content-center mb-4">
-      <div class="col-lg-8">
-        <div style="background: rgba(255,255,255,0.95); border-left: 4px solid #149dcc; border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <p style="margin: 0; color: #333; font-size: 1.05rem;">
-            💡 <strong>Prima di richiedere il preventivo:</strong> scopri <a href="come-creare-app-guadagnare.html" style="color: #149dcc; font-weight: bold; text-decoration: none;">come monetizzare la tua app</a> con In-App Purchases, AdMob e subscription.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Form Section -->
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="form-container">
-
-          <!-- Step Indicator -->
-          <div class="step-indicator">
-            <div class="step active" id="indicator-1">
-              <span>1. Tipo App</span>
-            </div>
-            <div class="step" id="indicator-2">
-              <span>2. Budget</span>
-            </div>
-            <div class="step" id="indicator-3">
-              <span>3. Contatti</span>
-            </div>
-          </div>
-
-          <form id="preventivo-form">
-
-            <!-- Step 1 -->
-            <div class="form-step active" id="step-1">
-              <h2 class="mb-4 text-center">Che tipo di app vuoi realizzare?</h2>
-              <div class="form-check mb-3 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="tipo_app" id="ios" value="App iOS (iPhone/iPad)" required>
-                <label class="form-check-label" for="ios">
-                  <strong>📱 App iOS (iPhone/iPad)</strong><br>
-                  <small>App native per Apple App Store con Swift</small>
-                </label>
-              </div>
-              <div class="form-check mb-3 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="tipo_app" id="android" value="App Android" required>
-                <label class="form-check-label" for="android">
-                  <strong>🤖 App Android</strong><br>
-                  <small>App native per Google Play con Kotlin</small>
-                </label>
-              </div>
-              <div class="form-check mb-3 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="tipo_app" id="cross" value="App Cross-Platform (iOS + Android)" required>
-                <label class="form-check-label" for="cross">
-                  <strong>🔄 App Cross-Platform (iOS + Android)</strong><br>
-                  <small>Un'unica app per entrambe le piattaforme con Flutter</small>
-                </label>
-              </div>
-              <div class="form-check mb-3 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="tipo_app" id="web" value="Web App / Cloud" required>
-                <label class="form-check-label" for="web">
-                  <strong>☁️ Web App / Cloud</strong><br>
-                  <small>Applicazione web progressiva (PWA)</small>
-                </label>
-              </div>
-              <div class="form-check mb-4 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="tipo_app" id="prestashop" value="E-commerce PrestaShop" required>
-                <label class="form-check-label" for="prestashop">
-                  <strong>🛒 E-commerce PrestaShop</strong><br>
-                  <small>Migrazione o sviluppo shop online</small>
-                </label>
-              </div>
-              <div class="text-center">
-                <button type="button" class="btn cta-button" onclick="goToStep(2)">Continua →</button>
-              </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="form-step" id="step-2">
-              <h2 class="mb-4 text-center">Qual è il tuo budget indicativo?</h2>
-              <div class="form-check mb-3 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="budget" id="budget1" value="< 5.000€" required>
-                <label class="form-check-label" for="budget1">
-                  <strong>💰 Meno di 5.000€</strong><br>
-                  <small>Ideale per app semplici o MVP</small>
-                </label>
-              </div>
-              <div class="form-check mb-3 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="budget" id="budget2" value="5.000€ - 10.000€" required>
-                <label class="form-check-label" for="budget2">
-                  <strong>💰💰 5.000€ - 10.000€</strong><br>
-                  <small>App con funzionalità standard</small>
-                </label>
-              </div>
-              <div class="form-check mb-3 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="budget" id="budget3" value="10.000€ - 20.000€" required>
-                <label class="form-check-label" for="budget3">
-                  <strong>💰💰💰 10.000€ - 20.000€</strong><br>
-                  <small>App complesse con integrazioni avanzate</small>
-                </label>
-              </div>
-              <div class="form-check mb-4 p-3 border rounded">
-                <input class="form-check-input" type="radio" name="budget" id="budget4" value="> 20.000€" required>
-                <label class="form-check-label" for="budget4">
-                  <strong>💰💰💰💰 Più di 20.000€</strong><br>
-                  <small>Progetti enterprise o piattaforme complete</small>
-                </label>
-              </div>
-              <div class="text-center">
-                <button type="button" class="btn btn-secondary me-2" onclick="goToStep(1)">← Indietro</button>
-                <button type="button" class="btn cta-button" onclick="goToStep(3)">Continua →</button>
-              </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="form-step" id="step-3">
-              <h2 class="mb-4 text-center">Ultimi dettagli e contatti</h2>
-
-              <h4 class="mb-3">Quando vorresti iniziare?</h4>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="radio" name="tempistiche" id="urgente" value="Il prima possibile" required>
-                <label class="form-check-label" for="urgente">⚡ Il prima possibile</label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="radio" name="tempistiche" id="mese" value="Entro 1 mese" required>
-                <label class="form-check-label" for="mese">📅 Entro 1 mese</label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="radio" name="tempistiche" id="trimestre" value="Entro 3 mesi" required>
-                <label class="form-check-label" for="trimestre">📆 Entro 3 mesi</label>
-              </div>
-              <div class="form-check mb-4">
-                <input class="form-check-input" type="radio" name="tempistiche" id="valutare" value="Sto solo valutando" required>
-                <label class="form-check-label" for="valutare">🤔 Sto solo valutando</label>
-              </div>
-
-              <hr class="my-4">
-
-              <h4 class="mb-3">I tuoi dati</h4>
-              <div class="mb-3">
-                <label class="form-label">Nome e Cognome *</label>
-                <input type="text" class="form-control" name="nome" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Email *</label>
-                <input type="email" class="form-control" name="email" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Telefono (opzionale)</label>
-                <input type="tel" class="form-control" name="telefono">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Descrivi il tuo progetto *</label>
-                <textarea class="form-control" name="messaggio" rows="5" placeholder="Racconta brevemente cosa vuoi realizzare, quali funzionalità sono importanti e quali sono i tuoi obiettivi..." required></textarea>
-              </div>
-              <div class="form-check mb-4">
-                <input class="form-check-input" type="checkbox" id="privacy" required>
-                <label class="form-check-label" for="privacy">
-                  Accetto la privacy policy *
-                </label>
-              </div>
-              <div class="text-center">
-                <button type="button" class="btn btn-secondary me-2" onclick="goToStep(2)">← Indietro</button>
-                <button type="submit" class="btn cta-button btn-lg">✓ INVIA RICHIESTA PREVENTIVO</button>
-              </div>
-            </div>
-
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Social Proof -->
-    <div class="row justify-content-center mt-5">
-      <div class="col-lg-8">
-        <div class="social-proof">
-          <h3 class="text-center mb-4">Cosa Dicono i Miei Clienti</h3>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <div class="p-3">
-                <div class="mb-2" style="color: #ffa500;">★★★★★</div>
-                <p>"Preventivo chiaro e dettagliato ricevuto in meno di 24 ore. Professionalità al top!"</p>
-                <small><strong>Marco R.</strong> - CEO TechStart</small>
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <div class="p-3">
-                <div class="mb-2" style="color: #ffa500;">★★★★★</div>
-                <p>"Andrea ha saputo consigliarmi la soluzione migliore per il mio budget. App fantastica!"</p>
-                <small><strong>Laura B.</strong> - FashionItaly</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer CTA -->
-    <div class="text-center mt-5">
-      <p style="color: white; font-size: 1.2rem;">
-        Preferisci parlare direttamente?<br>
-        <a href="https://wa.me/393516248936" class="btn btn-success btn-lg mt-3" style="border-radius: 50px;">
-          📱 Contattami su WhatsApp
-        </a>
-      </p>
-      <p class="mt-4"><a href="index.html" style="color: white;">← Torna alla Homepage</a></p>
-    </div>
-
+  <!-- INFO TIP -->
+  <div class="tip reveal">
+    💡 <strong>Prima di richiedere il preventivo:</strong> scopri <a href="come-creare-app-guadagnare.html">come monetizzare la tua app</a> con In-App Purchases, AdMob e subscription.
   </div>
 
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
-    function goToStep(stepNum) {
-      const currentStep = document.querySelector('.form-step.active');
-      const currentStepNum = parseInt(currentStep.id.split('-')[1]);
+  <!-- DOCUMENT / FORM -->
+  <section class="doc reveal" aria-label="Modulo richiesta preventivo">
+    <div class="doc__head">
+      <span class="doc__title">Scheda progetto</span>
+      <span class="doc__no" id="doc-step-label">Passo 01 / 03</span>
+    </div>
+    <div class="doc__body">
 
-      // Valida step corrente prima di procedere
-      if (stepNum > currentStepNum) {
-        const requiredInputs = currentStep.querySelectorAll('[required]');
-        let isValid = true;
+      <!-- progress -->
+      <div class="prog" aria-hidden="true">
+        <div class="prog__seg active" id="indicator-1"><div class="prog__bar"></div><div class="prog__lbl">01 · Tipo</div></div>
+        <div class="prog__seg" id="indicator-2"><div class="prog__bar"></div><div class="prog__lbl">02 · Budget</div></div>
+        <div class="prog__seg" id="indicator-3"><div class="prog__bar"></div><div class="prog__lbl">03 · Contatti</div></div>
+      </div>
 
-        requiredInputs.forEach(input => {
-          if (input.type === 'radio') {
-            const radioGroup = currentStep.querySelectorAll(`[name="${input.name}"]`);
-            const isChecked = Array.from(radioGroup).some(radio => radio.checked);
-            if (!isChecked) isValid = false;
-          } else if (!input.value) {
-            isValid = false;
-          }
-        });
+      <form id="preventivo-form" novalidate>
 
-        if (!isValid) {
-          alert('Per favore, completa tutti i campi obbligatori');
-          return;
-        }
-      }
+        <!-- STEP 1 -->
+        <div class="step active" id="step-1">
+          <h2>Che tipo di app vuoi realizzare?</h2>
+          <p class="step__hint">Seleziona una opzione</p>
 
-      // Nascondi step corrente
-      currentStep.classList.remove('active');
-      document.getElementById('indicator-' + currentStepNum).classList.remove('active');
-      document.getElementById('indicator-' + currentStepNum).classList.add('completed');
+          <label class="opt">
+            <input type="radio" name="tipo_app" id="ios" value="App iOS (iPhone/iPad)" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">📱 App iOS (iPhone/iPad)</span><span class="opt__d">App native per Apple App Store con Swift</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tipo_app" id="android" value="App Android" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">🤖 App Android</span><span class="opt__d">App native per Google Play con Kotlin</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tipo_app" id="cross" value="App Cross-Platform (iOS + Android)" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">🔄 App Cross-Platform (iOS + Android)</span><span class="opt__d">Un'unica app per entrambe le piattaforme</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tipo_app" id="web" value="Web App / Cloud" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">☁️ Web App / Cloud</span><span class="opt__d">Applicazione web progressiva (PWA)</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tipo_app" id="prestashop" value="E-commerce PrestaShop" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">🛒 E-commerce PrestaShop</span><span class="opt__d">Migrazione o sviluppo shop online</span></div>
+          </label>
 
-      // Mostra nuovo step
-      document.getElementById('step-' + stepNum).classList.add('active');
-      document.getElementById('indicator-' + stepNum).classList.add('active');
-
-      // Scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-
-  <!-- Footer GDPR -->
-  <footer style="background: #000000; color: #ffffff; padding: 3rem 0 2rem 0; margin-top: 4rem;">
-    <div class="container">
-      <div style="text-align: center;">
-        <div class="footer-links" style="margin-bottom: 1.5rem;">
-          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">📄 Privacy Policy</a>
-          <span style="color: #666;">|</span>
-          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🍪 Cookie Policy</a>
-          <span style="color: #666;">|</span>
-          <a href="#" class="footer-manage-cookies" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">⚙️ Gestisci Cookie</a>
-          <span style="color: #666;">|</span>
-          <a href="index.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">🏠 Home</a>
-          <span style="color: #666;">|</span>
-          <a href="progetti-open-source.html" style="color: #ffffff; text-decoration: none; margin: 0 1rem; font-size: 0.95rem;">💻 Portfolio</a>
+          <div class="row-btn" style="margin-top:1.4rem">
+            <button type="button" class="btn btn--primary" onclick="goToStep(2)">Continua →</button>
+          </div>
         </div>
-        <div style="font-size: 0.9rem; line-height: 1.8; color: #ccc;">
-          <strong style="color: #fff;">Andrea Piani</strong> - Sviluppatore iOS/Android/Web Freelance<br>
-          Email: <a href="mailto:andreapiani.dev@gmail.com" style="color: #149dcc; text-decoration: none;">andreapiani.dev@gmail.com</a> |
-          Tel: <a href="tel:+393516248936" style="color: #149dcc; text-decoration: none;">+39 351 624 8936</a>
-          <br><br>© 2026 Andrea Piani. Tutti i diritti riservati.
+
+        <!-- STEP 2 -->
+        <div class="step" id="step-2">
+          <h2>Qual è il tuo budget indicativo?</h2>
+          <p class="step__hint">Serve solo per orientare la proposta</p>
+
+          <label class="opt">
+            <input type="radio" name="budget" id="budget1" value="< 5.000€" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">Meno di 5.000€</span><span class="opt__d">Ideale per app semplici o MVP</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="budget" id="budget2" value="5.000€ - 10.000€" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">5.000€ – 10.000€</span><span class="opt__d">App con funzionalità standard</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="budget" id="budget3" value="10.000€ - 20.000€" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">10.000€ – 20.000€</span><span class="opt__d">App complesse con integrazioni avanzate</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="budget" id="budget4" value="> 20.000€" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">Più di 20.000€</span><span class="opt__d">Progetti enterprise o piattaforme complete</span></div>
+          </label>
+
+          <div class="row-btn" style="margin-top:1.4rem">
+            <button type="button" class="btn btn--ghost" onclick="goToStep(1)">← Indietro</button>
+            <button type="button" class="btn btn--primary" onclick="goToStep(3)">Continua →</button>
+          </div>
         </div>
+
+        <!-- STEP 3 -->
+        <div class="step" id="step-3">
+          <h2>Ultimi dettagli e contatti</h2>
+          <p class="step__hint">Quando vorresti iniziare?</p>
+
+          <label class="opt">
+            <input type="radio" name="tempistiche" id="urgente" value="Il prima possibile" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">⚡ Il prima possibile</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tempistiche" id="mese" value="Entro 1 mese" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">📅 Entro 1 mese</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tempistiche" id="trimestre" value="Entro 3 mesi" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">📆 Entro 3 mesi</span></div>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tempistiche" id="valutare" value="Sto solo valutando" required>
+            <span class="opt__tick" aria-hidden="true"></span>
+            <div><span class="opt__t">🤔 Sto solo valutando</span></div>
+          </label>
+
+          <hr class="sep">
+
+          <div class="field">
+            <label for="f-nome">Nome e cognome *</label>
+            <input type="text" id="f-nome" name="nome" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email *</label>
+            <input type="email" id="f-email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="f-tel">Telefono (opzionale)</label>
+            <input type="tel" id="f-tel" name="telefono">
+          </div>
+          <div class="field">
+            <label for="f-msg">Descrivi il tuo progetto *</label>
+            <textarea id="f-msg" name="messaggio" rows="5" placeholder="Racconta brevemente cosa vuoi realizzare, quali funzionalità sono importanti e quali sono i tuoi obiettivi..." required></textarea>
+          </div>
+          <label class="check">
+            <input type="checkbox" id="privacy" required>
+            <span>Accetto la <a href="privacy-policy.html" target="_blank" rel="noopener">privacy policy</a> *</span>
+          </label>
+
+          <div class="row-btn">
+            <button type="button" class="btn btn--ghost" onclick="goToStep(2)">← Indietro</button>
+            <button type="submit" class="btn btn--send">✓ Invia richiesta preventivo</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <div class="proof">
+    <figure class="quote reveal">
+      <div class="quote__stars" aria-hidden="true">★★★★★</div>
+      <p>"Preventivo chiaro e dettagliato ricevuto in meno di 24 ore. Professionalità al top!"</p>
+      <cite>Marco R. — CEO TechStart</cite>
+    </figure>
+    <figure class="quote reveal">
+      <div class="quote__stars" aria-hidden="true">★★★★★</div>
+      <p>"Andrea ha saputo consigliarmi la soluzione migliore per il mio budget. App fantastica!"</p>
+      <cite>Laura B. — FashionItaly</cite>
+    </figure>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing wrap reveal">
+    <p>Preferisci parlare direttamente?</p>
+    <a href="https://wa.me/393516248936" class="btn btn--wa" target="_blank" rel="noopener">📱 Scrivimi su WhatsApp</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="ft">
+    <div class="wrap">
+      <div class="lks">
+        <a href="privacy-policy.html">Privacy Policy</a><span style="color:#6b6253">·</span>
+        <a href="cookie-policy.html">Cookie Policy</a><span style="color:#6b6253">·</span>
+        <a href="#" class="footer-manage-cookies">Gestisci Cookie</a><span style="color:#6b6253">·</span>
+        <a href="index.html">Home</a><span style="color:#6b6253">·</span>
+        <a href="progetti-open-source.html">Portfolio</a>
+      </div>
+      <div class="meta">
+        <strong style="color:#fff">Andrea Piani</strong> — Sviluppatore iOS / Android / Web Freelance<br>
+        Email: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a> ·
+        Tel: <a href="tel:+393516248936">+39 351 624 8936</a>
+        <br><br>© 2026 Andrea Piani. Tutti i diritti riservati.
       </div>
     </div>
   </footer>
 
+  <!-- ===== LOGICA MULTI-STEP (preserva campi + invio WhatsApp) ===== -->
   <script>
-    document.querySelectorAll('.footer-manage-cookies').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (window.CookieConsent) window.CookieConsent.reset();
-      });
-    });
-  </script>
+    function goToStep(stepNum){
+      var current = document.querySelector('.step.active');
+      var currentNum = parseInt(current.id.split('-')[1], 10);
 
-  <!-- Cookie Consent Banner GDPR -->
-  <script src="navbar-fix.js"></script>
-  <script src="cookie-consent.js"></script>
+      if (stepNum > currentNum){
+        var ok = true;
+        current.querySelectorAll('[required]').forEach(function(input){
+          if (input.type === 'radio'){
+            var group = current.querySelectorAll('[name="'+input.name+'"]');
+            if (!Array.from(group).some(function(r){return r.checked;})) ok = false;
+          } else if (!input.value.trim()){ ok = false; }
+        });
+        if (!ok){
+          if (window.Toast) window.Toast.error('Completa i campi obbligatori per continuare');
+          else alert('Per favore, completa tutti i campi obbligatori');
+          return;
+        }
+      }
 
-  <script src="animations.js"></script>
+      current.classList.remove('active');
+      var ci = document.getElementById('indicator-'+currentNum);
+      ci.classList.remove('active');
+      if (stepNum > currentNum) ci.classList.add('done');
 
-  <!-- New Features -->
-  <script src="utilities.js"></script>
-  <script src="performance.js"></script>
+      document.getElementById('step-'+stepNum).classList.add('active');
+      document.getElementById('indicator-'+stepNum).classList.remove('done');
+      document.getElementById('indicator-'+stepNum).classList.add('active');
 
-  <script>
+      var lbl = document.getElementById('doc-step-label');
+      if (lbl) lbl.textContent = 'Passo 0'+stepNum+' / 03';
+
+      var doc = document.querySelector('.doc');
+      if (doc) window.scrollTo({ top: doc.offsetTop - 80, behavior: 'smooth' });
+    }
+
     // Invio form via WhatsApp (nessun servizio esterno)
-    (function () {
-      const form = document.getElementById('preventivo-form');
+    (function(){
+      var form = document.getElementById('preventivo-form');
       if (!form) return;
-      const FIELD_LABELS = {
-        tipo_app: 'Tipo App',
-        budget: 'Budget',
-        tempistiche: 'Tempistiche',
-        nome: 'Nome e Cognome',
-        email: 'Email',
-        telefono: 'Telefono',
-        messaggio: 'Descrizione progetto'
+      var FIELD_LABELS = {
+        tipo_app:'Tipo App', budget:'Budget', tempistiche:'Tempistiche',
+        nome:'Nome e Cognome', email:'Email', telefono:'Telefono', messaggio:'Descrizione progetto'
       };
-      form.addEventListener('submit', function (e) {
+      form.addEventListener('submit', function(e){
         e.preventDefault();
-        if (!form.checkValidity()) { form.reportValidity(); return; }
+        if (!form.checkValidity()){ form.reportValidity(); return; }
 
-        const fd = new FormData(form);
-        const seen = {};
-        fd.forEach((value, key) => {
+        var fd = new FormData(form), seen = {};
+        fd.forEach(function(value, key){
           if (key.charAt(0) === '_') return;
-          const v = (value || '').toString().trim();
+          var v = (value || '').toString().trim();
           if (!v) return;
           if (seen[key]) seen[key].push(v); else seen[key] = [v];
         });
 
-        let msg = 'Ciao Andrea! Ho compilato il form per un preventivo sul sito.\n\n';
-        Object.keys(seen).forEach(key => {
-          const label = FIELD_LABELS[key] || key.replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        var msg = 'Ciao Andrea! Ho compilato il form per un preventivo sul sito.\n\n';
+        Object.keys(seen).forEach(function(key){
+          var label = FIELD_LABELS[key] || key.replace(/[_-]+/g,' ').replace(/\b\w/g,function(c){return c.toUpperCase();});
           msg += '• ' + label + ': ' + seen[key].join(', ') + '\n';
         });
 
         window.open('https://wa.me/393516248936?text=' + encodeURIComponent(msg), '_blank');
-
-        if (window.AppUtils) window.AppUtils.trackEvent('Form', 'Submit', 'Contact Form');
-        if (window.Toast) window.Toast.success('Ti sto aprendo WhatsApp per inviarmi la richiesta', 'Grazie!');
+        if (window.AppUtils) window.AppUtils.trackEvent('Form','Submit','Contact Form');
+        if (window.Toast) window.Toast.success('Ti sto aprendo WhatsApp per inviarmi la richiesta','Grazie!');
       });
     })();
+
+    // Reveal on scroll
+    (function(){
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold:.12 });
+      els.forEach(function(el,i){ el.style.transitionDelay = Math.min(i*60,360)+'ms'; io.observe(el); });
+    })();
+
+    // Gestisci cookie
+    document.querySelectorAll('.footer-manage-cookies').forEach(function(link){
+      link.addEventListener('click', function(e){ e.preventDefault(); if (window.CookieConsent) window.CookieConsent.reset(); });
+    });
   </script>
 
+  <!-- Support scripts (cookie, toast/utils, popup nav, slot counter, whatsapp) -->
+  <script src="cookie-consent.js"></script>
+  <script src="utilities.js"></script>
   <script src="assets/js/popup-loader.js"></script>
-<!-- Andrea AI Chat Widget -->
+  <script src="assets/js/slot-counter.js" defer></script>
   <script src="whatsapp-float.js" defer></script>
 </body>
 </html>
