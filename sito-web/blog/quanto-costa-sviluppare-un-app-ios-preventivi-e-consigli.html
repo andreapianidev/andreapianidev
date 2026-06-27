@@ -332,15 +332,18 @@
     }
     .ap-footer a { color: var(--espresso); text-decoration: none; font-weight: 600; }
 
-    /* ── Reveal animation ── */
-    .ap-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
-    .ap-reveal.ap-visible { opacity: 1; transform: translateY(0); }
+    /* ── Reveal animation (CSS-only, no JS dependency) ── */
+    @keyframes ap-fade-in {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .ap-reveal { animation: ap-fade-in 0.6s ease-out forwards; }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important; transition-duration: 0.01ms !important;
       }
-      .ap-reveal { opacity: 1; transform: none; }
+      .ap-reveal { animation: none; opacity: 1; transform: none; }
     }
 
     @media (max-width: 768px) {
@@ -418,7 +421,7 @@
 
 <h3>Perché i costi delle app iOS variano così tanto?</h3>
 
-<p>Il primo motivo è la complessità tecnica. Un'app che deve semplicemente mostrare contenuti informativi (una vetrina digitale) avrà un costo radicalmente diverso da un'app che integra pagamenti, geolocalizzazione, chat in tempo reale, intelligenza artificiale o sincronizzazione con dispositivi esterni. La differenza non sta solo nel numero di funzionalità, ma anche nell'architettura software necessaria per farle funzionare in modo fluido e sicuro.</p>
+<p class="ap-dropcap">Il primo motivo è la complessità tecnica. Un'app che deve semplicemente mostrare contenuti informativi (una vetrina digitale) avrà un costo radicalmente diverso da un'app che integra pagamenti, geolocalizzazione, chat in tempo reale, intelligenza artificiale o sincronizzazione con dispositivi esterni. La differenza non sta solo nel numero di funzionalità, ma anche nell'architettura software necessaria per farle funzionare in modo fluido e sicuro.</p>
 
 <p>Il secondo fattore è il design. Non stiamo parlando solo di "quanto è bella" l'app, ma di usabilità, accessibilità e coerenza con le linee guida Apple (Human Interface Guidelines). Un design professionale richiede ricerca utente, prototipazione, test di usabilità e iterazioni. Saltare questi passaggi può sembrare un risparmio, ma si traduce quasi sempre in un'app che gli utenti disinstallano dopo pochi giorni.</p>
 
@@ -712,12 +715,6 @@ Swift è il linguaggio standard per lo sviluppo nativo iOS. Per il backend si us
       const h = document.documentElement.scrollHeight - window.innerHeight;
       p.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
     }, { passive: true });
-
-    // Reveal on scroll
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('ap-visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.ap-reveal').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
