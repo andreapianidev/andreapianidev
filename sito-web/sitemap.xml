@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage -->
+  
   <url>
     <loc>https://www.andreapiani.com/</loc>
     <lastmod>2026-06-27</lastmod>
@@ -12,7 +9,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Homepage Inglese -->
+  
   <url>
     <loc>https://www.andreapiani.com/indexen.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -20,7 +17,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Landing Page Preventivo -->
+  
   <url>
     <loc>https://www.andreapiani.com/preventivo-app.html</loc>
     <lastmod>2025-10-11</lastmod>
@@ -28,7 +25,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Pagine Servizi -->
+  
   <url>
     <loc>https://www.andreapiani.com/sviluppo-app-mobile.html</loc>
     <lastmod>2025-10-13</lastmod>
@@ -50,7 +47,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Pagina Servizio Migrazione PrestaShop -->
+  
   <url>
     <loc>https://www.andreapiani.com/migrazione-prestashop-8-9.html</loc>
     <lastmod>2026-06-27</lastmod>
@@ -58,7 +55,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Scanner Sicurezza PrestaShop -->
+  
   <url>
     <loc>https://www.andreapiani.com/analisi-sicurezza-prestashop.html</loc>
     <lastmod>2025-10-13</lastmod>
@@ -66,7 +63,7 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- PrestaSQLeditor - Modulo Open Source -->
+  
   <url>
     <loc>https://www.andreapiani.com/prestashop-sqleditor.html</loc>
     <lastmod>2025-10-13</lastmod>
@@ -74,7 +71,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Scansione SEO PrestaShop -->
+  
   <url>
     <loc>https://www.andreapiani.com/scansione-seo-prestashop.html</loc>
     <lastmod>2025-10-21</lastmod>
@@ -82,7 +79,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Creazione API REST &amp; GraphQL -->
+  
   <url>
     <loc>https://www.andreapiani.com/creazione-api-rest.html</loc>
     <lastmod>2026-05-19</lastmod>
@@ -97,7 +94,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Pagine SEO Landing Phase 1 (Alta Priorità) -->
+  
   <url>
     <loc>https://www.andreapiani.com/quanto-costa-sviluppare-app.html</loc>
     <lastmod>2025-10-13</lastmod>
@@ -147,7 +144,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Portfolio -->
+  
   <url>
     <loc>https://www.andreapiani.com/app-pubblicate-store.html</loc>
     <lastmod>2025-10-13</lastmod>
@@ -155,7 +152,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Pagine SEO Landing Phase 2 (Media Priorità) -->
+  
   <url>
     <loc>https://www.andreapiani.com/app-native-vs-cross-platform.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -170,7 +167,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Risorse Lead Magnet -->
+  
   <url>
     <loc>https://www.andreapiani.com/guida-sviluppo-app-mvp-2025.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -178,7 +175,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Guida Monetizzazione App -->
+  
   <url>
     <loc>https://www.andreapiani.com/come-creare-app-guadagnare.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -186,7 +183,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- CRM custom per PMI italiane -->
+  
   <url>
     <loc>https://www.andreapiani.com/crm.html</loc>
     <lastmod>2026-05-19</lastmod>
@@ -201,7 +198,7 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- Servizi Odoo ERP -->
+  
   <url>
     <loc>https://www.andreapiani.com/servizi-odoo.html</loc>
     <lastmod>2026-05-15</lastmod>
@@ -209,7 +206,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Gestionali Personalizzati -->
+  
   <url>
     <loc>https://www.andreapiani.com/gestionali-personalizzati.html</loc>
     <lastmod>2025-10-14</lastmod>
@@ -224,7 +221,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Progetti Open Source -->
+  
   <url>
     <loc>https://www.andreapiani.com/mouse-auto-clicker.html</loc>
     <lastmod>2025-10-16</lastmod>
@@ -232,7 +229,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- SaaS Live: Landing Agente Immobiliare AI -->
+  
   <url>
     <loc>https://www.andreapiani.com/agente-immobiliare-ai.html</loc>
     <lastmod>2026-05-19</lastmod>
@@ -240,7 +237,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- SaaS Live: Landing CheckIn Digitale Hotel -->
+  
   <url>
     <loc>https://www.andreapiani.com/checkin-digitale-hotel.html</loc>
     <lastmod>2026-05-19</lastmod>
@@ -248,7 +245,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- SaaS Live: Landing CRM Centri Estetici -->
+  
   <url>
     <loc>https://www.andreapiani.com/crm-centri-estetici.html</loc>
     <lastmod>2026-05-19</lastmod>
@@ -256,7 +253,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- SaaS Live: Landing Sito Web Officine Meccaniche con AI -->
+  
   <url>
     <loc>https://www.andreapiani.com/sito-web-officina-meccanica.html</loc>
     <lastmod>2026-04-25</lastmod>
@@ -264,7 +261,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- SaaS Live: PhysioStudio - Gestionale Fisioterapisti -->
+  
   <url>
     <loc>https://www.andreapiani.com/gestionale-studio-fisioterapista.html</loc>
     <lastmod>2026-05-19</lastmod>
@@ -272,7 +269,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- SaaS Live: DriveSchool Manager - Gestionale Autoscuole -->
+  
   <url>
     <loc>https://www.andreapiani.com/software-autoscuola.html</loc>
     <lastmod>2026-04-25</lastmod>
@@ -280,7 +277,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- SaaS Live: JobMate Pro - App Artigiani Idraulici Elettricisti -->
+  
   <url>
     <loc>https://www.andreapiani.com/app-gestione-interventi-artigiani.html</loc>
     <lastmod>2026-04-25</lastmod>
@@ -288,7 +285,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- SaaS Live: WeddingFoto Studio - Gestionale Fotografi Matrimoni -->
+  
   <url>
     <loc>https://www.andreapiani.com/gestionale-fotografo-matrimoni.html</loc>
     <lastmod>2026-04-25</lastmod>
@@ -296,7 +293,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Inserimento Prodotti E-commerce -->
+  
   <url>
     <loc>https://www.andreapiani.com/inserimento-prodotti-ecommerce.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -304,7 +301,7 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- Price Calculator Tool -->
+  
   <url>
     <loc>https://www.andreapiani.com/price-calculator.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -312,7 +309,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Privacy Policy PrestaShop -->
+  
   <url>
     <loc>https://www.andreapiani.com/PrivacyPolicyPS.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -320,7 +317,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Pagine Legali GDPR (Italiano) -->
+  
   <url>
     <loc>https://www.andreapiani.com/privacy-policy.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -335,7 +332,7 @@
     <priority>0.4</priority>
   </url>
 
-  <!-- Pagine Legali GDPR (English) -->
+  
   <url>
     <loc>https://www.andreapiani.com/privacy-policy-en.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -357,7 +354,7 @@
     <priority>0.2</priority>
   </url>
 
-  <!-- ARTICOLI START -->
-  <!-- ARTICOLI END -->
+  
+  
 
-</urlset>
+<url><loc>https://www.andreapiani.com/blog/quanto-costa-sviluppare-un-app-ios-preventivi-e-consigli.html</loc><lastmod>2026-06-27</lastmod></url></urlset>
