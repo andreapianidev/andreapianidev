@@ -1,155 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog Andrea Piani — Guide su App, CRM, PrestaShop, Siti Web</title>
-  <meta name="description" content="Articoli e guide tecniche di Andrea Piani: sviluppo app iOS/Android, CRM personalizzati, PrestaShop, gestionali e siti web professionali.">
-  <link rel="canonical" href="https://www.andreapiani.com/blog/">
-  <link rel="icon" href="/assets/images/andrea-piani-logo.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream: #FAF7F2; --off-white: #FFFDF9; --espresso: #1A1612;
-      --taupe: #8B7355; --taupe-light: #5C5345; --gold: #FFD60A;
-      --gold-soft: rgba(255, 214, 10, 0.12); --border: rgba(26, 22, 18, 0.10); --radius: 10px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    ::selection { background: var(--gold); color: var(--espresso); }
-    body {
-      font-family: "DM Sans", -apple-system, sans-serif;
-      background: var(--cream); color: var(--espresso); line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    body::before {
-      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-    }
-    .ap-nav {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(250, 247, 242, 0.88); backdrop-filter: blur(14px) saturate(180%);
-      border-bottom: 1px solid var(--border);
-    }
-    .ap-nav-inner {
-      max-width: 1200px; margin: 0 auto; padding: 16px 32px;
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
-    }
-    .ap-logo {
-      font-family: "Playfair Display", serif; font-size: 22px; font-weight: 900;
-      color: var(--espresso); text-decoration: none; letter-spacing: -0.5px;
-    }
-    .ap-logo span { color: var(--gold); }
-    .ap-nav-links { display: flex; gap: 28px; }
-    .ap-nav-links a {
-      color: var(--taupe-light); text-decoration: none; font-size: 15px; font-weight: 500;
-      transition: color 0.2s;
-    }
-    .ap-nav-links a:hover { color: var(--espresso); }
-    .ap-nav-cta {
-      background: var(--espresso); color: var(--cream); padding: 8px 20px;
-      border-radius: 999px; font-size: 14px; font-weight: 600; text-decoration: none;
-    }
-    .ap-blog-hero {
-      max-width: 900px; margin: 0 auto; padding: 64px 24px 40px; text-align: center;
-    }
-    .ap-blog-hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(36px, 6vw, 56px); font-weight: 900; line-height: 1.1;
-      letter-spacing: -0.02em; margin-bottom: 16px;
-    }
-    .ap-blog-hero h1 span { color: var(--gold); }
-    .ap-blog-hero p {
-      font-family: "Playfair Display", serif; font-style: italic;
-      font-size: 22px; color: var(--taupe-light); line-height: 1.5;
-    }
-    .ap-blog-grid {
-      max-width: 1100px; margin: 0 auto; padding: 0 24px 100px;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px;
-    }
-    .ap-card {
-      border-radius: var(--radius); overflow: hidden; background: var(--off-white);
-      border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-    }
-    .ap-card:hover {
-      transform: translateY(-6px); border-color: var(--gold);
-      box-shadow: 0 16px 40px rgba(26,22,18,0.1);
-    }
-    .ap-card a { text-decoration: none; color: inherit; display: block; }
-    .ap-card-img {
-      width: 100%; height: 200px; background-size: cover; background-position: center;
-      border-radius: var(--radius) var(--radius) 0 0;
-    }
-    .ap-card-body { padding: 24px 28px; }
-    .ap-card-tag {
-      display: inline-block; background: var(--gold-soft); color: var(--espresso);
-      padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;
-    }
-    .ap-card h2 {
-      font-family: "Playfair Display", serif; font-size: 22px; font-weight: 700;
-      line-height: 1.25; margin-bottom: 10px; color: var(--espresso);
-    }
-    .ap-card p { color: var(--taupe); font-size: 15px; line-height: 1.5; margin-bottom: 14px;
-      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .ap-card-meta { font-size: 13px; color: var(--taupe); }
-    .avo-wa {
-      position: fixed; right: 24px; bottom: 24px; z-index: 999;
-      width: 62px; height: 62px; border-radius: 50%; background: #25D366; color: #fff;
-      display: flex; align-items: center; justify-content: center; text-decoration: none;
-      box-shadow: 0 8px 28px rgba(37,211,102,0.45); transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .avo-wa:hover { transform: scale(1.08) rotate(-4deg); box-shadow: 0 12px 36px rgba(37,211,102,0.6); }
-    .avo-wa svg { width: 32px; height: 32px; }
-    .avo-wa::before {
-      content: ""; position: absolute; inset: -4px; border-radius: 50%;
-      border: 2px solid rgba(37,211,102,0.3); animation: ap-pulse 2s ease-out infinite;
-    }
-    @keyframes ap-pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.4); opacity: 0; } }
-    .ap-footer {
-      border-top: 1px solid var(--border); padding: 32px; text-align: center;
-      font-size: 14px; color: var(--taupe); background: var(--off-white);
-    }
-    .ap-footer a { color: var(--espresso); text-decoration: none; font-weight: 600; }
-    @media (max-width: 768px) {
-      .ap-nav-links { display: none; }
-      .ap-blog-grid { grid-template-columns: 1fr; gap: 24px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog Andrea Piani — Guide su App, CRM, PrestaShop, Siti Web</title>
+<meta name="description" content="Articoli e guide tecniche di Andrea Piani: sviluppo app iOS/Android, CRM personalizzati, PrestaShop, gestionali e siti web professionali.">
+<link rel="icon" href="/assets/images/andrea-piani-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FAF7F2; --off-white: #FFFDF9; --espresso: #1A1612;
+  --taupe: #8B7355; --taupe-light: #5C5345; --gold: #FFD60A;
+  --gold-soft: rgba(255, 214, 10, 0.12); --border: rgba(26, 22, 18, 0.10);
+}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { width: 100%; max-width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--off-white); color: var(--espresso); line-height: 1.6; overflow-x: hidden; width: 100%; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+.ap-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.ap-header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.ap-logo { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.3rem; color: var(--espresso); letter-spacing: -0.02em; }
+.ap-logo span { color: var(--gold); }
+.ap-nav { display: flex; gap: 28px; align-items: center; }
+.ap-nav a { color: var(--taupe-light); font-weight: 500; font-size: 0.95rem; transition: color .2s; }
+.ap-nav a:hover { color: var(--espresso); }
+.ap-nav-cta { background: var(--gold); color: var(--espresso) !important; padding: 10px 20px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+
+.ap-blog-hero { background: var(--cream); padding: 64px 24px; text-align: center; border-bottom: 1px solid var(--border); }
+.ap-blog-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--espresso); letter-spacing: -0.02em; margin-bottom: 12px; }
+.ap-blog-hero h1 span { color: var(--gold); }
+.ap-blog-hero p { color: var(--taupe-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+.ap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; max-width: 1200px; margin: 48px auto; padding: 0 24px; }
+.ap-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; min-width: 0; }
+.ap-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.ap-card-img { width: 100%; height: 200px; object-fit: cover; }
+.ap-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.ap-card-tag { display: inline-block; background: var(--gold-soft); color: var(--espresso); font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; align-self: flex-start; }
+.ap-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--espresso); margin-bottom: 8px; line-height: 1.3; overflow-wrap: anywhere; }
+.ap-card p { color: var(--taupe-light); font-size: 0.95rem; flex: 1; overflow-wrap: anywhere; }
+.ap-card-meta { margin-top: 16px; font-size: 0.85rem; color: var(--taupe); }
+
+.ap-footer { background: var(--espresso); color: rgba(255,255,255,0.7); padding: 32px 24px; text-align: center; font-size: 0.9rem; margin-top: 64px; }
+
+@media (max-width: 768px) {
+  .ap-header-inner, .ap-blog-hero, .ap-grid, .ap-card { max-width: 100%; }
+  .ap-nav { display: none; }
+  .ap-grid { display: block; padding: 0 16px; width: 100%; margin-left: 0; margin-right: 0; }
+  .ap-card { width: calc(100vw - 32px); max-width: calc(100vw - 32px); margin-bottom: 28px; }
+  .ap-card h3, .ap-card p, .ap-blog-hero p { word-break: break-word; }
+}
+</style>
 </head>
 <body>
-  <nav class="ap-nav">
-    <div class="ap-nav-inner">
-      <a href="/" class="ap-logo">Andrea<span>.</span>Piani</a>
-      <div class="ap-nav-links">
-        <a href="/sviluppo-app-ios.html">App</a>
+<header class="ap-header">
+  <div class="ap-header-inner">
+    <a href="/" class="ap-logo">Andrea<span>.</span>Piani</a>
+    <nav class="ap-nav">
+      <a href="/sviluppo-app-ios.html">App</a>
         <a href="/crm.html">CRM</a>
         <a href="/servizi-prestashop.html">PrestaShop</a>
         <a href="/sviluppo-app-react-web.html">Siti Web</a>
         <a href="/blog/">Blog</a>
-      </div>
       <a href="/preventivo-app.html" class="ap-nav-cta">Preventivo gratuito</a>
-    </div>
-  </nav>
-  <header class="ap-blog-hero">
-    <h1>Blog <span>&</span> Guide</h1>
+    </nav>
+  </div>
+</header>
+
+<div class="ap-blog-hero">
+  <h1>Blog <span>&</span> Guide</h1>
     <p>Approfondimenti tecnici su sviluppo app, CRM, PrestaShop e software su misura.</p>
-  </header>
-  <main class="ap-blog-grid">
-<!-- avo-press:list -->
-<article class="ap-card"><a href="/blog/quanto-costa-sviluppare-un-app-in-italia-guida-ai-prezzi-2024.html"><div class="ap-card-img" style="background-image:url('https://live.staticflickr.com/8209/8242697669_e53bc78bf5.jpg')"></div><div class="ap-card-body"><span class="ap-card-tag">Quanto costa sviluppare un&#x27;app</span><h2>Quanto Costa Sviluppare un&#x27;App in Italia? Guida ai Prezzi 2024</h2><p>Scopri i fattori che influenzano il costo di sviluppo app in Italia. Dai prezzi medi agli errori da evitare, leggi la nostra guida completa.</p><span class="ap-card-meta">⏱️ 19 min · 📅 2026-06-27</span></div></a></article>
-<article class="ap-card"><a href="/blog/preventivo-app-iphone-sviluppo-app-ios-professionali.html"><div class="ap-card-img" style="background-image:url('https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=1600&amp;q=80')"></div><div class="ap-card-body"><span class="ap-card-tag">Sviluppo app iOS</span><h2>Preventivo App iPhone | Sviluppo App iOS Professionali</h2><p>Preventivo App iPhone | Sviluppo App iOS Professionali</p><span class="ap-card-meta">⏱️ 22 min · 📅 2026-06-27</span></div></a></article>
-<article class="ap-card"><a href="/blog/quanto-costa-sviluppare-un-app-ios-preventivi-e-consigli.html"><div class="ap-card-img" style="background-image:url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&amp;fit=crop&amp;w=800&amp;q=80')"></div><div class="ap-card-body"><span class="ap-card-tag">Sviluppo app iOS</span><h2>Quanto Costa Sviluppare un&#x27;App iOS? | Preventivi e Consigli</h2><p>Quanto Costa Sviluppare un&#x27;App iOS? | Preventivi e Consigli</p><span class="ap-card-meta">⏱️ 14 min · 📅 2026-06-27</span></div></a></article>
-<!-- /avo-press:list -->
-  </main>
-  <footer class="ap-footer">
-    <p>© 2026 <a href="/">Andrea Piani</a> — Sviluppo software su misura per PMI · Udine, Italia</p>
-  </footer>
-  <a class="avo-wa" href="https://wa.me/393516248936" target="_blank" rel="noopener" aria-label="Contatta Andrea su WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:32px;height:32px;display:block;">
-      <path fill="currentColor" d="M16.04 3.2A12.7 12.7 0 0 0 5.08 22.35L3.2 29.2l7.02-1.84A12.67 12.67 0 1 0 16.04 3.2Zm0 2.35a10.32 10.32 0 1 1-.01 20.64 10.2 10.2 0 0 1-5.25-1.44l-.38-.23-4.16 1.09 1.11-4.05-.25-.4A10.32 10.32 0 0 1 16.04 5.55Zm-4.33 4.98c-.23 0-.6.08-.92.45-.32.36-1.21 1.18-1.21 2.88s1.24 3.35 1.41 3.58c.17.23 2.39 3.82 5.92 5.2 2.93 1.16 3.53.93 4.16.87.64-.06 2.05-.84 2.34-1.65.29-.81.29-1.51.2-1.65-.09-.14-.32-.23-.67-.4-.35-.17-2.05-1.01-2.37-1.13-.32-.12-.55-.17-.78.17-.23.35-.9 1.13-1.1 1.36-.2.23-.41.26-.76.09-.35-.17-1.47-.54-2.8-1.72-1.04-.92-1.74-2.06-1.94-2.41-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.58-.28-.67-.57-.58-.78-.59h-.6Z"/>
-    </svg>
-  </a>
+</div>
+
+<div class="ap-grid">
+      <a class="ap-card" href="quanto-costa-sviluppare-un-app-in-italia-guida-ai-prezzi-2026.html">
+  <img class="ap-card-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Quanto Costa Sviluppare un&#x27;App in Italia? Guida ai Prezzi 2026" loading="lazy">
+  <div class="ap-card-body">
+    <span class="ap-card-tag">Andrea Piani</span>
+    <h3>Quanto Costa Sviluppare un&#x27;App in Italia? Guida ai Prezzi 2026</h3>
+    <p>Scopri i fattori che influenzano il costo di sviluppo app in Italia. Dai prezzi medi agli errori da evitare, leggi la nostra guida completa.</p>
+    <div class="ap-card-meta">⏱️ 1 min</div>
+  </div>
+</a>
+      <a class="ap-card" href="sviluppo-app-ios-professionale-dalla-idea-all-app-store.html">
+  <img class="ap-card-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Sviluppo App iOS Professionale: dalla Idea all&#x27;App Store" loading="lazy">
+  <div class="ap-card-body">
+    <span class="ap-card-tag">Andrea Piani</span>
+    <h3>Sviluppo App iOS Professionale: dalla Idea all&#x27;App Store</h3>
+    <p>Realizziamo app native per iPhone e iPad con Swift/SwiftUI. Pubblicazione su App Store garantita. Contattaci per un preventivo gratuito.</p>
+    <div class="ap-card-meta">⏱️ 1 min</div>
+  </div>
+</a>
+      <a class="ap-card" href="preventivo-app-iphone-sviluppo-app-ios-professionali.html">
+  <img class="ap-card-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Preventivo App iPhone | Sviluppo App iOS Professionali" loading="lazy">
+  <div class="ap-card-body">
+    <span class="ap-card-tag">Andrea Piani</span>
+    <h3>Preventivo App iPhone | Sviluppo App iOS Professionali</h3>
+    <p>Preventivo App iPhone | Sviluppo App iOS Professionali</p>
+    <div class="ap-card-meta">⏱️ 1 min</div>
+  </div>
+</a>
+      <a class="ap-card" href="quanto-costa-sviluppare-un-app-ios-preventivi-e-consigli.html">
+  <img class="ap-card-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Quanto Costa Sviluppare un&#x27;App iOS? | Preventivi e Consigli" loading="lazy">
+  <div class="ap-card-body">
+    <span class="ap-card-tag">Andrea Piani</span>
+    <h3>Quanto Costa Sviluppare un&#x27;App iOS? | Preventivi e Consigli</h3>
+    <p>Quanto Costa Sviluppare un&#x27;App iOS? | Preventivi e Consigli</p>
+    <div class="ap-card-meta">⏱️ 1 min</div>
+  </div>
+</a>
+</div>
+
+<footer class="ap-footer">
+  <p>Sviluppo software su misura per PMI · Udine, Italia</p>
+</footer>
 </body>
 </html>
