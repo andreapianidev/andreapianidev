@@ -2,7 +2,7 @@
 <urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/blog/</ns0:loc>
-    <ns0:lastmod>2026-07-02</ns0:lastmod>
+    <ns0:lastmod>2026-07-04</ns0:lastmod>
     <ns0:priority>0.9</ns0:priority>
     <ns0:changefreq>weekly</ns0:changefreq>
   </ns0:url>
@@ -39,6 +39,12 @@
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/blog/sviluppo-app-ios-professionale-dalla-idea-all-app-store.html</ns0:loc>
     <ns0:lastmod>2026-06-28</ns0:lastmod>
+    <ns0:priority>0.8</ns0:priority>
+    <ns0:changefreq>monthly</ns0:changefreq>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://www.andreapiani.com/blog/web-progressive-app-example-guida-passo-passo.html</ns0:loc>
+    <ns0:lastmod>2026-07-04</ns0:lastmod>
     <ns0:priority>0.8</ns0:priority>
     <ns0:changefreq>monthly</ns0:changefreq>
   </ns0:url>
