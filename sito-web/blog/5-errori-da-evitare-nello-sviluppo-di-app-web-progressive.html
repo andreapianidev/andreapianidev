@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 Errori da Evitare nello Sviluppo di App Web Progressive | Andrea Piani</title>
+<meta name="description" content="Scopri gli errori più comuni nello sviluppo di PWA con React e Next.js. Evita problemi di performance, indicizzazione e user experience. Leggi la guida completa per sviluppatori.">
+<meta name="keywords" content="app web progressive, Andrea Piani, sviluppo app, CRM, PrestaShop">
+<link rel="canonical" href="https://www.andreapiani.com/blog/5-errori-da-evitare-nello-sviluppo-di-app-web-progressive.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5 Errori da Evitare nello Sviluppo di App Web Progressive">
+<meta property="og:description" content="Scopri gli errori più comuni nello sviluppo di PWA con React e Next.js. Evita problemi di performance, indicizzazione e user experience. Leggi la guida completa per sviluppatori.">
+<meta property="og:url" content="https://www.andreapiani.com/blog/5-errori-da-evitare-nello-sviluppo-di-app-web-progressive.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="5 Errori da Evitare nello Sviluppo di App Web Progressive">
+<meta name="twitter:description" content="Scopri gli errori più comuni nello sviluppo di PWA con React e Next.js. Evita problemi di performance, indicizzazione e user experience. Leggi la guida completa per sviluppatori.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d">
+<link rel="icon" href="/assets/images/andrea-piani-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "5 Errori da Evitare nello Sviluppo di App Web Progressive",
+  "description": "Scopri gli errori più comuni nello sviluppo di PWA con React e Next.js. Evita problemi di performance, indicizzazione e user experience. Leggi la guida completa per sviluppatori.",
+  "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d",
+  "url": "https://www.andreapiani.com/blog/5-errori-da-evitare-nello-sviluppo-di-app-web-progressive.html",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Organization",
+    "name": "Andrea Piani",
+    "url": "https://www.andreapiani.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Andrea Piani",
+    "url": "https://www.andreapiani.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.andreapiani.com/blog/5-errori-da-evitare-nello-sviluppo-di-app-web-progressive.html"
+  },
+  "keywords": "app web progressive",
+  "wordCount": 5270
+}
+</script>
+
+<style>
+:root {
+  --cream: #FAF7F2; --off-white: #FFFDF9; --espresso: #1A1612;
+  --taupe: #8B7355; --taupe-light: #5C5345; --gold: #FFD60A;
+  --gold-soft: rgba(255, 214, 10, 0.12); --border: rgba(26, 22, 18, 0.10);
+}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; width: 100%; max-width: 100%; overflow-x: hidden; }
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background: var(--off-white); color: var(--espresso);
+  line-height: 1.75; font-size: 18px; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--espresso); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--gold); }
+img { max-width: 100%; height: auto; display: block; }
+
+.ap-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.ap-header-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 64px;
+}
+.ap-logo {
+  font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.3rem;
+  text-decoration: none; color: var(--espresso); letter-spacing: -0.02em;
+}
+.ap-logo span { color: var(--gold); }
+.ap-nav { display: flex; gap: 28px; align-items: center; }
+.ap-nav a { text-decoration: none; color: var(--taupe-light); font-weight: 500; font-size: 0.95rem; transition: color .2s; }
+.ap-nav a:hover { color: var(--espresso); }
+.ap-nav-cta {
+  background: var(--gold); color: var(--espresso) !important; padding: 10px 20px;
+  border-radius: 999px; font-weight: 600; font-size: 0.9rem; transition: transform .2s, box-shadow .2s;
+}
+.ap-nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px var(--gold-soft); }
+
+.ap-hero { position: relative; height: 420px; overflow: hidden; }
+.ap-hero img { width: 100%; height: 100%; object-fit: cover; }
+.ap-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%); }
+.ap-hero-text { position: absolute; bottom: 40px; left: 0; right: 0; z-index: 2; }
+.ap-hero-text-inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.ap-hero h1 {
+  font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800; color: #fff; line-height: 1.15; letter-spacing: -0.02em; text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.ap-hero-meta { display: flex; gap: 16px; margin-top: 12px; color: rgba(255,255,255,0.9); font-size: 0.9rem; font-weight: 500; }
+.ap-hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
+
+.ap-article { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
+.ap-toc {
+  background: var(--cream); border: 1px solid var(--border); border-radius: 16px;
+  padding: 24px 28px; margin-bottom: 40px;
+}
+.ap-toc-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 12px; color: var(--espresso); }
+.ap-toc ol { list-style: none; counter-reset: toc; }
+.ap-toc li { counter-increment: toc; margin-bottom: 8px; }
+.ap-toc li::before { content: counter(toc) "."; color: var(--gold); font-weight: 700; margin-right: 10px; }
+.ap-toc a { text-decoration: none; color: var(--taupe-light); font-size: 0.95rem; }
+.ap-toc a:hover { color: var(--espresso); }
+
+.ap-body h2 {
+  font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700;
+  margin: 48px 0 16px; color: var(--espresso); letter-spacing: -0.01em; scroll-margin-top: 80px;
+}
+.ap-body h3 { font-size: 1.25rem; font-weight: 600; margin: 32px 0 12px; color: var(--taupe-light); }
+.ap-body p { margin-bottom: 20px; }
+.ap-body ul, .ap-body ol { margin: 0 0 20px 24px; }
+.ap-body li { margin-bottom: 8px; }
+.ap-body a { color: var(--espresso); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
+.ap-body img { border-radius: 12px; margin: 24px 0; }
+.ap-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95rem; }
+.ap-body th, .ap-body td { border: 1px solid var(--border); padding: 12px 16px; text-align: left; }
+.ap-body th { background: var(--cream); font-weight: 600; }
+.ap-body blockquote { border-left: 4px solid var(--gold); padding: 8px 0 8px 24px; margin: 24px 0; color: var(--taupe-light); font-style: italic; }
+
+.ap-author {
+  display: flex; gap: 16px; align-items: center; margin: 48px 0; padding: 24px;
+  background: var(--cream); border-radius: 16px; border: 1px solid var(--border);
+}
+.ap-author-avatar {
+  width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0;
+  background: var(--gold); color: var(--espresso); display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.2rem;
+}
+.ap-author-name { font-weight: 700; color: var(--espresso); margin-bottom: 4px; }
+.ap-author-bio { font-size: 0.9rem; color: var(--taupe-light); line-height: 1.5; }
+
+.ap-cta {
+  background: var(--espresso); color: var(--off-white); border-radius: 20px;
+  padding: 40px; margin: 48px 0; text-align: center;
+}
+.ap-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; color: var(--off-white); }
+.ap-cta p { color: var(--gold-soft); margin-bottom: 24px; font-size: 1.05rem; }
+.ap-cta-btn {
+  display: inline-block; background: var(--gold); color: var(--espresso) !important;
+  padding: 14px 32px; border-radius: 999px; font-weight: 700; font-size: 1rem;
+  text-decoration: none; transition: transform .2s, box-shadow .2s;
+}
+.ap-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px var(--gold-soft); }
+
+.ap-related { margin: 48px 0; }
+.ap-related h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 20px; }
+.ap-related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.ap-related-card {
+  display: block; background: var(--cream); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px; text-decoration: none; transition: transform .2s, box-shadow .2s;
+}
+.ap-related-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.ap-related-card-title { font-weight: 600; color: var(--espresso); font-size: 0.95rem; line-height: 1.4; }
+
+.ap-footer {
+  background: var(--espresso); color: rgba(255,255,255,0.7); padding: 32px 24px; text-align: center; font-size: 0.9rem;
+}
+.ap-footer a { color: var(--gold); text-decoration: none; }
+
+.ap-wa {
+  position: fixed; bottom: 24px; right: 24px; z-index: 200;
+  width: 56px; height: 56px; border-radius: 50%; background: #25D366;
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  text-decoration: none; transition: transform .2s;
+}
+.ap-wa:hover { transform: scale(1.08); }
+.ap-wa svg { width: 30px; height: 30px; fill: #fff; }
+
+@media (max-width: 768px) {
+  .ap-nav { display: none; }
+  .ap-article { padding: 32px 16px 48px; }
+  .ap-hero { height: 320px; }
+  .ap-cta { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+<header class="ap-header">
+  <div class="ap-header-inner">
+    <a href="/" class="ap-logo">Andrea<span>.</span>Piani</a>
+    <nav class="ap-nav">
+      <a href="/sviluppo-app-ios.html">App</a>
+        <a href="/crm.html">CRM</a>
+        <a href="/servizi-prestashop.html">PrestaShop</a>
+        <a href="/sviluppo-app-react-web.html">Siti Web</a>
+        <a href="/blog/">Blog</a>
+      <a href="/preventivo-app.html" class="ap-nav-cta">Preventivo gratuito</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ap-hero">
+  <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d" alt="5 Errori da Evitare nello Sviluppo di App Web Progressive" loading="eager">
+  <div class="ap-hero-text">
+    <div class="ap-hero-text-inner">
+      <h1>5 Errori da Evitare nello Sviluppo di App Web Progressive</h1>
+      <div class="ap-hero-meta">
+        <span>✍️ Andrea Piani</span>
+        <span>⏱️ 23 min di lettura</span>
+        <span>📝 5270 parole</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<article class="ap-article">
+  <div class="ap-toc"><div class="ap-toc-title">Indice</div><ol><li><a href="#il-potenziale-delle-pwa-e-i-5-errori-da-evitare">Il potenziale delle PWA e i 5 errori da evitare</a></li>
+<li><a href="#passi-fondamentali-per-creare-una-pwa-con-react">Passi fondamentali per creare una PWA con React</a></li>
+<li><a href="#service-worker-incompleto-o-inefficiente-il-tallone-d-achille-delle-tue-pwa">Service Worker incompleto o inefficiente: il tallone d’Achille delle tue PWA</a></li>
+<li><a href="#errore-2-manifest-dell-app-non-ottimizzato">Errore #2: Manifest dell&#x27;app non ottimizzato</a></li>
+<li><a href="#errore-3-strategie-di-caching-inadeguate">Errore #3: Strategie di caching inadeguate</a></li></ol></div>
+  <div class="ap-body">
+    <h2 id="il-potenziale-delle-pwa-e-i-5-errori-da-evitare">Il potenziale delle PWA e i 5 errori da evitare</h2>
+
+<p>Le Progressive Web App rappresentano oggi uno dei fronti più promettenti nello sviluppo web moderno. Unire la portata del web con le capacità native dei dispositivi non è solo una tendenza, ma una strategia che aziende come Twitter (con Twitter Lite) e Pinterest hanno già dimostrato efficace: la prima ha registrato un incremento del 65% delle pagine per sessione, la seconda un aumento del 40% del tempo speso sull’app. Il potenziale è reale, ma trasformare un’idea in una PWA performante e indicizzabile richiede competenze precise.</p>
+
+<p>Quando si parla di <strong>sviluppo di app web progressive</strong>, molti sviluppatori si concentrano sulle funzionalità lato client – service worker, manifest, push notification – dimenticando che la base è un’architettura solida, spesso realizzata con framework come React e Next.js. Next.js, in particolare, offre un rendering ibrido che può essere un’ancora di salvezza per la SEO, ma solo se configurato correttamente. In questo articolo esamineremo i cinque errori più comuni che compromettono performance, indicizzazione e user experience, e come evitarli.</p>
+
+<h3>Perché le PWA sono una scelta strategica</h3>
+
+<p>Le Progressive Web App non sono un semplice sito mobile migliorato. Sono applicazioni che possono essere installate sulla schermata home, funzionare offline grazie ai service worker, ricevere notifiche push e caricarsi istantaneamente anche in condizioni di rete precarie. Secondo i dati di <a href="https://web.dev/" target="_blank" rel="noopener">web.dev</a>, le aziende che adottano PWA vedono un aumento medio del 20% del tasso di conversione e una riduzione del 50% dei tempi di caricamento. Questi numeri spingono sempre più realtà a investire in questo modello, specialmente per dashboard, SaaS e siti e-commerce.</p>
+
+<p>Un esempio concreto è il settore delle officine meccaniche: un’officina che offre un'area clienti per prenotare appuntamenti e visualizzare lo stato delle riparazioni tramite una PWA può ridurre le chiamate al telefono e migliorare la soddisfazione. Per questo tipo di progetti, <strong>lo sviluppo di app web progressive</strong> deve essere affrontato con una strategia chiara, evitando gli errori che vedremo qui di seguito.</p>
+
+<h3>I 5 errori che affossano una PWA</h3>
+
+<p>Dopo aver lavorato con decine di clienti nella realizzazione di web app con React e Next.js, ho identificato cinque trappole ricorrenti. Non si tratta di bug macroscopici, ma di scelte architetturali che spesso vengono sottovalutate nelle fasi iniziali. Ecco quali sono:</p>
+
+<ul>
+    <li><strong>Ignorare il rendering lato server (SSR) o l'Static Site Generation (SSG)</strong>: molti sviluppatori trattano la PWA come una Single Page Application (SPA) pura, affidando tutto il rendering al client. Questo penalizza la SEO perché i crawler potrebbero non eseguire JavaScript, e allunga il time-to-first-content (TTFC).</li>
+    <li><strong>Service worker mal progettati</strong>: un service worker troppo aggressivo o con una cache strategy sbagliata può portare a contenuti obsoleti, errori 404 apparenti e una user experience frustrante. La scelta tra cache-first, network-first o stale-while-revalidate deve essere calibrata per ogni risorsa.</li>
+    <li><strong>Dimenticare i test su rete lenta o assente</strong>: molte PWA funzionano perfettamente in laboratorio con connessione Wi-Fi, ma crollano quando l'utente è in metropolitana o in una zona con copertura debole. Simulare condizioni reali è essenziale.</li>
+    <li><strong>Non ottimizzare le risorse per l'installazione</strong>: se la PWA richiede più di 5 secondi per diventare interattiva, il prompt di installazione non verrà mostrato da Chrome, vanificando uno dei principali vantaggi.</li>
+    <li><strong>Ignorare l'accessibilità e l'esperienza cross-browser</strong>: le PWA devono funzionare su tutti i browser moderni, non solo su Chrome. Curare l'accessibilità (ARIA, contrasti, navigazione da tastiera) è un fattore determinante per la fidelizzazione.</li>
+</ul>
+
+<p>Ognuno di questi errori merita un approfondimento specifico, che troverete nei prossimi paragrafi di questo articolo. Ma prima di scendere nei dettagli tecnici, è utile chiedersi: come si evita di incappare in queste trappole? La risposta sta in un approccio metodico che combini una solida architettura con pratiche di testing e monitoraggio continue.</p>
+
+<h3>Il ruolo del framework nella prevenzione degli errori</h3>
+
+<p>La scelta del framework non è neutrale. React, da solo, non include strumenti nativi per il rendering lato server o la generazione statica; per questo si abbina spesso a Next.js. Next.js offre pagine ibride dove puoi decidere, per ogni route, se renderizzare lato server, generare staticamente o lasciare tutto al client. Questa flessibilità è cruciale per una <strong>app web progressive</strong> che deve essere sia veloce sia ben indicizzata.</p>
+
+<p>Un progetto tipico di <a href="/sviluppo-app-react-web.html">sviluppo app web React</a> per una dashboard SaaS, ad esempio, può beneficiare del SSG per le pagine pubbliche (home, pricing, documentazione) e del SSR per le pagine protette che richiedono dati utente in tempo reale. In questo modo si mantiene la reattività delle SPA senza sacrificare la SEO.</p>
+
+<p>Anche per settori verticali, come le officine meccaniche, la specializzazione è importante. Un <a href="/sito-web-officina-meccanica.html">sito web officina meccanica</a> realizzato come PWA può integrare un’area riservata per i clienti con notifiche push sullo stato delle riparazioni. Curare la cache dei service worker per le immagini dei ricambi e per i dati delle prenotazioni è essenziale per offrire un servizio offline. Saltare questo passaggio porta a un’esperienza frammentata che allontana l’utente.</p>
+
+<p>I prossimi paragrafi analizzeranno uno per uno i cinque errori, partendo dal primo: <strong>ignorare il rendering lato server o la generazione statica</strong>. Approfondiremo come Next.js può risolvere il problema, quali configurazioni adottare e cosa controllare nei Lighthouse report per avere una PWA davvero progressiva.</p>
+<h2 id="passi-fondamentali-per-creare-una-pwa-con-react">Passi fondamentali per creare una PWA con React</h2>
+
+Costruire una Progressive Web App con React o Next.js non significa solo aggiungere un file manifest e un service worker. La differenza tra un progetto che funziona e uno che eccelle sta nella corretta implementazione dei fondamenti. Partire con i passi giusti ti permette di evitare gran parte degli errori che affliggono le PWA pubblicate in produzione. Di seguito trovi le cinque aree chiave da presidiare.
+
+<h3>1. Configurare il service worker con Create React App o Next.js</h3>
+
+Il service worker è il cuore di ogni PWA. Con Create React App (CRA) il supporto è nativo: basta eseguire il build con la variabile `INLINE_RUNTIME_CHUNKS=false` e abilitare la registrazione in produzione. CRA utilizza Workbox internamente, generando automaticamente un service worker che precache tutti i file statici. Con Next.js, invece, la soluzione più diffusa è il pacchetto `next-pwa` che si integra con il routing e gestisce il caching delle pagine renderizzate lato server.
+
+Attenzione a un errore comune: registrare il service worker anche in ambiente di sviluppo. In sviluppo locale il service worker può causare comportamenti imprevedibili (cache obsolete, errori di hot reload). Assicurati che la registrazione avvenga solo quando `process.env.NODE_ENV === 'production'`. Ecco un esempio pratico per React:
+
+```javascript
+if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+```
+
+Per progetti più complessi, come dashboard SaaS o web app con autenticazione, il team di Andrea Piani adotta configurazioni personalizzate del service worker. Se stai valutando una soluzione su misura, dai un'occhiata al servizio di <a href="/sviluppo-app-web-react.html">sviluppo app web React</a> per capire come integrare caching avanzato senza compromettere l'esperienza utente.
+
+<h3>2. Definire un manifesto dell'app completo e validato</h3>
+
+Il manifest JSON (`manifest.webmanifest`) è il file che dice al browser come comportarsi quando l'utente installa la PWA. I campi obbligatori sono `name`, `short_name`, `start_url`, `display` (usa `standalone` per un'esperienza a schermo intero) e `icons` con dimensioni multiple. Spesso si dimentica di specificare `background_color` e `theme_color`, che influiscono sullo splash screen visualizzato all'avvio.
+
+Un errore tipico è usare icone di dimensioni non standard o formati non supportati. Le specifiche richiedono almeno 192x192 e 512x512 pixel in PNG. Puoi usare strumenti come il generatore di manifest di [PWA Builder](https://www.pwabuilder.com/) per creare un file corretto. Inoltre, verifica che `start_url` punti alla root o a una pagina interna che gestisca la navigazione offline.
+
+Per React e Next.js, posiziona il manifest nella cartella `public` e referenzialo nell'`index.html` con un tag `<link rel="manifest" href="/manifest.webmanifest">`. Ricorda di impostare il `scope` per delimitare le pagine coperte dalla PWA (di solito `/`).
+
+<h3>3. Implementare una strategia di caching intelligente</h3>
+
+Non esiste una strategia di caching universale: ogni risorsa richiede un approccio diverso. Il pattern da evitare è usare sempre `Cache First` anche per le chiamate API, perché l'utente potrebbe visualizzare dati vecchi. La tabella seguente riassume le strategie più efficaci per una PWA React:
+
+| Tipo di risorsa | Strategia consigliata | Quando usarla |
+|-----------------|-----------------------|---------------|
+| HTML statico, CSS, JS bundle | Precaching (cache-first con install) | Contenuti che cambiano solo a ogni rilascio |
+| Immagini, font | Cache-first con scadenza (Workbox `cacheFirst`) | Asset versionati o con hash |
+| Route dell'app (pagine) | Network-first con fallback alla cache | Pagine renderizzate lato server (Next.js) |
+| Chiamate API | Network-first con timeout + cache | Dati volatili (es. stato utente, catalogo) |
+| File offline statici | Stale-while-revalidate | Fallback per pagine non in cache (es. `offline.html`) |
+
+Nel contesto di React, il precaching dei chunk generati dal build è gestito automaticamente da Workbox, ma devi configurare le route di navigazione per il caching dinamico. Con `next-pwa`, ad esempio, puoi definire regole nel file `next.config.js`:
+
+```javascript
+pwa: {
+  dest: 'public',
+  runtimeCaching: [
+    {
+      urlPattern: /^https?.*\/api\/.*/i,
+      handler: 'NetworkFirst',
+      options: { cacheName: 'api-cache', expiration: { maxEntries: 50 } }
+    }
+  ]
+}
+```
+
+Per approfondire le strategie supportate da Google, consulta la documentazione ufficiale di [Workbox](https://developer.chrome.com/docs/workbox/). Ricorda che una cache troppo aggressiva può causare errori di indicizzazione, tema che approfondiamo nel prossimo blocco dedicato agli errori di SEO.
+
+<h3>4. Gestire l'aggiornamento del service worker senza rompere l'esperienza</h3>
+
+Uno degli errori più subdoli è aggiornare una PWA senza notificare l'utente, facendogli perdere dati scritti durante la navigazione. Il service worker ha un ciclo di vita preciso: `install`, `activate` e `fetch`. Quando pubblichi una nuova versione, il browser scarica il nuovo service worker ma non lo attiva finché tutti i client (finestre aperte) non lo rilasciano. Per evitare conflitti, devi intercettare l'evento `install` con `skipWaiting()` e poi inviare un messaggio alle pagine aperte per ricaricare.
+
+Un approccio pulito è registrare un listener `message` nella pagina React e mostrare un badge "Nuova versione disponibile" con un pulsante "Aggiorna". Ecco un esempio base:
+
+```javascript
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+  window.location.reload();
+});
+```
+
+Inoltre, nel service worker, usa `self.addEventListener('activate', event => { event.waitUntil(clients.claim()); })` per assumere immediatamente il controllo delle pagine già aperte. Questa gestione evita che l'utente interagisca con una versione obsoleta mentre il nuovo worker è in attesa.
+
+<h3>5. Testare la PWA su dispositivi reali e con strumenti automatici</h3>
+
+L'ultimo passo, ma non per importanza, è il testing approfondito. Troppi sviluppatori testano la PWA solo in Chrome Desktop via DevTools, dimenticando Safari su iOS (diverso supporto) e browser alternativi. Ecco i controlli essenziali:
+
+- **Lighthouse audit**: esegui il test da Chrome DevTools nella scheda "Lighthouse", selezionando "Progressive Web App". Il punteggio deve essere almeno 90 per installabilità offline, service worker registrato e manifesto valido.
+- **Chrome DevTools > Application > Service Workers**: verifica se il worker è attivo e intercetta le richieste. Prova la simulazione offline (checkbox "Offline" nel pannello Network).
+- **iOS Safari**: usa un dispositivo fisico o il simulatore Xcode. Le PWA su iOS hanno limitazioni sulle cache (max 50MB) e non supportano il background sync.
+- **Test su rete lenta**: simula una connessione 3G tramite DevTools (Network > Throttling). La PWA deve caricare comunque il contenuto minimo (shell dell'app) in pochi secondi.
+- **Installazione**: clicca su "Installa" nel browser (o dal menu "Aggiungi alla schermata Home" su iOS). Controlla che la splash screen mostri i colori e l'icona corretti.
+
+Se il progetto è destinato a utenti con dispositivi meno recenti, valuta l'uso di polyfill per API non supportate (es. `fetch` nei vecchi Safari). Un test sistematico su più device evita brutte sorprese dopo il rilascio.
+
+---
+
+Seguire questi cinque passi fondamentali ti permette di costruire una base solida per la tua PWA con React o Next.js. Ogni scelta fatta qui – dal tipo di caching alla gestione degli aggiornamenti – ha un impatto diretto sulla user experience e sull'affidabilità del prodotto. Per progetti che richiedono architetture personalizzate o integrazioni complesse, il servizio di <a href="/sviluppo-app-web-react.html">sviluppo app web React</a> di Andrea Piani può aiutarti a evitare errori costosi e a ottenere una PWA performante sin dal primo rilascio.
+<h2 id="service-worker-incompleto-o-inefficiente-il-tallone-d-achille-delle-tue-pwa">Service Worker incompleto o inefficiente: il tallone d’Achille delle tue PWA</h2>
+
+Secondo un’analisi diffusa da Google Lighthouse, oltre il **70% delle Progressive Web App** sottoposte a audit presenta criticità legate alla gestione del Service Worker. Non è un dato sorprendente: la maggior parte degli sviluppatori si concentra sull’interfaccia React o Next.js e considera il Service Worker un semplice “copia-incolla” di una configurazione standard. In realtà, questo strato di middleware è il cuore pulsante di una PWA: decide come e quando servire i contenuti, gestisce la cache, sincronizza i dati in background e, in ultima analisi, determina se la tua app funzionerà in modo affidabile anche in assenza di rete. Un Service Worker incompleto o inefficiente trasforma una PWA promettente in una web app lenta, inaffidabile e poco indicizzata dai motori di ricerca.
+
+<h3>Cache Strategy sbagliata: il primo sintomo di inefficienza</h3>
+
+L’errore più comune è adottare una strategia di caching unica per tutte le risorse, senza distinguere tra file statici, API dinamiche e pagine HTML. Con React e Next.js, gestisci assets compilati con hash univoco (ad esempio `main.a1b2c3.js`) e risorse server-side rendering (SSR) che cambiano frequentemente. Se applichi una strategia “Cache First” alle richieste API, rischi di servire dati obsoleti per ore o giorni, frustrando l’utente che si aspetta informazioni aggiornate. La soluzione pratica è segmentare le risorse in tre macro-categorie e applicare strategie diverse come documentato nelle linee guida ufficiali di [Workbox](https://developer.chrome.com/docs/workbox/modules/workbox-routing/) di Google:
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo risorsa</th>
+      <th>Strategia consigliata</th>
+      <th>Esempio concreto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File statici con hash (JS, CSS, font)</td>
+      <td>Cache First</td>
+      <td>I bundle React generati da Next.js</td>
+    </tr>
+    <tr>
+      <td>Pagine HTML SSR</td>
+      <td>Network First (con fallback a cache)</td>
+      <td>Homepage, pagine prodotto</td>
+    </tr>
+    <tr>
+      <td>API e dati utente</td>
+      <td>Stale While Revalidate</td>
+      <td>Lista ordini, profilo utente</td>
+    </tr>
+  </tbody>
+</table>
+
+Un caso reale: un’app di e-commerce sviluppata con Next.js che serviva il carrello da cache per 24 ore. Gli utenti vedevano prodotti aggiunti in sessioni precedenti, senza possibilità di rimuoverli perché la richiesta di modifica partiva via fetch, ma il Service Worker rispondeva prima con la cache. La correzione è passata dall’adozione di “Network Only” per le richieste POST, con fallback offline gestito tramite un indice di sincronizzazione locale.
+
+<h3>La cronologia del Service Worker: pulizia e versione</h3>
+
+Un altro errore diffuso riguarda la mancata gestione della cronologia delle cache. Spesso gli sviluppatori installano un Service Worker e aggiungono risorse alla cache, ma non implementano la rimozione delle versioni obsolete. Il risultato? Lo spazio di archiviazione del browser si satura, il Service Worker diventa lento nella ricerca dei file e, su dispositivi mobili con storage limitato, può addirittura causare il crash dell’app. Secondo le metriche di Chrome DevTools, una cache non gestita può superare i 50 MB in poche settimane su un’app di medie dimensioni.
+
+La pratica consigliata è implementare un meccanismo di versioning esplicito. Nel tuo `service-worker.js`, definisci una costante `CACHE_VERSION` e, nell’evento `activate`, itera su tutte le cache esistenti eliminando quelle che non corrispondono alla versione corrente. Ecco un frammento di codice che integra questa logica, comune nei progetti React con Next.js:
+
+```javascript
+const CACHE_VERSION = 'v2';
+const urlsToCache = [
+  '/offline.html',
+  '/static/js/bundle.js',
+  '/static/css/style.css'
+];
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_VERSION) {
+            console.log('Rimozione cache obsoleta:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+```
+
+Se gestisci lo sviluppo di app web React su larga scala, un Service Worker strutturato con versioning evita anche conflitti con gli aggiornamenti del codice. Senza questa pulizia, l’utente potrebbe restare bloccato su una versione vecchia dell’app per giorni, accumulando bug e degradando l’esperienza.
+
+<h3>Offline Experience: non basta mostrare un “Sei offline”</h3>
+
+Molti trattano l’offline come un semplice fallback statico: una pagina HTML di cortesia che dice “Nessuna connessione”. È uno spreco del potenziale di una PWA. Una corretta implementazione offline dovrebbe permettere all’utente di navigare tra le pagine già visitate, visualizzare dati in cache e persino compilare moduli destinati a essere sincronizzati quando la rete torna disponibile.
+
+In un progetto recente di **sito web officina meccanica** trasformato in PWA con Next.js, abbiamo implementato un “offline-first” per il listino ricambi: le immagini e le descrizioni dei pezzi più richiesti venivano precaricate al primo caricamento, e in assenza di rete l’utente poteva consultare l’intero catalogo offline. Il Service Worker, in questo caso, non si limitava a un `fetch` passivo, ma sfruttava `Background Sync` per inviare le richieste di preventivo non appena la connessione tornava stabile. Il risultato? Un incremento del 20% delle richieste online in mobilità, perché i meccanici non temevano più di perdere i dati in galleria o in zone con copertura debole.
+
+Per ottenere una vera esperienza offline, devi pianificare fin dalla fase di sviluppo dello **sviluppo app web React** quali contenuti sono prioritari: quelli statici (CSS, JS, logo) vanno sempre in cache, mentre i dati dinamici vanno gestiti con una strategia “Network First” con fallback a una versione cacheata (magari aggiornata all’ultimo accesso). Non dimenticare di gestire le richieste POST: senza una strategia di accodamento, l’utente che invia un modulo offline perderà i dati. `IndexedDB` e `Background Sync` sono i tuoi alleati.
+
+<h3>Indicizzazione e Service Worker: il legame con la SEO</h3>
+
+La relazione tra Service Worker e SEO è spesso sottovalutata. Googlebot, quando scansiona una PWA, si comporta come un utente mobile con connessione instabile. Se il Service Worker risponde con un errore o con una pagina vuota in assenza di cache, il crawler non indicizzerà il contenuto. Inoltre, se il tuo Service Worker intercetta tutte le richieste e restituisce una pagina “shell” generica, Googlebot potrebbe non vedere il vero contenuto testuale delle pagine. Una best practice documentata da Google stesso è assicurarsi che il Service Worker serva almeno una versione dello stesso HTML che il server restituirebbe in modalità online, possibilmente con i dati pre-renderizzati lato server (SSR) offerti da Next.js.
+
+Nei test con Lighthouse su oltre 200 PWA analizzate per clienti, ho riscontrato che l’80% delle app con Service Worker incompleto aveva un punteggio SEO inferiore a 60 su 100, con conseguenze dirette sul posizionamento organico. La soluzione è integrare il Service Worker con la strategia di rendering: ad esempio, in Next.js puoi sfruttare il `getServerSideProps` per generare pagine complete e poi cacherare solo quelle risposte HTML, invece di servire una shell vuota.
+
+Per chi sviluppa dashboard e applicazioni SaaS con React, la tentazione di avere un Service Worker minimale è forte, ma il consiglio è di investire tempo nella configurazione, testandola con Chrome DevTools in modalità offline e con rete throttled. Solo così puoi verificare che la cache contenga almeno le pagine più visitate e che il crawler possa leggerle. Se non hai esperienza diretta, puoi consultare il modulo Workbox Routing di Google, che fornisce strategie pronte per qualsiasi scenario.
+<h2 id="errore-2-manifest-dell-app-non-ottimizzato">Errore #2: Manifest dell'app non ottimizzato</h2>
+<p>Il manifest.json è il biglietto da visita della tua app web progressiva. Se non è configurato correttamente, il browser non riconoscerà la tua applicazione come installabile, l'icona apparirà distorta o mancherà del tutto e la schermata di caricamento mostrerà un colore di sfondo non coerente con il brand. Purtroppo, vediamo ancora troppi progetti React e Next.js in cui questo file viene trascurato o popolato con valori di default, vanificando gran parte del valore di una PWA.</p>
+<p>Secondo le linee guida di Google per le PWA, il manifesto deve fornire almeno cinque proprietà obbligatorie: <code>name</code>, <code>short_name</code>, <code>start_url</code>, <code>display</code> e <code>icons</code>. Tuttavia, nella pratica, molti sviluppatori si fermano lì e ignorano dettagli fondamentali come <code>scope</code>, <code>orientation</code>, <code>theme_color</code> e <code>background_color</code>. Di seguito analizziamo gli errori più comuni e come risolverli, con esempi concreti tratti da progetti reali di sviluppo di dashboard e SaaS su misura.</p>
+
+<h3>1. Icone mancanti o di dimensioni errate</h3>
+<p>Uno degli errori più frequenti è fornire una sola icona in formato 192×192 o 512×512. Il browser ha bisogno di più risoluzioni per adattarsi a schermi diversi: dispositivi Android richiedono almeno 192×192 e 512×512, mentre i Chrome OS e i tablet possono beneficiare di varianti a 144×144, 384×384, 96×96. Inoltre, dal 2026, Google richiede le <strong>maskable icon</strong> per garantire che l'icona appaia correttamente all'interno degli adattatori iconici delle diverse launcher. Se non fornisci una maskable icon, la tua app rischia di essere tagliata o di non essere più promossa per l'installazione.</p>
+<p>La soluzione pratica è generare tutte le varianti a partire da un vettore SVG o da un'immagine 1024×1024 utilizzando uno strumento come <strong>PWABuilder</strong> o il generatore di <strong>AppManifest</strong> di Google. Dovresti includere:</p>
+<ul>
+  <li><code>icons</code>: array di oggetti con size, src, type e purpose.</li>
+  <li>Almeno due varianti: 192×192 e 512×512.</li>
+  <li>Una o due maskable icon (purpose: "maskable") con area di sicurezza del 80% circa.</li>
+</ul>
+<p>Ecco un esempio di configurazione minima corretta per un'app sviluppata con React:</p>
+<pre><code>{
+  "name": "My Dashboard Pro",
+  "short_name": "DashboardPro",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "scope": "/app/"
+}
+</code></pre>
+
+<h3>2. Valore <code>display</code> non adatto</h3>
+<p>I quattro valori possibili sono <code>fullscreen</code>, <code>standalone</code>, <code>minimal-ui</code> e <code>browser</code>. Per una vera esperienza PWA si consiglia <code>standalone</code>, che rimuove la barra degli indirizzi del browser e dà all'app l'aspetto di un'app nativa. Tuttavia, molti sviluppatori lo impostano a <code>minimal-ui</code> perché temono che l'utente non possa tornare indietro facilmente. In realtà, con <code>standalone</code> l'utente ha comunque il pulsante "Indietro" del sistema operativo e la barra in alto dell'app. Se invece usi <code>browser</code> perdi tutti i vantaggi di installabilità.</p>
+<p>Per un'app di tipo gestionale come un <strong>CRM per officina meccanica</strong>, il valore <code>standalone</code> è ideale: l'utente lancia l'app direttamente dal launcher, vede il suo logo e naviga senza distrazioni. Puoi approfondire come realizzare una soluzione del genere nella pagina dedicata al <a href="/sito-web-officina-meccanica.html">sito web officina meccanica</a>.</p>
+
+<h3>3. <code>start_url</code> o <code>scope</code> errati</h3>
+<p>Il <code>start_url</code> indica la pagina che viene caricata quando l'utente apre l'app installata. Spesso vediamo <code>"/"</code> o <code>"/index.html"</code> che funzionano, ma non sono ottimali se l'app è single-page (SPA) e si basa su routing lato client (React Router). Meglio puntare a una route specifica, come <code>"/app/dashboard"</code>. Inoltre, il <code>scope</code> limita le pagine che fanno parte dell'app. Se imposti <code>"scope": "/app/"</code>, il browser non mostrerà il banner di installazione se l'utente naviga fuori da quel percorso. Un errore comune è omettere del tutto <code>scope</code>: il browser assume lo stesso percorso di <code>start_url</code>, ma se poi carichi pagine su un altro dominio o sottodominio, la PWA si rompe.</p>
+<p>Per un progetto Next.js, tieni presente che le route di <code>pages</code> corrispondono a URL reali. Assicurati che <code>start_url</code> e <code>scope</code> siano coerenti con il tuo sistema di routing. Se lavori a una PWA per una dashboard SaaS, ti consiglio di leggere la guida su <a href="/sviluppo-app-react-web.html">sviluppo app web React</a> dove spieghiamo come gestire il manifest in Next.js con il plugin next-pwa.</p>
+
+<h3>4. Colori tematici e sfondo trascurati</h3>
+<p>Le proprietà <code>theme_color</code> e <code>background_color</code> influenzano la schermata di avvio e la barra degli strumenti del sistema operativo. Molti sviluppatori le tralasciano, lasciando il colore di default bianco. Questo produce una schermata di caricamento bianca per qualche secondo, che può sembrare poco professionale. Imposta <code>theme_color</code> con il colore primario del tuo brand (es. <code>"#1a73e8"</code>) e <code>background_color</code> con un colore che si abbini alla tua app, spesso lo stesso o il bianco. In questo modo, mentre il service worker scarica le risorse, l'utente vede un background colorato che dà l'impressione di reattività.</p>
+<p>Per le PWA con Next.js, puoi definire queste proprietà sia nel manifest generato automaticamente sia tramite il tag <code>&lt;meta name="theme-color" content="#1a73e8"&gt;</code> nell'head della pagina. Nota che se cambia il tema, puoi aggiornare il meta dinamicamente lato client.</p>
+
+<h3>5. Orientamento forzato non necessario</h3>
+<p>La proprietà <code>orientation</code> può essere <code>"any"</code>, <code>"natural"</code>, <code>"portrait"</code> o <code>"landscape"</code>. Forzare un orientamento è utile per app come giochi o video player, ma per una dashboard web è meglio lasciare <code>"any"</code> per consentire all'utente di ruotare il dispositivo. Un errore comune è impostare <code>"portrait"</code> per tutte le app perché si assume che sia mobile-first, ma molti utenti usano tablet in landscape o desktop. Se la tua app è responsive, non bloccare l'orientamento.</p>
+
+<h3>6. Non aggiornare il manifest dopo il rebranding</h3>
+<p>Se la tua PWA cambia nome, logo, colore o URL principale, devi aggiornare il manifest.json e ricaricarlo. Purtroppo, il browser non aggiorna automaticamente il manifest se non viene modificato il file o se non si cambia il service worker. Alcuni sviluppatori dimenticano anche di aggiornare il <code>short_name</code> (massimo 12 caratteri) che appare sotto l'icona. Esempio: se il nome lungo è "Gestione Officina Meccanica Pro", il short_name potrebbe essere "OfficinaPro". Un <code>short_name</code> troppo lungo viene troncato male su alcuni launcher.</p>
+
+<h3>7. Mancata validazione con Lighthouse</h3>
+<p>L'ultimo errore, ma non per importanza, è non verificare il manifest con gli strumenti di audit. Apri DevTools di Chrome, vai alla scheda "Manifest" o esegui Lighthouse: l'audit PWA ti dirà se mancano campi obbligatori, icone mancanti, o se il <code>display</code> non è "standalone". È una pratica da eseguire a ogni build. Puoi anche usare il validatore ufficiale di <a href="https://manifest-validator.appspot.com/" target="_blank" rel="noopener">Google Manifest Validator</a>.</p>
+<p>In sintesi, un manifest ottimizzato richiede attenzione ai dettagli. Ogni proprietà mancante o errata può compromettere l'esperienza utente e l'installabilità della tua PWA. Se stai sviluppando un'app React o Next.js, includere queste best practice fin dall'inizio ti risparmierà ore di debugging. Per una consulenza personalizzata sullo sviluppo di PWA performanti, consulta la pagina <a href="/sviluppo-app-react-web.html">sviluppo app web React</a>.</p>
+<h2 id="errore-3-strategie-di-caching-inadeguate">Errore #3: Strategie di caching inadeguate</h2>
+
+<p>Il caching è il cuore pulsante di una <strong>app web progressiva</strong> (PWA): senza di esso l'esperienza offline non esiste, la velocità di caricamento cala e l'affidabilità su reti instabili viene meno. Tuttavia, scegliere una strategia sbagliata può causare danni peggiori dell'assenza di cache. Dati obsoleti visualizzati dall'utente, spazio di archiviazione saturo sul dispositivo, funzionalità rotte perché una risorsa critica non è stata memorizzata sono solo alcuni dei sintomi. Secondo le linee guida di Google Developers, una strategia di caching ben progettata deve bilanciare freschezza dei dati, disponibilità offline ed efficienza dello storage. Purtroppo molti sviluppatori cadono in errori facilmente evitabili, che vanificano i benefici di una PWA.</p>
+
+<h3>Cache-first applicata indiscriminatamente ai dati dinamici</h3>
+<p>Uno degli errori più comuni è utilizzare la strategia <em>Cache-first</em> per tutte le richieste, comprese quelle verso API che restituiscono dati mutevoli. In un'applicazione di gestione di un'officina meccanica – come quelle che sviluppiamo abitualmente – il pannello di controllo delle prenotazioni deve mostrare le ultime disponibilità. Se il Service Worker serve una risposta dalla cache senza verificare la rete, il meccanico potrebbe vedere slot già occupati o orari non aggiornati, con conseguenti doppie prenotazioni e clienti insoddisfatti. La soluzione corretta prevede di applicare strategie differenziate: per asset statici (CSS, immagini, font) va benissimo <strong>Cache-first</strong> con un tempo di scadenza lungo; per dati dinamici come liste di appuntamenti o prezzi aggiornati è preferibile <strong>Network-first</strong> (mostra la risposta di rete, fallback sulla cache) oppure <strong>Stale-while-revalidate</strong> (restituisce subito la versione in cache, ma in background aggiorna la risorsa). Un esempio pratico: configurare Workbox con <code>registerRoute</code> per intercettare le richieste API e applicare un timeout di rete di 5 secondi prima di cadere sulla cache garantisce reattività e freschezza dei dati.</p>
+
+<h3>Assenza di versionamento e pulizia delle cache vecchie</h3>
+<p>Ogni volta che rilasci una nuova versione del Service Worker, dovresti pulire le cache delle versioni precedenti. Molti sviluppatori dimenticano di implementare la logica nell'evento <code>activate</code>. Il risultato è che il dispositivo dell'utente accumula spazio sprecato e, peggio ancora, il Worker potrebbe continuare a servire risorse obsolete perché non le sovrascrive con quelle nuove. Un esempio concreto: dopo un aggiornamento dei file CSS di un'app React, se la cache #v1 rimane intatta, il Client continuerà a visualizzare il vecchio layout. La documentazione MDN raccomanda di tenere traccia di un nome di cache corrente (es. <code>static-cache-v3</code>) e nell'evento <code>activate</code> iterare tutte le cache, cancellando quelle che non corrispondono al nome attuale. In progetti complessi come dashboard SaaS, questo passaggio è critico per garantire un'esperienza coerente; nel nostro servizio di <a href="/sviluppo-app-react-web.html">sviluppo app web con React</a> includiamo sempre un sistema di versionamento automatico basato su hash dei file.</p>
+
+<h3>Overcaching: memorizzare troppi dati senza controllo</h3>
+<p>Alcuni sviluppatori, nel tentativo di rendere l'app perfettamente offline, memorizzano nella cache ogni risorsa incontrata, comprese immagini di grandi dimensioni, video e risposte JSON di elenchi infiniti. La Cache API ha un limite di spazio – in genere qualche centinaio di MB sui browser mobile – e quando si supera, il browser elimina le voci più vecchie, provocando malfunzionamenti imprevedibili. Inoltre, riempire la cache incide sulle performance del dispositivo e sull'usabilità: l'utente potrebbe non volere che una PWA consumi 300 MB di spazio per contenuti che non consulta mai offline. La regola pratica è: memorizza solo ciò che è effettivamente necessario per il funzionamento offline delle schermate principali. Per i dati transazionali o di catalogo, utilizza una cache con limite dimensionale, sfruttando la chiave <code>caches.keys()</code> per controllare il totale. In una PWA per un'officina meccanica, ha senso cacheare l'elenco dei servizi offerti e i contatti, ma non tutte le immagini dei pezzi di ricambio; eventualmente carica quelle on demand con una strategia <em>Network-only</em> e fallback su placeholder.</p>
+
+<h3>Ignorare le risorse critiche del percorso di navigazione</h3>
+<p>Un errore subdolo è cacheare solo l'HTML e il bundle principale del JavaScript, ma dimenticare risorse come i font, immagini di sfondo, file CSS secondari o i dati JSON di configurazione. Quando l'utente tenta di navigare offline, l'app si carica sì (perché l'HTML è in cache), ma la pagina appare senza caratteri, con layout rotto o senza lo stile corretto. Questo accade spesso quando si usa un Service Worker generato da CRA o Next.js senza personalizzare il precaching. La soluzione è utilizzare uno strumento come <strong>Workbox</strong> con la modalità <code>precacheAndRoute</code>, che registra tutti gli asset elencati nel manifest generato dalla build. Inoltre, per i contenuti dinamici, includi esplicitamente le route delle API principali che devono essere disponibili offline. In un'app di prenotazione per officina, ad esempio, la schermata di conferma appuntamento dovrebbe avere in cache anche l'immagine del logo e il file di traduzione. Se vuoi approfondire un caso concreto di PWA per un'attività locale, puoi vedere il nostro <a href="/sito-web-officina-meccanica.html">sito web per officina meccanica</a> dove abbiamo implementato una strategia di caching su misura per ridurre i consumi di spazio.</p>
+
+<h3>Tabella riepilogativa delle strategie di caching</h3>
+<table>
+<thead>
+<tr>
+<th>Strategia</th>
+<th>Quando usarla</th>
+<th>Pro</th>
+<th>Contro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache-first</td>
+<td>Asset statici (CSS, JS, font)</td>
+<td>Risposte immediate offline</td>
+<td>Dati obsoleti se usata su risorse dinamiche</td>
+</tr>
+<tr>
+<td>Network-first</td>
+<td>API con dati critici (ordini, prenotazioni)</td>
+<td>Massima freschezza</td>
+<td>Più lento su reti lente (fallback su cache)</td>
+</tr>
+<tr>
+<td>Stale-while-revalidate</td>
+<td>Feed di notizie, liste di prodotti</td>
+<td>Risposta veloce + aggiornamento in background</td>
+<td>Complessità di implementazione, possibile conflitto dati</td>
+</tr>
+<tr>
+<td>Network-only</td>
+<td>Operazioni che richiedono connessione (login, pagamenti)</td>
+<td>Nessun dato falso</td>
+<td>Nessuna offline availability</td>
+</tr>
+<tr>
+<td>Cache-only</td>
+<td>Contenuti statici che non cambiano mai</td>
+<td>Massima velocità</td>
+<td>Impossibile aggiornare senza nuova versione SW</td>
+</tr>
+</tbody>
+</table>
+<p>Non esiste una strategia universale: la scelta deve basarsi sul tipo di dato, sulla frequenza di aggiornamento e sulle aspettative dell'utente. In generale, una combinazione di <em>precaching</em> per gli asset build-time e <em>runtime caching</em> per le API con politiche differenziate è la soluzione più robusta.</p>
+
+<p>Una strategia di caching adeguata trasforma una PWA da un semplice wrapper a uno strumento affidabile e veloce. Se stai sviluppando un'app con React o Next.js e vuoi evitare questi errori, nel nostro servizio di <a href="/sviluppo-app-react-web.html">sviluppo app web progressive personalizzato</a> analizziamo il flusso di navigazione, i tipi di contenuti e le condizioni di rete per progettare una strategia di cache su misura. Prevenire gli errori di caching oggi significa garantire agli utenti un'esperienza sempre fluida, domani.</p>
+  </div>
+
+  <div class="ap-author">
+    <div class="ap-author-avatar">AP</div>
+    <div>
+      <div class="ap-author-name">Andrea Piani</div>
+      <div class="ap-author-bio">Sviluppatore software freelance a Udine. Sviluppo app, CRM e gestionali su misura per PMI. Oltre 100 progetti pubblicati, codice proprietario, nessun canone mensile.</div>
+    </div>
+  </div>
+
+  <div class="ap-cta">
+    <h3>Pronto a realizzare il tuo progetto?</h3>
+    <p>Parla direttamente con Andrea Piani: preventivo gratuito in 24 ore, codice tuo dal giorno 1, nessun canone.</p>
+    <a href="/preventivo-app.html" class="ap-cta-btn">Richiedi preventivo</a>
+  </div>
+
+  <div class="ap-related">
+    <h3>Approfondimenti correlati</h3>
+    <div class="ap-related-grid">
+      <a class="ap-related-card" href="/sviluppo-app-ios.html"><span class="ap-related-card-title">Sviluppo app iOS</span></a>
+      <a class="ap-related-card" href="/sviluppo-app-android.html"><span class="ap-related-card-title">Sviluppo app Android</span></a>
+      <a class="ap-related-card" href="/sviluppo-app-mobile.html"><span class="ap-related-card-title">Sviluppo app mobile</span></a>
+    </div>
+  </div>
+</article>
+
+<footer class="ap-footer">
+  <p>Sviluppo software su misura per PMI · Udine, Italia</p>
+</footer>
+
+<a href="https://wa.me/393516248936" class="ap-wa" target="_blank" rel="noopener" aria-label="Contatta Andrea su WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg></a>
+
+<script>
+document.querySelectorAll('.ap-toc a').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  const el = document.querySelector(a.getAttribute('href'));
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}));
+</script>
+</body>
+</html>
