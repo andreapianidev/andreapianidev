@@ -2,7 +2,7 @@
 <urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/blog/</ns0:loc>
-    <ns0:lastmod>2026-07-09</ns0:lastmod>
+    <ns0:lastmod>2026-07-10</ns0:lastmod>
     <ns0:priority>0.9</ns0:priority>
     <ns0:changefreq>weekly</ns0:changefreq>
   </ns0:url>
@@ -39,6 +39,12 @@
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/blog/quanto-costa-sviluppare-un-app-ios-preventivi-e-consigli.html</ns0:loc>
     <ns0:lastmod>2026-06-27</ns0:lastmod>
+    <ns0:priority>0.8</ns0:priority>
+    <ns0:changefreq>monthly</ns0:changefreq>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://www.andreapiani.com/blog/quanto-costa-sviluppare-un-app-mobile-guida-ai-prezzi-2026.html</ns0:loc>
+    <ns0:lastmod>2026-07-10</ns0:lastmod>
     <ns0:priority>0.8</ns0:priority>
     <ns0:changefreq>monthly</ns0:changefreq>
   </ns0:url>
