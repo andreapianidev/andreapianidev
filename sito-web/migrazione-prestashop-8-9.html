@@ -96,7 +96,7 @@
       },
       {
         "@type": "Question",
-        "name": "Quanto costa migrare PrestaShop da 1.7 a 8?",
+        "name": "Quanto costa aggiornare PrestaShop?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Il costo dipende da: numero di prodotti, complessità dei moduli custom, personalizzazioni del tema, integrazioni esterne. In media, una migrazione professionale costa il 60-70% meno rispetto a rifare lo shop da zero. Offro preventivo gratuito dettagliato entro 24 ore analizzando il tuo shop."
@@ -550,6 +550,63 @@
     </div>
   </section>
 
+  <!-- PERCORSI DI AGGIORNAMENTO PER VERSIONE -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>Da Quale Versione Parti? I Percorsi di Aggiornamento PrestaShop</strong></h2>
+      <p class="text-center lead mb-5">Ogni versione di partenza ha il suo percorso, i suoi rischi e i suoi tempi. Ecco come aggiorno ciascuna.</p>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 2rem; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.3rem; margin-bottom: 1rem;">Aggiornare PrestaShop da 1.6 a 1.7 (e oltre)</h3>
+            <p style="color: #ccc; line-height: 1.8; margin-bottom: 0.8rem;">
+              Se sei ancora su PrestaShop 1.6, il passaggio intermedio a 1.7 spesso non conviene più: entrambe le versioni sono fuori supporto. Nella maggior parte dei casi porto lo shop <strong>direttamente da 1.6 a PrestaShop 8</strong>, con migrazione completa di prodotti, clienti, ordini e SEO (URL e redirect inclusi).
+            </p>
+            <p style="color: #999; line-height: 1.7; margin: 0;">Tema e moduli 1.6 non sono compatibili: vanno sostituiti o riscritti — è incluso nell'analisi preventiva gratuita.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 2rem; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.3rem; margin-bottom: 1rem;">Aggiornamento PrestaShop 1.7 → 8</h3>
+            <p style="color: #ccc; line-height: 1.8; margin-bottom: 0.8rem;">
+              Il percorso più comune e più rodato: PrestaShop 8 mantiene compatibilità con gran parte dei moduli 1.7 recenti. Verifico modulo per modulo, aggiorno PHP alla versione supportata e testo il checkout completo su ambiente di staging prima di toccare il sito live.
+            </p>
+            <p style="color: #999; line-height: 1.7; margin: 0;">Tempi tipici: 5-10 giorni lavorativi a seconda di moduli custom e dimensione catalogo.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 2rem; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.3rem; margin-bottom: 1rem;">Migrazione PrestaShop 1.7.8 → 9</h3>
+            <p style="color: #ccc; line-height: 1.8; margin-bottom: 0.8rem;">
+              Dalla 1.7.8 si può saltare direttamente a PrestaShop 9 (Symfony 6, PHP 8.1-8.3, API REST native). È il salto con il maggior guadagno di performance (+45-50%), ma anche quello con più verifiche di compatibilità: moduli e override vanno testati uno a uno.
+            </p>
+            <p style="color: #999; line-height: 1.7; margin: 0;">Consigliato se il tema è recente; altrimenti valuto insieme a te se fermarsi a PrestaShop 8.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 2rem; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.3rem; margin-bottom: 1rem;">Aggiornamento PrestaShop 8 → 9</h3>
+            <p style="color: #ccc; line-height: 1.8; margin-bottom: 0.8rem;">
+              Il percorso più lineare: struttura dati simile, moduli in gran parte già compatibili. Aggiornamento minore ma da non fare "col pulsante" in produzione: anche qui staging, backup completo e piano di rollback sono obbligatori.
+            </p>
+            <p style="color: #999; line-height: 1.7; margin: 0;">Tempi tipici: 2-5 giorni lavorativi.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: rgba(223,0,103,0.08); border: 1px solid #df0067; border-radius: 10px; padding: 2rem; margin-top: 1rem;">
+        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 1rem;">Come aggiornare PrestaShop: manualmente o con un servizio professionale?</h3>
+        <p style="color: #ccc; line-height: 1.8; margin-bottom: 0.8rem;">
+          Aggiornare PrestaShop manualmente (modulo "1-Click Upgrade" o upload via FTP) è possibile, ma è il modo più frequente con cui gli shop finiscono offline: moduli incompatibili che rompono il checkout, override che vanno in conflitto, tema che perde pezzi e — nel peggiore dei casi — <strong>perdita di dati per un backup incompleto</strong>. Il modulo di upgrade ufficiale fallisce silenziosamente più spesso di quanto si pensi su shop con molti moduli.
+        </p>
+        <p style="color: #ccc; line-height: 1.8; margin: 0;">
+          Il mio servizio elimina questi rischi: <strong>backup completo verificato</strong> (database + file), migrazione su ambiente di staging, test funzionali su catalogo/carrello/pagamenti, e messa online solo a shop perfettamente funzionante — con possibilità di rollback immediato. Il sito live resta attivo durante tutta la migrazione: <strong>zero downtime</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- CASI STUDIO MIGRAZIONI REALI -->
   <section style="padding: 4rem 0; background: #0a0a0a;">
     <div class="container">
@@ -910,7 +967,7 @@
       </div>
 
       <div class="faq-item">
-        <h3 class="faq-question">Quanto costa migrare PrestaShop da 1.7 a 8?</h3>
+        <h3 class="faq-question">Quanto costa aggiornare PrestaShop?</h3>
         <p>Il costo varia in base a:</p>
         <ul>
           <li>Numero di prodotti e complessità catalogo</li>

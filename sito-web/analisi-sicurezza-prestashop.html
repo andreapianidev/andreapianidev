@@ -147,6 +147,47 @@
       margin: 3rem 0;
     }
   </style>
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "PrestaShop hackerato: cosa fare subito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1) Metti il sito in manutenzione e cambia le password di back office, FTP, database e hosting. 2) Verifica i danni tipici: codice iniettato nel tema o nei moduli, admin fantasma nel database, redirect esterni, file PHP estranei. 3) Bonifica: rimuovi il codice malevolo, aggiorna PrestaShop e i moduli vulnerabili e chiudi la falla — ripristinare solo il backup non basta. 4) Se hai gestito dati di carte, valuta gli obblighi GDPR di notifica. Offro intervento di emergenza con analisi forense, rimozione malware e hardening."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Lo scanner sicurezza PrestaShop è davvero gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, pyprestascan è 100% gratuito senza limiti di utilizzo. Non richiede registrazione, carta di credito o dati personali. Analizza solo informazioni pubbliche dello shop, non salva nessun dato e non fa tracking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come capisco se il mio PrestaShop è vulnerabile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inserisci l'URL dello shop nello scanner gratuito: verifica versione PrestaShop e vulnerabilità CVE note, moduli con falle conosciute, header di sicurezza HTTP, file sensibili esposti e configurazioni a rischio. Il report indica priorità critica/alta/media/bassa con le azioni consigliate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cosa devo fare se lo scanner trova vulnerabilità?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per vulnerabilità critiche (versioni PrestaShop fuori supporto, moduli con exploit pubblici) intervieni subito: aggiornamento o migrazione urgente a PrestaShop 8/9. Per vulnerabilità medie o basse pianifica l'aggiornamento entro 30-60 giorni. Contattami per un preventivo gratuito di messa in sicurezza."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -402,6 +443,42 @@
 
 
   <!-- FAQ SCANNER -->
+  <!-- PRESTASHOP HACKERATO: COSA FARE -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 class="text-center display-4 mb-5"><strong>PrestaShop Hackerato: Cosa Fare Subito</strong></h2>
+      <p class="text-center lead mb-5">Ordini sospetti, redirect strani, pagine modificate o email di spam dal tuo dominio? Ecco la procedura di emergenza.</p>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.15rem;"><strong>1. Isola lo shop, non cancellare nulla</strong></h3>
+            <p style="margin: 0;">Metti il sito in manutenzione e cambia subito le password di back office, FTP, database e hosting. Non eliminare file sospetti: servono per capire da dove sono entrati e se hanno lasciato backdoor.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.15rem;"><strong>2. Verifica i danni tipici</strong></h3>
+            <p style="margin: 0;">I compromessi PrestaShop più comuni: codice iniettato nei file del tema o nei moduli (skimmer carte di credito), admin fantasma creati nel database, redirect verso siti esterni, file PHP estranei in /modules o /img. La scansione gratuita qui sopra rileva i segnali principali.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.15rem;"><strong>3. Bonifica e chiusura della falla</strong></h3>
+            <p style="margin: 0;">Ripristinare un backup non basta: se la vulnerabilità resta aperta, rientrano in pochi giorni. Serve rimuovere il codice malevolo, aggiornare PrestaShop e i moduli vulnerabili (spesso la porta d'ingresso è un modulo obsoleto) e chiudere la falla. Se hai gestito dati di carte, valuta anche gli obblighi GDPR di notifica.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; height: 100%;">
+            <h3 style="color: #df0067; font-size: 1.15rem;"><strong>4. Intervento di emergenza</strong></h3>
+            <p style="margin-bottom: 1rem;">Faccio bonifiche di shop PrestaShop hackerati con analisi forense dei log, rimozione malware, hardening (permessi file, WAF, 2FA back office) e, dove serve, <a href="migrazione-prestashop-8-9.html" style="color: #df0067;">migrazione a PrestaShop 8/9</a> per uscire definitivamente dalle versioni vulnerabili.</p>
+            <a href="https://wa.me/393516248936?text=Ciao%20Andrea%2C%20il%20mio%20PrestaShop%20%C3%A8%20stato%20hackerato%2C%20mi%20serve%20aiuto%20urgente" target="_blank" class="btn" style="background: #df0067; color: white;">🚨 SOS PrestaShop Hackerato</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section style="padding: 4rem 0; background: #0a0a0a;">
     <div class="container">
       <h2 class="text-center display-4 mb-5"><strong>Domande Frequenti su pyprestascan</strong></h2>

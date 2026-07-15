@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/blog/perche-dovresti-assumere-uno-sviluppatore-di-app-freelance-per-il-tuo-progetto/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/modulo-prestashop-captcha/",
+      "destination": "/analisi-sicurezza-prestashop.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/che-cose-la-monetizzazione-delle-app-e-perche-e-importante/",
+      "destination": "/come-creare-app-guadagnare.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/come-guadagnare-con-un-app-strategie-di-monetizzazione/",
+      "destination": "/come-creare-app-guadagnare.html",
+      "permanent": true
+    }
+  ]
+}
