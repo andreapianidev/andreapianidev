@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="Gestionale B&B con calendario unificato Booking/Airbnb, prenotazioni dirette a zero commissioni e tassa di soggiorno automatica. Demo gratuita 30 minuti.">
+  <meta name="keywords" content="gestionale bed and breakfast, gestionale b&b, software affittacamere, channel manager b&b, gestionale casa vacanze, calendario unificato booking airbnb, tassa di soggiorno software, gestionale guest house, sincronizzazione ical b&b, prenotazione diretta b&b, software gestione b&b italia, gestionale agriturismo camere">
+  <meta name="author" content="Andrea Piani">
+
+  <meta property="og:title" content="Gestionale per B&B e affittacamere · B&B Facile — calendario unico, zero overbooking">
+  <meta property="og:description" content="B&B Facile: calendario unificato Booking/Airbnb via iCal, motore di prenotazione diretta a commissione zero, tassa di soggiorno, ISTAT, pulizie. Include CheckIn Facile per Alloggiati Web. Demo gratuita 30 minuti.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+  <meta property="og:image:alt" content="B&B Facile — gestionale per bed and breakfast e affittacamere italiani">
+  <meta property="og:url" content="https://www.andreapiani.com/gestionale-bed-and-breakfast.html">
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Andrea Piani — SaaS Live">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@andreapianidev">
+  <meta name="twitter:title" content="Gestionale per B&B e affittacamere · B&B Facile">
+  <meta name="twitter:description" content="Calendario unificato Booking/Airbnb, prenotazione diretta a zero commissioni, tassa di soggiorno e pulizie. Demo gratuita.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+
+  <link rel="canonical" href="https://www.andreapiani.com/gestionale-bed-and-breakfast.html" />
+
+  <link rel="alternate" hreflang="it" href="https://www.andreapiani.com/gestionale-bed-and-breakfast.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.andreapiani.com/gestionale-bed-and-breakfast.html" />
+
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <title>Gestionale per B&B e Affittacamere — Prenotazioni, Channel Manager, Tassa Soggiorno | Andrea Piani</title>
+
+  <!-- Schema.org: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://www.andreapiani.com/gestionale-bed-and-breakfast.html#software",
+    "name": "B&B Facile",
+    "description": "Gestionale completo per bed and breakfast, affittacamere, guest house e case vacanze italiane: calendario unificato multi-camera con sincronizzazione iCal Booking/Airbnb/Vrbo, motore di prenotazione diretta a commissione zero, check-in digitale con invio automatico ad Alloggiati Web (modulo CheckIn Facile integrato), tassa di soggiorno comunale con esenzioni e report trimestrale, ISTAT regionale, planning pulizie e cambi biancheria, tariffe stagionali propagate su ogni canale.",
+    "url": "https://www.andreapiani.com/gestionale-bed-and-breakfast.html",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Bed and Breakfast Property Management",
+    "operatingSystem": "Web Browser + iOS + Android",
+    "softwareVersion": "1.3",
+    "datePublished": "2026-02-02",
+    "dateModified": "2026-07-15",
+    "inLanguage": "it-IT",
+    "image": "https://www.andreapiani.com/assets/images/andrea-piani-logo.png",
+    "featureList": "Calendario unificato multi-camera con sincronizzazione iCal Booking Airbnb Vrbo, Motore di prenotazione diretta a commissione zero con pagamento carta e bonifico, Check-in digitale e Alloggiati Web automatico modulo CheckIn Facile integrato, Tassa di soggiorno comunale con esenzioni e report trimestrale, ISTAT regionale flussi turistici, Planning pulizie e cambi biancheria per la collaboratrice, Tariffe stagionali e weekend propagate su tutti i canali, Dashboard occupancy e ricavi per camera e per canale, Link e QR prenotazione diretta per Google Business e Instagram, Export dati CSV e calendari iCal standard senza lock-in",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "2999",
+      "availability": "https://schema.org/InStock",
+      "description": "Setup una tantum a partire da €2.999, preventivo scope-based scritto dopo la demo gratuita di 30 minuti. Include setup tassa di soggiorno del tuo comune e 2 ore di training."
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "30",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "areaServed": [
+      {"@type": "Country", "name": "Italia"}
+    ],
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Titolari di bed and breakfast, affittacamere, guest house, case vacanze e agriturismi con camere"
+    },
+    "provider": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "jobTitle": "Senior Developer · SaaS verticali per l'ospitalità italiana",
+      "url": "https://www.andreapiani.com",
+      "email": "andreapiani.dev@gmail.com",
+      "telephone": "+393516248936",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IT",
+        "addressLocality": "Udine",
+        "postalCode": "33100"
+      },
+      "sameAs": [
+        "https://github.com/andreapianidev",
+        "https://linktr.ee/andreapianidev"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "url": "https://www.andreapiani.com"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.andreapiani.com"},
+      {"@type":"ListItem","position":2,"name":"SaaS Live","item":"https://www.andreapiani.com/gestionali-personalizzati-aziende.html"},
+      {"@type":"ListItem","position":3,"name":"Gestionale B&B","item":"https://www.andreapiani.com/gestionale-bed-and-breakfast.html"}
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage 10 Q&A -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Che differenza c'è tra B&B Facile e CheckIn Facile?","acceptedAnswer":{"@type":"Answer","text":"B&B Facile è il gestionale completo della struttura: calendario unificato, motore di prenotazione diretta, tariffe, pulizie, tassa di soggiorno e ISTAT. CheckIn Facile è il modulo check-in digitale + Alloggiati Web — nato prima come SaaS a sé, oggi integrato dentro B&B Facile. Se ti serve solo il check-in digitale con invio automatico ad Alloggiati Web perché il resto lo gestisci già, CheckIn Facile si compra anche da solo: ha una pagina dedicata sul mio sito. Se invece vuoi un solo sistema per tutto il B&B, B&B Facile lo include senza doppio costo."}},
+      {"@type":"Question","name":"Come impedite davvero l'overbooking tra Booking e Airbnb?","acceptedAnswer":{"@type":"Answer","text":"Con onestà tecnica: la sincronizzazione iCal fra portali non è istantanea — Booking e Airbnb rileggono i calendari ogni 5-15 minuti circa. B&B Facile chiude la disponibilità su tutti i canali collegati appena entra una prenotazione, quindi la finestra di rischio scende da ore o giorni (calendari aggiornati a mano) a pochi minuti. Le prenotazioni dirette bloccano il calendario in tempo reale. Sulle strutture attive finora questo ha significato zero overbooking, ma non prometto l'impossibile: se due ospiti prenotano la stessa camera su due portali nello stesso minuto, il sistema ti avvisa subito e gestisci il caso prima che l'ospite arrivi al citofono."}},
+      {"@type":"Question","name":"Quanto costa B&B Facile? Non conviene un channel manager in abbonamento?","acceptedAnswer":{"@type":"Answer","text":"Setup da €2.999 una tantum, con preventivo scope-based scritto dopo la demo: dipende da quante unità hai, quanti canali colleghi, se vuoi il modulo check-in e il motore di prenotazione diretta. Il confronto onesto: un channel manager in abbonamento costa €30-100 al mese (€360-1.200 l'anno, per sempre) e fa benissimo la sincronizzazione di tariffe e contenuti, ma non è tuo, non gestisce tassa di soggiorno comunale, Alloggiati Web, pulizie e ISTAT, e ogni funzione extra è un upsell. B&B Facile conviene se vuoi un sistema unico di proprietà che copra tutta la gestione; il channel manager conviene se ti serve solo la distribuzione multi-portale spinta. Te lo dico in demo senza giri di parole."}},
+      {"@type":"Question","name":"Non ho un sito: come funziona la prenotazione diretta?","acceptedAnswer":{"@type":"Answer","text":"Non serve un sito. B&B Facile genera una pagina di prenotazione con il nome della tua struttura, foto e tariffe, raggiungibile da un link e da un QR code: lo metti nella bio Instagram, nel profilo Google Business, nello stato WhatsApp, nella firma email. L'ospite sceglie date e camera, paga con carta o bonifico, e la prenotazione blocca subito il calendario su tutti i canali — a commissione zero. Molti ospiti che ti trovano su Booking il primo anno tornano dal link diretto il secondo."}},
+      {"@type":"Question","name":"La tassa di soggiorno cambia da comune a comune: come la gestite?","acceptedAnswer":{"@type":"Answer","text":"Configuro io le regole del tuo comune durante il setup, è uno dei bonus inclusi: importo per persona per notte, numero massimo di notti tassate, esenzioni (bambini sotto la soglia comunale, residenti, forze dell'ordine e le altre previste dalla delibera). Il sistema calcola la tassa su ogni prenotazione, tiene il registro e genera il report trimestrale già pronto da inviare al comune. Se il comune cambia delibera, aggiorni gli importi dal pannello in due minuti."}},
+      {"@type":"Question","name":"L'invio automatico ad Alloggiati Web è legale?","acceptedAnswer":{"@type":"Answer","text":"Sì. Il portale Alloggiati della Polizia di Stato prevede ufficialmente l'invio telematico tramite le credenziali e il certificato della struttura: è lo stesso canale usato dai PMS. Il modulo check-in (CheckIn Facile) raccoglie i documenti degli ospiti al pre-check-in, prepara la schedina e la trasmette entro le 24 ore previste dalla legge, conservando le ricevute. Il titolare della comunicazione resti tu: il sistema ti toglie la trascrizione manuale alle 23 di sera, non la responsabilità. Sul mio sito trovi la pagina dedicata al check-in digitale per l'approfondimento."}},
+      {"@type":"Question","name":"Come funziona il planning pulizie con la mia collaboratrice?","acceptedAnswer":{"@type":"Answer","text":"Il planning si genera da solo dai check-out e dai check-in: per ogni giorno la collaboratrice vede quali camere partono, quali arrivano e a che ora, e che intervento serve (cambio completo, refresh, cambio biancheria). Le arriva un link web — niente app da installare, funziona su qualsiasi telefono — con la sua vista personale; spunta le camere fatte e tu vedi lo stato in tempo reale, anche a 3.000 km di distanza. Fine dei messaggi vocali su WhatsApp tipo 'domani parte la 3, arriva la doppia alle 14'."}},
+      {"@type":"Question","name":"Gestisco il B&B a distanza: funziona anche se non vivo lì?","acceptedAnswer":{"@type":"Answer","text":"È uno dei casi d'uso principali. Dal pannello vedi tutto da remoto: prenotazioni in arrivo dai portali e dal canale diretto, check-in digitali completati, schedine Alloggiati inviate, pulizie spuntate dalla collaboratrice, tassa di soggiorno accumulata per il report. Con il modulo check-in l'ospite carica i documenti prima di arrivare e riceve le istruzioni di accesso. Ti serve solo una persona sul posto per pulizie e imprevisti fisici — tutto il resto si governa da qualsiasi posto con una connessione."}},
+      {"@type":"Question","name":"Oggi uso Excel o un altro gestionale: come funziona la migrazione?","acceptedAnswer":{"@type":"Answer","text":"Importo io: prenotazioni future da Booking e Airbnb (export o feed iCal), storico e anagrafica ospiti da Excel o dal vecchio gestionale, camere e tariffe. Poi facciamo una o due settimane di parallel run: tieni il vecchio metodo accanto a B&B Facile finché non ti fidi, e solo dopo spegni Excel. Il go-live non è mai un salto nel vuoto."}},
+      {"@type":"Question","name":"E se un giorno voglio cambiare sistema? I miei dati che fine fanno?","acceptedAnswer":{"@type":"Answer","text":"Exit strategy scritta nel contratto: in qualsiasi momento ti consegno l'export completo — CSV per prenotazioni, ospiti e movimenti della tassa di soggiorno, calendari in formato iCal standard leggibili da qualunque altro sistema — più la documentazione tecnica e, se il progetto è a codice tuo, il codice sorgente con handover per il dev successivo. I dati della tua struttura sono tuoi: nessun lock-in, mai."}},
+      {"@type":"Question","name":"Le tariffe stagionali si aggiornano davvero su tutti i portali?","acceptedAnswer":{"@type":"Answer","text":"Sulle tariffe serve trasparenza: il protocollo iCal sincronizza le disponibilità, non i prezzi. B&B Facile gestisce il tuo listino stagionale e weekend in un punto solo e lo propaga in automatico sul motore di prenotazione diretta; verso Booking e Airbnb i prezzi si aggiornano tramite le connessioni ufficiali dove disponibili per la tua struttura, altrimenti il sistema ti prepara il riepilogo esatto camera per camera da confermare sui portali — 10 minuti a stagione invece di un pomeriggio a portale. In demo ti dico esattamente cosa è automatico e cosa no per il tuo caso."}}
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: HowTo digitalizzazione B&B in 7 step -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Come digitalizzare un B&B in 7 step",
+    "description": "Processo collaudato in 7 step per portare un B&B o affittacamere da Excel e calendari separati a un gestionale unico con canali sincronizzati, tassa di soggiorno automatica e pulizie coordinate.",
+    "totalTime": "P2W",
+    "supply": [
+      {"@type":"HowToSupply","name":"Elenco camere/unità con tariffe stagionali attuali"},
+      {"@type":"HowToSupply","name":"Accessi extranet Booking.com e Airbnb (per i feed iCal)"},
+      {"@type":"HowToSupply","name":"Credenziali portale Alloggiati Web della struttura"},
+      {"@type":"HowToSupply","name":"Delibera tassa di soggiorno del comune (importi ed esenzioni)"}
+    ],
+    "tool": [
+      {"@type":"HowToTool","name":"B&B Facile (web + mobile)"},
+      {"@type":"HowToTool","name":"Modulo CheckIn Facile per check-in digitale e Alloggiati Web"},
+      {"@type":"HowToTool","name":"Feed iCal dei portali (Booking, Airbnb, Vrbo)"}
+    ],
+    "step": [
+      {"@type":"HowToStep","position":1,"name":"Audit canali attivi","text":"Mappa di dove vendi oggi: quali portali, quali commissioni paghi, come aggiorni i calendari, dove nascono i rischi di doppia prenotazione."},
+      {"@type":"HowToStep","position":2,"name":"Import prenotazioni future","text":"Import di tutte le prenotazioni già confermate da Booking, Airbnb, Excel o agenda, con anagrafica ospiti e acconti."},
+      {"@type":"HowToStep","position":3,"name":"Collegamento iCal portali","text":"Collegamento dei feed iCal di Booking, Airbnb e altri portali al calendario unificato: da qui in poi le disponibilità si chiudono da sole."},
+      {"@type":"HowToStep","position":4,"name":"Setup tassa di soggiorno del tuo comune","text":"Configurazione importi, notti massime tassate ed esenzioni secondo la delibera comunale, con registro e report trimestrale automatici."},
+      {"@type":"HowToStep","position":5,"name":"Attivazione check-in digitale","text":"Attivazione del modulo CheckIn Facile: pre-check-in online dell'ospite, raccolta documenti e invio automatico della schedina ad Alloggiati Web entro 24h."},
+      {"@type":"HowToStep","position":6,"name":"Planning pulizie","text":"Setup del planning pulizie e cambi biancheria generato dai check-in/check-out, con vista dedicata per la collaboratrice via link web."},
+      {"@type":"HowToStep","position":7,"name":"Go-live con parallel run","text":"Una o due settimane con vecchio metodo e B&B Facile in parallelo, verifica che tutto quadri, poi spegnimento di Excel e go-live completo."}
+    ]
+  }
+  </script>
+
+  <!-- Fonts: Playfair Display (display, con italic), Nunito Sans (body), Space Mono (date/numeri) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/popup-menu.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="assets/css/gestionale-bed-and-breakfast.css">
+
+  <style>
+    body { margin: 0; }
+    html.dark-mode body.bb-page { background: #FBF6EE !important; color: #24333E !important; }
+  </style>
+</head>
+
+<body class="bb-page">
+
+  <!-- TOPBAR -->
+  <div class="bb-topbar" role="banner">
+    <div class="bb-topbar__inner">
+      <div class="bb-topbar__brand"><span class="badge-live">🛏 SaaS Live</span>B&B Facile · gestionale B&B italiano</div>
+      <div class="bb-topbar__center">
+        <span class="dot-terra" aria-hidden="true"></span>
+        <span data-slot-counter>Luglio 2026 — 1 slot libero su 2</span>
+      </div>
+      <div class="bb-topbar__right">
+        <a href="tel:+393516248936" title="Chiama Andrea Piani per il gestionale B&B">+39 351 624 8936</a>
+        <a href="mailto:andreapiani.dev@gmail.com" title="Email Andrea Piani B&B Facile">andreapiani.dev@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="bb-nav">
+    <a class="bb-nav__brand" href="/" title="Andrea Piani — sviluppatore SaaS per l'ospitalità">andrea <em>piani</em></a>
+    <nav class="bb-nav__links" aria-label="Navigazione principale">
+      <a href="/" title="Home Andrea Piani">home</a>
+      <a href="#" onclick="openServiziPopup(); return false;" title="Tutti i servizi">servizi ▾</a>
+      <a href="#offer" title="Offerta B&B Facile">offerta</a>
+      <a href="#demo" title="Demo B&B Facile gratuita">demo</a>
+      <a href="#faq" title="Domande frequenti gestionale B&B">faq</a>
+      <a href="preventivo-app.html" title="Preventivo personalizzato">preventivo</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="bb-section bb-hero" aria-labelledby="bb-hero-h1">
+    <div class="bb-wrap">
+      <div class="bb-hero__issue">
+        <span class="bb-issue-mark">Registro degli ospiti · pag. 12 · stagione 2026</span>
+      </div>
+      <div class="bb-hero__grid">
+        <div>
+          <span class="bb-eyebrow" data-chapter="01">per titolari di B&B, affittacamere e case vacanze</span>
+          <h1 id="bb-hero-h1" class="bb-h1 bb-hero__h1">
+            <span class="ln">Gestionale per B&B —</span>
+            <span class="ln">un <span class="bb-underline">calendario unico</span></span>
+            <span class="ln">per Booking, Airbnb e <em>diretta</em>.</span>
+          </h1>
+
+          <p class="bb-hero__sub">
+            <strong>B&B Facile</strong> è il gestionale italiano per bed and breakfast, affittacamere e case vacanze: <strong>calendario unificato multi-camera</strong> sincronizzato via iCal con Booking, Airbnb e Vrbo, <strong>motore di prenotazione diretta a commissione zero</strong>, <strong>tassa di soggiorno</strong> del tuo comune con esenzioni e report trimestrale, <strong>ISTAT</strong>, <strong>pulizie coordinate</strong> con la collaboratrice e tariffe stagionali gestite in un punto solo.
+          </p>
+
+          <p class="bb-hero__sub" style="margin-top: 0.8rem;">
+            E il check-in? Incluso: B&B Facile integra <a href="checkin-digitale-hotel.html" title="CheckIn Facile — check-in digitale e Alloggiati Web automatico">CheckIn Facile</a>, il mio SaaS di check-in digitale con schedina <strong>Alloggiati Web inviata in automatico</strong> entro le 24 ore di legge. Demo live gratuita 30 minuti, senza pitch commerciale.
+          </p>
+
+          <div class="bb-hero__cta-row">
+            <a class="bb-cta" href="#demo" title="Richiedi demo B&B Facile gratuita">
+              voglio la demo gratuita
+              <span class="bb-cta__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="bb-hero__secondary" href="#offer" title="Cosa include B&B Facile">oppure vedi cosa include →</a>
+          </div>
+        </div>
+
+        <aside class="bb-hero__cal" aria-hidden="true">
+          <div class="bb-cal__head">
+            <span>🛏 Camere · 13–19 luglio</span>
+            <span class="status">sync iCal attivo</span>
+          </div>
+          <div class="bb-cal__daysrow">
+            <span class="bb-cal__roomlbl"></span>
+            <div class="bb-cal__days">
+              <span>L</span><span>M</span><span>M</span><span class="today">G</span><span>V</span><span>S</span><span>D</span>
+            </div>
+          </div>
+          <div class="bb-cal__row">
+            <span class="bb-cal__roomlbl">Ulivo</span>
+            <div class="bb-cal__track">
+              <span class="bb-cal__bk bb-cal__bk--booking" style="grid-column: 1 / span 3;">Booking</span>
+              <span class="bb-cal__bk bb-cal__bk--direct" style="grid-column: 5 / span 3;">Diretta<em>0% comm.</em></span>
+            </div>
+          </div>
+          <div class="bb-cal__row">
+            <span class="bb-cal__roomlbl">Terrazza</span>
+            <div class="bb-cal__track">
+              <span class="bb-cal__bk bb-cal__bk--airbnb" style="grid-column: 2 / span 4;">Airbnb</span>
+              <span class="bb-cal__bk bb-cal__bk--booking" style="grid-column: 6 / span 2;">Booking</span>
+            </div>
+          </div>
+          <div class="bb-cal__row">
+            <span class="bb-cal__roomlbl">Corte</span>
+            <div class="bb-cal__track">
+              <span class="bb-cal__bk bb-cal__bk--direct" style="grid-column: 1 / span 2;">Diretta<em>0% comm.</em></span>
+              <span class="bb-cal__bk bb-cal__bk--airbnb" style="grid-column: 4 / span 3;">Airbnb</span>
+            </div>
+          </div>
+          <div class="bb-cal__checkin">
+            <span class="ok">✓</span> check-in di oggi · Camera Ulivo — schedina Alloggiati inviata 14:02
+          </div>
+          <div class="bb-cal__legend">
+            <span class="lg lg--booking">Booking</span>
+            <span class="lg lg--airbnb">Airbnb</span>
+            <span class="lg lg--direct">Diretta · 0% commissioni</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DREAM BUYER FILTER -->
+  <section class="bb-section bb-filter" aria-labelledby="bb-filter-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="02">step 1 · è il caso che ci parliamo?</span>
+      <h2 id="bb-filter-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        Vediamo se B&B Facile<br>è la <em>stanza giusta</em> per te.
+      </h2>
+
+      <div class="bb-filter__grid">
+        <div class="bb-filter__col bb-filter__col--yes bb-reveal">
+          <h3>Ti aiuto se <em>sei tu</em></h3>
+          <ul>
+            <li>Hai un <strong>B&B, affittacamere, guest house o 2-3 case vacanze</strong> in Italia, da 1 a 12 camere/unità.</li>
+            <li>Vendi su <strong>Booking e Airbnb con calendari separati</strong> e la doppia prenotazione è un pensiero fisso.</li>
+            <li>Le <strong>commissioni OTA al 15-18%</strong> ti pesano e vorresti spingere il canale diretto, anche senza sito.</li>
+            <li>La <strong>burocrazia la fai di sera</strong>: schedina Alloggiati, tassa di soggiorno su Excel, ISTAT a fine mese.</li>
+            <li>Le <strong>pulizie le coordini via WhatsApp</strong> con la collaboratrice e ogni tanto un cambio salta.</li>
+            <li>Vuoi <strong>dati e sistema tuoi</strong>, con exit strategy scritta se un giorno cambi strada.</li>
+          </ul>
+        </div>
+        <div class="bb-filter__col bb-filter__col--no bb-reveal">
+          <h3>Lascia perdere se <em>cerchi questo</em></h3>
+          <ul>
+            <li>Hai un <strong>hotel da 40+ camere</strong> con reparti e PMS enterprise: B&B Facile è pensato per strutture piccole, non per te.</li>
+            <li>Vuoi <strong>solo il channel manager in abbonamento</strong> da €30/mese: esiste già, te lo consiglio in demo e finisce lì.</li>
+            <li>Sei un <strong>host occasionale</strong> con una stanza affittata 2 weekend l'anno: ti basta il calendario di Airbnb.</li>
+            <li>Cerchi il <strong>revenue management magico</strong> che raddoppia i prezzi senza toccare niente: non esiste, e chi te lo vende lo sa.</li>
+            <li>Vuoi qualcuno che <strong>gestisca la struttura al posto tuo</strong>: quello è un property manager, io costruisco il software.</li>
+            <li>Pensi che la <strong>schedina Alloggiati "tanto non controllano"</strong>: controllano, e la sanzione è penale. Qui si lavora in regola.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAS — 5 problemi B&B -->
+  <section class="bb-section bb-pas" aria-labelledby="bb-pas-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="03">step 2 · cinque problemi che vedo in ogni b&b</span>
+      <h2 id="bb-pas-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        Cinque falle che <em>ogni piccolo B&B</em> italiano<br>ha <span class="terra">aperte adesso</span>.
+      </h2>
+
+      <ul class="bb-pas__list">
+        <li class="bb-pas__item bb-reveal">
+          <span class="num">01</span>
+          <h4>Overbooking: Booking e Airbnb non si parlano</h4>
+          <p>Due calendari, due extranet, aggiornati a mano quando ti ricordi. La doppia prenotazione la scopri <strong>quando l'ospite è al citofono</strong> e l'altra famiglia arriva tra un'ora. Una notte così costa un rimborso, un alternative accommodation e una recensione da 1 stella che ti resta addosso per due stagioni.</p>
+        </li>
+        <li class="bb-pas__item bb-reveal">
+          <span class="num">02</span>
+          <h4>Commissioni OTA: il 15-18% su ogni notte</h4>
+          <p>Su €25.000 l'anno di prenotazioni via portale sono <strong>€4.000 e passa regalati</strong> a Booking e Airbnb. Anche per l'ospite che è già stato da te, ti adora, e ti riprenota... dal portale, perché non gli hai mai dato un'alternativa diretta.</p>
+        </li>
+        <li class="bb-pas__item bb-reveal">
+          <span class="num">03</span>
+          <h4>Burocrazia notturna</h4>
+          <p>La schedina Alloggiati alle 23 dopo l'ultimo arrivo, la tassa di soggiorno su un Excel con le esenzioni segnate a memoria, l'ISTAT compilato a fine mese ricostruendo gli ospiti dalla rubrica. <strong>Un secondo lavoro non pagato</strong>, con sanzioni vere se sbagli.</p>
+        </li>
+        <li class="bb-pas__item bb-reveal">
+          <span class="num">04</span>
+          <h4>Pulizie a memoria, via WhatsApp</h4>
+          <p>"Domani parte la 3, arriva la doppia alle 14, il cambio biancheria fallo solo alla matrimoniale." Vocali, screenshot del calendario, messaggi alle 7 del mattino. Basta un messaggio non letto e <strong>l'ospite entra in una camera non rifatta</strong>.</p>
+        </li>
+        <li class="bb-pas__item bb-reveal">
+          <span class="num">05</span>
+          <h4>Tariffe statiche tutto l'anno</h4>
+          <p>Stesso prezzo ad agosto e a novembre. Non perché non sai che è sbagliato, ma perché aggiornare <strong>3 portali, camera per camera, stagione per stagione</strong> è un pomeriggio di lavoro che rimandi da mesi. E intanto vendi le notti migliori sottocosto.</p>
+        </li>
+      </ul>
+
+      <p class="bb-pas__kicker bb-reveal">
+        Risultato? <em>La struttura lavora, il margine no</em> —<br>e il titolare fa il receptionist notturno di sé stesso.
+      </p>
+    </div>
+  </section>
+
+  <!-- BIG IDEA — 5 aree B&B Facile -->
+  <section class="bb-section" aria-labelledby="bb-bigidea-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="04">step 3 · le 5 aree di b&b facile</span>
+      <h2 id="bb-bigidea-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        Un gestionale, <em>cinque aree</em><br>che si tengono per mano.
+      </h2>
+      <p class="bb-body-lg bb-reveal" style="max-width:62ch; margin-top:1rem;">
+        Niente moduli da comprare a rate, niente upsell a sorpresa. Tutto incluso e configurato sulla tua struttura durante l'onboarding, dal singolo B&B di 3 camere all'affittacamere con 12 unità.
+      </p>
+
+      <div class="bb-bigidea__grid">
+        <div class="bb-bigidea__card bb-reveal">
+          <span class="area-num">area 01</span>
+          <span class="area-icon" aria-hidden="true">📅</span>
+          <h3>Calendario unificato multi-camera</h3>
+          <p>Tutte le camere e tutti i canali in una vista sola: sincronizzazione iCal con Booking, Airbnb e Vrbo, chiusura automatica delle disponibilità appena entra una prenotazione, avviso immediato se due richieste si sovrappongono. L'overbooking smette di essere un pensiero fisso.</p>
+        </div>
+        <div class="bb-bigidea__card bb-reveal">
+          <span class="area-num">area 02</span>
+          <span class="area-icon" aria-hidden="true">🔗</span>
+          <h3>Prenotazione diretta a commissione zero</h3>
+          <p>Pagina di prenotazione brandizzata con la tua struttura, pagamento carta o bonifico, link e QR da mettere in bio Instagram, su Google Business e su WhatsApp. Ogni notte venduta lì è una notte <strong>senza il 15-18% di commissione</strong>.</p>
+        </div>
+        <div class="bb-bigidea__card bb-reveal">
+          <span class="area-num">area 03</span>
+          <span class="area-icon" aria-hidden="true">🪪</span>
+          <h3>Check-in digitale + Alloggiati Web</h3>
+          <p>Il modulo <strong>CheckIn Facile</strong> integrato: l'ospite carica i documenti prima di arrivare, la schedina parte in automatico verso Alloggiati Web entro le 24 ore di legge, con ricevute conservate. <a href="checkin-digitale-hotel.html" title="Approfondimento check-in digitale e Alloggiati Web automatico">Approfondisci sulla pagina dedicata →</a></p>
+        </div>
+        <div class="bb-bigidea__card bb-reveal">
+          <span class="area-num">area 04</span>
+          <span class="area-icon" aria-hidden="true">🧾</span>
+          <h3>Tassa di soggiorno + ISTAT</h3>
+          <p>Regole del tuo comune configurate al setup: importi, notti massime, esenzioni per bambini e residenti. Calcolo automatico su ogni prenotazione, registro sempre in ordine, report trimestrale pronto da inviare e flussi ISTAT regionali compilati dai dati già presenti.</p>
+        </div>
+        <div class="bb-bigidea__card bb-reveal">
+          <span class="area-num">area 05</span>
+          <span class="area-icon" aria-hidden="true">🧺</span>
+          <h3>Pulizie e tariffe</h3>
+          <p>Planning cambi generato dai check-in/check-out con vista dedicata per la collaboratrice (un link web, niente app), spunte in tempo reale, note per camera. E il listino stagionale/weekend gestito in un punto solo e propagato ovunque, invece che portale per portale.</p>
+        </div>
+      </div>
+
+      <!-- Approfondimento SEO: dal doppio calendario al calendario unico -->
+      <div style="max-width:62ch; margin-top:3.5rem;">
+        <h3 class="bb-reveal" style="font-size:1.35rem; margin-bottom:1rem;">Dal doppio calendario al calendario unico.</h3>
+        <p class="bb-body-lg bb-reveal" style="margin-bottom:1rem;">
+          Come funziona davvero la sincronizzazione? Ogni portale espone il calendario della camera come feed <strong>iCal</strong>: B&B Facile li legge e li scrive tutti, così quando entra una prenotazione — da Booking, da Airbnb o dal canale diretto — le date si chiudono ovunque. Onestà tecnica dovuta: i portali rileggono i feed ogni <strong>5-15 minuti</strong>, quindi la finestra di rischio non è zero, è piccola; e iCal sincronizza le <em>disponibilità</em>, non tariffe e contenuti, per i quali servono le connessioni certificate dei channel manager. Per un B&B da 1 a 12 unità, però, è proprio la disponibilità sincronizzata che elimina il 99% degli overbooking reali — quelli nati da un calendario aggiornato a mano tre giorni dopo.
+        </p>
+        <p class="bb-body-lg bb-reveal" style="margin-bottom:1rem;">
+          La seconda leva è il <strong>canale diretto</strong>, che per un piccolo B&B è semplicemente il margine. Il conto è brutale: al 15-18% di commissione, ogni €10.000 di notti vendute via OTA sono €1.500-1.800 che escono dalla struttura. I portali servono — ti portano l'ospite che non ti conosce — ma l'ospite che torna, quello arrivato dal passaparola, quello che ti trova su Google Business: quelli devono poter prenotare dal tuo link, a commissione zero, con la stessa comodità di Booking. Non serve un sito: serve un motore di prenotazione raggiungibile da un link.
+        </p>
+        <p class="bb-body-lg bb-reveal">
+          La terza è la <strong>burocrazia italiana automatizzata</strong>. Schedina Alloggiati entro 24 ore, tassa di soggiorno con le esenzioni della delibera comunale e report trimestrale, ISTAT regionale: sono tre adempimenti che oggi fai tre volte, ricopiando gli stessi dati. In un gestionale i dati dell'ospite entrano una volta sola — al pre-check-in — e da lì escono la schedina, il registro della tassa e il flusso ISTAT. Non è magia: è smettere di trascrivere.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF — 3 case studies -->
+  <section class="bb-section" aria-labelledby="bb-proof-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="05">step 4 · strutture reali, numeri misurati</span>
+      <h2 id="bb-proof-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        Tre strutture.<br>Tre <em>risultati misurati</em>.
+      </h2>
+
+      <div class="bb-proof__grid">
+        <article class="bb-proof__card bb-reveal">
+          <header class="bb-proof__head">b&b 4 camere · friuli</header>
+          <div class="bb-proof__body">
+            <h3 class="bb-proof__title">Overbooking: azzerato in 12 mesi</h3>
+            <p class="bb-proof__metric">0<em>doppie prenotazioni</em></p>
+            <blockquote class="bb-proof__quote">"Prima aggiornavo i calendari la sera, quando mi ricordavo. Due doppie prenotazioni in un'estate, una finita malissimo. Da quando i calendari si chiudono da soli: zero in dodici mesi, e ho smesso di controllare l'extranet tre volte al giorno. Saranno 2 ore a settimana ritrovate."</blockquote>
+            <a class="bb-proof__signature" href="gestionali-personalizzati-aziende.html" title="Altri gestionali su misura realizzati">→ altri gestionali su misura</a>
+          </div>
+        </article>
+
+        <article class="bb-proof__card bb-reveal">
+          <header class="bb-proof__head">affittacamere 6 unità · trieste</header>
+          <div class="bb-proof__body">
+            <h3 class="bb-proof__title">Prenotazioni spostate sul canale diretto</h3>
+            <p class="bb-proof__metric">~€4.200<em>/anno di commissioni risparmiate</em></p>
+            <blockquote class="bb-proof__quote">"Link diretto in Google Business, QR sul frigo delle camere, messaggio agli ospiti di ritorno. In un anno il 28% delle prenotazioni è passato sul canale diretto. Al 15-17% di commissione media, sono circa 4.200 euro rimasti in struttura invece che ai portali."</blockquote>
+            <a class="bb-proof__signature" href="checkin-digitale-hotel.html" title="CheckIn Facile — il modulo check-in digitale">→ il modulo check-in digitale</a>
+          </div>
+        </article>
+
+        <article class="bb-proof__card bb-reveal">
+          <header class="bb-proof__head">casa vacanze · canarie · gestita a distanza</header>
+          <div class="bb-proof__body">
+            <h3 class="bb-proof__title">Pulizie coordinate a 3.000 km</h3>
+            <p class="bb-proof__metric">0<em>cambi saltati</em></p>
+            <blockquote class="bb-proof__quote">"Il proprietario vive in Italia, la casa è alle Canarie. Prima: vocali WhatsApp con la collaboratrice e almeno un cambio biancheria saltato al mese. Ora lei apre il suo link, vede partenze e arrivi, spunta le camere fatte. Zero cambi saltati da quando è attivo il planning."</blockquote>
+            <a class="bb-proof__signature" href="crm.html" title="CRM e sistemi su misura">→ altri sistemi su misura</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GODFATHER OFFER -->
+  <section class="bb-section bb-offer" id="offer" aria-labelledby="bb-offer-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="06">step 5 · l'offerta, nero su bianco</span>
+      <h2 id="bb-offer-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        Cosa ricevi quando<br>scegli <em>B&B Facile</em>.
+      </h2>
+
+      <div class="bb-offer__card">
+        <p class="bb-body-lg" style="margin-top:0;">
+          Tutto incluso e scritto nel preventivo, scope-based sulla tua struttura (B&B / affittacamere / case vacanze / agriturismo con camere). Setup una tantum <strong>da €2.999</strong>; costi terzi reali separati e dichiarati (commissioni carte di pagamento, eventuali SMS).
+        </p>
+
+        <ul class="bb-offer__stack">
+          <li><strong>Setup B&B Facile sulla tua struttura</strong> — camere/unità, foto, tariffe, branding, dominio personalizzato HTTPS.</li>
+          <li><strong>Import prenotazioni future e anagrafica ospiti</strong> — da Booking, Airbnb, Excel o agenda cartacea, con acconti e note.</li>
+          <li><strong>Calendario unificato multi-camera</strong> — sincronizzazione iCal Booking/Airbnb/Vrbo, chiusura automatica disponibilità, avviso conflitti.</li>
+          <li><strong>Motore di prenotazione diretta a commissione zero</strong> — pagina prenota brandizzata, pagamento carta/bonifico, conferme automatiche via email e WhatsApp. <span class="bb-offer__keep">› ogni notte diretta = 15-18% risparmiato</span></li>
+          <li><strong>Modulo check-in digitale (CheckIn Facile integrato)</strong> — pre-check-in online, raccolta documenti, <a href="checkin-digitale-hotel.html" title="Check-in digitale e Alloggiati Web automatico">invio automatico ad Alloggiati Web</a> entro 24h con ricevute.</li>
+          <li><strong>Tassa di soggiorno del tuo comune</strong> — importi, notti massime, esenzioni bambini/residenti, registro e report trimestrale pronto da inviare.</li>
+          <li><strong>ISTAT regionale</strong> — flussi turistici compilati dai dati già presenti, export nel formato della tua regione.</li>
+          <li><strong>Planning pulizie e cambi biancheria</strong> — vista dedicata per la collaboratrice via link web, spunte in tempo reale, note per camera.</li>
+          <li><strong>Tariffe stagionali e weekend</strong> — listino in un punto solo, propagato sul canale diretto e riepiloghi esatti camera per camera per i portali.</li>
+          <li><strong>Dashboard occupancy e ricavi</strong> — per camera e per canale, commissioni pagate vs risparmiate, export per il commercialista.</li>
+          <li><strong>Dati e sistema tuoi</strong> — export CSV e calendari iCal standard in qualsiasi momento. <span class="bb-offer__keep">› niente lock-in</span></li>
+          <li><strong>3 mesi supporto prioritario</strong> + <strong>12 mesi bug-fix gratuito</strong> + handover documentato per chi verrà dopo di me.</li>
+          <li class="bonus"><span class="bb-offer__bonus-tag">BONUS 1</span> Setup della tassa di soggiorno del tuo comune incluso: leggo io la delibera e configuro importi ed esenzioni.</li>
+          <li class="bonus"><span class="bb-offer__bonus-tag">BONUS 2</span> QR code e link di prenotazione diretta pronti per Google Business, bio Instagram e stato WhatsApp.</li>
+          <li class="bonus"><span class="bb-offer__bonus-tag">BONUS 3</span> 2 ore di training registrate — per te <em>e per la collaboratrice</em> che gestisce le pulizie.</li>
+        </ul>
+
+        <div class="bb-offer__bundle">
+          <div class="bb-offer__bundle-lbl">pacchetto <span class="terra">"B&B Facile · digitalizzazione completa"</span></div>
+          <div class="bb-offer__bundle-val">setup · import · calendario unico · diretta 0% · check-in · tassa soggiorno · ISTAT · pulizie</div>
+          <div class="bb-offer__bundle-lbl" style="margin-top:0.8rem;">preventivo scope-based scritto in 48h dopo la demo</div>
+        </div>
+
+        <div class="bb-offer__cta-wrap">
+          <a class="bb-cta bb-cta--xl" href="#demo" title="Richiedi demo B&B Facile gratuita">
+            voglio la demo gratuita
+            <span class="bb-cta__arrow" aria-hidden="true">→</span>
+          </a>
+          <div class="bb-offer__scarcity">
+            <span data-slot-counter>Luglio 2026 — 1 slot libero su 2</span>
+            · onboarding uno alla volta: ogni struttura ha il suo comune, i suoi portali, le sue regole
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIPLE GUARANTEE -->
+  <section class="bb-section" aria-labelledby="bb-grnt-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="07">step 6 · il rischio è mio</span>
+      <h2 id="bb-grnt-h2" class="bb-h2 bb-reveal" style="margin-top:1rem; max-width:24ch;">
+        La tripla garanzia<br><em>da registro degli ospiti</em>.
+      </h2>
+
+      <div class="bb-guarantee__grid">
+        <article class="bb-guarantee__card bb-reveal">
+          <div class="bb-guarantee__seal" aria-hidden="true">🔓</div>
+          <h3 class="bb-guarantee__title">Dati e calendari tuoi</h3>
+          <p class="bb-guarantee__copy">Prenotazioni, ospiti, movimenti tassa di soggiorno: esportabili in CSV e iCal standard in qualsiasi momento, leggibili da qualunque altro sistema. Anche se domani sparisco da internet, la tua struttura continua a funzionare. <strong>Nessun ostaggio, mai</strong>.</p>
+        </article>
+        <article class="bb-guarantee__card bb-reveal">
+          <div class="bb-guarantee__seal" aria-hidden="true">🛡️</div>
+          <h3 class="bb-guarantee__title">12 mesi bug-fix incluso</h3>
+          <p class="bb-guarantee__copy">Per 12 mesi dal go-live, qualunque bug nel codice che ho scritto lo sistemo gratis: un feed iCal che smette di leggersi, un'esenzione calcolata male, un problema sul link di prenotazione. Mi scrivi, lo aggiusto. <strong>Senza fatture extra</strong>.</p>
+        </article>
+        <article class="bb-guarantee__card bb-reveal">
+          <div class="bb-guarantee__seal" aria-hidden="true">🤝</div>
+          <h3 class="bb-guarantee__title">Parallel run prima del salto</h3>
+          <p class="bb-guarantee__copy">Non spegni Excel il giorno uno. Una o due settimane con vecchio metodo e B&B Facile in parallelo: confronti, verifichi, ti fidi. E se in quella finestra decidi che non fa per te, ci stringiamo la mano con l'export dei dati già in tasca. <strong>Il go-live non è un salto nel vuoto</strong>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bb-section" id="faq" aria-labelledby="bb-faq-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="08">step 7 · le domande oneste</span>
+      <h2 id="bb-faq-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        10 domande oneste,<br><em>10 risposte oneste</em>.
+      </h2>
+
+      <div class="bb-faq__list">
+        <details><summary>1. Che differenza c'è tra B&B Facile e CheckIn Facile?</summary><div class="bb-faq__answer"><strong>B&B Facile è il gestionale completo</strong> della struttura: calendario unificato, motore di prenotazione diretta, tariffe, pulizie, tassa di soggiorno e ISTAT. <strong>CheckIn Facile è il modulo check-in digitale + Alloggiati Web</strong> — nato prima come SaaS a sé, oggi integrato dentro B&B Facile. Se ti serve solo il check-in digitale con invio automatico ad Alloggiati Web perché il resto lo gestisci già, CheckIn Facile si compra anche da solo: <a href="checkin-digitale-hotel.html" title="CheckIn Facile — check-in digitale per hotel e B&B">qui trovi la pagina dedicata</a>. Se invece vuoi un solo sistema per tutto il B&B, B&B Facile lo include senza doppio costo.</div></details>
+        <details><summary>2. Come impedite davvero l'overbooking tra Booking e Airbnb?</summary><div class="bb-faq__answer">Con onestà tecnica: la sincronizzazione iCal fra portali <strong>non è istantanea</strong> — Booking e Airbnb rileggono i calendari ogni <strong>5-15 minuti</strong> circa. B&B Facile chiude la disponibilità su tutti i canali collegati appena entra una prenotazione, quindi la finestra di rischio scende da "ore o giorni" (calendari aggiornati a mano) a pochi minuti. Le prenotazioni dirette bloccano il calendario in tempo reale. Sulle strutture attive finora questo ha significato <strong>zero overbooking</strong>, ma non prometto l'impossibile: se due ospiti prenotano la stessa camera su due portali nello stesso minuto, il sistema ti avvisa subito e gestisci il caso prima che l'ospite arrivi al citofono.</div></details>
+        <details><summary>3. Quanto costa B&B Facile? Non conviene un channel manager in abbonamento?</summary><div class="bb-faq__answer">Setup <strong>da €2.999 una tantum</strong>, con preventivo scope-based scritto dopo la demo: dipende da quante unità hai, quanti canali colleghi, se vuoi il modulo check-in e il motore di prenotazione diretta. Il confronto onesto: un channel manager in abbonamento costa <strong>€30-100/mese</strong> (€360-1.200 l'anno, per sempre) e fa benissimo la sincronizzazione di tariffe e contenuti, ma non è tuo, non gestisce tassa di soggiorno comunale, Alloggiati Web, pulizie e ISTAT, e ogni funzione extra è un upsell. B&B Facile conviene se vuoi <strong>un sistema unico di proprietà</strong> che copra tutta la gestione; il channel manager conviene se ti serve solo la distribuzione multi-portale spinta. Te lo dico in demo senza giri di parole.</div></details>
+        <details><summary>4. Non ho un sito: come funziona la prenotazione diretta?</summary><div class="bb-faq__answer">Non serve un sito. B&B Facile genera una <strong>pagina di prenotazione</strong> con il nome della tua struttura, foto e tariffe, raggiungibile da un link e da un QR code: lo metti nella <strong>bio Instagram</strong>, nel profilo <strong>Google Business</strong>, nello stato <strong>WhatsApp</strong>, nella firma email. L'ospite sceglie date e camera, paga con carta o bonifico, e la prenotazione blocca subito il calendario su tutti i canali — <strong>a commissione zero</strong>. Molti ospiti che ti trovano su Booking il primo anno tornano dal link diretto il secondo.</div></details>
+        <details><summary>5. La tassa di soggiorno cambia da comune a comune: come la gestite?</summary><div class="bb-faq__answer">Configuro io le regole del tuo comune durante il setup, è uno dei <strong>bonus inclusi</strong>: importo per persona/notte, numero massimo di notti tassate, esenzioni (bambini sotto la soglia comunale, residenti, forze dell'ordine e le altre previste dalla delibera). Il sistema calcola la tassa su ogni prenotazione, tiene il registro e genera il <strong>report trimestrale già pronto</strong> da inviare al comune. Se il comune cambia delibera, aggiorni gli importi dal pannello in due minuti.</div></details>
+        <details><summary>6. L'invio automatico ad Alloggiati Web è legale?</summary><div class="bb-faq__answer">Sì. Il portale Alloggiati della Polizia di Stato prevede ufficialmente l'<strong>invio telematico</strong> tramite le credenziali e il certificato della struttura: è lo stesso canale usato dai PMS. Il modulo check-in (CheckIn Facile) raccoglie i documenti degli ospiti al pre-check-in, prepara la schedina e la trasmette <strong>entro le 24 ore previste dalla legge</strong>, conservando le ricevute. Il titolare della comunicazione resti tu: il sistema ti toglie la trascrizione manuale alle 23 di sera, non la responsabilità. <a href="checkin-digitale-hotel.html" title="Check-in digitale e Alloggiati Web automatico — approfondimento">Approfondimento sulla pagina dedicata →</a></div></details>
+        <details><summary>7. Come funziona il planning pulizie con la mia collaboratrice?</summary><div class="bb-faq__answer">Il planning si genera da solo dai check-out e dai check-in: per ogni giorno la collaboratrice vede <strong>quali camere partono, quali arrivano e a che ora</strong>, e che intervento serve (cambio completo, refresh, cambio biancheria). Le arriva un <strong>link web</strong> — niente app da installare, funziona su qualsiasi telefono — con la sua vista personale; spunta le camere fatte e tu vedi lo stato in tempo reale, anche a 3.000 km di distanza. Fine dei messaggi vocali su WhatsApp tipo "domani parte la 3, arriva la doppia alle 14".</div></details>
+        <details><summary>8. Gestisco il B&B a distanza: funziona anche se non vivo lì?</summary><div class="bb-faq__answer">È uno dei <strong>casi d'uso principali</strong>. Dal pannello vedi tutto da remoto: prenotazioni in arrivo dai portali e dal canale diretto, check-in digitali completati, schedine Alloggiati inviate, pulizie spuntate dalla collaboratrice, tassa di soggiorno accumulata per il report. Con il modulo check-in l'ospite carica i documenti prima di arrivare e riceve le istruzioni di accesso. Ti serve solo una persona sul posto per pulizie e imprevisti fisici — tutto il resto si governa da qualsiasi posto con una connessione.</div></details>
+        <details><summary>9. Oggi uso Excel (o un altro gestionale): come funziona la migrazione?</summary><div class="bb-faq__answer">Importo io: <strong>prenotazioni future</strong> da Booking e Airbnb (export o feed iCal), storico e anagrafica ospiti da Excel o dal vecchio gestionale, camere e tariffe. Poi facciamo una o due settimane di <strong>parallel run</strong>: tieni il vecchio metodo accanto a B&B Facile finché non ti fidi, e solo dopo spegni Excel. Il go-live non è mai un salto nel vuoto.</div></details>
+        <details><summary>10. E se un giorno voglio cambiare sistema? I miei dati che fine fanno?</summary><div class="bb-faq__answer"><strong>Exit strategy scritta nel contratto</strong>: in qualsiasi momento ti consegno l'export completo — CSV per prenotazioni, ospiti e movimenti della tassa di soggiorno, calendari in formato <strong>iCal standard</strong> leggibili da qualunque altro sistema — più la documentazione tecnica e, se il progetto è a codice tuo, il codice sorgente con handover per il dev successivo. I dati della tua struttura sono tuoi: <strong>nessun lock-in, mai</strong>.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM 5-STEP -->
+  <section class="bb-section bb-sprint" id="demo" aria-labelledby="bb-demo-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="09">step 8 · demo gratuita · 5 step · risposta in 48h</span>
+      <h2 id="bb-demo-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        Descrivi la tua struttura<br>in 5 step. <em>Ti mando io la demo</em>.
+      </h2>
+
+      <div class="bb-sprint__layout">
+        <div class="bb-sprint__pitch">
+          <p>Nessun preventivo standard, nessun PDF auto-generato. <strong>Mi descrivi la tua struttura in 5 step</strong>, leggo io le risposte, ti scrivo entro 48h con un orario per la <strong>demo live di 30 minuti</strong> via Google Meet o videochiamata WhatsApp.</p>
+
+          <p>Cosa vedi nella <em>demo live</em>:</p>
+          <ul class="bb-sprint__bullets">
+            <li><strong>Il calendario unificato</strong> con una struttura di prova simile alla tua (stesse camere, stessi canali).</li>
+            <li><strong>Una prenotazione diretta</strong> completata dal punto di vista dell'ospite, dal link al pagamento.</li>
+            <li><strong>Il check-in digitale</strong> con schedina Alloggiati preparata e inviata (ambiente di prova).</li>
+            <li><strong>La tassa di soggiorno</strong> calcolata con le esenzioni di un comune vero.</li>
+            <li><strong>Il planning pulizie</strong> visto dal telefono della collaboratrice.</li>
+            <li><strong>L'onesta verità</strong>: se ti conviene un channel manager in abbonamento invece di B&B Facile, te lo dico lì.</li>
+          </ul>
+        </div>
+
+        <div id="bb-sprint" class="bb-sprint__form">
+          <div class="bb-sprint__progress" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <form id="sprint-form" autocomplete="on">
+
+            <fieldset class="bb-sprint__step active">
+              <div class="bb-sprint__hint">step 1 / 5</div>
+              <legend>Che tipo di struttura gestisci?</legend>
+              <div class="bb-sprint__options">
+                <label class="bb-sprint__option"><input type="radio" name="structure_type" value="bnb" required><span>🛏 B&B</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="structure_type" value="affittacamere"><span>🏠 Affittacamere / guest house</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="structure_type" value="case_vacanze"><span>🏘 Case vacanze multiple</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="structure_type" value="agriturismo"><span>🌾 Agriturismo con camere</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="bb-sprint__step">
+              <div class="bb-sprint__hint">step 2 / 5</div>
+              <legend>Quante camere o unità hai?</legend>
+              <div class="bb-sprint__options">
+                <label class="bb-sprint__option"><input type="radio" name="units_count" value="u_1_3" required><span>🔑 1-3 camere/unità</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="units_count" value="u_4_6"><span>🗝 4-6 camere/unità</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="units_count" value="u_7_12"><span>🏡 7-12 camere/unità</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="units_count" value="u_13plus"><span>🏰 13+ camere/unità</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="bb-sprint__step">
+              <div class="bb-sprint__hint">step 3 / 5</div>
+              <legend>Dove vendi oggi?</legend>
+              <div class="bb-sprint__options">
+                <label class="bb-sprint__option"><input type="radio" name="sales_channels" value="solo_booking" required><span>🔵 Solo Booking.com</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="sales_channels" value="booking_airbnb"><span>🔵🔴 Booking + Airbnb</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="sales_channels" value="piu_portali"><span>🌐 Booking + Airbnb + altri portali</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="sales_channels" value="anche_diretta"><span>🔗 Portali + qualche prenotazione diretta</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="bb-sprint__step">
+              <div class="bb-sprint__hint">step 4 / 5</div>
+              <legend>Qual è il dolore più grande oggi?</legend>
+              <div class="bb-sprint__options">
+                <label class="bb-sprint__option"><input type="radio" name="main_pain" value="overbooking" required><span>📅 Overbooking / doppie prenotazioni</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="main_pain" value="commissioni"><span>💸 Commissioni OTA troppo alte</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="main_pain" value="burocrazia"><span>🧾 Burocrazia: Alloggiati, tassa soggiorno, ISTAT</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="main_pain" value="pulizie"><span>🧺 Pulizie e cambi da coordinare</span></label>
+                <label class="bb-sprint__option"><input type="radio" name="main_pain" value="tariffe"><span>📈 Tariffe statiche, aggiornare i portali è un lavoro</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="bb-sprint__step">
+              <div class="bb-sprint__hint">step 5 / 5 — ultimo</div>
+              <legend>A chi mando l'orario della demo?</legend>
+              <div class="bb-sprint__row">
+                <div class="bb-sprint__field">
+                  <label for="sprint-name">Nome</label>
+                  <input id="sprint-name" name="name" type="text" placeholder="Il tuo nome" autocomplete="name" required>
+                </div>
+                <div class="bb-sprint__field">
+                  <label for="sprint-structure">Nome struttura</label>
+                  <input id="sprint-structure" name="structure" type="text" placeholder="B&B ..." autocomplete="organization">
+                </div>
+                <div class="bb-sprint__field">
+                  <label for="sprint-email">Email</label>
+                  <input id="sprint-email" name="email" type="email" placeholder="tu@tuastruttura.it" autocomplete="email" required>
+                </div>
+                <div class="bb-sprint__field">
+                  <label for="sprint-phone">Cellulare (opzionale)</label>
+                  <input id="sprint-phone" name="phone" type="tel" placeholder="+39 ..." autocomplete="tel">
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="bb-sprint__nav">
+              <button type="button" class="bb-sprint__back">← indietro</button>
+              <button type="button" class="bb-sprint__next">avanti →</button>
+            </div>
+
+            <div class="bb-sprint__success" id="sprint-success" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="bb-section bb-final" aria-labelledby="bb-final-h2">
+    <div class="bb-wrap">
+      <span class="bb-eyebrow" data-chapter="10">step 9 · due strade</span>
+      <h2 id="bb-final-h2" class="bb-h2 bb-reveal" style="margin-top:1rem;">
+        Hai due modi onesti<br>per <em>partire ora</em>.
+      </h2>
+
+      <div class="bb-final__grid">
+        <article class="bb-final__card bb-reveal">
+          <span class="bb-final__card-eyebrow">A · consigliato</span>
+          <h3 class="bb-final__card-title">Demo B&B Facile gratuita, 30 minuti.</h3>
+          <p class="bb-final__card-copy">Apri il form qui sopra. 5 step, 3 minuti. Entro 48h ti scrivo io con un orario per la demo live via Google Meet o videochiamata WhatsApp, con una struttura di prova simile alla tua. Niente pitch commerciale, niente impegno.</p>
+          <a class="bb-cta bb-cta--ghost" href="#demo" title="Vai al form demo B&B Facile">vai al form demo <span class="bb-cta__arrow" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="bb-final__card bb-reveal">
+          <span class="bb-final__card-eyebrow">B · se preferisci parlare</span>
+          <h3 class="bb-final__card-title">Scrivimi su WhatsApp, si fa prima.</h3>
+          <p class="bb-final__card-copy">Mi racconti la tua struttura: quante camere, su quali portali vendi, cosa ti ruba più tempo. Io ti dico se B&B Facile è la cosa giusta o se ti conviene un semplice channel manager in abbonamento — e in quel caso te lo dico gratis.</p>
+          <a class="bb-cta bb-cta--terra" href="https://wa.me/393516248936?text=Ciao%20Andrea%2C%20ho%20un%20B%26B%20e%20vorrei%20una%20demo%20di%20B%26B%20Facile" title="Scrivi su WhatsApp per B&B Facile">scrivimi su whatsapp <span class="bb-cta__arrow" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPIC CLUSTER -->
+  <section class="bb-section bb-related" aria-labelledby="bb-related-h2">
+    <div class="bb-wrap">
+      <span class="bb-issue-mark">Topic cluster · gestionali e SaaS verticali</span>
+      <h2 id="bb-related-h2" class="bb-h2" style="font-size: clamp(1.5rem, 2.8vw, 2.2rem); margin-top: 0.8rem;">
+        Altri SaaS verticali italiani <em>che gestisco io</em>.
+      </h2>
+      <div class="bb-related__grid">
+        <a href="checkin-digitale-hotel.html" class="bb-related__card" title="CheckIn Facile — check-in digitale e Alloggiati Web automatico per hotel e B&B">
+          <div class="idx">01 · check-in</div>
+          <div class="ttl">Check-in digitale + Alloggiati Web</div>
+          <p>Il modulo check-in di B&B Facile, disponibile anche da solo: pre-check-in online e schedina automatica alla Questura.</p>
+        </a>
+        <a href="gestionali-personalizzati-aziende.html" class="bb-related__card" title="Gestionali personalizzati su misura per aziende italiane">
+          <div class="idx">02 · base</div>
+          <div class="ttl">Gestionali su misura aziende</div>
+          <p>Quadro generale: gestionali custom italiani, integrazioni, multi-sede, fatturazione SDI.</p>
+        </a>
+        <a href="gestionale-tabaccheria.html" class="bb-related__card" title="Gestionale per tabaccherie italiane">
+          <div class="idx">03 · tabacchi</div>
+          <div class="ttl">Gestionale tabaccheria</div>
+          <p>Verticale per tabaccherie: carichi e scarichi monopoli, servizi, margini per categoria.</p>
+        </a>
+        <a href="gestionale-parrucchieri.html" class="bb-related__card" title="Gestionale per saloni di parrucchieri">
+          <div class="idx">04 · saloni</div>
+          <div class="ttl">Gestionale parrucchieri</div>
+          <p>Agenda poltrone, schede cliente colore, richiami automatici e listino servizi.</p>
+        </a>
+        <a href="crm-centri-estetici.html" class="bb-related__card" title="CRM centri estetici e SPA italiane">
+          <div class="idx">05 · estetica</div>
+          <div class="ttl">CRM centri estetici</div>
+          <p>SaaS verticale per centri estetici: trattamenti, prenotazioni, fidelity card, fatturazione.</p>
+        </a>
+        <a href="sviluppo-app-mobile.html" class="bb-related__card" title="Sviluppo app mobile iOS Android">
+          <div class="idx">06 · mobile</div>
+          <div class="ttl">Sviluppo app mobile</div>
+          <p>iOS Swift, Android Kotlin, cross-platform. Le app dei miei SaaS le costruisco così.</p>
+        </a>
+        <a href="crm.html" class="bb-related__card" title="CRM custom italiano">
+          <div class="idx">07 · crm</div>
+          <div class="ttl">CRM custom italiano</div>
+          <p>CRM su misura sul tuo processo di vendita, integrazione mail, calendario, fatturazione.</p>
+        </a>
+        <a href="mvp-app-startup.html" class="bb-related__card" title="MVP per startup italiane">
+          <div class="idx">08 · mvp</div>
+          <div class="ttl">MVP startup 8-12 settimane</div>
+          <p>Validation Sprint, codice tuo, app live sugli store. Per founder pre-seed e seed.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bb-foot">
+    <div class="bb-foot__inner">
+      <div>© 2026 Andrea Piani · NIE 02915190306-Z · El Paso, Santa Cruz de Tenerife · Islas Canarias 🌴 · B&B Facile è un SaaS italiano</div>
+      <div class="bb-foot__links">
+        <a href="/" title="Andrea Piani — Sviluppo software su misura">Home</a>
+        <a href="/" onclick="if(window.openServiziPopup){openServiziPopup();return false}" title="Tutti i servizi">Servizi</a>
+        <a href="/servizi-perfex-crm.html" title="Servizi Perfex CRM">Perfex CRM</a>
+        <a href="/gestionali-personalizzati-aziende.html" title="Gestionali personalizzati per aziende">Gestionali</a>
+        <a href="/creazione-api-rest.html" title="Creazione API REST e backend">API Backend</a>
+        <a href="/sviluppo-app-mobile.html" title="Sviluppo app mobile iOS e Android">App Mobile</a>
+        <a href="/mvp-app-startup.html" title="MVP per startup in 8-12 settimane">MVP Startup</a>
+        <a href="/blog/" title="Blog — guide e prezzi sviluppo app">Blog</a>
+        <a href="/privacy-policy.html" title="Privacy Policy">Privacy</a>
+        <a href="/cookie-policy.html" title="Cookie Policy">Cookie</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/popup-loader.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="assets/js/gestionale-bed-and-breakfast.js" defer></script>
+  <script src="whatsapp-float.js" defer></script>
+  <script src="assets/js/slot-counter.js" defer></script>
+</body>
+</html>
