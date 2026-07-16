@@ -74,7 +74,16 @@
 }
 .as-hero__h1 {
   font-size: clamp(2.4rem, 6.2vw, 4.6rem);
-  margin-top: 1.4rem;
+}
+/* prima riga della h1: porta la keyword nell'heading senza pesare sul design */
+.as-kicker--h1 {
+  display: inline-flex;
+  margin-bottom: 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
 }
 .as-hero__h1 .line { display: block; }
 .as-js .as-hero__h1 .line { opacity: 0; transform: translateY(26px); }
