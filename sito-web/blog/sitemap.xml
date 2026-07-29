@@ -2,7 +2,7 @@
 <urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/blog/</ns0:loc>
-    <ns0:lastmod>2026-07-27</ns0:lastmod>
+    <ns0:lastmod>2026-07-29</ns0:lastmod>
     <ns0:priority>0.9</ns0:priority>
     <ns0:changefreq>weekly</ns0:changefreq>
   </ns0:url>
@@ -21,6 +21,12 @@
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/blog/5-vantaggi-di-assumere-uno-sviluppatore-app-freelance-per-ios.html</ns0:loc>
     <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:priority>0.8</ns0:priority>
+    <ns0:changefreq>monthly</ns0:changefreq>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://www.andreapiani.com/blog/budget-per-sviluppare-app-mobile-5-errori-ios-da-evitare.html</ns0:loc>
+    <ns0:lastmod>2026-07-29</ns0:lastmod>
     <ns0:priority>0.8</ns0:priority>
     <ns0:changefreq>monthly</ns0:changefreq>
   </ns0:url>
