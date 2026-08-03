@@ -2,43 +2,43 @@
 <ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/</ns0:loc>
-    <ns0:lastmod>2026-06-27</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>1.0</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/indexen.html</ns0:loc>
-    <ns0:lastmod>2026-04-24</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/preventivo-app.html</ns0:loc>
-    <ns0:lastmod>2025-10-11</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/sviluppo-app-mobile.html</ns0:loc>
-    <ns0:lastmod>2025-10-13</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.95</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/sviluppo-app-ios.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/servizi-prestashop.html</ns0:loc>
-    <ns0:lastmod>2025-10-13</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/migrazione-prestashop-8-9.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
@@ -62,13 +62,13 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/creazione-api-rest.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/progetti-open-source.html</ns0:loc>
-    <ns0:lastmod>2026-04-24</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.7</ns0:priority>
   </ns0:url>
@@ -80,37 +80,37 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/mvp-app-startup.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/sviluppo-app-android.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/sviluppo-app-react-web.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/sviluppo-python.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/sviluppo-nodejs.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/bot-trading.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
@@ -146,13 +146,13 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/crm.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/servizi-perfex-crm.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.75</ns0:priority>
   </ns0:url>
@@ -164,13 +164,13 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionali-personalizzati.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionali-personalizzati-aziende.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
@@ -182,13 +182,13 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/agente-immobiliare-ai.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/crm-centri-estetici.html</ns0:loc>
-    <ns0:lastmod>2026-05-19</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
@@ -200,37 +200,37 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionale-studio-fisioterapista.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionale-osteopati.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionale-tabaccheria.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionale-parrucchieri.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionale-bed-and-breakfast.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionali-personalizzati-milano.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
@@ -242,19 +242,19 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/software-autoscuola.html</ns0:loc>
-    <ns0:lastmod>2026-07-15</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/app-gestione-interventi-artigiani.html</ns0:loc>
-    <ns0:lastmod>2026-04-25</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://www.andreapiani.com/gestionale-fotografo-matrimoni.html</ns0:loc>
-    <ns0:lastmod>2026-04-25</ns0:lastmod>
+    <ns0:lastmod>2026-08-03</ns0:lastmod>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.85</ns0:priority>
   </ns0:url>
