@@ -576,6 +576,51 @@ html.dark-mode .os-page,
 .os-card--app .os-card__head .branch { color: var(--os-cyan); }
 .os-card--app .os-card__head .branch::before { content: "◈ "; }
 
+/* Anteprima screenshot (solo card App Store) */
+.os-card__shot {
+  display: block;
+  height: 230px;
+  background: #050a06;
+  border-bottom: 1px dashed var(--os-hair);
+  overflow: hidden;
+  position: relative;
+  border-radius: 0;
+}
+.os-card__shot::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 58px;
+  background: linear-gradient(180deg, transparent, rgba(5, 10, 6, 0.92));
+  pointer-events: none;
+}
+.os-card__shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform .45s ease;
+}
+.os-card:hover .os-card__shot img { transform: scale(1.04); }
+
+/* Riga icona + titolo app */
+.os-card__app-title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+.os-card__app-title .os-card__title { margin: 0; }
+.os-card__icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  border: 1px solid var(--os-hair);
+  background: #0a110b;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55);
+}
+
 .os-card__body {
   padding: 1rem 1.1rem 0.8rem;
   flex: 1;
