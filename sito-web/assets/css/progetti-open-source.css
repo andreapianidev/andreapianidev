@@ -12,13 +12,13 @@
   --os-bg-3:         #0e1a10;        /* elevated panel */
   --os-grid:         rgba(74, 222, 128, 0.05);
 
-  --os-fg:           #d4ffdc;        /* primary text — phosphor white */
-  --os-fg-soft:      rgba(212, 255, 220, 0.62);
-  --os-fg-mute:      rgba(212, 255, 220, 0.38);
+  --os-fg:           #e4ffe9;        /* primary text — phosphor white */
+  --os-fg-soft:      rgba(228, 255, 233, 0.84);
+  --os-fg-mute:      rgba(228, 255, 233, 0.64);
 
   --os-green:        #4ade80;        /* primary phosphor green */
-  --os-green-bright: #5fff9b;        /* glow accent */
-  --os-green-dim:    #2f7a4a;
+  --os-green-bright: #7bffad;        /* glow accent */
+  --os-green-dim:    #46a468;
   --os-amber:        #ffb547;        /* warning amber */
   --os-amber-dim:    #8a5e1d;
   --os-magenta:      #ff5edb;        /* live indicator */
@@ -35,12 +35,18 @@
   --os-max:          1280px;
 
   --os-mono:         'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', 'Menlo', monospace;
-  --os-display:      'Major Mono Display', 'JetBrains Mono', monospace;
+  /* Display = stesso mono in peso alto: leggibile anche a corpo grande su fondo scuro */
+  --os-display:      'JetBrains Mono', 'IBM Plex Mono', 'Menlo', monospace;
 }
 
-/* ===== PAGE BASE =========================================== */
+/* ===== PAGE BASE ===========================================
+   !important obbligatorio: la build Mobirise di bootstrap.min.css contiene
+   `body{background-color:#fff!important}`, che senza questo lasciava tutta la
+   pagina su fondo bianco — testi e box pensati per il fondo scuro risultavano
+   slavati o illeggibili.
+   ========================================================== */
 .os-page {
-  background-color: var(--os-bg);
+  background-color: var(--os-bg) !important;
   /* CRT phosphor grid + scanlines */
   background-image:
     repeating-linear-gradient(
@@ -56,8 +62,8 @@
   background-attachment: fixed;
   color: var(--os-fg);
   font-family: var(--os-mono);
-  font-size: 0.96rem;
-  line-height: 1.62;
+  font-size: 1rem;
+  line-height: 1.65;
   font-feature-settings: "kern", "liga", "calt";
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -69,6 +75,12 @@ html.dark-mode .os-page,
   background-color: var(--os-bg) !important;
   color: var(--os-fg) !important;
 }
+
+/* Il tema Mobirise (assets/theme/css/style.css) apre con `section{background-color:#ffffff}`:
+   senza questo reset ogni sezione della pagina restava bianca e il tema fosforo
+   scuro si vedeva solo dentro le card. */
+.os-page section { background-color: transparent; }
+.os-page section.os-metrics { background-color: rgba(5, 8, 5, 0.55); }
 
 .os-page * { box-sizing: border-box; }
 .os-page img, .os-page svg { max-width: 100%; display: block; }
@@ -106,6 +118,10 @@ html.dark-mode .os-page,
   position: relative;
 }
 
+/* Ancore: la navbar è sticky, evita che il titolo di sezione ci finisca sotto */
+.os-page .os-section[id],
+.os-page .os-cat[id] { scroll-margin-top: 100px; }
+
 /* Sottile scanline overlay full-page */
 .os-page::before {
   content: "";
@@ -120,7 +136,7 @@ html.dark-mode .os-page,
     transparent 4px
   );
   mix-blend-mode: multiply;
-  opacity: 0.32;
+  opacity: 0.16;
   z-index: 1;
 }
 .os-page::after {
@@ -128,20 +144,56 @@ html.dark-mode .os-page,
   position: fixed;
   inset: -2%;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%);
+  background: radial-gradient(ellipse at center, transparent 68%, rgba(0,0,0,0.30) 100%);
   z-index: 2;
 }
 .os-page > * { position: relative; z-index: 3; }
+
+/* ===== NAVBAR ==============================================
+   Bootstrap azzera il padding orizzontale di .navbar-nav .nav-link e lo
+   ripristina solo dentro .navbar-expand-{sm|md|lg|xl}. Questa pagina usa
+   .navbar-expand-custom (classe Mobirise), quindi le voci restavano attaccate
+   ("HomeServiziProgetti..."). Qui ripristiniamo spaziatura e leggibilità.
+   ========================================================== */
+.os-page .navbar-custom { z-index: 1030; }
+.os-page .navbar-nav { gap: 0.15rem; }
+.os-page .navbar-nav .nav-link {
+  padding: 0.5rem 0.95rem !important;
+  font-family: var(--os-mono);
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  color: var(--os-fg);
+  border-bottom: 0;
+  border-radius: 3px;
+}
+.os-page .navbar-nav .nav-link:hover,
+.os-page .navbar-nav .nav-link:focus-visible {
+  color: var(--os-green-bright);
+  background: rgba(74, 222, 128, 0.10);
+}
+.os-page .navbar-nav .nav-link.active {
+  color: var(--os-green-bright);
+  background: rgba(74, 222, 128, 0.12);
+  box-shadow: inset 0 -2px 0 var(--os-green);
+}
+.os-page .navbar-brand {
+  font-family: var(--os-mono);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--os-fg) !important;
+  border-bottom: 0;
+}
+.os-page .navbar-brand:hover { color: var(--os-green-bright) !important; }
 
 /* ===== TOPSTRIP (status bar terminale) ===================== */
 .os-statusbar {
   background: #020402;
   border-bottom: 1px solid var(--os-hair);
   font-family: var(--os-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
   color: var(--os-fg-soft);
-  padding: 0.45rem var(--os-bleed);
+  padding: 0.5rem var(--os-bleed);
   display: flex;
   align-items: center;
   gap: 1.4rem;
@@ -225,14 +277,14 @@ html.dark-mode .os-page,
 
 .os-hero h1 {
   font-family: var(--os-display);
-  font-size: clamp(2.4rem, 7.6vw, 6.2rem);
-  font-weight: 400;
-  line-height: 0.92;
-  letter-spacing: -0.01em;
+  font-size: clamp(2.1rem, 6.2vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
   color: var(--os-fg);
   margin: 0 0 1.4rem 0;
   text-transform: lowercase;
-  text-shadow: 0 0 12px rgba(95, 255, 155, 0.18), 0 0 32px rgba(74, 222, 128, 0.08);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
 }
 .os-hero h1 .accent { color: var(--os-green-bright); }
 .os-hero h1 .amber  { color: var(--os-amber); }
@@ -280,8 +332,11 @@ html.dark-mode .os-page,
   margin-top: 0.5rem;
 }
 
-/* Buttons — terminal exec style */
-.os-btn {
+/* Buttons — terminal exec style
+   NB: i selettori sono prefissati con .os-page perché la regola globale
+   `.os-page a` (specificità 0,1,1) altrimenti vince sul colore del testo:
+   il bottone primary risultava verde su verde, cioè illeggibile. */
+.os-page .os-btn {
   font-family: var(--os-mono);
   font-size: 0.86rem;
   letter-spacing: 0.06em;
@@ -299,39 +354,38 @@ html.dark-mode .os-page,
   transition: all .2s ease;
   position: relative;
 }
-.os-btn::before { content: ">"; color: var(--os-green); transition: transform .2s ease; }
-.os-btn:hover {
+.os-page .os-btn::before { content: ">"; color: var(--os-green); transition: transform .2s ease; }
+.os-page .os-btn:hover {
   background: rgba(74, 222, 128, 0.16);
   border-color: var(--os-green-bright);
   color: var(--os-green-bright);
   box-shadow: 0 0 14px rgba(74, 222, 128, 0.35);
-  border-bottom-color: var(--os-green-bright);
 }
-.os-btn:hover::before { transform: translateX(3px); }
-.os-btn--primary {
-  background: var(--os-green);
-  color: #051609;
-  border-color: var(--os-green);
-  font-weight: 600;
-}
-.os-btn--primary::before { color: #051609; }
-.os-btn--primary:hover {
+.os-page .os-btn:hover::before { transform: translateX(3px); }
+.os-page .os-btn--primary {
   background: var(--os-green-bright);
-  color: #02110a;
-  box-shadow: 0 0 22px rgba(95, 255, 155, 0.55);
-  border-bottom-color: var(--os-green-bright);
+  color: #032310;
+  border-color: var(--os-green-bright);
+  font-weight: 700;
 }
-.os-btn--amber {
+.os-page .os-btn--primary::before { color: #032310; }
+.os-page .os-btn--primary:hover {
+  background: #a2ffc6;
+  color: #032310;
+  border-color: #a2ffc6;
+  box-shadow: 0 0 22px rgba(123, 255, 173, 0.55);
+}
+.os-page .os-btn--amber {
   border-color: var(--os-amber);
   color: var(--os-amber);
-  background: rgba(255, 181, 71, 0.05);
+  background: rgba(255, 181, 71, 0.08);
 }
-.os-btn--amber::before { color: var(--os-amber); }
-.os-btn--amber:hover {
-  background: rgba(255, 181, 71, 0.15);
+.os-page .os-btn--amber::before { color: var(--os-amber); }
+.os-page .os-btn--amber:hover {
+  background: rgba(255, 181, 71, 0.18);
   color: var(--os-amber);
+  border-color: var(--os-amber);
   box-shadow: 0 0 16px rgba(255, 181, 71, 0.4);
-  border-bottom-color: var(--os-amber);
 }
 
 /* ===== STATS / METRICS GRID ================================ */
@@ -364,16 +418,16 @@ html.dark-mode .os-page,
 }
 .os-metric__num {
   font-family: var(--os-display);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  font-weight: 700;
   color: var(--os-green-bright);
-  line-height: 1;
-  letter-spacing: -0.01em;
-  text-shadow: 0 0 18px rgba(95, 255, 155, 0.35);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   margin-bottom: 0.4rem;
 }
 .os-metric__label {
   font-family: var(--os-mono);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--os-fg-soft);
@@ -417,8 +471,8 @@ html.dark-mode .os-page,
 .os-cat__prompt .arrow { color: var(--os-amber); }
 .os-cat h2 {
   font-family: var(--os-display);
-  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-  font-weight: 400;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 700;
   color: var(--os-fg);
   margin: 0;
   letter-spacing: 0;
@@ -441,6 +495,9 @@ html.dark-mode .os-page,
 .os-cat--live { border-left-color: var(--os-magenta); }
 .os-cat--live .os-cat__prompt { color: var(--os-magenta); }
 .os-cat--live h2 .accent { color: var(--os-magenta); }
+.os-cat--app { border-left-color: var(--os-cyan); }
+.os-cat--app .os-cat__prompt { color: var(--os-cyan); }
+.os-cat--app h2 .accent { color: var(--os-cyan); }
 
 /* ===== REPO GRID =========================================== */
 .os-grid {
@@ -484,8 +541,8 @@ html.dark-mode .os-page,
   align-items: center;
   gap: 0.6rem;
   font-family: var(--os-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
   color: var(--os-fg-mute);
   text-transform: uppercase;
 }
@@ -509,7 +566,15 @@ html.dark-mode .os-page,
   color: var(--os-green);
   font-size: 0.68rem;
 }
+/* Le varianti con badge assoluto in alto a destra: lascia spazio, altrimenti
+   il badge finisce sopra al nome del branch/versione. */
+.os-card--app .os-card__head,
+.os-card--live .os-card__head,
+.os-card--alert .os-card__head,
+.os-card--featured .os-card__head { padding-right: 6.4rem; }
 .os-card__head .branch::before { content: "⎇ "; color: var(--os-fg-mute); }
+.os-card--app .os-card__head .branch { color: var(--os-cyan); }
+.os-card--app .os-card__head .branch::before { content: "◈ "; }
 
 .os-card__body {
   padding: 1rem 1.1rem 0.8rem;
@@ -533,8 +598,8 @@ html.dark-mode .os-page,
 }
 .os-card__desc {
   font-family: var(--os-mono);
-  font-size: 0.86rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.6;
   color: var(--os-fg-soft);
   margin: 0 0 1rem 0;
   flex: 1;
@@ -619,50 +684,59 @@ html.dark-mode .os-page,
   padding: 0 1.1rem 1.1rem;
   margin-top: auto;
 }
-.os-mini-btn {
+.os-page .os-mini-btn {
   font-family: var(--os-mono);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.55rem 0.9rem;
   border-radius: 3px;
   border: 1px solid var(--os-hair-strong);
   background: transparent;
-  color: var(--os-green);
+  color: var(--os-green-bright);
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   transition: all .18s ease;
 }
-.os-mini-btn::before { content: "↗"; }
-.os-mini-btn:hover {
+.os-page .os-mini-btn::before { content: "↗"; }
+.os-page .os-mini-btn:hover {
   background: rgba(74, 222, 128, 0.12);
   border-color: var(--os-green-bright);
   color: var(--os-green-bright);
-  border-bottom-color: var(--os-green-bright);
 }
-.os-mini-btn--solid {
-  background: var(--os-green);
-  color: #051609;
-  border-color: var(--os-green);
-  font-weight: 600;
-}
-.os-mini-btn--solid:hover {
+.os-page .os-mini-btn--solid {
   background: var(--os-green-bright);
-  color: #021109;
+  color: #032310;
   border-color: var(--os-green-bright);
-  box-shadow: 0 0 14px rgba(95,255,155,0.45);
+  font-weight: 700;
 }
-.os-mini-btn--magenta {
-  border-color: var(--os-magenta);
+.os-page .os-mini-btn--solid:hover {
+  background: #a2ffc6;
+  color: #032310;
+  border-color: #a2ffc6;
+  box-shadow: 0 0 14px rgba(123, 255, 173, 0.45);
+}
+.os-page .os-mini-btn--magenta {
+  border-color: rgba(255, 94, 219, 0.6);
   color: var(--os-magenta);
 }
-.os-mini-btn--magenta:hover {
+.os-page .os-mini-btn--magenta:hover {
   background: rgba(255, 94, 219, 0.16);
   color: var(--os-magenta);
+  border-color: var(--os-magenta);
   box-shadow: 0 0 14px rgba(255, 94, 219, 0.45);
-  border-bottom-color: var(--os-magenta);
+}
+.os-page .os-mini-btn--cyan {
+  border-color: rgba(94, 233, 255, 0.55);
+  color: var(--os-cyan);
+}
+.os-page .os-mini-btn--cyan:hover {
+  background: rgba(94, 233, 255, 0.16);
+  color: var(--os-cyan);
+  border-color: var(--os-cyan);
+  box-shadow: 0 0 14px rgba(94, 233, 255, 0.4);
 }
 
 /* LIVE variant — corona magenta + pulse */
@@ -744,6 +818,31 @@ html.dark-mode .os-page,
   box-shadow: 0 14px 32px rgba(0,0,0,0.6), 0 0 0 1px var(--os-amber), 0 0 22px rgba(255, 181, 71, 0.25);
 }
 
+/* APP STORE variant — cyan accent, app pubblicate e scaricabili */
+.os-card--app {
+  border-color: rgba(94, 233, 255, 0.38);
+}
+.os-card--app::after {
+  content: "APP STORE";
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  font-family: var(--os-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  color: var(--os-cyan);
+  background: rgba(94, 233, 255, 0.10);
+  border: 1px solid rgba(94, 233, 255, 0.4);
+  padding: 2px 8px;
+  border-radius: 2px;
+  z-index: 2;
+}
+.os-card--app .os-card__title { color: var(--os-cyan); }
+.os-card--app:hover {
+  border-color: var(--os-cyan);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.6), 0 0 0 1px var(--os-cyan), 0 0 22px rgba(94, 233, 255, 0.22);
+}
+
 @keyframes os-pulse {
   0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255, 94, 219, 0.35); }
   50%      { opacity: 0.72; box-shadow: 0 0 0 4px rgba(255, 94, 219, 0); }
@@ -800,12 +899,12 @@ html.dark-mode .os-page,
 .os-cta__body .os-prompt-line { margin-bottom: 1.4rem; }
 .os-cta h2 {
   font-family: var(--os-display);
-  font-size: clamp(1.8rem, 4.8vw, 3.4rem);
-  font-weight: 400;
+  font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+  font-weight: 700;
   color: var(--os-fg);
   margin: 0 0 1.2rem 0;
-  line-height: 1;
-  letter-spacing: -0.005em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   text-transform: lowercase;
 }
 .os-cta h2 .accent { color: var(--os-green-bright); }
@@ -863,8 +962,9 @@ html.dark-mode .os-page,
 @media (max-width: 640px) {
   .os-grid { grid-template-columns: 1fr; }
   .os-metrics__grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
-  .os-statusbar { font-size: 0.66rem; gap: 0.8rem; }
-  .os-statusbar > span:nth-child(n+4) { display: none; }
+  .os-statusbar { font-size: 0.68rem; gap: 0.8rem; }
+  /* Su mobile teniamo solo SYSTEM ONLINE, USER, REPOS e APP LIVE */
+  .os-statusbar > span:nth-child(n+4):nth-child(-n+7) { display: none; }
   .os-hero__title-wrap { padding: 2rem 1.2rem 1.4rem; }
   .os-cat { flex-direction: column; align-items: flex-start; padding: 0.9rem 1rem; }
   .os-cat__count { margin-left: 0; }
