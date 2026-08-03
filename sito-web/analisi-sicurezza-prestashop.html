@@ -45,7 +45,7 @@
       "url": "https://www.andreapiani.com",
       "email": "andreapiani.dev@gmail.com"
     },
-    "url": "https://pyprestascan.andreapiani.com"
+    "url": "https://github.com/andreapianidev/pyprestascan"
   }
   </script>
 
@@ -174,7 +174,7 @@
         "name": "Come capisco se il mio PrestaShop è vulnerabile?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Inserisci l'URL dello shop nello scanner gratuito: verifica versione PrestaShop e vulnerabilità CVE note, moduli con falle conosciute, header di sicurezza HTTP, file sensibili esposti e configurazioni a rischio. Il report indica priorità critica/alta/media/bassa con le azioni consigliate."
+          "text": "Lancia pyprestascan sull'URL del tuo shop: verifica versione PrestaShop e vulnerabilità CVE note, moduli con falle conosciute, header di sicurezza HTTP, file sensibili esposti e configurazioni a rischio. Il report indica priorità critica/alta/media/bassa con le azioni consigliate. Lo scanner è open source e gira in locale, oppure posso eseguirlo io e commentarti i risultati."
         }
       },
       {
@@ -210,8 +210,7 @@
         </ul>
       </div>
     </div>
-  </nav>    </div>
-  </div>
+  </nav>
 
 
 
@@ -246,21 +245,43 @@
   <section style="padding: 4rem 0; background: #0a0a0a;">
     <div class="container">
       <div class="scanner-box">
-        <h2 class="text-center display-4 mb-4"><strong>Scansiona Ora il Tuo PrestaShop</strong></h2>
-        <p class="text-center lead mb-4">Inserisci l'URL del tuo shop PrestaShop e ricevi un report dettagliato sulla sicurezza</p>
+        <h2 class="text-center display-4 mb-4"><strong>Scansiona il Tuo PrestaShop</strong></h2>
+        <p class="text-center lead mb-4">Due strade: lo scanner open source da installare in autonomia, oppure la scansione fatta da me con report commentato</p>
 
-        <!-- IFRAME PYPRESTASCAN -->
-        <div style="background: #0a0a0a; border-radius: 10px; padding: 1rem; min-height: 600px;">
-          <iframe
-            src="https://pyprestascan.andreapiani.com"
-            style="width: 100%; height: 700px; border: none; border-radius: 8px;"
-            title="pyprestascan - Scanner Sicurezza PrestaShop"
-            loading="lazy">
-          </iframe>
-        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-5 mb-4">
+            <div class="feature-card" style="height: 100%; border: 2px solid #df0067;">
+              <div class="benefit-icon text-center">🐍</div>
+              <h3 class="text-center mb-3"><strong>Fai da te</strong></h3>
+              <p style="color: #ccc; line-height: 1.8;">
+                <strong>pyprestascan</strong> è open source e gira in locale sul tuo computer: nessun dato del tuo shop
+                passa da server esterni. Installazione con <code style="color:#df0067;">pip</code>, scansione da terminale
+                e report completo su CVE, versione PHP, moduli e configurazioni.
+              </p>
+              <div class="text-center mt-4">
+                <a href="https://github.com/andreapianidev/pyprestascan" target="_blank" rel="noopener" class="btn btn-lg" style="background: #df0067; color: #fff; padding: 0.9rem 2rem;">
+                  Scarica da GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
 
-        <div class="text-center mt-4">
-          <p style="color: #999;"><small>Lo scanner pyprestascan è open source e disponibile su <a href="https://github.com/andreapianidev/pyprestascan" target="_blank" style="color: #df0067;">GitHub</a></small></p>
+          <div class="col-lg-5 mb-4">
+            <div class="feature-card" style="height: 100%; border: 2px solid #333;">
+              <div class="benefit-icon text-center">🔍</div>
+              <h3 class="text-center mb-3"><strong>La faccio io</strong></h3>
+              <p style="color: #ccc; line-height: 1.8;">
+                Scansiono il tuo shop e ti mando un <strong>report commentato</strong>: cosa è davvero critico,
+                cosa può aspettare e come si risolve, in ordine di priorità. Con preventivo se vuoi che
+                metta mano io alle correzioni.
+              </p>
+              <div class="text-center mt-4">
+                <a href="https://wa.me/393516248936" target="_blank" rel="noopener" class="btn btn-lg" style="background: #25d366; color: #fff; padding: 0.9rem 2rem;">
+                  Scrivimi su WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
