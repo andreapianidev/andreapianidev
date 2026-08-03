@@ -184,6 +184,12 @@ img { max-width: 100%; height: auto; display: block; }
   .ap-cta { padding: 28px 20px; }
 }
 </style>
+
+<style>
+.post-code{background:#1b1b1f;color:#e6e6e6;border-radius:8px;padding:1rem 1.15rem;overflow-x:auto;
+ font-size:.86rem;line-height:1.55;margin:1.4rem 0;-webkit-text-size-adjust:100%;}
+.post-code code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;white-space:pre;}
+</style>
 </head>
 <body>
 <header class="ap-header">
@@ -376,25 +382,24 @@ Per creare un esempio funzionante di PWA non hai bisogno di strumenti costosi o 
 
 La nostra PWA sarà una semplice “App lista spesa”, ma il principio si applica a qualsiasi tipologia di applicazione: una todo list, un visualizzatore di meteo, una vetrina prodotti. Crea un file `index.html` con una struttura minima, includendo un meta tag viewport per il responsive design, un titolo descrittivo e un collegamento al manifesto. Ecco uno scheletro funzionante:
 
-```html
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La mia lista spesa PWA</title>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#4CAF50" />
-</head>
-<body>
-  <h2 id="lista-della-spesa">Lista della spesa</h2>
-  <input type="text" id="item-input" placeholder="Aggiungi un elemento..." />
-  <button id="add-btn">Aggiungi</button>
-  <ul id="shopping-list"></ul>
-  <script src="app.js"></script>
-</body>
-</html>
-```
+<pre class="post-code"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="it"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;La mia lista spesa PWA&lt;/title&gt;
+  &lt;link rel="manifest" href="manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#4CAF50" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2 id="lista-della-spesa"&gt;Lista della spesa&lt;/h2&gt;
+  &lt;input type="text" id="item-input" placeholder="Aggiungi un elemento..." /&gt;
+  &lt;button id="add-btn"&gt;Aggiungi&lt;/button&gt;
+  &lt;ul id="shopping-list"&gt;&lt;/ul&gt;
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 Il file `app.js` conterrà la logica di aggiunta e rimozione degli elementi, salvandoli in `localStorage` per garantirne la persistenza anche offline. Questo è un accorgimento fondamentale: il Service Worker gestirà le risorse statiche, ma i dati utente devono essere gestiti lato client per funzionare senza rete. Inserisci nel corpo del tuo articolo un esempio di questo script breve, spiegando che ogni modifica viene sincronizzata con lo storage locale. Nota che non stiamo usando framework: una PWA può essere sviluppata con qualsiasi stack, ma per un esempio didattico è preferibile restare su JavaScript vanilla per evidenziare i meccanismi essenziali.
 
@@ -402,8 +407,7 @@ Il file `app.js` conterrà la logica di aggiunta e rimozione degli elementi, sal
 
 Il file `manifest.json` dice al browser come deve comportarsi la PWA quando viene aggiunta alla schermata Home. Crea un file chiamato `manifest.json` nella stessa cartella di `index.html` e inserisci il seguente contenuto:
 
-```json
-{
+<pre class="post-code"><code class="language-json">{
   "name": "Lista Spesa PWA",
   "short_name": "ListaSpesa",
   "description": "Un semplice esempio di PWA per gestire la lista della spesa",
@@ -424,7 +428,7 @@ Il file `manifest.json` dice al browser come deve comportarsi la PWA quando vien
     }
   ]
 }
-```
+</code></pre>
 
 Ogni proprietà ha un ruolo preciso. `start_url` definisce la pagina che viene caricata al lancio. `display: standalone` rimuove la barra degli indirizzi del browser, facendo sentire l’app come nativa. `icons` deve includere almeno due formati: 192×192 per l’icona di avvio rapido e 512×512 per lo splash screen. Puoi generare icone facilmente con strumenti gratuiti come “PWA Image Generator” o “Favicon Generator”. Ricordati di agganciare il manifesto nell’`index.html` tramite il link tag `<link rel="manifest" href="manifest.json">`; senza questo collegamento il browser non saprà che la tua pagina è una PWA.
 
@@ -432,8 +436,7 @@ Ogni proprietà ha un ruolo preciso. `start_url` definisce la pagina che viene c
 
 Il Service Worker (SW) è un file JavaScript che viene eseguito in background, separato dalla pagina principale. Crea `sw.js` e implementa due eventi fondamentali: `install` e `fetch`. Durante l’installazione, il SW mette in cache i file principali affinché siano disponibili offline. Ecco un esempio base con strategia “Cache First”:
 
-```javascript
-const CACHE_NAME = 'lista-spesa-v1';
+<pre class="post-code"><code class="language-javascript">const CACHE_NAME = 'lista-spesa-v1';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -443,30 +446,29 @@ const urlsToCache = [
   '/icon-512.png'
 ];
 
-self.addEventListener('install', event => {
+self.addEventListener('install', event =&gt; {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache =&gt; cache.addAll(urlsToCache))
   );
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', event =&gt; {
   event.respondWith(
     caches.match(event.request)
-      .then(response => response || fetch(event.request))
+      .then(response =&gt; response || fetch(event.request))
   );
 });
-```
+</code></pre>
 
 Quando un utente visita la pagina per la prima volta, il SW si installa e salva in cache i file elencati. A ogni richiesta successiva, il SW intercetta la richiesta di rete e restituisce la copia cacheata se presente; altrimenti la recupera online. Questo garantisce che l’app funzioni anche senza connessione, almeno per le risorse statiche. Per rendere il Service Worker effettivo, devi registrarlo dall’`app.js` con questo snippet:
 
-```javascript
-if ('serviceWorker' in navigator) {
+<pre class="post-code"><code class="language-javascript">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
-    .then(() => console.log('SW registrato'))
-    .catch(err => console.error('Errore SW', err));
+    .then(() =&gt; console.log('SW registrato'))
+    .catch(err =&gt; console.error('Errore SW', err));
 }
-```
+</code></pre>
 
 Consiglio di testare la registrazione dalla console: se non vedi errori, il tuo SW è attivo. Ricorda che il SW non può accedere al DOM, quindi eventuali aggiornamenti dinamici (come nuovi dati da un’API) vanno gestiti con strategie più avanzate come “Network First” o “Stale while revalidate”, ma per un esempio didattico questa configurazione è sufficiente.
 

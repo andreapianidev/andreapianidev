@@ -184,6 +184,12 @@ img { max-width: 100%; height: auto; display: block; }
   .ap-cta { padding: 28px 20px; }
 }
 </style>
+
+<style>
+.post-code{background:#1b1b1f;color:#e6e6e6;border-radius:8px;padding:1rem 1.15rem;overflow-x:auto;
+ font-size:.86rem;line-height:1.55;margin:1.4rem 0;-webkit-text-size-adjust:100%;}
+.post-code code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;white-space:pre;}
+</style>
 </head>
 <body>
 <header class="ap-header">
@@ -266,15 +272,14 @@ Il service worker è il cuore di ogni PWA. Con Create React App (CRA) il support
 
 Attenzione a un errore comune: registrare il service worker anche in ambiente di sviluppo. In sviluppo locale il service worker può causare comportamenti imprevedibili (cache obsolete, errori di hot reload). Assicurati che la registrazione avvenga solo quando `process.env.NODE_ENV === 'production'`. Ecco un esempio pratico per React:
 
-```javascript
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-  window.addEventListener('load', () => {
+<pre class="post-code"><code class="language-javascript">if ('serviceWorker' in navigator &amp;&amp; process.env.NODE_ENV === 'production') {
+  window.addEventListener('load', () =&gt; {
     navigator.serviceWorker.register('/service-worker.js');
   });
 }
-```
+</code></pre>
 
-Per progetti più complessi, come dashboard SaaS o web app con autenticazione, il team di Andrea Piani adotta configurazioni personalizzate del service worker. Se stai valutando una soluzione su misura, dai un'occhiata al servizio di <a href="/sviluppo-app-web-react.html">sviluppo app web React</a> per capire come integrare caching avanzato senza compromettere l'esperienza utente.
+Per progetti più complessi, come dashboard SaaS o web app con autenticazione, il team di Andrea Piani adotta configurazioni personalizzate del service worker. Se stai valutando una soluzione su misura, dai un'occhiata al servizio di <a href="/sviluppo-app-react-web.html">sviluppo app web React</a> per capire come integrare caching avanzato senza compromettere l'esperienza utente.
 
 <h3>2. Definire un manifesto dell'app completo e validato</h3>
 
@@ -298,8 +303,7 @@ Non esiste una strategia di caching universale: ogni risorsa richiede un approcc
 
 Nel contesto di React, il precaching dei chunk generati dal build è gestito automaticamente da Workbox, ma devi configurare le route di navigazione per il caching dinamico. Con `next-pwa`, ad esempio, puoi definire regole nel file `next.config.js`:
 
-```javascript
-pwa: {
+<pre class="post-code"><code class="language-javascript">pwa: {
   dest: 'public',
   runtimeCaching: [
     {
@@ -309,7 +313,7 @@ pwa: {
     }
   ]
 }
-```
+</code></pre>
 
 Per approfondire le strategie supportate da Google, consulta la documentazione ufficiale di [Workbox](https://developer.chrome.com/docs/workbox/). Ricorda che una cache troppo aggressiva può causare errori di indicizzazione, tema che approfondiamo nel prossimo blocco dedicato agli errori di SEO.
 
@@ -319,11 +323,10 @@ Uno degli errori più subdoli è aggiornare una PWA senza notificare l'utente, f
 
 Un approccio pulito è registrare un listener `message` nella pagina React e mostrare un badge "Nuova versione disponibile" con un pulsante "Aggiorna". Ecco un esempio base:
 
-```javascript
-navigator.serviceWorker.addEventListener('controllerchange', () => {
+<pre class="post-code"><code class="language-javascript">navigator.serviceWorker.addEventListener('controllerchange', () =&gt; {
   window.location.reload();
 });
-```
+</code></pre>
 
 Inoltre, nel service worker, usa `self.addEventListener('activate', event => { event.waitUntil(clients.claim()); })` per assumere immediatamente il controllo delle pagine già aperte. Questa gestione evita che l'utente interagisca con una versione obsoleta mentre il nuovo worker è in attesa.
 
@@ -341,7 +344,7 @@ Se il progetto è destinato a utenti con dispositivi meno recenti, valuta l'uso 
 
 ---
 
-Seguire questi cinque passi fondamentali ti permette di costruire una base solida per la tua PWA con React o Next.js. Ogni scelta fatta qui – dal tipo di caching alla gestione degli aggiornamenti – ha un impatto diretto sulla user experience e sull'affidabilità del prodotto. Per progetti che richiedono architetture personalizzate o integrazioni complesse, il servizio di <a href="/sviluppo-app-web-react.html">sviluppo app web React</a> di Andrea Piani può aiutarti a evitare errori costosi e a ottenere una PWA performante sin dal primo rilascio.
+Seguire questi cinque passi fondamentali ti permette di costruire una base solida per la tua PWA con React o Next.js. Ogni scelta fatta qui – dal tipo di caching alla gestione degli aggiornamenti – ha un impatto diretto sulla user experience e sull'affidabilità del prodotto. Per progetti che richiedono architetture personalizzate o integrazioni complesse, il servizio di <a href="/sviluppo-app-react-web.html">sviluppo app web React</a> di Andrea Piani può aiutarti a evitare errori costosi e a ottenere una PWA performante sin dal primo rilascio.
 <h2 id="service-worker-incompleto-o-inefficiente-il-tallone-d-achille-delle-tue-pwa">Service Worker incompleto o inefficiente: il tallone d’Achille delle tue PWA</h2>
 
 Secondo un’analisi diffusa da Google Lighthouse, oltre il **70% delle Progressive Web App** sottoposte a audit presenta criticità legate alla gestione del Service Worker. Non è un dato sorprendente: la maggior parte degli sviluppatori si concentra sull’interfaccia React o Next.js e considera il Service Worker un semplice “copia-incolla” di una configurazione standard. In realtà, questo strato di middleware è il cuore pulsante di una PWA: decide come e quando servire i contenuti, gestisce la cache, sincronizza i dati in background e, in ultima analisi, determina se la tua app funzionerà in modo affidabile anche in assenza di rete. Un Service Worker incompleto o inefficiente trasforma una PWA promettente in una web app lenta, inaffidabile e poco indicizzata dai motori di ricerca.
@@ -385,19 +388,18 @@ Un altro errore diffuso riguarda la mancata gestione della cronologia delle cach
 
 La pratica consigliata è implementare un meccanismo di versioning esplicito. Nel tuo `service-worker.js`, definisci una costante `CACHE_VERSION` e, nell’evento `activate`, itera su tutte le cache esistenti eliminando quelle che non corrispondono alla versione corrente. Ecco un frammento di codice che integra questa logica, comune nei progetti React con Next.js:
 
-```javascript
-const CACHE_VERSION = 'v2';
+<pre class="post-code"><code class="language-javascript">const CACHE_VERSION = 'v2';
 const urlsToCache = [
   '/offline.html',
   '/static/js/bundle.js',
   '/static/css/style.css'
 ];
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', event =&gt; {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
+    caches.keys().then(cacheNames =&gt; {
       return Promise.all(
-        cacheNames.map(cacheName => {
+        cacheNames.map(cacheName =&gt; {
           if (cacheName !== CACHE_VERSION) {
             console.log('Rimozione cache obsoleta:', cacheName);
             return caches.delete(cacheName);
@@ -407,7 +409,7 @@ self.addEventListener('activate', event => {
     })
   );
 });
-```
+</code></pre>
 
 Se gestisci lo sviluppo di app web React su larga scala, un Service Worker strutturato con versioning evita anche conflitti con gli aggiornamenti del codice. Senza questa pulizia, l’utente potrebbe restare bloccato su una versione vecchia dell’app per giorni, accumulando bug e degradando l’esperienza.
 
