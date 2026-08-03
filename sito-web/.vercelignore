@@ -1,9 +1,11 @@
-# --- Backend PHP (Vercel non esegue PHP — vanno esclusi per non servirli in chiaro) ---
+# --- Backend PHP legacy (Vercel non esegue PHP — esclusi per non servirli in chiaro) ---
+# NB: NON escludere l'intera cartella api/: oggi contiene la serverless function
+# Node api/lead.js (ricezione form). Escludiamo solo i vecchi endpoint PHP.
 admin/
-api/
 lib/
 data/
 *.php
+api/**/*.php
 setup-web.php
 setup-web.done.php
 
