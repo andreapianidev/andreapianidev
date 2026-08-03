@@ -470,14 +470,15 @@ body.be-body {
   display: flex; flex-direction: column;
 }
 .be-case-img {
-  aspect-ratio: 4/3;
-  background: var(--be-paper-deep);
+  aspect-ratio: 16/10;
+  background: #fff;
   overflow: hidden;
   position: relative;
 }
 .be-case-img img {
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: top center;
   transition: transform 0.4s;
 }
 .be-case:hover .be-case-img img { transform: scale(1.04); }

@@ -716,12 +716,14 @@ html.dark-mode .cm-page,
 }
 .cm-proof__fig img {
   width: 100%;
-  max-width: 170px;
   height: auto;
   display: block;
   margin: 0 auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
   border: 1px solid var(--cm-ink);
-  background: var(--cm-paper);
+  background: #fff;
 }
 .cm-proof__body { padding: 1.2rem 1.4rem 1.4rem; flex: 1; display: flex; flex-direction: column; gap: 0.9rem; }
 .cm-proof__title {

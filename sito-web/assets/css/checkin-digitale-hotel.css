@@ -743,21 +743,23 @@ html.dark-mode .ho-page,
 }
 .ho-proof__signature:hover { color: var(--ho-gold-deep); }
 
-/* Mock welcome card image styling */
+/* Screenshot reali del prodotto CheckIn Facile */
 .ho-proof__mock {
   margin: 0;
-  padding: 1rem 1.4rem 0;
+  padding: 1rem 1.1rem 1rem;
   background: var(--ho-paper-warm);
   border-bottom: 1px solid var(--ho-gold);
 }
 .ho-proof__mock img {
   width: 100%;
-  max-width: 220px;
   height: auto;
   display: block;
   margin: 0 auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
   border: 1px solid var(--ho-ink);
-  filter: sepia(0.18) saturate(0.92);
+  background: #fff;
 }
 
 /* ===== GODFATHER OFFER ====================================== */
