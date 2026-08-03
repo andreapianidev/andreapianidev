@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/checkin-digitale-hotel.html",
+      "destination": "https://checkinfacile.com",
+      "permanent": true
+    },
+    {
+      "source": "/checkin-digitale-hotel",
+      "destination": "https://checkinfacile.com",
+      "permanent": true
+    },
+    {
       "source": "/blog/perche-dovresti-assumere-uno-sviluppatore-di-app-freelance-per-il-tuo-progetto/",
       "destination": "/blog/5-vantaggi-di-assumere-uno-sviluppatore-app-freelance-per-ios.html",
       "permanent": true
