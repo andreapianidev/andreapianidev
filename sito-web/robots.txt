@@ -6,12 +6,11 @@ Allow: /
 # Sitemap
 Sitemap: https://www.andreapiani.com/sitemap.xml
 
-# Blocca directory non utili per SEO
-Disallow: /assets/
+# Google raccomanda di NON bloccare CSS/JS/immagini: gli servono per
+# renderizzare la pagina e valutare mobile-friendliness e ranking.
+# Blocchiamo solo cio' che non deve finire in SERP.
 Disallow: /cgi-bin/
-Disallow: /*.json$
-Disallow: /*.css$
-Disallow: /*.js$
+Disallow: /api/
 
 # Consenti crawling blog
 Allow: /blog/

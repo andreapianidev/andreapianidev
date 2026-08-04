@@ -16,6 +16,20 @@ const FIELD_LABELS = {
   note: 'Note', url: 'URL', sito: 'Sito', shop: 'Shop', citta: 'Città',
 };
 
+// Rate limit best-effort in memoria: ferma i flood che colpiscono la stessa
+// istanza serverless "calda". Non è una difesa perfetta (le istanze sono
+// effimere e multiple), ma alza la soglia a costo zero. Bounded per non crescere.
+const HITS = new Map(); // ip -> [timestamp,...]
+const RL_MAX = 6;       // max richieste
+const RL_WIN = 60000;   // per 60s
+function rateLimited(ip, now) {
+  if (HITS.size > 5000) HITS.clear(); // guardia memoria
+  const arr = (HITS.get(ip) || []).filter((t) => now - t < RL_WIN);
+  arr.push(now);
+  HITS.set(ip, arr);
+  return arr.length > RL_MAX;
+}
+
 function esc(s) {
   return String(s).replace(/[&<>"']/g, (c) => (
     { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
@@ -49,6 +63,17 @@ export default async function handler(req, res) {
 
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'method' });
+
+  // Anti-abuso: i submit legittimi partono da una pagina del sito, quindi il
+  // browser invia sempre Origin (o almeno Referer) di andreapiani.com. Rifiutiamo
+  // tutto il resto: senza questo, chiunque puo' POSTare da curl e floodare la
+  // casella (la CORS blocca solo la LETTURA della risposta, non l'invio).
+  const allowed = /^https:\/\/(www\.)?andreapiani\.com(\/|$)/;
+  const ref = req.headers.origin || req.headers.referer || '';
+  if (!allowed.test(ref)) return res.status(403).json({ ok: false, error: 'origin' });
+
+  const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown';
+  if (rateLimited(ip, Date.now())) return res.status(429).json({ ok: false, error: 'rate' });
 
   let data;
   try { data = await readBody(req); }
