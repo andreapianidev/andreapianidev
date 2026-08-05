@@ -602,96 +602,12 @@ html.dark-mode .bt-page, .bt-page.dark-mode {
 }
 
 /* ===== PROOF ============================================ */
-.bt-proof__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-}
-.bt-proof__card {
-  background: var(--bt-surface);
-  border: 1px solid var(--bt-hair-strong);
-  display: flex;
-  flex-direction: column;
-}
-.bt-proof__head {
-  background: #050810;
-  color: var(--bt-gold);
-  padding: 0.7rem 1rem;
-  font-family: var(--bt-font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--bt-hair);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.bt-proof__head::before {
-  content: "▲";
-  color: var(--bt-bull);
-  font-size: 0.7rem;
-}
-.bt-proof__fig {
-  margin: 0;
-  padding: 1.2rem 1.4rem 0;
-  background: var(--bt-surface-2);
-}
-.bt-proof__fig img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid var(--bt-hair-strong);
-  filter: grayscale(0.2) contrast(1.05);
-}
-.bt-proof__body {
-  padding: 1.2rem 1.4rem 1.6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-.bt-proof__title {
-  font-family: var(--bt-font-display);
-  font-size: 1.2rem;
-  margin: 0;
-  color: var(--bt-ink);
-}
-.bt-proof__metric {
-  font-family: var(--bt-font-mono);
-  font-size: 0.8rem;
-  color: var(--bt-bull);
-  letter-spacing: 0.06em;
-  margin: 0;
-  font-variant-numeric: tabular-nums;
-}
-.bt-proof__metric em { font-style: normal; color: var(--bt-gold); font-weight: 700; }
-.bt-proof__quote {
-  margin: 0;
-  font-family: var(--bt-font-body);
-  font-style: italic;
-  color: var(--bt-ink-soft);
-  font-size: 0.98rem;
-  line-height: 1.5;
-  border-left: 2px solid var(--bt-gold);
-  padding-left: 0.9rem;
-}
-.bt-proof__signature {
-  font-family: var(--bt-font-mono);
-  font-size: 0.78rem;
-  color: var(--bt-gold);
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  margin-top: 0.3rem;
-}
-.bt-proof__signature:hover { color: var(--bt-ink); }
 
 @media (max-width: 980px) {
-  .bt-proof__grid { grid-template-columns: 1fr 1fr; }
+  
 }
 @media (max-width: 600px) {
-  .bt-proof__grid { grid-template-columns: 1fr; }
+  
 }
 
 /* ===== GODFATHER OFFER ================================== */
