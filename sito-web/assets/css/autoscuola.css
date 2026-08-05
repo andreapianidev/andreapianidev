@@ -760,6 +760,159 @@
 .as-faq__a strong { color: var(--ink); font-weight: 600; }
 
 /* ============================================================
+   PREZZO
+   ============================================================ */
+.as-price {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3.4rem);
+  align-items: start;
+}
+.as-price__card {
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  background: var(--paper);
+  box-shadow: var(--shadow-2);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  position: sticky;
+  top: 6.5rem;
+}
+.as-price__k {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+}
+.as-price__fig { margin: 0.9rem 0 1.1rem; }
+.as-price__fig b {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--ink);
+  display: block;
+  letter-spacing: -0.02em;
+}
+.as-price__fig span {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-top: 0.45rem;
+}
+.as-price__d {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 1.2rem;
+}
+.as-price__d strong { color: var(--ink); font-weight: 600; }
+.as-price__list { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+.as-price__list li {
+  padding: 0.62rem 0 0.62rem 1.6rem;
+  border-top: 1px solid var(--as-rule);
+  position: relative;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.as-price__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  color: var(--green-ok);
+  font-weight: 700;
+}
+.as-price__cta .as-btn { width: 100%; text-align: center; }
+
+.as-price__side { display: grid; gap: clamp(1.4rem, 3vw, 2rem); }
+
+.as-tco {
+  border: 1px solid var(--as-rule);
+  border-radius: 4px;
+  background: var(--paper);
+  padding: clamp(1.3rem, 2.6vw, 1.9rem);
+}
+.as-tco__h,
+.as-host__h,
+.as-excl__h {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.as-tco__t { width: 100%; border-collapse: collapse; font-size: 0.94rem; }
+.as-tco__t th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0 0 0.6rem;
+  border-bottom: 1px solid var(--as-rule);
+}
+.as-tco__t th:not(:first-child),
+.as-tco__t td:not(:first-child) { text-align: right; }
+.as-tco__t td {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--as-rule);
+  color: var(--ink-soft);
+}
+.as-tco__t td b { color: var(--ink); font-weight: 700; }
+.as-tco__t--hi td { color: var(--ink); font-weight: 600; }
+.as-tco__t--hi td:nth-child(2) { color: var(--red); }
+.as-tco__note {
+  margin: 1rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.as-tco__note strong { color: var(--ink); font-weight: 600; }
+
+.as-host {
+  border-left: 3px solid var(--yellow);
+  padding: 0.2rem 0 0.2rem 1.1rem;
+}
+.as-host p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.as-host p strong { color: var(--ink); font-weight: 600; }
+
+.as-excl ul { list-style: none; margin: 0; padding: 0; }
+.as-excl li {
+  padding: 0.55rem 0 0.55rem 1.5rem;
+  border-top: 1px solid var(--as-rule);
+  position: relative;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.as-excl li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+}
+
+@media (max-width: 900px) {
+  .as-price { grid-template-columns: 1fr; }
+  .as-price__card { position: static; }
+}
+
+/* ============================================================
    PROSA SEO
    ============================================================ */
 .as-prose {
