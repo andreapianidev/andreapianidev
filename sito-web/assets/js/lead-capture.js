@@ -23,6 +23,23 @@
     );
   }
 
+  /* Informativa breve ex Art. 13 GDPR sotto ogni form che invia davvero i dati
+   * al server. Deve stare accanto al punto di raccolta, non solo in fondo alla
+   * pagina: l'utente deve sapere DOVE finiscono i dati mentre li digita. */
+  function injectPrivacyNote(form) {
+    if (form.querySelector('.lead-privacy-note')) return;
+    var p = document.createElement('p');
+    p.className = 'lead-privacy-note';
+    p.style.cssText = 'font-size:.8em;line-height:1.55;opacity:.72;margin:.9rem 0 0;color:inherit;';
+    p.innerHTML = 'I dati che inserisci vengono inviati via email al titolare ' +
+      '<strong>Andrea Piani</strong> (tramite Resend e Gmail) al momento dell\'invio del modulo, ' +
+      'per rispondere alla tua richiesta (art. 6.1.b GDPR — misure precontrattuali). ' +
+      'Se prosegui su WhatsApp, il messaggio transita anche da Meta. ' +
+      'Conservazione 24 mesi. Dettagli, destinatari e come esercitare i tuoi diritti: ' +
+      '<a href="/privacy-policy.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.';
+    form.appendChild(p);
+  }
+
   function injectHoneypot(form) {
     if (form.querySelector('[name="website_url"]')) return;
     var hp = document.createElement('input');
@@ -81,10 +98,13 @@
   }
 
   function init() {
-    // honeypot su tutti i form-lead già presenti
+    // honeypot + informativa su tutti i form-lead già presenti
     var forms = document.querySelectorAll('form');
     for (var i = 0; i < forms.length; i++) {
-      if (isLeadForm(forms[i])) injectHoneypot(forms[i]);
+      if (isLeadForm(forms[i])) {
+        injectHoneypot(forms[i]);
+        injectPrivacyNote(forms[i]);
+      }
     }
     // capture-phase: gira prima dei gestori bubble che aprono WhatsApp
     document.addEventListener('submit', onSubmitCapture, true);

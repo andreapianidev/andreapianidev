@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy | Andrea Piani - iOS & PrestaShop Developer</title>
-  <meta name="description" content="Privacy Policy of andreapiani.com: a static website on Vercel. Purpose of data processing, types of data collected, cookies, user rights under GDPR and contacts of the data controller Andrea Piani.">
+  <meta name="description" content="Privacy Policy of andreapiani.com: purposes and legal bases, contact forms (the /api/lead function and delivery via Resend), no cookies and no third-party assets, Vercel hosting, non-EU transfers, GDPR rights and the data controller's contacts.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.andreapiani.com/privacy-policy-en.html" />
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -69,7 +69,11 @@
 
   <h1>Privacy Policy</h1>
 
-  <p><strong>Last updated:</strong> August 3, 2026 &mdash; <strong>version 4.1</strong></p>
+  <p><strong>Last updated:</strong> August 5, 2026 &mdash; <strong>version 5.0</strong> (previous: August 3, 2026, v4.1)</p>
+
+  <div class="info-box" style="background:#fff8e1;border-left-color:#f9a825;">
+    <p><strong>What changed in version 5.0:</strong> earlier versions described the Website as having no server-side component and stated that form data never left the user's browser. Since 3 August 2026 the Website uses a <strong>serverless function</strong> (<code>/api/lead</code>) that receives contact-form data and forwards it by email to the Controller. This version corrects that description and documents the processing, the recipients (including <strong>Resend</strong>) and the applicable safeguards in full. If you submitted a form between 3 and 5 August 2026 and want the data deleted, simply write to the contacts in §7.</p>
+  </div>
 
   <div class="info-box">
     <p><strong>Data Controller:</strong></p>
@@ -87,14 +91,14 @@
   </p>
 
   <p>
-    The Website is a <strong>purely static site hosted on Vercel</strong>. It has <strong>no backend, no database, and no server-side application</strong>. It does <strong>not</strong> perform any analytics or tracking, sets no profiling cookies, and runs no chatbot or artificial-intelligence assistant. The amount of personal data processed is therefore minimal, as described below.
+    The Website is a <strong>static site hosted on Vercel</strong> with <strong>one single serverless function</strong> (<code>/api/lead</code>), which exists solely to deliver contact-form submissions to the Controller by email. There is <strong>no database</strong>, <strong>no analytics or tracking</strong>, no profiling cookies, no chatbot and no AI assistant. Since 5 August 2026 the Website also serves <strong>all of its own assets</strong> (fonts, images, stylesheets, scripts) from its own domain, so merely browsing it triggers <strong>no request to any third-party server</strong>. The amount of personal data processed is therefore minimal, as described below.
   </p>
 
   <h2>1. Types of Data Collected</h2>
 
   <p>The Controller collects the following types of personal data:</p>
 
-  <h3>1.1 Data Provided Voluntarily by the User (contact forms via WhatsApp)</h3>
+  <h3>1.1 Data Provided Voluntarily by the User (contact forms)</h3>
   <p>The Website's contact and quote-request forms collect the data you type &mdash; typically:</p>
   <ul>
     <li><strong>Name and Surname</strong></li>
@@ -103,22 +107,35 @@
     <li><strong>Company/Organization</strong> (optional)</li>
     <li><strong>Project Description</strong> and other technical information provided in forms</li>
   </ul>
+  <div class="info-box" style="background:#fff8e1;border-left-color:#f9a825;">
+    <p><strong>Read this before filling in a form.</strong> When you press submit, the data you entered <strong>leaves your device and reaches the Controller by email</strong> &mdash; <strong>whether or not you go on to send the WhatsApp message</strong>. If you fill in a form and then change your mind on the WhatsApp screen, the data has already been delivered.</p>
+  </div>
+  <p>Step by step:</p>
+  <ol>
+    <li><strong>Typing</strong> &mdash; while you type, the data stays in your browser.</li>
+    <li><strong>Submission</strong> &mdash; on submit, a script of the Website (<code>assets/js/lead-capture.js</code>) collects the completed fields and sends them over HTTPS to the serverless function <code>/api/lead</code>, running on the <strong>Vercel</strong> infrastructure.</li>
+    <li><strong>Delivery</strong> &mdash; the function composes an email and delivers it to the Controller through the transactional email service <strong>Resend</strong> (Resend Inc., USA). The email lands in the Controller's <strong>Gmail</strong> mailbox. If you provided a valid email address, it is set as the message's <em>Reply-To</em>.</li>
+    <li><strong>WhatsApp (optional)</strong> &mdash; in parallel, your browser opens WhatsApp with a pre-filled message. This step is <strong>your choice</strong>: if you complete it, the message also transits through <strong>Meta Platforms Ireland Ltd.</strong> If you do not, step 3 has happened anyway.</li>
+  </ol>
   <p>
-    Because the Website has no backend, this information is handled <strong>only locally in your browser</strong>. When you submit a form, the data is used solely to <strong>pre-fill a WhatsApp message</strong>; it is transmitted <strong>only if you actively send that message from your own WhatsApp app</strong>. In that case the recipient is <strong>Andrea Piani</strong> and the message is delivered through <strong>Meta Platforms Ireland Ltd. (WhatsApp)</strong>, acting as data processor. <strong>No form data is received or stored on the Website's servers</strong>, which do not exist for this purpose.
+    There is <strong>no database</strong>: the data is not stored by the serverless function or on any server of the Website &mdash; the only stable copy is the email in the Controller's mailbox. It is <strong>not</strong> passed to any CRM, marketing-automation platform or third-party form service, and it feeds <strong>no profiling and no marketing lists</strong>. Legal basis: <strong>pre-contractual measures at your request (Art. 6.1.b GDPR)</strong> &mdash; your consent is not required for this purpose, and for that reason it is not requested; what you are owed is information, which is given here and in short form underneath every form.
   </p>
 
   <h3>1.2 Navigation Data</h3>
   <p>
-    The Website performs <strong>no analytics and no tracking</strong>. It does <strong>not</strong> collect, log, or store visitors' IP addresses, user agents, page-view events, or any behavioural data of its own. No first-party statistics endpoint exists.
+    The Website performs <strong>no analytics and no tracking</strong>: no statistics endpoint, no measurement cookie, no logging of pages visited or clicks. Simply browsing the Website does <strong>not</strong> cause the Controller to store your IP address.
   </p>
-  <p>
-    The only third party that may receive a technical connection log is the <strong>hosting provider, Vercel Inc.</strong>, which &mdash; like any web host &mdash; may process the connection IP address and basic request metadata to deliver the pages and ensure security and availability of the service (see §4).
-  </p>
+  <p>The following technical data is nevertheless processed:</p>
+  <ul>
+    <li><strong>Hosting connection logs</strong> at <strong>Vercel Inc.</strong>, which &mdash; like any web host &mdash; may process the connection IP address and basic request metadata to deliver the pages and ensure security and availability of the service (see §4).</li>
+    <li><strong>IP address when a form is submitted</strong>: the <code>/api/lead</code> function reads the request's source IP (<code>X-Forwarded-For</code> header) and keeps it <strong>in volatile memory for 60 seconds</strong> for the sole purpose of rate-limiting submissions and blocking automated floods. The IP is <strong>never written to disk, never included in the email sent to the Controller and never linked to the form data</strong>. Legal basis: legitimate interest in the security of the service (Art. 6.1.f GDPR, Recital 49).</li>
+    <li><strong>Anti-spam honeypot</strong>: forms contain a hidden field that human users never see or fill in. If it is filled, the submission is discarded. It collects no personal data.</li>
+  </ul>
 
   <h3>1.3 Cookies and Local Storage</h3>
   <p>The Website uses:</p>
   <ul>
-    <li><strong>Necessary technical cookies:</strong> only <code>cookie_consent</code> to remember your consent preferences (12 months).</li>
+    <li><strong>Cookies:</strong> <strong>none</strong>. Since 5 August 2026 the Website sets no cookies at all — the former <code>cookie_consent</code> cookie existed only to remember an answer to a consent banner that had nothing to consent to, and both have been removed.</li>
     <li><strong>localStorage:</strong> only technical user-interface preferences (for example the dark-mode theme). No tracking identifiers are stored.</li>
     <li><strong>Profiling or third-party analytical cookies:</strong> <strong>none</strong>.</li>
   </ul>
@@ -136,9 +153,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>Respond to quote/contact requests</strong></td>
+        <td><strong>Respond to quote/contact requests</strong> (incl. delivery of the form via <code>/api/lead</code> and Resend)</td>
         <td>Performance of pre-contractual measures (Art. 6.1.b GDPR)</td>
-        <td>12 months from request</td>
+        <td>24 months from last contact; no storage on the Website side (transit only)</td>
+      </tr>
+      <tr>
+        <td><strong>Form security and abuse prevention</strong> (per-IP rate limit, anti-spam honeypot)</td>
+        <td>Legitimate interest (Art. 6.1.f GDPR)</td>
+        <td>IP in volatile memory for 60 seconds, never written to disk</td>
       </tr>
       <tr>
         <td><strong>Send commercial communications/newsletter</strong></td>
@@ -147,8 +169,8 @@
       </tr>
       <tr>
         <td><strong>Tax and accounting compliance</strong></td>
-        <td>Legal obligation (Art. 6.1.c GDPR)</td>
-        <td>10 years (tax obligation)</td>
+        <td>Legal obligation (Art. 6.1.c GDPR) &mdash; law of the Controller's country of establishment (Spain: Ley 58/2003, <em>Código de Comercio</em> art. 30) and, for relationships governed by Italian law, DPR 633/1972 and art. 2220 Civil Code</td>
+        <td>6 years from the last accounting entry (10 years where Italian law applies)</td>
       </tr>
       <tr>
         <td><strong>Hosting and delivery of the static site</strong> (technical connection logs at the hosting provider Vercel)</td>
@@ -165,7 +187,7 @@
     <li>✓ With predominantly automated methods</li>
     <li>✓ For the time strictly necessary for the purposes for which they were collected</li>
     <li>✓ With access limited only to the Controller and authorized data processors</li>
-    <li>✓ Adopting adequate technical and organizational security measures (HTTPS encryption, backups, firewalls)</li>
+    <li>✓ Adopting adequate technical and organizational security measures: HTTPS/TLS on every connection; HTTP security headers on every page (<code>Content-Security-Policy</code> restricting resource loading to the Website's own domain, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy</code>, <code>Permissions-Policy</code>, <code>Strict-Transport-Security</code>); no third-party assets; origin checks, per-IP rate limiting and an anti-spam honeypot on the form function; service credentials held in the hosting provider's environment variables and never in the published source code</li>
   </ul>
 
   <h2>4. Data Communication and Disclosure</h2>
@@ -175,10 +197,12 @@
   <ul>
     <li><strong>Vercel Inc.</strong> — Hosting provider (static-site CDN) for andreapiani.com, Covina, California, USA. As processor, may handle technical connection logs (IP address, request metadata) — <a href="https://vercel.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
     <li><strong>Meta Platforms Ireland Ltd. (WhatsApp)</strong> — Delivery of contact messages, but only if you actively send the pre-filled message from your own WhatsApp app — <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
-    <li><strong>Google LLC / Google Ireland Ltd.</strong> — Google Fonts CDN (<code>fonts.googleapis.com</code> / <code>fonts.gstatic.com</code>), which may receive the visitor's IP address; and Gmail, used for the contact email address (USA) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+    <li><strong>Resend Inc.</strong> — Transactional email service that delivers contact-form submissions to the Controller's mailbox (Delaware, USA). Processes the form data only for as long as delivery requires — <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+    <li><strong>Google LLC / Google Ireland Ltd.</strong> — Gmail, the Controller's mailbox, which receives the form emails (USA / Ireland) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
     <li><strong>Accountant / tax consultants</strong> — Only for contractual/tax compliance</li>
   </ul>
-  <p><strong>Transfers outside the EU:</strong> Some providers (Vercel, Google Fonts/Gmail and, where applicable, Meta/WhatsApp) may process data in the <strong>USA</strong>. There are <strong>no transfers to China</strong> or to any other non-EU country. Such transfers occur through:</p>
+  <p><strong>No third party receives data merely because you open a page.</strong> Since 5 August 2026 the Website serves all of its assets (fonts, images, stylesheets, scripts) from its own domain: there are no longer any requests to Google Fonts, Unsplash, Flickr or other external CDNs. Browsing the Website therefore discloses your IP address <strong>only</strong> to the hosting provider (Vercel), as is technically unavoidable for any website. Every other recipient listed above comes into play <strong>only if you take an action</strong>: submitting a form, clicking a WhatsApp link, or sending an email.</p>
+  <p><strong>Transfers outside the EU:</strong> Some providers (Vercel, Resend, Google/Gmail and, where applicable, Meta/WhatsApp) may process data in the <strong>USA</strong>. There are <strong>no transfers to China</strong> or to any other non-EU country. Such transfers occur through:</p>
   <ul>
     <li>✓ The <strong>EU&ndash;US Data Privacy Framework</strong>, where the provider is certified</li>
     <li>✓ <strong>Standard Contractual Clauses</strong> approved by the European Commission</li>
@@ -239,7 +263,7 @@
 
   <h2>7. Cookies and Similar Technologies</h2>
 
-  <p>The Website uses only the necessary technical cookie <code>cookie_consent</code>. It sets no analytical or profiling cookies. For detailed information on:</p>
+  <p>The Website sets <strong>no cookies at all</strong> and uses no analytical or profiling cookies. For detailed information on:</p>
   <ul>
     <li>Types of cookies used</li>
     <li>Duration and purposes</li>
@@ -287,5 +311,6 @@
   <script src="whatsapp-float.js" defer></script>
 <p style="text-align:center; font-size:0.85rem; color:#888; margin:2.5rem 0 1rem;">© 2026 Andrea Piani · NIE 02915190306-Z · El Paso, Santa Cruz de Tenerife · Islas Canarias 🌴</p>
 <nav style="display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;justify-content:center;margin-top:.8rem;font-size:.85em;opacity:.92;"><a href="/" title="Andrea Piani — Sviluppo software su misura" style="color:inherit;text-decoration:none;">Home</a> <a href="/" onclick="if(window.openServiziPopup){openServiziPopup();return false}" title="Tutti i servizi" style="color:inherit;text-decoration:none;">Servizi</a> <a href="/servizi-perfex-crm.html" title="Servizi Perfex CRM" style="color:inherit;text-decoration:none;">Perfex CRM</a> <a href="/gestionali-personalizzati-aziende.html" title="Gestionali personalizzati per aziende" style="color:inherit;text-decoration:none;">Gestionali</a> <a href="/creazione-api-rest.html" title="Creazione API REST e backend" style="color:inherit;text-decoration:none;">API Backend</a> <a href="/sviluppo-app-mobile.html" title="Sviluppo app mobile iOS e Android" style="color:inherit;text-decoration:none;">App Mobile</a> <a href="/mvp-app-startup.html" title="MVP per startup in 8-12 settimane" style="color:inherit;text-decoration:none;">MVP Startup</a> <a href="/blog/" title="Blog — guide e prezzi sviluppo app" style="color:inherit;text-decoration:none;">Blog</a> <a href="/privacy-policy.html" title="Privacy Policy" style="color:inherit;text-decoration:none;">Privacy</a> <a href="/cookie-policy.html" title="Cookie Policy" style="color:inherit;text-decoration:none;">Cookie</a></nav>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy | Andrea Piani - Sviluppatore iOS e PrestaShop</title>
-  <meta name="description" content="Privacy Policy del sito andreapiani.com: finalità del trattamento, tipi di dati raccolti, cookie, form di contatto via WhatsApp, hosting Vercel, trasferimenti extra-UE, diritti dell'utente ai sensi del GDPR e contatti del titolare Andrea Piani.">
+  <meta name="description" content="Privacy Policy del sito andreapiani.com: finalità e basi giuridiche, moduli di contatto (funzione /api/lead e recapito via Resend), assenza di cookie e di terze parti, hosting Vercel, trasferimenti extra-UE, diritti GDPR e contatti del titolare Andrea Piani.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.andreapiani.com/privacy-policy.html" />
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -117,9 +117,13 @@
 
   <h1>Privacy Policy</h1>
 
-  <p><strong>Ultimo aggiornamento:</strong> 3 Agosto 2026<br>
-     <strong>Versione:</strong> 4.1<br>
-     <strong>Versione precedente:</strong> 22 Giugno 2026 (v4.0)</p>
+  <p><strong>Ultimo aggiornamento:</strong> 5 Agosto 2026<br>
+     <strong>Versione:</strong> 5.0<br>
+     <strong>Versione precedente:</strong> 3 Agosto 2026 (v4.1)</p>
+
+  <div class="warning-box">
+    <p><strong>Cosa è cambiato nella versione 5.0:</strong> le versioni precedenti descrivevano il Sito come privo di qualsiasi componente lato server e affermavano che i dati dei moduli non lasciassero il browser dell'utente. Dal 3 agosto 2026 il Sito utilizza invece una <strong>funzione serverless</strong> (<code>/api/lead</code>) che riceve i dati dei moduli di contatto e li inoltra via email al Titolare. La presente versione corregge tale descrizione e documenta integralmente il trattamento, i destinatari (incluso <strong>Resend</strong>) e le relative garanzie. Se hai compilato un modulo tra il 3 e il 5 agosto 2026 e vuoi che i dati siano cancellati, è sufficiente scrivere ai contatti indicati al §14.</p>
+  </div>
 
   <div class="info-box">
     <p><strong>Titolare del Trattamento dei Dati:</strong></p>
@@ -128,7 +132,6 @@
       NIE: <strong>02915190306-Z</strong><br>
       Sede: El Paso, Santa Cruz de Tenerife — Islas Canarias, Spagna<br>
       Email: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a><br>
-      PEC / Email certificata: <a href="mailto:andreapiani.dev@gmail.com">andreapiani.dev@gmail.com</a><br>
       Telefono / WhatsApp: <a href="tel:+393516248936">+39 351 624 8936</a> · <a href="tel:+34619500367">+34 619 500 367</a>
     </p>
   </div>
@@ -150,7 +153,7 @@
       <li><a href="#sez-2">Tipologie di dati raccolti</a></li>
       <li><a href="#sez-3">Finalità del trattamento e base giuridica</a></li>
       <li><a href="#sez-4">Modalità di trattamento e tempi di conservazione</a></li>
-      <li><a href="#sez-5">Form di contatto e invio dati via WhatsApp</a></li>
+      <li><a href="#sez-5">Moduli di contatto: cosa succede ai tuoi dati</a></li>
       <li><a href="#sez-6">Cookie e tecnologie di archiviazione locale</a></li>
       <li><a href="#sez-7">Comunicazione, destinatari e responsabili esterni</a></li>
       <li><a href="#sez-8">Trasferimenti di dati extra-UE</a></li>
@@ -187,11 +190,20 @@
     <li><strong>Azienda / Partita IVA</strong> (opzionale)</li>
     <li><strong>Descrizione del progetto</strong> e altre informazioni tecniche</li>
   </ul>
-  <p>Il Sito è un sito <strong>puramente statico</strong>: non dispone di alcun backend né database. I dati che inserisci nei form restano <strong>esclusivamente nel tuo browser</strong> e vengono utilizzati unicamente per pre-compilare un messaggio WhatsApp; sono trasmessi <strong>solo se scegli attivamente di inviarli</strong> dalla tua applicazione WhatsApp. Nessun dato dei form viene ricevuto o memorizzato sui server del Sito (vedi §5).</p>
+  <p>Quando premi il pulsante di invio di un modulo, questi dati vengono <strong>trasmessi a una funzione serverless del Sito</strong> (<code>/api/lead</code>, eseguita sull'infrastruttura Vercel) che li <strong>inoltra immediatamente via email al Titolare</strong> attraverso il servizio di invio transazionale <strong>Resend</strong>. Contestualmente, gli stessi dati sono utilizzati per pre-compilare un messaggio WhatsApp che puoi scegliere se inviare o meno. Il funzionamento completo è descritto al <a href="#sez-5">§5</a>: leggilo prima di compilare un modulo.</p>
+
+  <p>Nessun database è presente: i dati <strong>non sono memorizzati su alcun server del Sito</strong>, ma transitano attraverso la funzione serverless e attraverso Resend per il solo tempo tecnico necessario alla consegna dell'email. La copia stabile risiede nella casella di posta del Titolare.</p>
 
   <h3>2.2 Dati Raccolti Automaticamente Durante la Navigazione</h3>
-  <p>Il Sito <strong>non effettua alcuna attività di analytics, tracciamento o profilazione</strong> e <strong>non raccoglie, né registra, né conserva l'indirizzo IP dei visitatori</strong>. Non esiste alcun endpoint statistico né cookie di misurazione.</p>
-  <p>Gli unici dati tecnici eventualmente trattati durante la navigazione sono i <strong>log di connessione del provider di hosting</strong> (Vercel Inc.), che in qualità di responsabile del trattamento può registrare temporaneamente indirizzo IP e metadati della richiesta HTTP per le sole finalità di erogazione tecnica del servizio, sicurezza e prevenzione degli abusi (vedi §7). Tali log sono gestiti da Vercel secondo la propria informativa e non sono accessibili al Titolare in forma identificativa.</p>
+  <p>Il Sito <strong>non effettua alcuna attività di analytics, tracciamento o profilazione</strong>: non esiste alcun endpoint statistico, alcun cookie di misurazione, né alcuna registrazione delle pagine visitate o dei click. La semplice navigazione del Sito <strong>non comporta la memorizzazione del tuo indirizzo IP da parte del Titolare</strong>.</p>
+
+  <p>Sono tuttavia trattati i seguenti dati tecnici:</p>
+  <ul>
+    <li><strong>Log di connessione del provider di hosting</strong> (Vercel Inc.), che in qualità di responsabile del trattamento può registrare temporaneamente indirizzo IP e metadati della richiesta HTTP per le sole finalità di erogazione tecnica, sicurezza e prevenzione degli abusi. Tali log sono gestiti da Vercel secondo la propria informativa e non sono accessibili al Titolare in forma identificativa.</li>
+    <li><strong>Indirizzo IP in caso di invio di un modulo</strong>: la funzione <code>/api/lead</code> legge l'IP di provenienza della richiesta (header <code>X-Forwarded-For</code>) e lo mantiene <strong>in memoria volatile per 60 secondi</strong> al solo scopo di limitare il numero di invii per minuto e bloccare i flood automatizzati. L'IP <strong>non è scritto su disco, non è incluso nell'email inviata al Titolare e non è associato ai dati del modulo</strong>; viene perso alla terminazione dell'istanza serverless. Base giuridica: legittimo interesse alla sicurezza del servizio (Art. 6.1.f GDPR, Considerando 49).</li>
+    <li><strong>Campo esca anti-spam</strong>: nei moduli è presente un campo nascosto (<em>honeypot</em>) che gli utenti umani non vedono e non compilano. Se risulta compilato, l'invio è scartato. Non raccoglie alcun dato personale.</li>
+  </ul>
+  <p>Nessuno di questi trattamenti produce profilazione o misurazione statistica del traffico.</p>
 
   <h3>2.3 Dati di Archiviazione Locale (localStorage / sessionStorage)</h3>
   <p>Il Sito utilizza meccanismi di archiviazione locale del browser (non cookie tradizionali) esclusivamente per salvare <strong>preferenze tecniche di interfaccia</strong>. Non vengono memorizzati identificatori di tracciamento.</p>
@@ -223,9 +235,9 @@
         <td>10 anni dalla conclusione (obblighi civilistici e fiscali)</td>
       </tr>
       <tr>
-        <td><strong>Adempimenti fiscali, contabili e antiriciclaggio</strong></td>
-        <td>Obbligo legale (Art. 6.1.c) – DPR 633/1972, D.Lgs. 231/2007</td>
-        <td>10 anni dall'ultimo documento fiscale</td>
+        <td><strong>Adempimenti fiscali e contabili</strong></td>
+        <td>Obbligo legale (Art. 6.1.c) – normativa dello Stato di stabilimento del Titolare (Spagna: Ley 58/2003 <em>General Tributaria</em> art. 66; <em>Código de Comercio</em> art. 30) e, per i rapporti soggetti a normativa italiana, DPR 633/1972 e art. 2220 c.c.</td>
+        <td>6 anni dall'ultima registrazione contabile (10 anni per i rapporti soggetti a normativa italiana)</td>
       </tr>
       <tr>
         <td><strong>Invio newsletter e comunicazioni commerciali</strong></td>
@@ -236,6 +248,16 @@
         <td><strong>Erogazione tecnica del Sito e log di connessione del provider di hosting</strong></td>
         <td>Legittimo interesse (Art. 6.1.f) – CONSIDERANDO 49 GDPR (sicurezza e diagnostica)</td>
         <td>Secondo le policy di conservazione del provider di hosting (Vercel)</td>
+      </tr>
+      <tr>
+        <td><strong>Trasmissione del modulo di contatto al Titolare</strong> (funzione <code>/api/lead</code> + invio email tramite Resend)</td>
+        <td>Esecuzione di misure precontrattuali su richiesta dell'interessato (Art. 6.1.b)</td>
+        <td>Nessuna conservazione lato Sito (solo transito); l'email nella casella del Titolare segue i 24 mesi della prima riga</td>
+      </tr>
+      <tr>
+        <td><strong>Sicurezza dei moduli e prevenzione degli abusi</strong> (limite di invii per IP, campo esca anti-spam)</td>
+        <td>Legittimo interesse (Art. 6.1.f) – protezione da invii automatizzati e flood</td>
+        <td>IP in memoria volatile per 60 secondi, mai scritto su disco</td>
       </tr>
       <tr>
         <td><strong>Difesa in giudizio e accertamento responsabilità</strong></td>
@@ -262,29 +284,43 @@
 
   <p>Decorsi i termini di conservazione, i dati saranno cancellati o resi anonimi in modo irreversibile, salvo eventuali obblighi di legge ulteriori o esigenze di difesa in giudizio.</p>
 
-  <h2 id="sez-5">5. Form di Contatto e Invio Dati via WhatsApp</h2>
+  <h2 id="sez-5">5. Moduli di Contatto: Cosa Succede Esattamente ai Tuoi Dati</h2>
 
-  <div class="info-box">
-    <p><strong>Informativa specifica:</strong> il Sito è un sito web <strong>puramente statico</strong> ospitato su CDN, privo di backend, database e applicazione lato server. I form presenti sul Sito (preventivo, brief, audit, contatto, ecc.) <strong>non inviano alcun dato a un server o a un servizio di gestione moduli di terze parti</strong>.</p>
+  <div class="warning-box">
+    <p><strong>Leggi questo prima di compilare un modulo.</strong> Quando premi il pulsante di invio, i dati inseriti <strong>lasciano il tuo dispositivo e arrivano al Titolare via email</strong>. Questo accade <strong>indipendentemente dal fatto che tu completi o meno l'invio del messaggio su WhatsApp</strong>. Se compili un modulo e poi cambi idea sulla schermata WhatsApp, i dati sono comunque già stati recapitati al Titolare.</p>
   </div>
 
-  <h3>5.1 Come funzionano i form</h3>
-  <p>Quando compili un form, i dati che digiti (es. nome, email, telefono, descrizione del progetto) sono elaborati <strong>esclusivamente in locale dal tuo browser</strong>. Al momento dell'invio, tali dati sono utilizzati unicamente per <strong>pre-compilare un messaggio WhatsApp</strong> precompilato.</p>
+  <h3>5.1 Il percorso dei dati, passo per passo</h3>
+  <ol>
+    <li><strong>Compilazione</strong> — mentre digiti, i dati restano nel tuo browser.</li>
+    <li><strong>Invio</strong> — premendo il pulsante, uno script del Sito (<code>assets/js/lead-capture.js</code>) raccoglie i campi compilati e li trasmette in HTTPS alla funzione serverless <code>/api/lead</code>, eseguita sull'infrastruttura del provider di hosting <strong>Vercel</strong>.</li>
+    <li><strong>Recapito</strong> — la funzione compone un'email e la consegna al Titolare tramite il servizio di posta transazionale <strong>Resend</strong> (Resend Inc., USA). L'email arriva sulla casella <strong>Gmail</strong> del Titolare. Se hai indicato un indirizzo email valido, esso è impostato come <em>Reply-To</em> del messaggio, così che il Titolare possa risponderti direttamente.</li>
+    <li><strong>WhatsApp (facoltativo)</strong> — in parallelo, il browser apre WhatsApp con un messaggio precompilato. Questo passaggio è <strong>a tua scelta</strong>: se lo completi, il messaggio transita anche attraverso <strong>Meta Platforms Ireland Ltd.</strong> secondo la <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener">Privacy Policy di WhatsApp</a>. Se non lo completi, il punto 3 è comunque già avvenuto.</li>
+  </ol>
+
+  <h3>5.2 Dove NON finiscono i dati</h3>
   <ul>
-    <li>Il messaggio viene effettivamente trasmesso <strong>solo se scegli attivamente di inviarlo</strong> dalla tua applicazione WhatsApp (web o mobile);</li>
-    <li><strong>Nessun dato del form viene ricevuto, registrato o conservato sui server del Sito</strong>: il Sito non ha la capacità tecnica di farlo;</li>
-    <li>Se non procedi all'invio su WhatsApp, nessun dato lascia il tuo dispositivo.</li>
+    <li>Non esiste alcun <strong>database</strong>: i dati non sono archiviati né dalla funzione serverless né su alcun server del Sito. La sola copia stabile è l'email nella casella del Titolare.</li>
+    <li>Non sono trasmessi a <strong>CRM, piattaforme di marketing automation o servizi di gestione moduli</strong> di terze parti.</li>
+    <li>Non alimentano <strong>profilazione, punteggi automatici o liste per marketing</strong>: sono usati per rispondere alla tua richiesta e nulla più (vedi §7.1 e §10).</li>
   </ul>
 
-  <h3>5.2 Destinatario / Responsabile del trattamento</h3>
-  <p>Il messaggio, una volta inviato volontariamente da te, è trasmesso e trattato tramite il servizio WhatsApp, fornito da <strong>Meta Platforms Ireland Ltd.</strong> (Dublino, Irlanda), secondo la relativa <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener">Privacy Policy di WhatsApp</a>. Il messaggio è quindi ricevuto direttamente dal Titolare sul proprio account WhatsApp.</p>
+  <h3>5.3 Base giuridica e conservazione</h3>
+  <p>Il trattamento si fonda sull'<strong>esecuzione di misure precontrattuali su tua richiesta</strong> (Art. 6.1.b GDPR): compili un modulo per ricevere un preventivo o una risposta, e i dati servono esattamente a questo. <strong>Non è richiesto il tuo consenso</strong> per questa finalità, e per la stessa ragione non ti viene chiesto: quello che ti è dovuto è l'informazione, che trovi qui e in forma sintetica sotto ogni modulo.</p>
+  <p>L'email è conservata nella casella del Titolare per <strong>24 mesi dall'ultimo contatto</strong>, salvo che dalla richiesta nasca un rapporto contrattuale (in tal caso valgono i termini della tabella al §3). Puoi chiederne la cancellazione in qualsiasi momento ai contatti indicati al §14: è sufficiente una email, non devi motivare la richiesta.</p>
 
-  <h3>5.3 Base giuridica</h3>
-  <p>Il trattamento dei dati che decidi di inviarci tramite WhatsApp si fonda sull'<strong>esecuzione di misure precontrattuali su tua richiesta</strong> (Art. 6.1.b GDPR) e sul tuo invio volontario del messaggio. La conservazione segue i termini indicati nella tabella al §3 per le richieste di preventivo/contatto.</p>
+  <h3>5.4 Destinatari coinvolti in questo flusso</h3>
+  <ul>
+    <li><strong>Vercel Inc.</strong> — esecuzione della funzione serverless (hosting);</li>
+    <li><strong>Resend Inc.</strong> — invio dell'email al Titolare;</li>
+    <li><strong>Google LLC / Google Ireland Ltd.</strong> — casella Gmail del Titolare che riceve l'email;</li>
+    <li><strong>Meta Platforms Ireland Ltd.</strong> — solo se completi volontariamente l'invio su WhatsApp.</li>
+  </ul>
+  <p>Sedi, ruoli e garanzie per i trasferimenti extra-UE sono dettagliati ai <a href="#sez-7">§7</a> e <a href="#sez-8">§8</a>.</p>
 
   <h2 id="sez-6">6. Cookie e Tecnologie di Archiviazione Locale</h2>
 
-  <p>Il Sito utilizza un <strong>unico cookie tecnico necessario</strong>, denominato <code>cookie_consent</code>, che memorizza la scelta espressa nel banner cookie. Tale cookie non richiede consenso ai sensi delle linee guida del Garante 10/06/2021. <strong>Il Sito non utilizza cookie di profilazione né cookie analitici di terze parti.</strong></p>
+  <p>Dal 5 agosto 2026 il Sito <strong>non installa alcun cookie</strong>. Fino a quella data era presente un unico cookie tecnico, <code>cookie_consent</code>, il cui solo scopo era ricordare la risposta data al banner: poiché il Sito non usa analytics né altri strumenti soggetti a consenso, quel banner poneva una domanda priva di oggetto ed è stato rimosso insieme al cookie. In assenza di strumenti di tracciamento, le linee guida del Garante 10/06/2021 non richiedono alcun banner. <strong>Non sono presenti cookie di profilazione né cookie analitici di terze parti.</strong></p>
 
   <p>Per l'elenco completo, durata, finalità e istruzioni per disabilitarli, consulta la nostra <a href="cookie-policy.html"><strong>Cookie Policy</strong></a>.</p>
 
@@ -311,10 +347,10 @@
         <td><a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></td>
       </tr>
       <tr>
-        <td><strong>Google LLC / Google Ireland Ltd.</strong></td>
-        <td>Google Fonts (font tipografici caricati da fonts.googleapis.com / fonts.gstatic.com; può ricevere l'IP del visitatore per servire i font)</td>
-        <td>USA (California) / Irlanda</td>
-        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        <td><strong>Resend Inc.</strong></td>
+        <td>Invio dell'email generata dai moduli di contatto verso la casella del Titolare (posta transazionale). Tratta i dati del modulo per il solo tempo necessario alla consegna.</td>
+        <td>USA (Delaware)</td>
+        <td><a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">resend.com/legal/privacy-policy</a></td>
       </tr>
       <tr>
         <td><strong>Meta Platforms Ireland Ltd.</strong> (WhatsApp)</td>
@@ -339,6 +375,10 @@
 
   <p><strong>Categorie aggiuntive di destinatari:</strong> autorità giudiziarie, di pubblica sicurezza o altre autorità competenti, su richiesta legittima e nei limiti previsti dalla legge.</p>
 
+  <div class="info-box">
+    <p><strong>Nessuna terza parte riceve dati per il solo fatto che tu apra una pagina.</strong> Dal 5 agosto 2026 il Sito serve <strong>tutte</strong> le proprie risorse (font tipografici, immagini, fogli di stile, script) dal proprio dominio: non sono più presenti richieste verso Google Fonts, Unsplash, Flickr o altri CDN esterni. Di conseguenza, navigando il Sito il tuo indirizzo IP viene comunicato <strong>unicamente</strong> al provider di hosting (Vercel), come è tecnicamente inevitabile per qualsiasi sito web. Ogni altro destinatario elencato sopra entra in gioco <strong>solo se compi un'azione</strong>: inviare un modulo, cliccare un link WhatsApp o scrivere una email.</p>
+  </div>
+
   <h3>7.1 Nessuna diffusione né vendita</h3>
   <p>I dati personali <strong>non sono mai diffusi pubblicamente</strong> né venduti, ceduti o concessi in licenza a terze parti per finalità di marketing diretto, profilazione commerciale o data brokering.</p>
 
@@ -347,7 +387,14 @@
   <p>Alcuni fornitori (vedi tabella §7) sono basati al di fuori dello Spazio Economico Europeo (SEE). Il trasferimento dei dati avviene sulla base delle seguenti garanzie:</p>
 
   <h4>8.1 Trasferimenti verso gli Stati Uniti</h4>
-  <p>Gli unici trasferimenti extra-UE riguardano fornitori basati negli <strong>Stati Uniti</strong> (Vercel per l'hosting, Google Fonts per i font tipografici, Meta/WhatsApp per i messaggi inviati volontariamente dall'utente). Per tali trasferimenti la garanzia è basata su:</p>
+  <p>Gli unici trasferimenti extra-UE riguardano fornitori basati negli <strong>Stati Uniti</strong>:</p>
+  <ul>
+    <li><strong>Vercel</strong> — hosting del Sito ed esecuzione della funzione serverless dei moduli;</li>
+    <li><strong>Resend</strong> — consegna dell'email generata dai moduli;</li>
+    <li><strong>Google (Gmail)</strong> — casella di posta del Titolare;</li>
+    <li><strong>Meta / WhatsApp</strong> — solo per i messaggi che l'utente sceglie di inviare.</li>
+  </ul>
+  <p>Per tali trasferimenti la garanzia è basata su:</p>
   <ul>
     <li>✓ <strong>Decisione di adeguatezza UE-USA Data Privacy Framework</strong> (Decisione di esecuzione UE 2023/1795 del 10 luglio 2023), per i fornitori certificati;</li>
     <li>✓ <strong>Clausole Contrattuali Standard</strong> (SCC) approvate dalla Commissione Europea (Decisione 2021/914);</li>
@@ -413,8 +460,11 @@
   <ul>
     <li>✓ <strong>Crittografia HTTPS/TLS 1.3</strong> per tutte le comunicazioni client-server;</li>
     <li>✓ <strong>Certificato SSL</strong> valido e aggiornato;</li>
-    <li>✓ <strong>Header di sicurezza HTTP</strong>: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security;</li>
-    <li>✓ <strong>Architettura puramente statica</strong> (nessun backend né database): la superficie di attacco è ridotta al minimo e non vi sono dati utente memorizzati lato server;</li>
+    <li>✓ <strong>Header di sicurezza HTTP</strong> attivi su tutte le pagine: <code>Content-Security-Policy</code> (che consente il caricamento di risorse dal solo dominio del Sito), <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy: strict-origin-when-cross-origin</code>, <code>Permissions-Policy</code> (geolocalizzazione, fotocamera, microfono e pagamenti disabilitati) e <code>Strict-Transport-Security</code>;</li>
+    <li>✓ <strong>Zero risorse di terze parti</strong>: font, immagini, CSS e JavaScript sono serviti dal dominio del Sito, così che la navigazione non generi richieste verso server esterni;</li>
+    <li>✓ <strong>Architettura statica con una sola funzione serverless</strong> (<code>/api/lead</code>) e <strong>nessun database</strong>: la superficie di attacco resta minima e non esistono archivi di dati utente da violare;</li>
+    <li>✓ <strong>Protezione della funzione dei moduli</strong>: accettazione delle sole richieste provenienti dal dominio del Sito, limite di invii per indirizzo IP, campo esca anti-spam ed escape dei contenuti nell'email generata;</li>
+    <li>✓ <strong>Segreti fuori dal codice</strong>: le credenziali dei servizi (es. chiave API di Resend) risiedono nelle variabili d'ambiente del provider di hosting e non sono presenti nel codice sorgente pubblico del Sito;</li>
     <li>✓ <strong>Misure di sicurezza perimetrali</strong> (WAF, anti-DDoS, protezione della rete CDN) gestite dal provider di hosting (Vercel);</li>
     <li>✓ <strong>Aggiornamenti software</strong> tempestivi (librerie e dipendenze front-end).</li>
   </ul>
@@ -507,5 +557,6 @@
   <script src="whatsapp-float.js" defer></script>
 <p style="text-align:center; font-size:0.85rem; color:#888; margin:2.5rem 0 1rem;">© 2026 Andrea Piani · NIE 02915190306-Z · El Paso, Santa Cruz de Tenerife · Islas Canarias 🌴</p>
 <nav style="display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;justify-content:center;margin-top:.8rem;font-size:.85em;opacity:.92;"><a href="/" title="Andrea Piani — Sviluppo software su misura" style="color:inherit;text-decoration:none;">Home</a> <a href="/" onclick="if(window.openServiziPopup){openServiziPopup();return false}" title="Tutti i servizi" style="color:inherit;text-decoration:none;">Servizi</a> <a href="/servizi-perfex-crm.html" title="Servizi Perfex CRM" style="color:inherit;text-decoration:none;">Perfex CRM</a> <a href="/gestionali-personalizzati-aziende.html" title="Gestionali personalizzati per aziende" style="color:inherit;text-decoration:none;">Gestionali</a> <a href="/creazione-api-rest.html" title="Creazione API REST e backend" style="color:inherit;text-decoration:none;">API Backend</a> <a href="/sviluppo-app-mobile.html" title="Sviluppo app mobile iOS e Android" style="color:inherit;text-decoration:none;">App Mobile</a> <a href="/mvp-app-startup.html" title="MVP per startup in 8-12 settimane" style="color:inherit;text-decoration:none;">MVP Startup</a> <a href="/blog/" title="Blog — guide e prezzi sviluppo app" style="color:inherit;text-decoration:none;">Blog</a> <a href="/privacy-policy.html" title="Privacy Policy" style="color:inherit;text-decoration:none;">Privacy</a> <a href="/cookie-policy.html" title="Cookie Policy" style="color:inherit;text-decoration:none;">Cookie</a></nav>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>

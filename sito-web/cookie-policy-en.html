@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cookie Policy | Andrea Piani - iOS & PrestaShop Developer</title>
-  <meta name="description" content="Cookie Policy of andreapiani.com: a purely static website that uses only one technical cookie and no analytics, tracking or profiling cookies. Purposes, duration and how to manage your preferences.">
+  <meta name="description" content="Cookie Policy of andreapiani.com: a static website with one technical cookie, no analytics, no tracking, no profiling and no third-party assets. Purposes, duration and how to manage your preferences.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.andreapiani.com/cookie-policy-en.html" />
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -84,7 +84,7 @@
 
   <h1>Cookie Policy</h1>
 
-  <p><strong>Last updated:</strong> June 22, 2026 &nbsp;·&nbsp; <strong>Version:</strong> 4.0</p>
+  <p><strong>Last updated:</strong> August 5, 2026 &nbsp;·&nbsp; <strong>Version:</strong> 5.0 (previous: June 22, 2026, v4.0)</p>
 
   <div class="info-box">
     <p><strong>Website Owner:</strong></p>
@@ -100,7 +100,7 @@
 
   <div class="info-box">
     <p>
-      <strong>In short:</strong> www.andreapiani.com is a <strong>purely static website</strong> hosted on a content delivery network. It has <strong>no backend application, no database and no server-side processing</strong>. The Site sets <strong>a single technical cookie</strong> (<code>cookie_consent</code>) to remember your banner choice, performs <strong>no analytics and no tracking</strong>, and uses <strong>no profiling cookies</strong>.
+      <strong>In short:</strong> www.andreapiani.com is a <strong>static website</strong> hosted on a content delivery network, with <strong>one single serverless function</strong> (<code>/api/lead</code>) that runs only when you submit a contact form, in order to email its content to the Controller (see <a href="privacy-policy-en.html">Privacy Policy</a>). There is <strong>no database</strong>. Since 5 August 2026 the Site sets <strong>no cookies at all</strong>, performs <strong>no analytics and no tracking</strong>, and loads <strong>no third-party assets</strong>.
     </p>
   </div>
 
@@ -116,7 +116,7 @@
     <li>✓ Improve the browsing experience</li>
     <li>✓ Make the website work properly</li>
   </ul>
-  <p style="font-size: 0.9rem; color: #666;">On this Site, cookies are used <strong>only</strong> to remember your cookie banner choice (see §2). They are <strong>not</strong> used to collect statistics or to track you.</p>
+  <p style="font-size: 0.9rem; color: #666;">This Site sets no cookies at all (see §2). Nothing is used to collect statistics or to track you.</p>
 
   <h2>2. Types of Cookies Used</h2>
 
@@ -135,14 +135,12 @@
       </thead>
       <tbody>
         <tr>
-          <td><code>cookie_consent</code></td>
-          <td>Stores your cookie preferences (consent/refusal)</td>
-          <td>12 months</td>
+          <td colspan="3"><strong>None.</strong> Until 4 August 2026 the Site set one cookie, <code>cookie_consent</code>, whose only job was to remember your answer to the cookie banner. Since the Site runs no analytics and no tracking, that question had no object and both the banner and the cookie have been removed. If the cookie is still present in your browser from an earlier visit, it is deleted automatically on the first page you open.</td>
         </tr>
       </tbody>
     </table>
     <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-      <strong>Note:</strong> the Site is served as static files and does <strong>not</strong> use any server-side session cookies. <code>cookie_consent</code> is the only cookie set by the Site.
+      <strong>Note:</strong> the Site is served as static files, with one serverless function (<code>/api/lead</code>) that runs only when you submit a contact form. It uses no server-side session cookies.
     </p>
   </div>
 
@@ -172,7 +170,7 @@
   <div class="cookie-type">
     <h4>📊 Analytics and profiling cookies — NONE</h4>
     <p>
-      <strong>The Site collects no statistics at all.</strong> There is no analytics service — neither first-party nor third-party (e.g. Google Analytics) — no tracking, no event logging and no collection or logging of visitor IP addresses by the Site. Accordingly, <strong>no analytical or profiling cookies are set</strong>. The cookie banner is retained purely for transparency and to record your preference. Should any analytics or profiling tool ever be introduced, this Cookie Policy will be updated and explicit consent under Art. 6.1.a GDPR will be requested beforehand.
+      <strong>The Site collects no statistics at all.</strong> There is no analytics service — neither first-party nor third-party (e.g. Google Analytics) — no tracking, no event logging and no collection or logging of visitor IP addresses by the Site. Accordingly, <strong>no analytical or profiling cookies are set</strong>. Since there is nothing to consent to, <strong>no cookie banner is shown</strong>. The consent mechanism remains implemented in the Site's code but is dormant: it re-activates automatically on every page if a tool requiring consent is ever configured. Should that happen, this Cookie Policy will be updated and explicit consent under Art. 6.1.a GDPR will be requested beforehand, with the tool loaded only after acceptance.
     </p>
   </div>
 
@@ -197,9 +195,9 @@
         <td><a href="https://vercel.com/legal/privacy-policy" target="_blank">Link</a></td>
       </tr>
       <tr>
-        <td><strong>Google Fonts</strong> (Google LLC, USA / Google Ireland Ltd.)</td>
-        <td>Web fonts loaded from <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>. Does not set cookies; receives the IP to deliver the font files.</td>
-        <td><a href="https://policies.google.com/privacy" target="_blank">Link</a></td>
+        <td><strong>Resend Inc.</strong> (USA) &amp; <strong>Google</strong> (Gmail)</td>
+        <td>Deliver the contact-form email to the Controller's mailbox. They set no cookies and are <strong>not involved in ordinary browsing</strong>: they come into play only when you submit a form.</td>
+        <td><a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend</a> · <a href="https://policies.google.com/privacy" target="_blank">Google</a></td>
       </tr>
       <tr>
         <td><strong>Meta / WhatsApp</strong> (Meta Platforms Ireland Ltd.)</td>
@@ -213,31 +211,31 @@
 
   <h3>3.1 Extra-EU Data Transfers</h3>
   <p>
-    Serving the Site may involve transfers of technical data (your IP address) to the <strong>United States</strong>, namely to Vercel Inc. and Google LLC (Google Fonts), and — only upon your own action — to Meta Platforms when you use a WhatsApp link. <strong>No data is transferred to China or to any other non-EU country.</strong> These transfers are safeguarded under the <strong>EU-US Data Privacy Framework</strong> and/or the European Commission's <strong>Standard Contractual Clauses (SCCs)</strong>.
+    Serving the Site may involve transfers of technical data (your IP address) to the <strong>United States</strong>, namely to Vercel Inc. (hosting), and — only upon your own action — to Resend Inc. and Google (delivery of the email generated by a form you submit) or to Meta Platforms (when you use a WhatsApp link). <strong>No data is transferred to China or to any other non-EU country.</strong> These transfers are safeguarded under the <strong>EU-US Data Privacy Framework</strong> and/or the European Commission's <strong>Standard Contractual Clauses (SCCs)</strong>.
   </p>
 
   <h2>4. Legal Basis (GDPR)</h2>
 
   <ul>
-    <li><strong>Technical Cookie (<code>cookie_consent</code>):</strong> Controller's legitimate interest (Art. 6.1.f GDPR) — does not require consent (Italian DPA Provision 229/2014).</li>
-    <li><strong>Analytical / Profiling Cookies:</strong> none are used. Were any to be introduced in the future, they would require the User's explicit consent (Art. 6.1.a GDPR) via the cookie banner.</li>
+    <li><strong>Cookies:</strong> none are set by the Site, so no legal basis is engaged.</li>
+    <li><strong>Analytical / Profiling Cookies:</strong> none are used. Were any to be introduced in the future, they would require the User's explicit consent (Art. 6.1.a GDPR), collected through the banner before the tool is loaded.</li>
   </ul>
 
   <h2>5. How We Manage Your Consent</h2>
 
-  <p>When accessing the website, you see a <strong>cookie banner</strong> that lets you record your choice. Since the Site uses only one technical cookie and no tracking, accepting or rejecting does not change the way your browsing data is processed; the banner is provided for full transparency:</p>
-  <ul>
-    <li>✅ <strong>Accept</strong> (records your preference)</li>
-    <li>❌ <strong>Reject non-essential cookies</strong> (no tracking is performed in any case)</li>
-  </ul>
+  <p><strong>No cookie banner is shown</strong>, because there is no cookie and no tracking tool for which consent could be asked (see §2). For the same reason the "Manage Cookies" link no longer appears in the footer: there are no preferences to manage.</p>
 
-  <p>Your consent is stored for <strong>12 months</strong> via the technical cookie <code>cookie_consent</code>. You can modify your preferences at any time using the "Manage Cookies" link at the bottom of the page.</p>
+  <p>The mechanism remains in the code and re-activates automatically on every page should a tool requiring consent ever be introduced. In that case the banner would let you:</p>
+  <ul>
+    <li>✅ <strong>Accept all</strong></li>
+    <li>❌ <strong>Reject non-essential cookies</strong>, with equal prominence</li>
+  </ul>
 
   <h2>6. How to Disable Cookies</h2>
 
   <h3>6.1 Via the Website Banner</h3>
   <p>
-    Use our cookie banner (on first access) or click on <strong>"Manage Cookies"</strong> in the footer to modify your preferences.
+    Not needed: the Site sets no cookies and shows no banner (see §2 and §5).
   </p>
 
   <h3>6.2 Via Browser Settings</h3>
@@ -249,7 +247,7 @@
     <li><strong>Edge:</strong> Settings → Cookies and site permissions → Cookies and site data</li>
   </ul>
 
-  <p><strong>⚠️ Warning:</strong> Completely disabling cookies may cause the cookie banner to reappear on every visit, as the Site can no longer remember your stored preference.</p>
+  <p><strong>⚠️ Warning:</strong> completely disabling local storage may switch off convenience features such as remembering your light/dark theme.</p>
 
   <h3>6.3 Analytics opt-out</h3>
   <p>
@@ -268,7 +266,7 @@
 
   <p>The Site stores only the following items:</p>
   <ul>
-    <li><strong>Persistent cookie:</strong> <code>cookie_consent</code> — kept for <strong>12 months</strong>, then renewed on your next choice.</li>
+    <li><strong>Cookies:</strong> none — the Site sets no cookies (see §2).</li>
     <li><strong>Local storage (technical UI preferences):</strong> e.g. <code>darkMode</code> — kept on the device until you clear your browser storage. Never transmitted.</li>
   </ul>
 
@@ -300,5 +298,6 @@
   <script src="whatsapp-float.js" defer></script>
 <p style="text-align:center; font-size:0.85rem; color:#888; margin:2.5rem 0 1rem;">© 2026 Andrea Piani · NIE 02915190306-Z · El Paso, Santa Cruz de Tenerife · Islas Canarias 🌴</p>
 <nav style="display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;justify-content:center;margin-top:.8rem;font-size:.85em;opacity:.92;"><a href="/" title="Andrea Piani — Sviluppo software su misura" style="color:inherit;text-decoration:none;">Home</a> <a href="/" onclick="if(window.openServiziPopup){openServiziPopup();return false}" title="Tutti i servizi" style="color:inherit;text-decoration:none;">Servizi</a> <a href="/servizi-perfex-crm.html" title="Servizi Perfex CRM" style="color:inherit;text-decoration:none;">Perfex CRM</a> <a href="/gestionali-personalizzati-aziende.html" title="Gestionali personalizzati per aziende" style="color:inherit;text-decoration:none;">Gestionali</a> <a href="/creazione-api-rest.html" title="Creazione API REST e backend" style="color:inherit;text-decoration:none;">API Backend</a> <a href="/sviluppo-app-mobile.html" title="Sviluppo app mobile iOS e Android" style="color:inherit;text-decoration:none;">App Mobile</a> <a href="/mvp-app-startup.html" title="MVP per startup in 8-12 settimane" style="color:inherit;text-decoration:none;">MVP Startup</a> <a href="/blog/" title="Blog — guide e prezzi sviluppo app" style="color:inherit;text-decoration:none;">Blog</a> <a href="/privacy-policy.html" title="Privacy Policy" style="color:inherit;text-decoration:none;">Privacy</a> <a href="/cookie-policy.html" title="Cookie Policy" style="color:inherit;text-decoration:none;">Cookie</a></nav>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>

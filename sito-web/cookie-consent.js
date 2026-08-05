@@ -1,7 +1,22 @@
 /**
  * Cookie Consent Banner - GDPR Compliant
  * Andrea Piani - www.andreapiani.com
- * Versione 1.0 - Ottobre 2025
+ * Versione 2.0 - Agosto 2026
+ *
+ * COMPORTAMENTO (v2.0): il banner si mostra SE E SOLO SE esiste davvero qualcosa
+ * da consentire, cioe' se CONFIG.analyticsId e' valorizzato. Oggi e' null: il sito
+ * non ha analytics, non ha tracciamento e non installa alcun cookie — quindi
+ * chiedere un consenso sarebbe una domanda senza oggetto, e il cookie
+ * `cookie_consent` sarebbe un cookie che esiste solo per ricordare la risposta a
+ * quella domanda. Le linee guida del Garante (10/06/2021) non richiedono alcun
+ * banner per i soli cookie tecnici.
+ *
+ * PER RIATTIVARLO: basta impostare CONFIG.analyticsId (es. 'G-XXXXXXXXXX').
+ * Da quel momento il banner ricompare su tutte le pagine che includono questo
+ * script, GA4 viene caricato solo dopo un consenso esplicito e il rifiuto resta
+ * possibile allo stesso livello dell'accettazione. Prima di farlo: aggiornare
+ * cookie-policy.html / cookie-policy-en.html e privacy-policy*.html, che oggi
+ * dichiarano l'assenza totale di cookie.
  */
 
 (function() {
@@ -274,6 +289,24 @@
 
   // Inizializzazione
   function init() {
+    // Nessuno strumento che richieda consenso => nessun banner e nessun cookie.
+    // Ripuliamo anche l'eventuale cookie_consent lasciato dalle versioni
+    // precedenti: non ha piu' nulla da ricordare.
+    if (!CONFIG.analyticsId) {
+      if (getCookie(CONFIG.cookieName)) deleteCookie(CONFIG.cookieName);
+      // Il link "Gestisci Cookie" nei footer prometterebbe una gestione che non
+      // ha oggetto: lo nascondiamo (insieme al separatore che lo segue) finche'
+      // non esiste un consenso da gestire.
+      var links = document.querySelectorAll('.footer-manage-cookies, #footer-manage-cookies-link');
+      for (var i = 0; i < links.length; i++) {
+        var el = links[i];
+        var sib = el.nextElementSibling;
+        if (sib && /^[·|\s]*$/.test(sib.textContent || '')) sib.style.display = 'none';
+        el.style.display = 'none';
+      }
+      return;
+    }
+
     // Controlla se il consenso è già stato dato
     const consent = getConsent();
 
