@@ -16,6 +16,7 @@ title="$(python3 -c 'import re,sys; print(re.search(r"<title>(.*?)</title>", ope
 description="$(python3 -c 'import re,sys; print(re.search(r"<meta name=\"description\" content=\"([^\"]*)\"", open(sys.argv[1], encoding="utf-8").read()).group(1))' "$PAGE")"
 
 (( ${#title} >= 40 && ${#title} <= 60 )) || fail "title fuori intervallo 40-60 caratteri: ${#title}"
+[[ "$title" == Software\ Gestionale\ per\ Autoscuole* ]] || fail "title non centrato sulla query primaria"
 (( ${#description} >= 140 && ${#description} <= 160 )) || fail "description fuori intervallo 140-160 caratteri: ${#description}"
 [[ "$(rg -o '<h1([ >])' "$PAGE" | wc -l | tr -d ' ')" = "1" ]] || fail "serve un solo H1"
 rg -Fq '<link rel="canonical" href="https://www.andreapiani.com/software-autoscuola.html"' "$PAGE" || fail "canonical assente"
@@ -23,9 +24,15 @@ rg -Fq '"@type": "Service"' "$PAGE" || fail "schema Service assente"
 rg -Fq '"@type": "FAQPage"' "$PAGE" || fail "schema FAQ assente"
 [[ "$(rg -o 'https://wa.me/393516248936' "$PAGE" | wc -l | tr -d ' ')" -ge 4 ]] || fail "servono almeno quattro CTA WhatsApp"
 
-if rg -qi '€|&euro;|\bEUR\b|licenza a vita|una tantum' "$PAGE"; then
-  fail "la pagina non deve mostrare prezzi o formule commerciali rigide"
-fi
+rg -q '€1\.600[^<]{0,20}€2\.500' "$PAGE" || fail "fascia di prezzo assente"
+rg -qi 'una tantum' "$PAGE" || fail "formula una tantum assente"
+
+for term in 'Motorizzazione Civile' 'MCTC' "Portale dell.Automobilista" 'PagoPA' 'fatturazione elettronica' 'SDI' 'CQC' 'CAP' 'recupero punti' 'pratiche auto' 'certificato medico telematico'; do
+  rg -qi "$term" "$PAGE" || fail "termine operativo assente: $term"
+done
+
+rg -qi 'formati.*procedure.*verificat|compatibilit.*verificat|integrazioni.*verificat' "$PAGE" || fail "manca la cautela sulle integrazioni esterne"
+
 if rg -qi '40 domande|30 min(uti)?|max(imo)? 4 errori' "$PAGE"; then
   fail "modalità esame patente obsolete"
 fi
@@ -49,6 +56,13 @@ import re
 
 source = Path(os.environ["PAGE"]).read_text(encoding="utf-8")
 blocks = [json.loads(block) for block in re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', source, re.S)]
+types = {block.get("@type") for block in blocks}
+required_types = {"Service", "SoftwareApplication", "FAQPage", "BreadcrumbList"}
+if not required_types.issubset(types):
+    raise SystemExit(f"FAIL: tipi JSON-LD mancanti: {sorted(required_types - types)}")
+service = next(block for block in blocks if block.get("@type") == "Service")
+if service.get("dateModified") != "2026-08-07":
+    raise SystemExit("FAIL: dateModified del servizio non aggiornato")
 faq = next(block for block in blocks if block.get("@type") == "FAQPage")
 structured = [(item["name"], item["acceptedAnswer"]["text"]) for item in faq["mainEntity"]]
 section = source[source.index("<!-- FAQ SEO -->"):source.index("<!-- CTA WhatsApp - Closing -->")]
