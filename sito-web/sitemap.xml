@@ -217,6 +217,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://www.andreapiani.com/blog/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://www.andreapiani.com/gestionale-cantieri.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -281,30 +287,6 @@
     <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.andreapiani.com/privacy-policy.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.andreapiani.com/cookie-policy.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.andreapiani.com/privacy-policy-en.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.andreapiani.com/cookie-policy-en.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.andreapiani.com/wtprivacy.html</loc>
