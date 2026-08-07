@@ -149,7 +149,7 @@
       {"@type":"Question","name":"Vercel, Netlify, AWS o VPS self-hosted: dove faccio deploy?","acceptedAnswer":{"@type":"Answer","text":"Per il 90% dei progetti Vercel o Netlify sono la scelta giusta: zero-config per Next.js e Astro, CDN globale, preview deploy per ogni pull request, free tier generoso. AWS Amplify/CloudFront ha senso se sei già in AWS. Self-hosted su VPS (Hetzner, Aruba, OVH) lo scegliamo solo se il cliente ha requisiti di sovranità dati o vuole ridurre il vendor lock-in. L'account è sempre intestato a te, non a me."}},
       {"@type":"Question","name":"Posso integrare un CMS headless per gestire i contenuti?","acceptedAnswer":{"@type":"Answer","text":"Sì. Lavoro abitualmente con Strapi (open source, self-hosted), Sanity (cloud, ottimo per blog tech), Contentful (enterprise), Directus (open source, ottimo per multi-language) e Supabase quando serve anche DB+auth. Il CMS espone API REST o GraphQL, Next.js/Astro le consuma a build-time (SSG) o a runtime (SSR). Risultato: l'editor cliente aggiorna contenuti dal pannello, il sito si rigenera in pochi secondi."}},
       {"@type":"Question","name":"Posso modificare il design dopo che la web app è live?","acceptedAnswer":{"@type":"Answer","text":"Sì, ed è uno dei motivi per cui costruisco con un design system fin dall'inizio: i design tokens (colori, spaziature, font, raggi) sono variabili CSS centralizzate. Cambi quelli, cambia tutta l'app coerentemente. Se invece serve un refactor profondo (cambio framework, ridisegno intera architettura) parliamo di un nuovo progetto — ma il codice resta tuo, può continuare un altro developer."}},
-      {"@type":"Question","name":"Posso vedere web app React che hai già pubblicato?","acceptedAnswer":{"@type":"Answer","text":"Sì. Diverse dashboard SaaS B2B confidenziali (le mostro in chiamata con NDA se serve), questa stessa portfolio website (build statico ottimizzato Lighthouse 95+), il pannello admin del backend che gestisce le conversazioni di Andrea AI. Su richiesta ti collego con clienti reali che possono raccontarti il processo end-to-end senza filtri commerciali."}},
+      {"@type":"Question","name":"Posso vedere web app React che hai già pubblicato?","acceptedAnswer":{"@type":"Answer","text":"Sì. Diverse dashboard SaaS B2B confidenziali (le mostro in chiamata con NDA se serve), questa stessa portfolio website (build statico ottimizzato Lighthouse 95+), il pannello admin del backend che gestisce le conversazioni di Andrea AI. Non ti metto in contatto con clienti: ti do gli indirizzi dei prodotti che ho costruito, con demo pubbliche che puoi aprire adesso senza chiedere il permesso a nessuno - CheckIn Facile, ImmoCRM, BeautyCenterCRM e AgenteImmobiliareAI. Guardarli da solo dice piu' di qualunque referenza."}},
       {"@type":"Question","name":"Posso parlare con un cliente reale che ha lavorato con te?","acceptedAnswer":{"@type":"Answer","text":"Sì. Su richiesta ti metto in contatto diretto con un product manager o founder che ha portato in produzione una web app React/Next.js con me. Chiamata di 20 minuti, niente referenze finte. Per me i clienti contenti sono l'unico asset commerciale serio — uso letteralmente loro per chiudere il prossimo progetto."}},
       {"@type":"Question","name":"E se voglio passare la web app a un team interno?","acceptedAnswer":{"@type":"Answer","text":"Handover pulito incluso. Repository Git già intestato a te, account Vercel/Netlify intestato a te, design system documentato, Storybook live, ADR (architecture decision records) scritti, README chiaro, 2 ore di tour video col team nuovo. Lavoro perché tu non abbia più bisogno di me: la mia reputazione vale più della retention forzata. Codice modulare, TypeScript strict, copertura test sui flussi critici."}}
     ]
@@ -405,52 +405,10 @@
     </div>
   </section>
 
-  <!-- PROOF -->
-  <section class="rw-section rw-section--alt" aria-labelledby="rw-proof-h2">
-    <div class="rw-wrap">
-      <span class="rw-eyebrow" data-chapter="05">step 4 · web app reali, clienti reali</span>
-      <h2 id="rw-proof-h2" class="rw-h2 rw-reveal" style="margin-top:1rem;">
-        Tre web app. Tre clienti.<br>Tre <em>risultati misurabili</em>.
-      </h2>
-
-      <div class="rw-proof__grid">
-        <article class="rw-proof__card rw-reveal">
-          <header class="rw-proof__head">dashboard SaaS B2B · Next.js 15</header>
-          <div class="rw-proof__body">
-            <h3 class="rw-proof__title">Dashboard SaaS B2B</h3>
-            <p class="rw-proof__metric">96<em>lighthouse</em></p>
-            <blockquote class="rw-proof__quote">"Brief a deploy in 6 settimane. Server components, dati realtime, integrazione Supabase. Performance da prodotto americano, fatto in Italia."</blockquote>
-            <a class="rw-proof__signature" href="creazione-api-rest.html" title="Architettura API REST dietro la dashboard">→ Vedi anche backend &amp; API</a>
-          </div>
-        </article>
-
-        <article class="rw-proof__card rw-reveal">
-          <header class="rw-proof__head">marketplace B2B · React + Vite + Supabase</header>
-          <div class="rw-proof__body">
-            <h3 class="rw-proof__title">Marketplace B2B 2-sided</h3>
-            <p class="rw-proof__metric">+<em>2,4x</em></p>
-            <blockquote class="rw-proof__quote">"7 settimane brief-to-live. Ruoli buyer/seller, ricerca facetata, integrazione pagamenti. Onboarding ridotto da 18 min a 4 min."</blockquote>
-            <a class="rw-proof__signature" href="sviluppo-nodejs.html" title="Backend Node.js dietro il marketplace">→ Architettura Node.js dietro</a>
-          </div>
-        </article>
-
-        <article class="rw-proof__card rw-reveal">
-          <header class="rw-proof__head">PWA companion · Astro + React islands</header>
-          <div class="rw-proof__body">
-            <h3 class="rw-proof__title">PWA companion per app mobile</h3>
-            <p class="rw-proof__metric"><em>−</em>62%</p>
-            <blockquote class="rw-proof__quote">"PWA installabile, offline-first, push notification. Lighthouse 98, bundle iniziale 24 KB. Sostituisce il sito vecchio e converte il 62% in più di lead."</blockquote>
-            <a class="rw-proof__signature" href="mvp-app-startup.html" title="Caso MVP startup correlato">→ Caso MVP startup correlato</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- GODFATHER OFFER -->
   <section class="rw-section rw-offer" id="offerta" aria-labelledby="rw-offer-h2">
     <div class="rw-wrap">
-      <span class="rw-eyebrow" data-chapter="06">step 5 · l'offerta</span>
+      <span class="rw-eyebrow" data-chapter="05">step 4 · l'offerta</span>
       <h2 id="rw-offer-h2" class="rw-h2 rw-reveal" style="margin-top:1rem;">
         Cosa ricevi quando<br>mi affidi <em>la web app</em>.
       </h2>
@@ -500,7 +458,7 @@
   <!-- GUARANTEE -->
   <section class="rw-section" aria-labelledby="rw-grnt-h2">
     <div class="rw-wrap">
-      <span class="rw-eyebrow" data-chapter="07">step 6 · il rischio è mio</span>
+      <span class="rw-eyebrow" data-chapter="06">step 5 · il rischio è mio</span>
       <h2 id="rw-grnt-h2" class="rw-h2 rw-reveal" style="margin-top:1rem; max-width:22ch;">
         La tripla garanzia<br><em>web-friendly</em>.
       </h2>
@@ -528,7 +486,7 @@
   <!-- FAQ -->
   <section class="rw-section rw-section--alt rw-faq" id="faq" aria-labelledby="rw-faq-h2">
     <div class="rw-wrap">
-      <span class="rw-eyebrow" data-chapter="08">step 7 · le domande che mi fanno sempre</span>
+      <span class="rw-eyebrow" data-chapter="07">step 6 · le domande che mi fanno sempre</span>
       <h2 id="rw-faq-h2" class="rw-h2 rw-reveal" style="margin-top:1rem;">
         10 domande oneste,<br><em>10 risposte oneste</em>.
       </h2>
@@ -541,7 +499,7 @@
         <details><summary>05. Vercel, Netlify, AWS o VPS: dove faccio deploy?</summary><div class="rw-faq__answer">Per il 90% dei progetti <strong>Vercel o Netlify</strong> sono la scelta giusta: zero-config per Next.js e Astro, CDN globale, preview deploy per ogni pull request, free tier generoso. AWS Amplify/CloudFront ha senso se sei già in AWS. <a href="sviluppo-nodejs.html">Self-hosted su VPS</a> (Hetzner, Aruba, OVH) lo scegliamo solo se hai requisiti di sovranità dati o vuoi ridurre il vendor lock-in. L'account è <strong>sempre intestato a te</strong>, non a me.</div></details>
         <details><summary>06. Posso integrare un CMS headless?</summary><div class="rw-faq__answer">Sì. Lavoro abitualmente con <strong>Strapi</strong> (open source, self-hosted), <strong>Sanity</strong> (cloud, ottimo per blog tech), <strong>Contentful</strong> (enterprise), <strong>Directus</strong> (open source, multi-language) e <strong>Supabase</strong> quando serve anche DB+auth. Il CMS espone API REST o GraphQL, Next.js/Astro le consuma a build-time (SSG) o a runtime (SSR). Risultato: l'editor cliente aggiorna i contenuti dal pannello, il sito si rigenera in pochi secondi.</div></details>
         <details><summary>07. Posso modificare il design dopo il go-live?</summary><div class="rw-faq__answer">Sì, ed è uno dei motivi per cui costruisco con un <strong>design system fin dall'inizio</strong>: i design tokens (colori, spaziature, font, raggi) sono variabili CSS centralizzate. Cambi quelli, cambia tutta l'app coerentemente. Se invece serve un refactor profondo (cambio framework, ridisegno architettura) parliamo di un nuovo progetto — ma il codice resta tuo, può continuare un altro developer.</div></details>
-        <details><summary>08. Posso vedere web app React che hai già pubblicato?</summary><div class="rw-faq__answer">Sì. Diverse dashboard SaaS B2B confidenziali (le mostro in chiamata con NDA se serve), <strong>questa stessa portfolio website</strong> (build statico ottimizzato Lighthouse 95+), il pannello admin del backend che gestisce le conversazioni di Andrea AI (Next.js-like, server components custom in PHP). Su richiesta ti collego con clienti reali che possono raccontarti il processo end-to-end. <a href="https://wa.me/393516248936">Scrivimi su WhatsApp →</a></div></details>
+        <details><summary>08. Posso vedere web app React che hai già pubblicato?</summary><div class="rw-faq__answer">Sì. Diverse dashboard SaaS B2B confidenziali (le mostro in chiamata con NDA se serve), <strong>questa stessa portfolio website</strong> (build statico ottimizzato Lighthouse 95+), il pannello admin del backend che gestisce le conversazioni di Andrea AI (Next.js-like, server components custom in PHP). Non ti metto in contatto con clienti: ti do gli indirizzi dei prodotti che ho costruito, con demo pubbliche che puoi aprire adesso senza chiedere il permesso a nessuno - CheckIn Facile, ImmoCRM, BeautyCenterCRM e AgenteImmobiliareAI. Guardarli da solo dice piu' di qualunque referenza. <a href="https://wa.me/393516248936">Scrivimi su WhatsApp →</a></div></details>
         <details><summary>09. Posso parlare con un cliente reale prima di firmare?</summary><div class="rw-faq__answer">Sì. Su richiesta ti metto in contatto <strong>diretto</strong> con un product manager o founder che ha portato in produzione una web app React/Next.js con me. Chiamata di 20 minuti, niente referenze finte, niente case study costruiti. <strong>I clienti contenti sono l'unico asset commerciale serio che ho</strong> — uso letteralmente loro per chiudere il prossimo progetto.</div></details>
         <details><summary>10. E se voglio passare la web app a un team interno?</summary><div class="rw-faq__answer">Handover pulito incluso. Repository Git già intestato a te, account Vercel/Netlify intestato a te, design system documentato, <strong>Storybook live</strong>, ADR (architecture decision records) scritti, README chiaro, 2 ore di tour video col team nuovo. Lavoro perché tu non abbia più bisogno di me: la mia reputazione vale più della retention forzata. Codice modulare, TypeScript strict, copertura test sui flussi critici, <a href="creazione-api-rest.html">API documentate</a>.</div></details>
       </div>
@@ -551,7 +509,7 @@
   <!-- BRIEF FORM -->
   <section class="rw-section rw-brief" id="brief" aria-labelledby="rw-brief-h2">
     <div class="rw-wrap">
-      <span class="rw-eyebrow" data-chapter="09">step 8 · web app brief · 5 step · risposta in 48h</span>
+      <span class="rw-eyebrow" data-chapter="08">step 7 · web app brief · 5 step · risposta in 48h</span>
       <h2 id="rw-brief-h2" class="rw-h2 rw-reveal" style="margin-top:1rem;">
         Descrivimi la web app<br>in 5 step. <em>Ti mando io stack + timeline</em>.
       </h2>
@@ -670,7 +628,7 @@
   <!-- FINAL CTA -->
   <section class="rw-section rw-section--ink" aria-labelledby="rw-final-h2">
     <div class="rw-wrap">
-      <span class="rw-eyebrow" data-chapter="10">step 9 · due strade</span>
+      <span class="rw-eyebrow" data-chapter="09">step 8 · due strade</span>
       <h2 id="rw-final-h2" class="rw-h2 rw-reveal" style="margin-top:1rem;">
         Hai due modi onesti<br>per <em>partire ora</em>.
       </h2>

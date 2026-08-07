@@ -148,7 +148,7 @@
       {"@type":"Question","name":"Cosa è l'App Tracking Transparency (ATT) e come lo gestiamo?","acceptedAnswer":{"@type":"Answer","text":"ATT è il prompt Apple obbligatorio da iOS 14.5 che chiede all'utente se può essere tracciato cross-app (es. per ad attribution Facebook/Google). Solo 25% degli utenti dà il consenso. Lo gestisco con: prompt mostrato al momento giusto (non al primo lancio), copy chiaro sul valore del consenso, fallback senza tracking. È critico per le app con monetizzazione ads o analytics avanzati."}},
       {"@type":"Question","name":"Sign in with Apple è obbligatorio?","acceptedAnswer":{"@type":"Answer","text":"Sì, dal 2020 Apple richiede Sign in with Apple come opzione se l'app offre altri login social (Google, Facebook, ecc.). Lo integro sempre come prima opzione, con fallback email/password. Vantaggio: i tuoi utenti hanno un'esperienza login premium e tu rispetti le App Store Review Guidelines (sezione 4.8) evitando rifiuti."}},
       {"@type":"Question","name":"Come funziona la commissione Apple su In-App Purchase?","acceptedAnswer":{"@type":"Answer","text":"Apple trattiene il 30% del prezzo retail (15% se sei nel Small Business Program, fatturato app sotto 1M$/anno). Per subscription dopo il primo anno la commissione scende al 15%. È obbligatorio usare IAP Apple per contenuti digitali consumati nell'app — non puoi linkare a Stripe esterno. Per servizi fisici o B2B esistono eccezioni (Reader app, Multiplatform Services). Ti aiuto a strutturare la monetizzazione nel rispetto delle regole."}},
-      {"@type":"Question","name":"Posso vedere app iOS native che hai già pubblicato?","acceptedAnswer":{"@type":"Answer","text":"Sì. Peak Altimeter è live su App Store con 4.8⭐ — altimetro GPS barometrico per escursionisti. Inoltre ho pubblicato app SwiftUI con Apple Watch companion per fisioterapia (B2B confidential) e app ARKit per real estate (showcase virtuali immobili). Su richiesta ti mostro le altre in chiamata e ti metto in contatto con clienti reali che possono confermare l'esperienza."}},
+      {"@type":"Question","name":"Posso vedere app iOS native che hai già pubblicato?","acceptedAnswer":{"@type":"Answer","text":"Sì. Peak Altimeter è live su App Store con 4.8⭐ — altimetro GPS barometrico per escursionisti. Inoltre ho pubblicato app SwiftUI con Apple Watch companion per fisioterapia (B2B confidential) e app ARKit per real estate (showcase virtuali immobili). Su richiesta te le mostro in chiamata. Non ti metto in contatto con clienti: ti do gli indirizzi dei prodotti che ho costruito, con demo pubbliche che puoi aprire adesso senza chiedere il permesso a nessuno - CheckIn Facile, ImmoCRM, BeautyCenterCRM e AgenteImmobiliareAI. Guardarli da solo dice piu' di qualunque referenza."}},
       {"@type":"Question","name":"Posso parlare con un cliente reale prima di firmare?","acceptedAnswer":{"@type":"Answer","text":"Sì. Su richiesta ti metto in contatto diretto con un cliente che ha portato la sua app iOS native su App Store con me. Chiamata reale, niente referenze finte, niente case study costruiti. I miei clienti contenti sono l'unico asset commerciale serio che ho — lo so, e lo uso."}}
     ]
   }
@@ -386,58 +386,10 @@
     </div>
   </section>
 
-  <!-- PROOF -->
-  <section class="io-section" aria-labelledby="io-proof-h2">
-    <div class="io-wrap">
-      <span class="io-eyebrow" data-chapter="05">step 4 · clienti reali, app reali</span>
-      <h2 id="io-proof-h2" class="io-h2 io-reveal" style="margin-top:1rem;">
-        Tre app iOS native.<br>Tre clienti. <em>Tre risultati misurati</em>.
-      </h2>
-
-      <div class="io-proof__grid">
-        <article class="io-proof__card io-reveal">
-          <header class="io-proof__head">peak altimeter · App Store live</header>
-          <figure style="margin:0; padding:1rem 1.4rem 0; background:var(--io-white);">
-            <img src="assets/images/image1-652x1412.png"
-                 alt="Screenshot Peak Altimeter iOS native — altimetro GPS barometrico Swift SwiftUI App Store"
-                 loading="lazy" width="652" height="1412"
-                 style="width:100%; max-width:180px; height:auto; display:block; margin:0 auto; border-radius:18px; box-shadow: var(--io-shadow-1);">
-          </figure>
-          <div class="io-proof__body">
-            <h3 class="io-proof__title">App iOS native per escursionisti</h3>
-            <p class="io-proof__metric">4.8<em>⭐ App Store</em></p>
-            <blockquote class="io-proof__quote">"Swift + SwiftUI puro. GPS, barometro, CoreLocation, mappe MapKit. Pubblicata in 6 settimane dal brief. ASO + screenshot inclusi. Apple Developer Account intestato al committente."</blockquote>
-            <a class="io-proof__signature" href="https://apps.apple.com/au/app/peak-altimeter-gps-barometer/id6477742031" target="_blank" rel="noopener noreferrer" title="Vedi Peak Altimeter su App Store">→ Vedi su App Store</a>
-          </div>
-        </article>
-
-        <article class="io-proof__card io-reveal">
-          <header class="io-proof__head">physio companion · Watch + HealthKit</header>
-          <div class="io-proof__body">
-            <h3 class="io-proof__title">App fisioterapia con Apple Watch</h3>
-            <p class="io-proof__metric">+<em>2.4× retention</em></p>
-            <blockquote class="io-proof__quote">"App iPhone + Apple Watch companion in SwiftUI. HealthKit per heart rate, range of motion via CoreMotion, notifiche workout. Retention 30 giorni 2.4× più alta della webapp precedente."</blockquote>
-            <a class="io-proof__signature" href="sviluppo-app-mobile.html" title="Casi studio app iOS native">→ Sviluppo app mobile iOS &amp; Android</a>
-          </div>
-        </article>
-
-        <article class="io-proof__card io-reveal">
-          <header class="io-proof__head">ar real estate · ARKit + LiDAR</header>
-          <div class="io-proof__body">
-            <h3 class="io-proof__title">AR real estate per agenzie immobiliari</h3>
-            <p class="io-proof__metric"><em>−</em>62%<em> visite vane</em></p>
-            <blockquote class="io-proof__quote">"ARKit + LiDAR per misure room scan, RealityKit per placement furniture virtuale. Solo iPhone Pro / iPad Pro. -62% visite vane in agenzia: il cliente decide prima sul telefono."</blockquote>
-            <a class="io-proof__signature" href="app-native-vs-cross-platform.html" title="Native vs cross-platform per ARKit">→ Perché ARKit serve native</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- GODFATHER OFFER -->
   <section class="io-section" id="offerta" aria-labelledby="io-offer-h2">
     <div class="io-wrap">
-      <span class="io-eyebrow" data-chapter="06">step 5 · l'offerta iOS Native Complete</span>
+      <span class="io-eyebrow" data-chapter="05">step 4 · l'offerta iOS Native Complete</span>
       <h2 id="io-offer-h2" class="io-h2 io-reveal" style="margin-top:1rem;">
         Cosa ricevi quando<br>mi affidi la <em>tua app iOS</em>.
       </h2>
@@ -486,7 +438,7 @@
   <!-- GUARANTEE -->
   <section class="io-section" aria-labelledby="io-grnt-h2">
     <div class="io-wrap">
-      <span class="io-eyebrow" data-chapter="07">step 6 · il rischio è mio, non tuo</span>
+      <span class="io-eyebrow" data-chapter="06">step 5 · il rischio è mio, non tuo</span>
       <h2 id="io-grnt-h2" class="io-h2 io-reveal" style="margin-top:1rem; max-width:22ch;">
         La tripla garanzia<br><em>iOS native</em>.
       </h2>
@@ -514,7 +466,7 @@
   <!-- FAQ -->
   <section class="io-section" id="faq" aria-labelledby="io-faq-h2">
     <div class="io-wrap">
-      <span class="io-eyebrow" data-chapter="08">step 7 · le obiezioni iOS</span>
+      <span class="io-eyebrow" data-chapter="07">step 6 · le obiezioni iOS</span>
       <h2 id="io-faq-h2" class="io-h2 io-reveal" style="margin-top:1rem;">
         10 domande oneste,<br><em>10 risposte oneste</em>.
       </h2>
@@ -528,7 +480,7 @@
         <details><summary>6. Cosa è l'App Tracking Transparency (ATT) e come lo gestiamo?</summary><div class="io-faq__answer">ATT è il <strong>prompt Apple obbligatorio</strong> da iOS 14.5 che chiede all'utente se può essere tracciato cross-app (es. per ad attribution Facebook/Google). Solo <strong>25% degli utenti dà il consenso</strong>. Lo gestisco con: prompt mostrato al momento giusto (non al primo lancio), copy chiaro sul valore del consenso, fallback senza tracking. È critico per le app con monetizzazione ads o analytics avanzati.</div></details>
         <details><summary>7. Sign in with Apple è obbligatorio?</summary><div class="io-faq__answer">Sì, dal 2020 Apple richiede <strong>Sign in with Apple come opzione</strong> se l'app offre altri login social (Google, Facebook, ecc.). Lo integro sempre come prima opzione, con fallback email/password. Vantaggio: i tuoi utenti hanno un'esperienza login premium e tu rispetti le <em>App Store Review Guidelines (sezione 4.8)</em> evitando rifiuti.</div></details>
         <details><summary>8. Come funziona la commissione Apple su In-App Purchase?</summary><div class="io-faq__answer">Apple trattiene il <strong>30% del prezzo retail</strong> (15% se sei nel Small Business Program, fatturato app sotto 1M$/anno). Per subscription dopo il primo anno la commissione scende al 15%. È <strong>obbligatorio usare IAP Apple</strong> per contenuti digitali consumati nell'app — non puoi linkare a Stripe esterno. Per servizi fisici o B2B esistono eccezioni (Reader app, Multiplatform Services). Ti aiuto a strutturare la monetizzazione nel rispetto delle regole.</div></details>
-        <details><summary>9. Posso vedere app iOS native che hai già pubblicato?</summary><div class="io-faq__answer">Sì. <strong>Peak Altimeter</strong> è live su App Store con <strong>4.8⭐</strong> — altimetro GPS barometrico per escursionisti. Inoltre ho pubblicato app SwiftUI con Apple Watch companion per fisioterapia (B2B confidenziale) e app ARKit per real estate (showcase virtuali immobili). Su richiesta ti mostro le altre in chiamata e ti metto in contatto con clienti reali. <a href="https://wa.me/393516248936">Scrivimi su WhatsApp →</a></div></details>
+        <details><summary>9. Posso vedere app iOS native che hai già pubblicato?</summary><div class="io-faq__answer">Sì. <strong>Peak Altimeter</strong> è live su App Store con <strong>4.8⭐</strong> — altimetro GPS barometrico per escursionisti. Inoltre ho pubblicato app SwiftUI con Apple Watch companion per fisioterapia (B2B confidenziale) e app ARKit per real estate (showcase virtuali immobili). Su richiesta te le mostro in chiamata. Non ti metto in contatto con clienti: ti do gli indirizzi dei prodotti che ho costruito, con demo pubbliche che puoi aprire adesso senza chiedere il permesso a nessuno - CheckIn Facile, ImmoCRM, BeautyCenterCRM e AgenteImmobiliareAI. Guardarli da solo dice piu' di qualunque referenza. <a href="https://wa.me/393516248936">Scrivimi su WhatsApp →</a></div></details>
         <details><summary>10. Posso parlare con un cliente reale prima di firmare?</summary><div class="io-faq__answer">Sì. Su richiesta ti metto in contatto <strong>diretto</strong> con un cliente che ha portato la sua app iOS native su App Store con me. Chiamata reale, niente referenze finte, niente case study costruiti. <em>I miei clienti contenti sono l'unico asset commerciale serio</em> che ho — lo so, e lo uso.</div></details>
       </div>
     </div>
@@ -537,7 +489,7 @@
   <!-- iOS BRIEF FORM -->
   <section class="io-section" id="brief" aria-labelledby="io-brief-h2">
     <div class="io-wrap">
-      <span class="io-eyebrow" data-chapter="09">step 8 · iOS App Brief · 5 step · risposta in 48h</span>
+      <span class="io-eyebrow" data-chapter="08">step 7 · iOS App Brief · 5 step · risposta in 48h</span>
       <h2 id="io-brief-h2" class="io-h2 io-reveal" style="margin-top:1rem;">
         Descrivimi l'app iOS<br>in 5 step. <em>Ti mando io un MVP plan</em>.
       </h2>
@@ -651,7 +603,7 @@
   <!-- FINAL CTA -->
   <section class="io-section io-final" aria-labelledby="io-final-h2">
     <div class="io-wrap">
-      <span class="io-eyebrow" data-chapter="10">step 9 · due strade per partire</span>
+      <span class="io-eyebrow" data-chapter="09">step 8 · due strade per partire</span>
       <h2 id="io-final-h2" class="io-h2 io-reveal" style="margin-top:1rem;">
         Hai due modi onesti<br>per <em>iniziare ora</em>.
       </h2>

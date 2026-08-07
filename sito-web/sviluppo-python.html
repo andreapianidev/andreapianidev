@@ -153,7 +153,7 @@
       {"@type":"Question","name":"AI bot/agent vs script tradizionale: come scegliere?","acceptedAnswer":{"@type":"Answer","text":"Script tradizionale per logica deterministica (numeri, regole chiare, flussi prevedibili). AI agent quando: serve interpretare testo libero (classificare email, estrarre dati da PDF unstructured, rispondere a customer support in linguaggio naturale), serve generazione contenuti, serve decisione fuzzy. Spesso la soluzione è ibrida: script deterministico che chiama LLM solo nei punti dove serve davvero. Costa di meno e fallisce in modo più prevedibile."}},
       {"@type":"Question","name":"Sicurezza dei dati: come gestisci credenziali e privacy?","acceptedAnswer":{"@type":"Answer","text":"Credenziali in variabili d'ambiente (.env mai committato), secrets gestiti via Doppler o file criptati quando serve, VPS con SSH key-only, fail2ban attivo, backup automatici cifrati. Per dati personali (GDPR): cifratura at-rest sul database, log che non contengono PII, retention configurabile. Su richiesta firmo NDA standard prima della discovery call."}},
       {"@type":"Question","name":"Performance e scalabilità: il mio script regge se cresciamo?","acceptedAnswer":{"@type":"Answer","text":"Dipende dal disegno iniziale. Per workflow batch (cron quotidiano, settimanale) Python single-thread regge volumi enormi se ben scritto. Per API/real-time uso FastAPI async + Uvicorn, che regge 10k+ req/min su VPS modesto. Se ti aspetti scalata 100x serve disegnare diverso fin dall'inizio (Celery + Redis, microservizi, database sharding). Lo discutiamo nel brief in base ai numeri reali."}},
-      {"@type":"Question","name":"Posso vedere progetti Python pubblici tuoi?","acceptedAnswer":{"@type":"Answer","text":"Sì. Su GitHub (github.com/andreapianidev) trovi tool open-source: scanner SEO PrestaShop in Python, autoclicker desktop, vari utility. Tool commerciali come PrestaShop SQL Editor e PrestaScan integrano backend Python. Per scraping/automation client confidenziali ti mostro snippet anonimizzati e ti metto in contatto con clienti reali."}},
+      {"@type":"Question","name":"Posso vedere progetti Python pubblici tuoi?","acceptedAnswer":{"@type":"Answer","text":"Sì. Su GitHub (github.com/andreapianidev) trovi tool open-source: scanner SEO PrestaShop in Python, autoclicker desktop, vari utility. Tool commerciali come PrestaShop SQL Editor e PrestaScan integrano backend Python. Per scraping/automation client confidenziali ti mostro snippet anonimizzati. Non ti metto in contatto con clienti: ti do gli indirizzi dei prodotti che ho costruito, con demo pubbliche che puoi aprire adesso senza chiedere il permesso a nessuno - CheckIn Facile, ImmoCRM, BeautyCenterCRM e AgenteImmobiliareAI. Guardarli da solo dice piu' di qualunque referenza."}},
       {"@type":"Question","name":"Posso parlare con un cliente reale prima di firmare?","acceptedAnswer":{"@type":"Answer","text":"Sì. Su richiesta ti metto in contatto diretto con un cliente che ha automatizzato un processo aziendale con un mio script Python e può raccontarti: quanto ha risparmiato in ore, com'è andato lo sviluppo, com'è il supporto post-launch. Niente referenze finte, niente case study costruiti. I miei clienti contenti sono l'unico marketing serio che ho."}}
     ]
   }
@@ -419,52 +419,10 @@ app = <span class="py-tok-cls">FastAPI</span>()
     </div>
   </section>
 
-  <!-- PROOF -->
-  <section class="py-section" aria-labelledby="py-proof-h2">
-    <div class="py-wrap">
-      <span class="py-eyebrow" data-chapter="05">cell 05 · clienti reali, ore risparmiate reali</span>
-      <h2 id="py-proof-h2" class="py-h2 py-reveal" style="margin-top:1rem;">
-        Tre automazioni Python.<br>Tre clienti. <em>Tre risultati misurati</em>.
-      </h2>
-
-      <div class="py-proof__grid">
-        <article class="py-proof__card py-reveal">
-          <header class="py-proof__head"><span class="ok">ok</span>scraping prezzi · e-commerce moda</header>
-          <div class="py-proof__body">
-            <h3 class="py-proof__title">Scraping concorrenza prezzi e-commerce</h3>
-            <p class="py-proof__metric">−25h<em>/mese</em></p>
-            <blockquote class="py-proof__quote">"Cron Python h.6 ogni giorno, scrapa 12 competitor, aggiorna sheet, manda alert Telegram se un nostro prezzo è fuori range. Prima 1h al giorno a mano."</blockquote>
-            <a class="py-proof__signature" href="scansione-seo-prestashop.html" title="Scansione SEO PrestaShop Python">→ Caso scraping competitor PrestaShop</a>
-          </div>
-        </article>
-
-        <article class="py-proof__card py-reveal">
-          <header class="py-proof__head"><span class="ok">ok</span>bot telegram · trading signals</header>
-          <div class="py-proof__body">
-            <h3 class="py-proof__title">Bot Telegram trading signals via FastAPI</h3>
-            <p class="py-proof__metric">+<em>2.4k</em></p>
-            <blockquote class="py-proof__quote">"FastAPI riceve segnali da TradingView webhook, valida, invia a 2.400 abbonati Telegram. Latenza &lt;200ms. Uptime 99.97% in 14 mesi."</blockquote>
-            <a class="py-proof__signature" href="bot-trading.html" title="Caso bot trading Python">→ Caso bot trading FastAPI</a>
-          </div>
-        </article>
-
-        <article class="py-proof__card py-reveal">
-          <header class="py-proof__head"><span class="ok">ok</span>ai agent · classificazione PDF</header>
-          <div class="py-proof__body">
-            <h3 class="py-proof__title">AI agent classificazione PDF documenti</h3>
-            <p class="py-proof__metric">−78<em>%</em></p>
-            <blockquote class="py-proof__quote">"Estrazione + classificazione PDF Inail con OCR Tesseract + DeepSeek LLM. Da 4h/settimana di lavoro umano a 12 minuti revisionati."</blockquote>
-            <a class="py-proof__signature" href="agente-immobiliare-ai.html" title="Caso AI agent Python">→ L'AI agent per agenzie immobiliari</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- GODFATHER OFFER -->
   <section class="py-section py-offer" id="offerta" aria-labelledby="py-offer-h2">
     <div class="py-wrap">
-      <span class="py-eyebrow" data-chapter="06">cell 06 · l'offerta</span>
+      <span class="py-eyebrow" data-chapter="05">cell 06 · l'offerta</span>
       <h2 id="py-offer-h2" class="py-h2 py-reveal" style="margin-top:1rem;">
         Cosa ricevi quando mi affidi<br>la tua <em>automazione Python</em>.
       </h2>
@@ -516,7 +474,7 @@ app = <span class="py-tok-cls">FastAPI</span>()
   <!-- GUARANTEE -->
   <section class="py-section" aria-labelledby="py-grnt-h2">
     <div class="py-wrap">
-      <span class="py-eyebrow" data-chapter="07">cell 07 · il rischio è mio</span>
+      <span class="py-eyebrow" data-chapter="06">cell 07 · il rischio è mio</span>
       <h2 id="py-grnt-h2" class="py-h2 py-reveal" style="margin-top:1rem; max-width:22ch;">
         La tripla garanzia<br><em>azienda-friendly</em>.
       </h2>
@@ -544,7 +502,7 @@ app = <span class="py-tok-cls">FastAPI</span>()
   <!-- FAQ -->
   <section class="py-section py-faq" id="faq" aria-labelledby="py-faq-h2">
     <div class="py-wrap">
-      <span class="py-eyebrow" data-chapter="08">cell 08 · le domande che mi fanno sempre</span>
+      <span class="py-eyebrow" data-chapter="07">cell 08 · le domande che mi fanno sempre</span>
       <h2 id="py-faq-h2" class="py-h2 py-reveal" style="margin-top:1rem;">
         10 domande oneste,<br><em>10 risposte oneste</em>.
       </h2>
@@ -558,7 +516,7 @@ app = <span class="py-tok-cls">FastAPI</span>()
         <details><summary>6. AI bot/agent vs script tradizionale: come scegliere?</summary><div class="py-faq__answer"><strong>Script tradizionale</strong> per logica deterministica (numeri, regole chiare, flussi prevedibili). <strong>AI agent</strong> quando: serve interpretare testo libero (classificare email, estrarre dati da PDF unstructured, rispondere a customer support in linguaggio naturale), serve generazione contenuti, serve decisione fuzzy. <strong>Spesso la soluzione è ibrida</strong>: script deterministico che chiama LLM solo nei punti dove serve davvero. <em>Costa di meno e fallisce in modo più prevedibile.</em> Vedi anche <a href="agente-immobiliare-ai.html">agente immobiliare AI</a> come esempio reale.</div></details>
         <details><summary>7. Sicurezza dei dati: come gestisci credenziali e privacy?</summary><div class="py-faq__answer"><strong>Credenziali in variabili d'ambiente</strong> (.env mai committato), secrets gestiti via Doppler o file criptati quando serve, VPS con SSH key-only, fail2ban attivo, backup automatici cifrati. Per dati personali (GDPR): cifratura at-rest sul database, log che non contengono PII, retention configurabile. <strong>Su richiesta firmo NDA standard</strong> prima della discovery call. Niente "ti mando i tuoi clienti via WhatsApp": rispetto serio della privacy.</div></details>
         <details><summary>8. Performance e scalabilità: il mio script regge se cresciamo?</summary><div class="py-faq__answer">Dipende dal disegno iniziale. Per <strong>workflow batch</strong> (cron quotidiano, settimanale) Python single-thread regge volumi enormi se ben scritto. Per <strong>API/real-time</strong> uso <a href="creazione-api-rest.html">FastAPI async + Uvicorn</a>, che regge 10k+ req/min su VPS modesto. Se ti aspetti scalata 100x serve disegnare diverso fin dall'inizio (Celery + Redis, microservizi, database sharding). Lo discutiamo nel brief in base ai numeri reali. Vedi anche <a href="mvp-app-startup.html">MVP backend Python per startup</a>.</div></details>
-        <details><summary>9. Posso vedere progetti Python pubblici tuoi?</summary><div class="py-faq__answer">Sì. Su GitHub (<a href="https://github.com/andreapianidev" target="_blank" rel="noopener">github.com/andreapianidev</a>) trovi tool open-source: scanner SEO PrestaShop in Python, autoclicker desktop, vari utility. Tool commerciali come <a href="prestashop-sqleditor.html">PrestaShop SQL Editor</a> e <a href="scansione-seo-prestashop.html">PrestaScan</a> integrano backend Python. Per scraping/automation client confidenziali ti mostro snippet anonimizzati e ti metto in contatto con clienti reali.</div></details>
+        <details><summary>9. Posso vedere progetti Python pubblici tuoi?</summary><div class="py-faq__answer">Sì. Su GitHub (<a href="https://github.com/andreapianidev" target="_blank" rel="noopener">github.com/andreapianidev</a>) trovi tool open-source: scanner SEO PrestaShop in Python, autoclicker desktop, vari utility. Tool commerciali come <a href="prestashop-sqleditor.html">PrestaShop SQL Editor</a> e <a href="scansione-seo-prestashop.html">PrestaScan</a> integrano backend Python. Per scraping/automation client confidenziali ti mostro snippet anonimizzati. Non ti metto in contatto con clienti: ti do gli indirizzi dei prodotti che ho costruito, con demo pubbliche che puoi aprire adesso senza chiedere il permesso a nessuno - CheckIn Facile, ImmoCRM, BeautyCenterCRM e AgenteImmobiliareAI. Guardarli da solo dice piu' di qualunque referenza.</div></details>
         <details><summary>10. Posso parlare con un cliente reale prima di firmare?</summary><div class="py-faq__answer">Sì. Su richiesta ti metto in contatto <strong>diretto</strong> con un cliente che ha automatizzato un processo aziendale con un mio script Python e può raccontarti: quanto ha risparmiato in ore, com'è andato lo sviluppo, com'è il supporto post-launch. <strong>Niente referenze finte, niente case study costruiti.</strong> I miei clienti contenti sono <em>l'unico marketing serio che ho</em>. <a href="https://wa.me/393516248936">Scrivimi su WhatsApp →</a></div></details>
       </div>
     </div>
@@ -567,7 +525,7 @@ app = <span class="py-tok-cls">FastAPI</span>()
   <!-- PYTHON AUTOMATION BRIEF FORM -->
   <section class="py-section py-brief" id="brief" aria-labelledby="py-brief-h2">
     <div class="py-wrap">
-      <span class="py-eyebrow" data-chapter="09">cell 09 · python automation brief · 5 step · risposta in 48h</span>
+      <span class="py-eyebrow" data-chapter="08">cell 09 · python automation brief · 5 step · risposta in 48h</span>
       <h2 id="py-brief-h2" class="py-h2 py-reveal" style="margin-top:1rem;">
         Descrivimi il processo<br>in 5 step. <em>Ti rispondo io in 48h</em>.
       </h2>
@@ -695,7 +653,7 @@ app = <span class="py-tok-cls">FastAPI</span>()
   <!-- FINAL CTA -->
   <section class="py-section py-final" aria-labelledby="py-final-h2">
     <div class="py-wrap">
-      <span class="py-eyebrow" data-chapter="10">cell 10 · due strade</span>
+      <span class="py-eyebrow" data-chapter="09">cell 10 · due strade</span>
       <h2 id="py-final-h2" class="py-h2 py-reveal" style="margin-top:1rem;">
         Hai due modi onesti<br>per <em>partire ora</em>.
       </h2>

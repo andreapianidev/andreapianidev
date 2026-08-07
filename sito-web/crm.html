@@ -120,7 +120,7 @@
       {"@type":"Question","name":"Posso usarlo da mobile quando sono dal cliente?","acceptedAnswer":{"@type":"Answer","text":"Sì. CRM con interfaccia mobile responsive di default (commerciale apre il deal dal browser dello smartphone) e in casi specifici sviluppo una companion app nativa iOS/Android per uso campo: lista deal del giorno, visite, note vocali, foto firme contratti. Vedi anche la pagina sviluppo app mobile per i casi dove serve davvero una nativa."}},
       {"@type":"Question","name":"Posso esportare i miei dati quando voglio?","acceptedAnswer":{"@type":"Answer","text":"Sì. Tutti i dati (contatti, deal, attività, fatture, ticket) sono esportabili in CSV/Excel/JSON con un click dalla UI admin o via API. Nei CRM custom e Perfex il database è sul tuo server: ne fai dump SQL quando vuoi. Niente lock-in, mai. Anche se domani decidi di passare a Salesforce o HubSpot, ti aiuto io con il mapping campi."}},
       {"@type":"Question","name":"GDPR e privacy del CRM in Italia, come gestiamo?","acceptedAnswer":{"@type":"Answer","text":"CRM con consent log esplicito per ogni contatto (data, fonte, base giuridica), cancellazione utente con purge cascade (deal, attività, comunicazioni), export dati su richiesta interessato, audit log accessi admin. Se ospitiamo su VPS europeo (Hetzner Germania, Aruba Italia) sei conforme di default. Posso anche redigere il template di registro trattamenti specifico al tuo CRM."}},
-      {"@type":"Question","name":"Posso vedere un CRM già in produzione?","acceptedAnswer":{"@type":"Answer","text":"Sì, casi reali: CRM custom per studio professionale 6 partner (deal + ticket post-vendita), Perfex personalizzato per distribuzione 15 commerciali (multi-pipeline + SDI integrata), CRM agenzia digitale con email marketing automation. Su richiesta ti metto in contatto con un cliente attivo per parlare direttamente — niente referenze finte."}},
+      {"@type":"Question","name":"Posso vedere un CRM già in produzione?","acceptedAnswer":{"@type":"Answer","text":"Sì: ImmoCRM e BeautyCenterCRM sono online con demo pubbliche, e sono CRM che ho scritto io. Puoi entrarci adesso senza chiedermi nulla. Perfex personalizzato per distribuzione 15 commerciali (multi-pipeline + SDI integrata), CRM agenzia digitale con email marketing automation. Non ti metto in contatto con clienti: ti do gli indirizzi dei prodotti che ho costruito, con demo pubbliche che puoi aprire adesso senza chiedere il permesso a nessuno — CheckIn Facile, ImmoCRM, BeautyCenterCRM e AgenteImmobiliareAI. Guardarli da solo dice più di qualunque referenza."}},
       {"@type":"Question","name":"Sei un singolo freelance: e se sparisci?","acceptedAnswer":{"@type":"Answer","text":"Tutto il codice scritto per la tua installazione è su repository Git intestato a te. Documentazione tecnica, manuale operativo, configurazione: tutto consegnato. Qualsiasi altro sviluppatore PHP/Node può continuare il lavoro. E per i CRM Perfex c'è un ecosistema globale di sviluppatori; per CRM custom le tecnologie scelte sono mainstream (Node.js, PostgreSQL, React) — non esoteriche."}}
     ]
   }
@@ -419,79 +419,10 @@
     </div>
   </section>
 
-  <!-- PROOF — 3 case studies -->
-  <section class="cm-section" aria-labelledby="cm-proof-h2">
-    <div class="cm-wrap">
-      <span class="cm-eyebrow" data-tab="05">step 4 · clienti reali, CRM reali</span>
-      <h2 id="cm-proof-h2" class="cm-h2 cm-reveal" style="margin-top:1rem;">
-        Tre PMI. Tre approcci.<br>Tre <em>CRM in produzione</em>.
-      </h2>
-
-      <div class="cm-proof__grid">
-        <article class="cm-proof__card">
-          <header class="cm-proof__head">
-            <span>studio professionale · 6 partner</span>
-            <span class="file-no">№ 011-A</span>
-          </header>
-          <figure class="cm-proof__fig">
-            <img src="assets/images/prodotti/immocrm-dashboard.webp"
-                 alt="Dashboard di ImmoCRM — CRM su misura scritto da Andrea Piani: priorità del giorno, lead caldi e azione consigliata"
-                 loading="lazy" width="1100" height="657">
-          </figure>
-          <div class="cm-proof__body">
-            <h3 class="cm-proof__title">CRM custom: pipeline deal + ticket post-vendita</h3>
-            <p class="cm-proof__metric">−<em>60%</em></p>
-            <blockquote class="cm-proof__quote">"Prima ogni partner aveva il proprio Excel. Sei partner = sei verità diverse sui clienti. Ora una sola pipeline, ticket unificato, riunione lunedì in 20 minuti invece di 2 ore."</blockquote>
-            <a class="cm-proof__signature" href="https://immocrm-it.vercel.app" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">↗ Screenshot da ImmoCRM, un CRM che ho scritto</a>
-          </div>
-          <span class="cm-proof__stamp">PRATICA EVASA</span>
-        </article>
-
-        <article class="cm-proof__card">
-          <header class="cm-proof__head">
-            <span>distribuzione · 15 commerciali</span>
-            <span class="file-no">№ 011-B</span>
-          </header>
-          <figure class="cm-proof__fig">
-            <img src="assets/images/prodotti/immocrm-report.webp"
-                 alt="Report e statistiche di ImmoCRM — valore portafoglio, provvigioni incassate e andamento acquisizioni per sede"
-                 loading="lazy" width="1100" height="655">
-          </figure>
-          <div class="cm-proof__body">
-            <h3 class="cm-proof__title">Perfex custom: multi-pipeline + SDI fatturazione</h3>
-            <p class="cm-proof__metric">+<em>34%</em></p>
-            <blockquote class="cm-proof__quote">"15 commerciali su 4 territori, ognuno con la sua pipeline ma direzione vede tutto. Deal chiuso = fattura SDI emessa in 30 secondi. Niente più 'aspetto la fattura dal contabile'."</blockquote>
-            <a class="cm-proof__signature" href="servizi-perfex-crm.html" style="text-decoration:none; color:inherit;">→ Come personalizzo Perfex CRM</a>
-          </div>
-          <span class="cm-proof__stamp">DEAL CHIUSO</span>
-        </article>
-
-        <article class="cm-proof__card">
-          <header class="cm-proof__head">
-            <span>agenzia digitale · 8 persone</span>
-            <span class="file-no">№ 011-C</span>
-          </header>
-          <figure class="cm-proof__fig">
-            <img src="assets/images/prodotti/beautycentercrm-agenda.webp"
-                 alt="BeautyCenterCRM — CRM verticale con agenda operatrici, schede cliente e incasso giornaliero"
-                 loading="lazy" width="1100" height="603">
-          </figure>
-          <div class="cm-proof__body">
-            <h3 class="cm-proof__title">Perfex + email marketing automation</h3>
-            <p class="cm-proof__metric">×<em>3</em></p>
-            <blockquote class="cm-proof__quote">"Lead da landing → segmentazione automatica → nurturing email → notifica al commerciale quando aprono 3 mail. Pipeline triplicata senza assumere nessuno."</blockquote>
-            <a class="cm-proof__signature" href="https://beautycentercrm.vercel.app" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">↗ Screenshot da BeautyCenterCRM</a>
-          </div>
-          <span class="cm-proof__stamp">CONTRATTO OK</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- GODFATHER OFFER -->
   <section class="cm-section cm-offer" id="offerta" aria-labelledby="cm-offer-h2">
     <div class="cm-wrap">
-      <span class="cm-eyebrow" data-tab="06">step 5 · l'offerta dentro la scheda</span>
+      <span class="cm-eyebrow" data-tab="06">step 4 · l'offerta dentro la scheda</span>
       <h2 id="cm-offer-h2" class="cm-h2 cm-reveal" style="margin-top:1rem;">
         Cosa ricevi quando<br>mi affidi il <em>tuo CRM</em>.
       </h2>
@@ -542,7 +473,7 @@
   <!-- GUARANTEE -->
   <section class="cm-section" aria-labelledby="cm-grnt-h2">
     <div class="cm-wrap">
-      <span class="cm-eyebrow" data-tab="07">step 6 · il rischio è mio</span>
+      <span class="cm-eyebrow" data-tab="07">step 5 · il rischio è mio</span>
       <h2 id="cm-grnt-h2" class="cm-h2 cm-reveal" style="margin-top:1rem; max-width:24ch;">
         La tripla garanzia<br><em>PMI-friendly</em>.
       </h2>
@@ -570,7 +501,7 @@
   <!-- FAQ -->
   <section class="cm-section" id="faq" aria-labelledby="cm-faq-h2">
     <div class="cm-wrap">
-      <span class="cm-eyebrow" data-tab="08">step 7 · le domande che mi fanno sempre</span>
+      <span class="cm-eyebrow" data-tab="08">step 6 · le domande che mi fanno sempre</span>
       <h2 id="cm-faq-h2" class="cm-h2 cm-reveal" style="margin-top:1rem;">
         10 domande oneste,<br><em>10 risposte oneste</em>.
       </h2>
@@ -610,7 +541,7 @@
         </details>
         <details>
           <summary>9. Posso vedere un CRM già in produzione?</summary>
-          <div class="cm-faq__answer">Sì. Casi reali: <strong>CRM custom per studio professionale</strong> 6 partner (deal + ticket post-vendita unificati), <strong>Perfex personalizzato per distribuzione</strong> 15 commerciali (multi-pipeline territori + SDI integrata), <strong>CRM agenzia digitale</strong> con integrazione email marketing automation e nurturing. Su richiesta ti metto in contatto diretto con un cliente attivo: chiamata reale, niente referenze finte, niente case study costruiti. I miei clienti contenti sono <strong>l'unico asset commerciale serio</strong> che ho.</div>
+          <div class="cm-faq__answer">Sì. <strong>ImmoCRM</strong> e <strong>BeautyCenterCRM</strong> sono online con demo pubbliche ed è codice mio: entraci prima di parlarmi. <strong>Perfex personalizzato per distribuzione</strong> 15 commerciali (multi-pipeline territori + SDI integrata), <strong>CRM agenzia digitale</strong> con integrazione email marketing automation e nurturing. Su richiesta ti metto in contatto diretto con un cliente attivo: chiamata reale, niente referenze finte, niente case study costruiti. I miei clienti contenti sono <strong>l'unico asset commerciale serio</strong> che ho.</div>
         </details>
         <details>
           <summary>10. Sei un singolo freelance: e se sparisci?</summary>
@@ -623,7 +554,7 @@
   <!-- CRM VISION BRIEF FORM -->
   <section class="cm-section cm-brief" id="brief" aria-labelledby="cm-brief-h2">
     <div class="cm-wrap">
-      <span class="cm-eyebrow" data-tab="09">step 8 · crm vision brief · 5 step · risposta in 48h</span>
+      <span class="cm-eyebrow" data-tab="09">step 7 · crm vision brief · 5 step · risposta in 48h</span>
       <h2 id="cm-brief-h2" class="cm-h2 cm-reveal" style="margin-top:1rem;">
         Descrivimi il tuo team<br>in 5 step. <em>Ti mando io l'approccio</em>.
       </h2>
@@ -741,7 +672,7 @@
   <!-- FINAL CTA -->
   <section class="cm-section cm-final" aria-labelledby="cm-final-h2">
     <div class="cm-wrap">
-      <span class="cm-eyebrow" data-tab="10">step 9 · due strade per partire ora</span>
+      <span class="cm-eyebrow" data-tab="10">step 8 · due strade per partire ora</span>
       <h2 id="cm-final-h2" class="cm-h2 cm-reveal" style="margin-top:1rem;">
         Hai due modi onesti<br>per <em>partire ora</em>.
       </h2>
