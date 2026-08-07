@@ -65,9 +65,12 @@ if service.get("dateModified") != "2026-08-07":
     raise SystemExit("FAIL: dateModified del servizio non aggiornato")
 faq = next(block for block in blocks if block.get("@type") == "FAQPage")
 structured = [(item["name"], item["acceptedAnswer"]["text"]) for item in faq["mainEntity"]]
-section = source[source.index("<!-- FAQ SEO -->"):source.index("<!-- CTA WhatsApp - Closing -->")]
+match = re.search(r'<section[^>]*id="faq"[^>]*>(.*?)</section>', source, re.S)
+if not match:
+    raise SystemExit("FAIL: sezione FAQ visibile assente")
+section = match.group(1)
 clean = lambda value: " ".join(html.unescape(re.sub(r"<[^>]+>", "", value)).split())
-visible = [(clean(question), clean(answer)) for question, answer in re.findall(r'<h3[^>]*>(.*?)</h3>\s*<p[^>]*>(.*?)</p>', section, re.S)]
+visible = [(clean(question), clean(answer)) for question, answer in re.findall(r'<summary>(.*?)</summary>\s*<div class="as-faq__a">(.*?)</div>', section, re.S)]
 if structured != visible:
     raise SystemExit("FAIL: FAQ visibili e JSON-LD non coincidono")
 PY
