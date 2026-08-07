@@ -62,7 +62,9 @@ REQUIRED = {
     "HowTo": ["name", "step"],
     "Question": ["name", "acceptedAnswer"],
     "Answer": ["text"],
-    "ListItem": ["position", "name"],
+    # ListItem è trattato a parte: in un carousel il nome sta nell'entità
+    # annidata sotto "item", non sul ListItem stesso.
+    "ListItem": ["position"],
 }
 
 errors = []
@@ -90,6 +92,17 @@ for path in sorted(glob.glob(os.path.join(site, "**", "*.html"), recursive=True)
                     for field in REQUIRED.get(t, []):
                         if field not in node:
                             errors.append(f"{rel}: {t} senza '{field}' ({where})")
+                    if t in ("AggregateRating", "Rating", "Review"):
+                        errors.append(f"{rel}: {t} in JSON-LD ({where}) — vietato")
+                # Un ListItem deve portare un nome proprio oppure un'entità
+                # annidata che ce l'abbia: senza, Google lo scarta.
+                if declared == "ListItem" and "name" not in node:
+                    item = node.get("item")
+                    if not (isinstance(item, dict) and item.get("name")):
+                        errors.append(f"{rel}: ListItem senza 'name' né item.name ({where})")
+                for banned in ("aggregateRating", "review", "itemReviewed"):
+                    if banned in node:
+                        errors.append(f"{rel}: campo '{banned}' in JSON-LD ({where}) — vietato")
                 for key, value in node.items():
                     walk(value, f"{where}.{key}")
             elif isinstance(node, list):
