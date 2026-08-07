@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="description" content="Gestionale cantieri per imprese edili: SAL, rapportini operai, costi di commessa in tempo reale, DURC e congruità sotto controllo. Setup da €2.999.">
+  <meta name="keywords" content="gestionale cantieri, software gestione cantieri, gestionale impresa edile, app gestione cantieri, gestionale edilizia, software contabilità cantiere, rapportini operai cantiere, SAL stato avanzamento lavori, costi di commessa edilizia, congruità manodopera, DURC scadenze, gestionale subappaltatori">
+  <meta name="author" content="Andrea Piani">
+
+  <meta property="og:title" content="Gestionale cantieri · Cantiere Facile — SAL, rapportini e costi di commessa">
+  <meta property="og:description" content="Cantiere Facile: rapportini dal telefono, SAL che si compila da solo, margine di commessa aggiornato ogni giorno, DURC e congruità manodopera sotto controllo. Setup da €2.999.">
+  <meta property="og:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+  <meta property="og:image:alt" content="Cantiere Facile — gestionale cantieri italiano di Andrea Piani">
+  <meta property="og:url" content="https://www.andreapiani.com/gestionale-cantieri.html">
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Andrea Piani — gestionali verticali italiani">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@andreapianidev">
+  <meta name="twitter:title" content="Cantiere Facile · gestionale cantieri per imprese edili">
+  <meta name="twitter:description" content="Rapportini dal telefono, SAL automatico, costi di commessa in tempo reale, DURC e congruità sotto controllo. Prezzi chiari, demo gratuita.">
+  <meta name="twitter:image" content="https://www.andreapiani.com/assets/images/andrea-piani-logo.png">
+
+  <link rel="canonical" href="https://www.andreapiani.com/gestionale-cantieri.html" />
+
+  <link rel="alternate" hreflang="it" href="https://www.andreapiani.com/gestionale-cantieri.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.andreapiani.com/gestionale-cantieri.html" />
+
+  <link rel="shortcut icon" href="assets/images/andrea-piani-logo.png" type="image/x-icon">
+
+  <title>Gestionale Cantieri per Imprese Edili | Andrea Piani</title>
+
+  <!-- Schema.org: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://www.andreapiani.com/gestionale-cantieri.html#software",
+    "name": "Cantiere Facile",
+    "alternateName": "Gestionale cantieri per imprese edili",
+    "description": "Gestionale italiano per imprese edili e cantieri: rapportini giornalieri da smartphone, libretto delle misure e SAL, costi di commessa in tempo reale, gestione subappaltatori con DURC e congruità della manodopera, scadenzario sicurezza (POS, formazione, idoneità sanitarie), mezzi e attrezzature.",
+    "url": "https://www.andreapiani.com/gestionale-cantieri.html",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Construction Management",
+    "operatingSystem": "Web (browser desktop e mobile, app di cantiere come PWA offline)",
+    "inLanguage": "it-IT",
+    "isAccessibleForFree": false,
+    "image": "https://www.andreapiani.com/assets/images/andrea-piani-logo.png",
+    "featureList": "Rapportino giornaliero da smartphone con foto e firma, Ore per operaio e per commessa, Libretto delle misure e registro di contabilità, Stato Avanzamento Lavori con certificato di pagamento, Costi di commessa in tempo reale con margine previsto e consuntivo, Gestione subappaltatori con verifica DURC, Congruità della manodopera con export per Cassa Edile, Scadenzario sicurezza POS formazione idoneità sanitarie, Registro presenze e badge di cantiere, Mezzi e attrezzature con manutenzioni, Varianti in corso d'opera, Preventivi da computo metrico, Export contabile e fatturazione elettronica",
+    "offers": {
+      "@type": "Offer",
+      "@id": "https://www.andreapiani.com/gestionale-cantieri.html#offer",
+      "name": "Setup Cantiere Facile",
+      "description": "Setup da €2.999 una tantum per impresa edile singola. Configurazioni multi-cantiere, subappalti e lavori pubblici quotate con preventivo scope-based scritto in 48h dopo la demo gratuita di 30 minuti.",
+      "price": "2999",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.andreapiani.com/gestionale-cantieri.html#offer",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2999",
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "seller": {
+        "@type": "Person",
+        "name": "Andrea Piani",
+        "url": "https://www.andreapiani.com"
+      }
+    }
+  }
+  </script>
+
+  <!-- Schema.org: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.andreapiani.com/gestionale-cantieri.html#service",
+    "name": "Sviluppo gestionale cantieri per imprese edili",
+    "description": "Progettazione e sviluppo di gestionali su misura per imprese edili, imprese di costruzioni e general contractor: rapportini, SAL, costi di commessa, subappalti, sicurezza e congruità della manodopera.",
+    "url": "https://www.andreapiani.com/gestionale-cantieri.html",
+    "serviceType": "Gestionale personalizzato per imprese edili e cantieri",
+    "inLanguage": "it-IT",
+    "areaServed": { "@type": "Country", "name": "Italia" },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Imprese edili, imprese di costruzioni, general contractor, imprese di impiantistica e ristrutturazioni"
+    },
+    "provider": {
+      "@type": "Person",
+      "name": "Andrea Piani",
+      "url": "https://www.andreapiani.com",
+      "telephone": ["+393516248936", "+34619500367"],
+      "jobTitle": "Sviluppatore software gestionali"
+    },
+    "dateModified": "2026-08-07"
+  }
+  </script>
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.andreapiani.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Gestionali personalizzati", "item": "https://www.andreapiani.com/gestionali-personalizzati-aziende.html" },
+      { "@type": "ListItem", "position": 3, "name": "Gestionale cantieri", "item": "https://www.andreapiani.com/gestionale-cantieri.html" }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Quanto costa un gestionale per cantieri?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Il setup di Cantiere Facile parte da €2.999 una tantum per un'impresa edile singola con un cantiere alla volta. Configurazioni multi-cantiere con subappaltatori, lavori pubblici e contabilità di cantiere completa stanno realisticamente tra €4.500 e €9.000. Dopo la demo ricevi un preventivo scope-based scritto in 48h a prezzo chiuso, senza canoni obbligatori per utente." } },
+      { "@type": "Question", "name": "Gli operai devono compilare qualcosa? Non sono pratici di software.",
+        "acceptedAnswer": { "@type": "Answer", "text": "Il rapportino si compila dal telefono in meno di un minuto: si sceglie il cantiere, si segnano le ore, si scattano due foto e si firma con il dito. Funziona anche senza campo — i dati restano sul telefono e si sincronizzano quando torna la linea. In cantiere di solito lo compila il capo squadra per tutta la squadra, non ogni singolo operaio." } },
+      { "@type": "Question", "name": "Come funziona il SAL nel gestionale?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Le lavorazioni entrano dal computo metrico con voce di elenco prezzi, quantità e importo. Man mano che avanzano, le misure si registrano nel libretto delle misure direttamente in cantiere. Il gestionale somma le quantità contabilizzate per voce e produce il registro di contabilità e lo Stato Avanzamento Lavori, con la ritenuta a garanzia dello 0,50% già scorporata e il certificato di pagamento pronto da firmare." } },
+      { "@type": "Question", "name": "Gestisce la congruità della manodopera?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sì. Siccome le ore sono già registrate per operaio e per cantiere dai rapportini, il gestionale calcola in ogni momento l'incidenza della manodopera sul valore dell'opera e la confronta con l'aliquota di congruità della categoria. Vedi lo scostamento mentre il cantiere è aperto, non alla richiesta del DURC di congruità a fine lavori, e puoi esportare il riepilogo ore per la denuncia alla Cassa Edile." } },
+      { "@type": "Question", "name": "Tiene sotto controllo i DURC dei subappaltatori?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ogni subappaltatore ha una scheda con DURC, visura, POS, assicurazione e idoneità tecnico-professionale, ognuno con la sua data di scadenza. Il gestionale avvisa prima che scadano e segnala se un fornitore con documenti scaduti risulta ancora attivo su un cantiere. Lo stesso vale per formazione, idoneità sanitarie e DPI dei tuoi dipendenti." } },
+      { "@type": "Question", "name": "Posso sapere se un cantiere sta guadagnando mentre è ancora aperto?",
+        "acceptedAnswer": { "@type": "Answer", "text": "È il motivo principale per cui le imprese lo comprano. Ogni commessa ha il suo preventivo di partenza; ore dei rapportini, fatture fornitore, noli, materiali e subappalti si attaccano alla commessa man mano che arrivano. Il margine si aggiorna ogni giorno e vedi lo scostamento tra preventivato e consuntivo per voce, quindi te ne accorgi al 30% dei lavori e non a consuntivo." } },
+      { "@type": "Question", "name": "Si integra con il mio commercialista e la fatturazione elettronica?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Il gestionale esporta le fatture attive in XML per il Sistema di Interscambio tramite il tuo intermediario abituale, e produce i tracciati per la prima nota del commercialista. Sui lavori pubblici gestisce split payment e ritenuta a garanzia. Non sostituisce il gestionale contabile: gli parla, e ti evita di reinserire gli stessi numeri due volte." } },
+      { "@type": "Question", "name": "Funziona anche per imprese di impiantistica o ristrutturazioni?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sì. Lo stesso motore serve imprese edili generali, impiantisti (elettrico, termoidraulico), imprese di ristrutturazione e general contractor. Cambiano le voci di elenco prezzi e il peso relativo di manodopera e materiali: quella parte si configura durante l'onboarding sui tuoi lavori reali." } },
+      { "@type": "Question", "name": "Se un giorno cambio gestionale, i dati come li porto via?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Exit strategy scritta nel contratto: export completo del database (dump più CSV per commesse, rapportini, misure, SAL, fatture e documenti), i PDF dei SAL già emessi, la documentazione dello schema dati e due ore di call con il tecnico del nuovo fornitore. Nessun lock-in." } },
+      { "@type": "Question", "name": "Quanto ci vuole ad andare live?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dalle 3 alle 6 settimane dal sì, a seconda di quanti cantieri aperti vanno caricati. Prima settimana: setup, anagrafiche, elenco prezzi e importazione dei cantieri in corso. Seconda e terza: rapportini in mano alle squadre con affiancamento in cantiere. Poi le prime misure e il primo SAL fatti insieme. Il go-live si dichiara quando un SAL esce corretto senza il foglio Excel di controllo a fianco." } }
+    ]
+  }
+  </script>
+
+  <!-- Fonts: Fraunces (display), Public Sans (body), Spline Sans Mono (numeri/computo) -->
+  <link href="/assets/fonts/gf-57806b175c.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/popup-menu.css">
+  <link rel="stylesheet" href="navbar-fix.css">
+  <link rel="stylesheet" href="assets/css/gestionale-cantieri.css">
+
+  <style>
+    body { margin: 0; }
+    html.dark-mode body.ct-page { background: #ECEEF1 !important; color: #1B2430 !important; }
+
+    /* Tabelle di pagina — risposte dirette, buone per gli snippet */
+    .ct-table-wrap { overflow-x: auto; margin: 2rem 0; }
+    .ct-table {
+      width: 100%; border-collapse: collapse; min-width: 560px;
+      background: var(--ct-paper); font-size: 0.97rem;
+      box-shadow: var(--ct-shadow-1);
+    }
+    .ct-table caption {
+      text-align: left; font-family: var(--ct-font-mono); font-size: 0.76rem;
+      text-transform: uppercase; letter-spacing: 0.09em; color: var(--ct-muted);
+      padding-bottom: 0.7rem;
+    }
+    .ct-table th, .ct-table td {
+      padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--ct-hair-soft);
+      vertical-align: top;
+    }
+    .ct-table thead th {
+      background: var(--ct-surface); font-family: var(--ct-font-mono);
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em;
+      border-bottom: 2px solid var(--ct-ink);
+    }
+    .ct-table tbody tr:last-child td { border-bottom: none; }
+    .ct-table td strong { color: var(--ct-ink); }
+    .ct-table .num { font-family: var(--ct-font-mono); white-space: nowrap; }
+
+    /* Risposta diretta sotto l'H1 */
+    .ct-answer {
+      background: var(--ct-paper);
+      border-left: 4px solid var(--ct-amber);
+      padding: 1.15rem 1.4rem;
+      margin: 1.6rem 0 0;
+      box-shadow: var(--ct-shadow-1);
+      max-width: 68ch;
+    }
+    .ct-answer p { margin: 0; font-size: 1.03rem; line-height: 1.6; }
+  </style>
+</head>
+
+<body class="ct-page">
+
+  <!-- TOPBAR -->
+  <div class="ct-topbar" role="banner">
+    <div class="ct-topbar__inner">
+      <div class="ct-topbar__brand"><span class="badge-live">🏗️ Gestionale su misura</span>Cantiere Facile · gestionale cantieri per imprese edili</div>
+      <div class="ct-topbar__center">
+        <span class="dot-gold" aria-hidden="true"></span>
+        <span data-slot-counter>Agosto 2026 — 1 slot libero su 2</span>
+      </div>
+      <div class="ct-topbar__right">
+        <a href="tel:+393516248936" title="Chiama Andrea Piani per il gestionale cantieri">+39 351 624 8936</a> · <a href="tel:+34619500367" title="Chiama Andrea Piani — numero spagnolo">+34 619 500 367</a>
+        <a href="mailto:andreapiani.dev@gmail.com" title="Email Andrea Piani — Cantiere Facile">andreapiani.dev@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="ct-nav">
+    <a class="ct-nav__brand" href="/" title="Andrea Piani — sviluppatore di gestionali verticali italiani">andrea <em>piani</em></a>
+    <nav class="ct-nav__links" aria-label="Navigazione principale">
+      <a href="/" title="Home Andrea Piani">home</a>
+      <a href="#" onclick="openServiziPopup(); return false;" title="Tutti i servizi">servizi ▾</a>
+      <a href="#offer" title="Offerta Cantiere Facile">offerta</a>
+      <a href="#demo" title="Demo gratuita Cantiere Facile">demo</a>
+      <a href="#faq" title="Domande frequenti sul gestionale cantieri">faq</a>
+      <a href="preventivo-app.html" title="Preventivo personalizzato">preventivo</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="ct-section ct-hero" aria-labelledby="ct-hero-h1">
+    <div class="ct-wrap">
+      <div class="ct-hero__issue">
+        <span class="ct-issue-mark">Libretto delle misure · SAL n.03 · Commessa 2026/14</span>
+      </div>
+      <div class="ct-hero__grid">
+        <div>
+          <span class="ct-eyebrow" data-chapter="01">per imprese edili, impiantisti e general contractor</span>
+          <h1 id="ct-hero-h1" class="ct-h1 ct-hero__h1">
+            <span class="ln">Gestionale cantieri:</span>
+            <span class="ln">SAL, rapportini e <span class="ct-underline">costi di commessa</span></span>
+            <span class="ln">in <em>un posto solo</em>.</span>
+          </h1>
+
+          <div class="ct-answer">
+            <p>Un <strong>gestionale cantieri</strong> è il software con cui un'impresa edile tiene insieme le ore degli operai, l'avanzamento delle lavorazioni e i costi di ogni commessa. Raccoglie i rapportini giornalieri, li trasforma in libretto delle misure e SAL, e aggiorna il margine del cantiere mentre i lavori sono ancora aperti — invece che a consuntivo, quando non puoi più correggere niente.</p>
+          </div>
+
+          <p class="ct-hero__sub" style="margin-top:1.4rem;">
+            <strong>Cantiere Facile</strong> è il gestionale che costruisco su misura per le imprese edili italiane: <strong>rapportini dal telefono</strong> (anche senza campo), <strong>libretto delle misure e SAL</strong> con ritenuta a garanzia già scorporata, <strong>costi di commessa in tempo reale</strong>, <strong>subappaltatori con DURC e scadenze</strong> sotto controllo e il calcolo continuo della <strong>congruità della manodopera</strong>.
+          </p>
+
+          <p class="ct-hero__sub" style="margin-top:0.8rem;">
+            Stesso motore dei miei gestionali verticali già in produzione — <a href="https://checkinfacile.com" target="_blank" rel="noopener"><strong>CheckIn Facile</strong></a> per l'ospitalità e <a href="https://beautycentercrm.vercel.app" target="_blank" rel="noopener"><strong>BeautyCenterCRM</strong></a> per l'estetica — adattato al cantiere. <strong>Setup da €2.999</strong>, preventivo scritto in 48h dopo la demo gratuita di 30 minuti.
+          </p>
+
+          <div class="ct-hero__cta-row">
+            <a class="ct-cta" href="#demo" title="Richiedi la demo gratuita di Cantiere Facile">
+              voglio la demo gratuita
+              <span class="ct-cta__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="ct-hero__secondary" href="#offer" title="Cosa include Cantiere Facile e quanto costa">oppure vedi offerta e prezzi →</a>
+          </div>
+        </div>
+
+        <aside class="ct-hero__receipt" aria-hidden="true">
+          <span class="ct-receipt__badge">stato avanzamento</span>
+          <div class="ct-receipt__head">
+            <div class="shop">COMMESSA 2026/14 · VIA ROMA</div>
+            <div class="sub">SAL n.03 · al 31/07 · dir. lavori arch. B.</div>
+          </div>
+          <div class="ct-receipt__body">
+            <div class="ct-receipt__row"><span class="k">opere strutturali</span><span class="v">€ 84.200,00</span></div>
+            <div class="ct-receipt__row"><span class="k">murature e tramezzi</span><span class="v">€ 31.480,00</span></div>
+            <div class="ct-receipt__row"><span class="k">impianti · subappalto</span><span class="v">€ 27.900,00</span></div>
+            <div class="ct-receipt__row"><span class="k">ritenuta a garanzia 0,50%</span><span class="v">− € 717,90</span></div>
+            <div class="ct-receipt__row total"><span class="k">certificato di pagamento</span><span class="v">€ 142.862,10</span></div>
+            <div class="ct-receipt__ok"><span>margine di commessa</span><span>✓ 14,2% · in linea</span></div>
+          </div>
+          <div class="ct-receipt__foot">cantiere facile · sal n.03 · 2026/14</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DREAM BUYER FILTER -->
+  <section class="ct-section ct-filter" aria-labelledby="ct-filter-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="02">step 1 · è il caso che ci parliamo?</span>
+      <h2 id="ct-filter-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        Vediamo se Cantiere Facile<br>è il <em>ponteggio giusto</em> per te.
+      </h2>
+
+      <div class="ct-filter__grid">
+        <div class="ct-filter__col ct-filter__col--yes ct-reveal">
+          <h3>Ti aiuto se <em>sei tu</em></h3>
+          <ul>
+            <li>Hai un'<strong>impresa edile, di impiantistica o di ristrutturazioni</strong> in Italia, con <strong>da 5 a 60 persone</strong> tra dipendenti e squadre fisse.</li>
+            <li>Tieni <strong>2-15 cantieri aperti insieme</strong> e il quadro completo ce l'hai solo in testa tua.</li>
+            <li>I <strong>rapportini arrivano su carta</strong> il venerdì, a volte il lunedì, a volte mai — e qualcuno li ricopia a mano in ufficio.</li>
+            <li>Il <strong>SAL lo prepari in Excel</strong> incrociando computo, misure prese in cantiere e fatture, e ogni volta è mezza giornata.</li>
+            <li>Sai se un cantiere ha guadagnato <strong>solo quando è finito</strong>, quando ormai il margine è quello che è.</li>
+            <li>Rincorri <strong>DURC e documenti dei subappaltatori</strong> per telefono, e ogni tanto ne scade uno mentre la squadra è già in cantiere.</li>
+            <li>Vuoi <strong>prezzi chiari prima di firmare</strong>: setup una tantum, preventivo scritto, dati tuoi, exit strategy garantita.</li>
+          </ul>
+        </div>
+        <div class="ct-filter__col ct-filter__col--no ct-reveal">
+          <h3>Lascia perdere se <em>cerchi questo</em></h3>
+          <ul>
+            <li>Sei una <strong>grande impresa con ERP di gruppo</strong> e ufficio IT interno: qui si parla di imprese indipendenti, non di SAP.</li>
+            <li>Ti serve un <strong>software di progettazione o BIM</strong>: computo metrico, CAD e modellazione non li faccio io — con quelli il gestionale ci parla, non li sostituisce.</li>
+            <li>Cerchi <strong>un'app da 9€/mese</strong> da provare e abbandonare: qui c'è un setup serio fatto sui tuoi cantieri, non un self-service.</li>
+            <li>Vuoi che faccia <strong>anche paghe e contabilità generale</strong>: quelle restano al consulente del lavoro e al commercialista, il gestionale gli manda i dati.</li>
+            <li>Lavori <strong>da solo, un cantiere alla volta</strong>, e il quaderno ti basta davvero: risparmia i soldi, te lo dico io.</li>
+            <li>Vuoi <strong>promesse di marginalità garantita</strong>: io ti do i numeri veri in tempo reale, i preventivi li fai tu.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAS — 5 problemi -->
+  <section class="ct-section ct-pas" aria-labelledby="ct-pas-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="03">step 2 · cinque problemi che vedo in ogni impresa edile</span>
+      <h2 id="ct-pas-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        Cinque buchi che <em>ogni impresa edile</em><br>ha <span class="red">aperti adesso</span>.
+      </h2>
+
+      <ul class="ct-pas__list">
+        <li class="ct-pas__item ct-reveal">
+          <span class="num">01</span>
+          <h4>I rapportini arrivano tardi, o non arrivano</h4>
+          <p>Il foglio del rapportino gira in furgone tutta la settimana, si bagna, si perde, arriva il lunedì con la grafia del capo squadra da decifrare. Poi qualcuno in ufficio lo <strong>ricopia a mano nel foglio delle ore</strong>. Nel frattempo nessuno sa quante ore sono già state bruciate su quel cantiere — e quando lo scopri, le hai già pagate.</p>
+        </li>
+        <li class="ct-pas__item ct-reveal">
+          <span class="num">02</span>
+          <h4>Il SAL è mezza giornata di Excel</h4>
+          <p>Apri il computo metrico, cerchi le misure prese in cantiere sul quaderno, incroci le fatture dei subappaltatori, riapplichi la ritenuta dello 0,50%, ricontrolli tre volte perché un errore qui vale migliaia di euro. <strong>Ogni SAL costa mezza giornata</strong> a te o al tuo tecnico — e capita un paio di volte al mese per cantiere.</p>
+        </li>
+        <li class="ct-pas__item ct-reveal">
+          <span class="num">03</span>
+          <h4>Il margine di commessa si scopre alla fine</h4>
+          <p>Il preventivo diceva 18% di margine. Il consuntivo dice 6%. In mezzo ci sono ore in più mai contabilizzate, noli dimenticati, materiali usciti dal magazzino senza bolla e due varianti concordate a voce. Quando arrivi al numero vero <strong>il cantiere è chiuso e i soldi sono spesi</strong>: non c'è più niente da correggere.</p>
+        </li>
+        <li class="ct-pas__item ct-reveal">
+          <span class="num">04</span>
+          <h4>DURC e documenti dei subappaltatori a rincorsa</h4>
+          <p>Ogni subappaltatore ha DURC, POS, assicurazione, idoneità tecnico-professionale — ognuno con la sua scadenza, tutti in cartelle diverse o in email vecchie. Basta che uno scada mentre la squadra è in cantiere e in caso di controllo o di infortunio <strong>la responsabilità torna indietro fino a te</strong>, committente compreso.</p>
+        </li>
+        <li class="ct-pas__item ct-reveal">
+          <span class="num">05</span>
+          <h4>La congruità della manodopera arriva come una sorpresa</h4>
+          <p>A fine lavori chiedi il DURC di congruità e scopri che l'incidenza della manodopera denunciata non raggiunge l'aliquota prevista per la categoria. A quel punto le strade sono due: <strong>regolarizzare versando la differenza</strong>, oppure restare irregolari e bloccare il saldo. Entrambe costano — e sarebbero state evitabili con il numero sotto gli occhi durante i lavori.</p>
+        </li>
+      </ul>
+
+      <p class="ct-pas__kicker ct-reveal">
+        Risultato? <em>Gestisci l'impresa guardando nello specchietto</em><br>invece che dal parabrezza.
+      </p>
+    </div>
+  </section>
+
+  <!-- BIG IDEA — 6 aree -->
+  <section class="ct-section" aria-labelledby="ct-bigidea-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="04">step 3 · le 6 aree di cantiere facile</span>
+      <h2 id="ct-bigidea-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        Un gestionale, <em>sei aree</em><br>che chiudono la commessa insieme.
+      </h2>
+      <p class="ct-body-lg ct-reveal" style="max-width:62ch; margin-top:1rem;">
+        Niente moduli da comprare separati, niente upsell a metà progetto. Tutto incluso e configurato sui tuoi cantieri veri durante l'onboarding: cambiano l'elenco prezzi e il peso di manodopera e materiali, il motore resta lo stesso.
+      </p>
+
+      <div class="ct-bigidea__grid">
+        <div class="ct-bigidea__card ct-reveal">
+          <span class="area-num">area 01</span>
+          <span class="area-icon" aria-hidden="true">📱</span>
+          <h3>Rapportino giornaliero dal telefono</h3>
+          <p>Il capo squadra sceglie il cantiere, segna le ore della squadra, le lavorazioni eseguite, mezzi e materiali usati, scatta due foto e firma con il dito. Meno di un minuto. <strong>Funziona anche senza campo</strong>: i dati restano sul telefono e si sincronizzano quando torna la linea.</p>
+        </div>
+        <div class="ct-bigidea__card ct-reveal">
+          <span class="area-num">area 02</span>
+          <span class="area-icon" aria-hidden="true">📐</span>
+          <h3>Libretto delle misure e SAL</h3>
+          <p>Le lavorazioni entrano dal computo metrico con voce di elenco prezzi, quantità e importo. Le misure si registrano in cantiere, il gestionale somma le quantità contabilizzate per voce e produce <strong>registro di contabilità, SAL e certificato di pagamento</strong> con la ritenuta a garanzia già scorporata.</p>
+        </div>
+        <div class="ct-bigidea__card ct-reveal">
+          <span class="area-num">area 03</span>
+          <span class="area-icon" aria-hidden="true">📊</span>
+          <h3>Costi di commessa in tempo reale</h3>
+          <p>Ore dei rapportini, fatture fornitore, noli, materiali e subappalti si attaccano da soli alla commessa giusta. Il margine si aggiorna ogni giorno con <strong>scostamento tra preventivato e consuntivo voce per voce</strong>: te ne accorgi al 30% dei lavori, non alla chiusura.</p>
+        </div>
+        <div class="ct-bigidea__card ct-reveal">
+          <span class="area-num">area 04</span>
+          <span class="area-icon" aria-hidden="true">🤝</span>
+          <h3>Subappaltatori e documenti</h3>
+          <p>Scheda per ogni impresa con DURC, visura, POS, assicurazione e idoneità tecnico-professionale, ognuno con la sua scadenza. Avvisi <strong>prima</strong> che scada, e segnalazione se un fornitore con documenti scaduti risulta ancora attivo su un cantiere aperto.</p>
+        </div>
+        <div class="ct-bigidea__card ct-reveal">
+          <span class="area-num">area 05</span>
+          <span class="area-icon" aria-hidden="true">🦺</span>
+          <h3>Sicurezza e congruità</h3>
+          <p>Scadenzario di formazione, idoneità sanitarie, DPI e visite mediche per ogni dipendente. Registro presenze di cantiere per il badge di riconoscimento. E il calcolo continuo dell'<strong>incidenza della manodopera</strong> contro l'aliquota di congruità della categoria, con export per la Cassa Edile.</p>
+        </div>
+        <div class="ct-bigidea__card ct-reveal">
+          <span class="area-num">area 06</span>
+          <span class="area-icon" aria-hidden="true">🚜</span>
+          <h3>Mezzi, attrezzature e magazzino</h3>
+          <p>Dove sta l'escavatore, chi lo ha in carico, quando scade la revisione e quando va fatta la manutenzione. Materiali che escono dal magazzino con bolla e cantiere di destinazione, così <strong>smettono di sparire nel nulla</strong> tra un cantiere e l'altro.</p>
+        </div>
+      </div>
+
+      <!-- Approfondimento SEO 1: SAL -->
+      <div style="max-width:62ch; margin-top:3.5rem;">
+        <h3 class="ct-reveal" style="font-size:1.35rem; margin-bottom:1rem;">Dal rapportino al SAL, senza passare da Excel.</h3>
+        <p class="ct-body-lg ct-reveal" style="margin-bottom:1rem;">
+          Nella maggior parte delle imprese edili italiane la contabilità di cantiere è ancora un lavoro di ricostruzione: le misure stanno su un quaderno, il computo metrico in un file, le ore in un altro, le fatture dei subappaltatori in una cartella di email. Lo <strong>Stato Avanzamento Lavori</strong> nasce mettendo insieme questi quattro mondi a mano, di solito la sera o la domenica, e ogni volta bisogna ricontrollare tutto perché un errore su una quantità vale qualche migliaio di euro.
+        </p>
+        <p class="ct-body-lg ct-reveal" style="margin-bottom:1rem;">
+          In Cantiere Facile il percorso è invertito: il dato nasce dove viene generato. La commessa parte dal <strong>computo metrico</strong>, che diventa l'elenco delle voci contabilizzabili con quantità e prezzo unitario. Quando una lavorazione avanza, la misura si registra nel <strong>libretto delle misure</strong> direttamente in cantiere, dal telefono, con la voce di elenco prezzi già selezionata. Il <strong>registro di contabilità</strong> si compila da sé sommando le quantità contabilizzate per voce.
+        </p>
+        <p class="ct-body-lg ct-reveal">
+          A quel punto il SAL è un pulsante: il gestionale prende le quantità contabilizzate al periodo, applica i prezzi unitari, scorpora la <strong>ritenuta a garanzia dello 0,50%</strong> prevista per legge, aggiunge le eventuali varianti approvate e produce il <strong>certificato di pagamento</strong> pronto da mandare alla direzione lavori. Sui lavori pubblici gestisce anche lo split payment. Quello che prima era mezza giornata diventa un controllo di dieci minuti — e soprattutto è ripetibile allo stesso modo da chiunque, non solo da chi conosce il file.
+        </p>
+      </div>
+
+      <!-- Approfondimento SEO 2: congruità -->
+      <div style="max-width:62ch; margin-top:3rem;">
+        <h3 class="ct-reveal" style="font-size:1.35rem; margin-bottom:1rem;">La congruità della manodopera, vista prima e non dopo.</h3>
+        <p class="ct-body-lg ct-reveal" style="margin-bottom:1rem;">
+          Dal 2021 nei cantieri edili l'impresa affidataria deve dimostrare che il <strong>costo della manodopera denunciato raggiunge un'incidenza minima</strong> sul valore complessivo dell'opera, secondo aliquote fissate per categoria di lavoro. La verifica avviene alla conclusione dei lavori, tramite la Cassa Edile competente, ed è il presupposto per il rilascio dell'attestazione di congruità: senza, sui lavori pubblici il saldo non si sblocca e sui privati sopra soglia la posizione resta irregolare.
+        </p>
+        <p class="ct-body-lg ct-reveal" style="margin-bottom:1rem;">
+          Il problema pratico è che quasi nessuno tiene il conto <em>mentre</em> il cantiere è aperto. Le ore stanno sui rapportini di carta, i subappalti in fatture, il valore dell'opera nel computo: il numero dell'incidenza esiste, ma nessuno lo compone finché non arriva la richiesta. Quando emerge lo scostamento, i lavori sono finiti e l'unica strada è <strong>versare la differenza per regolarizzare</strong>.
+        </p>
+        <p class="ct-body-lg ct-reveal">
+          Siccome in Cantiere Facile le ore sono già registrate per operaio e per commessa, e il valore dell'opera è già nel computo, l'incidenza è un calcolo continuo. La vedi in dashboard mentre il cantiere lavora, confrontata con l'aliquota della categoria, e il riepilogo ore è esportabile per la denuncia mensile alla Cassa Edile. Non ti fa magicamente rispettare la soglia — <strong>ti fa sapere dove sei quando puoi ancora fare qualcosa</strong>: ribilanciare le squadre tra cantieri, ricondurre in denuncia ore reali, correggere il mix con i subappalti.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFRONTO — tabelle (buone per featured snippet) -->
+  <section class="ct-section" aria-labelledby="ct-cmp-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="05">step 4 · dove sta la differenza</span>
+      <h2 id="ct-cmp-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        Excel, software di categoria<br>o gestionale <em>su misura</em>?
+      </h2>
+
+      <div class="ct-table-wrap ct-reveal">
+        <table class="ct-table">
+          <caption>Confronto onesto tra i tre modi in cui le imprese edili italiane gestiscono i cantieri</caption>
+          <thead>
+            <tr>
+              <th scope="col">Aspetto</th>
+              <th scope="col">Excel + carta</th>
+              <th scope="col">Software di categoria</th>
+              <th scope="col">Cantiere Facile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Costo</strong></td>
+              <td class="num">€0 in licenze</td>
+              <td class="num">€40–120 / utente / mese</td>
+              <td class="num">da €2.999 una tantum</td>
+            </tr>
+            <tr>
+              <td><strong>Aderenza ai tuoi flussi</strong></td>
+              <td>Totale — è il tuo file</td>
+              <td>Ti adatti tu al software</td>
+              <td>Costruito sui tuoi cantieri</td>
+            </tr>
+            <tr>
+              <td><strong>Rapportini dal cantiere</strong></td>
+              <td>Carta, ricopiati a mano</td>
+              <td>Spesso app separata a pagamento</td>
+              <td>Inclusi, offline, con foto e firma</td>
+            </tr>
+            <tr>
+              <td><strong>SAL e libretto misure</strong></td>
+              <td>Ricostruito a mano ogni volta</td>
+              <td>Presente, spesso modulo extra</td>
+              <td>Incluso, generato dalle misure</td>
+            </tr>
+            <tr>
+              <td><strong>Margine di commessa</strong></td>
+              <td>A consuntivo, a lavori chiusi</td>
+              <td>Sì, se alimenti tutto</td>
+              <td>Aggiornato ogni giorno</td>
+            </tr>
+            <tr>
+              <td><strong>Congruità manodopera</strong></td>
+              <td>Calcolata alla richiesta</td>
+              <td>Raramente nativa</td>
+              <td>Calcolo continuo + export</td>
+            </tr>
+            <tr>
+              <td><strong>Proprietà dei dati</strong></td>
+              <td>Tua</td>
+              <td>Del fornitore, export limitato</td>
+              <td>Tua, dump completo su richiesta</td>
+            </tr>
+            <tr>
+              <td><strong>Se smetti di pagare</strong></td>
+              <td>Niente, è un file</td>
+              <td>Perdi l'accesso allo storico</td>
+              <td>Nessun canone obbligatorio</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ct-table-wrap ct-reveal">
+        <table class="ct-table">
+          <caption>Quanto costa un gestionale cantieri: fasce reali per dimensione dell'impresa</caption>
+          <thead>
+            <tr>
+              <th scope="col">Configurazione</th>
+              <th scope="col">Per chi</th>
+              <th scope="col">Investimento</th>
+              <th scope="col">Tempi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Base</strong><br>rapportini + commesse + costi</td>
+              <td>Impresa 5–15 persone, 2–4 cantieri aperti</td>
+              <td class="num">da €2.999</td>
+              <td class="num">3–4 settimane</td>
+            </tr>
+            <tr>
+              <td><strong>Contabilità di cantiere</strong><br>+ libretto misure, SAL, varianti</td>
+              <td>Impresa 15–35 persone, lavori a misura</td>
+              <td class="num">€4.500–7.000</td>
+              <td class="num">4–6 settimane</td>
+            </tr>
+            <tr>
+              <td><strong>Completa</strong><br>+ subappalti, sicurezza, congruità, mezzi</td>
+              <td>Impresa 35–60 persone, anche lavori pubblici</td>
+              <td class="num">€7.000–12.000</td>
+              <td class="num">6–10 settimane</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="ct-body-lg ct-reveal" style="max-width:62ch;">
+        Sono fasce, non listini: il preventivo vero arriva scritto in 48h dopo la demo, a prezzo chiuso, e nasce da quanti cantieri hai aperti e da quanti flussi vanno mappati. Se il lavoro si rivela più lungo del previsto, <strong>il rischio è mio</strong>. La stessa logica di prezzo di tutti i miei <a href="gestionali-personalizzati.html" title="Quanto costa un gestionale personalizzato">gestionali personalizzati</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- GODFATHER OFFER -->
+  <section class="ct-section ct-offer" id="offer" aria-labelledby="ct-offer-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="06">step 5 · l'offerta, prezzi compresi</span>
+      <h2 id="ct-offer-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        Cosa ricevi (e cosa paghi)<br>con <em>Cantiere Facile</em>.
+      </h2>
+
+      <div class="ct-offer__card">
+        <p class="ct-body-lg" style="margin-top:0;">
+          Parliamo di prezzi subito, perché è la prima cosa che chiedi (e fai bene): il <strong>setup parte da €2.999 una tantum</strong> per un'impresa con 2-4 cantieri aperti. Configurazioni più articolate — contabilità di cantiere completa, subappalti, lavori pubblici, congruità — le quoto con un <strong>preventivo scope-based scritto in 48h</strong> dopo la demo, a prezzo chiuso. Costi terzi reali dichiarati a parte (hosting gestito, eventuali licenze di firma digitale).
+        </p>
+
+        <ul class="ct-offer__stack">
+          <li><strong>Setup Cantiere Facile sulla tua impresa</strong> — installazione, configurazione tipologia lavori (edile generale / impianti / ristrutturazioni / general contractor), accessi per titolare, ufficio tecnico e capi squadra.</li>
+          <li><strong>Import anagrafiche e cantieri in corso</strong> — clienti, fornitori, subappaltatori, dipendenti, elenco prezzi e i cantieri già aperti al momento del go-live.</li>
+          <li><strong>App rapportino per le squadre</strong> — installabile sul telefono come PWA, funziona offline, foto e firma con il dito. <span class="ct-offer__keep">› meno di un minuto a rapportino</span></li>
+          <li><strong>Ore per operaio e per commessa</strong> — riepiloghi settimanali pronti per il consulente del lavoro, senza ricopiature.</li>
+          <li><strong>Libretto delle misure e registro di contabilità</strong> — misure prese in cantiere, quantità contabilizzate per voce di elenco prezzi.</li>
+          <li><strong>SAL e certificato di pagamento</strong> — ritenuta a garanzia 0,50% scorporata, varianti approvate incluse, PDF pronto per la direzione lavori. <span class="ct-offer__keep">› dieci minuti, non mezza giornata</span></li>
+          <li><strong>Costi di commessa in tempo reale</strong> — ore, materiali, noli, subappalti e fatture attaccati alla commessa; margine e scostamento aggiornati ogni giorno.</li>
+          <li><strong>Schede subappaltatori con scadenze</strong> — DURC, POS, visura, assicurazione, idoneità tecnico-professionale, con avvisi prima della scadenza.</li>
+          <li><strong>Scadenzario sicurezza dipendenti</strong> — formazione, idoneità sanitarie, visite mediche, DPI consegnati.</li>
+          <li><strong>Calcolo continuo della congruità</strong> — incidenza manodopera contro aliquota di categoria, con export del riepilogo ore per la Cassa Edile. <span class="ct-offer__keep">› visto durante i lavori</span></li>
+          <li><strong>Mezzi, attrezzature e magazzino</strong> — assegnazione al cantiere, scadenze revisioni e manutenzioni, uscite materiali con bolla.</li>
+          <li><strong>Export contabile e fatturazione elettronica</strong> — XML per il SdI tramite il tuo intermediario, tracciati per la prima nota, split payment sui lavori pubblici.</li>
+          <li><strong>Dati tuoi, sempre</strong> — server in Italia/UE, DPA scritto, export completo disponibile in ogni momento. <span class="ct-offer__keep">› niente lock-in</span></li>
+          <li class="bonus"><span class="ct-offer__bonus-tag">BONUS 1</span> Mezza giornata in cantiere con me (o in videocall con i capi squadra) per far partire i rapportini davvero, non solo per spiegarli.</li>
+          <li class="bonus"><span class="ct-offer__bonus-tag">BONUS 2</span> Il primo SAL lo prepariamo insieme, sul tuo cantiere vero, confrontandolo con il tuo Excel finché i numeri non coincidono.</li>
+          <li class="bonus"><span class="ct-offer__bonus-tag">BONUS 3</span> Due settimane di parallel run seguite da me: gestionale e metodo vecchio insieme, go-live solo quando i conti tornano.</li>
+        </ul>
+
+        <div class="ct-offer__bundle">
+          <div class="ct-offer__bundle-lbl">pacchetto <span class="gold">"Cantiere Facile · commessa sotto controllo"</span></div>
+          <div class="ct-offer__bundle-val">setup · anagrafiche · rapportini · misure · SAL · costi · subappalti · congruità</div>
+          <div class="ct-offer__price">setup da €2.999 una tantum · configurazioni complete €4.500–€12.000</div>
+          <div class="ct-offer__bundle-lbl" style="margin-top:0.8rem;">preventivo scope-based scritto in 48h dopo la demo · prezzo chiuso</div>
+        </div>
+
+        <div class="ct-offer__cta-wrap">
+          <a class="ct-cta ct-cta--xl" href="#demo" title="Richiedi la demo gratuita di Cantiere Facile">
+            voglio la demo gratuita
+            <span class="ct-cta__arrow" aria-hidden="true">→</span>
+          </a>
+          <div class="ct-offer__scarcity">
+            <span data-slot-counter>Agosto 2026 — 1 slot libero su 2</span>
+            · onboarding seguiti da me in persona: <strong>massimo 2 al mese</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIPLE GUARANTEE -->
+  <section class="ct-section" aria-labelledby="ct-grnt-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="07">step 6 · il rischio è mio</span>
+      <h2 id="ct-grnt-h2" class="ct-h2 ct-reveal" style="margin-top:1rem; max-width:24ch;">
+        La tripla garanzia<br><em>messa per iscritto</em>.
+      </h2>
+
+      <div class="ct-guarantee__grid">
+        <article class="ct-guarantee__card ct-reveal">
+          <div class="ct-guarantee__seal" aria-hidden="true">🔓</div>
+          <h3 class="ct-guarantee__title">Codice e dati tuoi</h3>
+          <p class="ct-guarantee__copy">Server in Italia/UE, DPA scritto, niente rivendita dati. Anche se domani sparisco da internet, hai il dump completo del database, i SAL già emessi in PDF archiviabile e la documentazione tecnica. <strong>Qualunque dev può continuare</strong> da dove ho lasciato io.</p>
+        </article>
+        <article class="ct-guarantee__card ct-reveal">
+          <div class="ct-guarantee__seal" aria-hidden="true">🛡️</div>
+          <h3 class="ct-guarantee__title">12 mesi bug-fix incluso</h3>
+          <p class="ct-guarantee__copy">Per 12 mesi dal go-live, qualunque bug nel codice che ho scritto lo sistemo gratis: SAL che non quadra per un mio errore di calcolo, rapportino che non sincronizza, scadenza che non avvisa. Email a me, lo aggiusto. <strong>Senza fatture extra</strong>.</p>
+        </article>
+        <article class="ct-guarantee__card ct-reveal">
+          <div class="ct-guarantee__seal" aria-hidden="true">🤝</div>
+          <h3 class="ct-guarantee__title">Exit strategy garantita</h3>
+          <p class="ct-guarantee__copy">Se un giorno vuoi passare a un altro gestionale: export completo (dump + CSV per commesse, rapportini, misure, SAL, fatture e documenti), i PDF dei SAL emessi, la documentazione dello schema dati e 2h di call con il tecnico del nuovo fornitore. <strong>Niente lock-in, mai</strong>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ct-section" id="faq" aria-labelledby="ct-faq-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="08">step 7 · le domande oneste (prezzi inclusi)</span>
+      <h2 id="ct-faq-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        10 domande oneste,<br><em>10 risposte oneste</em>.
+      </h2>
+
+      <div class="ct-faq__list">
+        <details><summary>1. Quanto costa un gestionale per cantieri?</summary><div class="ct-faq__answer">Il setup di Cantiere Facile parte da <strong>€2.999 una tantum</strong> per un'impresa edile singola con 2-4 cantieri aperti: installazione, anagrafiche, elenco prezzi, app rapportino per le squadre e training. Configurazioni con contabilità di cantiere completa, subappalti e lavori pubblici stanno realisticamente tra <strong>€4.500 e €12.000</strong> a seconda di quanti flussi vanno mappati. Dopo la demo ricevi un <strong>preventivo scope-based scritto in 48h</strong> con prezzo chiuso: se il lavoro si rivela più lungo del previsto, il rischio è mio. Nessun canone obbligatorio per utente — l'eventuale hosting gestito è un costo terzo dichiarato a parte.</div></details>
+        <details><summary>2. Gli operai devono compilare qualcosa? Non sono pratici di software.</summary><div class="ct-faq__answer">Il rapportino si compila <strong>dal telefono in meno di un minuto</strong>: si sceglie il cantiere, si segnano le ore, si scattano due foto e si firma con il dito. Niente password complicate, niente menu annidati. In cantiere di solito lo compila il <strong>capo squadra per tutta la squadra</strong>, non ogni singolo operaio. E funziona <strong>anche senza campo</strong>: i dati restano sul telefono e partono da soli quando torna la linea, che nei cantieri interrati o in campagna è la differenza tra uno strumento usato e uno abbandonato dopo due settimane.</div></details>
+        <details><summary>3. Come funziona il SAL nel gestionale?</summary><div class="ct-faq__answer">Le lavorazioni entrano dal <strong>computo metrico</strong> con voce di elenco prezzi, quantità e prezzo unitario. Man mano che avanzano, le misure si registrano nel <strong>libretto delle misure</strong> direttamente in cantiere. Il gestionale somma le quantità contabilizzate per voce e produce il <strong>registro di contabilità</strong> e lo <strong>Stato Avanzamento Lavori</strong>, con la <strong>ritenuta a garanzia dello 0,50%</strong> già scorporata, le varianti approvate incluse e il <strong>certificato di pagamento</strong> in PDF pronto per la direzione lavori. Sui lavori pubblici gestisce anche lo split payment.</div></details>
+        <details><summary>4. Gestisce la congruità della manodopera?</summary><div class="ct-faq__answer">Sì, ed è una delle ragioni per cui l'ho costruito così. Siccome le ore sono già registrate <strong>per operaio e per commessa</strong> dai rapportini, e il valore dell'opera è già nel computo, il gestionale calcola in ogni momento l'<strong>incidenza della manodopera</strong> e la confronta con l'aliquota di congruità della categoria. Vedi lo scostamento <strong>mentre il cantiere è aperto</strong>, non alla richiesta dell'attestazione a fine lavori quando l'unica strada è versare la differenza. Il riepilogo ore è esportabile per la denuncia mensile alla Cassa Edile.</div></details>
+        <details><summary>5. Tiene sotto controllo i DURC dei subappaltatori?</summary><div class="ct-faq__answer">Ogni subappaltatore ha una scheda con <strong>DURC, visura, POS, assicurazione e idoneità tecnico-professionale</strong>, ognuno con la sua data di scadenza e il documento allegato. Il gestionale ti avvisa <strong>prima</strong> che scadano e segnala se un fornitore con documenti non validi risulta ancora attivo su un cantiere aperto. Lo stesso scadenzario vale per i tuoi dipendenti: formazione, idoneità sanitarie, visite mediche, DPI consegnati.</div></details>
+        <details><summary>6. Posso sapere se un cantiere sta guadagnando mentre è ancora aperto?</summary><div class="ct-faq__answer">È il motivo principale per cui le imprese comprano un gestionale di questo tipo. Ogni commessa parte dal suo <strong>preventivo</strong>; ore dei rapportini, fatture fornitore, noli, materiali usciti dal magazzino e stati avanzamento dei subappaltatori si attaccano alla commessa man mano che arrivano. Il <strong>margine si aggiorna ogni giorno</strong> e vedi lo scostamento tra preventivato e consuntivo voce per voce. Quando un cantiere comincia a mangiare più ore del previsto te ne accorgi al 30% dei lavori — quando puoi ancora ribilanciare le squadre, rinegoziare una variante o fermarti.</div></details>
+        <details><summary>7. Si integra con il commercialista e la fatturazione elettronica?</summary><div class="ct-faq__answer">Il gestionale esporta le fatture attive in <strong>XML per il Sistema di Interscambio</strong> tramite il tuo intermediario abituale, e produce i tracciati per la prima nota del commercialista. Gestisce <strong>split payment</strong> e <strong>ritenuta a garanzia</strong> sui lavori pubblici. Non sostituisce il gestionale contabile né il software delle paghe: gli parla, e ti evita di reinserire gli stessi numeri due volte in due posti diversi.</div></details>
+        <details><summary>8. Funziona anche per imprese di impiantistica o ristrutturazioni?</summary><div class="ct-faq__answer">Sì. Lo stesso motore serve <strong>imprese edili generali, impiantisti</strong> (elettrico, termoidraulico), <strong>imprese di ristrutturazione e general contractor</strong>. Quello che cambia è l'elenco prezzi e il peso relativo di manodopera, materiali e subappalti: quella parte si configura durante l'onboarding sui tuoi lavori reali, non su un template generico. Se invece cerchi un software di <strong>progettazione o BIM</strong>, quello non lo faccio io — ma il gestionale ci parla, importando il computo metrico.</div></details>
+        <details><summary>9. Se un giorno voglio cambiare gestionale, i dati come li porto via?</summary><div class="ct-faq__answer"><strong>Exit strategy scritta nel contratto</strong>: in qualsiasi momento ti consegno l'export completo del database (dump + CSV per ogni entità: commesse, rapportini, misure, SAL, fatture, documenti dei subappaltatori), i PDF dei SAL già emessi, la documentazione dello schema dati e <strong>2 ore di call con il tecnico del nuovo fornitore</strong>. I numeri della tua impresa sono tuoi, sempre — e siccome il setup è una tantum, non c'è nessun canone che ti tiene legato.</div></details>
+        <details><summary>10. Quanto ci vuole ad andare live?</summary><div class="ct-faq__answer">Dalle <strong>3 alle 6 settimane</strong> dal sì, a seconda di quanti cantieri aperti vanno caricati. Prima settimana: setup, anagrafiche, elenco prezzi, importazione dei cantieri in corso. Seconda e terza: <strong>rapportini in mano alle squadre</strong>, con affiancamento vero — è qui che si decide se lo strumento verrà usato o no. Quarta: le prime misure e il primo SAL fatti insieme, confrontati con il tuo Excel. Poi due settimane di <strong>parallel run</strong>. Il go-live si dichiara quando un SAL esce corretto <strong>senza il foglio di controllo a fianco</strong>, non prima.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM 5-STEP -->
+  <section class="ct-section ct-sprint" id="demo" aria-labelledby="ct-demo-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="09">step 8 · demo gratuita · 5 step · risposta in 48h</span>
+      <h2 id="ct-demo-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        Descrivi la tua impresa<br>in 5 step. <em>Ti mando io la demo</em>.
+      </h2>
+
+      <div class="ct-sprint__layout">
+        <div class="ct-sprint__pitch">
+          <p>Nessun preventivo standard, nessun PDF auto-generato. <strong>Mi descrivi la tua impresa in 5 step</strong>, leggo io come lavori, ti scrivo entro 48h con un orario per la <strong>demo live di 30 minuti</strong> via Google Meet o WhatsApp video.</p>
+
+          <p>Cosa vedi nella <em>Demo Live</em>:</p>
+          <ul class="ct-sprint__bullets">
+            <li><strong>Un rapportino compilato dal telefono</strong> su un cantiere di prova: ore, lavorazioni, foto, firma.</li>
+            <li><strong>Le misure che diventano SAL</strong>: dal libretto al certificato di pagamento con la ritenuta scorporata.</li>
+            <li><strong>Il margine di commessa</strong> che si muove quando aggiungi ore, noli e una variante.</li>
+            <li><strong>Lo scadenzario DURC</strong> con un subappaltatore che va in scadenza mentre è in cantiere.</li>
+            <li><strong>Prezzi senza giri di parole</strong>: cosa rientra nei €2.999 e cosa fa salire il preventivo.</li>
+            <li><strong>L'onesta verità</strong> se Cantiere Facile è troppo (o troppo poco) per la tua impresa.</li>
+          </ul>
+        </div>
+
+        <div id="ct-sprint" class="ct-sprint__form">
+          <div class="ct-sprint__progress" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <form id="sprint-form" autocomplete="on">
+
+            <fieldset class="ct-sprint__step active">
+              <div class="ct-sprint__hint">step 1 / 5</div>
+              <legend>Che tipo di impresa hai?</legend>
+              <div class="ct-sprint__options">
+                <label class="ct-sprint__option"><input type="radio" name="business_type" value="edile_generale" required><span>🧱 Impresa edile generale</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="business_type" value="impiantistica"><span>🔌 Impiantistica (elettrico / termoidraulico)</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="business_type" value="ristrutturazioni"><span>🏠 Ristrutturazioni e finiture</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="business_type" value="general_contractor"><span>🏗️ General contractor / appalti pubblici</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="ct-sprint__step">
+              <div class="ct-sprint__hint">step 2 / 5</div>
+              <legend>Quante persone lavorano in cantiere?</legend>
+              <div class="ct-sprint__options">
+                <label class="ct-sprint__option"><input type="radio" name="crew_size" value="meno_5" required><span>👷 Meno di 5</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="crew_size" value="5_15"><span>👷‍♂️ 5–15 persone</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="crew_size" value="15_35"><span>🚧 15–35 persone</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="crew_size" value="35plus"><span>🏗️ Oltre 35 persone</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="ct-sprint__step">
+              <div class="ct-sprint__hint">step 3 / 5</div>
+              <legend>Cosa usi oggi per seguire i cantieri?</legend>
+              <div class="ct-sprint__options">
+                <label class="ct-sprint__option"><input type="radio" name="current_tool" value="carta" required><span>📔 Carta, quaderno e telefonate</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="current_tool" value="excel"><span>📊 Excel / Google Sheets</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="current_tool" value="gestionale_generico"><span>💼 Gestionale generico (non da cantiere)</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="current_tool" value="software_categoria"><span>🏗️ Software di categoria che non mi convince</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="ct-sprint__step">
+              <div class="ct-sprint__hint">step 4 / 5</div>
+              <legend>Qual è il dolore più grande oggi?</legend>
+              <div class="ct-sprint__options">
+                <label class="ct-sprint__option"><input type="radio" name="main_pain" value="rapportini" required><span>📱 Rapportini che arrivano tardi o mai</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="main_pain" value="sal"><span>📐 SAL e contabilità di cantiere in Excel</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="main_pain" value="margine"><span>📉 Margine di commessa scoperto alla fine</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="main_pain" value="subappalti"><span>🤝 DURC e documenti dei subappaltatori</span></label>
+                <label class="ct-sprint__option"><input type="radio" name="main_pain" value="congruita"><span>🦺 Congruità manodopera e sicurezza</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="ct-sprint__step">
+              <div class="ct-sprint__hint">step 5 / 5 — ultimo</div>
+              <legend>A chi mando l'orario demo?</legend>
+              <div class="ct-sprint__row">
+                <div class="ct-sprint__field">
+                  <label for="sprint-name">Nome</label>
+                  <input id="sprint-name" name="name" type="text" placeholder="Il tuo nome" autocomplete="name" required>
+                </div>
+                <div class="ct-sprint__field">
+                  <label for="sprint-impresa">Nome impresa</label>
+                  <input id="sprint-impresa" name="impresa" type="text" placeholder="Ragione sociale" autocomplete="organization">
+                </div>
+                <div class="ct-sprint__field">
+                  <label for="sprint-email">Email</label>
+                  <input id="sprint-email" name="email" type="email" placeholder="tu@tuaimpresa.it" autocomplete="email" required>
+                </div>
+                <div class="ct-sprint__field">
+                  <label for="sprint-phone">Cellulare (opzionale)</label>
+                  <input id="sprint-phone" name="phone" type="tel" placeholder="+39 ..." autocomplete="tel">
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="ct-sprint__nav">
+              <button type="button" class="ct-sprint__back">← indietro</button>
+              <button type="button" class="ct-sprint__next">avanti →</button>
+            </div>
+
+            <div class="ct-sprint__success" id="sprint-success" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="ct-section ct-final" aria-labelledby="ct-final-h2">
+    <div class="ct-wrap">
+      <span class="ct-eyebrow" data-chapter="10">step 9 · due strade</span>
+      <h2 id="ct-final-h2" class="ct-h2 ct-reveal" style="margin-top:1rem;">
+        Hai due modi onesti<br>per <em>partire ora</em>.
+      </h2>
+
+      <div class="ct-final__grid">
+        <article class="ct-final__card ct-reveal">
+          <span class="ct-final__card-eyebrow">A · consigliato</span>
+          <h3 class="ct-final__card-title">Demo Cantiere Facile gratuita, 30 minuti.</h3>
+          <p class="ct-final__card-copy">Apri il form qui sopra. 5 step, 3 minuti. Entro 48h ti scrivo io con un orario per la demo live via Google Meet o WhatsApp video, sui dati di prova di un cantiere fittizio. Niente pitch commerciale, niente impegno — e i prezzi te li dico chiari in demo.</p>
+          <a class="ct-cta ct-cta--ghost" href="#demo" style="color: var(--ct-bg); border-color: var(--ct-bg);" title="Vai al form demo Cantiere Facile">vai al form demo <span class="ct-cta__arrow" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="ct-final__card ct-reveal">
+          <span class="ct-final__card-eyebrow">B · se preferisci parlare</span>
+          <h3 class="ct-final__card-title">Call gratuita WhatsApp, 30 minuti.</h3>
+          <p class="ct-final__card-copy">Scrivimi su WhatsApp, fissiamo 30 minuti. Mi racconti come lavori (quanti cantieri aperti, quante persone, come raccogli le ore oggi), io ti dico se Cantiere Facile è la cosa giusta o se conviene un'altra strada. Niente vendita aggressiva.</p>
+          <a class="ct-cta" href="https://wa.me/393516248936?text=Ciao%20Andrea%2C%20vorrei%20parlare%20di%20Cantiere%20Facile%20per%20la%20mia%20impresa%20edile." title="Scrivi su WhatsApp per Cantiere Facile">scrivimi su whatsapp <span class="ct-cta__arrow" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPIC CLUSTER -->
+  <section class="ct-section ct-related" aria-labelledby="ct-related-h2">
+    <div class="ct-wrap">
+      <span class="ct-issue-mark">Topic cluster · gestionali verticali italiani</span>
+      <h2 id="ct-related-h2" class="ct-h2" style="font-size: clamp(1.5rem, 2.8vw, 2.2rem); margin-top: 0.8rem;">
+        Altri gestionali verticali <em>che costruisco io</em>.
+      </h2>
+      <div class="ct-related__grid">
+        <a href="gestionali-personalizzati-aziende.html" class="ct-related__card" title="Gestionali personalizzati su misura per aziende italiane">
+          <div class="idx">01 · base</div>
+          <div class="ttl">Gestionali su misura aziende</div>
+          <p>Quadro generale: gestionali custom italiani, integrazioni, multi-sede, fatturazione, dati sempre tuoi.</p>
+        </a>
+        <a href="gestionali-personalizzati.html" class="ct-related__card" title="Quanto costa un gestionale personalizzato">
+          <div class="idx">02 · prezzi</div>
+          <div class="ttl">Quanto costa un gestionale</div>
+          <p>Da €2.999: lo stesso posizionamento prezzi di Cantiere Facile, spiegato voce per voce.</p>
+        </a>
+        <a href="app-gestione-interventi-artigiani.html" class="ct-related__card" title="App gestione interventi per artigiani, idraulici ed elettricisti">
+          <div class="idx">03 · campo</div>
+          <div class="ttl">App interventi artigiani</div>
+          <p>Tecnici sul campo: chiusura intervento con foto, firma e fattura — stessa logica del rapportino di cantiere.</p>
+        </a>
+        <a href="software-autoscuola.html" class="ct-related__card" title="Gestionale per autoscuole e scuole guida">
+          <div class="idx">04 · autoscuole</div>
+          <div class="ttl">Gestionale autoscuole</div>
+          <p>Registro guide digitale, app quiz patente, scadenze foglio rosa e pagamenti rateali per scuole guida.</p>
+        </a>
+        <a href="gestionale-tabaccheria.html" class="ct-related__card" title="Gestionale per tabaccherie e ricevitorie">
+          <div class="idx">05 · retail</div>
+          <div class="ttl">Gestionale tabaccheria</div>
+          <p>Aggi Monopoli, gratta e vinci per mazzetta, ordini Logista e quadratura serale in cinque minuti.</p>
+        </a>
+        <a href="gestionale-studio-fisioterapista.html" class="ct-related__card" title="Gestionale per studi di fisioterapia con cartella clinica">
+          <div class="idx">06 · sanità</div>
+          <div class="ttl">Gestionale fisioterapisti</div>
+          <p>Cartella clinica digitale, calendario multi-sede, GDPR-strict per dati sanitari.</p>
+        </a>
+        <a href="gestionale-bed-and-breakfast.html" class="ct-related__card" title="Gestionale per B&B e affittacamere">
+          <div class="idx">07 · ricettivo</div>
+          <div class="ttl">Gestionale B&amp;B</div>
+          <p>Famiglia CheckIn Facile: prenotazioni, check-in online e alloggiati web per B&amp;B e affittacamere.</p>
+        </a>
+        <a href="crm-centri-estetici.html" class="ct-related__card" title="CRM per centri estetici e SPA italiane">
+          <div class="idx">08 · estetica</div>
+          <div class="ttl">CRM centri estetici</div>
+          <p>BeautyCenterCRM: agenda operatrici, schede cliente, magazzino cabina e prenotazioni online.</p>
+        </a>
+        <a href="crm.html" class="ct-related__card" title="CRM custom italiano su misura">
+          <div class="idx">09 · crm</div>
+          <div class="ttl">CRM custom italiano</div>
+          <p>CRM su misura sul tuo processo di vendita, con integrazione mail, calendario e fatturazione.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ct-foot">
+    <div class="ct-foot__inner">
+      <div>© 2026 Andrea Piani · NIE 02915190306-Z · El Paso, Santa Cruz de Tenerife · Islas Canarias 🌴 · Cantiere Facile è un gestionale italiano</div>
+      <div class="ct-foot__links">
+        <a href="/" title="Andrea Piani — Sviluppo software su misura">Home</a>
+        <a href="/" onclick="if(window.openServiziPopup){openServiziPopup();return false}" title="Tutti i servizi">Servizi</a>
+        <a href="/servizi-perfex-crm.html" title="Servizi Perfex CRM">Perfex CRM</a>
+        <a href="/gestionali-personalizzati-aziende.html" title="Gestionali personalizzati per aziende">Gestionali</a>
+        <a href="/creazione-api-rest.html" title="Creazione API REST e backend">API Backend</a>
+        <a href="/sviluppo-app-mobile.html" title="Sviluppo app mobile iOS e Android">App Mobile</a>
+        <a href="/mvp-app-startup.html" title="MVP per startup in 8-12 settimane">MVP Startup</a>
+        <a href="/blog/" title="Blog — guide e prezzi sviluppo app">Blog</a>
+        <a href="/privacy-policy.html" title="Privacy Policy">Privacy</a>
+        <a href="/cookie-policy.html" title="Cookie Policy">Cookie</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/popup-loader.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="assets/js/gestionale-cantieri.js" defer></script>
+  <script src="assets/js/lead-capture.js" defer></script>
+  <script src="whatsapp-float.js" defer></script>
+  <script src="assets/js/slot-counter.js" defer></script>
+</body>
+</html>
