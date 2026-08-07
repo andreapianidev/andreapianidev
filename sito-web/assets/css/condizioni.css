@@ -1,0 +1,120 @@
+/* ============================================================
+   condizioni.css — blocco "prezzo, pagamento, fatturazione"
+   Self-contained e neutro: gira sia sulle pagine chiare
+   (tabaccheria, cantieri, autoscuola...) sia su quelle scure
+   (hub gestionali-personalizzati). Prefisso .apc- , usato solo qui.
+   Fonte unica: si cambia qui e cambia su tutte le pagine.
+   ============================================================ */
+
+.apc-terms {
+  --apc-coral: #FF6666;
+  --apc-ink: #1B2430;
+  --apc-muted: #5C6875;
+  --apc-card: #FFFFFF;
+  --apc-hair: rgba(27, 36, 48, 0.12);
+
+  box-sizing: border-box;
+  max-width: 1080px;
+  margin: 3.5rem auto;
+  padding: 0 1.25rem;
+  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--apc-ink);
+  -webkit-font-smoothing: antialiased;
+}
+.apc-terms *, .apc-terms *::before, .apc-terms *::after { box-sizing: inherit; }
+
+.apc-terms__card {
+  background: var(--apc-card);
+  border: 1px solid var(--apc-hair);
+  border-left: 5px solid var(--apc-coral);
+  border-radius: 14px;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: 0 2px 20px rgba(27, 36, 48, 0.10);
+}
+
+.apc-terms__eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--apc-coral);
+  margin: 0 0 0.55rem;
+}
+
+.apc-terms__h {
+  margin: 0 0 1.6rem;
+  font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--apc-ink);
+}
+
+.apc-terms__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem 2rem;
+}
+
+.apc-terms__item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--apc-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.apc-terms__item h4::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--apc-coral);
+  flex: none;
+}
+
+.apc-terms__item p {
+  margin: 0 0 0.7rem;
+  font-size: 0.98rem;
+  line-height: 1.62;
+  color: var(--apc-ink);
+}
+.apc-terms__item p:last-child { margin-bottom: 0; }
+.apc-terms__item strong { font-weight: 700; }
+
+.apc-terms__range {
+  display: block;
+  font-size: clamp(1.45rem, 3.2vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--apc-ink);
+  margin: 0 0 0.45rem;
+}
+.apc-terms__range em {
+  display: block;
+  font-style: normal;
+  font-size: 0.62em;
+  font-weight: 600;
+  color: var(--apc-muted);
+  letter-spacing: 0.01em;
+  margin-top: 0.15rem;
+}
+
+.apc-terms__note {
+  margin: 1.6rem 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--apc-hair);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--apc-muted);
+}
+
+/* Su pagina scura la card resta chiara: legge come callout voluto.
+   Se il browser è in dark mode NON invertiamo — il contrasto è già corretto. */
+@media (max-width: 560px) {
+  .apc-terms { margin: 2.5rem auto; }
+  .apc-terms__grid { gap: 1.4rem; }
+}
