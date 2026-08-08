@@ -1,0 +1,107 @@
+/* ============================================================
+   screenshot.css — blocco "il prodotto vero, in funzione"
+   Self-contained e neutro come condizioni.css: gira su pagine
+   chiare e scure senza sapere nulla del tema che lo ospita.
+   Prefisso .aps- , usato solo qui. Fonte unica: si cambia qui
+   e cambia su tutte le pagine prodotto.
+   ============================================================ */
+
+.aps-proof {
+  --aps-coral: #FF6666;
+  --aps-ink: #1B2430;
+  --aps-muted: #5C6875;
+  --aps-card: #FFFFFF;
+  --aps-hair: rgba(27, 36, 48, 0.12);
+
+  box-sizing: border-box;
+  max-width: 1140px;
+  margin: 3.5rem auto;
+  padding: 0 1.25rem;
+  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--aps-ink);
+  -webkit-font-smoothing: antialiased;
+}
+.aps-proof *, .aps-proof *::before, .aps-proof *::after { box-sizing: inherit; }
+
+.aps-proof__eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--aps-coral);
+  margin: 0 0 0.55rem;
+}
+
+.aps-proof__h {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.35rem, 2.8vw, 1.9rem);
+  line-height: 1.22;
+  font-weight: 700;
+  color: var(--aps-ink);
+}
+
+.aps-proof__lead {
+  margin: 0 0 2rem;
+  max-width: 66ch;
+  font-size: 1rem;
+  line-height: 1.62;
+  color: var(--aps-muted);
+}
+.aps-proof__lead a { color: var(--aps-ink); text-decoration: underline; text-underline-offset: 2px; }
+.aps-proof__lead strong { color: var(--aps-ink); }
+
+.aps-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.aps-shot {
+  margin: 0;
+  background: var(--aps-card);
+  border: 1px solid var(--aps-hair);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 18px rgba(27, 36, 48, 0.10);
+}
+.aps-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--aps-hair);
+  background: #F4F5F7;
+}
+.aps-shot figcaption {
+  padding: 0.9rem 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--aps-muted);
+}
+.aps-shot figcaption strong {
+  display: block;
+  color: var(--aps-ink);
+  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.aps-shot--wide { grid-column: 1 / -1; }
+
+.aps-proof__cta {
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: 0.85rem 1.5rem;
+  background: var(--aps-ink);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform .15s ease, background .15s ease;
+}
+.aps-proof__cta:hover { background: var(--aps-coral); transform: translateY(-1px); color: #fff; }
+
+@media (max-width: 560px) {
+  .aps-proof { margin: 2.5rem auto; }
+  .aps-proof__grid { gap: 1.2rem; }
+}
