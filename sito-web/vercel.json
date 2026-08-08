@@ -7,9 +7,18 @@
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests"
         },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
         {
           "key": "Permissions-Policy",
           "value": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=()"
@@ -36,6 +45,66 @@
     {
       "source": "/blog/perche-dovresti-assumere-uno-sviluppatore-di-app-freelance-per-il-tuo-progetto",
       "destination": "/blog/5-vantaggi-di-assumere-uno-sviluppatore-app-freelance-per-ios.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-costa-sviluppare-un-app-in-italia-guida-ai-prezzi-2026.html",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-costa-sviluppare-un-app-in-italia-guida-ai-prezzi-2026",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-costa-sviluppare-un-app-mobile-guida-ai-prezzi-2026.html",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-costa-sviluppare-un-app-mobile-guida-ai-prezzi-2026",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-costa-sviluppare-un-app-ios-preventivi-e-consigli.html",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-costa-sviluppare-un-app-ios-preventivi-e-consigli",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/caso-studio-costo-sviluppo-app-ios-per-startup.html",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/caso-studio-costo-sviluppo-app-ios-per-startup",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/costo-sviluppo-app-mobile-checklist-per-preventivi.html",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/costo-sviluppo-app-mobile-checklist-per-preventivi",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/budget-per-sviluppare-app-mobile-5-errori-ios-da-evitare.html",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/budget-per-sviluppare-app-mobile-5-errori-ios-da-evitare",
+      "destination": "/blog/quanto-costa-sviluppare-un-app-semplice-guida-ai-prezzi.html",
       "permanent": true
     }
   ]
